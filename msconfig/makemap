@@ -1,9 +1,10 @@
 #! /usr/bin/python
 
-### creates each of the following map files
-###    ews.map
-###    ewswgs84.map
-###    ewswcs.map
+### creates the mapfile:
+###    {ews.map,ewswgs84.map,ewswcs.map}
+### from the template files
+###    ews.map.tmpl   - template for whole mapfile
+###    ews.layer.tmpl - template for each layer section
 ### by looping over all tif files found in
 ###    * LAYER_DATA_DIR
 ###    * DATA_DIR/efetac_nasa/ews
@@ -315,6 +316,7 @@ f_new.close()
 os.system("(cd ../html ; ln -f -s ../msconfig/ews.map . ; ln -f -s ../msconfig/ewswgs84.map . ; ln -f -s ../msconfig/ewswcs.map .)")
 os.system("chmod a+w ../logs");
 os.system("chmod a+w ../logs/*.log > /dev/null 2>&1");
+os.system("chmod g-w ../html/*");
 
 ###
 ### write out the html/index.html file:
