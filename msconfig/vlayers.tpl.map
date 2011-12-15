@@ -1,0 +1,962 @@
+MAP
+    # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+    # of the two lines below to enable this logging:
+    CONFIG "MS_ERRORFILE" "../logs/vlayers.log"
+    DEBUG 5
+
+    # all temp files get prefixed with this string
+    NAME ms_vlayers
+
+    # background color of image if transparency
+    # is not requested
+    IMAGECOLOR 255 255 255
+
+    # default output image dimensions
+    SIZE 600 400
+
+    # always returns a map
+    STATUS ON
+
+    # set top level projection
+    PROJECTION
+     "init=epsg:3785"
+    END
+
+    # image format options
+        OUTPUTFORMAT
+                NAME "PNG"
+                DRIVER "GDAL/PNG"
+                MIMETYPE "image/png"
+                IMAGEMODE "RGB"
+                EXTENSION "png"
+        END
+
+    # minx miny maxx maxy
+    EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+    # add def pointers for symbols
+    SYMBOLSET "./symbols/symbols35.sym"
+    FONTSET   "./fonts/fonts.list"
+
+    # Start of web interface definition
+    WEB
+
+        # this is the real filepath to the temp dir for intermediate file creation
+        IMAGEPATH "./tmp"
+
+        # this is the web-accessible path to IMAGEPATH
+        IMAGEURL "/tmp/"
+
+        HEADER "./templates/query_header.html"
+        FOOTER "./templates/query_footer.html"
+
+        METADATA
+            "ows_enable_request"     "*"
+            "wms_title"              "NEMAC vlayers WMS"
+            "wms_abstract"           "NEMAC vlayers WMS"
+            "wms_onlineresource"     "%(SERVICE_URL)s"
+            "wms_srs"                "EPSG:3785 EPSG:4326"
+        END
+    END
+
+    QUERYMAP
+        STATUS OFF
+    END
+
+    # set defaults for GetLegendGraphic requests 
+    LEGEND
+      KEYSIZE 30 20
+    END
+        
+        LAYER # 
+                NAME cities
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from cities"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+                
+                STATUS       OFF
+                TYPE         POINT
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                
+                CLASS
+                        NAME "Cities"
+                        STYLE
+                                SYMBOL 'circle'
+                                SIZE 5
+                                COLOR 0 0 0 
+                        END
+                END
+                METADATA
+                                "wms_title"    "cities"
+                                "wms_abstract" "cities"
+                END  # end METADATA
+    END # 
+        
+        LAYER # 
+                NAME states
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from dtl_states"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+
+                CLASS
+                        NAME "States"
+                        STYLE
+                                #COLOR        232 232 232
+                                OUTLINECOLOR 0 0 0 
+                        END
+                END
+                METADATA
+                                "wms_title"    "states"
+                                "wms_abstract" "states"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER # counties polygon layer begins here
+                NAME counties
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from dtl_counties"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+
+                CLASS
+                        NAME "Counties"
+                        STYLE
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "counties"
+                                "wms_abstract" "counties"
+                END  # end METADATA
+        END # end Layer
+  
+        LAYER # 
+                NAME federal_lands
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from federal_lands"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+
+                CLASS
+                        NAME "Federal Lands"
+                        STYLE
+                                COLOR        50 165 70
+                                OUTLINECOLOR 0 0 0 
+                        END
+                END
+                METADATA
+                                "wms_title"    "federal_lands"
+                                "wms_abstract" "federal_lands"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER # 
+                NAME interstates
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from interstates"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         LINE
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+
+                CLASS
+                        NAME "Interstates"
+                        STYLE
+                                COLOR        100 0 0
+                                OUTLINECOLOR 0 0 0 
+                        END
+                END
+                METADATA
+                                "wms_title"    "interstates"
+                                "wms_abstract" "interstates"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER # 
+                NAME roads
+        
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from roads"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         LINE
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+
+                CLASS
+                        NAME "Major Roads"
+                        STYLE
+                                COLOR        0 0 0
+                                OUTLINECOLOR 0 0 0 
+                        END
+        END
+                METADATA
+            "wms_title"    "roads"
+            "wms_abstract" "roads"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME mtbs_2008
+        
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from conus_fireperims"
+                FILTER "year = 2008"
+
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASSITEM year
+                CLASS
+                        NAME "MTBS Fire 2008"
+                        #EXPRESSION ([year] = 2008)
+                        STYLE
+                                COLOR        255 255 255
+                                OUTLINECOLOR 32 32 32
+                        END
+                        STYLE
+                                SYMBOL "hatchsymbol"
+                                COLOR 210 105 30
+                                SIZE 2
+                                ANGLE 45
+                        END # STYLE
+                END
+                METADATA
+                                "wms_title"    "mtbs_2008"
+                                "wms_abstract" "mtbs_2008"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME mtbs_2007
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from conus_fireperims"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASSITEM year
+                CLASS
+                        NAME "MTBS Fire 2007"
+                        EXPRESSION ([year] = 2007)
+                        STYLE
+                                COLOR        255 255 255
+                                OUTLINECOLOR 32 32 32
+                        END
+                        STYLE
+                                SYMBOL "hatchsymbol"
+                                COLOR 210 105 30
+                                SIZE 2
+                                ANGLE 45
+                        END # STYLE
+                END
+                METADATA
+                                "wms_title"    "mtbs_2007"
+                                "wms_abstract" "mtbs_2007"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME mtbs_2006
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from conus_fireperims"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASSITEM year
+                CLASS
+                        NAME "MTBS Fire 2006"
+                        EXPRESSION ([year] = 2006)
+                        STYLE
+                                COLOR        255 255 255
+                                OUTLINECOLOR 32 32 32
+                        END
+                        STYLE
+                                SYMBOL "hatchsymbol"
+                                COLOR 210 105 30
+                                SIZE 2
+                                ANGLE 45
+                        END # STYLE
+                END
+                METADATA
+                                "wms_title"    "mtbs_2006"
+                                "wms_abstract" "mtbs_2006"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME mtbs_2005
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from conus_fireperims"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASSITEM year
+                CLASS
+                        NAME "MTBS Fire 2005"
+                        EXPRESSION ([year] = 2005)
+                        STYLE
+                                COLOR        255 255 255
+                                OUTLINECOLOR 32 32 32
+                        END
+                        STYLE
+                                SYMBOL "hatchsymbol"
+                                COLOR 210 105 30
+                                SIZE 2
+                                ANGLE 45
+                        END # STYLE
+                END
+                METADATA
+                                "wms_title"    "mtbs_2005"
+                                "wms_abstract" "mtbs_2005"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME mtbs_2004
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from conus_fireperims"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASSITEM year
+                CLASS
+                        NAME "MTBS Fire 2004"
+                        EXPRESSION ([year] = 2004)
+                        STYLE
+                                COLOR        255 255 255
+                                OUTLINECOLOR 32 32 32
+                        END
+                        STYLE
+                                SYMBOL "hatchsymbol"
+                                COLOR 210 105 30
+                                SIZE 2
+                                ANGLE 45
+                        END # STYLE
+                END
+                METADATA
+                                "wms_title"    "mtbs_2004"
+                                "wms_abstract" "mtbs_2004"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME mtbs_2003
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from conus_fireperims"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASSITEM year
+                CLASS   
+                        NAME "MTBS Fire 2003"
+                        EXPRESSION ([year] = 2003)
+                        STYLE
+                                COLOR        255 255 255
+                                OUTLINECOLOR 32 32 32
+                        END
+                        STYLE
+                                SYMBOL "hatchsymbol"
+                                COLOR 210 105 30
+                                SIZE 2
+                                ANGLE 45
+                        END # STYLE
+                END
+                METADATA
+                                "wms_title"    "mtbs_2003"
+                                "wms_abstract" "mtbs_2003"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME mtbs_2002
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from conus_fireperims"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASSITEM year
+                CLASS
+                        NAME "MTBS Fire 2002"
+                        EXPRESSION ([year] = 2002)
+                        STYLE
+                                COLOR        255 255 255
+                                OUTLINECOLOR 32 32 32
+                        END
+                        STYLE
+                                SYMBOL "hatchsymbol"
+                                COLOR 210 105 30
+                                SIZE 2
+                                ANGLE 45
+                        END # STYLE
+                END
+                METADATA
+                                "wms_title"    "mtbs_2002"
+                                "wms_abstract" "mtbs_2002"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME mtbs_2001
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from conus_fireperims"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASSITEM year
+                CLASS
+                        NAME "MTBS Fire 2001"
+                        EXPRESSION ([year] = 2001)
+                        STYLE
+                                COLOR        255 255 255
+                                OUTLINECOLOR 32 32 32
+                        END
+                        STYLE
+                                SYMBOL "hatchsymbol"
+                                COLOR 210 105 30
+                                SIZE 2
+                                ANGLE 45
+                        END # STYLE
+                END
+                METADATA
+                                "wms_title"    "mtbs_2001"
+                                "wms_abstract" "mtbs_2001"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME mtbs_2000
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from conus_fireperims"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASSITEM year
+                CLASS
+                        NAME "MTBS Fire 2000"
+                        EXPRESSION ([year] = 2000)
+                        STYLE
+                                COLOR        255 255 255
+                                OUTLINECOLOR 32 32 32
+                        END
+                        STYLE
+                                SYMBOL "hatchsymbol"
+                                COLOR 210 105 30
+                                SIZE 2
+                                ANGLE 45
+                        END # STYLE
+                END
+                METADATA
+                                "wms_title"    "mtbs_2000"
+                                "wms_abstract" "mtbs_2000"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME ads_2009
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from fhm_ads_2009"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASS
+                        NAME "FHM ADS 2009"
+                        STYLE
+                                COLOR        232 232 232
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "ads_2009"
+                                "wms_abstract" "ads_2009"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME ads_2008
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from fhm_ads_2008"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASS
+                        NAME "FHM ADS 2008"
+                        STYLE
+                                COLOR        232 232 232
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "ads_2008"
+                                "wms_abstract" "ads_2008"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME ads_2007
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from fhm_ads_2007"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASS
+                        NAME "FHM ADS 2007"
+                        STYLE
+                                COLOR        232 232 232
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "ads_2007"
+                                "wms_abstract" "ads_2007"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME ads_2006
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from fhm_ads_2006"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASS
+                        NAME "FHM ADS 2006"
+                        STYLE
+                                COLOR        232 232 232
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "ads_2006"
+                                "wms_abstract" "ads_2006"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME ads_2005
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from fhm_ads_2005"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASS
+                        NAME "FHM ADS 2005"
+                        STYLE
+                                COLOR        232 232 232
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "ads_2005"
+                                "wms_abstract" "ads_2005"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME ads_2004
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from fhm_ads_2004"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASS
+                        NAME "FHM ADS 2004"
+                        STYLE
+                                COLOR        232 232 232
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "ads_2004"
+                                "wms_abstract" "ads_2004"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME ads_2003
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from fhm_ads_2003"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASS
+                        NAME "FHM ADS 2003"
+                        STYLE
+                                COLOR        232 232 232
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "ads_2003"
+                                "wms_abstract" "ads_2003"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER # 
+                NAME streams
+        
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from streams_waterbodies"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         LINE
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+
+                CLASS
+                        NAME "Streams"
+                        STYLE
+                                COLOR        0 0 150 
+                        END
+        END
+                METADATA
+            "wms_title"    "streams"
+            "wms_abstract" "streams"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER # 
+                NAME HUC6
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from hydrologic_units_huc6_albers"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+
+                CLASS
+                        NAME "HUC 6 Watersheds"
+                        STYLE
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "HUC6"
+                                "wms_abstract" "HUC6"
+                END  # end METADATA
+        END # end Layer
+        
+        LAYER # 
+                NAME HUC8
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from new_development_by_huc8_2000_2030"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+
+                CLASS
+                        NAME "HUC 8 Watersheds"
+                        STYLE
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "HUC8"
+                                "wms_abstract" "HUC8"
+                END  # end METADATA
+        END # end Layer
+        
+        LAYER #
+                NAME ecoregions_bailey
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from ecoregions_bailey"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASS
+                        NAME "Bailey's Ecoregions"
+                        STYLE
+                                COLOR        232 232 232
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "ecoregions_bailey"
+                                "wms_abstract" "ecoregions_bailey"
+                END  # end METADATA
+    END # end Layer
+        
+        LAYER #
+                NAME ecoregions_omernik
+                
+                PROJECTION
+                 "init=epsg:4326"
+                END
+
+                CONNECTIONTYPE postgis
+                CONNECTION "%(POSTGIS_CONNECTION_STRING)s"
+                DATA "the_geom from ecoregions_omernik"
+                EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+                STATUS       OFF
+                TYPE         POLYGON
+                DUMP             TRUE
+                HEADER   ./templates/layer_query_header.html
+                TEMPLATE ./templates/layer_query_body.html
+                CLASS
+                        NAME "Omernik Ecoregions"
+                        STYLE
+                                COLOR        232 232 232
+                                OUTLINECOLOR 32 32 32
+                        END
+                END
+                METADATA
+                                "wms_title"    "ecoregions_omernik"
+                                "wms_abstract" "ecoregions_omernik"
+                END  # end METADATA
+    END # end Layer
+        
+END

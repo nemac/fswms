@@ -66,3 +66,7 @@
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "vlayers">
+    Allow from all
+    SetHandler cgi-script
+</Files>

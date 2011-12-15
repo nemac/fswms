@@ -25,3 +25,5 @@ LAYER_DATA_DIR  = VIEWER_LINK_TARGET_DIR
 # is deployed:
 #VIEWER_DEPLOY_DIR_URL = "http://ews.forestthreats.org/GIS"
 VIEWER_DEPLOY_DIR_URL = "http://dev.nemac.org/~mbp/fswms/html/view"
+
+POSTGIS_CONNECTION_STRING = "host=localhost dbname=XXXX user=XXXXX  password=XXXX"
