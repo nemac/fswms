@@ -1,0 +1,20 @@
+    LAYER
+        NAME %(NAME)s
+        PROJECTION
+%(PROJ)s
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA)s
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "%(COLORMAPFILE)s"
+        METADATA
+            "wms_title"             "%(TITLE)s"
+            "wms_abstract"          "%(ABSTRACT)s"
+            "wcs_label"             "%(TITLE)s"
+            "wcs_rangeset_name"     "%(TITLE)s"
+            "wcs_rangeset_label"    "%(TITLE)s"
+        END  # end METADATA
+    END # end LAYER
