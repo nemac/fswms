@@ -1,5 +1,7 @@
 #! /usr/bin/python
 
+import sys, re
+
 try:
     from Config import *
 except:
@@ -9,21 +11,74 @@ except:
     exit(-1)
 
 class Template:
-    def __init__(self, file):
-        f = open(file, "r")
-        self.contents = ""
-        for line in f:
-            self.contents = self.contents + line
-        f.close
+    def __init__(self, file=None, **args):
+        if file is None and 'string' in args:
+            self.contents = args['string']
+        else:
+            f = open(file, "r")
+            self.contents = ""
+            for line in f:
+                self.contents = self.contents + line
+            f.close
     def render(self, dict):
         return self.contents % dict
 
+###
+### Populate 'layerTitles' dict by reading contents from "layerTitles.txt" file:
+###
+try:
+    f = open("layerTitles.txt", "r")
+    layerTitles = {}
+    for line in f:
+        fields = re.split(r':', line.strip())
+        layerTitles[fields[0]] = fields[1]
+    f.close()
+except:
+    print "Can't read file layerTitles.txt; you must run 'makemap' before running this script!"
+    sys.exit(-1)
 
+wmsLayerTemplate = Template(string="""
+<wmsLayer
+  visible="false"
+  url="%(SERVER_URL)s/ews?TRANSPARENT=true"
+  srs="EPSG:3785"
+  layers="%(LAYER_NAME)s"
+  name="%(LAYER_TITLE)s"
+  styles="default" 
+  identify="true"
+  legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=%(LAYER_NAME)s&VERSION=1.1.1&FORMAT=image/png"/>	
+""")
+
+modisChangeDetectionProductLayers = ""
+for layerName in [
+    'EFETAC-NASA_current',
+    'EFETAC-NASA_previous1',
+    'EFETAC-NASA_previous2',
+    'EFETAC-NASA_1YrBaseline_current',
+    'EFETAC-NASA_1YrBaseline_previous1',
+    'EFETAC-NASA_1YrBaseline_previous2',
+    'EFETAC-NASA_3YrBaseline_current',
+    'EFETAC-NASA_3YrBaseline_previous1',
+    'EFETAC-NASA_3YrBaseline_previous2',
+    'EFETAC-NASA_AllYrBaseline_current',
+    'EFETAC-NASA_AllYrBaseline_previous1',
+    'EFETAC-NASA_AllYrBaseline_previous2',
+    'RSAC-FHTET_current',
+    'RSAC-FHTET_previous1',
+    'RSAC-FHTET_previous2'
+    ]:
+    modisChangeDetectionProductLayers = modisChangeDetectionProductLayers + wmsLayerTemplate.render({
+            'SERVER_URL'  : SERVER_URL,
+            'LAYER_NAME'  : layerName,
+            'LAYER_TITLE' : layerTitles[layerName]
+            })
+    
 template = Template("ews_config.tpl.xml")
 
 f = open("../html/view/config/ews_config.xml", "w")
 f.write(template.render( {
-            'SERVER_URL'            : SERVER_URL,
-            'VIEWER_DEPLOY_DIR_URL' : VIEWER_DEPLOY_DIR_URL
+            'SERVER_URL'                            : SERVER_URL,
+            'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
+            'MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : modisChangeDetectionProductLayers
             }))
 f.close()

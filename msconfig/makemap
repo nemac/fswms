@@ -96,6 +96,10 @@ class Template:
     def render(self, dict):
         return self.contents % dict
 
+###
+### initialize a dict to keep track of layer titles (keyed by layer name):
+###
+layerTitles = {}
 
 ###
 ### initialize tiflist: array of dict objects holding info about each layer in mapfile(s)
@@ -140,22 +144,25 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
     nameformStart = re.sub(r'_.*$', '', nameform)
     layerNameForm = nameformStart
 
+    layerName  = group + "_" + baseLineFolder + layerNameForm    # change this to be like "EFETAC-NASA_3yr-baseline_current"
+    layerTitle = tif
     tiflist.append({ 'TIF'             : tif,
                      'PROJVALID'       : len(proj) > 0,
                      'PROJ'            : formatproj(proj,10),
                      'WKT'             : getwkt(tif_fullpath),
-                     'NAME'            : group + "_" + baseLineFolder + layerNameForm,    # change this to be like "EFETAC-NASA_3yr-baseline_current"
+                     'NAME'            : layerName,
                      'GROUP'           : group,
                      'DATA'            : LAYER_DATA_DIR + '/' + tif,
                      'GROUP_ABSTRACT'  : group_abstract,
-                     'TITLE'           : tif, # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
-                     'ABSTRACT'        : tif, # change this to match title 
+                     'TITLE'           : layerTitle, # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
+                     'ABSTRACT'        : layerTitle, # change this to match title 
                      'COLORMAPFILE'    : colormapfile,
                      'COLORMAPCSV'     : colormapcsv,
                      #'KEYIMAGE'        : legendFile,
                      'KEYIMAGE'        : keyimage,
 		     'MODDATE'	       : modDate
                      })
+    layerTitles[layerName] = layerTitle
 
 ###
 ### create a tiflist entry for each .tif file in DATA_DIR+"/efetac_nasa/ews:
@@ -182,21 +189,24 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
             colormapcsv    = "efetac_nasa_percent_change_cmap.csv"
             #keyimage       = "tacs-nasa-legend-v3-181x277-2011-06-24.png"
             keyimage       = "TACs_NASA_CT_7-6-2011_clipped.png"
+        layerName  = group + "_" + re.sub(r'_.*$', '', nameform)
+        layerTitle = tif
         tiflist.append({ 'TIF'             : tif,
                          'PROJVALID'       : len(proj) > 0,
                          'PROJ'            : formatproj(proj,10),
                          'WKT'             : getwkt(tif_fullpath),
-                         'NAME'            : group + "_" + re.sub(r'_.*$', '', nameform),
+                         'NAME'            : layerName,
                          'GROUP'           : group,
                          'DATA'            : ARCHIVE_DIR + '/' + tif,
                          'GROUP_ABSTRACT'  : group_abstract,
-                         'TITLE'           : tif,
-                         'ABSTRACT'        : tif,
+                         'TITLE'           : layerTitle,
+                         'ABSTRACT'        : layerTitle,
                          'COLORMAPFILE'    : colormapfile,
                          'COLORMAPCSV'     : colormapcsv,
                          'KEYIMAGE'        : keyimage,
                          'MODDATE'	   : modDate
                          })
+        layerTitles[layerName] = layerTitle
     except:
         continue
 
@@ -292,17 +302,20 @@ def getLayers(dataDir, layerTemplateName, groupName):
             else:
                 colormapfile   = "ewsold.cmap"
             group = groupName 
+            layerName = group + "_" + re.sub(r'_.*$', '', nameform)
+            layerTitle = tif
             tifList.append({ 'TIF'             : tif,
                              'PROJVALID'       : len(proj) > 0,
                              'PROJ'            : formatproj(proj,10),
                              'WKT'             : getwkt(tif_fullpath),
-                             'NAME'            : group + "_" + re.sub(r'_.*$', '', nameform),
+                             'NAME'            : layerName,
                              'GROUP'           : group,
                              'DATA'            : dataDir + '/' + tif,
-                             'TITLE'           : tif,
-                             'ABSTRACT'        : tif,
+                             'TITLE'           : layerTitle,
+                             'ABSTRACT'        : layerTitle,
                              'COLORMAPFILE'    : colormapfile
                              })
+            layerTitles[layerName] = layerTitle
         except:
             print "except occured"
             continue
@@ -422,6 +435,14 @@ os.system("(cd ../html ; ln -f -s ../msconfig/ews.map . ; ln -f -s ../msconfig/e
 os.system("chmod a+w ../logs");
 os.system("chmod a+w ../logs/*.log > /dev/null 2>&1");
 os.system("chmod g-w ../html/*");
+
+###
+### write out the layer titles file:
+###
+f_out = open("layerTitles.txt", "w");
+for layerName in layerTitles:
+    f_out.write("%s:%s\n" % (layerName, layerTitles[layerName]))
+f_out.close()
 
 ###
 ### write out the html/index.html file:
