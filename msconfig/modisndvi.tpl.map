@@ -1,0 +1,4186 @@
+MAP
+    CONFIG     "MS_ERRORFILE" "../logs/lucky.log"
+    DEBUG      5
+    NAME       lucky
+    STATUS     ON
+    SIZE       600 400
+#   SYMBOLSET "./symbols/symbols35.sym"
+#   FONTSET   "./fonts/fonts.list"
+    EXTENT -180 -90 180 90 # World
+#   UNITS DEGREES
+    IMAGECOLOR 255 255 255
+
+    WEB
+        IMAGEPATH "./tmp"
+        IMAGEURL "/tmp/"
+        METADATA
+            "ows_enable_request"     "*"
+            "wms_title"              "Mark and Matt's Great OWS Server"
+            "wms_abstract"           "Mark and Matt's Abstract OWS Server"
+            "wms_onlineresource"     "%(SERVICE_URL)s"
+            "wms_srs"                "EPSG:4326 EPSG:3785"
+        END
+    END
+
+    PROJECTION
+     "init=epsg:4326"
+    END
+	LAYER
+        NAME     NDVI-353-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009353_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-337-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009337_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-321-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009321_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-305-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009305_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-289-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009289_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-273-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009273_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-257-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009257_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-241-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009241_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-225-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009225_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-209-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009209_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-193-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009193_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-177-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009177_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-161-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009161_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-145-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009145_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-129-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009129_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-113-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009113_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-097-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009097_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-081-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009081_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-065-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009065_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-049-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009049_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-033-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009033_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-001-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009001_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-353-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008353_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-337-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008337_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-321-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008321_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-305-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008305_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-289-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008289_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-273-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008273_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-257-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008257_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-241-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008241_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-225-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008225_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-209-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008209_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-193-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008193_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-177-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008177_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-161-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008161_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-145-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008145_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-129-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008129_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-113-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008113_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-097-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008097_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-081-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008081_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-065-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008065_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-049-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008049_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-033-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008033_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-001-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008001_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-353-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007353_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-337-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007337_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-321-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007321_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-305-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007305_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-289-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007289_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-273-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007273_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-257-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007257_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-241-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007241_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-225-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007225_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-209-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007209_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-193-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007193_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-177-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007177_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-161-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007161_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-145-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007145_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-129-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007129_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-113-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007113_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-097-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007097_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-081-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007081_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-065-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007065_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-049-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007049_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-033-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007033_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-001-2007
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007001_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-353-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006353_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-337-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006337_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-321-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006321_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-305-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006305_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-289-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006289_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-273-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006273_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-257-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006257_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-241-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006241_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-225-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006225_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-209-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006209_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-193-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006193_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-177-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006177_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-161-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006161_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-145-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006145_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-129-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006129_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-113-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006113_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-097-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006097_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-081-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006081_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-065-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006065_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-049-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006049_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-033-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006033_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-001-2006
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006001_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-353-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005353_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-337-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005337_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-321-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005321_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-305-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005305_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-289-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005289_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-273-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005273_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-257-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005257_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-241-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005241_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-225-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005225_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-209-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005209_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-193-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005193_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-177-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005177_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-161-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005161_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-145-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005145_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-129-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005129_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-113-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005113_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-097-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005097_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-081-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005081_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-065-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005065_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-049-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005049_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-033-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005033_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-001-2005
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005001_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-353-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004353_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-337-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004337_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-321-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004321_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-305-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004305_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-289-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004289_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-273-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004273_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-257-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004257_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-241-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004241_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-225-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004225_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-209-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004209_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-193-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004193_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-177-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004177_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-161-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004161_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-145-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004145_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-129-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004129_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-113-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004113_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-097-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004097_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-081-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004081_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-065-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004065_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-049-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004049_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-033-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004033_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-001-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004001_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME     NDVI-353-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003353_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-337-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003337_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-321-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003321_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-305-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003305_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-289-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003289_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-273-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003273_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-257-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003257_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-241-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003241_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-225-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003225_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-209-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003209_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-193-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003193_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-177-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003177_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-161-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003161_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-145-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003145_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-129-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003129_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-113-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003113_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-097-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003097_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-081-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003081_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-065-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003065_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-049-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003049_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-033-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003033_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     NDVI-001-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003001_webm.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+	INCLUDE "ews-cmaps/ndvi.cmap"
+
+        PROJECTION
+			"proj=merc"
+			"lon_0=0"
+			"k=1"
+			"x_0=0"
+			"y_0=0"
+			"a=6378137"
+			"b=6378137"
+			"units=m"
+			"no_defs"
+		END
+        METADATA
+            "wms_title"                  "MODIS NDVI"
+            "wms_abstract"               "MODIS NDVI"
+	 END  # end METADATA
+    END # end LAYER
+END # end MAP

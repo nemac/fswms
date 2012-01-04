@@ -1,0 +1,75 @@
+CLASS
+	NAME "Up to -55"
+	EXPRESSION ([pixel] <= -55)
+	COLOR 	156	85	31
+END
+CLASS
+	NAME "-54.99 - -45"
+	EXPRESSION ([pixel] >= -54.99 and [pixel] < -45)
+	COLOR 	171	106	50
+END
+CLASS
+	NAME "-44.99 - -35"
+	EXPRESSION ([pixel] >= -44.99 and [pixel] < -35)
+	COLOR 	186	128	69
+END
+CLASS
+	NAME "-34.99 - -25"
+	EXPRESSION ([pixel] >= -34.99 and [pixel] < -25)
+	COLOR 	199	149	88
+END
+CLASS
+	NAME "-24.99 - -15"
+	EXPRESSION ([pixel] >= -24.99 and [pixel] < -15)
+	COLOR 	214	173	111
+END
+CLASS
+	NAME "-14.99 - -5"
+	EXPRESSION ([pixel] >= -14.99 and [pixel] < -5)
+	COLOR 	230	202	138
+END
+CLASS
+	NAME "-4.99 - -0.01"
+	EXPRESSION ([pixel] >= -4.99 and [pixel] < -0.01)
+	COLOR 	242	228	165
+END
+CLASS
+	NAME "-0.01 - 0.01"
+	EXPRESSION ([pixel] >= -0.01 and [pixel] < 0.01)
+	COLOR 	236	233	216
+END
+CLASS
+	NAME "0.01 - 5"
+	EXPRESSION ([pixel] >= 0.01 and [pixel] < 5)
+	COLOR 	225	237	185
+END
+CLASS
+	NAME "5.01 - 15"
+	EXPRESSION ([pixel] >= 5.01 and [pixel] < 15)
+	COLOR 	194	219	180
+END
+CLASS
+	NAME "15.01 - 25"
+	EXPRESSION ([pixel] >= 15.01 and [pixel] < 25)
+	COLOR 	161	199	172
+END
+CLASS
+	NAME "25.01 - 35"
+	EXPRESSION ([pixel] >= 25.01 and [pixel] < 35)
+	COLOR 	130	181	166
+END
+CLASS
+	NAME "35.01 - 45"
+	EXPRESSION ([pixel] >= 35.01 and [pixel] < 45)
+	COLOR 	101	163	158
+END
+CLASS
+	NAME "45.01 - 55"
+	EXPRESSION ([pixel] >= 45.01 and [pixel] < 55)
+	COLOR 	72	148	153
+END
+CLASS
+	NAME "More than 55"
+	EXPRESSION ([pixel] >= 55)
+	COLOR 	36	131	145
+END

@@ -380,7 +380,7 @@ f_new.write( template.render( {
 f_new.close()
 
 ###
-### Create the ewstruecolor.map file:
+### Create the vlayers.map file:
 ###
 template = Template("vlayers.tpl.map")
 f_new = open("vlayers.map", "w")
@@ -388,6 +388,28 @@ f_new.write( template.render( {
             'DATA_DIR'     : DATA_DIR,
             'POSTGIS_CONNECTION_STRING' : POSTGIS_CONNECTION_STRING,
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "vlayers")
+            } ) )
+f_new.close()
+
+###
+### Create the derivatives.map file:
+###
+template = Template("derivatives.tpl.map")
+f_new = open("derivatives.map", "w")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "derivatives")
+            } ) )
+f_new.close()
+
+###
+### Create the modisndvi.map file:
+###
+template = Template("modisndvi.tpl.map")
+f_new = open("modisndvi.map", "w")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "modisndvi")
             } ) )
 f_new.close()
 

@@ -1,0 +1,60 @@
+CLASS
+	NAME "Up to 750"
+	EXPRESSION ([pixel] >= 1 and [pixel] < 750)
+	COLOR 	156	85 31
+END
+CLASS
+	NAME "750.01 - 1,500"
+	EXPRESSION ([pixel] >= 750.01 and [pixel] < 1500)
+	COLOR 	176	111	55
+END
+CLASS
+	NAME "1,500.01 - 2,250"
+	EXPRESSION ([pixel] >= 1500.01 and [pixel] < 2250)
+	COLOR 	194	140	79
+END
+CLASS
+	NAME "2,250.01 - 3,000"
+	EXPRESSION ([pixel] >= 2250.01 and [pixel] < 3000)
+	COLOR 	212	170	108
+END
+CLASS
+	NAME "3,000.01 - 3,750"
+	EXPRESSION ([pixel] >= 3000.01 and [pixel] < 3750)
+	COLOR 	230	203	140
+END
+CLASS
+	NAME "3,750.01 - 4,500"
+	EXPRESSION ([pixel] >= 3750.01 and [pixel] < 4500)
+	COLOR 	247	237	173
+END
+CLASS
+	NAME "4,500.01 - 5,250"
+	EXPRESSION ([pixel] >= 4500.01 and [pixel] < 5250)
+	COLOR 	237	245	188
+END
+CLASS
+	NAME "5,250.01 - 6,000"
+	EXPRESSION ([pixel] >= 5250.01 and [pixel] < 6000)
+	COLOR 	196	219	180
+END
+CLASS
+	NAME "6,000.01 - 6,750"
+	EXPRESSION ([pixel] >= 6000.01 and [pixel] < 6750)
+	COLOR 	157	196	171
+END
+CLASS
+	NAME "6,750.01 - 7,500"
+	EXPRESSION ([pixel] >= 6750.01 and [pixel] < 7500)
+	COLOR 	118	173	162
+END
+CLASS
+	NAME "7,500.01 - 8,250"
+	EXPRESSION ([pixel] >= 7500.01 and [pixel] < 8250)
+	COLOR 	81	153	156
+END
+CLASS
+	NAME "More than 8,250"
+	EXPRESSION ([pixel] >= 8250)
+	COLOR 	33	130	145
+END

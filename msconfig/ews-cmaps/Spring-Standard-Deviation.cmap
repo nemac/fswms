@@ -1,0 +1,50 @@
+CLASS
+	NAME ""
+	EXPRESSION ([pixel] = 0)
+	COLOR 	255 255 255
+END
+CLASS
+	NAME "Up to 10"
+	EXPRESSION ([pixel] >= 1 and [pixel] < 10)
+	COLOR 	156	85	31
+END
+CLASS
+	NAME "10.01 - 20"
+	EXPRESSION ([pixel] >= 10.01 and [pixel] < 20)
+	COLOR 	181	119	62
+END
+CLASS
+	NAME "20.01 - 30"
+	EXPRESSION ([pixel] >= 20.01 and [pixel] < 30)
+	COLOR 	207	162	99
+END
+CLASS
+	NAME "30.01 - 40"
+	EXPRESSION ([pixel] >= 30.01 and [pixel] < 40)
+	COLOR 	232	207	144
+END
+CLASS
+	NAME "40.01 - 50"
+	EXPRESSION ([pixel] >= 40.01 and [pixel] < 50)
+	COLOR 	255	255	191
+END
+CLASS
+	NAME "50.01 - 60"
+	EXPRESSION ([pixel] >= 50.01 and [pixel] < 60)
+	COLOR 	199	222	180
+END
+CLASS
+	NAME "60.01 - 70"
+	EXPRESSION ([pixel] >= 60.01 and [pixel] < 70)
+	COLOR 	145	189	168
+END
+CLASS
+	NAME "70.01 - 80"
+	EXPRESSION ([pixel] >= 70.01 and [pixel] < 80)
+	COLOR 	92	158	156
+END
+CLASS
+	NAME "More than 80"
+	EXPRESSION ([pixel] >= 80)
+	COLOR 	33	130	145
+END
