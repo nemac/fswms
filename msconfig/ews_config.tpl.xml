@@ -11,7 +11,6 @@
     <service name="EWS_Cumulative_Integrals_2007-2009" folder="EWS" label="MODIS Cumulative NDVI Products 2007-2009"/>
     <service name="EWS_Cumulative_Integrals_2003-2006" folder="EWS" label="MODIS Cumulative NDVI Products 2003-2006"/>
     <service name="EWS_Parameters"                     folder="EWS" label="MODIS Phenology Parameters Products"/>
-    <service name="EWS_Derived_Products"               folder="EWS" label="MODIS Phenology Derived Products"/>
     <service name="EWS_RSAC-FHTET_Change_2010"         folder="EWS" label="RSAC-FHTET MODIS 2010 Change"/>
     <service name="EWS_RSAC-FHTET"                     folder="EWS" label="Archived NRT RSAC-FHTET"/>
     <service name="EWS_EFETAC-NASA_Change_2010"        folder="EWS" label="EFETAC-NASA MODIS 2010 Change"/>
@@ -667,7 +666,11 @@
               <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ecoregions_bailey" styles="default" identify="true" name="Bailey's Ecoregions" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ecoregions_bailey&VERSION=1.1.1&FORMAT=image/png"/>
               <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ecoregions_omernik" styles="default" identify="true" name="Omernik Ecoregions" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ecoregions_omernik&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsGroupLayer>
-
+	<wmsGroupLayer name="EWS_Derived_Products" label="MODIS Phenology Derived Products" >
+              <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="spring-leaf-out-length-2008" styles="default" identify="true" name="spring-leaf-out-length-2008" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ecoregions_bailey&VERSION=1.1.1&FORMAT=image/png"/>
+              <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="spring-leaf-out-length-2009" styles="default" identify="true" name="spring-leaf-out-length-2009" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ecoregions_omernik&VERSION=1.1.1&FORMAT=image/png"/>
+    </wmsGroupLayer>
+	
   </wmsLayers>
   <tools>
     <tool name="Print" label="Print Map" />
