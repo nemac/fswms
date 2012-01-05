@@ -95,8 +95,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "cities"
-            "wms_abstract" "cities"
+            "wms_title"          "cities"
+            "wms_abstract"       "cities"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # 
 
@@ -126,8 +127,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "states"
-            "wms_abstract" "states"
+            "wms_title"            "states"
+            "wms_abstract"         "states"
+            "gml_include_items"    "all"
         END  # end METADATA
     END # end Layer
 
@@ -156,8 +158,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "counties"
-            "wms_abstract" "counties"
+            "wms_title"          "counties"
+            "wms_abstract"       "counties"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -187,8 +190,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "federal_lands"
-            "wms_abstract" "federal_lands"
+            "wms_title"          "federal_lands"
+            "wms_abstract"       "federal_lands"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -218,8 +222,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "interstates"
-            "wms_abstract" "interstates"
+            "wms_title"          "interstates"
+            "wms_abstract"       "interstates"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -249,8 +254,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "roads"
-            "wms_abstract" "roads"
+            "wms_title"          "roads"
+            "wms_abstract"       "roads"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -290,8 +296,9 @@ MAP
             END # STYLE
         END
         METADATA
-            "wms_title"    "mtbs_2008"
-            "wms_abstract" "mtbs_2008"
+            "wms_title"          "mtbs_2008"
+            "wms_abstract"       "mtbs_2008"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -329,8 +336,9 @@ MAP
             END # STYLE
         END
         METADATA
-            "wms_title"    "mtbs_2007"
-            "wms_abstract" "mtbs_2007"
+            "wms_title"          "mtbs_2007"
+            "wms_abstract"       "mtbs_2007"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -368,8 +376,9 @@ MAP
             END # STYLE
         END
         METADATA
-            "wms_title"    "mtbs_2006"
-            "wms_abstract" "mtbs_2006"
+            "wms_title"          "mtbs_2006"
+            "wms_abstract"       "mtbs_2006"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -407,8 +416,9 @@ MAP
             END # STYLE
         END
         METADATA
-            "wms_title"    "mtbs_2005"
-            "wms_abstract" "mtbs_2005"
+            "wms_title"          "mtbs_2005"
+            "wms_abstract"       "mtbs_2005"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -446,8 +456,9 @@ MAP
             END # STYLE
         END
         METADATA
-            "wms_title"    "mtbs_2004"
-            "wms_abstract" "mtbs_2004"
+            "wms_title"          "mtbs_2004"
+            "wms_abstract"       "mtbs_2004"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -485,8 +496,9 @@ MAP
             END # STYLE
         END
         METADATA
-            "wms_title"    "mtbs_2003"
-            "wms_abstract" "mtbs_2003"
+            "wms_title"          "mtbs_2003"
+            "wms_abstract"       "mtbs_2003"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -524,8 +536,9 @@ MAP
             END # STYLE
         END
         METADATA
-            "wms_title"    "mtbs_2002"
-            "wms_abstract" "mtbs_2002"
+            "wms_title"          "mtbs_2002"
+            "wms_abstract"       "mtbs_2002"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -563,8 +576,9 @@ MAP
             END # STYLE
         END
         METADATA
-            "wms_title"    "mtbs_2001"
-            "wms_abstract" "mtbs_2001"
+            "wms_title"          "mtbs_2001"
+            "wms_abstract"       "mtbs_2001"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -602,8 +616,9 @@ MAP
             END # STYLE
         END
         METADATA
-            "wms_title"    "mtbs_2000"
-            "wms_abstract" "mtbs_2000"
+            "wms_title"          "mtbs_2000"
+            "wms_abstract"       "mtbs_2000"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -633,8 +648,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "ads_2009"
-            "wms_abstract" "ads_2009"
+            "wms_title"          "ads_2009"
+            "wms_abstract"       "ads_2009"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -663,8 +679,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "ads_2008"
-            "wms_abstract" "ads_2008"
+            "wms_title"          "ads_2008"
+            "wms_abstract"       "ads_2008"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -693,8 +710,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "ads_2007"
-            "wms_abstract" "ads_2007"
+            "wms_title"          "ads_2007"
+            "wms_abstract"       "ads_2007"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -724,8 +742,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "ads_2006"
-            "wms_abstract" "ads_2006"
+            "wms_title"          "ads_2006"
+            "wms_abstract"       "ads_2006"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -754,8 +773,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "ads_2005"
-            "wms_abstract" "ads_2005"
+            "wms_title"          "ads_2005"
+            "wms_abstract"       "ads_2005"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -785,8 +805,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "ads_2004"
-            "wms_abstract" "ads_2004"
+            "wms_title"          "ads_2004"
+            "wms_abstract"       "ads_2004"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -816,8 +837,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "ads_2003"
-            "wms_abstract" "ads_2003"
+            "wms_title"          "ads_2003"
+            "wms_abstract"       "ads_2003"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -846,8 +868,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "streams"
-            "wms_abstract" "streams"
+            "wms_title"          "streams"
+            "wms_abstract"       "streams"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -876,8 +899,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "HUC6"
-            "wms_abstract" "HUC6"
+            "wms_title"          "HUC6"
+            "wms_abstract"       "HUC6"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -906,8 +930,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "HUC8"
-            "wms_abstract" "HUC8"
+            "wms_title"          "HUC8"
+            "wms_abstract"       "HUC8"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -937,8 +962,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "ecoregions_bailey"
-            "wms_abstract" "ecoregions_bailey"
+            "wms_title"           "ecoregions_bailey"
+            "wms_abstract"        "ecoregions_bailey"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -968,8 +994,9 @@ MAP
             END
         END
         METADATA
-            "wms_title"    "ecoregions_omernik"
-            "wms_abstract" "ecoregions_omernik"
+            "wms_title"          "ecoregions_omernik"
+            "wms_abstract"       "ecoregions_omernik"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
