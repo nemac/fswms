@@ -16,5 +16,6 @@
             "wcs_label"             "%(TITLE)s"
             "wcs_rangeset_name"     "%(TITLE)s"
             "wcs_rangeset_label"    "%(TITLE)s"
+            "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
