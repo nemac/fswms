@@ -29,19 +29,14 @@ CLASS
 	COLOR 	230	202	138
 END
 CLASS
-	NAME "-4.99 - -0.01"
-	EXPRESSION ([pixel] >= -4.99 and [pixel] < -0.01)
+	NAME "-4.99 - 0"
+	EXPRESSION ([pixel] >= -4.99 and [pixel] < 0)
 	COLOR 	242	228	165
 END
 CLASS
-	NAME "-0.01 - 0.01"
-	EXPRESSION ([pixel] >= -0.01 and [pixel] < 0.01)
-	COLOR 	236	233	216
-END
-CLASS
-	NAME "0.01 - 5"
-	EXPRESSION ([pixel] >= 0.01 and [pixel] < 5)
-	COLOR 	225	237	185
+	NAME "0 - 5"
+	EXPRESSION ([pixel] > 0 and [pixel] < 5)
+	COLOR 	242	228	165
 END
 CLASS
 	NAME "5.01 - 15"

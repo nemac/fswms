@@ -74,3 +74,11 @@
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "parameters">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "new">
+    Allow from all
+    SetHandler cgi-script
+</Files>

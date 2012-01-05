@@ -426,6 +426,17 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+###
+### Create the parameters.map file:
+###
+template = Template("parameters.tpl.map")
+f_new = open("parameters.map", "w")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "parameters")
+            } ) )
+f_new.close()
+
 #################################################################################################
 
 ###

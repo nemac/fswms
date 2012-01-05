@@ -219,7 +219,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/09_skewness.img
+        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/2009_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
