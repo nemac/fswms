@@ -769,7 +769,7 @@
 
     <wmsGroupLayer name="US_Jurisdictions" label="Jurisdictions" priorService="EWS_Activefire2">
       <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="cities" styles="default" identify="true" name="Cities" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cities&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="states" styles="default" identify="true" name="States" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=states&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="true" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="states" styles="default" identify="true" name="States" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=states&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="counties" styles="default" identify="true" name="Counties" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=counties&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="federal_lands" styles="default" identify="true" name="Federal Lands" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=federal_lands&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="interstates" styles="default" identify="true" name="Interstates" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=interstates&VERSION=1.1.1&FORMAT=image/png"/>

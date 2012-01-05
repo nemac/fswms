@@ -956,11 +956,35 @@ MAP
 
         CLASS
             NAME "Bailey's Ecoregions"
+            EXPRESSION ([gid] %% 15 = 0)
+            STYLE
+                COLOR        255 0 0
+                OUTLINECOLOR 32 32 32
+            END
+	END
+        CLASS
+            NAME "Bailey's Ecoregions"
+            EXPRESSION ([gid] %% 15 = 1)
+            STYLE
+                COLOR        0 255 0
+                OUTLINECOLOR 32 32 32
+            END
+	END
+
+        CLASS
+            EXPRESSION ([gid] %% 15 > 1)
+            NAME "Bailey's Ecoregions"
             STYLE
                 COLOR        232 232 232
                 OUTLINECOLOR 32 32 32
             END
         END
+
+
+
+
+
+
         METADATA
             "wms_title"           "ecoregions_bailey"
             "wms_abstract"        "ecoregions_bailey"
