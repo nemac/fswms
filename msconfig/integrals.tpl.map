@@ -26,11 +26,11 @@ MAP
      "init=epsg:4326"
     END
 	LAYER
-        NAME     large-integral-2009
+        NAME     cumulative-int-1-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_large_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_1_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -53,11 +53,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     qc-flags-2009
+        NAME     cumulative-int-2-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_qc_flags.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_2_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -80,11 +80,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-20pct-2009
+        NAME     cumulative-int-3-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_3_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -107,11 +107,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-20pct-2009
+        NAME     cumulative-int-4-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_4_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -134,11 +134,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-20pct-2009
+        NAME     cumulative-int-5-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_5_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -161,11 +161,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-20pct-2009
+        NAME     cumulative-int-6-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_6_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -188,11 +188,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-80pct-2009
+        NAME     cumulative-int-7-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_7_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -215,11 +215,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-80pct-2009
+        NAME     cumulative-int-8-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_8_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -242,11 +242,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-80pct-2009
+        NAME     cumulative-int-9-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_9_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -269,11 +269,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-80pct-2009
+        NAME     cumulative-int-10-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_10_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -296,11 +296,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-pos-2009
+        NAME     cumulative-int-11-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_max_ndvi_position.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_11_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -323,11 +323,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-val-2009
+        NAME     cumulative-int-12-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_max_ndvi_value.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_12_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -350,11 +350,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-left-2009
+        NAME     cumulative-int-13-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_13_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -377,11 +377,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-right-2009
+        NAME     cumulative-int-14-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_14_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -404,11 +404,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-left-2009
+        NAME     cumulative-int-15-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_15_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -431,11 +431,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-right-2009
+        NAME     cumulative-int-16-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_16_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -458,11 +458,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     small-integral-2009
+        NAME     cumulative-int-17-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_small_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_17_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -485,11 +485,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     large-integral-2008
+        NAME     cumulative-int-18-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_large_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_18_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -512,11 +512,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     qc-flags-2008
+        NAME     cumulative-int-19-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_qc_flags.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_19_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -539,11 +539,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-20pct-2008
+        NAME     cumulative-int-20-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_20_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -566,11 +566,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-20pct-2008
+        NAME     cumulative-int-21-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_21_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -593,11 +593,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-20pct-2008
+        NAME     cumulative-int-22-2009
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2009/mcd13tqk_a2009_cum_integral_22_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -620,11 +620,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-20pct-2008
+        NAME     cumulative-int-1-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_1_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -647,11 +647,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-80pct-2008
+        NAME     cumulative-int-2-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_2_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -674,11 +674,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-80pct-2008
+        NAME     cumulative-int-3-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_3_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -701,11 +701,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-80pct-2008
+        NAME     cumulative-int-4-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_4_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -728,11 +728,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-80pct-2008
+        NAME     cumulative-int-5-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_5_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -755,11 +755,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-pos-2008
+        NAME     cumulative-int-6-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_position.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_6_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -782,11 +782,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-val-2008
+        NAME     cumulative-int-7-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_value.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_7_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -809,11 +809,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-left-2008
+        NAME     cumulative-int-8-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_8_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -836,11 +836,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-right-2008
+        NAME     cumulative-int-9-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_9_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -863,11 +863,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-left-2008
+        NAME     cumulative-int-10-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_10_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -890,11 +890,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-right-2008
+        NAME     cumulative-int-11-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_11_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -917,11 +917,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     small-integral-2008
+        NAME     cumulative-int-12-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_small_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_12_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -944,11 +944,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     large-integral-2007
+        NAME     cumulative-int-13-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_large_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_13_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -971,11 +971,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     qc-flags-2007
+        NAME     cumulative-int-14-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_qc_flags.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_14_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -998,11 +998,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-20pct-2007
+        NAME     cumulative-int-15-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_15_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1025,11 +1025,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-20pct-2007
+        NAME     cumulative-int-16-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_16_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1052,11 +1052,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-20pct-2007
+        NAME     cumulative-int-17-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_17_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1079,11 +1079,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-20pct-2007
+        NAME     cumulative-int-18-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_18_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1106,11 +1106,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-80pct-2007
+        NAME     cumulative-int-19-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_19_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1133,11 +1133,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-80pct-2007
+        NAME     cumulative-int-20-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_20_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1160,11 +1160,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-80pct-2007
+        NAME     cumulative-int-21-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_21_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1187,11 +1187,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-80pct-2007
+        NAME     cumulative-int-22-2008
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2008/mcd13tqk_a2008_cum_integral_22_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1214,11 +1214,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-pos-2007
+        NAME     cumulative-int-1-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_position.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_1_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1241,11 +1241,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-val-2007
+        NAME     cumulative-int-2-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_value.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_2_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1268,11 +1268,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-left-2007
+        NAME     cumulative-int-3-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_3_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1295,11 +1295,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-right-2007
+        NAME     cumulative-int-4-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_4_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1322,11 +1322,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-left-2007
+        NAME     cumulative-int-5-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_5_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1349,11 +1349,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-right-2007
+        NAME     cumulative-int-6-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_6_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1376,11 +1376,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     small-integral-2007
+        NAME     cumulative-int-7-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_small_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_7_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1403,11 +1403,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     large-integral-2006
+        NAME     cumulative-int-8-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_large_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_8_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1430,11 +1430,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     qc-flags-2006
+        NAME     cumulative-int-9-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_qc_flags.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_9_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1457,11 +1457,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-20pct-2006
+        NAME     cumulative-int-10-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_10_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1484,11 +1484,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-20pct-2006
+        NAME     cumulative-int-11-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_11_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1511,11 +1511,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-20pct-2006
+        NAME     cumulative-int-12-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_12_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1538,11 +1538,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-20pct-2006
+        NAME     cumulative-int-13-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_13_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1565,11 +1565,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-80pct-2006
+        NAME     cumulative-int-14-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_14_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1592,11 +1592,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-80pct-2006
+        NAME     cumulative-int-15-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_15_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1619,11 +1619,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-80pct-2006
+        NAME     cumulative-int-16-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_16_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1646,11 +1646,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-80pct-2006
+        NAME     cumulative-int-17-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_17_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1673,11 +1673,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-pos-2006
+        NAME     cumulative-int-18-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_position.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_18_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1700,11 +1700,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-val-2006
+        NAME     cumulative-int-19-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_value.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_19_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1727,11 +1727,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-left-2006
+        NAME     cumulative-int-20-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_20_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1754,11 +1754,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-right-2006
+        NAME     cumulative-int-21-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_21_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1781,11 +1781,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-left-2006
+        NAME     cumulative-int-22-2007
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2007/mcd13tqk_a2007_cum_integral_22_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1808,11 +1808,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-right-2006
+        NAME     cumulative-int-1-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_1_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1835,11 +1835,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     small-integral-2006
+        NAME     cumulative-int-2-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_small_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_2_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1862,11 +1862,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     large-integral-2005
+        NAME     cumulative-int-3-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/01_2005_phen_large_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_3_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1889,11 +1889,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     qc-flags-2005
+        NAME     cumulative-int-4-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/04_2005_phen_qc_flags.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_4_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1916,11 +1916,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-20pct-2005
+        NAME     cumulative-int-5-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/05_2005_phen_season_20pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_5_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1943,11 +1943,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-20pct-2005
+        NAME     cumulative-int-6-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/06_2005_phen_season_20pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_6_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1970,11 +1970,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-20pct-2005
+        NAME     cumulative-int-7-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/07_2005_phen_season_20pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_7_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1997,11 +1997,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-20pct-2005
+        NAME     cumulative-int-8-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/08_2005_phen_season_20pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_8_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2024,11 +2024,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-80pct-2005
+        NAME     cumulative-int-9-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/09_2005_phen_season_80pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_9_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2051,11 +2051,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-80pct-2005
+        NAME     cumulative-int-10-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/10_2005_phen_season_80pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_10_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2078,11 +2078,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-80pct-2005
+        NAME     cumulative-int-11-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/11_2005_phen_season_80pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_11_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2105,11 +2105,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-80pct-2005
+        NAME     cumulative-int-12-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/12_2005_phen_season_80pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_12_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2132,11 +2132,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-pos-2005
+        NAME     cumulative-int-13-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/02_2005_phen_max_ndvi_position.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_13_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2159,11 +2159,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-val-2005
+        NAME     cumulative-int-14-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/03_2005_phen_max_ndvi_value.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_14_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2186,11 +2186,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-left-2005
+        NAME     cumulative-int-15-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/13_2005_phen_season_min_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_15_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2213,11 +2213,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-right-2005
+        NAME     cumulative-int-16-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/14_2005_phen_season_min_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_16_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2240,11 +2240,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-left-2005
+        NAME     cumulative-int-17-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/15_2005_phen_season_min_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_17_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2267,11 +2267,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-right-2005
+        NAME     cumulative-int-18-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/16_2005_phen_season_min_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_18_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2294,11 +2294,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     small-integral-2005
+        NAME     cumulative-int-19-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/17_2005_phen_small_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_19_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2321,11 +2321,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     large-integral-2004
+        NAME     cumulative-int-20-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/01_2004_phen_large_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_20_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2348,11 +2348,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     qc-flags-2004
+        NAME     cumulative-int-21-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/04_2004_phen_qc_flags.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_21_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2375,11 +2375,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-20pct-2004
+        NAME     cumulative-int-22-2006
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/05_2004_phen_season_20pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2006/mcd13tqk_a2006_cum_integral_22_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2402,11 +2402,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-20pct-2004
+        NAME     cumulative-int-1-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/06_2004_phen_season_20pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_1_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2429,11 +2429,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-20pct-2004
+        NAME     cumulative-int-2-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/07_2004_phen_season_20pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_2_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2456,11 +2456,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-20pct-2004
+        NAME     cumulative-int-3-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/08_2004_phen_season_20pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_3_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2483,11 +2483,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-80pct-2004
+        NAME     cumulative-int-4-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/09_2004_phen_season_80pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_4_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2510,11 +2510,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-80pct-2004
+        NAME     cumulative-int-5-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/10_2004_phen_season_80pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_5_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2537,11 +2537,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-80pct-2004
+        NAME     cumulative-int-6-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/11_2004_phen_season_80pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_6_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2564,11 +2564,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-80pct-2004
+        NAME     cumulative-int-7-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/12_2004_phen_season_80pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_7_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2591,11 +2591,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-pos-2004
+        NAME     cumulative-int-8-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/02_2004_phen_max_ndvi_position.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_8_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2618,11 +2618,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-val-2004
+        NAME     cumulative-int-9-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/03_2004_phen_max_ndvi_value.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_9_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2645,11 +2645,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-left-2004
+        NAME     cumulative-int-10-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/13_2004_phen_season_min_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_10_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2672,11 +2672,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-right-2004
+        NAME     cumulative-int-11-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/14_2004_phen_season_min_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_11_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2699,11 +2699,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-left-2004
+        NAME     cumulative-int-12-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/15_2004_phen_season_min_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_12_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2726,11 +2726,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-right-2004
+        NAME     cumulative-int-13-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/16_2004_phen_season_min_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_13_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2753,11 +2753,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     small-integral-2004
+        NAME     cumulative-int-14-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/17_2004_phen_small_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_14_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2780,11 +2780,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     large-integral-2003
+        NAME     cumulative-int-15-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/01_2003_phen_large_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_15_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2807,11 +2807,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     qc-flags-2003
+        NAME     cumulative-int-16-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/04_2003_phen_qc_flags.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_16_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2834,11 +2834,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-20pct-2003
+        NAME     cumulative-int-17-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/05_2003_phen_season_20pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_17_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2861,11 +2861,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-20pct-2003
+        NAME     cumulative-int-18-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/06_2003_phen_season_20pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_18_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2888,11 +2888,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-20pct-2003
+        NAME     cumulative-int-19-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/07_2003_phen_season_20pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_19_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2915,11 +2915,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-20pct-2003
+        NAME     cumulative-int-20-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/08_2003_phen_season_20pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_20_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2942,11 +2942,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-pos-80pct-2003
+        NAME     cumulative-int-21-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/09_2003_phen_season_80pct_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_21_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2969,11 +2969,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-pos-80pct-2003
+        NAME     cumulative-int-22-2005
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/10_2003_phen_season_80pct_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2005/mcd13tqk_a2005_cum_integral_22_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2996,11 +2996,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     left-val-80pct-2003
+        NAME     cumulative-int-1-2004
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/11_2003_phen_season_80pct_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_1_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3023,11 +3023,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     right-val-80pct-2003
+        NAME     cumulative-int-2-2004
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/12_2003_phen_season_80pct_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_2_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3050,11 +3050,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-pos-2003
+        NAME     cumulative-int-3-2004
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/02_2003_phen_max_ndvi_position.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_3_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3077,11 +3077,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     max-ndvi-val-2003
+        NAME     cumulative-int-4-2004
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/03_2003_phen_max_ndvi_value.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_4_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3104,11 +3104,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-left-2003
+        NAME     cumulative-int-5-2004
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/13_2003_phen_season_min_position_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_5_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3131,11 +3131,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-pos-right-2003
+        NAME     cumulative-int-6-2004
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/14_2003_phen_season_min_position_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_6_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3158,11 +3158,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-left-2003
+        NAME     cumulative-int-7-2004
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/15_2003_phen_season_min_value_left.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_7_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3185,11 +3185,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     min-val-right-2003
+        NAME     cumulative-int-8-2004
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/16_2003_phen_season_min_value_right.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_8_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3212,11 +3212,11 @@ MAP
 	 END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     small-integral-2003
+        NAME     cumulative-int-9-2004
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/17_2003_phen_small_integral.img
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_9_mosaic_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3238,4 +3238,949 @@ MAP
             "wms_abstract"               "National Phenological Dataset"
 	 END  # end METADATA
     END # end LAYER
-END #Map
+	LAYER
+        NAME     cumulative-int-10-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_10_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-11-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_11_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-12-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_12_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-13-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_13_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-14-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_14_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-15-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_15_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-16-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_16_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-17-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_17_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-18-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_18_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-19-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_19_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-20-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_20_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-21-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_21_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-22-2004
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2004/mcd13tqk_a2004_cum_integral_22_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-1-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_1_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-2-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_2_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-3-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_3_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-4-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_4_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-5-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_5_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-6-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_6_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-7-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_7_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-8-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_8_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-9-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_9_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-10-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_10_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-11-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_11_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-12-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_12_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-13-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_13_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-14-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_14_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-15-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_15_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-16-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_16_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-17-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_17_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-18-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_18_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-19-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_19_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-20-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_20_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-21-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_21_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     cumulative-int-22-2003
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Cumulative_Integral/2003/mcd13tqk_a2003_cum_integral_22_mosaic_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+END

@@ -6,11 +6,6 @@
   <server map_path="http://arcgisserver7.nemac.org/ArcGIS/" >
   </server>
   <services>
-    <service name="EWS_NDVI_2007-2009"                 folder="EWS" label="MODIS NDVI 2007-2009"/>
-    <service name="EWS_NDVI_2003-2006"                 folder="EWS" label="MODIS NDVI 2003-2006"/>
-    <service name="EWS_Cumulative_Integrals_2007-2009" folder="EWS" label="MODIS Cumulative NDVI Products 2007-2009"/>
-    <service name="EWS_Cumulative_Integrals_2003-2006" folder="EWS" label="MODIS Cumulative NDVI Products 2003-2006"/>
-    <service name="EWS_Parameters"                     folder="EWS" label="MODIS Phenology Parameters Products"/>
     <service name="EWS_RSAC-FHTET_Change_2010"         folder="EWS" label="RSAC-FHTET MODIS 2010 Change"/>
     <service name="EWS_RSAC-FHTET"                     folder="EWS" label="Archived NRT RSAC-FHTET"/>
     <service name="EWS_EFETAC-NASA_Change_2010"        folder="EWS" label="EFETAC-NASA MODIS 2010 Change"/>
@@ -168,8 +163,7 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />	
-      <viewGroup name="EWS_Cumulative_Integrals_2003-2006" />
-      <viewGroup name="EWS_Cumulative_Integrals_2007-2009" />
+      <viewGroup name="EWS_Integrals" />
     </view>
     <view name="MODIS_NDVI_Time_series_Profiling_Capability" label="MODIS NDVI Time series Profiling Capability">
       <viewGroup name="US_Jurisdictions" />
@@ -185,8 +179,7 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="EWS_NDVI_2003-2006" />
-      <viewGroup name="EWS_NDVI_2007-2009" />
+      <viewGroup name="EWS_MODISNDVI" />
     </view>
     <view name="MODIS_Phenology_Time_Series_2003-2009" label="MODIS Phenology Time Series 2003-2009">
       <viewGroup name="US_Jurisdictions" />
@@ -206,10 +199,8 @@
       <viewGroup name="EWS_RSAC-FHTET" />
       <viewGroup name="EWS_Derived_Products" />
       <viewGroup name="EWS_Parameters" />
-      <viewGroup name="EWS_Cumulative_Integrals_2003-2006" />
-      <viewGroup name="EWS_Cumulative_Integrals_2007-2009" />
-      <viewGroup name="EWS_NDVI_2003-2006" />
-      <viewGroup name="EWS_NDVI_2007-2009" />
+      <viewGroup name="EWS_Integrals" />
+      <viewGroup name="EWS_MODISNDVI" />
     </view>
   </mapviews>
   <wmsLayers>
@@ -918,6 +909,26 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="max-min-mean-2003-2009" styles="default" identify="true" name="max-min-mean-2003-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-min-mean-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	</wmsGroupLayer>
     
+	<wmsGroupLayer name="EWS_Parameters" label="MODIS Phenological Parameters" >
+      <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="large-integral-2009" styles="default" identify="true" name="large-integral-2009" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=large-integral-2009&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="qc-flags-2009" styles="default" identify="true" name="qc-flags-2009" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2009&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="left-pos-20pct-2009" styles="default" identify="true" name="left-pos-20pct-2009" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=left-pos-20pct-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="right-pos-20pct-2009" styles="default" identify="true" name="right-pos-20pct-2009" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=right-pos-20pct-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	</wmsGroupLayer>
+	
+	<wmsGroupLayer name="EWS_Integrals" label="MODIS Cumulative Integrals" >
+      <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-1-2009" styles="default" identify="true" name="cumulative-int-1-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-1-2009&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-2-2009" styles="default" identify="true" name="cumulative-int-2-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-2-2009&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-3-2009" styles="default" identify="true" name="cumulative-int-3-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-3-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-4-2009" styles="default" identify="true" name="cumulative-int-4-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-4-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	</wmsGroupLayer>
+	
+	<wmsGroupLayer name="EWS_MODISNDVI" label="MODIS NDVI" >
+      <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-353-2009" styles="default" identify="true" name="NDVI-353-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2009&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-337-2009" styles="default" identify="true" name="NDVI-337-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2009&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-321-2009" styles="default" identify="true" name="NDVI-321-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-305-2009" styles="default" identify="true" name="NDVI-305-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-305-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	</wmsGroupLayer>
   </wmsLayers>
   <tools>
     <tool name="Print" label="Print Map" />
