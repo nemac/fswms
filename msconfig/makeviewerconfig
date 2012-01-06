@@ -39,7 +39,7 @@ except:
 
 wmsLayerTemplate = Template(string="""
 <wmsLayer
-  visible="false"
+  visible="%(LAYER_VISIBLE)s"
   url="%(SERVER_URL)s/ews?TRANSPARENT=true"
   srs="EPSG:3785"
   layers="%(LAYER_NAME)s"
@@ -50,27 +50,28 @@ wmsLayerTemplate = Template(string="""
 """)
 
 modisChangeDetectionProductLayers = ""
-for layerName in [
-    'EFETAC-NASA_current',
-    'EFETAC-NASA_previous1',
-    'EFETAC-NASA_previous2',
-    'EFETAC-NASA_1YrBaseline_current',
-    'EFETAC-NASA_1YrBaseline_previous1',
-    'EFETAC-NASA_1YrBaseline_previous2',
-    'EFETAC-NASA_3YrBaseline_current',
-    'EFETAC-NASA_3YrBaseline_previous1',
-    'EFETAC-NASA_3YrBaseline_previous2',
-    'EFETAC-NASA_AllYrBaseline_current',
-    'EFETAC-NASA_AllYrBaseline_previous1',
-    'EFETAC-NASA_AllYrBaseline_previous2',
-    'RSAC-FHTET_current',
-    'RSAC-FHTET_previous1',
-    'RSAC-FHTET_previous2'
+for layer in [
+    { 'name' : 'EFETAC-NASA_current',                   'visible' : 'true'  },
+    { 'name' : 'EFETAC-NASA_previous1',                 'visible' : 'false' },
+    { 'name' : 'EFETAC-NASA_previous2',                 'visible' : 'false' },
+    { 'name' : 'EFETAC-NASA_1YrBaseline_current',       'visible' : 'false' },
+    { 'name' : 'EFETAC-NASA_1YrBaseline_previous1',     'visible' : 'false' },
+    { 'name' : 'EFETAC-NASA_1YrBaseline_previous2',     'visible' : 'false' },
+    { 'name' : 'EFETAC-NASA_3YrBaseline_current',       'visible' : 'false' },
+    { 'name' : 'EFETAC-NASA_3YrBaseline_previous1',     'visible' : 'false' },
+    { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'visible' : 'false' },
+    { 'name' : 'EFETAC-NASA_AllYrBaseline_current',     'visible' : 'false' },
+    { 'name' : 'EFETAC-NASA_AllYrBaseline_previous1',   'visible' : 'false' },
+    { 'name' : 'EFETAC-NASA_AllYrBaseline_previous2',   'visible' : 'false' },
+    { 'name' : 'RSAC-FHTET_current',                    'visible' : 'false' },
+    { 'name' : 'RSAC-FHTET_previous1',                  'visible' : 'false' },
+    { 'name' : 'RSAC-FHTET_previous2',                  'visible' : 'false' }
     ]:
     modisChangeDetectionProductLayers = modisChangeDetectionProductLayers + wmsLayerTemplate.render({
-            'SERVER_URL'  : SERVER_URL,
-            'LAYER_NAME'  : layerName,
-            'LAYER_TITLE' : layerTitles[layerName]
+            'SERVER_URL'    : SERVER_URL,
+            'LAYER_NAME'    : layer['name'],
+            'LAYER_VISIBLE' : layer['visible'],
+            'LAYER_TITLE'   : layerTitles[layer['name']]
             })
     
 template = Template("ews_config.tpl.xml")
