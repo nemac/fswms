@@ -1,0 +1,946 @@
+MAP
+    CONFIG     "MS_ERRORFILE" "../logs/lucky.log"
+    DEBUG      5
+    NAME       lucky
+    STATUS     ON
+    SIZE       600 400
+#   SYMBOLSET "./symbols/symbols35.sym"
+#   FONTSET   "./fonts/fonts.list"
+    EXTENT -180 -90 180 90 # World
+#   UNITS DEGREES
+    IMAGECOLOR 255 255 255
+
+    WEB
+        IMAGEPATH "./tmp"
+        IMAGEURL "/tmp/"
+        METADATA
+            "ows_enable_request"     "*"
+            "wms_title"              "NEMAC OWS Server"
+            "wms_abstract"           "NEMAC OWS Server"
+            "wms_onlineresource"     "%(SERVICE_URL)s"
+            "wms_srs"                "EPSG:4326 EPSG:3785"
+        END
+    END
+
+    PROJECTION
+     "init=epsg:4326"
+    END
+	LAYER
+        NAME     large-integral-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_large_integral.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     qc-flags-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_qc_flags.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     20pct-pos-left-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     20pct-pos-right-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     20pct-val-left-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     20pct-val-right-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     80pct-pos-left-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     80pct-pos-right-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     80pct-val-left-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     80pct-val-right-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     max-ndvi-pos-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_max_ndvi_position.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     max-ndvi-val-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_max_ndvi_value.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-pos-left-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-pos-right-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-val-left-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-val-right-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     small-integral-2009
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_small_integral.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     large-integral-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_large_integral.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     qc-flags-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_qc_flags.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     20pct-pos-left-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     20pct-pos-right-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     20pct-val-left-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     20pct-val-right-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     80pct-pos-left-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     80pct-pos-right-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     80pct-val-left-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     80pct-val-right-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     max-ndvi-pos-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_position.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     max-ndvi-val-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_value.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-pos-left-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-pos-right-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-val-left-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-val-right-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     small-integral-2008
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_small_integral.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+       
+		# INCLUDE "ews-cmaps/Spring-Leaf-Out-Length.cmap"
+
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+END #Map
