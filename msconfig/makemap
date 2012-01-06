@@ -300,11 +300,11 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt):
             #print nameform
             #this conditional logic needs to be refactored out
             if re.search(r'max|med', nameform):
-                colormapline   = "INCLUDE efetac_nasa_percent_change_cmap.cmap"
+                colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
             elif re.search(r'.img', fileExt):
                 colormapline   = ''
             else:
-                colormapline   = "INCLUDE ewsold.cmap"
+                colormapline   = 'INCLUDE "ewsold.cmap"'
             group = groupName 
             if re.search(r'.img', nameform):
                 layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
