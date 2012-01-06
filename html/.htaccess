@@ -78,7 +78,7 @@
     Allow from all
     SetHandler cgi-script
 </Files>
-<Files "new">
+<Files "integrals">
     Allow from all
     SetHandler cgi-script
 </Files>
