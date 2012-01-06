@@ -6,9 +6,7 @@
   <server map_path="http://arcgisserver7.nemac.org/ArcGIS/" >
   </server>
   <services>
-    <service name="EWS_RSAC-FHTET_Change_2010"         folder="EWS" label="RSAC-FHTET MODIS 2010 Change"/>
     <service name="EWS_RSAC-FHTET"                     folder="EWS" label="Archived NRT RSAC-FHTET"/>
-    <service name="EWS_EFETAC-NASA_Change_2010"        folder="EWS" label="EFETAC-NASA MODIS 2010 Change"/>
     <service name="US_Landcover"                       folder="US"  label="Landcover"/>		
     <service name="US_Climate_TRMM"                    folder="US"  label="Climate and Weather"/>
     <service name="US_Elevation"                       folder="US"  label="Elevation Products"/>
