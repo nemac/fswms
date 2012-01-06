@@ -1,11 +1,11 @@
 MAP
     # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
     # of the two lines below to enable this logging:
-    CONFIG "MS_ERRORFILE" "../logs/ewsmonthly.log"
+    # CONFIG "MS_ERRORFILE" "../logs/ewsmonthly.log"
     #DEBUG 5
 
     # all temp files get prefixed with this string
-    NAME ms_ewstruecolor
+    NAME %(TEMP_FILE_PREFIX)s
 
     # background color of image if transparency
     # is not requested
@@ -19,17 +19,17 @@ MAP
 
     # set top level projection
     PROJECTION
-     "init=epsg:2163"
+     %(MAPFILE_PROJECTION)s
     END
 
     # image format options
- OUTPUTFORMAT
-    NAME "GEOTIFF"
-    DRIVER "GDAL/GTiff"
-    MIMETYPE "image/geotiff"
-    IMAGEMODE "BYTE"
-    EXTENSION "tif"
- END
+    OUTPUTFORMAT
+        NAME "GEOTIFF"
+        DRIVER "GDAL/GTiff"
+        MIMETYPE "image/geotiff"
+        IMAGEMODE "BYTE"
+        EXTENSION "tif"
+    END
 
     # minx miny maxx maxy
     # sets:
@@ -43,23 +43,19 @@ MAP
     #
     # Start of web interface definition
     WEB
-
         # this is the real filepath to the temp dir for intermediate file creation
         IMAGEPATH "./tmp"
-
         # this is the web-accessible path to IMAGEPATH
         IMAGEURL "/tmp/"
-
         HEADER "./templates/query_header.html"
         FOOTER "./templates/query_footer.html"
-
         METADATA
             "ows_enable_request"     "*"
-            "wms_title"              "Truecolor WCS"
-            "wms_abstract"           "Truecolor WCS"
+            "wms_title"              "%(OWS_TITLE)s"
+            "wms_abstract"           "%(OWS_ABSTRACT)s"
             "wms_onlineresource"     "%(SERVICE_URL)s"
-            "wms_srs"                "EPSG:2163 EPSG:4326 EPSG:3785"
-            "wcs_label"              "Truecolor WCS"
+            "wms_srs"                "%(WMS_SRS)s"
+            "wcs_label"              "%(WCS_LABEL)s"
             "wcs_srs"                "EPSG:2163"
         END
     END
@@ -70,452 +66,9 @@ MAP
 
     # set defaults for GetLegendGraphic requests 
     LEGEND
-      #KEYSIZE 137 55
-      #KEYSIZE 175 277
-      #KEYSIZE 181 277
       KEYSIZE 154 297
     END
-	LAYER
-        NAME EFETAC-NASA_TC_20111124_24
 
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/efetac_nasa/TrueColorData/20111124_24_tcc_usc255c.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-      #  CLASS
-       #   NAME       ''
-        #  KEYIMAGE   'TACs_NASA_CT_7-6-2011_clipped.png'
-         # EXPRESSION "-1"
-          #COLOR      0     0       0
-      #  END
-      #  INCLUDE "efetac_nasa_percent_change_cmap.cmap"
-        METADATA
-            "wms_title"    "EFETAC-NASA_TC_20111124_24"
-            "wms_abstract" "EFETAC-NASA_TC_20111124_24"
-	     "wcs_label"                  "EFETAC-NASA_TC_20111124_24"
-	     "wcs_rangeset_name"          "EFETAC-NASA_TC_20111124_24"
-	     "wcs_rangeset_label"         "EFETAC-NASA_TC_20111124_24"
-      #"wcs_description" "20110913_24_2010_max.tif"
-      #"wcs_name" "20110913_24_2010_max.tif"
-     # "wcs_label" "20110913_24_2010_max.tif"
-    #  "ows_srs" "EPSG:2163"
-    #  "ows_extent" "-2038031.82818 -2247995.62021 2650461.20673 918051.828179"
-     # "wcs_resolution" "100 100"
-     # "wcs_bandcount" "1"
-     # "wcs_formats" "GEOTIFF"
-     # "wcs_nativeformat" "8-bit GeoTIF"
-     # "wcs_enable_request" "*"
-
-        END  # end METADATA
-    END # end LAYER
-	LAYER
-        NAME EFETAC-NASA_TC_20111116_24
-
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/efetac_nasa/TrueColorData/20111116_24_tcc_255c.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-      #  CLASS
-       #   NAME       ''
-        #  KEYIMAGE   'TACs_NASA_CT_7-6-2011_clipped.png'
-         # EXPRESSION "-1"
-          #COLOR      0     0       0
-      #  END
-      #  INCLUDE "efetac_nasa_percent_change_cmap.cmap"
-        METADATA
-            "wms_title"    "EFETAC-NASA_TC_20111116_24"
-            "wms_abstract" "EFETAC-NASA_TC_20111116_24"
-	     "wcs_label"                  "EFETAC-NASA_TC_20111116_24"
-	     "wcs_rangeset_name"          "EFETAC-NASA_TC_20111116_24"
-	     "wcs_rangeset_label"         "EFETAC-NASA_TC_20111116_24"
-      #"wcs_description" "20110913_24_2010_max.tif"
-      #"wcs_name" "20110913_24_2010_max.tif"
-     # "wcs_label" "20110913_24_2010_max.tif"
-    #  "ows_srs" "EPSG:2163"
-    #  "ows_extent" "-2038031.82818 -2247995.62021 2650461.20673 918051.828179"
-     # "wcs_resolution" "100 100"
-     # "wcs_bandcount" "1"
-     # "wcs_formats" "GEOTIFF"
-     # "wcs_nativeformat" "8-bit GeoTIF"
-     # "wcs_enable_request" "*"
-
-        END  # end METADATA
-    END # end LAYER
-	LAYER
-        NAME EFETAC-NASA_TC_20111108_24
-
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/efetac_nasa/TrueColorData/20111108_24_tcc_255c.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-      #  CLASS
-       #   NAME       ''
-        #  KEYIMAGE   'TACs_NASA_CT_7-6-2011_clipped.png'
-         # EXPRESSION "-1"
-          #COLOR      0     0       0
-      #  END
-      #  INCLUDE "efetac_nasa_percent_change_cmap.cmap"
-        METADATA
-            "wms_title"    "EFETAC-NASA_TC_20111108_24"
-            "wms_abstract" "EFETAC-NASA_TC_20111108_24"
-	     "wcs_label"                  "EFETAC-NASA_TC_20111108_24"
-	     "wcs_rangeset_name"          "EFETAC-NASA_TC_20111108_24"
-	     "wcs_rangeset_label"         "EFETAC-NASA_TC_20111108_24"
-      #"wcs_description" "20110913_24_2010_max.tif"
-      #"wcs_name" "20110913_24_2010_max.tif"
-     # "wcs_label" "20110913_24_2010_max.tif"
-    #  "ows_srs" "EPSG:2163"
-    #  "ows_extent" "-2038031.82818 -2247995.62021 2650461.20673 918051.828179"
-     # "wcs_resolution" "100 100"
-     # "wcs_bandcount" "1"
-     # "wcs_formats" "GEOTIFF"
-     # "wcs_nativeformat" "8-bit GeoTIF"
-     # "wcs_enable_request" "*"
-
-        END  # end METADATA
-    END # end LAYER
-    LAYER
-        NAME EFETAC-NASA_TC_20111031_24
-
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/efetac_nasa/TrueColorData/20111031_24_tcc_255c.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-      #  CLASS
-       #   NAME       ''
-        #  KEYIMAGE   'TACs_NASA_CT_7-6-2011_clipped.png'
-         # EXPRESSION "-1"
-          #COLOR      0     0       0
-      #  END
-      #  INCLUDE "efetac_nasa_percent_change_cmap.cmap"
-        METADATA
-            "wms_title"    "EFETAC-NASA_TC_20111031_24"
-            "wms_abstract" "EFETAC-NASA_TC_20111031_24"
-	     "wcs_label"                  "EFETAC-NASA_TC_20111031_24"
-	     "wcs_rangeset_name"          "EFETAC-NASA_TC_20111031_24"
-	     "wcs_rangeset_label"         "EFETAC-NASA_TC_20111031_24"
-      #"wcs_description" "20110913_24_2010_max.tif"
-      #"wcs_name" "20110913_24_2010_max.tif"
-     # "wcs_label" "20110913_24_2010_max.tif"
-    #  "ows_srs" "EPSG:2163"
-    #  "ows_extent" "-2038031.82818 -2247995.62021 2650461.20673 918051.828179"
-     # "wcs_resolution" "100 100"
-     # "wcs_bandcount" "1"
-     # "wcs_formats" "GEOTIFF"
-     # "wcs_nativeformat" "8-bit GeoTIF"
-     # "wcs_enable_request" "*"
-
-        END  # end METADATA
-    END # end LAYER
-	LAYER
-        NAME EFETAC-NASA_TC_20111023_24
-
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/efetac_nasa/TrueColorData/20111023_24_tcc_255c.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-      #  CLASS
-       #   NAME       ''
-        #  KEYIMAGE   'TACs_NASA_CT_7-6-2011_clipped.png'
-         # EXPRESSION "-1"
-          #COLOR      0     0       0
-      #  END
-      #  INCLUDE "efetac_nasa_percent_change_cmap.cmap"
-        METADATA
-            "wms_title"    "EFETAC-NASA_TC_20111023_24"
-            "wms_abstract" "EFETAC-NASA_TC_20111023_24"
-	     "wcs_label"                  "EFETAC-NASA_TC_20111023_24"
-	     "wcs_rangeset_name"          "EFETAC-NASA_TC_20111023_24"
-	     "wcs_rangeset_label"         "EFETAC-NASA_TC_20111023_24"
-      #"wcs_description" "20110913_24_2010_max.tif"
-      #"wcs_name" "20110913_24_2010_max.tif"
-     # "wcs_label" "20110913_24_2010_max.tif"
-    #  "ows_srs" "EPSG:2163"
-    #  "ows_extent" "-2038031.82818 -2247995.62021 2650461.20673 918051.828179"
-     # "wcs_resolution" "100 100"
-     # "wcs_bandcount" "1"
-     # "wcs_formats" "GEOTIFF"
-     # "wcs_nativeformat" "8-bit GeoTIF"
-     # "wcs_enable_request" "*"
-
-        END  # end METADATA
-    END # end LAYER
-    LAYER
-        NAME EFETAC-NASA_TC_20111015_24
-
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/efetac_nasa/TrueColorData/20111015_24_tcc_255c.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-      #  CLASS
-       #   NAME       ''
-        #  KEYIMAGE   'TACs_NASA_CT_7-6-2011_clipped.png'
-         # EXPRESSION "-1"
-          #COLOR      0     0       0
-      #  END
-      #  INCLUDE "efetac_nasa_percent_change_cmap.cmap"
-        METADATA
-            "wms_title"    "EFETAC-NASA_TC_20111015_24"
-            "wms_abstract" "EFETAC-NASA_TC_20111015_24"
-	     "wcs_label"                  "EFETAC-NASA_TC_20111015_24"
-	     "wcs_rangeset_name"          "EFETAC-NASA_TC_20111015_24"
-	     "wcs_rangeset_label"         "EFETAC-NASA_TC_20111015_24"
-      #"wcs_description" "20110913_24_2010_max.tif"
-      #"wcs_name" "20110913_24_2010_max.tif"
-     # "wcs_label" "20110913_24_2010_max.tif"
-    #  "ows_srs" "EPSG:2163"
-    #  "ows_extent" "-2038031.82818 -2247995.62021 2650461.20673 918051.828179"
-     # "wcs_resolution" "100 100"
-     # "wcs_bandcount" "1"
-     # "wcs_formats" "GEOTIFF"
-     # "wcs_nativeformat" "8-bit GeoTIF"
-     # "wcs_enable_request" "*"
-
-        END  # end METADATA
-    END # end LAYER
-
-    LAYER
-        NAME EFETAC-NASA_TC_20111007_24
-
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/efetac_nasa/TrueColorData/20111007_24_tcc_255c.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-      #  CLASS
-       #   NAME       ''
-        #  KEYIMAGE   'TACs_NASA_CT_7-6-2011_clipped.png'
-         # EXPRESSION "-1"
-          #COLOR      0     0       0
-      #  END
-      #  INCLUDE "efetac_nasa_percent_change_cmap.cmap"
-        METADATA
-            "wms_title"    "EFETAC-NASA_TC_20110929_24"
-            "wms_abstract" "EFETAC-NASA_TC_20110929_24"
-	     "wcs_label"                  "EFETAC-NASA_TC_20110929_24"
-	     "wcs_rangeset_name"          "EFETAC-NASA_TC_20110929_24"
-	     "wcs_rangeset_label"         "EFETAC-NASA_TC_20110929_24"
-      #"wcs_description" "20110913_24_2010_max.tif"
-      #"wcs_name" "20110913_24_2010_max.tif"
-     # "wcs_label" "20110913_24_2010_max.tif"
-    #  "ows_srs" "EPSG:2163"
-    #  "ows_extent" "-2038031.82818 -2247995.62021 2650461.20673 918051.828179"
-     # "wcs_resolution" "100 100"
-     # "wcs_bandcount" "1"
-     # "wcs_formats" "GEOTIFF"
-     # "wcs_nativeformat" "8-bit GeoTIF"
-     # "wcs_enable_request" "*"
-
-        END  # end METADATA
-    END # end LAYER
-
-    LAYER
-        NAME EFETAC-NASA_TC_20110929_24
-
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/efetac_nasa/TrueColorData/20110929_24_tcc_255c.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-      #  CLASS
-       #   NAME       ''
-        #  KEYIMAGE   'TACs_NASA_CT_7-6-2011_clipped.png'
-         # EXPRESSION "-1"
-          #COLOR      0     0       0
-      #  END
-      #  INCLUDE "efetac_nasa_percent_change_cmap.cmap"
-        METADATA
-            "wms_title"    "EFETAC-NASA_TC_20110929_24"
-            "wms_abstract" "EFETAC-NASA_TC_20110929_24"
-	     "wcs_label"                  "EFETAC-NASA_TC_20110929_24"
-	     "wcs_rangeset_name"          "EFETAC-NASA_TC_20110929_24"
-	     "wcs_rangeset_label"         "EFETAC-NASA_TC_20110929_24"
-      #"wcs_description" "20110913_24_2010_max.tif"
-      #"wcs_name" "20110913_24_2010_max.tif"
-     # "wcs_label" "20110913_24_2010_max.tif"
-    #  "ows_srs" "EPSG:2163"
-    #  "ows_extent" "-2038031.82818 -2247995.62021 2650461.20673 918051.828179"
-     # "wcs_resolution" "100 100"
-     # "wcs_bandcount" "1"
-     # "wcs_formats" "GEOTIFF"
-     # "wcs_nativeformat" "8-bit GeoTIF"
-     # "wcs_enable_request" "*"
-
-        END  # end METADATA
-    END # end LAYER
-   
-    LAYER
-        NAME EFETAC-NASA_TC_20110921_24
-
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/efetac_nasa/TrueColorData/20110921_24_tcc_255c.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-      #  CLASS
-       #   NAME       ''
-        #  KEYIMAGE   'TACs_NASA_CT_7-6-2011_clipped.png'
-         # EXPRESSION "-1"
-          #COLOR      0     0       0
-      #  END
-      #  INCLUDE "efetac_nasa_percent_change_cmap.cmap"
-        METADATA
-            "wms_title"    "EFETAC-NASA_TC_20110921_24"
-            "wms_abstract" "EFETAC-NASA_TC_20110921_24"
-	     "wcs_label"                  "EFETAC-NASA_TC_20110921_24"
-	     "wcs_rangeset_name"          "EFETAC-NASA_TC_20110921_24"
-	     "wcs_rangeset_label"         "EFETAC-NASA_TC_20110921_24"
-        END  # end METADATA
-    END # end LAYER
-
-     LAYER
-        NAME EFETAC-NASA_TC_20110913_24
-
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/efetac_nasa/TrueColorData/20110913_24_tcc_255c.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-      #  CLASS
-       #   NAME       ''
-        #  KEYIMAGE   'TACs_NASA_CT_7-6-2011_clipped.png'
-         # EXPRESSION "-1"
-          #COLOR      0     0       0
-      #  END
-      #  INCLUDE "efetac_nasa_percent_change_cmap.cmap"
-        METADATA
-            "wms_title"    "EFETAC-NASA_TC_20110913"
-            "wms_abstract" "EFETAC-NASA_TC_20110913"
-	     "wcs_label"                  "EFETAC-NASA_TC_20110913"
-	     "wcs_rangeset_name"          "EFETAC-NASA_TC_20110913"
-	     "wcs_rangeset_label"         "EFETAC-NASA_TC_20110913"
-        END  # end METADATA
-    END # end LAYER
+%(LAYERS)s
 
 END # end MAP

@@ -283,26 +283,33 @@ f_new.write( mapTemplate.render( {
             } ) )
 f_new.close()
 
-#Start of generic function to get layers
-#At this point its a bit un-generic because the color maps is specific to the tif files location
-#and I had to hardcode this portion
-def getLayers(dataDir, layerTemplateName, groupName):
-    print dataDir
-    print layerTemplateName
+#Start of attempt to create a generic function to get layers
+#At this point its a not completely generic because the color maps is 
+#specific to the tif files location
+def getLayers(dataDir, layerTemplateName, groupName, fileExt):
+    #print 'data dir ' + dataDir
+    #print 'template ' + layerTemplateName
     tifList  = []
-    for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(".tif")], reverse=False):
+    for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
         try:        
             tif = re.sub('^' + dataDir + '/', '', tif)
             tif_fullpath = dataDir + '/' + tif;
             proj = getproj(tif_fullpath)
             modDate = getModDate(tif_fullpath)
             nameform = re.sub(r'^.*/', '', tif)
+            #print nameform
+            #this conditional logic needs to be refactored out
             if re.search(r'max|med', nameform):
-                colormapfile   = "efetac_nasa_percent_change_cmap.cmap"
+                colormapline   = "INCLUDE efetac_nasa_percent_change_cmap.cmap"
+            elif re.search(r'.img', fileExt):
+                colormapline   = ''
             else:
-                colormapfile   = "ewsold.cmap"
+                colormapline   = "INCLUDE ewsold.cmap"
             group = groupName 
-            layerName = group + "_" + re.sub(r'_.*$', '', nameform)
+            if re.search(r'.img', nameform):
+                layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
+            else:
+                layerName = group + "_" + re.sub(r'_.*$', '', nameform)
             layerTitle = tif
             tifList.append({ 'TIF'             : tif,
                              'PROJVALID'       : len(proj) > 0,
@@ -313,7 +320,7 @@ def getLayers(dataDir, layerTemplateName, groupName):
                              'DATA'            : dataDir + '/' + tif,
                              'TITLE'           : layerTitle,
                              'ABSTRACT'        : layerTitle,
-                             'COLORMAPFILE'    : colormapfile
+                             'COLORMAPLINE'    : colormapline
                              })
             layerTitles[layerName] = layerTitle
         except:
@@ -330,7 +337,7 @@ def getLayers(dataDir, layerTemplateName, groupName):
 ###
 ### CREATE ews1year.map FILE:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year")
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif")
 template = Template("ews_gen.tpl.map")
 f_new = open("ews1year.map", "w")
 SERVICE_NAME = "ews1year"
@@ -357,7 +364,7 @@ f_new.close()
 ###
 ### Create the ews3year.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year")
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif")
 template = Template("ews_gen.tpl.map")
 f_new = open("ews3year.map", "w")
 SERVICE_NAME = "ews3year"
@@ -384,11 +391,27 @@ f_new.close()
 ###
 ### Create the ewstruecolor.map file:
 ###
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "ews_gen.layer.tpl.map", "EFETAC-NASA_TC", ".img")
 template = Template("ewstruecolor.tpl.map")
 f_new = open("ewstruecolor.map", "w")
+SERVICE_NAME = "ewstruecolor"
+WCS_LABEL = "Truecolor WCS"
 f_new.write( template.render( {
-            'DATA_DIR'     : DATA_DIR,
-            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "ewstruecolor")
+            'DATA_DIR'              : DATA_DIR,
+            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "ewstruecolor"),
+            'LAYERS'                : LAYERS,
+            'WMS_SRS'               : "EPSG:4326 EPSG:2163 EPSG:3785",
+            'MAPFILE_PROJECTION'    : '"init=epsg:3785"',
+            'SERVICE_NAME'          : SERVICE_NAME,
+            'TEMP_FILE_PREFIX'      : "ms_%s" % (SERVICE_NAME),
+            'MAPFILE'               : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+            'OWS_TITLE'             : SERVICE_NAME,
+            'OWS_ABSTRACT'          : SERVICE_NAME,
+            'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
+            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+            'MS_ERRORFILE'          : "../logs/%s.log" % (SERVICE_NAME),
+            'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
+            'WCS_LABEL'             : WCS_LABEL            
             } ) )
 f_new.close()
 

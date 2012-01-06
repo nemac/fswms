@@ -9,7 +9,7 @@
         DATA     %(DATA)s
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "%(COLORMAPFILE)s"
+        %(COLORMAPLINE)s
         METADATA
             "wms_title"             "%(TITLE)s"
             "wms_abstract"          "%(ABSTRACT)s"
