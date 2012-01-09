@@ -640,10 +640,98 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 
+        CLASSITEM        hazard
+		CLASS
+			NAME "FHM ADS 2009"
+			EXPRESSION ""
+		END
         CLASS
-            NAME "FHM ADS 2009"
+            NAME "Abiotic Damage"
+			EXPRESSION "Abiotic Damage"
             STYLE
-                COLOR        232 232 232
+                COLOR        115 115 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Biotic Damage"
+			EXPRESSION "Biotic Damage"
+            STYLE
+                COLOR        68 79 137
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Competition"
+			EXPRESSION "Competition"
+            STYLE
+                COLOR        250 252 164
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Diseases and Pathogens"
+			EXPRESSION "Diseases and Pathogens"
+            STYLE
+                COLOR        255 211 127
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Harvest"
+			EXPRESSION "Harvest"
+            STYLE
+                COLOR        56 168 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Human Activities"
+			EXPRESSION "Human Activities"
+            STYLE
+                COLOR        115 0 76
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Insects"
+			EXPRESSION "Insects"
+            STYLE
+                COLOR        223 115 255
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Multi-Damage (Insect/Disease)"
+			EXPRESSION "Multi-Damage (Insect/Disease)"
+            STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE -45
+			END # STYLE
+			STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE 45
+			END # STYLE
+        END
+		CLASS
+            NAME "Other"
+			EXPRESSION "Other"
+            STYLE
+                COLOR        255 190 190
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Unknown"
+			EXPRESSION "Unknown"
+            STYLE
+                COLOR        0 0 61
                 OUTLINECOLOR 32 32 32
             END
         END
@@ -671,10 +759,98 @@ MAP
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM        hazard
+		CLASS
+			NAME "FHM ADS 2008"
+			EXPRESSION ""
+		END
         CLASS
-            NAME "FHM ADS 2008"
+            NAME "Abiotic Damage"
+			EXPRESSION "Abiotic Damage"
             STYLE
-                COLOR        232 232 232
+                COLOR        115 115 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Biotic Damage"
+			EXPRESSION "Biotic Damage"
+            STYLE
+                COLOR        68 79 137
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Competition"
+			EXPRESSION "Competition"
+            STYLE
+                COLOR        250 252 164
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Diseases and Pathogens"
+			EXPRESSION "Diseases and Pathogens"
+            STYLE
+                COLOR        255 211 127
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Harvest"
+			EXPRESSION "Harvest"
+            STYLE
+                COLOR        56 168 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Human Activities"
+			EXPRESSION "Human Activities"
+            STYLE
+                COLOR        115 0 76
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Insects"
+			EXPRESSION "Insects"
+            STYLE
+                COLOR        223 115 255
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Multi-Damage (Insect/Disease)"
+			EXPRESSION "Multi-Damage (Insect/Disease)"
+            STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE -45
+			END # STYLE
+			STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE 45
+			END # STYLE
+        END
+		CLASS
+            NAME "Other"
+			EXPRESSION "Other"
+            STYLE
+                COLOR        255 190 190
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Unknown"
+			EXPRESSION "Unknown"
+            STYLE
+                COLOR        0 0 61
                 OUTLINECOLOR 32 32 32
             END
         END
@@ -702,10 +878,98 @@ MAP
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM        hazard
+		CLASS
+			NAME "FHM ADS 2007"
+			EXPRESSION ""
+		END
         CLASS
-            NAME "FHM ADS 2007"
+            NAME "Abiotic Damage"
+			EXPRESSION "Abiotic Damage"
             STYLE
-                COLOR        232 232 232
+                COLOR        115 115 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Biotic Damage"
+			EXPRESSION "Biotic Damage"
+            STYLE
+                COLOR        68 79 137
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Competition"
+			EXPRESSION "Competition"
+            STYLE
+                COLOR        250 252 164
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Diseases and Pathogens"
+			EXPRESSION "Diseases and Pathogens"
+            STYLE
+                COLOR        255 211 127
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Harvest"
+			EXPRESSION "Harvest"
+            STYLE
+                COLOR        56 168 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Human Activities"
+			EXPRESSION "Human Activities"
+            STYLE
+                COLOR        115 0 76
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Insects"
+			EXPRESSION "Insects"
+            STYLE
+                COLOR        223 115 255
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Multi-Damage (Insect/Disease)"
+			EXPRESSION "Multi-Damage (Insect/Disease)"
+            STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE -45
+			END # STYLE
+			STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE 45
+			END # STYLE
+        END
+		CLASS
+            NAME "Other"
+			EXPRESSION "Other"
+            STYLE
+                COLOR        255 190 190
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Unknown"
+			EXPRESSION "Unknown"
+            STYLE
+                COLOR        0 0 61
                 OUTLINECOLOR 32 32 32
             END
         END
@@ -733,11 +997,98 @@ MAP
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
-
+		CLASSITEM        hazard
+		CLASS
+			NAME "FHM ADS 2006"
+			EXPRESSION ""
+		END
         CLASS
-            NAME "FHM ADS 2006"
+            NAME "Abiotic Damage"
+			EXPRESSION "Abiotic Damage"
             STYLE
-                COLOR        232 232 232
+                COLOR        115 115 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Biotic Damage"
+			EXPRESSION "Biotic Damage"
+            STYLE
+                COLOR        68 79 137
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Competition"
+			EXPRESSION "Competition"
+            STYLE
+                COLOR        250 252 164
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Diseases and Pathogens"
+			EXPRESSION "Diseases and Pathogens"
+            STYLE
+                COLOR        255 211 127
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Harvest"
+			EXPRESSION "Harvest"
+            STYLE
+                COLOR        56 168 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Human Activities"
+			EXPRESSION "Human Activities"
+            STYLE
+                COLOR        115 0 76
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Insects"
+			EXPRESSION "Insects"
+            STYLE
+                COLOR        223 115 255
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Multi-Damage (Insect/Disease)"
+			EXPRESSION "Multi-Damage (Insect/Disease)"
+            STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE -45
+			END # STYLE
+			STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE 45
+			END # STYLE
+        END
+		CLASS
+            NAME "Other"
+			EXPRESSION "Other"
+            STYLE
+                COLOR        255 190 190
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Unknown"
+			EXPRESSION "Unknown"
+            STYLE
+                COLOR        0 0 61
                 OUTLINECOLOR 32 32 32
             END
         END
@@ -765,10 +1116,98 @@ MAP
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM        hazard
+		CLASS
+			NAME "FHM ADS 2005"
+			EXPRESSION ""
+		END
         CLASS
-            NAME "FHM ADS 2005"
+            NAME "Abiotic Damage"
+			EXPRESSION "Abiotic Damage"
             STYLE
-                COLOR        232 232 232
+                COLOR        115 115 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Biotic Damage"
+			EXPRESSION "Biotic Damage"
+            STYLE
+                COLOR        68 79 137
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Competition"
+			EXPRESSION "Competition"
+            STYLE
+                COLOR        250 252 164
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Diseases and Pathogens"
+			EXPRESSION "Diseases and Pathogens"
+            STYLE
+                COLOR        255 211 127
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Harvest"
+			EXPRESSION "Harvest"
+            STYLE
+                COLOR        56 168 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Human Activities"
+			EXPRESSION "Human Activities"
+            STYLE
+                COLOR        115 0 76
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Insects"
+			EXPRESSION "Insects"
+            STYLE
+                COLOR        223 115 255
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Multi-Damage (Insect/Disease)"
+			EXPRESSION "Multi-Damage (Insect/Disease)"
+            STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE -45
+			END # STYLE
+			STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE 45
+			END # STYLE
+        END
+		CLASS
+            NAME "Other"
+			EXPRESSION "Other"
+            STYLE
+                COLOR        255 190 190
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Unknown"
+			EXPRESSION "Unknown"
+            STYLE
+                COLOR        0 0 61
                 OUTLINECOLOR 32 32 32
             END
         END
@@ -796,11 +1235,98 @@ MAP
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
-
+		CLASSITEM        hazard
+		CLASS
+			NAME "FHM ADS 2004"
+			EXPRESSION ""
+		END
         CLASS
-            NAME "FHM ADS 2004"
+            NAME "Abiotic Damage"
+			EXPRESSION "Abiotic Damage"
             STYLE
-                COLOR        232 232 232
+                COLOR        115 115 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Biotic Damage"
+			EXPRESSION "Biotic Damage"
+            STYLE
+                COLOR        68 79 137
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Competition"
+			EXPRESSION "Competition"
+            STYLE
+                COLOR        250 252 164
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Diseases and Pathogens"
+			EXPRESSION "Diseases and Pathogens"
+            STYLE
+                COLOR        255 211 127
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Harvest"
+			EXPRESSION "Harvest"
+            STYLE
+                COLOR        56 168 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Human Activities"
+			EXPRESSION "Human Activities"
+            STYLE
+                COLOR        115 0 76
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Insects"
+			EXPRESSION "Insects"
+            STYLE
+                COLOR        223 115 255
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Multi-Damage (Insect/Disease)"
+			EXPRESSION "Multi-Damage (Insect/Disease)"
+            STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE -45
+			END # STYLE
+			STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE 45
+			END # STYLE
+        END
+		CLASS
+            NAME "Other"
+			EXPRESSION "Other"
+            STYLE
+                COLOR        255 190 190
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Unknown"
+			EXPRESSION "Unknown"
+            STYLE
+                COLOR        0 0 61
                 OUTLINECOLOR 32 32 32
             END
         END
@@ -828,11 +1354,98 @@ MAP
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
-
+		CLASSITEM        hazard
+		CLASS
+			NAME "FHM ADS 2003"
+			EXPRESSION ""
+		END
         CLASS
-            NAME "FHM ADS 2003"
+            NAME "Abiotic Damage"
+			EXPRESSION "Abiotic Damage"
             STYLE
-                COLOR        232 232 232
+                COLOR        115 115 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Biotic Damage"
+			EXPRESSION "Biotic Damage"
+            STYLE
+                COLOR        68 79 137
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Competition"
+			EXPRESSION "Competition"
+            STYLE
+                COLOR        250 252 164
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Diseases and Pathogens"
+			EXPRESSION "Diseases and Pathogens"
+            STYLE
+                COLOR        255 211 127
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Harvest"
+			EXPRESSION "Harvest"
+            STYLE
+                COLOR        56 168 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Human Activities"
+			EXPRESSION "Human Activities"
+            STYLE
+                COLOR        115 0 76
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Insects"
+			EXPRESSION "Insects"
+            STYLE
+                COLOR        223 115 255
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Multi-Damage (Insect/Disease)"
+			EXPRESSION "Multi-Damage (Insect/Disease)"
+            STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE -45
+			END # STYLE
+			STYLE
+				SYMBOL "hatchsymbol"
+				COLOR 223 115 255
+				SIZE 7
+				WIDTH 2
+				ANGLE 45
+			END # STYLE
+        END
+		CLASS
+            NAME "Other"
+			EXPRESSION "Other"
+            STYLE
+                COLOR        255 190 190
+                OUTLINECOLOR 32 32 32
+            END
+        END
+		CLASS
+            NAME "Unknown"
+			EXPRESSION "Unknown"
+            STYLE
+                COLOR        0 0 61
                 OUTLINECOLOR 32 32 32
             END
         END
@@ -956,35 +1569,10 @@ MAP
 
         CLASS
             NAME "Bailey's Ecoregions"
-            EXPRESSION ([gid] %% 15 = 0)
             STYLE
-                COLOR        255 0 0
-                OUTLINECOLOR 32 32 32
+				OUTLINECOLOR 32 32 32
             END
-	END
-        CLASS
-            NAME "Bailey's Ecoregions"
-            EXPRESSION ([gid] %% 15 = 1)
-            STYLE
-                COLOR        0 255 0
-                OUTLINECOLOR 32 32 32
-            END
-	END
-
-        CLASS
-            EXPRESSION ([gid] %% 15 > 1)
-            NAME "Bailey's Ecoregions"
-            STYLE
-                COLOR        232 232 232
-                OUTLINECOLOR 32 32 32
-            END
-        END
-
-
-
-
-
-
+		END
         METADATA
             "wms_title"           "ecoregions_bailey"
             "wms_abstract"        "ecoregions_bailey"
@@ -1013,8 +1601,7 @@ MAP
         CLASS
             NAME "Omernik Ecoregions"
             STYLE
-                COLOR        232 232 232
-                OUTLINECOLOR 32 32 32
+				OUTLINECOLOR 32 32 32
             END
         END
         METADATA
@@ -1023,5 +1610,4 @@ MAP
             "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
-
 END
