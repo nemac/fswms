@@ -1,0 +1,30 @@
+#! /usr/bin/python
+
+from osgeo import gdal, gdalconst
+import os, sys, time, numpy;
+
+FILE = sys.argv[1]
+
+# '/home/derek/python/gdal/2009peakyness.img'
+
+ds = gdal.Open(FILE, gdal.GA_ReadOnly)
+cols = ds.RasterXSize
+rows = ds.RasterYSize
+bands = ds.RasterCount
+print cols, rows, bands
+gdal.AllRegister()
+gt = ds.GetGeoTransform()
+print gt
+#top left x, pixel width, rotation, top left y, rotation, pixel height
+#notice pixel height is negative because it's measured from top!
+xOrigin = gt[0]
+yOrigin = gt[3]
+pixWidth = gt[1]
+print "pixWidth " + str(pixWidth)
+pixHeight = gt[5]
+print "pixHeight " + str(pixHeight)
+print ds.GetRasterBand(1).GetMinimum()
+print ds.GetRasterBand(1).GetMaximum()
+#for r in range(rows):
+#   data = ds.GetRasterBand(1).ReadAsArray(0, r, cols, 1)
+    #print str(data)    

@@ -1,0 +1,66 @@
+#! /usr/bin/python
+
+import os, sys, math
+import optparse, ColorInterp
+# ./makestretchcmap.py -N 10 -n 0 -x 100 --rgbMin 0,0,0 --rgbMax 255,255,255
+#-------------------------------------------------------
+#Verify input args    
+parser = optparse.OptionParser()
+parser.add_option('-N', help='mandatory N', dest='N', type="string")
+parser.add_option('-n', help='mandatory n', dest='min', type="string")
+parser.add_option('-x', help='mandatory x', dest='max', type="string")
+parser.add_option('--rgbMin', help='mandatory rgbMin e.g 0,10,100', dest='rgbMin', type="string")
+parser.add_option('--rgbMax', help='mandatory rgbMax e.g 0,10,100', dest='rgbMax', type="string")
+(opts, args) = parser.parse_args()
+
+if opts.N is None:
+   print "A mandatory param N is missing\n"
+   parser.print_help()
+   exit(-1)
+else:
+   N = opts.N
+   
+if opts.min is None:
+   print "A mandatory param n is missing\n"
+   parser.print_help()
+   exit(-1)
+else:
+   MIN = opts.min
+
+if opts.max is None:
+   print "A mandatory param x is missing\n"
+   parser.print_help()
+   exit(-1)
+else:
+   MAX = opts.max     
+   
+if opts.rgbMin is None:
+   print "A mandatory param rgbMin e.g 0,10,100 is missing\n"
+   parser.print_help()
+   exit(-1)
+else:
+   rgbMin = opts.rgbMin        
+   
+if opts.rgbMax is None:
+   print "A mandatory param rgbMax e.g 0,10,100 is missing\n"
+   parser.print_help()
+   exit(-1)
+else:
+   rgbMax= opts.rgbMax        
+#-------------------------------------------------------
+increment = (float(MAX)-float(MIN))/float(N)
+print increment
+i = float(MIN)
+fout = open("cout.cmap", "w")
+rgbMinDict = rgbMin.split(",")
+rgbMaxDict = rgbMax.split(",")
+c = ColorInterp.ColorInterp(MIN, MAX, rgbMinDict[0], rgbMinDict[1], rgbMinDict[2], rgbMaxDict[0], rgbMaxDict[1], rgbMaxDict[2])
+while (i<=float(MAX)):
+    fout.write('CLASS\n')
+    fout.write("\tEXPRESSION \""+str(int(i))+"\" \n")
+    colors = c.interp(i)
+    fout.write("\tCOLOR " + "\t"+str(int(colors[0])) + "\t"+str(int(colors[1])) + "\t"+str(int(colors[2]))+"\n")
+    fout.write('END\n')
+    i = i + increment
+    #print str(i)
+fout.close
