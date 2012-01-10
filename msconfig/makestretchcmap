@@ -63,7 +63,6 @@ else:
    rgbMax= opts.rgbMax        
 #-------------------------------------------------------
 increment = (float(MAX)-float(MIN))/float(N)
-print increment
 i = float(MIN)
 #fout = open("cout.cmap", "w")
 rgbMinDict = rgbMin.split(",")
@@ -71,7 +70,8 @@ rgbMaxDict = rgbMax.split(",")
 c = ColorInterp.ColorInterp(MIN, MAX, rgbMinDict[0], rgbMinDict[1], rgbMinDict[2], rgbMaxDict[0], rgbMaxDict[1], rgbMaxDict[2])
 while (i<=float(MAX)):
     print('CLASS')
-    print("\tEXPRESSION \""+str(int(i))+"\" ")
+    #print("\tEXPRESSION \""+str(int(i))+"\" ")
+    print("\tEXPRESSION ([pixel] > "+str(int(i))+" AND [pixel] <= "+str(int(i + increment))+") ")
     colors = c.interp(i)
     print("\tCOLOR " + "\t"+str(int(colors[0])) + "\t"+str(int(colors[1])) + "\t"+str(int(colors[2])))
     print('END')
