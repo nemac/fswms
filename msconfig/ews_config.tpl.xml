@@ -205,7 +205,7 @@
   <wmsLayers>
 
     <wmsGroup name="MODIS_Change_Detection_Products" label="MODIS NRT Change Detection Products" priorService="US_Elevation">
-      %(MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
+%(MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
     </wmsGroup>
 
     <wmsGroup name="Archived_NRT_EFETAC-NASA_3year" label="Archived NRT 3-Year Baseline (Threat Assessment Centers/NASA)" priorService="US_Elevation">

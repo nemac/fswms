@@ -38,41 +38,59 @@ except:
     sys.exit(-1)
 
 wmsLayerTemplate = Template(string="""
-<wmsLayer
-  visible="%(LAYER_VISIBLE)s"
-  url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-  srs="EPSG:3785"
-  layers="%(LAYER_NAME)s"
-  name="%(LAYER_TITLE)s"
-  styles="default" 
-  identify="true"
-  legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=%(LAYER_NAME)s&VERSION=1.1.1&FORMAT=image/png"/>	
+        <wmsLayer
+          visible="%(LAYER_VISIBLE)s"
+          url="%(SERVER_URL)s/ews?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="%(LAYER_NAME)s"
+          name="%(LAYER_TITLE)s"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=%(LAYER_NAME)s&VERSION=1.1.1&FORMAT=image/png"/>	
 """)
 
 modisChangeDetectionProductLayers = ""
-for layer in [
-    { 'name' : 'EFETAC-NASA_current',                   'visible' : 'true'  },
-    { 'name' : 'EFETAC-NASA_previous1',                 'visible' : 'false' },
-    { 'name' : 'EFETAC-NASA_previous2',                 'visible' : 'false' },
-    { 'name' : 'EFETAC-NASA_1YrBaseline_current',       'visible' : 'false' },
-    { 'name' : 'EFETAC-NASA_1YrBaseline_previous1',     'visible' : 'false' },
-    { 'name' : 'EFETAC-NASA_1YrBaseline_previous2',     'visible' : 'false' },
-    { 'name' : 'EFETAC-NASA_3YrBaseline_current',       'visible' : 'false' },
-    { 'name' : 'EFETAC-NASA_3YrBaseline_previous1',     'visible' : 'false' },
-    { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'visible' : 'false' },
-    { 'name' : 'EFETAC-NASA_AllYrBaseline_current',     'visible' : 'false' },
-    { 'name' : 'EFETAC-NASA_AllYrBaseline_previous1',   'visible' : 'false' },
-    { 'name' : 'EFETAC-NASA_AllYrBaseline_previous2',   'visible' : 'false' },
-    { 'name' : 'RSAC-FHTET_current',                    'visible' : 'false' },
-    { 'name' : 'RSAC-FHTET_previous1',                  'visible' : 'false' },
-    { 'name' : 'RSAC-FHTET_previous2',                  'visible' : 'false' }
+for subgroup in [
+    { 'label' : 'Disturbances Since 2003 - Auto Updated - 8-Year Baseline',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_current',                   'visible' : 'true'  },
+            { 'name' : 'EFETAC-NASA_previous1',                 'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_previous2',                 'visible' : 'false' } ] },
+
+    { 'label' : 'Disturbances Since 2010 - 1-Year Baseline',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_1YrBaseline_current',       'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_1YrBaseline_previous1',     'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_1YrBaseline_previous2',     'visible' : 'false' } ] },
+
+    { 'label' : 'Disturbances Since 2008 - 3-Year Baseline',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_3YrBaseline_current',       'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_3YrBaseline_previous1',     'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'visible' : 'false' } ] },
+
+    { 'label' : 'Disturbances Since 2003 - 8-Year Baseline',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_AllYrBaseline_current',     'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_AllYrBaseline_previous1',   'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_AllYrBaseline_previous2',   'visible' : 'false' } ] },
+
+    { 'label' : 'Disturbances Since 2008 - 3-Year Baseline',
+      'layers' : [
+            { 'name' : 'RSAC-FHTET_current',                    'visible' : 'false' },
+            { 'name' : 'RSAC-FHTET_previous1',                  'visible' : 'false' },
+            { 'name' : 'RSAC-FHTET_previous2',                  'visible' : 'false' } ] }
     ]:
-    modisChangeDetectionProductLayers = modisChangeDetectionProductLayers + wmsLayerTemplate.render({
-            'SERVER_URL'    : SERVER_URL,
-            'LAYER_NAME'    : layer['name'],
-            'LAYER_VISIBLE' : layer['visible'],
-            'LAYER_TITLE'   : layerTitles[layer['name']]
-            })
+    modisChangeDetectionProductLayers = ( modisChangeDetectionProductLayers +
+        '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
+    for layer in subgroup['layers']:
+        modisChangeDetectionProductLayers = modisChangeDetectionProductLayers + wmsLayerTemplate.render({
+                'SERVER_URL'    : SERVER_URL,
+                'LAYER_NAME'    : layer['name'],
+                'LAYER_VISIBLE' : layer['visible'],
+                'LAYER_TITLE'   : layerTitles[layer['name']]
+                })
+    modisChangeDetectionProductLayers = modisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
     
 template = Template("ews_config.tpl.xml")
 
