@@ -35,8 +35,8 @@ files = [
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_position_right.img',    'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_left.img',        'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_right.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
-    { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_position.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
-    { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_value.img',          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
+#   { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_position.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
+#   { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_value.img',          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_left.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_right.img',      'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_value_left.img',          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
@@ -50,8 +50,8 @@ files = [
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_position_right.img',    'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_value_left.img',        'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_value_right.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
-    { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_position.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
-    { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_value.img',          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
+#   { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_position.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
+#   { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_value.img',          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_position_left.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_position_right.img',      'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_value_left.img',          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
@@ -65,8 +65,8 @@ files = [
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_position_right.img',    'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_value_left.img',        'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_value_right.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
-    { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_position.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
-    { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_value.img',          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
+#   { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_position.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
+#   { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_value.img',          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_position_left.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_position_right.img',      'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_value_left.img',          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
@@ -126,9 +126,10 @@ def system(cmd):
 for file in files:
     m = re.match(r'.*/(.+)\.img$', file['path'])
     base = m.group(1)
-    outputfile = "cmaps/" + base + ".cmap"
     if 'minColor' in file:
         #system("./makestretchcmap -N 32 -a %s/%s --rgbMin %s --rgbMax %s > %s" % ( basedir, file['path'], file['minColor'], file['maxColor'], outputfile ))
-        system("./makestretchcmap -N 32 -a %s --rgbMin %s --rgbMax %s > %s" % ( file['path'], file['minColor'], file['maxColor'], outputfile ))
+        system("./makestretchcmap -N 32 -a %s --rgbMin %s --rgbMax %s > cmaps/%s.cmap" % ( file['path'], file['minColor'], file['maxColor'],  base))
+        system("./makestretchicon -T 0 -W 128 -h 15 -f 8 -L %s  -H %s -l low -r high cmapicons/%s.png" % (file['minColor'], file['maxColor'], base))
     else:
-        system("touch %s" % (outputfile))
+        system("touch cmaps/%s.cmap"    % (base))
+        system("touch cmapicons/%s.png" % (base))
