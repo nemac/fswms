@@ -61,7 +61,11 @@ MAP
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
-        INCLUDE "cmaps/mcd13tqk_a2009_phenparams_qc_flags.cmap"
+        CLASS
+          EXPRESSION "-99999"
+          NAME  "qc-flags-2009"
+        END
+        INCLUDE "cmaps/phen_qc_flags.cmap"
 
         PROJECTION
 			"+proj=laea"
@@ -520,7 +524,11 @@ MAP
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
-        INCLUDE "cmaps/mcd13_a2008_phenparams_qc_flags.cmap"
+        CLASS
+          EXPRESSION "-99999"
+          NAME  "qc-flags-2008"
+        END
+        INCLUDE "cmaps/phen_qc_flags.cmap"
 
         PROJECTION
 			"+proj=laea"
@@ -979,7 +987,11 @@ MAP
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
-        INCLUDE "cmaps/mcd13_a2007_phenparams_qc_flags.cmap"
+        CLASS
+          EXPRESSION "-99999"
+          NAME  "qc-flags-2007"
+        END
+        INCLUDE "cmaps/phen_qc_flags.cmap"
 
         PROJECTION
 			"+proj=laea"
@@ -1438,7 +1450,11 @@ MAP
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
-        INCLUDE "cmaps/mcd13_a2006_phenparams_qc_flags.cmap"
+        CLASS
+          EXPRESSION "-99999"
+          NAME  "qc-flags-2006"
+        END
+        INCLUDE "cmaps/phen_qc_flags.cmap"
 
         PROJECTION
 			"+proj=laea"
@@ -1897,7 +1913,11 @@ MAP
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
-        INCLUDE "cmaps/04_2005_phen_qc_flags.cmap"
+        CLASS
+          EXPRESSION "-99999"
+          NAME  "qc-flags-2005"
+        END
+        INCLUDE "cmaps/phen_qc_flags.cmap"
 
         PROJECTION
 			"+proj=laea"
@@ -2356,7 +2376,11 @@ MAP
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
-        INCLUDE "cmaps/04_2004_phen_qc_flags.cmap"
+        CLASS
+          EXPRESSION "-99999"
+          NAME  "qc-flags-2004"
+        END
+        INCLUDE "cmaps/phen_qc_flags.cmap"
 
         PROJECTION
 			"+proj=laea"
@@ -2815,7 +2839,11 @@ MAP
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
-        INCLUDE "cmaps/04_2003_phen_qc_flags.cmap"
+        CLASS
+          EXPRESSION "-99999"
+          NAME  "qc-flags-2003"
+        END
+        INCLUDE "cmaps/phen_qc_flags.cmap"
 
         PROJECTION
 			"+proj=laea"
