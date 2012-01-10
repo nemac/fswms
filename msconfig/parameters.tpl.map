@@ -4,10 +4,10 @@ MAP
     NAME       lucky
     STATUS     ON
     SIZE       600 400
-#   SYMBOLSET "./symbols/symbols35.sym"
-#   FONTSET   "./fonts/fonts.list"
+	#   SYMBOLSET "./symbols/symbols35.sym"
+	#   FONTSET   "./fonts/fonts.list"
     EXTENT -180 -90 180 90 # World
-#   UNITS DEGREES
+	#   UNITS DEGREES
     IMAGECOLOR 255 255 255
 
     WEB
@@ -23,9 +23,9 @@ MAP
     END
 
     PROJECTION
-     "init=epsg:4326"
+		"init=epsg:4326"
     END
-        LAYER
+    LAYER
         NAME     large-integral-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -33,26 +33,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_large_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     qc-flags-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -60,26 +60,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_qc_flags.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-20pct-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -87,26 +87,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_20pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-20pct-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -114,26 +114,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_20pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-20pct-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -141,26 +141,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_20pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-20pct-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -168,26 +168,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_20pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-80pct-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -195,26 +195,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_80pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-80pct-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -222,26 +222,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_80pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-80pct-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -249,26 +249,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_80pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-80pct-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -276,26 +276,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_80pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-pos-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -303,26 +303,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_max_ndvi_position.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-val-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -330,26 +330,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_max_ndvi_value.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-left-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -357,26 +357,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_min_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-right-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -384,26 +384,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_min_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-left-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -411,26 +411,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_min_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-right-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -438,26 +438,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_min_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     small-integral-2009
         TYPE     RASTER
         DUMP     TRUE
@@ -465,26 +465,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_small_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     large-integral-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -492,26 +492,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_large_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     qc-flags-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -519,26 +519,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_qc_flags.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-20pct-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -546,26 +546,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_20pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-20pct-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -573,26 +573,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_20pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-20pct-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -600,26 +600,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_20pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-20pct-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -627,26 +627,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_20pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-80pct-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -654,26 +654,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_80pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-80pct-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -681,26 +681,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_80pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-80pct-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -708,26 +708,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_80pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-80pct-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -735,26 +735,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_80pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-pos-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -762,26 +762,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_max_ndvi_position.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-val-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -789,26 +789,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_max_ndvi_value.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-left-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -816,26 +816,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_min_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-right-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -843,26 +843,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_min_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-left-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -870,26 +870,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_min_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-right-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -897,26 +897,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_season_min_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     small-integral-2008
         TYPE     RASTER
         DUMP     TRUE
@@ -924,26 +924,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2008_phenparams_small_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     large-integral-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -951,26 +951,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_large_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     qc-flags-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -978,26 +978,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_qc_flags.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-20pct-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1005,26 +1005,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_20pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-20pct-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1032,26 +1032,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_20pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-20pct-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1059,26 +1059,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_20pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-20pct-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1086,26 +1086,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_20pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-80pct-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1113,26 +1113,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_80pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-80pct-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1140,26 +1140,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_80pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-80pct-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1167,26 +1167,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_80pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-80pct-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1194,26 +1194,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_80pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-pos-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1221,26 +1221,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_max_ndvi_position.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-val-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1248,26 +1248,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_max_ndvi_value.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-left-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1275,26 +1275,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_min_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-right-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1302,26 +1302,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_min_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-left-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1329,26 +1329,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_min_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-right-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1356,26 +1356,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_season_min_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     small-integral-2007
         TYPE     RASTER
         DUMP     TRUE
@@ -1383,26 +1383,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2007_phenparams_small_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     large-integral-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1410,26 +1410,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_large_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     qc-flags-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1437,26 +1437,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_qc_flags.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-20pct-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1464,26 +1464,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_20pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-20pct-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1491,26 +1491,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_20pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-20pct-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1518,26 +1518,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_20pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-20pct-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1545,26 +1545,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_20pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-80pct-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1572,26 +1572,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_80pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-80pct-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1599,26 +1599,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_80pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-80pct-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1626,26 +1626,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_80pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-80pct-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1653,26 +1653,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_80pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-pos-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1680,26 +1680,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_max_ndvi_position.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-val-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1707,26 +1707,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_max_ndvi_value.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-left-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1734,26 +1734,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_min_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-right-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1761,26 +1761,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_min_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-left-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1788,26 +1788,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_min_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-right-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1815,26 +1815,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_season_min_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     small-integral-2006
         TYPE     RASTER
         DUMP     TRUE
@@ -1842,26 +1842,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/mcd13_a2006_phenparams_small_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     large-integral-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -1869,26 +1869,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/01_2005_phen_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/01_2005_phen_large_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     qc-flags-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -1896,26 +1896,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/04_2005_phen_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/04_2005_phen_qc_flags.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-20pct-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -1923,26 +1923,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/05_2005_phen_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/05_2005_phen_season_20pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-20pct-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -1950,26 +1950,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/06_2005_phen_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/06_2005_phen_season_20pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-20pct-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -1977,26 +1977,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/07_2005_phen_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/07_2005_phen_season_20pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-20pct-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2004,26 +2004,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/08_2005_phen_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/08_2005_phen_season_20pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-80pct-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2031,26 +2031,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/09_2005_phen_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/09_2005_phen_season_80pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-80pct-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2058,26 +2058,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/10_2005_phen_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/10_2005_phen_season_80pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-80pct-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2085,26 +2085,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/11_2005_phen_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/11_2005_phen_season_80pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-80pct-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2112,26 +2112,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/12_2005_phen_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/12_2005_phen_season_80pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-pos-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2139,26 +2139,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/02_2005_phen_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/02_2005_phen_max_ndvi_position.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-val-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2166,26 +2166,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/03_2005_phen_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/03_2005_phen_max_ndvi_value.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-left-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2193,26 +2193,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/13_2005_phen_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/13_2005_phen_season_min_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-right-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2220,26 +2220,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/14_2005_phen_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/14_2005_phen_season_min_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-left-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2247,26 +2247,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/15_2005_phen_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/15_2005_phen_season_min_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-right-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2274,26 +2274,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/16_2005_phen_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/16_2005_phen_season_min_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     small-integral-2005
         TYPE     RASTER
         DUMP     TRUE
@@ -2301,26 +2301,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/17_2005_phen_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/17_2005_phen_small_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     large-integral-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2328,26 +2328,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/01_2004_phen_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/01_2004_phen_large_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     qc-flags-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2355,26 +2355,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/04_2004_phen_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/04_2004_phen_qc_flags.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-20pct-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2382,26 +2382,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/05_2004_phen_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/05_2004_phen_season_20pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-20pct-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2409,26 +2409,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/06_2004_phen_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/06_2004_phen_season_20pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-20pct-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2436,26 +2436,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/07_2004_phen_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/07_2004_phen_season_20pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-20pct-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2463,26 +2463,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/08_2004_phen_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/08_2004_phen_season_20pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-80pct-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2490,26 +2490,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/09_2004_phen_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/09_2004_phen_season_80pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-80pct-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2517,26 +2517,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/10_2004_phen_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/10_2004_phen_season_80pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-80pct-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2544,26 +2544,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/11_2004_phen_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/11_2004_phen_season_80pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-80pct-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2571,26 +2571,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/12_2004_phen_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/12_2004_phen_season_80pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-pos-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2598,26 +2598,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/02_2004_phen_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/02_2004_phen_max_ndvi_position.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-val-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2625,26 +2625,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/03_2004_phen_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/03_2004_phen_max_ndvi_value.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-left-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2652,26 +2652,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/13_2004_phen_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/13_2004_phen_season_min_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-right-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2679,26 +2679,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/14_2004_phen_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/14_2004_phen_season_min_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-left-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2706,26 +2706,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/15_2004_phen_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/15_2004_phen_season_min_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-right-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2733,26 +2733,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/16_2004_phen_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/16_2004_phen_season_min_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     small-integral-2004
         TYPE     RASTER
         DUMP     TRUE
@@ -2760,26 +2760,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/17_2004_phen_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/17_2004_phen_small_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     large-integral-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -2787,26 +2787,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/01_2003_phen_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/01_2003_phen_large_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     qc-flags-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -2814,26 +2814,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/04_2003_phen_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/04_2003_phen_qc_flags.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-20pct-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -2841,26 +2841,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/05_2003_phen_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/05_2003_phen_season_20pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-20pct-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -2868,26 +2868,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/06_2003_phen_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/06_2003_phen_season_20pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-20pct-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -2895,26 +2895,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/07_2003_phen_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/07_2003_phen_season_20pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-20pct-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -2922,26 +2922,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/08_2003_phen_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/08_2003_phen_season_20pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-pos-80pct-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -2949,26 +2949,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/09_2003_phen_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/09_2003_phen_season_80pct_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-pos-80pct-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -2976,26 +2976,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/10_2003_phen_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/10_2003_phen_season_80pct_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     left-val-80pct-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -3003,26 +3003,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/11_2003_phen_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/11_2003_phen_season_80pct_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     right-val-80pct-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -3030,26 +3030,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/12_2003_phen_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/12_2003_phen_season_80pct_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-pos-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -3057,26 +3057,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/02_2003_phen_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/02_2003_phen_max_ndvi_position.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     max-ndvi-val-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -3084,26 +3084,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/03_2003_phen_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/03_2003_phen_max_ndvi_value.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-left-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -3111,26 +3111,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/13_2003_phen_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/13_2003_phen_season_min_position_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-pos-right-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -3138,26 +3138,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/14_2003_phen_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/14_2003_phen_season_min_position_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-left-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -3165,26 +3165,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/15_2003_phen_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/15_2003_phen_season_min_value_left.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     min-val-right-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -3192,26 +3192,26 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/16_2003_phen_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/16_2003_phen_season_min_value_right.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
-        LAYER
+    LAYER
         NAME     small-integral-2003
         TYPE     RASTER
         DUMP     TRUE
@@ -3219,23 +3219,23 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/17_2003_phen_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
+		
         INCLUDE "cmaps/17_2003_phen_small_integral.cmap"
 
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
+			"+proj=laea"
+			"+lat_0=45"
+			"+lon_0=-100"
+			"+x_0=0"
+			"+y_0=0"
+			"+a=6370997"
+			"+b=6370997"
+			"+units=m"
+			"+no_defs"
         END
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
-         END  # end METADATA
+        END  # end METADATA
     END # end LAYER
 END #Map
