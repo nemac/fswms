@@ -7,9 +7,6 @@
   </server>
   <services>
     <service name="EWS_RSAC-FHTET"                     folder="EWS" label="Archived NRT RSAC-FHTET"/>
-    <service name="US_Landcover"                       folder="US"  label="Landcover"/>		
-    <service name="US_Climate_TRMM"                    folder="US"  label="Climate and Weather"/>
-    <service name="US_Elevation"                       folder="US"  label="Elevation Products"/>
     <service name="vegdri"                             folder="EWS" label="USGS VegDRI Drought Assessment Products"/>
     <service name="EWS_Activefire2"                    folder="EWS" label="MODIS NRT/Current Fire Detections"/>
   </services>
@@ -82,120 +79,95 @@
   <mapviews>
     <view name="CONUS_Vegetation_Monitoring_Tools" label="CONUS Vegetation Monitoring Tools">
       <viewGroup name="US_Jurisdictions" />
+	  <viewGroup name="EWS_Activefire2" />
+	  <viewGroup name="US_Fire" />
       <viewGroup name="US_FHM_ADS" />
-      <viewGroup name="EWS_Activefire2" />
-      <viewGroup name="US_Fire" />
+	  <viewGroup name="MODIS_Change_Detection_Products" />
+	  <viewGroup name="MODISCloud" />
+	  <viewGroup name="Drought_Monitor" />
       <viewGroup name="vegdri" />
-      <viewGroup name="US_Elevation" />
-      <viewGroup name="US_Hydrography" />
-      <viewGroup name="US_Climate_TRMM" />
-      <viewGroup name="US_Ecoregions" />
-      <viewGroup name="US_Landcover" />
-      <viewGroup name="MODIS_Change_Detection_Products" />
-      <viewGroup name="MODISCloud" />
-      <viewGroup name="Drought_Monitor" />	
+	  <viewGroup name="US_Climate" />
+      <viewGroup name="US_Physiographic" />	
     </view>
     <view name="MODIS_Forest_Change_Products" label="MODIS Forest Change Products">
       <viewGroup name="US_Jurisdictions" />
+	  <viewGroup name="EWS_Activefire2" />
+	  <viewGroup name="US_Fire" />
       <viewGroup name="US_FHM_ADS" />
-      <viewGroup name="EWS_Activefire2" />
-      <viewGroup name="US_Fire" />
-      <viewGroup name="vegdri" />
-      <viewGroup name="US_Elevation" />
-      <viewGroup name="EWS_RSAC-FHTET_Change_2010" />
-      <viewGroup name="EWS_RSAC-FHTET" />
-      <viewGroup name="EWS_EFETAC-NASA_Change_2010" />
+	  <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="Archived_NRT_EFETAC-NASA_3year" />
       <viewGroup name="Archived_NRT_EFETAC-NASA_1year" />
       <viewGroup name="Archived_NRT_EFETAC-NASA_All" />
-      <viewGroup name="US_Hydrography" />
-      <viewGroup name="US_Climate_TRMM" />
-      <viewGroup name="US_Ecoregions" />
-      <viewGroup name="US_Landcover" />
-      <viewGroup name="MODIS_Change_Detection_Products" />
-      <viewGroup name="MODISCloud" />
-      <viewGroup name="Drought_Monitor" />
+	  <viewGroup name="EWS_RSAC-FHTET" />
+	  <viewGroup name="MODISCloud" />
+	  <viewGroup name="Drought_Monitor" />
+      <viewGroup name="vegdri" />
+	  <viewGroup name="US_Climate" />
+      <viewGroup name="US_Physiographic" />	
     </view>
     <view name="MODIS_Phenology_Derived_Products" label="MODIS Phenology Derived Products">
       <viewGroup name="US_Jurisdictions" />
+	  <viewGroup name="EWS_Activefire2" />
+	  <viewGroup name="US_Fire" />
       <viewGroup name="US_FHM_ADS" />
-      <viewGroup name="EWS_Activefire2" />
-      <viewGroup name="US_Fire" />
+	  <viewGroup name="MODIS_Change_Detection_Products" />
+	  <viewGroup name="MODISCloud" />
+	  <viewGroup name="Drought_Monitor" />
       <viewGroup name="vegdri" />
-      <viewGroup name="US_Elevation" />
-      <viewGroup name="US_Hydrography" />
-      <viewGroup name="US_Climate_TRMM" />
-      <viewGroup name="US_Ecoregions" />
-      <viewGroup name="US_Landcover" />
-      <viewGroup name="MODIS_Change_Detection_Products" />
-      <viewGroup name="MODISCloud" />
-      <viewGroup name="Drought_Monitor" />	
+	  <viewGroup name="US_Climate" />
+      <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Derived_Products" />
     </view>
     <view name="MODIS_Phenology_Parameters_Products" label="MODIS Phenology Parameters Products">
       <viewGroup name="US_Jurisdictions" />
+	  <viewGroup name="EWS_Activefire2" />
+	  <viewGroup name="US_Fire" />
       <viewGroup name="US_FHM_ADS" />
-      <viewGroup name="EWS_Activefire2" />
-      <viewGroup name="US_Fire" />
+	  <viewGroup name="MODIS_Change_Detection_Products" />
+	  <viewGroup name="MODISCloud" />
+	  <viewGroup name="Drought_Monitor" />
       <viewGroup name="vegdri" />
-      <viewGroup name="US_Elevation" />
-      <viewGroup name="US_Hydrography" />
-      <viewGroup name="US_Climate_TRMM" />
-      <viewGroup name="US_Ecoregions" />
-      <viewGroup name="US_Landcover" />
-      <viewGroup name="MODIS_Change_Detection_Products" />
-      <viewGroup name="MODISCloud" />
-      <viewGroup name="Drought_Monitor" />
+	  <viewGroup name="US_Climate" />
+      <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Parameters" />
     </view>
     <view name="MODIS_Cumulative_NDVI_Products" label="MODIS Cumulative NDVI Products">
       <viewGroup name="US_Jurisdictions" />
+	  <viewGroup name="EWS_Activefire2" />
+	  <viewGroup name="US_Fire" />
       <viewGroup name="US_FHM_ADS" />
-      <viewGroup name="EWS_Activefire2" />
-      <viewGroup name="US_Fire" />
+	  <viewGroup name="MODIS_Change_Detection_Products" />
+	  <viewGroup name="MODISCloud" />
+	  <viewGroup name="Drought_Monitor" />
       <viewGroup name="vegdri" />
-      <viewGroup name="US_Elevation" />
-      <viewGroup name="US_Hydrography" />
-      <viewGroup name="US_Climate_TRMM" />
-      <viewGroup name="US_Ecoregions" />
-      <viewGroup name="US_Landcover" />
-      <viewGroup name="MODIS_Change_Detection_Products" />
-      <viewGroup name="MODISCloud" />
-      <viewGroup name="Drought_Monitor" />	
+	  <viewGroup name="US_Climate" />
+      <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Integrals" />
     </view>
     <view name="MODIS_NDVI_Time_series_Profiling_Capability" label="MODIS NDVI Time series Profiling Capability">
       <viewGroup name="US_Jurisdictions" />
+	  <viewGroup name="EWS_Activefire2" />
+	  <viewGroup name="US_Fire" />
       <viewGroup name="US_FHM_ADS" />
-      <viewGroup name="EWS_Activefire2" />
-      <viewGroup name="US_Fire" />
+	  <viewGroup name="MODIS_Change_Detection_Products" />
+	  <viewGroup name="MODISCloud" />
+	  <viewGroup name="Drought_Monitor" />
       <viewGroup name="vegdri" />
-      <viewGroup name="US_Elevation" />
-      <viewGroup name="US_Hydrography" />
-      <viewGroup name="US_Climate_TRMM" />
-      <viewGroup name="US_Ecoregions" />
-      <viewGroup name="US_Landcover" />
-      <viewGroup name="MODIS_Change_Detection_Products" />
-      <viewGroup name="MODISCloud" />
-      <viewGroup name="Drought_Monitor" />
+	  <viewGroup name="US_Climate" />
+      <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_MODISNDVI" />
     </view>
     <view name="MODIS_Phenology_Time_Series_2003-2009" label="MODIS Phenology Time Series 2003-2009">
       <viewGroup name="US_Jurisdictions" />
+	  <viewGroup name="EWS_Activefire2" />
+	  <viewGroup name="US_Fire" />
       <viewGroup name="US_FHM_ADS" />
-      <viewGroup name="EWS_Activefire2" />
-      <viewGroup name="US_Fire" />
+	  <viewGroup name="MODIS_Change_Detection_Products" />
+	  <viewGroup name="MODISCloud" />
+	  <viewGroup name="Drought_Monitor" />
       <viewGroup name="vegdri" />
-      <viewGroup name="US_Elevation" />
-      <viewGroup name="US_Hydrography" />
-      <viewGroup name="US_Climate_TRMM" />
-      <viewGroup name="US_Ecoregions" />
-      <viewGroup name="US_Landcover" />
-      <viewGroup name="MODIS_Change_Detection_Products" />
-      <viewGroup name="MODISCloud" />
-      <viewGroup name="Drought_Monitor" />
-      <viewGroup name="Archived_NRT_EFETAC-NASA" />
-      <viewGroup name="EWS_RSAC-FHTET" />
+	  <viewGroup name="US_Climate" />
+      <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Derived_Products" />
       <viewGroup name="EWS_Parameters" />
       <viewGroup name="EWS_Integrals" />
@@ -203,12 +175,97 @@
     </view>
   </mapviews>
   <wmsLayers>
+  
+     <wmsGroup name="US_Jurisdictions" label="Political Boundaries and Roads" priorService="EWS_Activefire2">
+     <wmsSubgroup label="Boundaries">
+      <wmsLayer
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="cities"
+	 styles="default"
+	 identify="true"
+	 name="Cities"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cities&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer
+	 visible="true"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="states"
+	 styles="default"
+	 identify="true"
+	 name="State Boundaries"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=states&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="counties"
+	 styles="default"
+	 identify="true"
+	 name="County Boundaries"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=counties&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="federal_lands"
+	 styles="default"
+	 identify="true"
+	 name="Federal Lands" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=federal_lands&VERSION=1.1.1&FORMAT=image/png"/>
+     </wmsSubgroup>
+     <wmsSubgroup label="Roads">
+      <wmsLayer
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="interstates"
+	 styles="default"
+	 identify="true"
+	 name="Interstates"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=interstates&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="roads"
+	 styles="default"
+	 identify="true"
+	 name="Secondary Roads"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=roads&VERSION=1.1.1&FORMAT=image/png"/>
+     </wmsSubgroup>
+    </wmsGroup>
 
-    <wmsGroup name="MODIS_Change_Detection_Products" label="MODIS NRT Change Detection Products" priorService="US_Elevation">
+    <wmsGroup name="US_Fire" label="Wildfires" priorService="vegdri">
+	 <wmsSubgroup label="Historical Wildfire Perimeters">
+      <wmsLayer visible="false" url="http://fswms.nemac.org/ews?TRANSPARENT=true" srs="EPSG:3785" layers="firescars" styles="default" identify="true" name="2000-2010 Wildfire Perimeters (GEOMAC+MTBS)" legend="http://ews.forestthreats.org/gis/assets/Mashup_Legends/Fire_Scars_2000-2010.PNG"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2000" styles="default" identify="true" name="2000 Wildfire Perimeters (MTBS)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2000&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2001" styles="default" identify="true" name="2001 Wildfire Perimeters (MTBS)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2001&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2002" styles="default" identify="true" name="2002 Wildfire Perimeters (MTBS)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2002&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2003" styles="default" identify="true" name="2003 Wildfire Perimeters (MTBS)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2003&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2004" styles="default" identify="true" name="2004 Wildfire Perimeters (MTBS)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2004&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2005" styles="default" identify="true" name="2005 Wildfire Perimeters (MTBS)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2005&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2006" styles="default" identify="true" name="2006 Wildfire Perimeters (MTBS)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2006&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2007" styles="default" identify="true" name="2007 Wildfire Perimeters (MTBS)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2007&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2008" styles="default" identify="true" name="2008 Wildfire Perimeters (MTBS)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2008&VERSION=1.1.1&FORMAT=image/png"/>
+     </wmsSubgroup>
+	</wmsGroup>
+
+    <wmsGroup name="US_FHM_ADS" label="Historical Aerial Disturbance Surveys (USFS FHM)" priorService="vegdri">
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2003" styles="default" identify="true" name="2003 Aerial Disturbance Surveys (FHTET)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2003&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2004" styles="default" identify="true" name="2004 Aerial Disturbance Surveys (FHTET)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2004&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2005" styles="default" identify="true" name="2005 Aerial Disturbance Surveys (FHTET)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2005&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2006" styles="default" identify="true" name="2006 Aerial Disturbance Surveys (FHTET)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2006&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2007" styles="default" identify="true" name="2007 Aerial Disturbance Surveys (FHTET)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2007&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2008" styles="default" identify="true" name="2008 Aerial Disturbance Surveys (FHTET)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2008&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2009" styles="default" identify="true" name="2009 Aerial Disturbance Surveys (FHTET)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2009&VERSION=1.1.1&FORMAT=image/png"/>
+    </wmsGroup>
+
+    <wmsGroup name="MODIS_Change_Detection_Products" label="MODIS NRT Change Detection Products" priorService="vegdri">
 %(MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
     </wmsGroup>
 
-    <wmsGroup name="Archived_NRT_EFETAC-NASA_3year" label="Archived NRT 3-Year Baseline (Threat Assessment Centers/NASA)" priorService="US_Elevation">
+    <wmsGroup name="Archived_NRT_EFETAC-NASA_3year" label="Archived NRT 3-Year Baseline (Threat Assessment Centers/NASA)" priorService="vegdri">
       <wmsLayer visible="false" url="%(SERVER_URL)s/ews3year?TRANSPARENT=true" srs="EPSG:3785" layers="EFETAC-NASA_3year_20100305" styles="default" 
 		name="20100305"
 		identify="true" legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
@@ -390,7 +447,7 @@
 		name="20111124"
 		identify="true" legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsGroup>
-    <wmsGroup name="Archived_NRT_EFETAC-NASA_1year" label="Archived NRT 1-Year Baseline (Threat Assessment Centers/NASA)" priorService="US_Elevation">
+    <wmsGroup name="Archived_NRT_EFETAC-NASA_1year" label="Archived NRT 1-Year Baseline (Threat Assessment Centers/NASA)" priorService="vegdri">
       <wmsLayer visible="false" url="%(SERVER_URL)s/ews1year?TRANSPARENT=true" srs="EPSG:3785" layers="EFETAC-NASA_1Year_20100305" styles="default" 
 		name="20100305"
 		identify="true" legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
@@ -572,7 +629,7 @@
 		name="20111124"
 		identify="true" legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsGroup>
-    <wmsGroup name="Archived_NRT_EFETAC-NASA_All" label="Archived NRT EFETAC-NASA All Year" priorService="US_Elevation">
+    <wmsGroup name="Archived_NRT_EFETAC-NASA_All" label="Archived NRT EFETAC-NASA All Year" priorService="vegdri">
       <wmsLayer visible="false" url="%(SERVER_URL)s/ews?TRANSPARENT=true" srs="EPSG:3785" layers="EFETAC-NASA_20100727" styles="default" 
 		name="20100727"
 		identify="true" legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
@@ -733,7 +790,8 @@
 		name="20111116"
 		identify="true" legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsGroup>
-    <wmsGroup name="MODISCloud" label="eMODIS Cloud Assessment Products" priorService="US_Elevation">	
+	
+    <wmsGroup name="MODISCloud" label="eMODIS Cloud Assessment Products" priorService="vegdri">	
       <wmsLayer visible="false" url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true" srs="EPSG:3785" layers="EFETAC-NASA_TC_20110913_24" styles="default" identify="true" name="True Color 20110913_24" legend=""/>	
       <wmsLayer visible="false" url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true" srs="EPSG:3785" layers="EFETAC-NASA_TC_20110921_24" styles="default" identify="true" name="True Color 20110921_24" legend=""/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true" srs="EPSG:3785" layers="EFETAC-NASA_TC_20110929_24" styles="default" identify="true" name="True Color 20110929_24" legend=""/>
@@ -745,8 +803,7 @@
       <wmsLayer visible="false" url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true" srs="EPSG:3785" layers="EFETAC-NASA_TC_20111116_24" styles="default" identify="true" name="True Color 20111116_24" legend=""/>
     </wmsGroup>
     
-    
-    <wmsGroup name="Drought_Monitor" label="Current Drought- US Drought Monitor" priorService="US_Elevation">
+    <wmsGroup name="Drought_Monitor" label="Current Drought- US Drought Monitor" priorService="vegdri">
       <wmsLayer visible="false" url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm_current_wms.map&#38;#38;TRANSPARENT=true" srs="EPSG:900913" layers="usdm_current" styles="default"
 		identify="false" name="Current Drought Monitor" legend="$(VIEWER_DEPLOY_DIR_URL)s/assets/Mashup_Legends/Current_Drought_Monitor.PNG" />
       <wmsLayer visible="false" url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110920_wms.map&#38;#38;TRANSPARENT=true" srs="EPSG:900913" layers="usdm110920" styles="default"
@@ -757,99 +814,38 @@
 		identify="false" name="9/06/2011 Drought Monitor" legend="$(VIEWER_DEPLOY_DIR_URL)s/assets/Mashup_Legends/Current_Drought_Monitor.PNG" />
     </wmsGroup>
 
-    <wmsGroup name="US_Jurisdictions" label="Jurisdictions" priorService="EWS_Activefire2">
-     <wmsSubgroup label="Jurisdictions">
-      <wmsLayer
-	 visible="false"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
-	 srs="EPSG:3785"
-	 layers="cities"
-	 styles="default"
-	 identify="true"
-	 name="Cities"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cities&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer
-	 visible="true"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
-	 srs="EPSG:3785"
-	 layers="states"
-	 styles="default"
-	 identify="true"
-	 name="States"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=states&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer
-	 visible="false"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
-	 srs="EPSG:3785"
-	 layers="counties"
-	 styles="default"
-	 identify="true"
-	 name="Counties"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=counties&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer
-	 visible="false"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
-	 srs="EPSG:3785"
-	 layers="federal_lands"
-	 styles="default"
-	 identify="true"
-	 name="Federal Lands" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=federal_lands&VERSION=1.1.1&FORMAT=image/png"/>
+	<wmsGroup name="US_Climate" label="Other Weather and Climate" >
+	 <wmsSubgroup label="Climate">
+      <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="precip-1971-2000" styles="default" identify="true" name="Avg Annual Precipitation (PRISM)" legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=precip-1971-2000&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="temp-max-1971-2000" styles="default" identify="true" name="Avg Max Temperature (PRISM)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=temp-max-1971-2000&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="temp-min-1971-2000" styles="default" identify="true" name="Avg Min Temperature (PRISM)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=temp-min-1971-2000&VERSION=1.1.1&FORMAT=image/png"/>
      </wmsSubgroup>
-     <wmsSubgroup label="Roads">
-      <wmsLayer
-	 visible="false"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
-	 srs="EPSG:3785"
-	 layers="interstates"
-	 styles="default"
-	 identify="true"
-	 name="Interstates"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=interstates&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer
-	 visible="false"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
-	 srs="EPSG:3785"
-	 layers="roads"
-	 styles="default"
-	 identify="true"
-	 name="Roads"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=roads&VERSION=1.1.1&FORMAT=image/png"/>
+	</wmsGroup>
+	
+    <wmsGroup name="US_Physiographic" label="Physiographic Maps" >
+	 <wmsSubgroup label="Elevation Products">
+      <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="srtm-dem-231m" styles="default" identify="true" name="Elevation (SRTM 231m DEM)" legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=srtm-dem-231m&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="srtm-aspect-231m" styles="default" identify="true" name="Aspect (SRTM 231m)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=srtm-aspect-231m&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="srtm-hillshade-231m" styles="default" identify="true" name="Hillshading (SRTM 231m)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=srtm-hillshade-231m&VERSION=1.1.1&FORMAT=image/png"/>
      </wmsSubgroup>
-    </wmsGroup>
-
-    <wmsGroup name="US_Fire" label="Historical Fire Scars" priorService="EWS_Activefire2">
-      <wmsLayer visible="false" url="http://fswms.nemac.org/ews?TRANSPARENT=true" srs="EPSG:3785" layers="firescars" styles="default" identify="true" name="Fire Scars 2000-2010" legend="http://ews.forestthreats.org/gis/assets/Mashup_Legends/Fire_Scars_2000-2010.PNG"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2000" styles="default" identify="true" name="MTBS Fire 2000" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2000&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2001" styles="default" identify="true" name="MTBS Fire 2001" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2001&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2002" styles="default" identify="true" name="MTBS Fire 2002" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2002&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2003" styles="default" identify="true" name="MTBS Fire 2003" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2003&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2004" styles="default" identify="true" name="MTBS Fire 2004" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2004&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2005" styles="default" identify="true" name="MTBS Fire 2005" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2005&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2006" styles="default" identify="true" name="MTBS Fire 2006" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2006&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2007" styles="default" identify="true" name="MTBS Fire 2007" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2007&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="mtbs_2008" styles="default" identify="true" name="MTBS Fire 2008" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2008&VERSION=1.1.1&FORMAT=image/png"/>
-    </wmsGroup>
-
-    <wmsGroup name="US_FHM_ADS" label="FHM Aerial Detection Surveys" priorService="EWS_Activefire2">
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2003" styles="default" identify="true" name="FHM ADS 2003" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2003&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2004" styles="default" identify="true" name="FHM ADS 2004" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2004&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2005" styles="default" identify="true" name="FHM ADS 2005" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2005&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2006" styles="default" identify="true" name="FHM ADS 2006" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2006&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2007" styles="default" identify="true" name="FHM ADS 2007" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2007&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2008" styles="default" identify="true" name="FHM ADS 2008" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2008&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ads_2009" styles="default" identify="true" name="FHM ADS 2009" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2009&VERSION=1.1.1&FORMAT=image/png"/>
-    </wmsGroup>
-
-    <wmsGroup name="US_Hydrography" label="Hydrography" >
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="streams" styles="default" identify="true" name="Major Streams" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=streams&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="HUC6" styles="default" identify="true" name="HUC 6 Watersheds" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=HUC6&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="HUC8" styles="default" identify="true" name="HUC 8 Watersheds" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=HUC8&VERSION=1.1.1&FORMAT=image/png"/>
-    </wmsGroup>
-    <wmsGroup name="US_Ecoregions" label="Ecoregions" >
+	 <wmsSubgroup label="Hydrography">
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="streams" styles="default" identify="true" name="Streams and Water Features" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=streams&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="HUC6" styles="default" identify="true" name="Major River Basins (HUC 6)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=HUC6&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="HUC8" styles="default" identify="true" name="Major River Basins (HUC 8)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=HUC8&VERSION=1.1.1&FORMAT=image/png"/>
+     </wmsSubgroup>
+	 <wmsSubgroup label="Landcover">
+      <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="forest-type" styles="default" identify="true" name="Forest Type (USFS FIA-RSAC)" legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=forest-type&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="forest-group" styles="default" identify="true" name="Major Forest Group (USFS FIA-RSAC)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=forest-group&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="forest-biomass" styles="default" identify="true" name="Forest Biomass (USFS FIA-RSAC)" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=forest-biomass&VERSION=1.1.1&FORMAT=image/png"/>
+     </wmsSubgroup>
+	 <wmsSubgroup label="Ecoregions">
       <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ecoregions_bailey" styles="default" identify="true" name="Bailey's Ecoregions" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ecoregions_bailey&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" srs="EPSG:3785" layers="ecoregions_omernik" styles="default" identify="true" name="Omernik Ecoregions" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ecoregions_omernik&VERSION=1.1.1&FORMAT=image/png"/>
-    </wmsGroup>
+     </wmsSubgroup>
+	</wmsGroup>
+	
     <wmsGroup name="EWS_Derived_Products" label="MODIS Phenology Derived Products" >
+	 <wmsSubgroup label="Phenology- Derived Products 2009">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="fall-brown-down-length-2009" styles="default" identify="true" name="fall-brown-down-length-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2009&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="spring-leaf-out-length-2009" styles="default" identify="true" name="spring-leaf-out-length-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2009&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="growing-season-length-2009" styles="default" identify="true" name="growing-season-length-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2009&VERSION=1.1.1&FORMAT=image/png"/>
@@ -863,7 +859,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-position-2009" styles="default" identify="true" name="mean-position-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-value-2009" styles="default" identify="true" name="mean-value-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-xy-2009" styles="default" identify="true" name="mean-xy-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-xy-2009&VERSION=1.1.1&FORMAT=image/png"/>
-	  
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology- Derived Products 2008">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="fall-brown-down-length-2008" styles="default" identify="true" name="fall-brown-down-length-2008" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2008&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="spring-leaf-out-length-2008" styles="default" identify="true" name="spring-leaf-out-length-2008" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2008&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="growing-season-length-2008" styles="default" identify="true" name="growing-season-length-2008" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2008&VERSION=1.1.1&FORMAT=image/png"/>
@@ -877,7 +874,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-position-2008" styles="default" identify="true" name="mean-position-2008" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2008&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-value-2008" styles="default" identify="true" name="mean-value-2008" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2008&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-xy-2008" styles="default" identify="true" name="mean-xy-2008" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-xy-2008&VERSION=1.1.1&FORMAT=image/png"/>
-	  
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology- Derived Products 2007"> 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="fall-brown-down-length-2007" styles="default" identify="true" name="fall-brown-down-length-2007" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2007&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="spring-leaf-out-length-2007" styles="default" identify="true" name="spring-leaf-out-length-2007" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2007&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="growing-season-length-2007" styles="default" identify="true" name="growing-season-length-2007" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2007&VERSION=1.1.1&FORMAT=image/png"/>
@@ -891,7 +889,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-position-2007" styles="default" identify="true" name="mean-position-2007" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2007&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-value-2007" styles="default" identify="true" name="mean-value-2007" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2007&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-xy-2007" styles="default" identify="true" name="mean-xy-2007" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-xy-2007&VERSION=1.1.1&FORMAT=image/png"/>
-	  
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology- Derived Products 2006"> 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="fall-brown-down-length-2006" styles="default" identify="true" name="fall-brown-down-length-2006" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2006&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="spring-leaf-out-length-2006" styles="default" identify="true" name="spring-leaf-out-length-2006" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2006&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="growing-season-length-2006" styles="default" identify="true" name="growing-season-length-2006" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2006&VERSION=1.1.1&FORMAT=image/png"/>
@@ -905,7 +904,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-position-2006" styles="default" identify="true" name="mean-position-2006" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2006&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-value-2006" styles="default" identify="true" name="mean-value-2006" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2006&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-xy-2006" styles="default" identify="true" name="mean-xy-2006" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-xy-2006&VERSION=1.1.1&FORMAT=image/png"/>
-	  
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology- Derived Products 2005"> 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="fall-brown-down-length-2005" styles="default" identify="true" name="fall-brown-down-length-2005" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2005&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="spring-leaf-out-length-2005" styles="default" identify="true" name="spring-leaf-out-length-2005" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2005&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="growing-season-length-2005" styles="default" identify="true" name="growing-season-length-2005" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2005&VERSION=1.1.1&FORMAT=image/png"/>
@@ -919,7 +919,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-position-2005" styles="default" identify="true" name="mean-position-2005" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2005&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-value-2005" styles="default" identify="true" name="mean-value-2005" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2005&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-xy-2005" styles="default" identify="true" name="mean-xy-2005" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-xy-2005&VERSION=1.1.1&FORMAT=image/png"/>
-	  
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology- Derived Products 2004"> 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="fall-brown-down-length-2004" styles="default" identify="true" name="fall-brown-down-length-2004" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2004&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="spring-leaf-out-length-2004" styles="default" identify="true" name="spring-leaf-out-length-2004" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2004&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="growing-season-length-2004" styles="default" identify="true" name="growing-season-length-2004" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2004&VERSION=1.1.1&FORMAT=image/png"/>
@@ -933,7 +934,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-position-2004" styles="default" identify="true" name="mean-position-2004" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2004&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-value-2004" styles="default" identify="true" name="mean-value-2004" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2004&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-xy-2004" styles="default" identify="true" name="mean-xy-2004" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-xy-2004&VERSION=1.1.1&FORMAT=image/png"/>
-	  
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology- Derived Products 2003"> 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="fall-brown-down-length-2003" styles="default" identify="true" name="fall-brown-down-length-2003" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2003&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="spring-leaf-out-length-2003" styles="default" identify="true" name="spring-leaf-out-length-2003" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2003&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="growing-season-length-2003" styles="default" identify="true" name="growing-season-length-2003" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2003&VERSION=1.1.1&FORMAT=image/png"/>
@@ -947,20 +949,24 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-position-2003" styles="default" identify="true" name="mean-position-2003" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2003&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-value-2003" styles="default" identify="true" name="mean-value-2003" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2003&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="mean-xy-2003" styles="default" identify="true" name="mean-xy-2003" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-xy-2003&VERSION=1.1.1&FORMAT=image/png"/>
-	  
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology- Standard Deviations"> 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="fall-standard-deviation-2003-2009" styles="default" identify="true" name="fall-standard-deviation-2003-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-standard-deviation-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="spring-standard-deviation-2003-2009" styles="default" identify="true" name="spring-standard-deviation-2003-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-standard-deviation-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="gs-standard-deviation-2003-2009" styles="default" identify="true" name="gs-standard-deviation-2003-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=gs-standard-deviation-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
-	  
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology- Means"> 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="fall-mean-2002-2008" styles="default" identify="true" name="fall-mean-2002-2008" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-mean-2002-2008&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="spring-mean-2002-2008" styles="default" identify="true" name="spring-mean-2002-2008" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-mean-2002-2008&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="gs-mean-2003-2009" styles="default" identify="true" name="gs-mean-2003-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=gs-mean-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="max-mean-2003-2009" styles="default" identify="true" name="max-mean-2003-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-mean-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="min-mean-2003-2009" styles="default" identify="true" name="min-mean-2003-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-mean-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/derivatives?TRANSPARENT=true" srs="EPSG:3785" layers="max-min-mean-2003-2009" styles="default" identify="true" name="max-min-mean-2003-2009" legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-min-mean-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 </wmsSubgroup>
 	</wmsGroup>
     
 	<wmsGroup name="EWS_Parameters" label="MODIS Phenological Parameters" >
+	 <wmsSubgroup label="Phenology Parameters- 2009">
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="large-integral-2009" styles="default" identify="true" name="large-integral-2009" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=large-integral-2009&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="qc-flags-2009" styles="default" identify="true" name="qc-flags-2009" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2009&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="left-pos-20pct-2009" styles="default" identify="true" name="left-pos-20pct-2009" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=left-pos-20pct-2009&VERSION=1.1.1&FORMAT=image/png"/>
@@ -978,7 +984,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-left-2009" styles="default" identify="true" name="min-val-left-2009" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-left-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-right-2009" styles="default" identify="true" name="min-val-right-2009" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-right-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="small-integral-2009" styles="default" identify="true" name="small-integral-2009" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=small-integral-2009&VERSION=1.1.1&FORMAT=image/png"/>
-	
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology Parameters- 2008">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="large-integral-2008" styles="default" identify="true" name="large-integral-2008" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=large-integral-2008&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="qc-flags-2008" styles="default" identify="true" name="qc-flags-2008" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2008&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="left-pos-20pct-2008" styles="default" identify="true" name="left-pos-20pct-2008" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=left-pos-20pct-2008&VERSION=1.1.1&FORMAT=image/png"/>
@@ -996,7 +1003,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-left-2008" styles="default" identify="true" name="min-val-left-2008" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-left-2008&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-right-2008" styles="default" identify="true" name="min-val-right-2008" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-right-2008&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="small-integral-2008" styles="default" identify="true" name="small-integral-2008" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=small-integral-2008&VERSION=1.1.1&FORMAT=image/png"/>
-	
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology Parameters- 2007">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="large-integral-2007" styles="default" identify="true" name="large-integral-2007" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=large-integral-2007&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="qc-flags-2007" styles="default" identify="true" name="qc-flags-2007" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2007&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="left-pos-20pct-2007" styles="default" identify="true" name="left-pos-20pct-2007" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=left-pos-20pct-2007&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1014,7 +1022,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-left-2007" styles="default" identify="true" name="min-val-left-2007" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-left-2007&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-right-2007" styles="default" identify="true" name="min-val-right-2007" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-right-2007&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="small-integral-2007" styles="default" identify="true" name="small-integral-2007" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=small-integral-2007&VERSION=1.1.1&FORMAT=image/png"/>
-	
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology Parameters- 2006">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="large-integral-2006" styles="default" identify="true" name="large-integral-2006" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=large-integral-2006&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="qc-flags-2006" styles="default" identify="true" name="qc-flags-2006" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2006&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="left-pos-20pct-2006" styles="default" identify="true" name="left-pos-20pct-2006" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=left-pos-20pct-2006&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1032,7 +1041,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-left-2006" styles="default" identify="true" name="min-val-left-2006" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-left-2006&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-right-2006" styles="default" identify="true" name="min-val-right-2006" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-right-2006&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="small-integral-2006" styles="default" identify="true" name="small-integral-2006" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=small-integral-2006&VERSION=1.1.1&FORMAT=image/png"/>
-	
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology Parameters- 2005">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="large-integral-2005" styles="default" identify="true" name="large-integral-2005" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=large-integral-2005&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="qc-flags-2005" styles="default" identify="true" name="qc-flags-2005" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2005&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="left-pos-20pct-2005" styles="default" identify="true" name="left-pos-20pct-2005" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=left-pos-20pct-2005&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1050,7 +1060,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-left-2005" styles="default" identify="true" name="min-val-left-2005" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-left-2005&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-right-2005" styles="default" identify="true" name="min-val-right-2005" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-right-2005&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="small-integral-2005" styles="default" identify="true" name="small-integral-2005" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=small-integral-2005&VERSION=1.1.1&FORMAT=image/png"/>
-	
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology Parameters- 2004">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="large-integral-2004" styles="default" identify="true" name="large-integral-2004" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=large-integral-2004&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="qc-flags-2004" styles="default" identify="true" name="qc-flags-2004" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2004&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="left-pos-20pct-2004" styles="default" identify="true" name="left-pos-20pct-2004" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=left-pos-20pct-2004&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1068,7 +1079,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-left-2004" styles="default" identify="true" name="min-val-left-2004" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-left-2004&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-right-2004" styles="default" identify="true" name="min-val-right-2004" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-right-2004&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="small-integral-2004" styles="default" identify="true" name="small-integral-2004" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=small-integral-2004&VERSION=1.1.1&FORMAT=image/png"/>
-	
+	 </wmsSubgroup>
+	 <wmsSubgroup label="Phenology Parameters- 2003">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="large-integral-2003" styles="default" identify="true" name="large-integral-2003" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=large-integral-2003&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="qc-flags-2003" styles="default" identify="true" name="qc-flags-2003" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2003&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="left-pos-20pct-2003" styles="default" identify="true" name="left-pos-20pct-2003" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=left-pos-20pct-2003&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1086,9 +1098,11 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-left-2003" styles="default" identify="true" name="min-val-left-2003" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-left-2003&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="min-val-right-2003" styles="default" identify="true" name="min-val-right-2003" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-val-right-2003&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/parameters?TRANSPARENT=true" srs="EPSG:3785" layers="small-integral-2003" styles="default" identify="true" name="small-integral-2003" legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=small-integral-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 </wmsSubgroup>
 	</wmsGroup>
 	
 	<wmsGroup name="EWS_Integrals" label="MODIS Cumulative Integrals" >
+	 <wmsSubgroup label="Cumulative Integrals- 2009">
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-1-2009" styles="default" identify="true" name="cumulative-int-1-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-1-2009&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-2-2009" styles="default" identify="true" name="cumulative-int-2-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-2-2009&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-3-2009" styles="default" identify="true" name="cumulative-int-3-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-3-2009&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1111,7 +1125,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-20-2009" styles="default" identify="true" name="cumulative-int-20-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-20-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-21-2009" styles="default" identify="true" name="cumulative-int-21-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-21-2009&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-22-2009" styles="default" identify="true" name="cumulative-int-22-2009" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-22-2009&VERSION=1.1.1&FORMAT=image/png"/>
-      
+     </wmsSubgroup>
+     <wmsSubgroup label="Cumulative Integrals- 2008">	 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-1-2008" styles="default" identify="true" name="cumulative-int-1-2008" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-1-2008&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-2-2008" styles="default" identify="true" name="cumulative-int-2-2008" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-2-2008&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-3-2008" styles="default" identify="true" name="cumulative-int-3-2008" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-3-2008&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1134,7 +1149,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-20-2008" styles="default" identify="true" name="cumulative-int-20-2008" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-20-2008&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-21-2008" styles="default" identify="true" name="cumulative-int-21-2008" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-21-2008&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-22-2008" styles="default" identify="true" name="cumulative-int-22-2008" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-22-2008&VERSION=1.1.1&FORMAT=image/png"/>
-      
+     </wmsSubgroup>
+     <wmsSubgroup label="Cumulative Integrals- 2007"> 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-1-2007" styles="default" identify="true" name="cumulative-int-1-2007" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-1-2007&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-2-2007" styles="default" identify="true" name="cumulative-int-2-2007" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-2-2007&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-3-2007" styles="default" identify="true" name="cumulative-int-3-2007" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-3-2007&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1157,7 +1173,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-20-2007" styles="default" identify="true" name="cumulative-int-20-2007" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-20-2007&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-21-2007" styles="default" identify="true" name="cumulative-int-21-2007" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-21-2007&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-22-2007" styles="default" identify="true" name="cumulative-int-22-2007" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-22-2007&VERSION=1.1.1&FORMAT=image/png"/>
-      	 
+     </wmsSubgroup>
+     <wmsSubgroup label="Cumulative Integrals- 2006"> 	 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-1-2006" styles="default" identify="true" name="cumulative-int-1-2006" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-1-2006&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-2-2006" styles="default" identify="true" name="cumulative-int-2-2006" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-2-2006&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-3-2006" styles="default" identify="true" name="cumulative-int-3-2006" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-3-2006&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1180,7 +1197,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-20-2006" styles="default" identify="true" name="cumulative-int-20-2006" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-20-2006&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-21-2006" styles="default" identify="true" name="cumulative-int-21-2006" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-21-2006&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-22-2006" styles="default" identify="true" name="cumulative-int-22-2006" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-22-2006&VERSION=1.1.1&FORMAT=image/png"/>
-      
+     </wmsSubgroup>
+     <wmsSubgroup label="Cumulative Integrals- 2005"> 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-1-2005" styles="default" identify="true" name="cumulative-int-1-2005" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-1-2005&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-2-2005" styles="default" identify="true" name="cumulative-int-2-2005" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-2-2005&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-3-2005" styles="default" identify="true" name="cumulative-int-3-2005" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-3-2005&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1203,7 +1221,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-20-2005" styles="default" identify="true" name="cumulative-int-20-2005" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-20-2005&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-21-2005" styles="default" identify="true" name="cumulative-int-21-2005" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-21-2005&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-22-2005" styles="default" identify="true" name="cumulative-int-22-2005" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-22-2005&VERSION=1.1.1&FORMAT=image/png"/>
-      	 
+     </wmsSubgroup>
+     <wmsSubgroup label="Cumulative Integrals- 2004"> 	 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-1-2004" styles="default" identify="true" name="cumulative-int-1-2004" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-1-2004&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-2-2004" styles="default" identify="true" name="cumulative-int-2-2004" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-2-2004&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-3-2004" styles="default" identify="true" name="cumulative-int-3-2004" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-3-2004&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1226,7 +1245,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-20-2004" styles="default" identify="true" name="cumulative-int-20-2004" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-20-2004&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-21-2004" styles="default" identify="true" name="cumulative-int-21-2004" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-21-2004&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-22-2004" styles="default" identify="true" name="cumulative-int-22-2004" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-22-2004&VERSION=1.1.1&FORMAT=image/png"/>
-      
+     </wmsSubgroup>
+     <wmsSubgroup label="Cumulative Integrals- 2003"> 
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-1-2003" styles="default" identify="true" name="cumulative-int-1-2003" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-1-2003&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-2-2003" styles="default" identify="true" name="cumulative-int-2-2003" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-2-2003&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-3-2003" styles="default" identify="true" name="cumulative-int-3-2003" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-3-2003&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1249,9 +1269,11 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-20-2003" styles="default" identify="true" name="cumulative-int-20-2003" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-20-2003&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-21-2003" styles="default" identify="true" name="cumulative-int-21-2003" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-21-2003&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/integrals?TRANSPARENT=true" srs="EPSG:3785" layers="cumulative-int-22-2003" styles="default" identify="true" name="cumulative-int-22-2003" legend="%(SERVER_URL)s/integrals?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cumulative-int-22-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 </wmsSubgroup>
 	</wmsGroup>
 	
 	<wmsGroup name="EWS_MODISNDVI" label="MODIS NDVI" >
+	 <wmsSubgroup label="MODIS NDVI- 2009">
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-353-2009" styles="default" identify="true" name="NDVI-353-2009" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2009&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-337-2009" styles="default" identify="true" name="NDVI-337-2009" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2009&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-321-2009" styles="default" identify="true" name="NDVI-321-2009" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2009&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1274,7 +1296,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-049-2009" styles="default" identify="true" name="NDVI-049-2009" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-033-2009" styles="default" identify="true" name="NDVI-033-2009" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2009&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-001-2009" styles="default" identify="true" name="NDVI-001-2009" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2009&VERSION=1.1.1&FORMAT=image/png"/>
-	
+	 </wmsSubgroup>
+	 <wmsSubgroup label="MODIS NDVI- 2008">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-353-2008" styles="default" identify="true" name="NDVI-353-2008" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2008&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-337-2008" styles="default" identify="true" name="NDVI-337-2008" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2008&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-321-2008" styles="default" identify="true" name="NDVI-321-2008" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2008&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1297,7 +1320,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-049-2008" styles="default" identify="true" name="NDVI-049-2008" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2008&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-033-2008" styles="default" identify="true" name="NDVI-033-2008" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2008&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-001-2008" styles="default" identify="true" name="NDVI-001-2008" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2008&VERSION=1.1.1&FORMAT=image/png"/>
-	
+	 </wmsSubgroup>
+	 <wmsSubgroup label="MODIS NDVI- 2007">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-353-2007" styles="default" identify="true" name="NDVI-353-2007" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2007&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-337-2007" styles="default" identify="true" name="NDVI-337-2007" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2007&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-321-2007" styles="default" identify="true" name="NDVI-321-2007" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2007&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1320,7 +1344,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-049-2007" styles="default" identify="true" name="NDVI-049-2007" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2007&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-033-2007" styles="default" identify="true" name="NDVI-033-2007" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2007&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-001-2007" styles="default" identify="true" name="NDVI-001-2007" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2007&VERSION=1.1.1&FORMAT=image/png"/>
-	 
+	 </wmsSubgroup>
+	 <wmsSubgroup label="MODIS NDVI- 2006">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-353-2006" styles="default" identify="true" name="NDVI-353-2006" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2006&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-337-2006" styles="default" identify="true" name="NDVI-337-2006" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2006&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-321-2006" styles="default" identify="true" name="NDVI-321-2006" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2006&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1343,7 +1368,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-049-2006" styles="default" identify="true" name="NDVI-049-2006" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2006&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-033-2006" styles="default" identify="true" name="NDVI-033-2006" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2006&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-001-2006" styles="default" identify="true" name="NDVI-001-2006" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2006&VERSION=1.1.1&FORMAT=image/png"/>
-	
+	 </wmsSubgroup>
+	 <wmsSubgroup label="MODIS NDVI- 2005">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-353-2005" styles="default" identify="true" name="NDVI-353-2005" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2005&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-337-2005" styles="default" identify="true" name="NDVI-337-2005" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2005&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-321-2005" styles="default" identify="true" name="NDVI-321-2005" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2005&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1366,7 +1392,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-049-2005" styles="default" identify="true" name="NDVI-049-2005" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2005&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-033-2005" styles="default" identify="true" name="NDVI-033-2005" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2005&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-001-2005" styles="default" identify="true" name="NDVI-001-2005" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2005&VERSION=1.1.1&FORMAT=image/png"/>
-	
+	 </wmsSubgroup>
+	 <wmsSubgroup label="MODIS NDVI- 2004">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-353-2004" styles="default" identify="true" name="NDVI-353-2004" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2004&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-337-2004" styles="default" identify="true" name="NDVI-337-2004" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2004&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-321-2004" styles="default" identify="true" name="NDVI-321-2004" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2004&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1389,7 +1416,8 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-049-2004" styles="default" identify="true" name="NDVI-049-2004" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2004&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-033-2004" styles="default" identify="true" name="NDVI-033-2004" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2004&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-001-2004" styles="default" identify="true" name="NDVI-001-2004" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2004&VERSION=1.1.1&FORMAT=image/png"/>
-	
+	 </wmsSubgroup>
+	 <wmsSubgroup label="MODIS NDVI- 2003">
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-353-2003" styles="default" identify="true" name="NDVI-353-2003" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2003&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-337-2003" styles="default" identify="true" name="NDVI-337-2003" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2003&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-321-2003" styles="default" identify="true" name="NDVI-321-2003" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2003&VERSION=1.1.1&FORMAT=image/png"/>
@@ -1412,6 +1440,7 @@
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-049-2003" styles="default" identify="true" name="NDVI-049-2003" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2003&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-033-2003" styles="default" identify="true" name="NDVI-033-2003" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2003&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer visible="false" url="%(SERVER_URL)s/modisndvi?TRANSPARENT=true" srs="EPSG:3785" layers="NDVI-001-2003" styles="default" identify="true" name="NDVI-001-2003" legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 </wmsSubgroup>
 	</wmsGroup>
   </wmsLayers>
   <tools>

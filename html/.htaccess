@@ -82,3 +82,7 @@
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "rlayers">
+    Allow from all
+    SetHandler cgi-script
+</Files>
