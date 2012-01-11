@@ -482,6 +482,17 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+###
+### Create the wlayers.map file:
+###
+template = Template("wlayers.tpl.map")
+f_new = open("wlayers.map", "w")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "wlayers")
+            } ) )
+f_new.close()
+
 #################################################################################################
 
 ###

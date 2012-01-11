@@ -86,3 +86,7 @@
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "wlayers">
+    Allow from all
+    SetHandler cgi-script
+</Files>

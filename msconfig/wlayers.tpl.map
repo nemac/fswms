@@ -1,0 +1,87 @@
+MAP
+    # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+    # of the two lines below to enable this logging:
+    # CONFIG "MS_ERRORFILE" "../logs/ewsmonthly.log"
+    #DEBUG 5
+
+    # all temp files get prefixed with this string
+    NAME ms_wlayers
+
+    # background color of image if transparency
+    # is not requested
+    IMAGECOLOR 255 255 255
+
+    # default output image dimensions
+    SIZE 1200 1000
+
+    # always returns a map
+    STATUS ON
+
+    # set top level projection
+    PROJECTION
+     "init=epsg:4326"
+    END
+
+    # image format options
+    OUTPUTFORMAT
+        NAME "GEOTIFF"
+        DRIVER "GDAL/GTiff"
+        MIMETYPE "image/geotiff"
+        IMAGEMODE "BYTE"
+        EXTENSION "tif"
+    END
+
+    # minx miny maxx maxy
+    # sets:
+    # /WMT_MS_Capabilities/Capability/Layer/LatLonBoundingBox(@minx @miny @maxx @maxx)
+    EXTENT -180 -90 180 90 # World
+
+    # add def pointers for symbols
+    SYMBOLSET "./symbols/symbols35.sym"
+    FONTSET   "./fonts/fonts.list"
+
+    #
+    # Start of web interface definition
+    WEB
+        # this is the real filepath to the temp dir for intermediate file creation
+        IMAGEPATH "./tmp"
+        # this is the web-accessible path to IMAGEPATH
+        IMAGEURL "/tmp/"
+        HEADER "./templates/query_header.html"
+        FOOTER "./templates/query_footer.html"
+        METADATA
+            "ows_enable_request"     "*"
+            "wms_title"              "wlayers"
+            "wms_abstract"           "wlayers"
+            "wms_onlineresource"     "%(SERVICE_URL)s"
+            "wms_srs"                "EPSG:4326 EPSG:2163 EPSG:3785"
+        END
+    END
+
+    QUERYMAP
+        STATUS OFF
+    END
+
+    # set defaults for GetLegendGraphic requests 
+    LEGEND
+      KEYSIZE 154 297
+    END
+
+    LAYER
+      NAME "TRMM_3B42_V6_10_DAY"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4326"
+        "wms_name"            "TRMM_3B42_V6_10_DAY"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+
+END
