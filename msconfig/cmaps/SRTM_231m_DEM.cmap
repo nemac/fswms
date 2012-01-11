@@ -1,0 +1,132 @@
+CLASS
+	EXPRESSION ([pixel] > -154 AND [pixel] <= -12) 
+	COLOR 	0	0	255
+END
+CLASS
+	EXPRESSION ([pixel] > -12 AND [pixel] <= 128) 
+	COLOR 	8	0	247
+END
+CLASS
+	EXPRESSION ([pixel] > 128 AND [pixel] <= 269) 
+	COLOR 	16	0	239
+END
+CLASS
+	EXPRESSION ([pixel] > 269 AND [pixel] <= 410) 
+	COLOR 	24	0	231
+END
+CLASS
+	EXPRESSION ([pixel] > 410 AND [pixel] <= 551) 
+	COLOR 	32	0	223
+END
+CLASS
+	EXPRESSION ([pixel] > 551 AND [pixel] <= 692) 
+	COLOR 	40	0	215
+END
+CLASS
+	EXPRESSION ([pixel] > 692 AND [pixel] <= 833) 
+	COLOR 	48	0	207
+END
+CLASS
+	EXPRESSION ([pixel] > 833 AND [pixel] <= 975) 
+	COLOR 	56	0	199
+END
+CLASS
+	EXPRESSION ([pixel] > 975 AND [pixel] <= 1116) 
+	COLOR 	64	0	191
+END
+CLASS
+	EXPRESSION ([pixel] > 1116 AND [pixel] <= 1257) 
+	COLOR 	72	0	183
+END
+CLASS
+	EXPRESSION ([pixel] > 1257 AND [pixel] <= 1398) 
+	COLOR 	80	0	175
+END
+CLASS
+	EXPRESSION ([pixel] > 1398 AND [pixel] <= 1539) 
+	COLOR 	88	0	167
+END
+CLASS
+	EXPRESSION ([pixel] > 1539 AND [pixel] <= 1680) 
+	COLOR 	96	0	159
+END
+CLASS
+	EXPRESSION ([pixel] > 1680 AND [pixel] <= 1821) 
+	COLOR 	104	0	151
+END
+CLASS
+	EXPRESSION ([pixel] > 1821 AND [pixel] <= 1962) 
+	COLOR 	112	0	143
+END
+CLASS
+	EXPRESSION ([pixel] > 1962 AND [pixel] <= 2104) 
+	COLOR 	120	0	135
+END
+CLASS
+	EXPRESSION ([pixel] > 2104 AND [pixel] <= 2245) 
+	COLOR 	128	0	128
+END
+CLASS
+	EXPRESSION ([pixel] > 2245 AND [pixel] <= 2386) 
+	COLOR 	135	0	120
+END
+CLASS
+	EXPRESSION ([pixel] > 2386 AND [pixel] <= 2527) 
+	COLOR 	143	0	112
+END
+CLASS
+	EXPRESSION ([pixel] > 2527 AND [pixel] <= 2668) 
+	COLOR 	151	0	104
+END
+CLASS
+	EXPRESSION ([pixel] > 2668 AND [pixel] <= 2809) 
+	COLOR 	159	0	96
+END
+CLASS
+	EXPRESSION ([pixel] > 2809 AND [pixel] <= 2950) 
+	COLOR 	167	0	88
+END
+CLASS
+	EXPRESSION ([pixel] > 2950 AND [pixel] <= 3091) 
+	COLOR 	175	0	80
+END
+CLASS
+	EXPRESSION ([pixel] > 3091 AND [pixel] <= 3233) 
+	COLOR 	183	0	72
+END
+CLASS
+	EXPRESSION ([pixel] > 3233 AND [pixel] <= 3374) 
+	COLOR 	191	0	64
+END
+CLASS
+	EXPRESSION ([pixel] > 3374 AND [pixel] <= 3515) 
+	COLOR 	199	0	56
+END
+CLASS
+	EXPRESSION ([pixel] > 3515 AND [pixel] <= 3656) 
+	COLOR 	207	0	48
+END
+CLASS
+	EXPRESSION ([pixel] > 3656 AND [pixel] <= 3797) 
+	COLOR 	215	0	40
+END
+CLASS
+	EXPRESSION ([pixel] > 3797 AND [pixel] <= 3938) 
+	COLOR 	223	0	32
+END
+CLASS
+	EXPRESSION ([pixel] > 3938 AND [pixel] <= 4079) 
+	COLOR 	231	0	24
+END
+CLASS
+	EXPRESSION ([pixel] > 4079 AND [pixel] <= 4220) 
+	COLOR 	239	0	16
+END
+CLASS
+	EXPRESSION ([pixel] > 4220 AND [pixel] <= 4362) 
+	COLOR 	247	0	8
+END
+CLASS
+	EXPRESSION ([pixel] > 4362 AND [pixel] <= 4503) 
+	COLOR 	255	0	0
+END
