@@ -238,7 +238,8 @@
 
     <wmsGroup name="US_Fire" label="Wildfires" priorService="vegdri">
 	 <wmsSubgroup label="Current/NRT Wildfire Detections">
-	  <wmsLayer visible="false" url="http://activefiremaps.fs.fed.us/cgi-bin/mapserv.exe?TRANSPARENT=true" srs="EPSG:3785" layers="Current Large incidents" styles="default" identify="true" name="Current Large incidents" legend="http://ews.forestthreats.org/gis/assets/Mashup_Legends/Fire_Scars_2000-2010.PNG"/>
+	  <wmsLayer visible="false" url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" srs="EPSG:3785" layers="Current-Large-incidents" styles="default" identify="true" name="Current Large Incidents" legend="%(SERVER_URL)s/../msconfig/cmapicons/large-incidents.png"/>
+	  <wmsLayer visible="false" url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" srs="EPSG:3785" layers="Cumulative-Fire-Detections" styles="default" identify="true" name="Cumulative Fire Detections for Current Year (MODIS Hotspots)" legend="%(SERVER_URL)s/../msconfig/cmapicons/cumulative-current-year.png"/>
 	 </wmsSubgroup>
 	 <wmsSubgroup label="Historical Wildfire Perimeters">
       <wmsLayer visible="false" url="http://fswms.nemac.org/ews?TRANSPARENT=true" srs="EPSG:3785" layers="firescars" styles="default" identify="true" name="2000-2010 Wildfire Perimeters (GEOMAC+MTBS)" legend="http://ews.forestthreats.org/gis/assets/Mashup_Legends/Fire_Scars_2000-2010.PNG"/>
@@ -833,7 +834,15 @@
 	 identify="true"
 	 name="TRMM_3B42_V6_10_DAY"
 	 legend="%(SERVER_URL)s/../msconfig/cmapicons/trmm-3B.png"/>
-     </wmsSubgroup>
+	  <wmsLayer 
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="TRMM_3B43_V6_ACCUM" 
+	 styles="default" identify="true" 
+	 name="TRMM_3B43_V6_ACCUM" 
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/trmm-accum.png"/>
+	 </wmsSubgroup>
 	 <wmsSubgroup label="Climate">
       <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="precip-1971-2000" styles="default" identify="true" name="Avg Annual Precipitation (PRISM)" legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=precip-1971-2000&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="temp-max-1971-2000" styles="default" identify="true" name="Avg Max Temperature (PRISM)" legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=temp-max-1971-2000&VERSION=1.1.1&FORMAT=image/png"/>

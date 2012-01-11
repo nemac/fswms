@@ -22,10 +22,6 @@ MAP
      "init=epsg:4326"
     END
 	
-    LEGEND 
-       KEYSIZE 118 208 
-    END
-	
     # image format options
     OUTPUTFORMAT
         NAME "GEOTIFF"
@@ -65,7 +61,38 @@ MAP
     QUERYMAP
         STATUS OFF
     END
-
+    LAYER
+      NAME "Current-Large-incidents"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://activefiremaps.fs.fed.us/cgi-bin/mapserv.exe?map=conus.map&"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4269"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "Current Large incidents"
+        "wms_server_version"  "1.0.0"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "Cumulative-Fire-Detections"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://activefiremaps.fs.fed.us/cgi-bin/mapserv.exe?map=conus.map&"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4269"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "Cumulative Fire Detections"
+        "wms_server_version"  "1.0.0"
+        "wms_format"          "image/png"
+      END
+    END
     LAYER
       NAME "TRMM_3B42_V6_10_DAY"
       TYPE RASTER
@@ -75,11 +102,6 @@ MAP
       PROJECTION
        "init=epsg:4326"
       END
-	  CLASS
-	    NAME       "foobar"
-            #EXPRESSION "-999999"
-	    KEYIMAGE "cmapicons/trmm-3B.png"
-	  END
       METADATA
         "wms_srs"             "EPSG:4326"
         "wms_name"            "TRMM_3B42_V6_10_DAY"
@@ -87,5 +109,20 @@ MAP
         "wms_format"          "image/png"
       END
     END
-
+    LAYER
+      NAME "TRMM_3B43_V6_ACCUM"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4326"
+        "wms_name"            "TRMM_3B43_V6_ACCUM"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
 END
