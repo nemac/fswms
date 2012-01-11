@@ -162,7 +162,6 @@ MAP
     END # end LAYER
 	LAYER
         NAME     peakyness-2009
-        INCLUDE  "cmaps/2009peakyness.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -187,15 +186,13 @@ MAP
     END # end LAYER
 	LAYER
         NAME     fall-spring-ratio-2009
+        INCLUDE  "cmaps/09ratio_spring_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/09ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -214,15 +211,13 @@ MAP
     END # end LAYER
     LAYER
         NAME     skewness-2009
+        INCLUDE  "cmaps/2009_skewness.cmap"        
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/2009_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -538,15 +533,13 @@ MAP
     END # end LAYER
 	LAYER
         NAME     fall-spring-ratio-2008
+        INCLUDE  "cmaps/08ratio_spring_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/08ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -565,15 +558,13 @@ MAP
     END # end LAYER
     LAYER
         NAME     skewness-2008
+        INCLUDE  "cmaps/08_skewness.cmap"                
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/08_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -889,15 +880,13 @@ MAP
     END # end LAYER
 	LAYER
         NAME     fall-spring-ratio-2007
+        INCLUDE  "cmaps/07ratio_spring_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/07ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -916,15 +905,13 @@ MAP
     END # end LAYER
     LAYER
         NAME     skewness-2007
+        INCLUDE  "cmaps/07_skewness.cmap"                
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/07_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -1240,15 +1227,13 @@ MAP
     END # end LAYER
 	LAYER
         NAME     fall-spring-ratio-2006
+        INCLUDE  "cmaps/06ratio_spring_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/06ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -1267,15 +1252,13 @@ MAP
     END # end LAYER
     LAYER
         NAME     skewness-2006
+        INCLUDE  "cmaps/06_skewness.cmap"                
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/06_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -1591,15 +1574,13 @@ MAP
     END # end LAYER
 	LAYER
         NAME     fall-spring-ratio-2005
+        INCLUDE  "cmaps/05ratio_spring_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/05ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -1618,15 +1599,13 @@ MAP
     END # end LAYER
     LAYER
         NAME     skewness-2005
+        INCLUDE  "cmaps/05_skewness.cmap"                
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/05_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -1942,15 +1921,13 @@ MAP
     END # end LAYER
 	LAYER
         NAME     fall-spring-ratio-2004
+        INCLUDE  "cmaps/04ratio_spring_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/04ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -1969,15 +1946,13 @@ MAP
     END # end LAYER
     LAYER
         NAME     skewness-2004
+        INCLUDE  "cmaps/04_skewness.cmap"                
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/04_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -2293,15 +2268,13 @@ MAP
     END # end LAYER
 	LAYER
         NAME     fall-spring-ratio-2003
+        INCLUDE  "cmaps/03ratio_spring_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/03ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -2320,15 +2293,13 @@ MAP
     END # end LAYER
     LAYER
         NAME     skewness-2003
+        INCLUDE  "cmaps/03_skewness.cmap"                
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/03_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"

@@ -119,12 +119,28 @@ files = [
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2003/16_2003_phen_season_min_value_right.img',                   'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2003/17_2003_phen_small_integral.img',                           'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     #Climate and Weather
-    { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMAX_NORMAL_1970_2000.img',                           'minColor' : '255,255,0',  'maxColor' : '255,0,0' },
-    { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMIN_NORMAL_1970_2000.img',                           'minColor' : '255,255,255',  'maxColor' : '160,32,240' },
+    { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMAX_NORMAL_1970_2000.img',                           'minColor' : '255,0,0',  'maxColor' : '255,255,0' },
+    { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMIN_NORMAL_1970_2000.img',                           'minColor' : '160,32,240',  'maxColor' : '255,255,255' },
     #Physiographic Maps
     { 'path' : '/flood/MODIS/CONUS_Elevation/hillshade_231m.img',                                                            'minColor' : '0,0,0',  'maxColor' : '255,255,255' }, 
     #MODIS Phenology derived products
-    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/peakyness/2009peakyness.img',                                       'minColor' : '165,42,42',  'maxColor' : '0,100,0' }     
+    #{ 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/peakyness/2009peakyness.img',                                      'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/09ratio_spring_fall.img',                         'minColor' : '0,0,0',  'maxColor' : '255,255,255' },     
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/08ratio_spring_fall.img',                         'minColor' : '0,0,0',  'maxColor' : '255,255,255' },     
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/07ratio_spring_fall.img',                         'minColor' : '0,0,0',  'maxColor' : '255,255,255' },     
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/06ratio_spring_fall.img',                         'minColor' : '0,0,0',  'maxColor' : '255,255,255' },     
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/05ratio_spring_fall.img',                         'minColor' : '0,0,0',  'maxColor' : '255,255,255' },         
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/04ratio_spring_fall.img',                         'minColor' : '0,0,0',  'maxColor' : '255,255,255' },         
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/03ratio_spring_fall.img',                         'minColor' : '0,0,0',  'maxColor' : '255,255,255' },         
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/skewness/2009_skewness.img',                                        'minColor' : '0,0,0',  'maxColor' : '255,255,255' },         
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/skewness/08_skewness.img',                                          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },         
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/skewness/07_skewness.img',                                          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },         
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/skewness/06_skewness.img',                                          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },         
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/skewness/05_skewness.img',                                          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },         
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/skewness/04_skewness.img',                                          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },         
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/skewness/03_skewness.img',                                          'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
+    #Landcover
+    { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/CONUS_FOREST_BIOMASS.img',                                  'minColor' : '152,251,152',  'maxColor' : '255,255,255' }
     ];
 
 def system(cmd):
