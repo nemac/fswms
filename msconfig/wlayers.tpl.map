@@ -21,7 +21,11 @@ MAP
     PROJECTION
      "init=epsg:4326"
     END
-
+	
+    LEGEND 
+       KEYSIZE 118 208 
+    END
+	
     # image format options
     OUTPUTFORMAT
         NAME "GEOTIFF"
@@ -62,11 +66,6 @@ MAP
         STATUS OFF
     END
 
-    # set defaults for GetLegendGraphic requests 
-    LEGEND
-      KEYSIZE 154 297
-    END
-
     LAYER
       NAME "TRMM_3B42_V6_10_DAY"
       TYPE RASTER
@@ -76,6 +75,11 @@ MAP
       PROJECTION
        "init=epsg:4326"
       END
+	  CLASS
+	    NAME       "foobar"
+            #EXPRESSION "-999999"
+	    KEYIMAGE "cmapicons/trmm-3B.png"
+	  END
       METADATA
         "wms_srs"             "EPSG:4326"
         "wms_name"            "TRMM_3B42_V6_10_DAY"

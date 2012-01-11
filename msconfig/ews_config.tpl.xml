@@ -824,7 +824,15 @@
 
 	<wmsGroup name="US_Climate" label="Other Weather and Climate" >
 	 <wmsSubgroup label="Weather">
-      <wmsLayer visible="false" url="http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?#38;#38;TRANSPARENT=true" srs="EPSG:900913" layers="TRMM_3B42_V6_10_DAY" styles="default" identify="true" name="TRMM_3B42_V6_10_DAY" legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=TRMM_3B42_V6_10_DAY&VERSION=1.1.1&FORMAT=image/png"/>
+      <wmsLayer
+	 visible="false"
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="TRMM_3B42_V6_10_DAY"
+	 styles="default"
+	 identify="true"
+	 name="TRMM_3B42_V6_10_DAY"
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/trmm-3B.png"/>
      </wmsSubgroup>
 	 <wmsSubgroup label="Climate">
       <wmsLayer visible="false" url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" srs="EPSG:3785" layers="precip-1971-2000" styles="default" identify="true" name="Avg Annual Precipitation (PRISM)" legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=precip-1971-2000&VERSION=1.1.1&FORMAT=image/png"/>
