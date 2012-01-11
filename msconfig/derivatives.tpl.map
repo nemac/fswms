@@ -162,15 +162,13 @@ MAP
     END # end LAYER
 	LAYER
         NAME     peakyness-2009
+        INCLUDE  "cmaps/2009peakyness.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
         DATA     /flood/MODIS/CONUS_Phenology_Derivatives/peakyness/2009peakyness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-       
-		#INCLUDE "ndvi.cmap"
-
         PROJECTION
           "+proj=laea"
           "+lat_0=45"

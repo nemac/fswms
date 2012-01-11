@@ -5,6 +5,7 @@ import os, re
 #basedir = '/flood/MODIS/CONUS_Phenological_Parameters2'
 
 files = [
+    #MODIS Phenological Parameters
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_value_right.img',    'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_value_right.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_value_right.img',       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
@@ -116,7 +117,14 @@ files = [
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2003/14_2003_phen_season_min_position_right.img',                'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2003/15_2003_phen_season_min_value_left.img',                    'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2003/16_2003_phen_season_min_value_right.img',                   'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
-    { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2003/17_2003_phen_small_integral.img',                           'minColor' : '0,0,0',  'maxColor' : '255,255,255'}
+    { 'path' : '/flood/MODIS/CONUS_Phenological_Parameters2/2003/17_2003_phen_small_integral.img',                           'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
+    #Climate and Weather
+    { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMAX_NORMAL_1970_2000.img',                           'minColor' : '255,255,0',  'maxColor' : '255,0,0' },
+    { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMIN_NORMAL_1970_2000.img',                           'minColor' : '255,255,255',  'maxColor' : '160,32,240' },
+    #Physiographic Maps
+    { 'path' : '/flood/MODIS/CONUS_Elevation/hillshade_231m.img',                                                            'minColor' : '0,0,0',  'maxColor' : '255,255,255' }, 
+    #MODIS Phenology derived products
+    { 'path' : '/flood/MODIS/CONUS_Phenology_Derivatives/peakyness/2009peakyness.img',                                       'minColor' : '165,42,42',  'maxColor' : '0,100,0' }     
     ];
 
 def system(cmd):
