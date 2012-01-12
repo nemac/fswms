@@ -100,7 +100,12 @@ MAP
         DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-		
+        CLASS
+          NAME       "large-integral-2009"
+          EXPRESSION "-999999"
+          KEYIMAGE   "cmapicons/mcd13tqk_a2009_phenparams_large_integral.png"
+        END			
+        
         INCLUDE "cmaps/mcd13tqk_a2009_phenparams_season_20pct_position_left.cmap"
 
         PROJECTION

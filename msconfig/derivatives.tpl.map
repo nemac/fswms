@@ -162,6 +162,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     peakyness-2009
+        INCLUDE "cmaps/2009peakyness.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -236,6 +237,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-fall-2009
+        INCLUDE "cmaps/2009slope_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -263,6 +265,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-spring-2009
+        INCLUDE "cmaps/2009slope_spring.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -344,6 +347,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     mean-xy-2009
+        INCLUDE "cmaps/2009_xy_color_composite.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -506,6 +510,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     peakyness-2008
+        INCLUDE "cmaps/08peakyness.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -583,6 +588,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-fall-2008
+        INCLUDE "cmaps/2008slope_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -610,6 +616,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-spring-2008
+        INCLUDE "cmaps/2008slope_spring.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -691,6 +698,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     mean-xy-2008
+        INCLUDE "cmaps/2008_mean_xy_comp.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -853,6 +861,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     peakyness-2007
+        INCLUDE "cmaps/07peakyness.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -930,6 +939,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-fall-2007
+        INCLUDE "cmaps/2007slope_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -957,6 +967,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-spring-2007
+        INCLUDE "cmaps/2007slope_spring.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1038,6 +1049,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     mean-xy-2007
+        INCLUDE "cmaps/2007_mean_xy_comp.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1200,6 +1212,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     peakyness-2006
+        INCLUDE "cmaps/06peakyness.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1277,6 +1290,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-fall-2006
+        INCLUDE "cmaps/2006slope_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1304,6 +1318,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-spring-2006
+        INCLUDE "cmaps/2006slope_spring.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1385,6 +1400,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     mean-xy-2006
+        INCLUDE "cmaps/2006_mean_xy_comp.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1547,6 +1563,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     peakyness-2005
+        INCLUDE "cmaps/05peakyness.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1624,6 +1641,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-fall-2005
+        INCLUDE "cmaps/2005slope_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1651,6 +1669,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-spring-2005
+        INCLUDE "cmaps/2005slope_spring.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1732,6 +1751,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     mean-xy-2005
+        INCLUDE "cmaps/2005_mean_xy_comp.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1894,6 +1914,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     peakyness-2004
+        INCLUDE "cmaps/04peakyness.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1971,6 +1992,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-fall-2004
+        INCLUDE "cmaps/2004slope_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1998,6 +2020,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-spring-2004
+        INCLUDE "cmaps/2004slope_spring.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -2079,6 +2102,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     mean-xy-2004
+        INCLUDE "cmaps/2004_mean_xy_comp.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -2241,6 +2265,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     peakyness-2003
+        INCLUDE "cmaps/03peakyness.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -2318,6 +2343,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-fall-2003
+        INCLUDE "cmaps/2003slope_fall.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -2345,6 +2371,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     slope-spring-2003
+        INCLUDE "cmaps/2003slope_spring.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -2426,6 +2453,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     mean-xy-2003
+        INCLUDE "cmaps/2003_mean_xy_comp.cmap"
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
