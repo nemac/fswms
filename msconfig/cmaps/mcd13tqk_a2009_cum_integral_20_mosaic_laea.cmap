@@ -1,0 +1,132 @@
+CLASS
+	EXPRESSION ([pixel] > 1 AND [pixel] <= 58) 
+	COLOR 	0	0	0
+END
+CLASS
+	EXPRESSION ([pixel] > 58 AND [pixel] <= 115) 
+	COLOR 	8	8	8
+END
+CLASS
+	EXPRESSION ([pixel] > 115 AND [pixel] <= 173) 
+	COLOR 	16	16	16
+END
+CLASS
+	EXPRESSION ([pixel] > 173 AND [pixel] <= 230) 
+	COLOR 	24	24	24
+END
+CLASS
+	EXPRESSION ([pixel] > 230 AND [pixel] <= 288) 
+	COLOR 	32	32	32
+END
+CLASS
+	EXPRESSION ([pixel] > 288 AND [pixel] <= 345) 
+	COLOR 	40	40	40
+END
+CLASS
+	EXPRESSION ([pixel] > 345 AND [pixel] <= 402) 
+	COLOR 	48	48	48
+END
+CLASS
+	EXPRESSION ([pixel] > 402 AND [pixel] <= 460) 
+	COLOR 	56	56	56
+END
+CLASS
+	EXPRESSION ([pixel] > 460 AND [pixel] <= 517) 
+	COLOR 	64	64	64
+END
+CLASS
+	EXPRESSION ([pixel] > 517 AND [pixel] <= 575) 
+	COLOR 	72	72	72
+END
+CLASS
+	EXPRESSION ([pixel] > 575 AND [pixel] <= 632) 
+	COLOR 	80	80	80
+END
+CLASS
+	EXPRESSION ([pixel] > 632 AND [pixel] <= 689) 
+	COLOR 	88	88	88
+END
+CLASS
+	EXPRESSION ([pixel] > 689 AND [pixel] <= 747) 
+	COLOR 	96	96	96
+END
+CLASS
+	EXPRESSION ([pixel] > 747 AND [pixel] <= 804) 
+	COLOR 	104	104	104
+END
+CLASS
+	EXPRESSION ([pixel] > 804 AND [pixel] <= 862) 
+	COLOR 	112	112	112
+END
+CLASS
+	EXPRESSION ([pixel] > 862 AND [pixel] <= 919) 
+	COLOR 	120	120	120
+END
+CLASS
+	EXPRESSION ([pixel] > 919 AND [pixel] <= 976) 
+	COLOR 	127	127	127
+END
+CLASS
+	EXPRESSION ([pixel] > 976 AND [pixel] <= 1034) 
+	COLOR 	135	135	135
+END
+CLASS
+	EXPRESSION ([pixel] > 1034 AND [pixel] <= 1091) 
+	COLOR 	143	143	143
+END
+CLASS
+	EXPRESSION ([pixel] > 1091 AND [pixel] <= 1149) 
+	COLOR 	151	151	151
+END
+CLASS
+	EXPRESSION ([pixel] > 1149 AND [pixel] <= 1206) 
+	COLOR 	159	159	159
+END
+CLASS
+	EXPRESSION ([pixel] > 1206 AND [pixel] <= 1263) 
+	COLOR 	167	167	167
+END
+CLASS
+	EXPRESSION ([pixel] > 1263 AND [pixel] <= 1321) 
+	COLOR 	175	175	175
+END
+CLASS
+	EXPRESSION ([pixel] > 1321 AND [pixel] <= 1378) 
+	COLOR 	183	183	183
+END
+CLASS
+	EXPRESSION ([pixel] > 1378 AND [pixel] <= 1436) 
+	COLOR 	191	191	191
+END
+CLASS
+	EXPRESSION ([pixel] > 1436 AND [pixel] <= 1493) 
+	COLOR 	199	199	199
+END
+CLASS
+	EXPRESSION ([pixel] > 1493 AND [pixel] <= 1550) 
+	COLOR 	207	207	207
+END
+CLASS
+	EXPRESSION ([pixel] > 1550 AND [pixel] <= 1608) 
+	COLOR 	215	215	215
+END
+CLASS
+	EXPRESSION ([pixel] > 1608 AND [pixel] <= 1665) 
+	COLOR 	223	223	223
+END
+CLASS
+	EXPRESSION ([pixel] > 1665 AND [pixel] <= 1723) 
+	COLOR 	231	231	231
+END
+CLASS
+	EXPRESSION ([pixel] > 1723 AND [pixel] <= 1780) 
+	COLOR 	239	239	239
+END
+CLASS
+	EXPRESSION ([pixel] > 1780 AND [pixel] <= 1838) 
+	COLOR 	247	247	247
+END
+CLASS
+	EXPRESSION ([pixel] > 1838 AND [pixel] <= 1895) 
+	COLOR 	255	255	255
+END

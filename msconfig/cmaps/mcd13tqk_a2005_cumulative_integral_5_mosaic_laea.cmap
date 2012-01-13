@@ -1,0 +1,132 @@
+CLASS
+	EXPRESSION ([pixel] > 1 AND [pixel] <= 15) 
+	COLOR 	0	0	0
+END
+CLASS
+	EXPRESSION ([pixel] > 15 AND [pixel] <= 30) 
+	COLOR 	8	8	8
+END
+CLASS
+	EXPRESSION ([pixel] > 30 AND [pixel] <= 45) 
+	COLOR 	16	16	16
+END
+CLASS
+	EXPRESSION ([pixel] > 45 AND [pixel] <= 60) 
+	COLOR 	24	24	24
+END
+CLASS
+	EXPRESSION ([pixel] > 60 AND [pixel] <= 75) 
+	COLOR 	32	32	32
+END
+CLASS
+	EXPRESSION ([pixel] > 75 AND [pixel] <= 89) 
+	COLOR 	40	40	40
+END
+CLASS
+	EXPRESSION ([pixel] > 89 AND [pixel] <= 104) 
+	COLOR 	48	48	48
+END
+CLASS
+	EXPRESSION ([pixel] > 104 AND [pixel] <= 119) 
+	COLOR 	56	56	56
+END
+CLASS
+	EXPRESSION ([pixel] > 119 AND [pixel] <= 134) 
+	COLOR 	64	64	64
+END
+CLASS
+	EXPRESSION ([pixel] > 134 AND [pixel] <= 149) 
+	COLOR 	72	72	72
+END
+CLASS
+	EXPRESSION ([pixel] > 149 AND [pixel] <= 163) 
+	COLOR 	80	80	80
+END
+CLASS
+	EXPRESSION ([pixel] > 163 AND [pixel] <= 178) 
+	COLOR 	88	88	88
+END
+CLASS
+	EXPRESSION ([pixel] > 178 AND [pixel] <= 193) 
+	COLOR 	96	96	96
+END
+CLASS
+	EXPRESSION ([pixel] > 193 AND [pixel] <= 208) 
+	COLOR 	104	104	104
+END
+CLASS
+	EXPRESSION ([pixel] > 208 AND [pixel] <= 223) 
+	COLOR 	112	112	112
+END
+CLASS
+	EXPRESSION ([pixel] > 223 AND [pixel] <= 238) 
+	COLOR 	120	120	120
+END
+CLASS
+	EXPRESSION ([pixel] > 238 AND [pixel] <= 252) 
+	COLOR 	128	128	128
+END
+CLASS
+	EXPRESSION ([pixel] > 252 AND [pixel] <= 267) 
+	COLOR 	135	135	135
+END
+CLASS
+	EXPRESSION ([pixel] > 267 AND [pixel] <= 282) 
+	COLOR 	143	143	143
+END
+CLASS
+	EXPRESSION ([pixel] > 282 AND [pixel] <= 297) 
+	COLOR 	151	151	151
+END
+CLASS
+	EXPRESSION ([pixel] > 297 AND [pixel] <= 312) 
+	COLOR 	159	159	159
+END
+CLASS
+	EXPRESSION ([pixel] > 312 AND [pixel] <= 326) 
+	COLOR 	167	167	167
+END
+CLASS
+	EXPRESSION ([pixel] > 326 AND [pixel] <= 341) 
+	COLOR 	175	175	175
+END
+CLASS
+	EXPRESSION ([pixel] > 341 AND [pixel] <= 356) 
+	COLOR 	183	183	183
+END
+CLASS
+	EXPRESSION ([pixel] > 356 AND [pixel] <= 371) 
+	COLOR 	191	191	191
+END
+CLASS
+	EXPRESSION ([pixel] > 371 AND [pixel] <= 386) 
+	COLOR 	199	199	199
+END
+CLASS
+	EXPRESSION ([pixel] > 386 AND [pixel] <= 400) 
+	COLOR 	207	207	207
+END
+CLASS
+	EXPRESSION ([pixel] > 400 AND [pixel] <= 415) 
+	COLOR 	215	215	215
+END
+CLASS
+	EXPRESSION ([pixel] > 415 AND [pixel] <= 430) 
+	COLOR 	223	223	223
+END
+CLASS
+	EXPRESSION ([pixel] > 430 AND [pixel] <= 445) 
+	COLOR 	231	231	231
+END
+CLASS
+	EXPRESSION ([pixel] > 445 AND [pixel] <= 460) 
+	COLOR 	239	239	239
+END
+CLASS
+	EXPRESSION ([pixel] > 460 AND [pixel] <= 475) 
+	COLOR 	247	247	247
+END
+CLASS
+	EXPRESSION ([pixel] > 475 AND [pixel] <= 489) 
+	COLOR 	255	255	255
+END

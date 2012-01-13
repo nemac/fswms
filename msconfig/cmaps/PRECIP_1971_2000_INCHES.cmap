@@ -1,0 +1,132 @@
+CLASS
+	EXPRESSION ([pixel] > 0 AND [pixel] <= 8) 
+	COLOR 	255	255	0
+END
+CLASS
+	EXPRESSION ([pixel] > 8 AND [pixel] <= 17) 
+	COLOR 	255	247	0
+END
+CLASS
+	EXPRESSION ([pixel] > 17 AND [pixel] <= 26) 
+	COLOR 	255	239	0
+END
+CLASS
+	EXPRESSION ([pixel] > 26 AND [pixel] <= 35) 
+	COLOR 	255	231	0
+END
+CLASS
+	EXPRESSION ([pixel] > 35 AND [pixel] <= 44) 
+	COLOR 	255	223	0
+END
+CLASS
+	EXPRESSION ([pixel] > 44 AND [pixel] <= 52) 
+	COLOR 	255	215	0
+END
+CLASS
+	EXPRESSION ([pixel] > 52 AND [pixel] <= 61) 
+	COLOR 	255	207	0
+END
+CLASS
+	EXPRESSION ([pixel] > 61 AND [pixel] <= 70) 
+	COLOR 	255	199	0
+END
+CLASS
+	EXPRESSION ([pixel] > 70 AND [pixel] <= 79) 
+	COLOR 	255	191	0
+END
+CLASS
+	EXPRESSION ([pixel] > 79 AND [pixel] <= 88) 
+	COLOR 	255	183	0
+END
+CLASS
+	EXPRESSION ([pixel] > 88 AND [pixel] <= 97) 
+	COLOR 	255	175	0
+END
+CLASS
+	EXPRESSION ([pixel] > 97 AND [pixel] <= 105) 
+	COLOR 	255	167	0
+END
+CLASS
+	EXPRESSION ([pixel] > 105 AND [pixel] <= 114) 
+	COLOR 	255	159	0
+END
+CLASS
+	EXPRESSION ([pixel] > 114 AND [pixel] <= 123) 
+	COLOR 	255	151	0
+END
+CLASS
+	EXPRESSION ([pixel] > 123 AND [pixel] <= 132) 
+	COLOR 	255	143	0
+END
+CLASS
+	EXPRESSION ([pixel] > 132 AND [pixel] <= 141) 
+	COLOR 	255	135	0
+END
+CLASS
+	EXPRESSION ([pixel] > 141 AND [pixel] <= 150) 
+	COLOR 	255	127	0
+END
+CLASS
+	EXPRESSION ([pixel] > 150 AND [pixel] <= 158) 
+	COLOR 	255	120	0
+END
+CLASS
+	EXPRESSION ([pixel] > 158 AND [pixel] <= 167) 
+	COLOR 	255	112	0
+END
+CLASS
+	EXPRESSION ([pixel] > 167 AND [pixel] <= 176) 
+	COLOR 	255	104	0
+END
+CLASS
+	EXPRESSION ([pixel] > 176 AND [pixel] <= 185) 
+	COLOR 	255	96	0
+END
+CLASS
+	EXPRESSION ([pixel] > 185 AND [pixel] <= 194) 
+	COLOR 	255	88	0
+END
+CLASS
+	EXPRESSION ([pixel] > 194 AND [pixel] <= 203) 
+	COLOR 	255	80	0
+END
+CLASS
+	EXPRESSION ([pixel] > 203 AND [pixel] <= 211) 
+	COLOR 	255	72	0
+END
+CLASS
+	EXPRESSION ([pixel] > 211 AND [pixel] <= 220) 
+	COLOR 	255	64	0
+END
+CLASS
+	EXPRESSION ([pixel] > 220 AND [pixel] <= 229) 
+	COLOR 	255	56	0
+END
+CLASS
+	EXPRESSION ([pixel] > 229 AND [pixel] <= 238) 
+	COLOR 	255	48	0
+END
+CLASS
+	EXPRESSION ([pixel] > 238 AND [pixel] <= 247) 
+	COLOR 	255	40	0
+END
+CLASS
+	EXPRESSION ([pixel] > 247 AND [pixel] <= 256) 
+	COLOR 	255	32	0
+END
+CLASS
+	EXPRESSION ([pixel] > 256 AND [pixel] <= 264) 
+	COLOR 	255	24	0
+END
+CLASS
+	EXPRESSION ([pixel] > 264 AND [pixel] <= 273) 
+	COLOR 	255	16	0
+END
+CLASS
+	EXPRESSION ([pixel] > 273 AND [pixel] <= 282) 
+	COLOR 	255	8	0
+END
+CLASS
+	EXPRESSION ([pixel] > 282 AND [pixel] <= 291) 
+	COLOR 	255	0	0
+END
