@@ -45,8 +45,6 @@ else:
    ds = gdal.Open(opts.RASTERFILE, gdal.GA_ReadOnly)
    MIN = ds.GetRasterBand(1).GetMinimum()
    MAX = ds.GetRasterBand(1).GetMaximum()
-
-
    
 if opts.rgbMin is None:
    print "A mandatory param rgbMin e.g 0,10,100 is missing\n"

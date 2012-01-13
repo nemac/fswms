@@ -93,6 +93,23 @@ for subgroup in [
             { 'name' : 'RSAC-FHTET_current',                    'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_previous1',                  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_previous2',                  'visible' : 'false' } ] }
+### 
+### Hey Matt:
+###    The following RSAC layers are now available to be added, whenever you're ready!:
+###       RSAC-FHTET_3YrBaseline_previous2
+###       RSAC-FHTET_3YrBaseline_previous1
+###       RSAC-FHTET_3YrBaseline_current
+###       RSAC-FHTET_5YrBaselineBD_previous1
+###       RSAC-FHTET_5YrBaselineBD_current
+###       RSAC-FHTET_5YrBaselineBD_previous2
+###       RSAC-FHTET_3YrBaselineBD_previous2
+###       RSAC-FHTET_3YrBaselineBD_previous1
+###       RSAC-FHTET_3YrBaselineBD_current
+###       RSAC-FHTET_5YrBaseline_current
+###       RSAC-FHTET_5YrBaseline_previous2
+###       RSAC-FHTET_5YrBaseline_previous1
+###   --Mark
+### 
     ]:
     rsacModisChangeDetectionProductLayers = ( rsacModisChangeDetectionProductLayers +
         '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )

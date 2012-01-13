@@ -68,7 +68,7 @@ MAP
     END
 
     LAYER
-        NAME srtm-dem-231m
+        NAME     srtm-dem-231m
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -96,7 +96,7 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME srtm-aspect-231m
+        NAME     srtm-aspect-231m
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -124,7 +124,7 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME srtm-hillshade-231m
+        NAME     srtm-hillshade-231m
         INCLUDE "cmaps/hillshade_231m.cmap"
         PROJECTION
           "+proj=laea"
@@ -153,7 +153,7 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME forest-group
+        NAME     forest-group
         INCLUDE "cmaps/CONUS_FORESTGROUP.cmap"
         PROJECTION
 	      "proj=aea"
@@ -181,7 +181,7 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME forest-type
+        NAME     forest-type
         INCLUDE "cmaps/foresttype.cmap"        
         PROJECTION
 	      "proj=aea"
@@ -209,7 +209,7 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME forest-biomass
+        NAME     forest-biomass
         INCLUDE "cmaps/CONUS_FOREST_BIOMASS.cmap"
         PROJECTION
 	      "proj=aea"
@@ -237,7 +237,7 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME precip-1971-2000
+        NAME     precip-1971-2000
         INCLUDE "cmaps/PRECIP_1971_2000_INCHES.cmap"
         PROJECTION
 	      "proj=longlat"
@@ -258,7 +258,7 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME temp-max-1971-2000
+        NAME     temp-max-1971-2000
         INCLUDE "cmaps/PRISM_TMAX_NORMAL_1970_2000.cmap"
         PROJECTION
 	      "proj=longlat"
@@ -279,7 +279,7 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME temp-min-1971-2000
+        NAME     temp-min-1971-2000
         INCLUDE "cmaps/PRISM_TMIN_NORMAL_1970_2000.cmap"
         PROJECTION
 	      "proj=longlat"
