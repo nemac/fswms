@@ -39,6 +39,7 @@ except:
 
 wmsLayerTemplate = Template(string="""
         <wmsLayer
+          lid="%(LAYER_LID)s"
           visible="%(LAYER_VISIBLE)s"
           url="%(SERVER_URL)s/ews?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -53,33 +54,34 @@ tacsModisChangeDetectionProductLayers = ""
 for subgroup in [
     { 'label' : '   Disturbances Since 2003 - 8-Year Baseline',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_current',                   'visible' : 'true'  },
-            { 'name' : 'EFETAC-NASA_previous1',                 'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_previous2',                 'visible' : 'false' } ] },
+            { 'name' : 'EFETAC-NASA_current',                   'lid' : 'AA',  'visible' : 'true'  },
+            { 'name' : 'EFETAC-NASA_previous1',                 'lid' : 'AB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_previous2',                 'lid' : 'AC',  'visible' : 'false' } ] },
 
     { 'label' : '   Disturbances Since 2010 - 1-Year Baseline',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_1YrBaseline_current',       'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_1YrBaseline_previous1',     'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_1YrBaseline_previous2',     'visible' : 'false' } ] },
+            { 'name' : 'EFETAC-NASA_1YrBaseline_current',       'lid' : 'AD',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_1YrBaseline_previous1',     'lid' : 'AE',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_1YrBaseline_previous2',     'lid' : 'AF',  'visible' : 'false' } ] },
 
     { 'label' : '   Disturbances Since 2008 - 3-Year Baseline',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_3YrBaseline_current',       'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_3YrBaseline_previous1',     'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'visible' : 'false' } ] },
+            { 'name' : 'EFETAC-NASA_3YrBaseline_current',       'lid' : 'AG',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_3YrBaseline_previous1',     'lid' : 'AH',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'lid' : 'AI',  'visible' : 'false' } ] },
 
     { 'label' : '   Disturbances Since 2003 - 8-Year Baseline',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_AllYrBaseline_current',     'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_AllYrBaseline_previous1',   'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_AllYrBaseline_previous2',   'visible' : 'false' } ] }
+            { 'name' : 'EFETAC-NASA_AllYrBaseline_current',     'lid' : 'AJ',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_AllYrBaseline_previous1',   'lid' : 'AK',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_AllYrBaseline_previous2',   'lid' : 'AL',  'visible' : 'false' } ] }
     ]:
     tacsModisChangeDetectionProductLayers = ( tacsModisChangeDetectionProductLayers +
         '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
     for layer in subgroup['layers']:
         tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + wmsLayerTemplate.render({
                 'SERVER_URL'    : SERVER_URL,
+                'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
                 'LAYER_VISIBLE' : layer['visible'],
                 'LAYER_TITLE'   : layerTitles[layer['name']]
@@ -90,9 +92,9 @@ rsacModisChangeDetectionProductLayers = ""
 for subgroup in [    
     { 'label' : '   Disturbances Since 2008 - 3-Year Baseline',
       'layers' : [
-            { 'name' : 'RSAC-FHTET_current',                    'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_previous1',                  'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_previous2',                  'visible' : 'false' } ] }
+            { 'name' : 'RSAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
+            { 'name' : 'RSAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },
+            { 'name' : 'RSAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] }
 ### 
 ### Hey Matt:
 ###    The following RSAC layers are now available to be added, whenever you're ready!:
@@ -116,6 +118,7 @@ for subgroup in [
     for layer in subgroup['layers']:
         rsacModisChangeDetectionProductLayers = rsacModisChangeDetectionProductLayers + wmsLayerTemplate.render({
                 'SERVER_URL'    : SERVER_URL,
+                'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
                 'LAYER_VISIBLE' : layer['visible'],
                 'LAYER_TITLE'   : layerTitles[layer['name']]
