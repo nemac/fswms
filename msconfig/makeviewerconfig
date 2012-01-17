@@ -31,7 +31,7 @@ try:
     layerTitles = {}
     for line in f:
         fields = re.split(r':', line.strip())
-        layerTitles[fields[0]] = fields[1]
+        layerTitles[fields[0]] = re.sub(r'^.*/([^/]+)$', '\\1', fields[1])
     f.close()
 except:
     print "Can't read file layerTitles.txt; you must run 'makemap' before running this script!"
@@ -94,7 +94,13 @@ for subgroup in [
       'layers' : [
             { 'name' : 'RSAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] }
+            { 'name' : 'RSAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] },
+			
+			{ 'label' : '   Disturbances Since 2008 - 5-Year Baseline',
+      'layers' : [
+            { 'name' : 'RSAC-FHTET_5YrBaseline_current',        'lid' : 'AQ',  'visible' : 'false' },
+            { 'name' : 'RSAC-FHTET_5YrBaseline_previous1',      'lid' : 'AR',  'visible' : 'false' },
+            { 'name' : 'RSAC-FHTET_5YrBaseline_previous2',      'lid' : 'AS',  'visible' : 'false' } ] }
 ### 
 ### Hey Matt:
 ###    The following RSAC layers are now available to be added, whenever you're ready!:

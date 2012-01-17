@@ -2298,7 +2298,7 @@
        visible="false" 
        url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120103_wms.map&#38;#38;TRANSPARENT=true" 
        srs="EPSG:900913" 
-       layers="usdm110920" 
+       layers="usdm120103" 
        styles="default"
        
        identify="false" 
@@ -2309,7 +2309,7 @@
        visible="false" 
        url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111227_wms.map&#38;#38;TRANSPARENT=true" 
        srs="EPSG:900913" 
-       layers="usdm110913" 
+       layers="usdm111227" 
        styles="default"
        
        identify="false" 
@@ -2320,7 +2320,7 @@
        visible="false" 
        url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111220_wms.map&#38;#38;TRANSPARENT=true" 
        srs="EPSG:900913" 
-       layers="usdm110906" 
+       layers="usdm111220" 
        styles="default"
        
        identify="false" 
