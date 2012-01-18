@@ -330,10 +330,10 @@ files = [
       'minColor' : '255,255,0',  'maxColor' : '255,0,0' },
     { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMAX_NORMAL_1970_2000.img',
       'layerName' : 'temp-max-1971-2000',
-      'minColor' : '255,0,0',  'maxColor' : '255,255,0' },
+      'minColor' : '245,241,0',  'maxColor' : '245,16,0' },
     { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMIN_NORMAL_1970_2000.img',
       'layerName' : 'temp-min-1971-2000',
-      'minColor' : '160,32,240',  'maxColor' : '255,255,255' },
+      'minColor' : '204,204,255',  'maxColor' : '0,0,255' },
     #Physiographic Maps
     { 'path' : '/flood/MODIS/CONUS_Elevation/hillshade_231m.img',
       'layerName' : 'srtm-hillshade-231m',
