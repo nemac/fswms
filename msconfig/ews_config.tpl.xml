@@ -2292,7 +2292,7 @@
        
        identify="false" 
        name="Current Drought Monitor" 
-       legend="$(VIEWER_DEPLOY_DIR_URL)s/../msconfig/cmapicons/drought-monitor.png" />
+       legend="%(SERVER_URL)s/../msconfig/cmapicons/drought-monitor.png" />
     <wmsLayer 
        lid="AIA"
        visible="false" 
@@ -2303,7 +2303,7 @@
        
        identify="false" 
        name="01/03/2012 Drought Monitor" 
-       legend="$(VIEWER_DEPLOY_DIR_URL)s/../msconfig/cmapicons/drought-monitor.png" />
+       legend="%(SERVER_URL)s/../msconfig/cmapicons/drought-monitor.png" />
     <wmsLayer 
        lid="AIB"
        visible="false" 
@@ -2314,7 +2314,7 @@
        
        identify="false" 
        name="12/27/2011 Drought Monitor" 
-       legend="$(VIEWER_DEPLOY_DIR_URL)s/../msconfig/cmapicons/drought-monitor.png" />
+       legend="%(SERVER_URL)s/../msconfig/cmapicons/drought-monitor.png" />
     <wmsLayer 
        lid="AIC"
        visible="false" 
@@ -2325,7 +2325,7 @@
        
        identify="false" 
        name="12/20/2011 Drought Monitor" 
-       legend="$(VIEWER_DEPLOY_DIR_URL)s/../msconfig/cmapicons/drought-monitor.png" />
+       legend="%(SERVER_URL)s/../msconfig/cmapicons/drought-monitor.png" />
   </wmsGroup>
 
   <wmsGroup name="US_Climate" label="Other Weather and Climate" >
