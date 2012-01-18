@@ -238,7 +238,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     precip-1971-2000
-        INCLUDE "cmaps/PRECIP_1971_2000_INCHES.cmap"
+        INCLUDE "cmaps/custom-PRECIP_1971_2000_INCHES.cmap"
         PROJECTION
 	      "proj=longlat"
 	      "ellps=WGS84"

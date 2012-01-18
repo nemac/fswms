@@ -2345,7 +2345,7 @@
 	 
 	 identify="true"
 	 
-	 name="TRMM_3B42_V6_10_DAY"
+	 name="TRMM 3B42 V6 10 DAY"
 	 
 	 legend="%(SERVER_URL)s/../msconfig/cmapicons/trmm-3B.png"/>
       <wmsLayer 
@@ -2362,7 +2362,7 @@
 	 styles="default" 
 	 identify="true" 
 	 
-	 name="TRMM_3B43_V6_ACCUM" 
+	 name="TRMM 3B43 V6 ACCUM" 
 	 
 	 legend="%(SERVER_URL)s/../msconfig/cmapicons/trmm-accum.png"/>
     </wmsSubgroup>
@@ -2376,7 +2376,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Avg Annual Precipitation (PRISM)" 
-	 legend="%(SERVER_URL)s/../msconfig/cmapicons/precip-1971-2000.png"/>
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/PRECIP.png"/>
       <wmsLayer 
 	 lid="AIG"
 	 visible="false" 
@@ -2386,7 +2386,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Avg Max Temperature (PRISM)" 
-	 legend="%(SERVER_URL)s/../msconfig/cmapicons/temp-max-1971-2000.png"/>
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/TMAX.png"/>
       <wmsLayer 
 	 lid="AIH"
 	 visible="false" 
@@ -2396,7 +2396,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Avg Min Temperature (PRISM)" 
-	 legend="%(SERVER_URL)s/../msconfig/cmapicons/temp-min-1971-2000.png"/>
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/TMIN.png"/>
     </wmsSubgroup>
   </wmsGroup>
   
