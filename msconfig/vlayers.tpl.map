@@ -260,6 +260,46 @@ MAP
         END  # end METADATA
     END # end Layer
 
+	LAYER #
+        NAME mtbs_2009
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from conus_fireperims_2009"
+        #FILTER           "year = 2008"
+
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "MTBS Fire 2009"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "mtbs_2009"
+            "wms_abstract"       "mtbs_2009"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	
     LAYER #
         NAME mtbs_2008
         
@@ -1607,6 +1647,132 @@ MAP
         METADATA
             "wms_title"          "ecoregions_omernik"
             "wms_abstract"       "ecoregions_omernik"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
+        NAME hailswaths
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from hailswaths"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Hail Swaths"
+            STYLE
+                COLOR        0 100 0
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"          "hailswaths"
+            "wms_abstract"       "hailswaths"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
+        NAME tornado-tracks
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from tornadoes"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Tornado Tracks"
+            STYLE
+                COLOR        255 0 0
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"          "tornado-tracks"
+            "wms_abstract"       "tornado-tracks"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
+        NAME neondomains
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from neondomains"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Neon Domains"
+            STYLE
+				OUTLINECOLOR 32 32 32
+            END
+        END
+        METADATA
+            "wms_title"          "neondomains"
+            "wms_abstract"       "neondomains"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
+        NAME fws-lcc
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from fws_lcc"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "FWS LCC"
+            STYLE
+				OUTLINECOLOR 32 32 32
+            END
+        END
+        METADATA
+            "wms_title"          "fws-lcc"
+            "wms_abstract"       "fws-lcc"
             "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
