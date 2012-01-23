@@ -1,132 +1,614 @@
 CLASS
-	EXPRESSION ([pixel] > 0 AND [pixel] <= 31) 
-	COLOR 	152	251	152
+	NAME "Jack Pine"
+	EXPRESSION ([pixel] >= 101 and [pixel] <  102)
+	COLOR 	6	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 31 AND [pixel] <= 62) 
-	COLOR 	155	251	155
+	NAME "Red Pine"
+	EXPRESSION ([pixel] >= 102 and [pixel] <  103)
+	COLOR 	11	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 62 AND [pixel] <= 93) 
-	COLOR 	158	251	158
+	NAME "Eastern White Pine"
+	EXPRESSION ([pixel] >= 103 and [pixel] <  104)
+	COLOR 	16	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 93 AND [pixel] <= 124) 
-	COLOR 	162	251	162
+	NAME "Eastern White Pine/Eastern Hemlo"
+	EXPRESSION ([pixel] >= 104 and [pixel] <  105)
+	COLOR 	21	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 124 AND [pixel] <= 155) 
-	COLOR 	165	252	165
+	NAME "Eastern Hemlock"
+	EXPRESSION ([pixel] >= 105 and [pixel] <  121)
+	COLOR 	26	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 155 AND [pixel] <= 186) 
-	COLOR 	168	252	168
+	NAME "Balsam Fir"
+	EXPRESSION ([pixel] >= 121 and [pixel] <  122)
+	COLOR 	31	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 186 AND [pixel] <= 217) 
-	COLOR 	171	252	171
+	NAME "White Spruce"
+	EXPRESSION ([pixel] >= 122 and [pixel] <  123)
+	COLOR 	36	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 217 AND [pixel] <= 248) 
-	COLOR 	175	252	175
+	NAME "Red Spruce"
+	EXPRESSION ([pixel] >= 123 and [pixel] <  124)
+	COLOR 	41	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 248 AND [pixel] <= 279) 
-	COLOR 	178	252	178
+	NAME "Red Spruce/Balsam Fir"
+	EXPRESSION ([pixel] >= 124 and [pixel] <  125)
+	COLOR 	46	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 279 AND [pixel] <= 310) 
-	COLOR 	181	252	181
+	NAME "Black Spruce"
+	EXPRESSION ([pixel] >= 125 and [pixel] <  126)
+	COLOR 	51	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 310 AND [pixel] <= 342) 
-	COLOR 	184	252	184
+	NAME "Tamarack"
+	EXPRESSION ([pixel] >= 126 and [pixel] <  127)
+	COLOR 	56	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 342 AND [pixel] <= 373) 
-	COLOR 	187	252	187
+	NAME "Northern White-cedar"
+	EXPRESSION ([pixel] >= 127 and [pixel] <  141)
+	COLOR 	61	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 373 AND [pixel] <= 404) 
-	COLOR 	191	253	191
+	NAME "Longleaf Pine"
+	EXPRESSION ([pixel] >= 141 and [pixel] <  142)
+	COLOR 	66	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 404 AND [pixel] <= 435) 
-	COLOR 	194	253	194
+	NAME "Slash Pine"
+	EXPRESSION ([pixel] >= 142 and [pixel] <  161)
+	COLOR 	71	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 435 AND [pixel] <= 466) 
-	COLOR 	197	253	197
+	NAME "Loblolly Pine"
+	EXPRESSION ([pixel] >= 161 and [pixel] <  162)
+	COLOR 	76	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 466 AND [pixel] <= 497) 
-	COLOR 	200	253	200
+	NAME "Shortleaf Pine"
+	EXPRESSION ([pixel] >= 162 and [pixel] <  163)
+	COLOR 	81	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 497 AND [pixel] <= 528) 
-	COLOR 	204	253	204
+	NAME "Virginia Pine"
+	EXPRESSION ([pixel] >= 163 and [pixel] <  164)
+	COLOR 	86	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 528 AND [pixel] <= 559) 
-	COLOR 	207	253	207
+	NAME "Sand Pine"
+	EXPRESSION ([pixel] >= 164 and [pixel] <  165)
+	COLOR 	91	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 559 AND [pixel] <= 590) 
-	COLOR 	210	253	210
+	NAME "Table-mountain Pine"
+	EXPRESSION ([pixel] >= 165 and [pixel] <  166)
+	COLOR 	96	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 590 AND [pixel] <= 621) 
-	COLOR 	213	253	213
+	NAME "Pond Pine"
+	EXPRESSION ([pixel] >= 166 and [pixel] <  167)
+	COLOR 	101	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 621 AND [pixel] <= 652) 
-	COLOR 	216	254	216
+	NAME "Pitch Pine"
+	EXPRESSION ([pixel] >= 167 and [pixel] <  168)
+	COLOR 	106	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 652 AND [pixel] <= 684) 
-	COLOR 	220	254	220
+	NAME "Spruce Pine"
+	EXPRESSION ([pixel] >= 168 and [pixel] <  181)
+	COLOR 	111	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 684 AND [pixel] <= 715) 
-	COLOR 	223	254	223
+	NAME "Eastern Redcedar"
+	EXPRESSION ([pixel] >= 181 and [pixel] <  182)
+	COLOR 	116	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 715 AND [pixel] <= 746) 
-	COLOR 	226	254	226
+	NAME "Rocky Mountain Juniper"
+	EXPRESSION ([pixel] >= 182 and [pixel] <  183)
+	COLOR 	121	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 746 AND [pixel] <= 777) 
-	COLOR 	229	254	229
+	NAME "Western Juniper"
+	EXPRESSION ([pixel] >= 183 and [pixel] <  184)
+	COLOR 	126	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 777 AND [pixel] <= 808) 
-	COLOR 	232	254	232
+	NAME "Juniper Woodland"
+	EXPRESSION ([pixel] >= 184 and [pixel] <  185)
+	COLOR 	131	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 808 AND [pixel] <= 839) 
-	COLOR 	236	254	236
+	NAME "Pinyon Juniper Woodland"
+	EXPRESSION ([pixel] >= 185 and [pixel] <  201)
+	COLOR 	136	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 839 AND [pixel] <= 870) 
-	COLOR 	239	254	239
+	NAME "Douglas-fir"
+	EXPRESSION ([pixel] >= 201 and [pixel] <  202)
+	COLOR 	141	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 870 AND [pixel] <= 901) 
-	COLOR 	242	255	242
+	NAME "Port-orford-cedar"
+	EXPRESSION ([pixel] >= 202 and [pixel] <  221)
+	COLOR 	146	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 901 AND [pixel] <= 932) 
-	COLOR 	245	255	245
+	NAME "Ponderosa Pine"
+	EXPRESSION ([pixel] >= 221 and [pixel] <  223)
+	COLOR 	151	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 932 AND [pixel] <= 963) 
-	COLOR 	249	255	249
+	NAME "Jeffrey Pine/Coulter Pine/Bigcon"
+	EXPRESSION ([pixel] >= 223 and [pixel] <  224)
+	COLOR 	156	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 963 AND [pixel] <= 995) 
-	COLOR 	252	255	252
+	NAME "Sugar Pine"
+	EXPRESSION ([pixel] >= 224 and [pixel] <  241)
+	COLOR 	161	0	0
 END
 CLASS
-	EXPRESSION ([pixel] > 995 AND [pixel] <= 1026) 
-	COLOR 	255	255	255
+	NAME "Western White Pine"
+	EXPRESSION ([pixel] >= 241 and [pixel] <  261)
+	COLOR 	166	0	0
+END
+CLASS
+	NAME "White Fir"
+	EXPRESSION ([pixel] >= 261 and [pixel] <  262)
+	COLOR 	171	0	0
+END
+CLASS
+	NAME "Red Fir"
+	EXPRESSION ([pixel] >= 262 and [pixel] <  263)
+	COLOR 	176	0	0
+END
+CLASS
+	NAME "Noble Fir"
+	EXPRESSION ([pixel] >= 263 and [pixel] <  264)
+	COLOR 	181	0	0
+END
+CLASS
+	NAME "Pacific Silver Fir"
+	EXPRESSION ([pixel] >= 264 and [pixel] <  265)
+	COLOR 	186	0	0
+END
+CLASS
+	NAME "Engelmann Spruce"
+	EXPRESSION ([pixel] >= 265 and [pixel] <  266)
+	COLOR 	191	0	0
+END
+CLASS
+	NAME "Engelmann Spruce/Subalpine Fir"
+	EXPRESSION ([pixel] >= 266 and [pixel] <  267)
+	COLOR 	196	0	0
+END
+CLASS
+	NAME "Grand Fir"
+	EXPRESSION ([pixel] >= 267 and [pixel] <  268)
+	COLOR 	201	0	0
+END
+CLASS
+	NAME "Subalpine Fir"
+	EXPRESSION ([pixel] >= 268 and [pixel] <  269)
+	COLOR 	206	0	0
+END
+CLASS
+	NAME "Blue Spruce"
+	EXPRESSION ([pixel] >= 269 and [pixel] <  270)
+	COLOR 	211	0	0
+END
+CLASS
+	NAME "Mountain Hemlock"
+	EXPRESSION ([pixel] >= 270 and [pixel] <  271)
+	COLOR 	216	0	0
+END
+CLASS
+	NAME "Lodgepole Pine"
+	EXPRESSION ([pixel] >= 281 and [pixel] <  301)
+	COLOR 	0	1	0
+END
+CLASS
+	NAME "Western Hemlock"
+	EXPRESSION ([pixel] >= 301 and [pixel] <  304)
+	COLOR 	0	6	0
+END
+CLASS
+	NAME "Western Redcedar"
+	EXPRESSION ([pixel] >= 304 and [pixel] <  305)
+	COLOR 	0	11	0
+END
+CLASS
+	NAME "Sitka Spruce"
+	EXPRESSION ([pixel] >= 305 and [pixel] <  321)
+	COLOR 	0	16	0
+END
+CLASS
+	NAME "Western Larch"
+	EXPRESSION ([pixel] >= 321 and [pixel] <  341)
+	COLOR 	0	21	0
+END
+CLASS
+	NAME "Redwood"
+	EXPRESSION ([pixel] >= 341 and [pixel] <  342)
+	COLOR 	0	26	0
+END
+CLASS
+	NAME "Giant Sequoia"
+	EXPRESSION ([pixel] >= 342 and [pixel] <  361)
+	COLOR 	0	31	0
+END
+CLASS
+	NAME "Knobcone Pine"
+	EXPRESSION ([pixel] >= 361 and [pixel] <  365)
+	COLOR 	0	36	0
+END
+CLASS
+	NAME "Foxtail Pine/Bristlecone Pine"
+	EXPRESSION ([pixel] >= 365 and [pixel] <  366)
+	COLOR 	0	41	0
+END
+CLASS
+	NAME "Limber Pine"
+	EXPRESSION ([pixel] >= 366 and [pixel] <  367)
+	COLOR 	0	46	0
+END
+CLASS
+	NAME "Whitebark Pine"
+	EXPRESSION ([pixel] >= 367 and [pixel] <  368)
+	COLOR 	0	51	0
+END
+CLASS
+	NAME "Misc. Western Softwoods"
+	EXPRESSION ([pixel] >= 368 and [pixel] <  371)
+	COLOR 	0	56	0
+END
+CLASS
+	NAME "California Mixed Conifer"
+	EXPRESSION ([pixel] >= 371 and [pixel] <  381)
+	COLOR 	0	61	0
+END
+CLASS
+	NAME "Scotch Pine"
+	EXPRESSION ([pixel] >= 381 and [pixel] <  383)
+	COLOR 	0	66	0
+END
+CLASS
+	NAME "Other Exotic Softwoods"
+	EXPRESSION ([pixel] >= 383 and [pixel] <  384)
+	COLOR 	0	71	0
+END
+CLASS
+	NAME "Norway Spruce"
+	EXPRESSION ([pixel] >= 384 and [pixel] <  401)
+	COLOR 	0	76	0
+END
+CLASS
+	NAME "Eastern White Pine/Northern Red"
+	EXPRESSION ([pixel] >= 401 and [pixel] <  402)
+	COLOR 	0	81	0
+END
+CLASS
+	NAME "Eastern Redcedar/Hardwood"
+	EXPRESSION ([pixel] >= 402 and [pixel] <  403)
+	COLOR 	0	86	0
+END
+CLASS
+	NAME "Longleaf Pine/Oak"
+	EXPRESSION ([pixel] >= 403 and [pixel] <  404)
+	COLOR 	0	91	0
+END
+CLASS
+	NAME "Shortleaf Pine/Oak"
+	EXPRESSION ([pixel] >= 404 and [pixel] <  405)
+	COLOR 	0	96	0
+END
+CLASS
+	NAME "Virginia Pine/Southern Red Oak"
+	EXPRESSION ([pixel] >= 405 and [pixel] <  406)
+	COLOR 	0	101	0
+END
+CLASS
+	NAME "Loblolly Pine/Hardwood"
+	EXPRESSION ([pixel] >= 406 and [pixel] <  407)
+	COLOR 	0	106	0
+END
+CLASS
+	NAME "Slash Pine/Hardwood"
+	EXPRESSION ([pixel] >= 407 and [pixel] <  409)
+	COLOR 	0	111	0
+END
+CLASS
+	NAME "Other Pine/Hardwood"
+	EXPRESSION ([pixel] >= 409 and [pixel] <  501)
+	COLOR 	0	116	0
+END
+CLASS
+	NAME "Post Oak/Blackjack Oak"
+	EXPRESSION ([pixel] >= 501 and [pixel] <  502)
+	COLOR 	0	121	0
+END
+CLASS
+	NAME "Chestnut Oak"
+	EXPRESSION ([pixel] >= 502 and [pixel] <  503)
+	COLOR 	0	126	0
+END
+CLASS
+	NAME "White Oak/Red Oak/Hickory"
+	EXPRESSION ([pixel] >= 503 and [pixel] <  504)
+	COLOR 	0	131	0
+END
+CLASS
+	NAME "White Oak"
+	EXPRESSION ([pixel] >= 504 and [pixel] <  505)
+	COLOR 	0	136	0
+END
+CLASS
+	NAME "Northern Red Oak"
+	EXPRESSION ([pixel] >= 505 and [pixel] <  506)
+	COLOR 	0	141	0
+END
+CLASS
+	NAME "Yellow-poplar/White Oak/Northern"
+	EXPRESSION ([pixel] >= 506 and [pixel] <  507)
+	COLOR 	0	146	0
+END
+CLASS
+	NAME "Sassafras/Persimmon"
+	EXPRESSION ([pixel] >= 507 and [pixel] <  508)
+	COLOR 	0	151	0
+END
+CLASS
+	NAME "Sweetgum/Yellow-poplar"
+	EXPRESSION ([pixel] >= 508 and [pixel] <  509)
+	COLOR 	0	156	0
+END
+CLASS
+	NAME "Bur Oak"
+	EXPRESSION ([pixel] >= 509 and [pixel] <  510)
+	COLOR 	0	161	0
+END
+CLASS
+	NAME "Scarlet Oak"
+	EXPRESSION ([pixel] >= 510 and [pixel] <  511)
+	COLOR 	0	166	0
+END
+CLASS
+	NAME "Yellow-poplar"
+	EXPRESSION ([pixel] >= 511 and [pixel] <  512)
+	COLOR 	0	171	0
+END
+CLASS
+	NAME "Black Walnut"
+	EXPRESSION ([pixel] >= 512 and [pixel] <  513)
+	COLOR 	0	176	0
+END
+CLASS
+	NAME "Black Locust"
+	EXPRESSION ([pixel] >= 513 and [pixel] <  514)
+	COLOR 	0	181	0
+END
+CLASS
+	NAME "Southern Scrub Oak"
+	EXPRESSION ([pixel] >= 514 and [pixel] <  515)
+	COLOR 	0	186	0
+END
+CLASS
+	NAME "Chestnut Oak/Black Oak/Scarlet O"
+	EXPRESSION ([pixel] >= 515 and [pixel] <  519)
+	COLOR 	0	191	0
+END
+CLASS
+	NAME "Red Maple/Oak"
+	EXPRESSION ([pixel] >= 519 and [pixel] <  520)
+	COLOR 	0	196	0
+END
+CLASS
+	NAME "Mixed Upland Hardwoods"
+	EXPRESSION ([pixel] >= 520 and [pixel] <  601)
+	COLOR 	0	201	0
+END
+CLASS
+	NAME "Swamp Chestnut Oak/Cherrybark Oa"
+	EXPRESSION ([pixel] >= 601 and [pixel] <  602)
+	COLOR 	0	206	0
+END
+CLASS
+	NAME "Sweetgum/Nuttall Oak/Willow Oak"
+	EXPRESSION ([pixel] >= 602 and [pixel] <  605)
+	COLOR 	0	211	0
+END
+CLASS	NAME "Overcup Oak/Water Hickory"
+	EXPRESSION ([pixel] >= 605 and [pixel] <  606)
+	COLOR 	0	0	1
+END
+CLASS	NAME "Atlantic White-cedar"
+	EXPRESSION ([pixel] >= 606 and [pixel] <  607)
+	COLOR 	0	0	6
+END
+CLASS	NAME "Baldcypress/Water Tupelo"
+	EXPRESSION ([pixel] >= 607 and [pixel] <  608)
+	COLOR 	0	0	11
+END
+CLASS	NAME "Sweetbay/Swamp Tupelo/Red Maple"
+	EXPRESSION ([pixel] >= 608 and [pixel] <  701)
+	COLOR 	0	0	16
+END
+CLASS	NAME "Black Ash/American Elm/Red Maple"
+	EXPRESSION ([pixel] >= 701 and [pixel] <  702)
+	COLOR 	0	0	21
+END
+CLASS	NAME "River Birch/Sycamore"
+	EXPRESSION ([pixel] >= 702 and [pixel] <  703)
+	COLOR 	0	0	26
+END
+CLASS	NAME "Cottonwood"
+	EXPRESSION ([pixel] >= 703 and [pixel] <  704)
+	COLOR 	0	0	31
+END
+CLASS	NAME "Willow"
+	EXPRESSION ([pixel] >= 704 and [pixel] <  705)
+	COLOR 	0	0	36
+END
+CLASS	NAME "Sycamore/Pecan/American Elm"
+	EXPRESSION ([pixel] >= 705 and [pixel] <  706)
+	COLOR 	0	0	41
+END
+CLASS	NAME "Sugarberry/Hackberry/Elm/Green A"
+	EXPRESSION ([pixel] >= 706 and [pixel] <  707)
+	COLOR 	0	0	46
+END
+CLASS	NAME "Silver Maple/American Elm"
+	EXPRESSION ([pixel] >= 707 and [pixel] <  708)
+	COLOR 	0	0	51
+END
+CLASS	NAME "Red Maple/Lowland"
+	EXPRESSION ([pixel] >= 708 and [pixel] <  709)
+	COLOR 	0	0	56
+END
+CLASS	NAME "Cottonwood/Willow"
+	EXPRESSION ([pixel] >= 709 and [pixel] <  722)
+	COLOR 	0	0	61
+END
+CLASS	NAME "Oregon Ash"
+	EXPRESSION ([pixel] >= 722 and [pixel] <  801)
+	COLOR 	0	0	66
+END
+CLASS	NAME "Sugar Maple/Beech/Yellow Birch"
+	EXPRESSION ([pixel] >= 801 and [pixel] <  802)
+	COLOR 	0	0	71
+END
+CLASS	NAME "Black Cherry"
+	EXPRESSION ([pixel] >= 802 and [pixel] <  803)
+	COLOR 	0	0	76
+END
+CLASS	NAME "Cherry/Ash/Yellow-poplar"
+	EXPRESSION ([pixel] >= 803 and [pixel] <  805)
+	COLOR 	0	0	81
+END
+CLASS	NAME "Hard Maple/Basswood"
+	EXPRESSION ([pixel] >= 805 and [pixel] <  807)
+	COLOR 	0	0	86
+END
+CLASS	NAME "Elm/Ash/Locust"
+	EXPRESSION ([pixel] >= 807 and [pixel] <  809)
+	COLOR 	0	0	91
+END
+CLASS	NAME "Red Maple/Upland"
+	EXPRESSION ([pixel] >= 809 and [pixel] <  901)
+	COLOR 	0	0	96
+END
+CLASS	NAME "Aspen"
+	EXPRESSION ([pixel] >= 901 and [pixel] <  902)
+	COLOR 	0	0	101
+END
+CLASS	NAME "Paper Birch"
+	EXPRESSION ([pixel] >= 902 and [pixel] <  903)
+	COLOR 	0	0	106
+END
+CLASS	NAME "Gray Birch"
+	EXPRESSION ([pixel] >= 903 and [pixel] <  904)
+	COLOR 	0	0	111
+END
+CLASS	NAME "Balsam Poplar"
+	EXPRESSION ([pixel] >= 904 and [pixel] <  911)
+	COLOR 	0	0	116
+END
+CLASS	NAME "Red Alder"
+	EXPRESSION ([pixel] >= 911 and [pixel] <  912)
+	COLOR 	0	0	121
+END
+CLASS	NAME "Bigleaf Maple"
+	EXPRESSION ([pixel] >= 912 and [pixel] <  921)
+	COLOR 	0	0	126
+END
+CLASS	NAME "Gray Pine"
+	EXPRESSION ([pixel] >= 921 and [pixel] <  922)
+	COLOR 	0	0	131
+END
+CLASS	NAME "California Black Oak"
+	EXPRESSION ([pixel] >= 922 and [pixel] <  923)
+	COLOR 	0	0	136
+END
+CLASS	NAME "Oregon White Oak"
+	EXPRESSION ([pixel] >= 923 and [pixel] <  924)
+	COLOR 	0	0	141
+END
+CLASS	NAME "Blue Oak"
+	EXPRESSION ([pixel] >= 924 and [pixel] <  925)
+	COLOR 	0	0	146
+END
+CLASS	NAME "Deciduous Oak Woodland"
+	EXPRESSION ([pixel] >= 925 and [pixel] <  926)
+	COLOR 	0	0	151
+END
+CLASS	NAME "Evergreen Oak"
+	EXPRESSION ([pixel] >= 926 and [pixel] <  931)
+	COLOR 	0	0	156
+END
+CLASS	NAME "Coast Live Oak"
+	EXPRESSION ([pixel] >= 931 and [pixel] <  932)
+	COLOR 	0	0	161
+END
+CLASS	NAME "Canyon Live Oak/Interior Live Oa"
+	EXPRESSION ([pixel] >= 932 and [pixel] <  941)
+	COLOR 	0	0	166
+END
+CLASS	NAME "Tanoak"
+	EXPRESSION ([pixel] >= 941 and [pixel] <  942)
+	COLOR 	0	0	171
+END
+CLASS	NAME "California Laurel"
+	EXPRESSION ([pixel] >= 942 and [pixel] <  943)
+	COLOR 	0	0	176
+END
+CLASS	NAME "Giant Chinkapin"
+	EXPRESSION ([pixel] >= 943 and [pixel] <  951)
+	COLOR 	0	0	181
+END
+CLASS	NAME "Pacific Madrone"
+	EXPRESSION ([pixel] >= 951 and [pixel] <  952)
+	COLOR 	0	0	186
+END
+CLASS	NAME "Mesquite Woodland"
+	EXPRESSION ([pixel] >= 952 and [pixel] <  953)
+	COLOR 	0	0	191
+END
+CLASS	NAME "Cerocarpus Woodland"
+	EXPRESSION ([pixel] >= 953 and [pixel] <  954)
+	COLOR 	0	0	196
+END
+CLASS	NAME "Intermountain Maple Woodland"
+	EXPRESSION ([pixel] >= 954 and [pixel] <  955)
+	COLOR 	0	0	201
+END
+CLASS	NAME "Misc. Western Hardwood Woodlands"
+	EXPRESSION ([pixel] >= 955 and [pixel] <  981)
+	COLOR 	0	0	206
+END
+CLASS	NAME "Sable Palm"
+	EXPRESSION ([pixel] >= 981 and [pixel] <  982)
+	COLOR 	0	0	211
+END
+CLASS	NAME "Mangrove"
+	EXPRESSION ([pixel] >= 982 and [pixel] <  993)
+	COLOR 	0	0	216
+END
+CLASS	NAME "Eucalyptus"
+	EXPRESSION ([pixel] >= 993 and [pixel] <  995)
+	COLOR 	0	0	221
+END
+CLASS	NAME "Other Exotic Hardwoods"
+	EXPRESSION ([pixel] >= 995)
+	COLOR 	0	0	226
 END
