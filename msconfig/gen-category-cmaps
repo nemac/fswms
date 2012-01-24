@@ -1,7 +1,7 @@
 #! /usr/bin/python
-import os, re
+import os, re, gd
 
-#Begin category1
+#Begin category1----------------------------------------------------
 categories1 = [{'catid' : '0', 'name' : 'empty'},
               {'catid' : '101','name' : 'Jack Pine'},
               {'catid' : '102','name' : 'Red Pine'},
@@ -140,19 +140,36 @@ categories1 = [{'catid' : '0', 'name' : 'empty'},
 
 cat1cmap = open("cmaps/foresttype.cmap","w")
 catCount = 1
-#red categories1, first third
-r = 1
+FONT = "FreeSans.ttf" #should be in cur dir
+fontSize = 12
+os.environ["GDFONTPATH"] = "." #look in cur dir for fonts
+legendHeight = 50*(len(categories1)-1) #sub one because of the empty category
+legendWidth = 250
+im = gd.image((legendWidth, legendHeight))
+white = im.colorAllocate((255,255,255))
+black = im.colorAllocate((0,0,0))
+im.filledRectangle((0,legendHeight),(legendWidth,0), white)
+startX = 0
+endX = 50
+currentY = 0
+r = 1 #red cats 1/3
 colorIndex = 255/(len(categories1)/3) 
 for n in range(0, len(categories1)/3):
 	if categories1[n]['name']<>'empty':
+		#write to the map file
 		cat1cmap.write('CLASS\n')
 		cat1cmap.write("\tNAME \""+categories1[n]['name']+"\"\n")
 		cat1cmap.write("\tEXPRESSION ([pixel] >= "+categories1[n]['catid']+" and [pixel] <  "+categories1[n+1]['catid']+")\n")
 		cat1cmap.write("\tCOLOR " + "\t"+str(r) + "\t"+str(0) + "\t"+str(0)+"\n")
 		cat1cmap.write('END\n')
+		#write to the legend graphic
+		currentColor = im.colorAllocate((r, 0, 0))
+		im.filledRectangle((startX,currentY),(endX,currentY+50),currentColor)
+		im.string_ttf(FONT, fontSize, 0.0, (57, currentY-25), categories1[n]['name'], black)
+		currentY = currentY + 50
 	r = r + colorIndex
 	catCount = catCount + 1
-g = 1
+g = 1 #green cats 1/3
 for n in range(catCount, 2*(len(categories1)/3)):
 	if categories1[n]['name']<>'empty':
 		cat1cmap.write('CLASS\n')
@@ -160,9 +177,14 @@ for n in range(catCount, 2*(len(categories1)/3)):
 		cat1cmap.write("\tEXPRESSION ([pixel] >= "+categories1[n]['catid']+" and [pixel] <  "+categories1[n+1]['catid']+")\n")
 		cat1cmap.write("\tCOLOR " + "\t"+str(0) + "\t"+str(g) + "\t"+str(0)+"\n")
 		cat1cmap.write('END\n')
+		#write to the legend graphic
+		currentColor = im.colorAllocate((0, g, 0))
+		im.filledRectangle((startX,currentY),(endX,currentY+50),currentColor)
+		im.string_ttf(FONT, fontSize, 0.0, (57, currentY-25), categories1[n]['name'], black)
+		currentY = currentY + 50
 	g = g + colorIndex
 	catCount = catCount + 1
-b = 1 
+b = 1 #blue cats 1/3
 for n in range(catCount, len(categories1)):
 	if categories1[n]['name']<>'empty':
 		cat1cmap.write('CLASS')
@@ -173,14 +195,19 @@ for n in range(catCount, len(categories1)):
 			cat1cmap.write("\tEXPRESSION ([pixel] >= "+categories1[n]['catid']+" and [pixel] <  "+categories1[n+1]['catid']+")\n")
 		cat1cmap.write("\tCOLOR " + "\t"+str(0) + "\t"+str(0) + "\t"+str(b)+"\n")
 		cat1cmap.write('END\n')
+		#write to the legend graphic
+		currentColor = im.colorAllocate((0, 0, b))
+		im.filledRectangle((startX,currentY),(endX,currentY+50),currentColor)
+		im.string_ttf(FONT, fontSize, 0.0, (57, currentY-25), categories1[n]['name'], black)
+		currentY = currentY + 50
 	b = b + colorIndex
-	catCount = catCount + 1
+	catCount = catCount + 1	
 cat1cmap.close()
 
-
-#print str(len(categories1))
-#print str(len(categories1)/3)
-#print "i" + str(catCount)
+outputFile = "cmapicons/foresttype.png"
+f=open(outputFile,"w")
+im.writePng(f)
+f.close()
 
 #End category1------------------------------------------------------------------------------------------------
 
