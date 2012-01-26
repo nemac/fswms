@@ -1,0 +1,72 @@
+CLASS
+	EXPRESSION ([pixel] < 0) 
+	COLOR 	8 44 123
+END
+CLASS
+	EXPRESSION ([pixel] > 0 AND [pixel] <= 250) 
+	COLOR 	16 77 132
+END
+CLASS
+	EXPRESSION ([pixel] > 250 AND [pixel] <= 500) 
+	COLOR 	16 105 132
+END
+CLASS
+	EXPRESSION ([pixel] > 500 AND [pixel] <= 750) 
+	COLOR 	24 142 148
+END
+CLASS
+	EXPRESSION ([pixel] > 750 AND [pixel] <= 1000) 
+	COLOR 	24 158 132
+END
+CLASS
+	EXPRESSION ([pixel] > 1000 AND [pixel] <= 1250) 
+	COLOR 	24 178 107
+END
+CLASS
+	EXPRESSION ([pixel] > 1250 AND [pixel] <= 1500) 
+	COLOR 	16 195 66
+END
+CLASS
+	EXPRESSION ([pixel] > 1500 AND [pixel] <= 1750) 
+	COLOR 	0 215 8
+END
+CLASS
+	EXPRESSION ([pixel] > 1750 AND [pixel] <= 2000) 
+	COLOR 	49 227 0
+END
+CLASS
+	EXPRESSION ([pixel] > 2000 AND [pixel] <= 2250) 
+	COLOR 	156 243 0
+END
+CLASS
+	EXPRESSION ([pixel] > 2250 AND [pixel] <= 2500) 
+	COLOR 	239 251 0
+END
+CLASS
+	EXPRESSION ([pixel] > 2500 AND [pixel] <= 2750) 
+	COLOR 	255 239 0
+END
+CLASS
+	EXPRESSION ([pixel] > 2750 AND [pixel] <= 3000) 
+	COLOR 	255 215 0
+END
+CLASS
+	EXPRESSION ([pixel] > 3000 AND [pixel] <= 3250) 
+	COLOR 	255 186 0
+END
+CLASS
+	EXPRESSION ([pixel] > 3250 AND [pixel] <= 3500) 
+	COLOR 	231 146 0
+END
+CLASS
+	EXPRESSION ([pixel] > 3500 AND [pixel] <= 3750) 
+	COLOR 	231 101 0
+END
+CLASS
+	EXPRESSION ([pixel] > 3750 AND [pixel] <= 4000) 
+	COLOR 	231 60 0
+END
+CLASS
+	EXPRESSION ([pixel] > 4000) 
+	COLOR 	231 40 0
+END

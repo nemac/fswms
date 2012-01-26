@@ -5,9 +5,9 @@
   </extent>
   <server map_path="http://arcgisserver7.nemac.org/ArcGIS/" >
   </server>
-  <services>
-    <service name="EWS_RSAC-FHTET"                     folder="EWS" label="Archived NRT RSAC-FHTET"/>
-    <service name="vegdri"                             folder="EWS" label="USGS VegDRI Drought Assessment Products"/>
+  <services>  
+    <service name="EWS_RSAC-FHTET"                     folder="EWS" label="Archived RSAC-FHTET Forest Change"/>
+	<service name="vegdri"                             folder="EWS" label="USGS VegDRI Drought Assessment Products"/>
   </services>
   <images>
     <image name="Streets"   label="Streets"  url="http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" />
@@ -19,61 +19,8 @@
     <image name="USA_Topo"  label="USA Topo" url="http://server.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer" />
     <image name="None"      label="None"     url="http://arcgisserver7.nemac.org/ArcGIS/rest/services/US/US_Jurisdictions_filled2/MapServer/" />
   </images>
-  <legend type="Image" legendServerPath="%(VIEWER_DEPLOY_DIR_URL)s/assets/Mashup_Legends/">
-    <legendGroup name="NDVI 2003" />
-    <legendGroup name="NDVI 2004" />
-    <legendGroup name="NDVI 2005" />
-    <legendGroup name="NDVI 2006" />
-    <legendGroup name="NDVI 2007" />
-    <legendGroup name="NDVI 2008" />
-    <legendGroup name="NDVI 2009" />
-    <legendGroup name="2003 Cumulative NDVI" />
-    <legendGroup name="2004 Cumulative NDVI" />
-    <legendGroup name="2005 Cumulative NDVI" />
-    <legendGroup name="2006 Cumulative NDVI" />
-    <legendGroup name="2007 Cumulative NDVI" />
-    <legendGroup name="2008 Cumulative NDVI" />
-    <legendGroup name="2009 Cumulative NDVI" />
-    <legendGroup name="2009 Cumulative NDVI" />
-    <legendGroup name="Parameter Means" />
-    <legendGroup name="Phenology- Parameters 2003" />
-    <legendGroup name="Phenology- Parameters 2004" />
-    <legendGroup name="Phenology- Parameters 2005" />
-    <legendGroup name="Phenology- Parameters 2006" />
-    <legendGroup name="Phenology- Parameters 2007" />
-    <legendGroup name="Phenology- Parameters 2008" />
-    <legendGroup name="Phenology- Parameters 2009" />
-    <legendGroup name="FHM Aerial Disturbance Surveys" />
-    <legendGroup name="Fire Perimeters" />
+  <legend type="Image" legendServerPath="http://ews.forestthreats.org/GIS/assets/Mashup_Legends/">
     <legendGroup name="RSAC-FHTET 2010" />
-    <legendGroup name="EFETAC-NASA 2010" />
-    <legendGroup name="Fire Perimeters" />
-    <legendGroup name="2010 Precipitation Anomalies" />
-    <legendGroup name="2010 Temperature Average Anomalies" />
-    <legendGroup name="2010 Temperature Maximum Anomalies" />
-    <legendGroup name="2010 Temperature Minimum Anomalies" />
-    <legendGroup name="2010 Precipitation Normals" />
-    <legendGroup name="2010 Temperature Average Normals" />
-    <legendGroup name="2010 Temperature Maximum Normals" />
-    <legendGroup name="2010 Temperature Minimum Normals" />
-    <layerGroup name="Change" />
-    <layerGroup name="2010 Change" />
-    <layerGroup name="PRISM Avg Annual Precipitation" />
-    <layerGroup name="PRISM Avg Min Temperature" />
-    <layerGroup name="PRISM Avg Max Temperature" />
-    <layerGroup name="Fall Brown Down Length" />
-    <layerGroup name="Spring Leaf Out Length" />
-    <layerGroup name="Growing Season Length" />
-    <layerGroup name="Growing Season Midpoint" />
-    <layerGroup name="Max NDVI Midpoint" />
-    <layerGroup name="Peakyness" />
-    <layerGroup name="Fall Spring Ratio" />
-    <layerGroup name="Skewness" />
-    <layerGroup name="Slope Fall" />
-    <layerGroup name="Slope Spring" />
-    <layerGroup name="Mean Position" />
-    <layerGroup name="Mean Value" />
-    <layerGroup name="Mean XY Comp" />
   </legend>
   <mapviews>
     <view name="CONUS_Vegetation_Monitoring_Tools" label="CONUS Vegetation Monitoring Tools">
@@ -87,14 +34,14 @@
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
     </view>
-    <view name="MODIS_Forest_Change_Products" label="MODIS Forest Change Products">
+    <view name="MODIS_Forest_Change_Products" label="Archived Forest Disturbance Detection Maps (MODIS NRT)">
       <viewGroup name="US_Jurisdictions" />
       <viewGroup name="US_Fire" />
       <viewGroup name="US_FHM_ADS" />
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="Archived_NRT" />
-      <viewGroup name="EWS_RSAC-FHTET" />
       <viewGroup name="MODISCloud" />
+	  <viewGroup name="EWS_RSAC-FHTET" />
       <viewGroup name="Drought_Monitor" />
       <viewGroup name="vegdri" />
       <viewGroup name="US_Climate" />
@@ -459,7 +406,7 @@
     %(RSAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
   </wmsGroup>
 
-  <wmsGroup name="Archived_NRT" label="Archived MODIS NRT" priorService="vegdri">
+  <wmsGroup name="Archived_NRT" label="Archived Forest Disturbance Detection Maps" priorService="vegdri">
     <wmsSubgroup label="Archived NRT 1-Year Baseline (TACs-NASA)">
       <wmsLayer 
 	 lid="AAZ"
@@ -1778,7 +1725,7 @@
 	 visible="false" 
 	 url="%(SERVER_URL)s/ews3year?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="EFETAC-NASA_3year_20120116" 
+	 layers="EFETAC-NASA_3Year_20120116" 
 	 styles="default" 
 	 name="20120116"
 	 identify="true" 
@@ -2686,7 +2633,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Elevation (SRTM 231m DEM)" 
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=srtm-dem-231m&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/SRTM-231m-DEM.png"/>
       <wmsLayer 
 	 lid="AIJ"
 	 visible="false" 
@@ -2696,7 +2643,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Aspect (SRTM 231m)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=srtm-aspect-231m&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/SRTM-Aspect-231m.png"/>
       <wmsLayer 
 	 lid="AIK"
 	 visible="false" 
@@ -2706,7 +2653,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Hillshading (SRTM 231m)" 
-	 legend="%(SERVER_URL)s/../msconfig/cmapicons/srtm-hillshade-231m.png"/>
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/SRTM-Hillshading.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Hydrography">
       <wmsLayer 
@@ -2750,7 +2697,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Forest Type (USFS FIA-RSAC)" 
-	 legend="%(SERVER_URL)s/../msconfig/cmapicons/foresttype.png"/>
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/forest-type.png"/>
       <wmsLayer 
 	 lid="AIP"
 	 visible="false" 

@@ -87,7 +87,7 @@ MAP
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
-		#INCLUDE
+		INCLUDE "cmaps/custom-dem.cmap"
         
         METADATA
             "wms_title"             "srtm-dem-231m"
@@ -115,7 +115,7 @@ MAP
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
-		#INCLUDE
+		INCLUDE "cmaps/custom-aspect.cmap"
         
         METADATA
             "wms_title"             "srtm-aspect-231m"

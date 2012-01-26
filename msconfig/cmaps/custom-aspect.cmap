@@ -1,0 +1,40 @@
+CLASS
+	EXPRESSION ([pixel] < 0 ) 
+	COLOR 	176 176 176
+END
+CLASS
+	EXPRESSION ([pixel] > 0 AND [pixel] <= 22.5) 
+	COLOR 	255 0 0
+END
+CLASS
+	EXPRESSION ([pixel] > 22.5 AND [pixel] <= 67.5) 
+	COLOR 	255 166 0
+END
+CLASS
+	EXPRESSION ([pixel] > 67.5 AND [pixel] <= 112.5) 
+	COLOR 	255 255 0
+END
+CLASS
+	EXPRESSION ([pixel] > 112.5 AND [pixel] <= 157.5) 
+	COLOR 	0 255 0
+END
+CLASS
+	EXPRESSION ([pixel] > 157.5 AND [pixel] <= 202.5) 
+	COLOR 	0 255 255
+END
+CLASS
+	EXPRESSION ([pixel] > 202.5 AND [pixel] <= 247.5) 
+	COLOR 	0 166 255
+END
+CLASS
+	EXPRESSION ([pixel] > 247.5 AND [pixel] <= 292.5) 
+	COLOR 	0 0 255
+END
+CLASS
+	EXPRESSION ([pixel] > 292.5 AND [pixel] <= 337.5) 
+	COLOR 	255 0 255
+END
+CLASS
+	EXPRESSION ([pixel] > 337.5 AND [pixel] <= 360) 
+	COLOR 	255 0 0
+END
