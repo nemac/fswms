@@ -205,7 +205,7 @@ MAP
         METADATA
             "wms_title"             "forest-type"
             "wms_abstract"          "forest-type"
-            "gml_include_items"     "value_0"
+            "gml_include_items"     "class"
         END  # end METADATA
     END # end LAYER
 	LAYER
