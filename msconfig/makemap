@@ -310,7 +310,13 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt):
             if re.search(r'.img', nameform):
                 layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
             else:
-                layerName = group + "_" + re.sub(r'_.*$', '', nameform)
+                #jdm 1/26 check for the occurace of bd after the last underscore
+                #this is the same layer but w/ a slightly diff algorithm on the remote
+                #sensing side of things.
+                if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
+                    layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
+                else:
+                    layerName = group + "_" + re.sub(r'_.*$', '', nameform)
             layerTitle = tif
             tifList.append({ 'TIF'             : tif,
                              'PROJVALID'       : len(proj) > 0,

@@ -228,4 +228,227 @@ f.close()
 
 #End category1------------------------------------------------------------------------------------------------
 
+#Begin category2--------------------------------------------------------------------------------------------
+categories2 = [{'catid' : '0', 'name' : 'empty'},
+               {'catid' : '101', 'name' : 'Jack Pine'},
+               {'catid' : '102', 'name' : 'Red Pine'},
+               {'catid' : '103', 'name' : 'Eastern White Pine'},
+               {'catid' : '104', 'name' : 'Eastern White Pine/Eastern Hemlo'},
+               {'catid' : '105', 'name' : 'Eastern Hemlock'},
+               {'catid' : '121', 'name' : 'Balsam Fir'},
+               {'catid' : '122', 'name' : 'White Spruce'},
+               {'catid' : '123', 'name' : 'Red Spruce'},
+               {'catid' : '124', 'name' : 'Red Spruce/Balsam Fir'},
+               {'catid' : '125', 'name' : 'Black Spruce'},
+               {'catid' : '126', 'name' : 'Tamarack'},
+               {'catid' : '127', 'name' : 'Northern White-cedar'},
+               {'catid' : '141', 'name' : 'Longleaf Pine'},
+               {'catid' : '142', 'name' : 'Slash Pine'},
+               {'catid' : '161', 'name' : 'Loblolly Pine'},
+               {'catid' : '162', 'name' : 'Shortleaf Pine'},
+               {'catid' : '163', 'name' : 'Virginia Pine'},
+               {'catid' : '164', 'name' : 'Sand Pine'},
+               {'catid' : '165', 'name' : 'Table-mountain Pine'},
+               {'catid' : '166', 'name' : 'Pond Pine'},
+               {'catid' : '167', 'name' : 'Pitch Pine'},
+               {'catid' : '168', 'name' : 'Spruce Pine'},
+               {'catid' : '181', 'name' : 'Eastern Redcedar'},
+               {'catid' : '182', 'name' : 'Rocky Mountain Juniper'},
+               {'catid' : '183', 'name' : 'Western Juniper'},
+               {'catid' : '184', 'name' : 'Juniper Woodland'},
+               {'catid' : '185', 'name' : 'Pinyon Juniper Woodland'},
+               {'catid' : '201', 'name' : 'Douglas-fir'},
+               {'catid' : '202', 'name' : 'Port-orford-cedar'},
+               {'catid' : '221', 'name' : 'Ponderosa Pine'},
+               {'catid' : '223', 'name' : 'Jeffrey Pine/Coulter Pine/Bigcon'},
+               {'catid' : '224', 'name' : 'Sugar Pine'},
+               {'catid' : '241', 'name' : 'Western White Pine'},
+               {'catid' : '261', 'name' : 'White Fir'},
+               {'catid' : '262', 'name' : 'Red Fir'},
+               {'catid' : '263', 'name' : 'Noble Fir'},
+               {'catid' : '264', 'name' : 'Pacific Silver Fir'},
+               {'catid' : '265', 'name' : 'Engelmann Spruce'},
+               {'catid' : '266', 'name' : 'Engelmann Spruce/Subalpine Fir'},
+               {'catid' : '267', 'name' : 'Grand Fir'},
+               {'catid' : '268', 'name' : 'Subalpine Fir'},
+               {'catid' : '269', 'name' : 'Blue Spruce'},
+               {'catid' : '270', 'name' : 'Mountain Hemlock'},
+               {'catid' : '271', 'name' : 'Alaska-yellow-cedar'},
+               {'catid' : '281', 'name' : 'Lodgepole Pine'},
+               {'catid' : '301', 'name' : 'Western Hemlock'},
+               {'catid' : '304', 'name' : 'Western Redcedar'},
+               {'catid' : '305', 'name' : 'Sitka Spruce'},
+               {'catid' : '321', 'name' : 'Western Larch'},
+               {'catid' : '341', 'name' : 'Redwood'},
+               {'catid' : '342', 'name' : 'Giant Sequoia'},
+               {'catid' : '361', 'name' : 'Knobcone Pine'},
+               {'catid' : '365', 'name' : 'Foxtail Pine/Bristlecone Pine'},
+               {'catid' : '366', 'name' : 'Limber Pine'},
+               {'catid' : '367', 'name' : 'Whitebark Pine'},
+               {'catid' : '368', 'name' : 'Misc. Western Softwoods'},
+               {'catid' : '371', 'name' : 'California Mixed Conifer'},
+               {'catid' : '381', 'name' : 'Scotch Pine'},
+               {'catid' : '383', 'name' : 'Other Exotic Softwoods'},
+               {'catid' : '384', 'name' : 'Norway Spruce'},
+               {'catid' : '401', 'name' : 'Eastern White Pine/Northern Red'},
+               {'catid' : '402', 'name' : 'Eastern Redcedar/Hardwood'},
+               {'catid' : '403', 'name' : 'Longleaf Pine/Oak'},
+               {'catid' : '404', 'name' : 'Shortleaf Pine/Oak'},
+               {'catid' : '405', 'name' : 'Virginia Pine/Southern Red Oak'},
+               {'catid' : '406', 'name' : 'Loblolly Pine/Hardwood'},
+               {'catid' : '407', 'name' : 'Slash Pine/Hardwood'},
+               {'catid' : '409', 'name' : 'Other Pine/Hardwood'},
+               {'catid' : '501', 'name' : 'Post Oak/Blackjack Oak'},
+               {'catid' : '502', 'name' : 'Chestnut Oak'},
+               {'catid' : '503', 'name' : 'White Oak/Red Oak/Hickory'},
+               {'catid' : '504', 'name' : 'White Oak'},
+               {'catid' : '505', 'name' : 'Northern Red Oak'},
+               {'catid' : '506', 'name' : 'Yellow-poplar/White Oak/Northern'},
+               {'catid' : '507', 'name' : 'Sassafras/Persimmon'},
+               {'catid' : '508', 'name' : 'Sweetgum/Yellow-poplar'},
+               {'catid' : '509', 'name' : 'Bur Oak'},
+               {'catid' : '510', 'name' : 'Scarlet Oak'},
+               {'catid' : '511', 'name' : 'Yellow-poplar'},
+               {'catid' : '512', 'name' : 'Black Walnut'},
+               {'catid' : '513', 'name' : 'Black Locust'},
+               {'catid' : '514', 'name' : 'Southern Scrub Oak'},
+               {'catid' : '515', 'name' : 'Chestnut Oak/Black Oak/Scarlet O'},
+               {'catid' : '519', 'name' : 'Red Maple/Oak'},
+               {'catid' : '520', 'name' : 'Mixed Upland Hardwoods'},
+               {'catid' : '601', 'name' : 'Swamp Chestnut Oak/Cherrybark Oa'},
+               {'catid' : '602', 'name' : 'Sweetgum/Nuttall Oak/Willow Oak'},
+               {'catid' : '605', 'name' : 'Overcup Oak/Water Hickory'},
+               {'catid' : '606', 'name' : 'Atlantic White-cedar'},
+               {'catid' : '607', 'name' : 'Baldcypress/Water Tupelo'},
+               {'catid' : '608', 'name' : 'Sweetbay/Swamp Tupelo/Red Maple'},
+               {'catid' : '701', 'name' : 'Black Ash/American Elm/Red Maple'},
+               {'catid' : '702', 'name' : 'River Birch/Sycamore'},
+               {'catid' : '703', 'name' : 'Cottonwood'},
+               {'catid' : '704', 'name' : 'Willow'},
+               {'catid' : '705', 'name' : 'Sycamore/Pecan/American Elm'},
+               {'catid' : '706', 'name' : 'Sugarberry/Hackberry/Elm/Green A'},
+               {'catid' : '707', 'name' : 'Silver Maple/American Elm'},
+               {'catid' : '708', 'name' : 'Red Maple/Lowland'},
+               {'catid' : '709', 'name' : 'Cottonwood/Willow'},
+               {'catid' : '722', 'name' : 'Oregon Ash'},
+               {'catid' : '801', 'name' : 'Sugar Maple/Beech/Yellow Birch'},
+               {'catid' : '802', 'name' : 'Black Cherry'},
+               {'catid' : '803', 'name' : 'Cherry/Ash/Yellow-poplar'},
+               {'catid' : '805', 'name' : 'Hard Maple/Basswood'},
+               {'catid' : '807', 'name' : 'Elm/Ash/Locust'},
+               {'catid' : '809', 'name' : 'Red Maple/Upland'},
+               {'catid' : '901', 'name' : 'Aspen'},
+               {'catid' : '902', 'name' : 'Paper Birch'},
+               {'catid' : '903', 'name' : 'Gray Birch'},
+               {'catid' : '904', 'name' : 'Balsam Poplar'},
+               {'catid' : '911', 'name' : 'Red Alder'},
+               {'catid' : '912', 'name' : 'Bigleaf Maple'},
+               {'catid' : '921', 'name' : 'Gray Pine'},
+               {'catid' : '922', 'name' : 'California Black Oak'},
+               {'catid' : '923', 'name' : 'Oregon White Oak'},
+               {'catid' : '924', 'name' : 'Blue Oak'},
+               {'catid' : '925', 'name' : 'Deciduous Oak Woodland'},
+               {'catid' : '926', 'name' : 'Evergreen Oak'},
+               {'catid' : '931', 'name' : 'Coast Live Oak'},
+               {'catid' : '932', 'name' : 'Canyon Live Oak/Interior Live Oa'},
+               {'catid' : '941', 'name' : 'Tanoak'},
+               {'catid' : '942', 'name' : 'California Laurel'},
+               {'catid' : '943', 'name' : 'Giant Chinkapin'},
+               {'catid' : '951', 'name' : 'Pacific Madrone'},
+               {'catid' : '952', 'name' : 'Mesquite Woodland'},
+               {'catid' : '953', 'name' : 'Cerocarpus Woodland'},
+               {'catid' : '954', 'name' : 'Intermountain Maple Woodland'},
+               {'catid' : '955', 'name' : 'Misc. Western Hardwood Woodlands'},
+               {'catid' : '981', 'name' : 'Sable Palm'},
+               {'catid' : '982', 'name' : 'Mangrove'},
+               {'catid' : '993', 'name' : 'Eucalyptus'},
+               {'catid' : '995', 'name' : 'Other Exotic Hardwoods'}
+               ];               
 
+cat1cmap = open("cmaps/CONUS_FORESTGROUP.cmap","w")
+catCount = 0
+FONT = "FreeSans.ttf" #should be in cur dir
+fontSize = 12
+os.environ["GDFONTPATH"] = "." #look in cur dir for fonts
+legendHeight = 40*(len(categories2)-1) #sub one because of the empty category
+legendWidth = 325
+im = gd.image((legendWidth, legendHeight))
+white = im.colorAllocate((255,255,255))
+black = im.colorAllocate((0,0,0))
+im.filledRectangle((0,legendHeight),(legendWidth,0), white)
+startX = 0
+endX = 40
+currentY = 0
+r = 55 #red cats 1/3
+colorIndex = 200/(len(categories2)/3) 
+print "num of cats: " + str(len(categories2))
+redCount = 0
+for n in range(0, len(categories2)/3+1):
+	#print (n)
+	if categories2[n]['name']<>'empty':
+		#write to the map file
+		cat1cmap.write('CLASS\n')
+		cat1cmap.write("\tNAME \""+categories2[n]['name']+"\"\n")
+		cat1cmap.write("\tEXPRESSION ([pixel] >= "+categories2[n]['catid']+" and [pixel] <  "+categories2[n+1]['catid']+")\n")
+		cat1cmap.write("\tCOLOR " + "\t"+str(r) + "\t"+str(0) + "\t"+str(0)+"\n")
+		cat1cmap.write('END\n')
+		#write to the legend graphic
+		currentColor = im.colorAllocate((r, 0, 0))
+		im.filledRectangle((startX,currentY+2),(endX,currentY+40-2),currentColor)
+		im.string_ttf(FONT, fontSize, 0.0, (44, currentY+22), categories2[n]['name'], black)
+		currentY = currentY + 40
+	r = r + colorIndex
+	catCount = catCount + 1
+	redCount = redCount + 1
+print str(redCount) + " red"
+print "catCount :" + str(catCount)
+g = 55 #green cats 1/3
+greenCount = 0
+for n in range(catCount, redCount+catCount):
+	#print str(n)
+	cat1cmap.write('CLASS\n')
+	cat1cmap.write("\tNAME \""+categories2[n]['name']+"\"\n")
+	cat1cmap.write("\tEXPRESSION ([pixel] >= "+categories2[n]['catid']+" and [pixel] <  "+categories2[n+1]['catid']+")\n")
+	cat1cmap.write("\tCOLOR " + "\t"+str(0) + "\t"+str(g) + "\t"+str(0)+"\n")
+	cat1cmap.write('END\n')
+	#write to the legend graphic
+	currentColor = im.colorAllocate((0, g, 0))
+	im.filledRectangle((startX,currentY+2),(endX,currentY+40-2),currentColor)
+	im.string_ttf(FONT, fontSize, 0.0, (44, currentY+22), categories2[n]['name'], black)
+	currentY = currentY + 40
+	g = g + colorIndex
+	catCount = catCount + 1	 
+	greenCount = greenCount + 1
+print str(greenCount) + " green"
+print "catCount : " + str(catCount)
+b = 55 #blue cats 1/3
+blueCount = 0
+for n in range(catCount, len(categories2)):
+	#print str(n)
+	if n < len(categories2)-1:
+		cat1cmap.write('CLASS')
+		cat1cmap.write("\tNAME \""+categories2[n]['name']+"\"\n")
+		if len(categories2)  == catCount: #last item 
+			cat1cmap.write("\tEXPRESSION ([pixel] >= "+categories2[n]['catid']+")\n")
+		else:
+			cat1cmap.write("\tEXPRESSION ([pixel] >= "+categories2[n]['catid']+" and [pixel] <  "+categories2[n+1]['catid']+")\n")
+		cat1cmap.write("\tCOLOR " + "\t"+str(0) + "\t"+str(0) + "\t"+str(b)+"\n")
+		cat1cmap.write('END\n')
+		#write to the legend graphic
+		currentColor = im.colorAllocate((0, 0, b))
+		im.filledRectangle((startX,currentY+2),(endX,currentY+40-2),currentColor)
+		im.string_ttf(FONT, fontSize, 0.0, (44, currentY+22), categories2[n]['name'], black)
+		currentY = currentY + 40
+	b = b + colorIndex
+	catCount = catCount + 1
+	blueCount = blueCount + 1
+print str(blueCount) + " blue"
+print "catCount :" + str(catCount)
+im.filledRectangle((startX,currentY+2),(endX,currentY+40-2),currentColor)
+im.string_ttf(FONT, fontSize, 0.0, (44, currentY+22), categories2[n]['name'], black)
+cat1cmap.close()
+
+outputFile = "cmapicons/CONUS_FORESTGROUP.png"
+f=open(outputFile,"w")
+im.writePng(f)
+f.close()

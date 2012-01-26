@@ -2760,7 +2760,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Major Forest Group (USFS FIA-RSAC)" 
-	 legend="%(SERVER_URL)s/../msconfig/cmapicons/forest-group.png"/>
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/CONUS_FORESTGROUP.png"/>
       <wmsLayer 
 	 lid="AIQ"
 	 visible="false" 

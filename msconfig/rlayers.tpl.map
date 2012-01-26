@@ -177,7 +177,7 @@ MAP
         METADATA
             "wms_title"             "forestgroup"
             "wms_abstract"          "forestgroup"
-            "gml_include_items"     "value_0"
+            "gml_include_items"     "class"
         END  # end METADATA
     END # end LAYER
 	LAYER
