@@ -177,7 +177,7 @@ MAP
         METADATA
             "wms_title"             "forestgroup"
             "wms_abstract"          "forestgroup"
-            "gml_include_items"     "all"
+            "gml_include_items"     "class"
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -254,7 +254,7 @@ MAP
         METADATA
             "wms_title"             "precip-1971-2000"
             "wms_abstract"          "precip-1971-2000"
-            "gml_include_items"     "value_0"
+            "gml_include_items"     "all"
         END  # end METADATA
     END # end LAYER
 	LAYER
