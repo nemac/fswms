@@ -2697,7 +2697,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Forest Type (USFS FIA-RSAC)" 
-	 legend="%(SERVER_URL)s/../msconfig/cmapicons/forest-type.png"/>
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/foresttype.png"/>
       <wmsLayer 
 	 lid="AIP"
 	 visible="false" 
