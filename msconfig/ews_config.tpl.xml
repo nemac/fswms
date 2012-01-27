@@ -2717,7 +2717,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Forest Biomass (USFS FIA-RSAC)" 
-	 legend="%(SERVER_URL)s/../msconfig/cmapicons/forest-biomass.png"/>
+	 legend="%(SERVER_URL)s/../msconfig/cmapicons/FIA-RSAC_Forest_Biomass.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Ecoregions">
       <wmsLayer 
