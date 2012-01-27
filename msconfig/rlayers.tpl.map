@@ -210,7 +210,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     forest-biomass
-        INCLUDE "cmaps/CONUS_FOREST_BIOMASS.cmap"
+        INCLUDE "cmaps/custom-CONUS_FOREST_BIOMASS.cmap"
         PROJECTION
 	      "proj=aea"
 	      "lat_1=29.5"

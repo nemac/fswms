@@ -469,9 +469,9 @@ files = [
       'layerName' : 'skewness-2003',
       'minColor' : '0,0,0',  'maxColor' : '255,255,255' },
     #Landcover
-    { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/CONUS_FOREST_BIOMASS.img',
-      'layerName' : 'forest-biomass',
-      'minColor' : '152,251,152',  'maxColor' : '255,255,255' },
+#    { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/CONUS_FOREST_BIOMASS.img',
+#      'layerName' : 'forest-biomass',
+#      'minColor' : '41,109,57',  'maxColor' : '222,247,239' },
     { 'path' : '/flood/fsdata-internal/efetac_nasa/AncillaryData/foresttype.img',
       'layerName' : 'forest-type',
       'minColor' : '152,251,152',  'maxColor' : '255,255,255' },
