@@ -192,6 +192,11 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
             keyimage       = "TACs_NASA_CT_7-6-2011_clipped.png"
         layerName  = group + "_" + re.sub(r'_.*$', '', nameform)
         layerTitle = tif
+
+        #jdm 1/27 if it is a 2010 file use the old color map
+        if re.search(r'2010', nameform):
+            colormapfile = "ewsold.cmap"
+
         tiflist.append({ 'TIF'             : tif,
                          'PROJVALID'       : len(proj) > 0,
                          'PROJ'            : formatproj(proj,10),
