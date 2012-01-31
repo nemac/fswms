@@ -76,7 +76,7 @@ MAP
         END
 
         CONNECTIONTYPE   postgis
-        CONNECTION       "host=localhost dbname=pgtest1 user=mbp  password=mbp"
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
 	DATA "the_geom FROM (select coordgrid_voronoi_polys.pt_id, coordgrid_voronoi_polys.the_geom, coordgrid_voronoi_polys.gid, array_to_string(array_agg(pestprox2_table.agent || ' year: ' || pestprox2_table.year || ' probability: ' || pestprox2_table.prob), ',') as Agents from coordgrid_voronoi_polys right outer join pestprox2_table on coordgrid_voronoi_polys.pt_id=pestprox2_table.pt_id group by coordgrid_voronoi_polys.pt_id, coordgrid_voronoi_polys.the_geom, coordgrid_voronoi_polys.gid) as new_table USING UNIQUE gid USING SRID=4326"
 
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
