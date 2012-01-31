@@ -387,9 +387,17 @@
        identify="true" 
        name="2009 Aerial Disturbance Surveys (FHTET)" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2009&VERSION=1.1.1&FORMAT=image/png"/>
+    <wmsLayer 
+       lid="PP"
+       visible="false" 
+       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       srs="EPSG:3785" 
+       layers="pestprox" 
+       styles="default" 
+       identify="true" 
+       name="Pest Proximity" 
+       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=pestprox&VERSION=1.1.1&FORMAT=image/png"/>
   </wmsGroup>
-
-
   <!--
      Note: New as of Jan 15, 2012:
      The phrase

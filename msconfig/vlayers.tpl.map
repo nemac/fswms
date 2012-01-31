@@ -69,6 +69,37 @@ MAP
     END
     
     LAYER # 
+        NAME pestprox
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "host=localhost dbname=pgtest1 user=mbp  password=mbp"
+	DATA "the_geom FROM (select coordgrid_voronoi_polys.pt_id, coordgrid_voronoi_polys.the_geom, coordgrid_voronoi_polys.gid, array_to_string(array_agg(pestprox2_table.agent || ' Year: ' || pestprox2_table.year || ' Probability: ' || pestprox2_table.prob), ',') as Agents from coordgrid_voronoi_polys right outer join pestprox2_table on coordgrid_voronoi_polys.pt_id=pestprox2_table.pt_id group by coordgrid_voronoi_polys.pt_id, coordgrid_voronoi_polys.the_geom, coordgrid_voronoi_polys.gid) as new_table USING UNIQUE gid USING SRID=4326"
+
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "pestprox"
+            STYLE
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"          "pestprox"
+            "wms_abstract"       "pestprox"
+            "gml_include_items"  "pt_id,Agents"
+        END  # end METADATA
+    END # 
+
+
+    LAYER # 
         NAME cities
         
         PROJECTION
