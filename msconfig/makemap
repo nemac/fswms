@@ -96,6 +96,64 @@ class Template:
     def render(self, dict):
         return self.contents % dict
 
+#Start of attempt to create a generic function to get layers
+#At this point its a not completely generic because the color maps is 
+#specific to the tif files location
+def getLayers(dataDir, layerTemplateName, groupName, fileExt):
+    #print 'data dir ' + dataDir
+    #print 'template ' + layerTemplateName
+    tifList  = []
+    for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
+        try:        
+            tif = re.sub('^' + dataDir + '/', '', tif)
+            tif_fullpath = dataDir + '/' + tif;
+            proj = getproj(tif_fullpath)
+            modDate = getModDate(tif_fullpath)
+            nameform = re.sub(r'^.*/', '', tif)
+            #print nameform
+            #this conditional logic needs to be refactored out
+            if re.search(r'max|med', nameform):
+                colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
+            elif re.search(r'.img', fileExt):
+                colormapline   = ''
+            else:
+                colormapline   = 'INCLUDE "ewsold.cmap"'
+            group = groupName 
+            if re.search(r'.img', nameform):
+                layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
+            else:
+                #jdm 1/26 check for the occurace of bd after the last underscore
+                #this is the same layer but w/ a slightly diff algorithm on the remote
+                #sensing side of things.
+                if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
+                    layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
+                else:
+                    layerName = group + "_" + re.sub(r'_.*$', '', nameform)
+            layerTitle = tif
+            tifList.append({ 'TIF'             : tif,
+                             'PROJVALID'       : len(proj) > 0,
+                             'PROJ'            : formatproj(proj,10),
+                             'WKT'             : getwkt(tif_fullpath),
+                             'NAME'            : layerName,
+                             'GROUP'           : group,
+                             'DATA'            : dataDir + '/' + tif,
+                             'TITLE'           : layerTitle,
+                             'ABSTRACT'        : layerTitle,
+                             'COLORMAPLINE'    : colormapline
+                             })
+            layerTitles[layerName] = layerTitle
+        except:
+            print "except occured"
+            continue
+    layerTemplate = Template(layerTemplateName)
+    layers = ""
+    for tifdict in tifList:
+        if tifdict['PROJVALID']:
+            layers = layers + layerTemplate.render(tifdict)    
+    return layers
+
+### Begining of run-time code -----------------------------------------------------
+
 ###
 ### initialize a dict to keep track of layer titles (keyed by layer name):
 ###
@@ -108,6 +166,7 @@ tiflist = []
 
 ###
 ### create a tiflist entry for each .tif file in LAYER_DATA_DIR:
+### these are symlinks of the most recent 3 
 ###
 retroPattern = r'-retro/(.+)/'
 for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
@@ -166,9 +225,9 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
 
 ###
 ### create a tiflist entry for each .tif file in DATA_DIR+"/efetac_nasa/ews:
+### these are the actual data files as they are dropped off via ftp
 ###
-#ARCHIVE_DIR = DATA_DIR + "/efetac_nasa/ews"
-ARCHIVE_DIR = DATA_DIR + "/efetac_nasa/AllYear"
+ARCHIVE_DIR = DATA_DIR + "/efetac_nasa/AllYear" #DATA_DIR is "/flood/fsdata" currently
 for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".tif")], reverse=False):
     try:
         tif = re.sub('^' + ARCHIVE_DIR + '/', '', tif)
@@ -176,13 +235,14 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
         proj = getproj(tif_fullpath)
         modDate = getModDate(tif_fullpath)
         nameform = re.sub(r'^.*/', '', tif)
-        if tif.startswith("rsac"):
+        if tif.startswith("rsac"): #jdm: I don't think this if is needed Marked4Delete
             group = "RSAC-FHTET"
             group_abstract = "Layers uploaded by RSAC-FHTET"
             colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
             colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
             #keyimage       = "rsac-fhtet-legend-v3-181x277-2011-06-24.png"
             keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
+            print 'jdm: see this never prints'
         else:
             group = "EFETAC-NASA"
             group_abstract = "Layers uploaded by TACs-NASA"
@@ -215,6 +275,49 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
         layerTitles[layerName] = layerTitle
     except:
         continue
+
+###
+### add in the rsac fhtet files to be available in an archive format
+### these will go in ews.map also but will utilize a diff color map: rsac_fhtet_percent_change_cmap.cmap
+###
+ARCHIVE_DIR = DATA_DIR + "/rsac_fhtet/ews" #DATA_DIR is "/flood/fsdata" currently
+for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".tif")], reverse=False):
+    try:
+        tif = re.sub('^' + ARCHIVE_DIR + '/', '', tif)
+        tif_fullpath = ARCHIVE_DIR + '/' + tif;
+        proj = getproj(tif_fullpath)
+        modDate = getModDate(tif_fullpath)
+        nameform = re.sub(r'^.*/', '', tif)
+        group = "RSAC-FHTET"
+        group_abstract = "Layers uploaded by RSAC-FHTET"
+        colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
+        colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
+        keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
+        if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
+            layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
+        else:
+            layerName = group + "_" + re.sub(r'_.*$', '', nameform)
+        layerTitle = tif
+        tiflist.append({ 'TIF'             : tif,
+                         'PROJVALID'       : len(proj) > 0,
+                         'PROJ'            : formatproj(proj,10),
+                         'WKT'             : getwkt(tif_fullpath),
+                         'NAME'            : layerName,
+                         'GROUP'           : group,
+                         'DATA'            : ARCHIVE_DIR + '/' + tif,
+                         'GROUP_ABSTRACT'  : group_abstract,
+                         'TITLE'           : layerTitle,
+                         'ABSTRACT'        : layerTitle,
+                         'COLORMAPFILE'    : colormapfile,
+                         'COLORMAPCSV'     : colormapcsv,
+                         'KEYIMAGE'        : keyimage,
+                         'MODDATE'	   : modDate
+                         })
+        layerTitles[layerName] = layerTitle
+    except:
+        print 'except occured'
+        continue
+
 
 ######################################
 
@@ -288,62 +391,6 @@ f_new.write( mapTemplate.render( {
             'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
             } ) )
 f_new.close()
-
-#Start of attempt to create a generic function to get layers
-#At this point its a not completely generic because the color maps is 
-#specific to the tif files location
-def getLayers(dataDir, layerTemplateName, groupName, fileExt):
-    #print 'data dir ' + dataDir
-    #print 'template ' + layerTemplateName
-    tifList  = []
-    for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
-        try:        
-            tif = re.sub('^' + dataDir + '/', '', tif)
-            tif_fullpath = dataDir + '/' + tif;
-            proj = getproj(tif_fullpath)
-            modDate = getModDate(tif_fullpath)
-            nameform = re.sub(r'^.*/', '', tif)
-            #print nameform
-            #this conditional logic needs to be refactored out
-            if re.search(r'max|med', nameform):
-                colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
-            elif re.search(r'.img', fileExt):
-                colormapline   = ''
-            else:
-                colormapline   = 'INCLUDE "ewsold.cmap"'
-            group = groupName 
-            if re.search(r'.img', nameform):
-                layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
-            else:
-                #jdm 1/26 check for the occurace of bd after the last underscore
-                #this is the same layer but w/ a slightly diff algorithm on the remote
-                #sensing side of things.
-                if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
-                    layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
-                else:
-                    layerName = group + "_" + re.sub(r'_.*$', '', nameform)
-            layerTitle = tif
-            tifList.append({ 'TIF'             : tif,
-                             'PROJVALID'       : len(proj) > 0,
-                             'PROJ'            : formatproj(proj,10),
-                             'WKT'             : getwkt(tif_fullpath),
-                             'NAME'            : layerName,
-                             'GROUP'           : group,
-                             'DATA'            : dataDir + '/' + tif,
-                             'TITLE'           : layerTitle,
-                             'ABSTRACT'        : layerTitle,
-                             'COLORMAPLINE'    : colormapline
-                             })
-            layerTitles[layerName] = layerTitle
-        except:
-            print "except occured"
-            continue
-    layerTemplate = Template(layerTemplateName)
-    layers = ""
-    for tifdict in tifList:
-        if tifdict['PROJVALID']:
-            layers = layers + layerTemplate.render(tifdict)    
-    return layers
 
 
 ###
