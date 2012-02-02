@@ -32,6 +32,18 @@ try:
     for line in f:
         fields = re.split(r':', line.strip())
         layerTitles[fields[0]] = re.sub(r'^.*/([^/]+)$', '\\1', fields[1])
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("january", "jan")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("febuary", "feb")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("march", "mar")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("april", "apr")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("may", "may")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("june", "jun")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("july", "jul")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("august", "aug")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("september", "sep")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("october", "oct")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("november", "nov")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("december", "dec")
     f.close()
 except:
     print "Can't read file layerTitles.txt; you must run 'makemap' before running this script!"
