@@ -395,7 +395,7 @@
        layers="pestprox" 
        styles="default" 
        identify="true" 
-       name="Pest Proximity" 
+       name="EFETAC Pest Proximity (from ADS polygons, 2003-2010)" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=pestprox&VERSION=1.1.1&FORMAT=image/png"/>
   </wmsGroup>
   <!--
