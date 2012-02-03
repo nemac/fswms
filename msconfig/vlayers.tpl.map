@@ -77,7 +77,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-DATA "the_geom FROM (select pestproxshapes.pt_id, pestproxshapes.the_geom, pestproxshapes.gid, array_to_string(array_agg(coalesce(pestproxdata.agent || ' > yr: ' || pestproxdata.year || ' prob: ' || round(pestproxdata.prob,2) || ' host: ' || pestproxdata.host || ' metric1: ' || pestproxdata.metric1 || ' metric2: ' || pestproxdata.metric2 || ' count: ' || pestproxdata.count, 'no agents reported within 75km')), '\n') as AGENTS from pestproxshapes left outer join pestproxdata on pestproxshapes.pt_id=pestproxdata.pt_id group by pestproxshapes.pt_id, pestproxshapes.the_geom, pestproxshapes.gid) as new_table USING UNIQUE gid USING SRID=4326"
+DATA "the_geom FROM (select pestproxshapes.pt_id, pestproxshapes.the_geom, pestproxshapes.gid, array_to_string(array_agg(coalesce(pestproxdata.agent || ' > yr: ' || pestproxdata.year || ' prob: ' || round(pestproxdata.prob,2) || ' host: ' || pestproxdata.host || ' metric1: ' || round(pestproxdata.metric1,2) || ' metric2: ' || round(pestproxdata.metric2, 2) || ' count: ' || pestproxdata.count, 'no agents reported within 75km')), '\n') as AGENTS from pestproxshapes left outer join pestproxdata on pestproxshapes.pt_id=pestproxdata.pt_id group by pestproxshapes.pt_id, pestproxshapes.the_geom, pestproxshapes.gid) as new_table USING UNIQUE gid USING SRID=4326"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
