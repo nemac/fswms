@@ -132,7 +132,7 @@
 	 srs="EPSG:3785"
 	 layers="states"
 	 styles="default"
-	 identify="true"
+	 identify="false"
 	 name="State Boundaries"
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=states&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer

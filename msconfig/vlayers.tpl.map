@@ -77,20 +77,20 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-	DATA "the_geom FROM (select coordgrid_voronoi_polys.pt_id, coordgrid_voronoi_polys.the_geom, coordgrid_voronoi_polys.gid, array_to_string(array_agg(pestprox2_table.agent || ' year: ' || pestprox2_table.year || ' probability: ' || pestprox2_table.prob), ',') as Agents from coordgrid_voronoi_polys right outer join pestprox2_table on coordgrid_voronoi_polys.pt_id=pestprox2_table.pt_id group by coordgrid_voronoi_polys.pt_id, coordgrid_voronoi_polys.the_geom, coordgrid_voronoi_polys.gid) as new_table USING UNIQUE gid USING SRID=4326"
-
+	DATA "the_geom FROM (select coordgrid_voronoi_polys.pt_id, coordgrid_voronoi_polys.the_geom, coordgrid_voronoi_polys.gid, array_to_string(array_agg(coalesce(pestprox2_table.agent || ' > yr: ' || pestprox2_table.year || ' prob: ' || round(pestprox2_table.prob,2),'no agents reported within 75km')), '\n') as AGENTS from coordgrid_voronoi_polys left outer join pestprox2_table on coordgrid_voronoi_polys.pt_id=pestprox2_table.pt_id group by coordgrid_voronoi_polys.pt_id, coordgrid_voronoi_polys.the_geom, coordgrid_voronoi_polys.gid) as new_table USING UNIQUE gid USING SRID=4326"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
-        CLASS
-            NAME "pestprox"
+	CLASS
+            NAME "Pest_Proximity"
             STYLE
                 OUTLINECOLOR 0 0 0 
             END
         END
+	OPACITY 0
         METADATA
             "wms_title"          "pestprox"
             "wms_abstract"       "pestprox"
