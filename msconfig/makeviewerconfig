@@ -158,3 +158,9 @@ f.write(template.render( {
 			'RSAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : rsacModisChangeDetectionProductLayers
             }))
 f.close()
+
+if not os.path.exists("../html/cmapicons"):
+    os.makedirs("../html/cmapicons")
+
+os.system("cp -r cmapicons/* ../html/cmapicons")
+
