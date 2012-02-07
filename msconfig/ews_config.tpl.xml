@@ -2547,51 +2547,1096 @@
   </wmsGroup>
   
   <wmsGroup name="Drought_Monitor" label="Current Drought- US Drought Monitor" priorService="vegdri">
-    <wmsLayer 
-       lid="AHZ"
-       visible="false" 
-       url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm_current_wms.map&#38;#38;TRANSPARENT=true" 
-       srs="EPSG:900913" 
-       layers="usdm_current" 
-       styles="default"
-       
-       identify="false" 
-       name="Current Drought Monitor" 
-       legend="%(SERVER_URL)s/../msconfig/cmapicons/drought-monitor.png" />
-    <wmsLayer 
-       lid="AIA"
-       visible="false" 
-       url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120103_wms.map&#38;#38;TRANSPARENT=true" 
-       srs="EPSG:900913" 
-       layers="usdm120103" 
-       styles="default"
-       
-       identify="false" 
-       name="01/03/2012 Drought Monitor" 
-       legend="%(SERVER_URL)s/../msconfig/cmapicons/drought-monitor.png" />
-    <wmsLayer 
-       lid="AIB"
-       visible="false" 
-       url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111227_wms.map&#38;#38;TRANSPARENT=true" 
-       srs="EPSG:900913" 
-       layers="usdm111227" 
-       styles="default"
-       
-       identify="false" 
-       name="12/27/2011 Drought Monitor" 
-       legend="%(SERVER_URL)s/../msconfig/cmapicons/drought-monitor.png" />
-    <wmsLayer 
-       lid="AIC"
-       visible="false" 
-       url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111220_wms.map&#38;#38;TRANSPARENT=true" 
-       srs="EPSG:900913" 
-       layers="usdm111220" 
-       styles="default"
-       
-       identify="false" 
-       name="12/20/2011 Drought Monitor" 
-       legend="%(SERVER_URL)s/../msconfig/cmapicons/drought-monitor.png" />
+    <wmsSubgroup label="Current">
+	<wmsLayer 
+	   lid="AHZ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm_current_wms.map&#38;#38;TRANSPARENT=true" 
+	   srs="EPSG:900913" 
+	   layers="usdm_current" 
+	   styles="default"
+	   identify="false" 
+	   name="Current Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+    </wmsSubgroup>
+    <wmsSubgroup label="2012">
+	<wmsLayer 
+	   lid="AIA"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120103_wms.map&#38;#38;TRANSPARENT=true" 
+	   srs="EPSG:900913" 
+	   layers="usdm120103" 
+	   styles="default"
+	   identify="false" 
+	   name="01/03/2012 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+    </wmsSubgroup>
+    <wmsSubgroup label="2011">
+	<wmsLayer 
+	   lid="AIB"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101228_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101228&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101228" 
+	   styles="default"
+	   identify="false" 
+	   name="12/28/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="AIC"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101221_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101221&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101221" 
+	   styles="default"
+	   identify="false" 
+	   name="12/21/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFZ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111227_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111227&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111227" 
+	   styles="default"
+	   identify="false" 
+	   name="12/27/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BG"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111220_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111220&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111220" 
+	   styles="default"
+	   identify="false" 
+	   name="12/20/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGA"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111213_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111213&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111213" 
+	   styles="default"
+	   identify="false" 
+	   name="12/13/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGB"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111206_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111206&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111206" 
+	   styles="default"
+	   identify="false" 
+	   name="12/6/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGC"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111129_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111129&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111129" 
+	   styles="default"
+	   identify="false" 
+	   name="11/29/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGD"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111122_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111122&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111122" 
+	   styles="default"
+	   identify="false" 
+	   name="11/22/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGE"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111115_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111115&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111115" 
+	   styles="default"
+	   identify="false" 
+	   name="11/15/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGF"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111108_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111108&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111108" 
+	   styles="default"
+	   identify="false" 
+	   name="11/8/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGG"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111101_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111101&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111101" 
+	   styles="default"
+	   identify="false" 
+	   name="11/1/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGH"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111025_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111025&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111025" 
+	   styles="default"
+	   identify="false" 
+	   name="10/25/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGI"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111018_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111018&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111018" 
+	   styles="default"
+	   identify="false" 
+	   name="10/18/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGJ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111011_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111011&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111011" 
+	   styles="default"
+	   identify="false" 
+	   name="10/11/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGH"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm111004_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm111004&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm111004" 
+	   styles="default"
+	   identify="false" 
+	   name="10/4/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGI"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110927_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110927&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110927" 
+	   styles="default"
+	   identify="false" 
+	   name="9/27/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGJ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110920_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110920&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110920" 
+	   styles="default"
+	   identify="false" 
+	   name="9/20/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGK"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110913_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110913&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110913" 
+	   styles="default"
+	   identify="false" 
+	   name="9/13/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGL"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110906_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110906&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110906" 
+	   styles="default"
+	   identify="false" 
+	   name="9/6/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGM"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110830_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110830&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110830" 
+	   styles="default"
+	   identify="false" 
+	   name="8/30/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGN"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110823_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110823&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110823" 
+	   styles="default"
+	   identify="false" 
+	   name="8/23/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGO"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110816_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110816&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110816" 
+	   styles="default"
+	   identify="false" 
+	   name="8/16/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGP"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110809_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110809&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110809" 
+	   styles="default"
+	   identify="false" 
+	   name="8/9/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGQ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110802_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110802&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110802" 
+	   styles="default"
+	   identify="false" 
+	   name="8/2/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGR"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110726_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110726&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110726" 
+	   styles="default"
+	   identify="false" 
+	   name="7/26/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGS"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110719_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110719&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110719" 
+	   styles="default"
+	   identify="false" 
+	   name="7/19/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGT"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110712_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110712&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110712" 
+	   styles="default"
+	   identify="false" 
+	   name="7/12/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGT"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110705_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110705&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110705" 
+	   styles="default"
+	   identify="false" 
+	   name="7/5/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGU"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110628_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110628&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110628" 
+	   styles="default"
+	   identify="false" 
+	   name="6/28/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGV"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110621_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110621&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110621" 
+	   styles="default"
+	   identify="false" 
+	   name="6/21/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGW"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110614_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110614&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110614" 
+	   styles="default"
+	   identify="false" 
+	   name="6/14/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGX"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110607_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110607&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110607" 
+	   styles="default"
+	   identify="false" 
+	   name="6/7/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGY"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110531_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110531&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110531" 
+	   styles="default"
+	   identify="false" 
+	   name="5/31/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BGZ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110524_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110524&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110524" 
+	   styles="default"
+	   identify="false" 
+	   name="5/24/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BH"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110517_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110517&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110517" 
+	   styles="default"
+	   identify="false" 
+	   name="5/17/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHA"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110510_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110510&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110510" 
+	   styles="default"
+	   identify="false" 
+	   name="5/10/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHB"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110503_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110503&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110503" 
+	   styles="default"
+	   identify="false" 
+	   name="5/3/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHC"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110426_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110426&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110426" 
+	   styles="default"
+	   identify="false" 
+	   name="4/26/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHD"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110419_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110419&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110419" 
+	   styles="default"
+	   identify="false" 
+	   name="4/19/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHE"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110412_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110412&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110412" 
+	   styles="default"
+	   identify="false" 
+	   name="4/12/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHF"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110405_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110405&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110405" 
+	   styles="default"
+	   identify="false" 
+	   name="4/5/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHG"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110329_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110329&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110329" 
+	   styles="default"
+	   identify="false" 
+	   name="3/29/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHH"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110322_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110322&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110322" 
+	   styles="default"
+	   identify="false" 
+	   name="3/22/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHI"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110315_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110315&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110315" 
+	   styles="default"
+	   identify="false" 
+	   name="3/15/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHJ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110308_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110308&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110308" 
+	   styles="default"
+	   identify="false" 
+	   name="3/8/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHK"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110301_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110301&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110301" 
+	   styles="default"
+	   identify="false" 
+	   name="3/1/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHL"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110222_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110222&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110222" 
+	   styles="default"
+	   identify="false" 
+	   name="2/22/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHM"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110215_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110215&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110215" 
+	   styles="default"
+	   identify="false" 
+	   name="2/15/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHN"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110208_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110208&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110208" 
+	   styles="default"
+	   identify="false" 
+	   name="2/8/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHO"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110201_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110201&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110201" 
+	   styles="default"
+	   identify="false" 
+	   name="2/1/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHP"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110125_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110125&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110125" 
+	   styles="default"
+	   identify="false" 
+	   name="1/25/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHQ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110118_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110118&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110118" 
+	   styles="default"
+	   identify="false" 
+	   name="1/18/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHR"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110111_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110111&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110111" 
+	   styles="default"
+	   identify="false" 
+	   name="1/11/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BHS"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm110104_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm110104&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm110104" 
+	   styles="default"
+	   identify="false" 
+	   name="1/4/2011 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+    </wmsSubgroup>
+    <wmsSubgroup label="2010">
+	<wmsLayer 
+	   lid="BE"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101228_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101228&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101228" 
+	   styles="default"
+	   identify="false" 
+	   name="12/28/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEB"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101221_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101221&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101221" 
+	   styles="default"
+	   identify="false" 
+	   name="12/21/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEC"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101214_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101214&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101214" 
+	   styles="default"
+	   identify="false" 
+	   name="12/14/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BED"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101207_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101207&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101207" 
+	   styles="default"
+	   identify="false" 
+	   name="12/7/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEE"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101130_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101130&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101130" 
+	   styles="default"
+	   identify="false" 
+	   name="11/30/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEF"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101123_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101123&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101123" 
+	   styles="default"
+	   identify="false" 
+	   name="11/23/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEG"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101116_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101116&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101116" 
+	   styles="default"
+	   identify="false" 
+	   name="11/16/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEH"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101109_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101109&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101109" 
+	   styles="default"
+	   identify="false" 
+	   name="11/9/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEI"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101102_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101102&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101102" 
+	   styles="default"
+	   identify="false" 
+	   name="11/2/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEJ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101026_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101026&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101026" 
+	   styles="default"
+	   identify="false" 
+	   name="10/26/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEK"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101019_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101019&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101019" 
+	   styles="default"
+	   identify="false" 
+	   name="10/19/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEL"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101012_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101012&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101012" 
+	   styles="default"
+	   identify="false" 
+	   name="10/12/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEM"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm101005_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm101005&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm101005" 
+	   styles="default"
+	   identify="false" 
+	   name="10/5/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEN"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100928_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100928&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100928" 
+	   styles="default"
+	   identify="false" 
+	   name="9/28/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEO"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100921_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100921&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100921" 
+	   styles="default"
+	   identify="false" 
+	   name="9/21/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEP"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100914_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100914&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100914" 
+	   styles="default"
+	   identify="false" 
+	   name="9/14/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEQ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100907_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100907&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100907" 
+	   styles="default"
+	   identify="false" 
+	   name="9/7/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BER"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100831_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100831&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100831" 
+	   styles="default"
+	   identify="false" 
+	   name="8/31/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BES"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100824_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100824&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100824" 
+	   styles="default"
+	   identify="false" 
+	   name="8/24/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BET"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100817_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100817&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100817" 
+	   styles="default"
+	   identify="false" 
+	   name="8/17/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEU"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100810_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100810&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100810" 
+	   styles="default"
+	   identify="false" 
+	   name="8/10/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEV"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100803_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100803&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100803" 
+	   styles="default"
+	   identify="false" 
+	   name="8/3/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEW"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100727_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100727&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100727" 
+	   styles="default"
+	   identify="false" 
+	   name="7/27/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEX"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100720_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100720&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100720" 
+	   styles="default"
+	   identify="false" 
+	   name="7/20/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEY"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100713_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100713&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100713" 
+	   styles="default"
+	   identify="false" 
+	   name="7/13/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BEZ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100706_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100706&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100706" 
+	   styles="default"
+	   identify="false" 
+	   name="7/6/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BF"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100629_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100629&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100629" 
+	   styles="default"
+	   identify="false" 
+	   name="6/29/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFA"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100622_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100622&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100622" 
+	   styles="default"
+	   identify="false" 
+	   name="6/22/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFB"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100615_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100615&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100615" 
+	   styles="default"
+	   identify="false" 
+	   name="6/15/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFC"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100608_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100608&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100608" 
+	   styles="default"
+	   identify="false" 
+	   name="6/8/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFD"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100601_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100601&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100601" 
+	   styles="default"
+	   identify="false" 
+	   name="6/1/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFE"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100525_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100525&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100525" 
+	   styles="default"
+	   identify="false" 
+	   name="5/25/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFF"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100518_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100518&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100518" 
+	   styles="default"
+	   identify="false" 
+	   name="5/18/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFG"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100511_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100511&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100511" 
+	   styles="default"
+	   identify="false" 
+	   name="5/11/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFH"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100504_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100504&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100504" 
+	   styles="default"
+	   identify="false" 
+	   name="5/4/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFI"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100427_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100427&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100427" 
+	   styles="default"
+	   identify="false" 
+	   name="4/27/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFJ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100420_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100420&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100420" 
+	   styles="default"
+	   identify="false" 
+	   name="4/20/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFK"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100413_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100413&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100413" 
+	   styles="default"
+	   identify="false" 
+	   name="4/13/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFL"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100406_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100406&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100406" 
+	   styles="default"
+	   identify="false" 
+	   name="4/6/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFM"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100330_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100330&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100330" 
+	   styles="default"
+	   identify="false" 
+	   name="3/30/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFN"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100323_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100323&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100323" 
+	   styles="default"
+	   identify="false" 
+	   name="3/23/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFO"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100316_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100316&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100316" 
+	   styles="default"
+	   identify="false" 
+	   name="3/16/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFP"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100309_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100309&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100309" 
+	   styles="default"
+	   identify="false" 
+	   name="3/9/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFQ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100302_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100302&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100302" 
+	   styles="default"
+	   identify="false" 
+	   name="3/2/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFR"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100223_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100223&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100223" 
+	   styles="default"
+	   identify="false" 
+	   name="2/23/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFS"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100216_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100216&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100216" 
+	   styles="default"
+	   identify="false" 
+	   name="2/16/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFT"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100209_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100209&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100209" 
+	   styles="default"
+	   identify="false" 
+	   name="2/9/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFU"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100202_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100202&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100202" 
+	   styles="default"
+	   identify="false" 
+	   name="2/2/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFV"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100126_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100126&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100126" 
+	   styles="default"
+	   identify="false" 
+	   name="1/26/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFW"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100119_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100119&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100119" 
+	   styles="default"
+	   identify="false" 
+	   name="1/19/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFX"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100112_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100112&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100112" 
+	   styles="default"
+	   identify="false" 
+	   name="1/12/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BFY"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm100105_wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=usdm100105&WIDTH=640&HEIGHT=480&srs=EPSG:4326&styles=default&format=image/png&bbox=-165,15,-60,80&TRANSPARENT=true"
+	   srs="EPSG:900913" 
+	   layers="usdm100105" 
+	   styles="default"
+	   identify="false" 
+	   name="1/5/2010 Drought Monitor" 
+	   legend="http://dev.nemac.org/~derek/fswms/html/../msconfig/cmapicons/drought-monitor.png" />
+    </wmsSubgroup>
   </wmsGroup>
+
 
   <wmsGroup name="US_Climate" label="Other Weather and Climate" >
     <wmsSubgroup label="Weather">
