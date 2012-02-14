@@ -2,6 +2,8 @@
 
 import re, os, sys, subprocess
 
+os.environ['PYTHONPATH'] = '/usr/local/lib64/python2.6/site-packages'
+
 #
 # The deployment directory, where the production version of fswms is deployed:
 #
@@ -263,9 +265,9 @@ elif command == "deploy":
         os.system("./fswms deploy-dir %s %s" % (DEPLOY_DIR,tag))
     print "running %s/msconfig/fscron..." % DEPLOY_DIR
     if os.environ['HOSTNAME'] == "rain":
-        os.system("cd %s/msconfig ; sudo su fswms PYTHONPATH=/usr/local/lib64/python2.6/site-packages ./fscron" % DEPLOY_DIR)
+        os.system("cd %s/msconfig ; sudo su fswms ./fscron" % DEPLOY_DIR)
     else:
-        os.system("cd %s/msconfig ; PYTHONPATH=/usr/local/lib64/python2.6/site-packages ./fscron" % DEPLOY_DIR)
+        os.system("cd %s/msconfig ; ./fscron" % DEPLOY_DIR)
     print "cleaning up..."
     os.system("/bin/rm -rf .stage")
     print "done."
