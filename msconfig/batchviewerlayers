@@ -1,0 +1,167 @@
+#! /usr/bin/python
+import os, re, gd
+
+#Begin category1----------------------------------------------------
+layers = [{'layerid' : 'RSAC-FHTET_20100617' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100617_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20100703' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100703_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20100711' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100711_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20100719' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100719_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20100727' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100727_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20100812' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100812_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20100820' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100820_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20100828' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100828_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20100905' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100905_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20100913' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100913_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20100921' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100921_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20100929' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20100929_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20101007' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20101007_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20101015' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20101015_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20101023' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20101023_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20101031' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20101031_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20101108' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20101108_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110414' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110414_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110414' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110414_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110422' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110422_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110422' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110422_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110430' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110430_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110430' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110430_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110508' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110508_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110508' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110508_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110516' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110516_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110516' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110516_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110524' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110524_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110524' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110524_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110601' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110601_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110601' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110601_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110609' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110609_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110609' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110609_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110617' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110617_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110617' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110617_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110625' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110625_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110703' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110703_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110711' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110711_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110711' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110711_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110711bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110711_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110711' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110711_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110711bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110711_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110719' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110719_16.tif'},
+		{'layerid' : 'RSAC-FHTET_20110719' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110719_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110719bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110719_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110719' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110719_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110719bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110719_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110727' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110727_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110727bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110727_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110727' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110727_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110727bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110727_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110804' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110804_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110804bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110804_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110804' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110804_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110804bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110804_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110812' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110812_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110812bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110812_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110812' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110812_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110812bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110812_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110820' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110820_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110820bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110820_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110820' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110820_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110820bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110820_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110828' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110828_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110828bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110828_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110828' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110828_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110828bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110828_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110905' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110905_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110905bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110905_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110905' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110905_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110905bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110905_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110913' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110913_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110913bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110913_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110913' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110913_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110913bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110913_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110921' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110921_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110921bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110921_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110921' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110921_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110921bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110921_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110929' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110929_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110929bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110929_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20110929' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110929_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20110929bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20110929_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20111007' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111007_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20111007bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111007_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20111007' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111007_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20111007bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111007_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20111015' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111015_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20111015bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111015_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20111015' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111015_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20111015bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111015_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20111023' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111023_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20111023bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111023_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20111023' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111023_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20111023bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111023_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20111031' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111031_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20111031bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111031_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20111031' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111031_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20111031bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111031_16_5yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20111108' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111108_16_3yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20111108bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111108_16_3yr_bd.tif'},
+		{'layerid' : 'RSAC-FHTET_20111108' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111108_16_5yr.tif'},
+		{'layerid' : 'RSAC-FHTET_20111108bd' , 'data' : '/flood/fsdata/rsac_fhtet/ews/20111108_16_5yr_bd.tif'}]
+
+def next_lid(s):
+    strip_zs = s.rstrip('Z')
+    if strip_zs:
+        return strip_zs[:-1] + chr(ord(strip_zs[-1]) + 1) + 'A' * (len(s) - len(strip_zs))
+    else:
+        return 'A' * (len(s) + 1)
+
+
+fo1 = open("1yr.txt", "w")
+fo3 = open("3yr.txt", "w")
+fo5 = open("5yr.txt", "w")
+start_lid = 'BJH'
+
+for lid  in layers:
+    print lid['layerid']
+    string = lid['data']
+    if '3yr' in string:
+        print '3'
+        fo3.write("\t<wmsLayer\n")
+        fo3.write("\t\tlid=\""+next_lid(start_lid)+"\"\n")
+        fo3.write("\t\tvisible=\"false\"\n")
+        fo3.write("\t\turl=\"%(SERVER_URL)s/ews?TRANSPARENT=true\"\n")
+        fo3.write("\t\tsrs=\"EPSG:3785\"\n")
+        fo3.write("\t\tlayers=\""+lid['layerid']+"\"\n")
+        fo3.write("\t\tstyles=\"default\"\n")
+        fo3.write("\t\tname=\""+lid['layerid']+"\"\n")
+        fo3.write("\t\tidentify=\"true\"\n")
+        fo3.write("\t\tlegend=\"%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png\"/>\n")
+        start_lid = next_lid(start_lid)
+    elif '5yr' in string:
+        print '5'
+        fo5.write("\t<wmsLayer\n")
+        fo5.write("\t\tlid=\""+next_lid(start_lid)+"\"\n")
+        fo5.write("\t\tvisible=\"false\"\n")
+        fo5.write("\t\turl=\"%(SERVER_URL)s/ews?TRANSPARENT=true\"\n")
+        fo5.write("\t\tsrs=\"EPSG:3785\"\n")
+        fo5.write("\t\tlayers=\""+lid['layerid']+"\"\n")
+        fo5.write("\t\tstyles=\"default\"\n")
+        fo5.write("\t\tname=\""+lid['layerid']+"\"\n")
+        fo5.write("\t\tidentify=\"true\"\n")
+        fo5.write("\t\tlegend=\"%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png\"/>\n")
+        start_lid = next_lid(start_lid)
+    else:
+        print '1'
+        fo1.write("\t<wmsLayer\n")
+        fo1.write("\t\tlid=\""+next_lid(start_lid)+"\"\n")
+        fo1.write("\t\tvisible=\"false\"\n")
+        fo1.write("\t\turl=\"%(SERVER_URL)s/ews?TRANSPARENT=true\"\n")
+        fo1.write("\t\tsrs=\"EPSG:3785\"\n")
+        fo1.write("\t\tlayers=\""+lid['layerid']+"\"\n")
+        fo1.write("\t\tstyles=\"default\"\n")
+        fo1.write("\t\tname=\""+lid['layerid']+"\"\n")
+        fo1.write("\t\tidentify=\"true\"\n")
+        fo1.write("\t\tlegend=\"%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png\"/>\n")
+        start_lid = next_lid(start_lid)
+fo1.close
+fo3.close
+fo5.close
+

@@ -455,6 +455,7 @@ template = Template("ewstruecolor.tpl.map")
 f_new = open("ewstruecolor.map", "w")
 SERVICE_NAME = "ewstruecolor"
 WCS_LABEL = "Truecolor WCS"
+print LAYERS
 f_new.write( template.render( {
             'DATA_DIR'              : DATA_DIR,
             'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "ewstruecolor"),
