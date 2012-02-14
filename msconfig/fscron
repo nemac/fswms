@@ -5,6 +5,8 @@
 ###  it simply runs fileprocessor and then makmap.
 ###
 
+export PYTHONPATH=/usr/local/lib64/python2.6/site-packages
+
 ./fileprocessor
 
 ./makemap > ../logs/makemap.log  2>&1
