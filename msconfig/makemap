@@ -288,32 +288,37 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
         proj = getproj(tif_fullpath)
         modDate = getModDate(tif_fullpath)
         nameform = re.sub(r'^.*/', '', tif)
-        group = "RSAC-FHTET"
-        group_abstract = "Layers uploaded by RSAC-FHTET"
-        colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
-        colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
-        keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
-        if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
-            layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
-        else:
-            layerName = group + "_" + re.sub(r'_.*$', '', nameform)
-        layerTitle = tif
-        tiflist.append({ 'TIF'             : tif,
-                         'PROJVALID'       : len(proj) > 0,
-                         'PROJ'            : formatproj(proj,10),
-                         'WKT'             : getwkt(tif_fullpath),
-                         'NAME'            : layerName,
-                         'GROUP'           : group,
-                         'DATA'            : ARCHIVE_DIR + '/' + tif,
-                         'GROUP_ABSTRACT'  : group_abstract,
-                         'TITLE'           : layerTitle,
-                         'ABSTRACT'        : layerTitle,
-                         'COLORMAPFILE'    : colormapfile,
-                         'COLORMAPCSV'     : colormapcsv,
-                         'KEYIMAGE'        : keyimage,
-                         'MODDATE'	   : modDate
-                         })
-        layerTitles[layerName] = layerTitle
+        if ('3yr') in nameform or ('5yr') in nameform:
+            group = "RSAC-FHTET"
+            group_abstract = "Layers uploaded by RSAC-FHTET"
+            colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
+            colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
+            keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
+            if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
+                layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
+            else:
+                layerName = group + "_" + re.sub(r'_.*$', '', nameform)
+            if '3yr' in nameform:
+                layerName = layerName + "3yr"
+            else:
+                layerName = layerName + "5yr"
+            layerTitle = tif
+            tiflist.append({ 'TIF'             : tif,
+                             'PROJVALID'       : len(proj) > 0,
+                             'PROJ'            : formatproj(proj,10),
+                             'WKT'             : getwkt(tif_fullpath),
+                             'NAME'            : layerName,
+                             'GROUP'           : group,
+                             'DATA'            : ARCHIVE_DIR + '/' + tif,
+                             'GROUP_ABSTRACT'  : group_abstract,
+                             'TITLE'           : layerTitle,
+                             'ABSTRACT'        : layerTitle,
+                             'COLORMAPFILE'    : colormapfile,
+                             'COLORMAPCSV'     : colormapcsv,
+                             'KEYIMAGE'        : keyimage,
+                             'MODDATE'	   : modDate
+                             })
+            layerTitles[layerName] = layerTitle	
     except:
         print 'except occured'
         continue
@@ -455,7 +460,7 @@ template = Template("ewstruecolor.tpl.map")
 f_new = open("ewstruecolor.map", "w")
 SERVICE_NAME = "ewstruecolor"
 WCS_LABEL = "Truecolor WCS"
-print LAYERS
+#print LAYERS
 f_new.write( template.render( {
             'DATA_DIR'              : DATA_DIR,
             'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "ewstruecolor"),
