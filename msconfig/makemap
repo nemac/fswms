@@ -152,6 +152,17 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt):
             layers = layers + layerTemplate.render(tifdict)    
     return layers
 
+mapfilesWritten = []
+
+###
+### This function simply opens a file for writing, and appends the name of the file
+### to the mapfilesWritten array, which is used at the bottom of this script to
+### write the index.html file with the list of all the WMS addresses.
+###
+def openMapfileForWriting(filename):
+    mapfilesWritten.append(filename)
+    return open(filename, "w");
+
 ### Begining of run-time code -----------------------------------------------------
 
 ###
@@ -341,7 +352,7 @@ for tifdict in tiflist:
 ###
 mapTemplate = Template("ews.map.tmpl")
 SERVICE_NAME = "ews"
-f_new = open("ews.map", "w")
+f_new = openMapfileForWriting("ews.map")
 f_new.write( mapTemplate.render( {
             'LAYERS'                  : LAYERS,
 #            'EPSG'                   : "3785",
@@ -359,7 +370,7 @@ f_new.write( mapTemplate.render( {
             } ) )
 f_new.close()
 
-f_new = open("ewswgs84.map", "w")
+f_new = openMapfileForWriting("ewswgs84.map")
 SERVICE_NAME = "ewswgs84"
 f_new.write( mapTemplate.render( {
             'LAYERS'                  : LAYERS,
@@ -378,7 +389,7 @@ f_new.write( mapTemplate.render( {
             } ) )
 f_new.close()
 
-f_new = open("ewswcs.map", "w")
+f_new = openMapfileForWriting("ewswcs.map")
 SERVICE_NAME = "ewswcs"
 f_new.write( mapTemplate.render( {
             'LAYERS'                  : LAYERS,
@@ -403,7 +414,7 @@ f_new.close()
 ###
 LAYERS = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif")
 template = Template("ews_gen.tpl.map")
-f_new = open("ews1year.map", "w")
+f_new = openMapfileForWriting("ews1year.map")
 SERVICE_NAME = "ews1year"
 WCS_LABEL = "EWS 1Year"
 f_new.write( template.render( {
@@ -430,7 +441,7 @@ f_new.close()
 ###
 LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif")
 template = Template("ews_gen.tpl.map")
-f_new = open("ews3year.map", "w")
+f_new = openMapfileForWriting("ews3year.map")
 SERVICE_NAME = "ews3year"
 WCS_LABEL = "EWS 3Year"
 f_new.write( template.render( {
@@ -457,7 +468,7 @@ f_new.close()
 ###
 LAYERS = getLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "ews_gen.layer.tpl.map", "EFETAC-NASA_TC", ".img")
 template = Template("ewstruecolor.tpl.map")
-f_new = open("ewstruecolor.map", "w")
+f_new = openMapfileForWriting("ewstruecolor.map")
 SERVICE_NAME = "ewstruecolor"
 WCS_LABEL = "Truecolor WCS"
 #print LAYERS
@@ -484,7 +495,7 @@ f_new.close()
 ### Create the vlayers.map file:
 ###
 template = Template("vlayers.tpl.map")
-f_new = open("vlayers.map", "w")
+f_new = openMapfileForWriting("vlayers.map")
 f_new.write( template.render( {
             'DATA_DIR'     : DATA_DIR,
             'POSTGIS_CONNECTION_STRING' : POSTGIS_CONNECTION_STRING,
@@ -496,7 +507,7 @@ f_new.close()
 ### Create the derivatives.map file:
 ###
 template = Template("derivatives.tpl.map")
-f_new = open("derivatives.map", "w")
+f_new = openMapfileForWriting("derivatives.map")
 f_new.write( template.render( {
             'DATA_DIR'     : DATA_DIR,
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "derivatives")
@@ -507,7 +518,7 @@ f_new.close()
 ### Create the modisndvi.map file:
 ###
 template = Template("modisndvi.tpl.map")
-f_new = open("modisndvi.map", "w")
+f_new = openMapfileForWriting("modisndvi.map")
 f_new.write( template.render( {
             'DATA_DIR'     : DATA_DIR,
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "modisndvi")
@@ -518,7 +529,7 @@ f_new.close()
 ### Create the parameters.map file:
 ###
 template = Template("parameters.tpl.map")
-f_new = open("parameters.map", "w")
+f_new = openMapfileForWriting("parameters.map")
 f_new.write( template.render( {
             'DATA_DIR'     : DATA_DIR,
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "parameters")
@@ -529,7 +540,7 @@ f_new.close()
 ### Create the integrals.map file:
 ###
 template = Template("integrals.tpl.map")
-f_new = open("integrals.map", "w")
+f_new = openMapfileForWriting("integrals.map")
 f_new.write( template.render( {
             'DATA_DIR'     : DATA_DIR,
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "integrals")
@@ -540,7 +551,7 @@ f_new.close()
 ### Create the rlayers.map file:
 ###
 template = Template("rlayers.tpl.map")
-f_new = open("rlayers.map", "w")
+f_new = openMapfileForWriting("rlayers.map")
 f_new.write( template.render( {
             'DATA_DIR'     : DATA_DIR,
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "rlayers")
@@ -551,7 +562,7 @@ f_new.close()
 ### Create the wlayers.map file:
 ###
 template = Template("wlayers.tpl.map")
-f_new = open("wlayers.map", "w")
+f_new = openMapfileForWriting("wlayers.map")
 f_new.write( template.render( {
             'DATA_DIR'     : DATA_DIR,
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "wlayers")
@@ -583,34 +594,19 @@ FSWMS_VERSION = subprocess.Popen(['../version'], stdout=subprocess.PIPE).communi
 f_out = open("../html/index.html", "w");
 f_out.write(interp("""
 <table width="100%"><tr>
-<td align="left">This is FSWMS version #{FSWMS_VERSION}.</td>
+<td align="left">This is ForWarn version #{FSWMS_VERSION}.</td>
 <td align="right">Viewer: <a href="view/index.html">view/index.html</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Config file: <a href="view/config/ews_config.xml">view/config/ews_config.xml</a></td>
 </tr></table>
 <p>
-WMS addresses are:
+ForWarn WMS addresses are:
 <ul>
-<li><a href="#{SERVER_URL}/ews">#{SERVER_URL}/ews</a> (WebMercator projection) [ <a href="#{SERVER_URL}/ews?SERVICE=WMS&REQUEST=GetCapabilities">GetCapabilities</a> ] [ <a href="ews.map">mapfile</a> ]
-<li><a href="#{SERVER_URL}/ewswgs84">#{SERVER_URL}/ewswgs84</a> (WGS 84) [ <a href="#{SERVER_URL}/ewswgs84?SERVICE=WMS&REQUEST=GetCapabilities">GetCapabilities</a> ] [ <a href="ewswgs84.map">mapfile</a> ]
-</ul>
-<p>
-WCS address is:
-<ul>
-<li><a href="#{SERVER_URL}/ewswcs">#{SERVER_URL}/ewscs</a> (EPSG 2163) [ <a href="#{SERVER_URL}/ewswcs?SERVICE=WCS&REQUEST=GetCapabilities">GetCapabilities</a> ] [ <a href="ewswcs.map">mapfile</a> ]
-</ul>
-<p>
-Currently uploaded layers are:
-"""
-))
-f_out.write("<ul>\n");
-for tifdict in tiflist:
-    if not tifdict['PROJVALID']:
-        f_out.write("<p><li>%(TIF)s:<br>\nThis data file does not contain projection metadata and therefore cannot be used; it has been omitted from WMS.\n" % tifdict)
-    else:
-        f_out.write(interp("""<p><li>%(NAME)s:<br>
-file:&nbsp;&nbsp;%(TIF)s<br>
-%(WKT)s<br>
-<font size="-1"><a href="#{SERVER_URL}/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=%(NAME)s&VERSION=1.1.1&FORMAT=image/png"><img align="bottom" src="#{SERVER_URL}/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=%(NAME)s&VERSION=1.1.1&FORMAT=image/png" border="0"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;<a href="#{SERVER_URL}/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=%(NAME)s&VERSION=1.1.1&FORMAT=image/png">WMS GetLegendGraphic</a>&nbsp;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Color Map CSV File: <a href="%(COLORMAPCSV)s">%(COLORMAPCSV)s</a></font><br>
-Last Modified: %(MODDATE)s
-""") % tifdict)
+"""))
+
+for mapfile in mapfilesWritten:
+    service = re.sub(r'\.map$', '', mapfile)
+    f_out.write(interp("""<li><a href="#{SERVER_URL}/%(SERVICE)s">#{SERVER_URL}/%(SERVICE)s</a> [ <a href="#{SERVER_URL}/%(SERVICE)s?SERVICE=WMS&REQUEST=GetCapabilities">GetCapabilities</a> ]\n""" %
+                       { "SERVICE" : service }))
+
+f_out.write(interp("""</ul>\n"""))
 
 f_out.close()
