@@ -112,7 +112,7 @@
   </mapviews>
 
 <wmsLayers>
-  <wmsGroup name="US_Jurisdictions" label="Political Boundaries and Roads" priorService="vegdri">
+  <wmsGroup gid="G01" name="US_Jurisdictions" label="Political Boundaries and Roads" priorService="vegdri">
     <wmsSubgroup label="Boundaries">
       <wmsLayer
 	 lid="AAA"
@@ -178,7 +178,7 @@
     </wmsSubgroup>
   </wmsGroup>
 
-  <wmsGroup name="US_Fire" label="Wildfires" priorService="vegdri">
+  <wmsGroup gid="G02" name="US_Fire" label="Wildfires" priorService="vegdri">
     <wmsSubgroup label="Current/NRT Wildfire Detections">
       <wmsLayer 
 	 lid="AAG"
@@ -315,7 +315,7 @@
     </wmsSubgroup>
   </wmsGroup>
 
-  <wmsGroup name="US_FHM_ADS" label="Historical Aerial Disturbance Surveys (USFS FHM)" priorService="vegdri">
+  <wmsGroup gid="G03" name="US_FHM_ADS" label="Historical Aerial Disturbance Surveys (USFS FHM)" priorService="vegdri">
     <wmsLayer 
        lid="AAS"
        visible="false" 
@@ -401,10 +401,10 @@
      Note: New as of Jan 15, 2012:
      The phrase
      selected="true"
-     may appear on one (but only one) <wmsGroup> tag, and indicates that the viewer should be initialized with that accordian group
+     may appear on one (but only one) <wmsGroup>  tag, and indicates that the viewer should be initialized with that accordian group
      initially open.
     -->
-  <wmsGroup name="MODIS_Change_Detection_Products" label="Forest Disturbance Detection Maps (MODIS NRT)" priorService="vegdri" selected="true">
+  <wmsGroup gid="G04" name="MODIS_Change_Detection_Products" label="Forest Disturbance Detection Maps (MODIS NRT)" priorService="vegdri" selected="true">
     <wmsSubgroup label="Forest NDVI Change (USFS TACs-NASA)">
     </wmsSubgroup>
     %(TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
@@ -413,7 +413,7 @@
     %(RSAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
   </wmsGroup>
 
-  <wmsGroup name="Archived_NRT" label="Archived Forest Disturbance Detection Maps" priorService="vegdri">
+  <wmsGroup gid="G05" name="Archived_NRT" label="Archived Forest Disturbance Detection Maps" priorService="vegdri">
     <wmsSubgroup label="Archived NRT 1-Year Baseline (TACs-NASA)">
       <wmsLayer 
 	 lid="AAZ"
@@ -2642,7 +2642,7 @@
     </wmsSubgroup>
   </wmsGroup>
   
-  <wmsGroup name="MODISCloud" label="eMODIS Cloud Assessment Products" priorService="vegdri">	
+  <wmsGroup gid="G06" name="MODISCloud" label="eMODIS Cloud Assessment Products" priorService="vegdri">	
     <wmsLayer 
        lid="AHQ"
        visible="false" 
@@ -2824,7 +2824,7 @@
        name="True Color 20120201_24" 
        legend=""/>
   </wmsGroup>
-  <wmsGroup name="Archived_NRT" label="Archived RSAC-FHTET Forest Change Disturbance" priorService="vegdri">
+  <wmsGroup gid="G07" name="Archived_NRT" label="Archived RSAC-FHTET Forest Change Disturbance" priorService="vegdri">
     <wmsSubgroup label="Archived 3-Year Baseline (RSAC-FHTET)">
 	<wmsLayer
 		lid="BJT"
@@ -3580,7 +3580,7 @@
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>    
     </wmsSubgroup>
   </wmsGroup>
-  <wmsGroup name="Drought_Monitor" label="Current Drought- US Drought Monitor" priorService="vegdri">
+  <wmsGroup gid="G08" name="Drought_Monitor" label="Current Drought- US Drought Monitor" priorService="vegdri">
     <wmsSubgroup label="Current">
 	<wmsLayer 
 	   lid="AHZ"
@@ -4672,7 +4672,7 @@
   </wmsGroup>
 
 
-  <wmsGroup name="US_Climate" label="Other Weather and Climate" >
+  <wmsGroup gid="G09" name="US_Climate" label="Other Weather and Climate" >
     <wmsSubgroup label="Weather">
       <wmsLayer
 	 lid="AID"
@@ -4749,7 +4749,7 @@
     </wmsSubgroup>
   </wmsGroup>
   
-  <wmsGroup name="US_Physiographic" label="Physiographic Maps" >
+  <wmsGroup gid="G10" name="US_Physiographic" label="Physiographic Maps" >
     <wmsSubgroup label="Elevation Products">
       <wmsLayer 
 	 lid="AII"
@@ -4890,7 +4890,7 @@
     </wmsSubgroup>
   </wmsGroup>
   
-  <wmsGroup name="EWS_Derived_Products" label="MODIS Phenology Derived Products" >
+  <wmsGroup gid="G11" name="EWS_Derived_Products" label="MODIS Phenology Derived Products" >
     <wmsSubgroup label="Phenology- Derived Products 2009">
       <wmsLayer 
 	 lid="AIT"
@@ -5911,7 +5911,7 @@
     </wmsSubgroup>
   </wmsGroup>
   
-  <wmsGroup name="EWS_Parameters" label="MODIS Phenological Parameters" >
+  <wmsGroup gid="G12" name="EWS_Parameters" label="MODIS Phenological Parameters" >
     <wmsSubgroup label="Phenology Parameters- 2009">
       <wmsLayer 
 	 lid="AMP"
@@ -7118,7 +7118,7 @@
     </wmsSubgroup>
   </wmsGroup>
   
-  <wmsGroup name="EWS_Integrals" label="MODIS Cumulative Integrals" >
+  <wmsGroup gid="G13" name="EWS_Integrals" label="MODIS Cumulative Integrals" >
     <wmsSubgroup label="Cumulative Integrals- 2009">
       <wmsLayer 
 	 lid="ARE"
@@ -8675,7 +8675,7 @@
     </wmsSubgroup>
   </wmsGroup>
   
-  <wmsGroup name="EWS_MODISNDVI" label="MODIS NDVI" >
+  <wmsGroup gid="G14" name="EWS_MODISNDVI" label="MODIS NDVI" >
     <wmsSubgroup label="MODIS NDVI- 2009">
       <wmsLayer 
 	 lid="AXC"
@@ -10236,6 +10236,7 @@
     <tool name="Print" label="Print Map" />
     <tool name="Export" label="Export Map to JPG" />
     <tool name="Identify" label="Identify Features" linkFields=""/>
+<!--
     <tool name="TimeSlider" label="Time Slider" helpText = "Slider">
       <toolGroup name="EWS_EFETAC_NASA_Time" 
 		 legendUrl="%(VIEWER_DEPLOY_DIR_URL)s/assets/Mashup_Legends/EWS/EWS_EFETAC-NASA/EFETAC-NASA_2010.png"
@@ -10262,6 +10263,7 @@
 		 url="http://www8.nemac.unca.edu/ArcGIS/rest/services/EWS/EWS_RSAC_FHTET_MODIS_Change_2010/ImageServer" 
 		 label="RSAC-FHTET MODIS 2010 Change" type="raster" />
     </tool>
+-->
     <tool name="Phenograph" label="Graph NDVI" helpText = "Click the map to see NDVI for the point. Or, enter coordinates and click Make Graph."/>
     <tool name="ShareMap" label="Share this Map" helpText = "Copy the URL below to share this map with someone else."/>
   </tools>
