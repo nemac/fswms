@@ -302,4 +302,629 @@ MAP
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+	LAYER
+        NAME     percent-precip-2010-0201         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0201.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2010-0201"
+            "wms_abstract"          "percent-precip-2010-0201"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2010-0301         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0301.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2010-0301"
+            "wms_abstract"          "percent-precip-2010-0301"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2010-0401         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0401.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2010-0401"
+            "wms_abstract"          "percent-precip-2010-0401"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2010-0501         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0501.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2010-0501"
+            "wms_abstract"          "percent-precip-2010-0501"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2010-0601         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0601.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2010-0601"
+            "wms_abstract"          "percent-precip-2010-0601"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2010-0701         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0701.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2010-0701"
+            "wms_abstract"          "percent-precip-2010-0701"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2010-0801         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0801.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2010-0801"
+            "wms_abstract"          "percent-precip-2010-0801"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2010-0901         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0901.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2010-0901"
+            "wms_abstract"          "percent-precip-2010-0901"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2010-1001         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_1001.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2010-1001"
+            "wms_abstract"          "percent-precip-2010-1001"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2010-1101         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_1101.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2010-1101"
+            "wms_abstract"          "percent-precip-2010-1101"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2010-1201         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_1201.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2010-1201"
+            "wms_abstract"          "percent-precip-2010-1201"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-0101         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0101.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-0101"
+            "wms_abstract"          "percent-precip-2011-0101"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-0201         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0201.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-0201"
+            "wms_abstract"          "percent-precip-2011-0201"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-0301         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0301.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-0301"
+            "wms_abstract"          "percent-precip-2011-0301"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-0401         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0401.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-0401"
+            "wms_abstract"          "percent-precip-2011-0401"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-0501         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0501.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-0501"
+            "wms_abstract"          "percent-precip-2011-0501"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-0601         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0601.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-0601"
+            "wms_abstract"          "percent-precip-2011-0601"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-0701         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0701.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-0701"
+            "wms_abstract"          "percent-precip-2011-0701"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-0801         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0801.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-0801"
+            "wms_abstract"          "percent-precip-2011-0801"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-0901         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0901.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-0901"
+            "wms_abstract"          "percent-precip-2011-0901"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-1001         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_1001.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-1001"
+            "wms_abstract"          "percent-precip-2011-1001"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-1101         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_1101.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-1101"
+            "wms_abstract"          "percent-precip-2011-1101"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2011-1201         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_1201.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2011-1201"
+            "wms_abstract"          "percent-precip-2011-1201"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2012-0101         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2012_0101.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2012-0101"
+            "wms_abstract"          "percent-precip-2012-0101"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     percent-precip-2012-0201         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2012_0201.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "percent-precip-2012-0201"
+            "wms_abstract"          "percent-precip-2012-0201"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
 END

@@ -387,7 +387,7 @@
        name="2009 Aerial Disturbance Surveys (FHTET)" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2009&VERSION=1.1.1&FORMAT=image/png"/>
     <wmsLayer 
-       lid="PP"
+       lid="BNE"
        visible="false" 
        url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
        srs="EPSG:3785" 
@@ -395,7 +395,7 @@
        styles="default" 
        identify="true" 
        name="EFETAC Pest Proximity (from ADS polygons, 2003-2010)" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=pestprox&VERSION=1.1.1&FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/cmapicons/custom-pestproximity.png"/>
   </wmsGroup>
   <!--
      Note: New as of Jan 15, 2012:
@@ -2814,7 +2814,7 @@
        name="True Color 20120124_24" 
        legend=""/>
 	<wmsLayer 
-       lid="YYY"
+       lid="BNF"
        visible="false" 
        url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true" 
        srs="EPSG:3785" 
@@ -4715,6 +4715,258 @@
 	 name="Tornado Tracks 1999-2010 (NWS)" 	 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=tornado-tracks&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
+	<wmsSubgroup label="Percent of Normal (NOAA PRISM)">
+	  <wmsLayer 
+	 lid="BMF"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2010-0201" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2010-0201" 	 
+	 legend=""/>
+	 <wmsLayer 
+	 lid="BMG"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2010-0301" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2010-0301" 	 
+	 legend=""/>
+	 <wmsLayer 
+	 lid="BMH"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2010-0401" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2010-0401" 	 
+	 legend=""/>
+	 <wmsLayer 
+	 lid="BMI"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2010-0501" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2010-0501" 	 
+	 legend=""/>
+	 <wmsLayer 
+	 lid="BMJ"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2010-0601" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2010-0601" 	 
+	 legend=""/>
+	 <wmsLayer 
+	 lid="BMK"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2010-0701" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2010-0701" 	 
+	 legend=""/>
+	 <wmsLayer 
+	 lid="BML"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2010-0801" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2010-0801" 	 
+	 legend=""/>
+	 <wmsLayer 
+	 lid="BMM"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2010-0901" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2010-0901" 	 
+	 legend=""/>
+	 <wmsLayer 
+	 lid="BMN"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2010-1001" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2010-1001" 	 
+	 legend=""/>
+	 <wmsLayer 
+	 lid="BMO"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2010-1101" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2010-1101" 	 
+	 legend=""/>
+	 <wmsLayer 
+	 lid="BMP"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2010-1201" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2010-1201" 	 
+	 legend=""/>
+	 <wmsLayer 
+	 lid="BMQ"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-0101" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-0101" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BMR"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-0201" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-0201" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BMS"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-0301" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-0301" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BMT"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-0401" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-0401" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BMU"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-0501" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-0501" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BMV"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-0601" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-0601" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BMW"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-0701" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-0701" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BMX"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-0801" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-0801" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BMY"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-0901" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-0901" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BMZ"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-1001" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-1001" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BNA"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-1101" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-1101" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BNB"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2011-1201" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2011-1201" 	 
+	 legend=""/>
+	  <wmsLayer 
+	 lid="BNC"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2012-0101" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2012-0101" 	 
+	 legend=""/>
+	   <wmsLayer 
+	 lid="BND"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="percent-precip-2012-0201" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Percent Precipitation 2012-0201" 	 
+	 legend=""/>
+	</wmsSubgroup>
     <wmsSubgroup label="Climate">
       <wmsLayer 
 	 lid="AIF"
