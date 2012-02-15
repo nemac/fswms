@@ -790,9 +790,9 @@
          visible="false"
          url="%(SERVER_URL)s/ews1year?TRANSPARENT=true"
          srs="EPSG:3785"
-         layers="EFETAC-NASA_1Year_20110601"
+         layers="EFETAC-NASA_1Year_20110124"
          styles="default"
-         name="20110601"
+         name="20110124"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer
