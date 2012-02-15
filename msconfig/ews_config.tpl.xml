@@ -3157,7 +3157,7 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>    
     </wmsSubgroup>
-    <wmsSubgroup label="Archived 3-Year Baseline (RSAC-FHTET)">
+    <wmsSubgroup label="Archived 5-Year Baseline (RSAC-FHTET)">
 	<wmsLayer
 		lid="BJI"
 		visible="false"
