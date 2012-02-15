@@ -2814,7 +2814,7 @@
        name="True Color 20120124_24" 
        legend=""/>
 	<wmsLayer 
-       lid="BNF"
+       lid="BNG"
        visible="false" 
        url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true" 
        srs="EPSG:3785" 
@@ -2822,6 +2822,16 @@
        styles="default" 
        identify="true" 
        name="True Color 20120201_24" 
+       legend=""/>
+	<wmsLayer 
+       lid="BNH"
+       visible="false" 
+       url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true" 
+       srs="EPSG:3785" 
+       layers="EFETAC-NASA_TC_20120209_24" 
+       styles="default" 
+       identify="true" 
+       name="True Color 20120209_24" 
        legend=""/>
   </wmsGroup>
   <wmsGroup gid="G07" name="Archived_NRT" label="Archived RSAC-FHTET Forest Change Disturbance" priorService="vegdri">
