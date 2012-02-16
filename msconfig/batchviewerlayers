@@ -3,81 +3,21 @@ import os, re, gd
 
 #Begin category1----------------------------------------------------
 layers = [
-        {'layerid' : 'RSAC-FHTET_201104145yr'},
-        {'layerid' : 'RSAC-FHTET_201104225yr'},
-        {'layerid' : 'RSAC-FHTET_201104145yr'},
-        {'layerid' : 'RSAC-FHTET_201104225yr'},
-        {'layerid' : 'RSAC-FHTET_201104305yr'},
-        {'layerid' : 'RSAC-FHTET_201105085yr'},
-        {'layerid' : 'RSAC-FHTET_201105165yr'},
-        {'layerid' : 'RSAC-FHTET_201105245yr'},
-        {'layerid' : 'RSAC-FHTET_201106015yr'},
-        {'layerid' : 'RSAC-FHTET_201106095yr'},
-        {'layerid' : 'RSAC-FHTET_201106175yr'},
-        {'layerid' : 'RSAC-FHTET_201107113yr'},
-        {'layerid' : 'RSAC-FHTET_20110711bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201107115yr'},
-        {'layerid' : 'RSAC-FHTET_20110711bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201107193yr'},
-        {'layerid' : 'RSAC-FHTET_20110719bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201107195yr'},
-        {'layerid' : 'RSAC-FHTET_20110719bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201107273yr'},
-        {'layerid' : 'RSAC-FHTET_20110727bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201107275yr'},
-        {'layerid' : 'RSAC-FHTET_20110727bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201108043yr'},
-        {'layerid' : 'RSAC-FHTET_20110804bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201108045yr'},
-        {'layerid' : 'RSAC-FHTET_20110804bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201108123yr'},
-        {'layerid' : 'RSAC-FHTET_20110812bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201108125yr'},
-        {'layerid' : 'RSAC-FHTET_20110812bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201108203yr'},
-        {'layerid' : 'RSAC-FHTET_20110820bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201108205yr'},
-        {'layerid' : 'RSAC-FHTET_20110820bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201108283yr'},
-        {'layerid' : 'RSAC-FHTET_20110828bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201108285yr'},
-        {'layerid' : 'RSAC-FHTET_20110828bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201109053yr'},
-        {'layerid' : 'RSAC-FHTET_20110905bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201109055yr'},
-        {'layerid' : 'RSAC-FHTET_20110905bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201109133yr'},
-        {'layerid' : 'RSAC-FHTET_20110913bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201109135yr'},
-        {'layerid' : 'RSAC-FHTET_20110913bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201109213yr'},
-        {'layerid' : 'RSAC-FHTET_20110921bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201109215yr'},
-        {'layerid' : 'RSAC-FHTET_20110921bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201109293yr'},
-        {'layerid' : 'RSAC-FHTET_20110929bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201109295yr'},
-        {'layerid' : 'RSAC-FHTET_20110929bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201110073yr'},
-        {'layerid' : 'RSAC-FHTET_20111007bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201110075yr'},
-        {'layerid' : 'RSAC-FHTET_20111007bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201110153yr'},
-        {'layerid' : 'RSAC-FHTET_20111015bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201110155yr'},
-        {'layerid' : 'RSAC-FHTET_20111015bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201110233yr'},
-        {'layerid' : 'RSAC-FHTET_20111023bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201110235yr'},
-        {'layerid' : 'RSAC-FHTET_20111023bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201110313yr'},
-        {'layerid' : 'RSAC-FHTET_20111031bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201110315yr'},
-        {'layerid' : 'RSAC-FHTET_20111031bd5yr'},
-        {'layerid' : 'RSAC-FHTET_201111083yr'},
-        {'layerid' : 'RSAC-FHTET_20111108bd3yr'},
-        {'layerid' : 'RSAC-FHTET_201111085yr'},
-        {'layerid' : 'RSAC-FHTET_20111108bd5yr'}]
+        {'layerid' : 'EFETAC-NASA_TC_20110124_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110209_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110217_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110225_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110305_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110313_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110321_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110329_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110406_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110414_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110422_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110430_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110508_24'},
+        {'layerid' : 'EFETAC-NASA_TC_20110516_24'}]
+
 
 
 def next_lid(s):
@@ -87,43 +27,24 @@ def next_lid(s):
     else:
         return 'A' * (len(s) + 1)
 
-#fo1 = open("1yr.txt", "w")
-fo3 = open("3yr.txt", "w")
-fo5 = open("5yr.txt", "w")
-start_lid = 'BJH'
+
+fo5 = open("truecolors.txt", "w")
+start_lid = 'BNJ'
 
 for lid  in layers:
     print lid['layerid']
     string = lid['layerid']
-    if '3yr' in string:
-        print '3'
-        fo3.write("\t<wmsLayer\n")
-        fo3.write("\t\tlid=\""+next_lid(start_lid)+"\"\n")
-        fo3.write("\t\tvisible=\"false\"\n")
-        fo3.write("\t\turl=\"%(SERVER_URL)s/ews?TRANSPARENT=true\"\n")
-        fo3.write("\t\tsrs=\"EPSG:3785\"\n")
-        fo3.write("\t\tlayers=\""+lid['layerid']+"\"\n")
-        fo3.write("\t\tstyles=\"default\"\n")
-        fo3.write("\t\tname=\""+lid['layerid']+"\"\n")
-        fo3.write("\t\tidentify=\"true\"\n")
-        fo3.write("\t\tlegend=\"%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png\"/>\n")
-        start_lid = next_lid(start_lid)
-    elif '5yr' in string:
-        print '5'
-        fo5.write("\t<wmsLayer\n")
-        fo5.write("\t\tlid=\""+next_lid(start_lid)+"\"\n")
-        fo5.write("\t\tvisible=\"false\"\n")
-        fo5.write("\t\turl=\"%(SERVER_URL)s/ews?TRANSPARENT=true\"\n")
-        fo5.write("\t\tsrs=\"EPSG:3785\"\n")
-        fo5.write("\t\tlayers=\""+lid['layerid']+"\"\n")
-        fo5.write("\t\tstyles=\"default\"\n")
-        fo5.write("\t\tname=\""+lid['layerid']+"\"\n")
-        fo5.write("\t\tidentify=\"true\"\n")
-        fo5.write("\t\tlegend=\"%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png\"/>\n")
-        start_lid = next_lid(start_lid)
-    else:
-        print 'missed layer'
-#fo1.close
-fo3.close
+    fo5.write("\t<wmsLayer\n")
+    fo5.write("\t\tlid=\""+next_lid(start_lid)+"\"\n")
+    fo5.write("\t\tvisible=\"false\"\n")
+    fo5.write("\t\turl=\"%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true\"\n")
+    fo5.write("\t\tsrs=\"EPSG:3785\"\n")
+    fo5.write("\t\tlayers=\""+lid['layerid']+"\"\n")
+    fo5.write("\t\tstyles=\"default\"\n")
+    fo5.write("\t\tname=\"True Color "+lid['layerid'][-11:]+"\"\n")
+    fo5.write("\t\tidentify=\"true\"\n")
+    fo5.write("\t\tlegend=\"\"/>\n")
+    start_lid = next_lid(start_lid)
+
 fo5.close
 
