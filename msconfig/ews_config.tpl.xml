@@ -10690,8 +10690,8 @@
     <tool name="ShareMap" label="Share this Map" helpText = "Copy the URL below to share this map with someone else."/>
   </tools>
   <links>
-    <link name="Aerial Survey GIS Handbook" url= "http://www.fs.fed.us/foresthealth/technology/pdfs/GISHandbook_body_apndxA-C.pdf"/>
+    <link name= "forwarn.forestthreats.org" url= "http://forwarn.forestthreats.org/"/>
     <link name="Data Disclaimer" url= "%(VIEWER_DEPLOY_DIR_URL)s/assets/disclaimer.htm"/>
-    <link name="Using the Forest Change Assessment Viewer" url= "%(VIEWER_DEPLOY_DIR_URL)s/assets/Using_the_Forest_Change_Assessment_Viewer.pdf"/>
+    <link name="FCAV Users Guide" url= "%(VIEWER_DEPLOY_DIR_URL)s/assets/FCAV_Users_Guide.pdf"/>
   </links>
 </config>

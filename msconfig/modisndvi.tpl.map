@@ -48,8 +48,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-353-2009"
+            "wms_abstract"               "NDVI-353-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -75,8 +75,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-337-2009"
+            "wms_abstract"               "NDVI-337-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -102,8 +102,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-321-2009"
+            "wms_abstract"               "NDVI-321-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -129,8 +129,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-305-2009"
+            "wms_abstract"               "NDVI-305-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -156,8 +156,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-289-2009"
+            "wms_abstract"               "NDVI-289-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -183,8 +183,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-273-2009"
+            "wms_abstract"               "NDVI-273-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -210,8 +210,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-257-2009"
+            "wms_abstract"               "NDVI-257-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -237,8 +237,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-241-2009"
+            "wms_abstract"               "NDVI-241-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -264,8 +264,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-225-2009"
+            "wms_abstract"               "NDVI-225-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -291,8 +291,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-209-2009"
+            "wms_abstract"               "NDVI-209-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -318,8 +318,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-193-2009"
+            "wms_abstract"               "NDVI-193-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -345,8 +345,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-177-2009"
+            "wms_abstract"               "NDVI-177-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -372,8 +372,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-161-2009"
+            "wms_abstract"               "NDVI-161-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -399,8 +399,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-145-2009"
+            "wms_abstract"               "NDVI-145-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -426,8 +426,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-129-2009"
+            "wms_abstract"               "NDVI-129-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -453,8 +453,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-113-2009"
+            "wms_abstract"               "NDVI-113-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -480,8 +480,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-097-2009"
+            "wms_abstract"               "NDVI-097-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -507,8 +507,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-081-2009"
+            "wms_abstract"               "NDVI-081-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -534,8 +534,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-065-2009"
+            "wms_abstract"               "NDVI-065-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -561,8 +561,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-049-2009"
+            "wms_abstract"               "NDVI-049-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -588,8 +588,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-033-2009"
+            "wms_abstract"               "NDVI-033-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -615,8 +615,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-001-2009"
+            "wms_abstract"               "NDVI-001-2009"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -642,8 +642,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-353-2008"
+            "wms_abstract"               "NDVI-353-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -669,8 +669,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-337-2008"
+            "wms_abstract"               "NDVI-337-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -696,8 +696,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-321-2008"
+            "wms_abstract"               "NDVI-321-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -723,8 +723,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-305-2008"
+            "wms_abstract"               "NDVI-305-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -750,8 +750,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-289-2008"
+            "wms_abstract"               "NDVI-289-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -777,8 +777,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-273-2008"
+            "wms_abstract"               "NDVI-273-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -804,8 +804,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-257-2008"
+            "wms_abstract"               "NDVI-257-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -831,8 +831,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-241-2008"
+            "wms_abstract"               "NDVI-241-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -858,8 +858,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-225-2008"
+            "wms_abstract"               "NDVI-225-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -885,8 +885,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-209-2008"
+            "wms_abstract"               "NDVI-209-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -912,8 +912,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-193-2008"
+            "wms_abstract"               "NDVI-193-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -939,8 +939,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-177-2008"
+            "wms_abstract"               "NDVI-177-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -966,8 +966,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-161-2008"
+            "wms_abstract"               "NDVI-161-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -993,8 +993,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-145-2008"
+            "wms_abstract"               "NDVI-145-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1020,8 +1020,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-129-2008"
+            "wms_abstract"               "NDVI-129-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1047,8 +1047,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-113-2008"
+            "wms_abstract"               "NDVI-113-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1074,8 +1074,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-097-2008"
+            "wms_abstract"               "NDVI-097-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1101,8 +1101,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-081-2008"
+            "wms_abstract"               "NDVI-081-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1128,8 +1128,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-065-2008"
+            "wms_abstract"               "NDVI-065-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1155,8 +1155,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-049-2008"
+            "wms_abstract"               "NDVI-049-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1182,8 +1182,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-033-2008"
+            "wms_abstract"               "NDVI-033-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1209,8 +1209,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-001-2008"
+            "wms_abstract"               "NDVI-001-2008"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1236,8 +1236,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-353-2007"
+            "wms_abstract"               "NDVI-353-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1263,8 +1263,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-337-2007"
+            "wms_abstract"               "NDVI-337-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1290,8 +1290,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-321-2007"
+            "wms_abstract"               "NDVI-321-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1317,8 +1317,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-305-2007"
+            "wms_abstract"               "NDVI-305-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1344,8 +1344,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-289-2007"
+            "wms_abstract"               "NDVI-289-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1371,8 +1371,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-273-2007"
+            "wms_abstract"               "NDVI-273-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1398,8 +1398,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-257-2007"
+            "wms_abstract"               "NDVI-257-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1425,8 +1425,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-241-2007"
+            "wms_abstract"               "NDVI-241-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1452,8 +1452,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-225-2007"
+            "wms_abstract"               "NDVI-225-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1479,8 +1479,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-209-2007"
+            "wms_abstract"               "NDVI-209-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1506,8 +1506,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-193-2007"
+            "wms_abstract"               "NDVI-193-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1533,8 +1533,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-177-2007"
+            "wms_abstract"               "NDVI-177-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1560,8 +1560,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-161-2007"
+            "wms_abstract"               "NDVI-161-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1587,8 +1587,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-145-2007"
+            "wms_abstract"               "NDVI-145-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1614,8 +1614,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-129-2007"
+            "wms_abstract"               "NDVI-129-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1641,8 +1641,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-113-2007"
+            "wms_abstract"               "NDVI-113-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1668,8 +1668,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-097-2007"
+            "wms_abstract"               "NDVI-097-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1695,8 +1695,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-081-2007"
+            "wms_abstract"               "NDVI-081-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1722,8 +1722,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-065-2007"
+            "wms_abstract"               "NDVI-065-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1749,8 +1749,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-049-2007"
+            "wms_abstract"               "NDVI-049-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1776,8 +1776,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-033-2007"
+            "wms_abstract"               "NDVI-033-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1803,8 +1803,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-001-2007"
+            "wms_abstract"               "NDVI-001-2007"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1830,8 +1830,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-353-2006"
+            "wms_abstract"               "NDVI-353-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1857,8 +1857,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-337-2006"
+            "wms_abstract"               "NDVI-337-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1884,8 +1884,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-321-2006"
+            "wms_abstract"               "NDVI-321-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1911,8 +1911,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-305-2006"
+            "wms_abstract"               "NDVI-305-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1938,8 +1938,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-289-2006"
+            "wms_abstract"               "NDVI-289-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1965,8 +1965,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-273-2006"
+            "wms_abstract"               "NDVI-273-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1992,8 +1992,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-257-2006"
+            "wms_abstract"               "NDVI-257-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2019,8 +2019,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-241-2006"
+            "wms_abstract"               "NDVI-241-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2046,8 +2046,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-225-2006"
+            "wms_abstract"               "NDVI-225-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2073,8 +2073,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-209-2006"
+            "wms_abstract"               "NDVI-209-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2100,8 +2100,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-193-2006"
+            "wms_abstract"               "NDVI-193-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2127,8 +2127,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-177-2006"
+            "wms_abstract"               "NDVI-177-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2154,8 +2154,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-161-2006"
+            "wms_abstract"               "NDVI-161-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2181,8 +2181,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-145-2006"
+            "wms_abstract"               "NDVI-145-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2208,8 +2208,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-129-2006"
+            "wms_abstract"               "NDVI-129-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2235,8 +2235,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-113-2006"
+            "wms_abstract"               "NDVI-113-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2262,8 +2262,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-097-2006"
+            "wms_abstract"               "NDVI-097-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2289,8 +2289,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-081-2006"
+            "wms_abstract"               "NDVI-081-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2316,8 +2316,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-065-2006"
+            "wms_abstract"               "NDVI-065-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2343,8 +2343,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-049-2006"
+            "wms_abstract"               "NDVI-049-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2370,8 +2370,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-033-2006"
+            "wms_abstract"               "NDVI-033-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2397,8 +2397,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-001-2006"
+            "wms_abstract"               "NDVI-001-2006"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2424,8 +2424,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-353-2005"
+            "wms_abstract"               "NDVI-353-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2451,8 +2451,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-337-2005"
+            "wms_abstract"               "NDVI-337-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2478,8 +2478,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-321-2005"
+            "wms_abstract"               "NDVI-321-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2505,8 +2505,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-305-2005"
+            "wms_abstract"               "NDVI-305-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2532,8 +2532,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-289-2005"
+            "wms_abstract"               "NDVI-289-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2559,8 +2559,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-273-2005"
+            "wms_abstract"               "NDVI-273-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2586,8 +2586,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-257-2005"
+            "wms_abstract"               "NDVI-257-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2613,8 +2613,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-241-2005"
+            "wms_abstract"               "NDVI-241-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2640,8 +2640,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-225-2005"
+            "wms_abstract"               "NDVI-225-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2667,8 +2667,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-209-2005"
+            "wms_abstract"               "NDVI-209-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2694,8 +2694,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-193-2005"
+            "wms_abstract"               "NDVI-193-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2721,8 +2721,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-177-2005"
+            "wms_abstract"               "NDVI-177-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2748,8 +2748,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-161-2005"
+            "wms_abstract"               "NDVI-161-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2775,8 +2775,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-145-2005"
+            "wms_abstract"               "NDVI-145-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2802,8 +2802,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-129-2005"
+            "wms_abstract"               "NDVI-129-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2829,8 +2829,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-113-2005"
+            "wms_abstract"               "NDVI-113-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2856,8 +2856,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-097-2005"
+            "wms_abstract"               "NDVI-097-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2883,8 +2883,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-081-2005"
+            "wms_abstract"               "NDVI-081-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2910,8 +2910,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-065-2005"
+            "wms_abstract"               "NDVI-065-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2937,8 +2937,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-049-2005"
+            "wms_abstract"               "NDVI-049-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2964,8 +2964,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-033-2005"
+            "wms_abstract"               "NDVI-033-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2991,8 +2991,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-001-2005"
+            "wms_abstract"               "NDVI-001-2005"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3018,8 +3018,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-353-2004"
+            "wms_abstract"               "NDVI-353-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3045,8 +3045,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-337-2004"
+            "wms_abstract"               "NDVI-337-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3072,8 +3072,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-321-2004"
+            "wms_abstract"               "NDVI-321-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3099,8 +3099,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-305-2004"
+            "wms_abstract"               "NDVI-305-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3126,8 +3126,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-289-2004"
+            "wms_abstract"               "NDVI-289-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3153,8 +3153,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-273-2004"
+            "wms_abstract"               "NDVI-273-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3180,8 +3180,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-257-2004"
+            "wms_abstract"               "NDVI-257-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3207,8 +3207,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-241-2004"
+            "wms_abstract"               "NDVI-241-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3234,8 +3234,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-225-2004"
+            "wms_abstract"               "NDVI-225-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3261,8 +3261,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-209-2004"
+            "wms_abstract"               "NDVI-209-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3288,8 +3288,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-193-2004"
+            "wms_abstract"               "NDVI-193-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3315,8 +3315,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-177-2004"
+            "wms_abstract"               "NDVI-177-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3342,8 +3342,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-161-2004"
+            "wms_abstract"               "NDVI-161-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3369,8 +3369,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-145-2004"
+            "wms_abstract"               "NDVI-145-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3396,8 +3396,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-129-2004"
+            "wms_abstract"               "NDVI-129-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3423,8 +3423,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-113-2004"
+            "wms_abstract"               "NDVI-113-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3450,8 +3450,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-097-2004"
+            "wms_abstract"               "NDVI-097-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3477,8 +3477,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-081-2004"
+            "wms_abstract"               "NDVI-081-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3504,8 +3504,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-065-2004"
+            "wms_abstract"               "NDVI-065-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3531,8 +3531,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-049-2004"
+            "wms_abstract"               "NDVI-049-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3558,8 +3558,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-033-2004"
+            "wms_abstract"               "NDVI-033-2004"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3585,8 +3585,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-001-2004"
+            "wms_abstract"               "NDVI-001-2004"
 	 END  # end METADATA
     END # end LAYER
     LAYER
@@ -3612,8 +3612,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-353-2003"
+            "wms_abstract"               "NDVI-353-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3639,8 +3639,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-337-2003"
+            "wms_abstract"               "NDVI-337-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3666,8 +3666,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-321-2003"
+            "wms_abstract"               "NDVI-321-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3693,8 +3693,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-305-2003"
+            "wms_abstract"               "NDVI-305-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3720,8 +3720,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-289-2003"
+            "wms_abstract"               "NDVI-289-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3747,8 +3747,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-273-2003"
+            "wms_abstract"               "NDVI-273-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3774,8 +3774,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-257-2003"
+            "wms_abstract"               "NDVI-257-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3801,8 +3801,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-241-2003"
+            "wms_abstract"               "NDVI-241-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3828,8 +3828,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-225-2003"
+            "wms_abstract"               "NDVI-225-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3855,8 +3855,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-209-2003"
+            "wms_abstract"               "NDVI-209-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3882,8 +3882,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-193-2003"
+            "wms_abstract"               "NDVI-193-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3909,8 +3909,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-177-2003"
+            "wms_abstract"               "NDVI-177-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3936,8 +3936,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-161-2003"
+            "wms_abstract"               "NDVI-161-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3963,8 +3963,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-145-2003"
+            "wms_abstract"               "NDVI-145-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3990,8 +3990,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-129-2003"
+            "wms_abstract"               "NDVI-129-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4017,8 +4017,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-113-2003"
+            "wms_abstract"               "NDVI-113-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4044,8 +4044,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-097-2003"
+            "wms_abstract"               "NDVI-097-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4071,8 +4071,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-081-2003"
+            "wms_abstract"               "NDVI-081-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4098,8 +4098,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-065-2003"
+            "wms_abstract"               "NDVI-065-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4125,8 +4125,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-049-2003"
+            "wms_abstract"               "NDVI-049-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4152,8 +4152,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-033-2003"
+            "wms_abstract"               "NDVI-033-2003"
 	 END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4179,8 +4179,8 @@ MAP
 			"no_defs"
 		END
         METADATA
-            "wms_title"                  "MODIS NDVI"
-            "wms_abstract"               "MODIS NDVI"
+            "wms_title"                  "NDVI-001-2003"
+            "wms_abstract"               "NDVI-001-2003"
 	 END  # end METADATA
     END # end LAYER
 END # end MAP
