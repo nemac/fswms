@@ -2058,7 +2058,7 @@
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
-    <wmsSubgroup label="Archived NRT 8-Year Baseline (TACs-NASA)">
+    <wmsSubgroup label="Archived NRT All-Year Baseline (TACs-NASA)">
       <wmsLayer 
 	 lid="AFP"
 	 visible="false" 
@@ -2694,9 +2694,29 @@
   
   <wmsGroup gid="G06" name="MODISCloud" label="eMODIS Cloud Assessment Products" priorService="vegdri">	
     <wmsLayer
-	    lid="BNK"
+	    lid="BOA"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110108_24"
+	    styles="default"
+	    name="True Color 20110108_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOB"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110116_24"
+	    styles="default"
+	    name="True Color 20110116_24"
+	    identify="true"
+	    legend=""/>
+    <wmsLayer
+	    lid="BOC"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110124_24"
 	    styles="default"
@@ -2704,9 +2724,9 @@
 	    identify="true"
 	    legend=""/>
     <wmsLayer
-	    lid="BNL"
+	    lid="BOD"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110209_24"
 	    styles="default"
@@ -2714,9 +2734,9 @@
 	    identify="true"
 	    legend=""/>
     <wmsLayer
-	    lid="BNM"
+	    lid="BOE"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110217_24"
 	    styles="default"
@@ -2726,7 +2746,7 @@
     <wmsLayer
 	    lid="BNN"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110225_24"
 	    styles="default"
@@ -2736,7 +2756,7 @@
     <wmsLayer
 	    lid="BNO"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110305_24"
 	    styles="default"
@@ -2746,7 +2766,7 @@
     <wmsLayer
 	    lid="BNP"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110313_24"
 	    styles="default"
@@ -2756,7 +2776,7 @@
     <wmsLayer
 	    lid="BNQ"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110321_24"
 	    styles="default"
@@ -2766,7 +2786,7 @@
     <wmsLayer
 	    lid="BNR"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110329_24"
 	    styles="default"
@@ -2776,7 +2796,7 @@
     <wmsLayer
 	    lid="BNS"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110406_24"
 	    styles="default"
@@ -2786,7 +2806,7 @@
     <wmsLayer
 	    lid="BNT"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110414_24"
 	    styles="default"
@@ -2796,7 +2816,7 @@
     <wmsLayer
 	    lid="BNU"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110422_24"
 	    styles="default"
@@ -2806,7 +2826,7 @@
     <wmsLayer
 	    lid="BNV"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110430_24"
 	    styles="default"
@@ -2816,7 +2836,7 @@
     <wmsLayer
 	    lid="BNW"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110508_24"
 	    styles="default"
@@ -2826,11 +2846,151 @@
     <wmsLayer
 	    lid="BNX"
 	    visible="false"
-	    url="http://rain.nemac.org/~derek/fswms/html/ewstruecolor?TRANSPARENT=true"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
 	    srs="EPSG:3785"
 	    layers="EFETAC-NASA_TC_20110516_24"
 	    styles="default"
 	    name="True Color 20110516_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOF"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110524_24"
+	    styles="default"
+	    name="True Color 20110524_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOG"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110601_24"
+	    styles="default"
+	    name="True Color 20110601_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOH"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110609_24"
+	    styles="default"
+	    name="True Color 20110609_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOI"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110617_24"
+	    styles="default"
+	    name="True Color 20110617_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOJ"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110625_24"
+	    styles="default"
+	    name="True Color 20110625_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOK"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110703_24"
+	    styles="default"
+	    name="True Color 20110703_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOL"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110711_24"
+	    styles="default"
+	    name="True Color 20110711_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOM"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110719_24"
+	    styles="default"
+	    name="True Color 20110719_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BON"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110727_24"
+	    styles="default"
+	    name="True Color 20110727_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOO"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110804_24"
+	    styles="default"
+	    name="True Color 20110804_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOP"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110812_24"
+	    styles="default"
+	    name="True Color 20110812_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOQ"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110820_24"
+	    styles="default"
+	    name="True Color 20110820_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOR"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110828_24"
+	    styles="default"
+	    name="True Color 20110828_24"
+	    identify="true"
+	    legend=""/>
+	<wmsLayer
+	    lid="BOS"
+	    visible="false"
+	    url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true"
+	    srs="EPSG:3785"
+	    layers="EFETAC-NASA_TC_20110905_24"
+	    styles="default"
+	    name="True Color 20110905_24"
 	    identify="true"
 	    legend=""/>
     <wmsLayer 
