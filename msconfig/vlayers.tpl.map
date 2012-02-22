@@ -216,8 +216,7 @@ DATA "the_geom FROM (select pestproxshapes.pt_id, pestproxshapes.the_geom, pestp
         CLASS
             NAME "Federal Lands"
             STYLE
-                COLOR        76 115 0
-                OUTLINECOLOR 0 0 0 
+                OUTLINECOLOR 50 50 50 
             END
         END
         METADATA
