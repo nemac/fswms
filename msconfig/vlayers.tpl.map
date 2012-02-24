@@ -77,7 +77,8 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-DATA "the_geom FROM (select pestproxshapes.pt_id, pestproxshapes.the_geom, pestproxshapes.gid, array_to_string(array_agg(coalesce(pestproxdata.agent || ' > Closest Agent (km): ' || round(pestproxdata.metric1,2) || ' Acres: ' || round(pestproxdata.metric2, 2) || ' count: ' || pestproxdata.count || ' yr: ' || pestproxdata.year || ' prob: ' || round(pestproxdata.prob,2) || ' host: ' || pestproxdata.host, 'no agents reported within 75km')), '\n') as AGENTS from pestproxshapes left outer join pestproxdata on pestproxshapes.pt_id=pestproxdata.pt_id group by pestproxshapes.pt_id, pestproxshapes.the_geom, pestproxshapes.gid) as new_table USING UNIQUE gid USING SRID=4326"
+        CONNECTION       "host=localhost dbname=geo1 user=geo1  password=ge0oneu5er"
+DATA "the_geom FROM (select pestproxshapes.pt_id, pestproxshapes.the_geom, pestproxshapes.gid, array_to_string(array_agg(coalesce(pestproxdata.agent || ' | Closest Agent (km): ' || round(pestproxdata.metric1,2) || ' | Acres: ' || round(pestproxdata.metric2, 2) || ' | count: ' || pestproxdata.count || ' | yr: ' || pestproxdata.year || ' | prob: ' || round(pestproxdata.prob,2) || ' | host: ' || pestproxdata.host, 'no agents reported within 75km')), '\n') as AGENTS from pestproxshapes left outer join pestproxdata on pestproxshapes.pt_id=pestproxdata.pt_id group by pestproxshapes.pt_id, pestproxshapes.the_geom, pestproxshapes.gid) as new_table USING UNIQUE gid USING SRID=4326 ORDER BY pestproxdata.prob DESC"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
