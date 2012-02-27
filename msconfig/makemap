@@ -466,7 +466,7 @@ f_new.close()
 ###
 ### Create the ewstruecolor.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "ews_gen.layer.tpl.map", "EFETAC-NASA_TC", ".img")
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "truecolor.layer.tpl.map", "EFETAC-NASA_TC", ".img")
 template = Template("ewstruecolor.tpl.map")
 f_new = openMapfileForWriting("ewstruecolor.map")
 SERVICE_NAME = "ewstruecolor"

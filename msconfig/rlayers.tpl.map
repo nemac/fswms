@@ -93,6 +93,7 @@ MAP
             "wms_title"             "srtm-dem-231m"
             "wms_abstract"          "srtm-dem-231m"
             "gml_include_items"     "value_0"
+			"gml_value_0_alias"     "DEM-Value"
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -121,6 +122,7 @@ MAP
             "wms_title"             "srtm-aspect-231m"
             "wms_abstract"          "srtm-aspect-231m"
             "gml_include_items"     "value_0"
+			"gml_value_0_alias"     "Aspect-Value"
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -150,6 +152,7 @@ MAP
             "wms_title"             "srtm-hillshade-231m"
             "wms_abstract"          "srtm-hillshade-231m"
             "gml_include_items"     "value_0"
+			"gml_value_0_alias"     "Hillshade-Value"
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -234,6 +237,7 @@ MAP
             "wms_title"             "forest-biomass"
             "wms_abstract"          "forest-biomass"
             "gml_include_items"     "value_0"
+			"gml_value_0_alias"     "Biomass-Value"
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -276,6 +280,7 @@ MAP
             "wms_title"             "temp-max-1971-2000"
             "wms_abstract"          "temp-max-1971-2000"
             "gml_include_items"     "value_0"
+			"gml_value_0_alias"     "MaxTemp-Value"
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -300,6 +305,7 @@ MAP
             "wms_title"             "temp-min-1971-2000"
             "wms_abstract"          "temp-min-1971-2000"
             "gml_include_items"     "value_0"
+			"gml_value_0_alias"     "MinTemp-Value"
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -324,7 +330,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2010-0201"
             "wms_abstract"          "percent-precip-2010-0201"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"	
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -349,7 +356,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2010-0301"
             "wms_abstract"          "percent-precip-2010-0301"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"	
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -374,7 +382,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2010-0401"
             "wms_abstract"          "percent-precip-2010-0401"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"	
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -399,7 +408,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2010-0501"
             "wms_abstract"          "percent-precip-2010-0501"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"	
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -424,7 +434,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2010-0601"
             "wms_abstract"          "percent-precip-2010-0601"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"	
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -449,7 +460,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2010-0701"
             "wms_abstract"          "percent-precip-2010-0701"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -474,7 +486,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2010-0801"
             "wms_abstract"          "percent-precip-2010-0801"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -499,7 +512,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2010-0901"
             "wms_abstract"          "percent-precip-2010-0901"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -524,7 +538,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2010-1001"
             "wms_abstract"          "percent-precip-2010-1001"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -549,7 +564,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2010-1101"
             "wms_abstract"          "percent-precip-2010-1101"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -574,7 +590,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2010-1201"
             "wms_abstract"          "percent-precip-2010-1201"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -599,7 +616,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-0101"
             "wms_abstract"          "percent-precip-2011-0101"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"	
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -624,7 +642,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-0201"
             "wms_abstract"          "percent-precip-2011-0201"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"	
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -649,7 +668,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-0301"
             "wms_abstract"          "percent-precip-2011-0301"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -674,7 +694,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-0401"
             "wms_abstract"          "percent-precip-2011-0401"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"	
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -699,7 +720,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-0501"
             "wms_abstract"          "percent-precip-2011-0501"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -724,7 +746,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-0601"
             "wms_abstract"          "percent-precip-2011-0601"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -749,7 +772,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-0701"
             "wms_abstract"          "percent-precip-2011-0701"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -774,7 +798,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-0801"
             "wms_abstract"          "percent-precip-2011-0801"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -799,7 +824,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-0901"
             "wms_abstract"          "percent-precip-2011-0901"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -824,7 +850,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-1001"
             "wms_abstract"          "percent-precip-2011-1001"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -849,7 +876,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-1101"
             "wms_abstract"          "percent-precip-2011-1101"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -874,7 +902,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2011-1201"
             "wms_abstract"          "percent-precip-2011-1201"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -899,7 +928,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2012-0101"
             "wms_abstract"          "percent-precip-2012-0101"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"	
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -924,7 +954,8 @@ MAP
         METADATA
             "wms_title"             "percent-precip-2012-0201"
             "wms_abstract"          "percent-precip-2012-0201"   
-            "gml_include_items"     "value_0"			
+            "gml_include_items"     "value_0"
+            "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
 END
