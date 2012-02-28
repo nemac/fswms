@@ -1345,6 +1345,16 @@
          name="20120217"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+		<wmsLayer
+         lid="BRG"
+         visible="false"
+         url="%(SERVER_URL)s/ews1year?TRANSPARENT=true"
+         srs="EPSG:3785"
+         layers="EFETAC-NASA_1Year_20120225"
+         styles="default"
+         name="20120225"
+         identify="true"
+         legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Archived MODIS NRT 3-Year Baseline (TACs-NASA)">
 	  <wmsLayer
@@ -2275,6 +2285,16 @@
          layers="EFETAC-NASA_3Year_20120217"
          styles="default"
          name="20120217"
+         identify="true"
+         legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+		  <wmsLayer
+         lid="BRF"
+         visible="false"
+         url="%(SERVER_URL)s/ews3year?TRANSPARENT=true"
+         srs="EPSG:3785"
+         layers="EFETAC-NASA_3Year_20120225"
+         styles="default"
+         name="20120225"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
@@ -3229,6 +3249,16 @@
 	 name="20120217"
 	 identify="true" 
 	 legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="BRE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/ews?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="EFETAC-NASA_20120225" 
+	 styles="default" 
+	 name="20120225"
+	 identify="true" 
+	 legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
   
@@ -3732,6 +3762,16 @@
        styles="default" 
        identify="true" 
        name="True Color 20120217_24" 
+       legend=""/>
+	<wmsLayer 
+       lid="BRD"
+       visible="false" 
+       url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true" 
+       srs="EPSG:3785" 
+       layers="EFETAC-NASA_TC_20120225_24" 
+       styles="default" 
+       identify="true" 
+       name="True Color 20120225_24" 
        legend=""/>
   </wmsGroup>
   <wmsGroup gid="G07" name="Archived_NRT" label="Archived RSAC-FHTET Forest Change Disturbance" priorService="vegdri">
@@ -4504,6 +4544,76 @@
 	   legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
     </wmsSubgroup>
     <wmsSubgroup label="2012">
+	<wmsLayer 
+	   lid="BQW"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120221_wms.map&#38;#38;TRANSPARENT=true" 
+	   srs="EPSG:900913" 
+	   layers="usdm120221" 
+	   styles="default"
+	   identify="false" 
+	   name="02/21/2012 Drought Monitor" 
+	   legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BQX"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120214_wms.map&#38;#38;TRANSPARENT=true" 
+	   srs="EPSG:900913" 
+	   layers="usdm120214" 
+	   styles="default"
+	   identify="false" 
+	   name="02/14/2012 Drought Monitor" 
+	   legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BQY"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120207_wms.map&#38;#38;TRANSPARENT=true" 
+	   srs="EPSG:900913" 
+	   layers="usdm120207" 
+	   styles="default"
+	   identify="false" 
+	   name="02/07/2012 Drought Monitor" 
+	   legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BQZ"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120131_wms.map&#38;#38;TRANSPARENT=true" 
+	   srs="EPSG:900913" 
+	   layers="usdm120131" 
+	   styles="default"
+	   identify="false" 
+	   name="01/31/2012 Drought Monitor" 
+	   legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BRA"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120124_wms.map&#38;#38;TRANSPARENT=true" 
+	   srs="EPSG:900913" 
+	   layers="usdm120124" 
+	   styles="default"
+	   identify="false" 
+	   name="01/24/2012 Drought Monitor" 
+	   legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BRB"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120117_wms.map&#38;#38;TRANSPARENT=true" 
+	   srs="EPSG:900913" 
+	   layers="usdm120117" 
+	   styles="default"
+	   identify="false" 
+	   name="01/17/2012 Drought Monitor" 
+	   legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+	<wmsLayer 
+	   lid="BRC"
+	   visible="false" 
+	   url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120110_wms.map&#38;#38;TRANSPARENT=true" 
+	   srs="EPSG:900913" 
+	   layers="usdm120110" 
+	   styles="default"
+	   identify="false" 
+	   name="01/10/2012 Drought Monitor" 
+	   legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
 	<wmsLayer 
 	   lid="AIA"
 	   visible="false" 
