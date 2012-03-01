@@ -144,7 +144,7 @@
 	 identify="true"
 	 name="County Boundaries"
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=counties&VERSION=1.1.1&FORMAT=image/png"/>
-      <wmsLayer
+	  <wmsLayer
 	 lid="AAD"
 	 visible="false"
 	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
@@ -152,7 +152,16 @@
 	 layers="federal_lands"
 	 styles="default"
 	 identify="true"
-	 name="Federal Lands" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=federal_lands&VERSION=1.1.1&FORMAT=image/png"/>
+	 name="Federal Land Boundaries" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=federal_lands&VERSION=1.1.1&FORMAT=image/png"/>
+	  <wmsLayer
+	 lid="BRH"
+	 visible="false"
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="conus-federal-lands"
+	 styles="default"
+	 identify="true"
+	 name="Federal Lands (Agencies)" legend="%(SERVER_URL)s/cmapicons/custom-fed-lands.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Roads">
       <wmsLayer
@@ -6117,6 +6126,16 @@
 	 identify="true" 
 	 name="Forest Biomass (USFS FIA-RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/FIA-RSAC_Forest_Biomass.png"/>
+	  <wmsLayer 
+	 lid="BRI"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="nlcd-2006" 
+	 styles="default" 
+	 identify="true" 
+	 name="NLCD 2006" 
+	 legend="%(SERVER_URL)s/cmapicons/custom-nlcd2006.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Ecoregions">
       <wmsLayer 

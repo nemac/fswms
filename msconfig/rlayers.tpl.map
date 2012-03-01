@@ -958,4 +958,54 @@ MAP
             "gml_value_0_alias"     "Percent-Precip"			
         END  # end METADATA
     END # end LAYER
+	LAYER
+        NAME     conus-federal-lands         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/conus_federal_lands_laea_231p66m_us4b.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "CONUS Federal Lands"
+            "wms_abstract"          "CONUS Federal Lands"   
+            "gml_include_items"     "all"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     nlcd-2006         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/nlcd2006_landcover_4-20-11_se5_decimated_to_231p66m_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "NLCD 2006"
+            "wms_abstract"          "NLCD 2006"   
+            "gml_include_items"     "all"			
+        END  # end METADATA
+    END # end LAYER
 END
