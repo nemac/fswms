@@ -1806,4 +1806,68 @@ MAP
             "gml_include_items"  "area_names,area_num"
         END  # end METADATA
     END # end Layer
+	LAYER #
+        NAME modis-fire-2010
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from modis_fire_2010"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "MODIS Fire 2010"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2010"
+            "wms_abstract"       "modis-fire-2010"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME modis-fire-2011
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from modis_fire_2011"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "MODIS Fire 2011"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2011"
+            "wms_abstract"       "modis-fire-2011"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
 END

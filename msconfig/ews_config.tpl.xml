@@ -210,6 +210,26 @@
 	 name="Cumulative Fire Detections for Current Year (MODIS Hotspots)" 
 	 legend="%(SERVER_URL)s/cmapicons/cumulative-current-year.png"/>
     </wmsSubgroup>
+	  <wmsLayer 
+	 lid="BRJ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="Cumulative Fire Detections 2011" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2011.png"/>
+	  <wmsLayer 
+	 lid="BRK"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="Cumulative Fire Detections 2010" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2010.png"/>
     <wmsSubgroup label="Historical Wildfire Perimeters">
       <wmsLayer 
 	 lid="AAI"
@@ -3781,6 +3801,16 @@
        styles="default" 
        identify="true" 
        name="True Color 20120225_24" 
+       legend=""/>
+	<wmsLayer 
+       lid="BRL"
+       visible="false" 
+       url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true" 
+       srs="EPSG:3785" 
+       layers="EFETAC-NASA_TC_20120304_24" 
+       styles="default" 
+       identify="true" 
+       name="True Color 20120304_24" 
        legend=""/>
   </wmsGroup>
   <wmsGroup gid="G07" name="Archived_NRT" label="Archived RSAC-FHTET Forest Change Disturbance" priorService="vegdri">
