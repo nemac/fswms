@@ -3826,16 +3826,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BJU"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110711bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20110711bd3yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BJX"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -3843,16 +3833,6 @@
 		layers="RSAC-FHTET_201107193yr"
 		styles="default"
 		name="RSAC-FHTET_201107193yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BJY"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110719bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20110719bd3yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -3866,16 +3846,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BKC"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110727bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20110727bd3yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BKF"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -3883,16 +3853,6 @@
 		layers="RSAC-FHTET_201108043yr"
 		styles="default"
 		name="RSAC-FHTET_201108043yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BKG"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110804bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20110804bd3yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -3906,16 +3866,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BKK"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110812bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20110812bd3yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BKN"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -3923,16 +3873,6 @@
 		layers="RSAC-FHTET_201108203yr"
 		styles="default"
 		name="RSAC-FHTET_201108203yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BKO"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110820bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20110820bd3yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -3946,16 +3886,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BKS"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110828bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20110828bd3yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BKV"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -3963,16 +3893,6 @@
 		layers="RSAC-FHTET_201109053yr"
 		styles="default"
 		name="RSAC-FHTET_201109053yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BKW"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110905bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20110905bd3yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -3986,16 +3906,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BLA"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110913bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20110913bd3yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BLD"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4003,16 +3913,6 @@
 		layers="RSAC-FHTET_201109213yr"
 		styles="default"
 		name="RSAC-FHTET_201109213yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BLE"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110921bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20110921bd3yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -4026,16 +3926,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BLI"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110929bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20110929bd3yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BLL"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4043,16 +3933,6 @@
 		layers="RSAC-FHTET_201110073yr"
 		styles="default"
 		name="RSAC-FHTET_201110073yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BLM"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20111007bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20111007bd3yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -4066,16 +3946,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BLQ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20111015bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20111015bd3yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BLT"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4083,16 +3953,6 @@
 		layers="RSAC-FHTET_201110233yr"
 		styles="default"
 		name="RSAC-FHTET_201110233yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BLU"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20111023bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20111023bd3yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -4106,16 +3966,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BLY"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20111031bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20111031bd3yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BMB"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4125,16 +3975,6 @@
 		name="RSAC-FHTET_201111083yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BMC"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20111108bd3yr"
-		styles="default"
-		name="RSAC-FHTET_20111108bd3yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>    
     </wmsSubgroup>
     <wmsSubgroup label="Archived 5-Year Baseline (RSAC-FHTET)">
 	<wmsLayer
@@ -4258,16 +4098,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BJW"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110711bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20110711bd5yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BJZ"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4275,16 +4105,6 @@
 		layers="RSAC-FHTET_201107195yr"
 		styles="default"
 		name="RSAC-FHTET_201107195yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BKA"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110719bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20110719bd5yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -4298,16 +4118,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BKE"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110727bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20110727bd5yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BKH"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4315,16 +4125,6 @@
 		layers="RSAC-FHTET_201108045yr"
 		styles="default"
 		name="RSAC-FHTET_201108045yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BKI"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110804bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20110804bd5yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -4338,16 +4138,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BKM"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110812bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20110812bd5yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BKP"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4355,16 +4145,6 @@
 		layers="RSAC-FHTET_201108205yr"
 		styles="default"
 		name="RSAC-FHTET_201108205yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BKQ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110820bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20110820bd5yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -4378,16 +4158,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BKU"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110828bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20110828bd5yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BKX"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4395,16 +4165,6 @@
 		layers="RSAC-FHTET_201109055yr"
 		styles="default"
 		name="RSAC-FHTET_201109055yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BKY"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110905bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20110905bd5yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -4418,16 +4178,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BLC"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110913bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20110913bd5yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BLF"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4435,16 +4185,6 @@
 		layers="RSAC-FHTET_201109215yr"
 		styles="default"
 		name="RSAC-FHTET_201109215yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BLG"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110921bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20110921bd5yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -4458,16 +4198,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BLK"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20110929bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20110929bd5yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BLN"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4475,16 +4205,6 @@
 		layers="RSAC-FHTET_201110075yr"
 		styles="default"
 		name="RSAC-FHTET_201110075yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BLO"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20111007bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20111007bd5yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -4498,16 +4218,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BLS"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20111015bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20111015bd5yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BLV"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4515,16 +4225,6 @@
 		layers="RSAC-FHTET_201110235yr"
 		styles="default"
 		name="RSAC-FHTET_201110235yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BLW"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20111023bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20111023bd5yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
@@ -4538,16 +4238,6 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
 	<wmsLayer
-		lid="BMA"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20111031bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20111031bd5yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
 		lid="BMD"
 		visible="false"
 		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
@@ -4557,16 +4247,6 @@
 		name="RSAC-FHTET_201111085yr"
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
-	<wmsLayer
-		lid="BME"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3785"
-		layers="RSAC-FHTET_20111108bd5yr"
-		styles="default"
-		name="RSAC-FHTET_20111108bd5yr"
-		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>    
     </wmsSubgroup>
   </wmsGroup>
   <wmsGroup gid="G08" name="Drought_Monitor" label="Current Drought- US Drought Monitor" priorService="vegdri">
