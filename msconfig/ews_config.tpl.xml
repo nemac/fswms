@@ -1374,7 +1374,7 @@
          name="20120217"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
-		<wmsLayer
+	<wmsLayer
          lid="BRG"
          visible="false"
          url="%(SERVER_URL)s/ews1year?TRANSPARENT=true"
@@ -1382,6 +1382,16 @@
          layers="EFETAC-NASA_1Year_20120225"
          styles="default"
          name="20120225"
+         identify="true"
+         legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+	<wmsLayer
+         lid="BRM"
+         visible="false"
+         url="%(SERVER_URL)s/ews1year?TRANSPARENT=true"
+         srs="EPSG:3785"
+         layers="EFETAC-NASA_1Year_20120304"
+         styles="default"
+         name="20120304"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
@@ -2306,7 +2316,7 @@
          name="20120209"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
-		  <wmsLayer
+	  <wmsLayer
          lid="BQT"
          visible="false"
          url="%(SERVER_URL)s/ews3year?TRANSPARENT=true"
@@ -2316,7 +2326,7 @@
          name="20120217"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
-		  <wmsLayer
+	  <wmsLayer
          lid="BRF"
          visible="false"
          url="%(SERVER_URL)s/ews3year?TRANSPARENT=true"
@@ -2324,6 +2334,16 @@
          layers="EFETAC-NASA_3Year_20120225"
          styles="default"
          name="20120225"
+         identify="true"
+         legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+	  <wmsLayer
+         lid="BRN"
+         visible="false"
+         url="%(SERVER_URL)s/ews3year?TRANSPARENT=true"
+         srs="EPSG:3785"
+         layers="EFETAC-NASA_3Year_20120304"
+         styles="default"
+         name="20120304"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
@@ -3286,6 +3306,16 @@
 	 layers="EFETAC-NASA_20120225" 
 	 styles="default" 
 	 name="20120225"
+	 identify="true" 
+	 legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="BRO"
+	 visible="false" 
+	 url="%(SERVER_URL)s/ews?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="EFETAC-NASA_20120304" 
+	 styles="default" 
+	 name="20120304"
 	 identify="true" 
 	 legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
