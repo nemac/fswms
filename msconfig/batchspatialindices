@@ -1,0 +1,61 @@
+#! /usr/bin/python
+import os
+
+
+tables = [
+	{'table' : 'states_ugl'},
+	{'table' : 'states_noaa'},
+	{'table' : 'dtl_states'},
+	{'table' : 'dtl_counties'},
+	{'table' : 'cities'},
+	{'table' : 'federal_lands'},
+	{'table' : 'interstates'},
+	{'table' : 'roads'},
+	{'table' : 'conus_fireperims'},
+	{'table' : 'fhm_ads_2003'},
+	{'table' : 'fhm_ads_2004'},
+	{'table' : 'fhm_ads_2005'},
+	{'table' : 'fhm_ads_2006'},
+	{'table' : 'fhm_ads_2008'},
+	{'table' : 'streams_waterbodies'},
+	{'table' : 'hydrologic_units_huc6_albers'},
+	{'table' : 'new_development_by_huc8_2000_2030'},
+	{'table' : 'ecoregions_omernik'},
+	{'table' : 'ecoregions_bailey'},
+	{'table' : 'fhm_ads_2007'},
+	{'table' : 'fhm_ads_2009'},
+	{'table' : 'mrcmusic'},
+	{'table' : 'coordgrid_voronoi_polys'},
+	{'table' : 'southeast_sde_natestuaryprogs_r4_4326'},
+	{'table' : 'southeast_sde_annosus_infection_risk'},
+	{'table' : 'southeast_sde_average_temperature_change'},
+	{'table' : 'southeast_sde_brook_trout_subwtrshds'},
+	{'table' : 'southeast_sde_climate_divisions'},
+	{'table' : 'southeast_sde_earthquake_hazard_rank'},
+	{'table' : 'southeast_sde_ecoregions_bailey'},
+	{'table' : 'southeast_sde_ecoregions_omernik'},
+	{'table' : 'southeast_sde_ffp_fire_ga'},
+	{'table' : 'southeast_sde_ffp_fire_nc'},
+	{'table' : 'southeast_sde_flood_hazard_rank'},
+	{'table' : 'southeast_sde_forest_aboveground_carbon'},
+	{'table' : 'southeast_sde_forest_growth_2000'},
+	{'table' : 'southeast_sde_forest_growth_2040'},
+	{'table' : 'southeast_sde_forest_growth_2090'},
+	{'table' : 'southeast_sde_geology'},
+	{'table' : 'southeast_sde_landslide_hazard_rank'},
+	{'table' : 'southeast_sde_littleleaf_disease_range'},
+	{'table' : 'southeast_sde_longleaf_pine_little'},
+	{'table' : 'southeast_sde_major_hurricane_paths'},
+	{'table' : 'southeast_sde_natestuaryprogs_r4'},
+	{'table' : 'southeast_sde_natl_estuarine_resrch_reserves'},
+	{'table' : 'southeast_sde_natl_marine_sanctuaries'},
+	{'table' : 'southeast_sde_nitrogen_sulfate_deposition_sites'}
+	]
+fo = open("batchspatialindices.txt", "w")
+for tid  in tables:
+    print tid['table']
+    fo.write("ALTER TABLE "+tid['table']+" ALTER COLUMN the_geom SET NOT NULL;\n") 
+    fo.write("CREATE INDEX idx_"+tid['table']+"_geom ON "+tid['table']+" USING GIST(the_geom);\n")  
+    fo.write("ALTER TABLE "+tid['table']+" CLUSTER ON idx_"+tid['table']+"_geom;\n") 
+    fo.write("VACUUM ANALYZE "+tid['table']+";\n\n")
+fo.close()
