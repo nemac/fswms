@@ -1008,8 +1008,8 @@ MAP
             "gml_include_items"     "all"			
         END  # end METADATA
     END # end LAYER
-	LAYER
-        NAME     nlcd-2006         
+    LAYER
+        NAME nlcd-2006         
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -1030,6 +1030,31 @@ MAP
         METADATA
             "wms_title"             "NLCD 2006"
             "wms_abstract"          "NLCD 2006"   
+            "gml_include_items"     "all"			
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME gapnat-2001         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/AncillaryData/gapnat_lndcov_0210_rs_to_231p66m_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "2001 GAP Landfire CONUS"
+            "wms_abstract"          "2001 GAP Landfire CONUS"   
             "gml_include_items"     "all"			
         END  # end METADATA
     END # end LAYER

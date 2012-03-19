@@ -1394,6 +1394,16 @@
          name="20120304"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+	<wmsLayer
+         lid="BRQ"
+         visible="false"
+         url="%(SERVER_URL)s/ews1year?TRANSPARENT=true"
+         srs="EPSG:3785"
+         layers="EFETAC-NASA_1Year_20120312"
+         styles="default"
+         name="20120312"
+         identify="true"
+         legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Archived MODIS NRT 3-Year Baseline (TACs-NASA)">
 	  <wmsLayer
@@ -2344,6 +2354,16 @@
          layers="EFETAC-NASA_3Year_20120304"
          styles="default"
          name="20120304"
+         identify="true"
+         legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+	  <wmsLayer
+         lid="BRR"
+         visible="false"
+         url="%(SERVER_URL)s/ews3year?TRANSPARENT=true"
+         srs="EPSG:3785"
+         layers="EFETAC-NASA_3Year_20120312"
+         styles="default"
+         name="20120312"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
@@ -3318,6 +3338,16 @@
 	 name="20120304"
 	 identify="true" 
 	 legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="BRS"
+	 visible="false" 
+	 url="%(SERVER_URL)s/ews?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="EFETAC-NASA_20120312" 
+	 styles="default" 
+	 name="20120312"
+	 identify="true" 
+	 legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
   
@@ -3841,6 +3871,16 @@
        styles="default" 
        identify="true" 
        name="True Color 20120304_24" 
+       legend=""/>
+	<wmsLayer 
+       lid="BRT"
+       visible="false" 
+       url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true" 
+       srs="EPSG:3785" 
+       layers="EFETAC-NASA_TC_20120312_24" 
+       styles="default" 
+       identify="true" 
+       name="True Color 20120312_24" 
        legend=""/>
   </wmsGroup>
   <wmsGroup gid="G07" name="Archived_NRT" label="Archived RSAC-FHTET Forest Change Disturbance" priorService="vegdri">
@@ -5866,7 +5906,7 @@
 	 identify="true" 
 	 name="Forest Biomass (USFS FIA-RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/FIA-RSAC_Forest_Biomass.png"/>
-	  <wmsLayer 
+      <wmsLayer 
 	 lid="BRI"
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
@@ -5876,6 +5916,16 @@
 	 identify="true" 
 	 name="NLCD 2006" 
 	 legend="%(SERVER_URL)s/cmapicons/custom-nlcd2006.png"/>
+      <wmsLayer 
+	 lid="BRP"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="gapnat-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="2001 GAP Landfire CONUS" 
+	 legend="%(SERVER_URL)s/cmapicons/legend_gapnat_lndcov_0210_rs_to_231p66m_laea.jpg"/>
     </wmsSubgroup>
     <wmsSubgroup label="Ecoregions">
       <wmsLayer 
