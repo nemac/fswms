@@ -1052,6 +1052,7 @@ MAP
         DATA     /flood/fsdata/efetac_nasa/AncillaryData/gapnat_lndcov_0210_rs_to_231p66m_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
+	INCLUDE "cmaps/gapnat.cmap"
         METADATA
             "wms_title"             "2001 GAP Landfire CONUS"
             "wms_abstract"          "2001 GAP Landfire CONUS"   
