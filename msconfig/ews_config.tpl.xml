@@ -11431,6 +11431,6 @@
   <links>
     <link name= "forwarn.forestthreats.org" url= "http://forwarn.forestthreats.org/"/>
     <link name="Data Disclaimer" url= "%(VIEWER_DEPLOY_DIR_URL)s/assets/disclaimer.htm"/>
-    <link name="FCAV Users Guide" url= "%(VIEWER_DEPLOY_DIR_URL)s/assets/FCAV_Users_Guide.pdf"/>
+    <link name="FCAV Users Guide" url= "%(VIEWER_DEPLOY_DIR_URL)s/assets/FCAV_Users_Guide_4.2.2012.pdf"/>
   </links>
 </config>
