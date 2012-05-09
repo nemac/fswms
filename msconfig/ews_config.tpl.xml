@@ -1484,6 +1484,16 @@
          name="20120429"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+	<wmsLayer
+         lid="BSX"
+         visible="false"
+         url="%(SERVER_URL)s/ews1year?TRANSPARENT=true"
+         srs="EPSG:3785"
+         layers="EFETAC-NASA_1Year_20120507"
+         styles="default"
+         name="20120507"
+         identify="true"
+         legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Archived MODIS NRT 3-Year Baseline (TACs-NASA)">
 	  <wmsLayer
@@ -2524,6 +2534,16 @@
          layers="EFETAC-NASA_3Year_20120429"
          styles="default"
          name="20120429"
+         identify="true"
+         legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+	  <wmsLayer
+         lid="BSY"
+         visible="false"
+         url="%(SERVER_URL)s/ews3year?TRANSPARENT=true"
+         srs="EPSG:3785"
+         layers="EFETAC-NASA_3Year_20120507"
+         styles="default"
+         name="20120507"
          identify="true"
          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
@@ -3568,6 +3588,16 @@
 	 name="20120429"
 	 identify="true" 
 	 legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="BSZ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/ews?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="EFETAC-NASA_20120507" 
+	 styles="default" 
+	 name="20120507"
+	 identify="true" 
+	 legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
   
@@ -4161,6 +4191,16 @@
        styles="default" 
        identify="true" 
        name="True Color 20120429_24" 
+       legend=""/>
+	<wmsLayer 
+       lid="BSW"
+       visible="false" 
+       url="%(SERVER_URL)s/ewstruecolor?TRANSPARENT=true" 
+       srs="EPSG:3785" 
+       layers="EFETAC-NASA_TC_20120507_24" 
+       styles="default" 
+       identify="true" 
+       name="True Color 20120507_24" 
        legend=""/>
   </wmsGroup>
   <wmsGroup gid="G07" name="Archived_NRT" label="Archived RSAC-FHTET Forest Change Disturbance" priorService="vegdri">
