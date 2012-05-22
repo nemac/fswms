@@ -64,7 +64,7 @@ wmsLayerTemplate = Template(string="""
 
 tacsModisChangeDetectionProductLayers = ""
 for subgroup in [
-    { 'label' : '   Disturbances Since 2003 - 8-Year Baseline',
+    { 'label' : '   Disturbances Since 2003 - All Baseline',
       'layers' : [
             { 'name' : 'EFETAC-NASA_current',                   'lid' : 'AA',  'visible' : 'true'  },
             { 'name' : 'EFETAC-NASA_previous1',                 'lid' : 'AB',  'visible' : 'false' },
@@ -80,13 +80,7 @@ for subgroup in [
       'layers' : [
             { 'name' : 'EFETAC-NASA_3YrBaseline_current',       'lid' : 'AG',  'visible' : 'false' },
             { 'name' : 'EFETAC-NASA_3YrBaseline_previous1',     'lid' : 'AH',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'lid' : 'AI',  'visible' : 'false' } ] },
-
-    { 'label' : '   Disturbances Since 2003 - 8-Year Baseline',
-      'layers' : [
-            { 'name' : 'EFETAC-NASA_AllYrBaseline_current',     'lid' : 'AJ',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_AllYrBaseline_previous1',   'lid' : 'AK',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_AllYrBaseline_previous2',   'lid' : 'AL',  'visible' : 'false' } ] }
+            { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'lid' : 'AI',  'visible' : 'false' } ] }
     ]:
     tacsModisChangeDetectionProductLayers = ( tacsModisChangeDetectionProductLayers +
         '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
