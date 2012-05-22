@@ -64,7 +64,7 @@ wmsLayerTemplate = Template(string="""
 
 tacsModisChangeDetectionProductLayers = ""
 for subgroup in [
-    { 'label' : '   Disturbances Since 2003 - All-Year Baseline',
+    { 'label' : '   Disturbances Since 2003 - All-Year',
       'layers' : [
             { 'name' : 'EFETAC-NASA_current',                   'lid' : 'AA',  'visible' : 'true'  },
             { 'name' : 'EFETAC-NASA_previous1',                 'lid' : 'AB',  'visible' : 'false' },
