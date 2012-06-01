@@ -1,0 +1,3235 @@
+MAP
+    # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+    # of the two lines below to enable this logging:
+    #CONFIG "MS_ERRORFILE" "../logs/ewswcs1year.log"
+    #DEBUG 5
+
+    # all temp files get prefixed with this string
+    NAME ms_ewswcs1year
+
+    # background color of image if transparency
+    # is not requested
+    IMAGECOLOR 255 255 255
+
+    # default output image dimensions
+    SIZE 600 400
+
+    # always returns a map
+    STATUS ON
+
+    # set top level projection
+    PROJECTION
+     "init=epsg:2163"
+    END
+
+    # image format options
+    OUTPUTFORMAT
+     NAME png
+     DRIVER "GD/PNG"
+     MIMETYPE "image/png"
+     IMAGEMODE RGB
+     EXTENSION "png"
+    END
+
+    # minx miny maxx maxy
+    # sets:
+    # /WMT_MS_Capabilities/Capability/Layer/LatLonBoundingBox(@minx @miny @maxx @maxx)
+    EXTENT -180 -90 180 90 # World
+
+    # add def pointers for symbols
+    SYMBOLSET "./symbols/symbols35.sym"
+    FONTSET   "./fonts/fonts.list"
+
+    #
+    # Start of web interface definition
+    WEB
+        # this is the real filepath to the temp dir for intermediate file creation
+        IMAGEPATH "./tmp"
+        # this is the web-accessible path to IMAGEPATH
+        IMAGEURL "/tmp/"
+        HEADER "./templates/query_header.html"
+        FOOTER "./templates/query_footer.html"
+        METADATA
+            "ows_enable_request"     "*"
+            "wms_title"              "NEMAC ewswcs1year WMS"
+            "wms_abstract"           "NEMAC ewswcs1year WMS"
+            "wms_onlineresource"     "http://rain.nemac.org/~mwhutchi/fswms/html/ewswcs1year"
+            "wms_srs"                "EPSG:2163"
+            "wcs_label"              "EWS 1Year"
+            "wcs_srs"                "EPSG:2163"
+        END
+    END
+
+    QUERYMAP
+        STATUS OFF
+    END
+
+    # set defaults for GetLegendGraphic requests 
+    LEGEND
+      KEYSIZE 154 297
+    END
+
+    LAYER
+        NAME EFETAC-NASA_1Year_20100108
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100108_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100108_24_2009.tif"
+            "wms_abstract"          "20100108_24_2009.tif"
+            "wcs_label"             "20100108_24_2009.tif"
+            "wcs_rangeset_name"     "20100108_24_2009.tif"
+            "wcs_rangeset_label"    "20100108_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100116
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100116_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100116_24_2009.tif"
+            "wms_abstract"          "20100116_24_2009.tif"
+            "wcs_label"             "20100116_24_2009.tif"
+            "wcs_rangeset_name"     "20100116_24_2009.tif"
+            "wcs_rangeset_label"    "20100116_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100124
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100124_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100124_24_2009.tif"
+            "wms_abstract"          "20100124_24_2009.tif"
+            "wcs_label"             "20100124_24_2009.tif"
+            "wcs_rangeset_name"     "20100124_24_2009.tif"
+            "wcs_rangeset_label"    "20100124_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100201
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100201_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100201_24_2009.tif"
+            "wms_abstract"          "20100201_24_2009.tif"
+            "wcs_label"             "20100201_24_2009.tif"
+            "wcs_rangeset_name"     "20100201_24_2009.tif"
+            "wcs_rangeset_label"    "20100201_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100209
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100209_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100209_24_2009.tif"
+            "wms_abstract"          "20100209_24_2009.tif"
+            "wcs_label"             "20100209_24_2009.tif"
+            "wcs_rangeset_name"     "20100209_24_2009.tif"
+            "wcs_rangeset_label"    "20100209_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100217
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100217_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100217_24_2009.tif"
+            "wms_abstract"          "20100217_24_2009.tif"
+            "wcs_label"             "20100217_24_2009.tif"
+            "wcs_rangeset_name"     "20100217_24_2009.tif"
+            "wcs_rangeset_label"    "20100217_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100225
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100225_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100225_24_2009.tif"
+            "wms_abstract"          "20100225_24_2009.tif"
+            "wcs_label"             "20100225_24_2009.tif"
+            "wcs_rangeset_name"     "20100225_24_2009.tif"
+            "wcs_rangeset_label"    "20100225_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100305
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100305_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100305_24_2009.tif"
+            "wms_abstract"          "20100305_24_2009.tif"
+            "wcs_label"             "20100305_24_2009.tif"
+            "wcs_rangeset_name"     "20100305_24_2009.tif"
+            "wcs_rangeset_label"    "20100305_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100313
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100313_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100313_24_2009.tif"
+            "wms_abstract"          "20100313_24_2009.tif"
+            "wcs_label"             "20100313_24_2009.tif"
+            "wcs_rangeset_name"     "20100313_24_2009.tif"
+            "wcs_rangeset_label"    "20100313_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100321
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100321_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100321_24_2009.tif"
+            "wms_abstract"          "20100321_24_2009.tif"
+            "wcs_label"             "20100321_24_2009.tif"
+            "wcs_rangeset_name"     "20100321_24_2009.tif"
+            "wcs_rangeset_label"    "20100321_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100329
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100329_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100329_24_2009.tif"
+            "wms_abstract"          "20100329_24_2009.tif"
+            "wcs_label"             "20100329_24_2009.tif"
+            "wcs_rangeset_name"     "20100329_24_2009.tif"
+            "wcs_rangeset_label"    "20100329_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100406
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100406_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100406_24_2009.tif"
+            "wms_abstract"          "20100406_24_2009.tif"
+            "wcs_label"             "20100406_24_2009.tif"
+            "wcs_rangeset_name"     "20100406_24_2009.tif"
+            "wcs_rangeset_label"    "20100406_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100414
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100414_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100414_24_2009.tif"
+            "wms_abstract"          "20100414_24_2009.tif"
+            "wcs_label"             "20100414_24_2009.tif"
+            "wcs_rangeset_name"     "20100414_24_2009.tif"
+            "wcs_rangeset_label"    "20100414_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100422
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100422_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100422_24_2009.tif"
+            "wms_abstract"          "20100422_24_2009.tif"
+            "wcs_label"             "20100422_24_2009.tif"
+            "wcs_rangeset_name"     "20100422_24_2009.tif"
+            "wcs_rangeset_label"    "20100422_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100430
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100430_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100430_24_2009.tif"
+            "wms_abstract"          "20100430_24_2009.tif"
+            "wcs_label"             "20100430_24_2009.tif"
+            "wcs_rangeset_name"     "20100430_24_2009.tif"
+            "wcs_rangeset_label"    "20100430_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100508
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100508_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100508_24_2009.tif"
+            "wms_abstract"          "20100508_24_2009.tif"
+            "wcs_label"             "20100508_24_2009.tif"
+            "wcs_rangeset_name"     "20100508_24_2009.tif"
+            "wcs_rangeset_label"    "20100508_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100516
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100516_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100516_24_2009.tif"
+            "wms_abstract"          "20100516_24_2009.tif"
+            "wcs_label"             "20100516_24_2009.tif"
+            "wcs_rangeset_name"     "20100516_24_2009.tif"
+            "wcs_rangeset_label"    "20100516_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100524
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100524_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100524_24_2009.tif"
+            "wms_abstract"          "20100524_24_2009.tif"
+            "wcs_label"             "20100524_24_2009.tif"
+            "wcs_rangeset_name"     "20100524_24_2009.tif"
+            "wcs_rangeset_label"    "20100524_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100601
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100601_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100601_24_2009.tif"
+            "wms_abstract"          "20100601_24_2009.tif"
+            "wcs_label"             "20100601_24_2009.tif"
+            "wcs_rangeset_name"     "20100601_24_2009.tif"
+            "wcs_rangeset_label"    "20100601_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100609
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100609_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100609_24_2009.tif"
+            "wms_abstract"          "20100609_24_2009.tif"
+            "wcs_label"             "20100609_24_2009.tif"
+            "wcs_rangeset_name"     "20100609_24_2009.tif"
+            "wcs_rangeset_label"    "20100609_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100617
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100617_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100617_24_2009.tif"
+            "wms_abstract"          "20100617_24_2009.tif"
+            "wcs_label"             "20100617_24_2009.tif"
+            "wcs_rangeset_name"     "20100617_24_2009.tif"
+            "wcs_rangeset_label"    "20100617_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100625
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100625_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100625_24_2009.tif"
+            "wms_abstract"          "20100625_24_2009.tif"
+            "wcs_label"             "20100625_24_2009.tif"
+            "wcs_rangeset_name"     "20100625_24_2009.tif"
+            "wcs_rangeset_label"    "20100625_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100703
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100703_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100703_24_2009.tif"
+            "wms_abstract"          "20100703_24_2009.tif"
+            "wcs_label"             "20100703_24_2009.tif"
+            "wcs_rangeset_name"     "20100703_24_2009.tif"
+            "wcs_rangeset_label"    "20100703_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100711
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100711_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100711_24_2009.tif"
+            "wms_abstract"          "20100711_24_2009.tif"
+            "wcs_label"             "20100711_24_2009.tif"
+            "wcs_rangeset_name"     "20100711_24_2009.tif"
+            "wcs_rangeset_label"    "20100711_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100719
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100719_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100719_24_2009.tif"
+            "wms_abstract"          "20100719_24_2009.tif"
+            "wcs_label"             "20100719_24_2009.tif"
+            "wcs_rangeset_name"     "20100719_24_2009.tif"
+            "wcs_rangeset_label"    "20100719_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100727
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100727_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100727_24_2009.tif"
+            "wms_abstract"          "20100727_24_2009.tif"
+            "wcs_label"             "20100727_24_2009.tif"
+            "wcs_rangeset_name"     "20100727_24_2009.tif"
+            "wcs_rangeset_label"    "20100727_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100804
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100804_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100804_24_2009.tif"
+            "wms_abstract"          "20100804_24_2009.tif"
+            "wcs_label"             "20100804_24_2009.tif"
+            "wcs_rangeset_name"     "20100804_24_2009.tif"
+            "wcs_rangeset_label"    "20100804_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100812
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100812_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100812_24_2009.tif"
+            "wms_abstract"          "20100812_24_2009.tif"
+            "wcs_label"             "20100812_24_2009.tif"
+            "wcs_rangeset_name"     "20100812_24_2009.tif"
+            "wcs_rangeset_label"    "20100812_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100820
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100820_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100820_24_2009.tif"
+            "wms_abstract"          "20100820_24_2009.tif"
+            "wcs_label"             "20100820_24_2009.tif"
+            "wcs_rangeset_name"     "20100820_24_2009.tif"
+            "wcs_rangeset_label"    "20100820_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100828
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100828_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100828_24_2009.tif"
+            "wms_abstract"          "20100828_24_2009.tif"
+            "wcs_label"             "20100828_24_2009.tif"
+            "wcs_rangeset_name"     "20100828_24_2009.tif"
+            "wcs_rangeset_label"    "20100828_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100905
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100905_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100905_24_2009.tif"
+            "wms_abstract"          "20100905_24_2009.tif"
+            "wcs_label"             "20100905_24_2009.tif"
+            "wcs_rangeset_name"     "20100905_24_2009.tif"
+            "wcs_rangeset_label"    "20100905_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100913
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100913_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100913_24_2009.tif"
+            "wms_abstract"          "20100913_24_2009.tif"
+            "wcs_label"             "20100913_24_2009.tif"
+            "wcs_rangeset_name"     "20100913_24_2009.tif"
+            "wcs_rangeset_label"    "20100913_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100921
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100921_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100921_24_2009.tif"
+            "wms_abstract"          "20100921_24_2009.tif"
+            "wcs_label"             "20100921_24_2009.tif"
+            "wcs_rangeset_name"     "20100921_24_2009.tif"
+            "wcs_rangeset_label"    "20100921_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20100929
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20100929_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20100929_24_2009.tif"
+            "wms_abstract"          "20100929_24_2009.tif"
+            "wcs_label"             "20100929_24_2009.tif"
+            "wcs_rangeset_name"     "20100929_24_2009.tif"
+            "wcs_rangeset_label"    "20100929_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20101007
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20101007_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20101007_24_2009.tif"
+            "wms_abstract"          "20101007_24_2009.tif"
+            "wcs_label"             "20101007_24_2009.tif"
+            "wcs_rangeset_name"     "20101007_24_2009.tif"
+            "wcs_rangeset_label"    "20101007_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20101015
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20101015_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20101015_24_2009.tif"
+            "wms_abstract"          "20101015_24_2009.tif"
+            "wcs_label"             "20101015_24_2009.tif"
+            "wcs_rangeset_name"     "20101015_24_2009.tif"
+            "wcs_rangeset_label"    "20101015_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20101023
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20101023_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20101023_24_2009.tif"
+            "wms_abstract"          "20101023_24_2009.tif"
+            "wcs_label"             "20101023_24_2009.tif"
+            "wcs_rangeset_name"     "20101023_24_2009.tif"
+            "wcs_rangeset_label"    "20101023_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20101031
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20101031_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20101031_24_2009.tif"
+            "wms_abstract"          "20101031_24_2009.tif"
+            "wcs_label"             "20101031_24_2009.tif"
+            "wcs_rangeset_name"     "20101031_24_2009.tif"
+            "wcs_rangeset_label"    "20101031_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20101108
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20101108_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20101108_24_2009.tif"
+            "wms_abstract"          "20101108_24_2009.tif"
+            "wcs_label"             "20101108_24_2009.tif"
+            "wcs_rangeset_name"     "20101108_24_2009.tif"
+            "wcs_rangeset_label"    "20101108_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20101116
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20101116_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20101116_24_2009.tif"
+            "wms_abstract"          "20101116_24_2009.tif"
+            "wcs_label"             "20101116_24_2009.tif"
+            "wcs_rangeset_name"     "20101116_24_2009.tif"
+            "wcs_rangeset_label"    "20101116_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20101124
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20101124_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20101124_24_2009.tif"
+            "wms_abstract"          "20101124_24_2009.tif"
+            "wcs_label"             "20101124_24_2009.tif"
+            "wcs_rangeset_name"     "20101124_24_2009.tif"
+            "wcs_rangeset_label"    "20101124_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20101202
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20101202_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20101202_24_2009.tif"
+            "wms_abstract"          "20101202_24_2009.tif"
+            "wcs_label"             "20101202_24_2009.tif"
+            "wcs_rangeset_name"     "20101202_24_2009.tif"
+            "wcs_rangeset_label"    "20101202_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20101210
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20101210_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20101210_24_2009.tif"
+            "wms_abstract"          "20101210_24_2009.tif"
+            "wcs_label"             "20101210_24_2009.tif"
+            "wcs_rangeset_name"     "20101210_24_2009.tif"
+            "wcs_rangeset_label"    "20101210_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20101218
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20101218_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20101218_24_2009.tif"
+            "wms_abstract"          "20101218_24_2009.tif"
+            "wcs_label"             "20101218_24_2009.tif"
+            "wcs_rangeset_name"     "20101218_24_2009.tif"
+            "wcs_rangeset_label"    "20101218_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20101226
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20101226_24_2009.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "20101226_24_2009.tif"
+            "wms_abstract"          "20101226_24_2009.tif"
+            "wcs_label"             "20101226_24_2009.tif"
+            "wcs_rangeset_name"     "20101226_24_2009.tif"
+            "wcs_rangeset_label"    "20101226_24_2009.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110108
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110108_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110108_24_2010_max.tif"
+            "wms_abstract"          "20110108_24_2010_max.tif"
+            "wcs_label"             "20110108_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110108_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110108_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110116
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110116_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110116_24_2010_max.tif"
+            "wms_abstract"          "20110116_24_2010_max.tif"
+            "wcs_label"             "20110116_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110116_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110116_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110124
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110124_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110124_24_2010_max.tif"
+            "wms_abstract"          "20110124_24_2010_max.tif"
+            "wcs_label"             "20110124_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110124_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110124_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110201
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110201_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110201_24_2010_max.tif"
+            "wms_abstract"          "20110201_24_2010_max.tif"
+            "wcs_label"             "20110201_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110201_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110201_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110209
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110209_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110209_24_2010_max.tif"
+            "wms_abstract"          "20110209_24_2010_max.tif"
+            "wcs_label"             "20110209_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110209_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110209_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110217
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110217_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110217_24_2010_max.tif"
+            "wms_abstract"          "20110217_24_2010_max.tif"
+            "wcs_label"             "20110217_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110217_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110217_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110225
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110225_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110225_24_2010_max.tif"
+            "wms_abstract"          "20110225_24_2010_max.tif"
+            "wcs_label"             "20110225_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110225_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110225_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110305
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110305_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110305_24_2010_max.tif"
+            "wms_abstract"          "20110305_24_2010_max.tif"
+            "wcs_label"             "20110305_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110305_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110305_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110313
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110313_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110313_24_2010_max.tif"
+            "wms_abstract"          "20110313_24_2010_max.tif"
+            "wcs_label"             "20110313_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110313_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110313_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110321
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110321_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110321_24_2010_max.tif"
+            "wms_abstract"          "20110321_24_2010_max.tif"
+            "wcs_label"             "20110321_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110321_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110321_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110329
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110329_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110329_24_2010_max.tif"
+            "wms_abstract"          "20110329_24_2010_max.tif"
+            "wcs_label"             "20110329_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110329_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110329_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110406
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110406_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110406_24_2010_max.tif"
+            "wms_abstract"          "20110406_24_2010_max.tif"
+            "wcs_label"             "20110406_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110406_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110406_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110414
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110414_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110414_24_2010_max.tif"
+            "wms_abstract"          "20110414_24_2010_max.tif"
+            "wcs_label"             "20110414_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110414_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110414_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110422
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110422_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110422_24_2010_max.tif"
+            "wms_abstract"          "20110422_24_2010_max.tif"
+            "wcs_label"             "20110422_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110422_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110422_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110430
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110430_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110430_24_2010_max.tif"
+            "wms_abstract"          "20110430_24_2010_max.tif"
+            "wcs_label"             "20110430_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110430_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110430_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110508
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110508_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110508_24_2010_max.tif"
+            "wms_abstract"          "20110508_24_2010_max.tif"
+            "wcs_label"             "20110508_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110508_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110508_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110516
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110516_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110516_24_2010_max.tif"
+            "wms_abstract"          "20110516_24_2010_max.tif"
+            "wcs_label"             "20110516_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110516_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110516_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110524
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110524_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110524_24_2010_max.tif"
+            "wms_abstract"          "20110524_24_2010_max.tif"
+            "wcs_label"             "20110524_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110524_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110524_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110531
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110531_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110531_24_2011_max.tif"
+            "wms_abstract"          "20110531_24_2011_max.tif"
+            "wcs_label"             "20110531_24_2011_max.tif"
+            "wcs_rangeset_name"     "20110531_24_2011_max.tif"
+            "wcs_rangeset_label"    "20110531_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110601
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110601_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110601_24_2010_max.tif"
+            "wms_abstract"          "20110601_24_2010_max.tif"
+            "wcs_label"             "20110601_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110601_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110601_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110609
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110609_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110609_24_2010_max.tif"
+            "wms_abstract"          "20110609_24_2010_max.tif"
+            "wcs_label"             "20110609_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110609_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110609_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110617
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110617_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110617_24_2010_max.tif"
+            "wms_abstract"          "20110617_24_2010_max.tif"
+            "wcs_label"             "20110617_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110617_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110617_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110625
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110625_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110625_24_2010_max.tif"
+            "wms_abstract"          "20110625_24_2010_max.tif"
+            "wcs_label"             "20110625_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110625_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110625_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110703
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110703_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110703_24_2010_max.tif"
+            "wms_abstract"          "20110703_24_2010_max.tif"
+            "wcs_label"             "20110703_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110703_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110703_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110711
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110711_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110711_24_2010_max.tif"
+            "wms_abstract"          "20110711_24_2010_max.tif"
+            "wcs_label"             "20110711_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110711_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110711_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110719
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110719_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110719_24_2010_max.tif"
+            "wms_abstract"          "20110719_24_2010_max.tif"
+            "wcs_label"             "20110719_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110719_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110719_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110727
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110727_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110727_24_2010_max.tif"
+            "wms_abstract"          "20110727_24_2010_max.tif"
+            "wcs_label"             "20110727_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110727_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110727_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110804
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110804_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110804_24_2010_max.tif"
+            "wms_abstract"          "20110804_24_2010_max.tif"
+            "wcs_label"             "20110804_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110804_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110804_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110812
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110812_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110812_24_2010_max.tif"
+            "wms_abstract"          "20110812_24_2010_max.tif"
+            "wcs_label"             "20110812_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110812_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110812_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110820
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110820_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110820_24_2010_max.tif"
+            "wms_abstract"          "20110820_24_2010_max.tif"
+            "wcs_label"             "20110820_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110820_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110820_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110828
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110828_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110828_24_2010_max.tif"
+            "wms_abstract"          "20110828_24_2010_max.tif"
+            "wcs_label"             "20110828_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110828_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110828_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110905
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110905_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110905_24_2010_max.tif"
+            "wms_abstract"          "20110905_24_2010_max.tif"
+            "wcs_label"             "20110905_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110905_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110905_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110913
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110913_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110913_24_2010_max.tif"
+            "wms_abstract"          "20110913_24_2010_max.tif"
+            "wcs_label"             "20110913_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110913_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110913_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110921
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110921_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110921_24_2010_max.tif"
+            "wms_abstract"          "20110921_24_2010_max.tif"
+            "wcs_label"             "20110921_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110921_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110921_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20110929
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20110929_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20110929_24_2010_max.tif"
+            "wms_abstract"          "20110929_24_2010_max.tif"
+            "wcs_label"             "20110929_24_2010_max.tif"
+            "wcs_rangeset_name"     "20110929_24_2010_max.tif"
+            "wcs_rangeset_label"    "20110929_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20111007
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20111007_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20111007_24_2010_max.tif"
+            "wms_abstract"          "20111007_24_2010_max.tif"
+            "wcs_label"             "20111007_24_2010_max.tif"
+            "wcs_rangeset_name"     "20111007_24_2010_max.tif"
+            "wcs_rangeset_label"    "20111007_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20111015
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20111015_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20111015_24_2010_max.tif"
+            "wms_abstract"          "20111015_24_2010_max.tif"
+            "wcs_label"             "20111015_24_2010_max.tif"
+            "wcs_rangeset_name"     "20111015_24_2010_max.tif"
+            "wcs_rangeset_label"    "20111015_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20111023
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20111023_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20111023_24_2010_max.tif"
+            "wms_abstract"          "20111023_24_2010_max.tif"
+            "wcs_label"             "20111023_24_2010_max.tif"
+            "wcs_rangeset_name"     "20111023_24_2010_max.tif"
+            "wcs_rangeset_label"    "20111023_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20111031
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20111031_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20111031_24_2010_max.tif"
+            "wms_abstract"          "20111031_24_2010_max.tif"
+            "wcs_label"             "20111031_24_2010_max.tif"
+            "wcs_rangeset_name"     "20111031_24_2010_max.tif"
+            "wcs_rangeset_label"    "20111031_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20111108
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20111108_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20111108_24_2010_max.tif"
+            "wms_abstract"          "20111108_24_2010_max.tif"
+            "wcs_label"             "20111108_24_2010_max.tif"
+            "wcs_rangeset_name"     "20111108_24_2010_max.tif"
+            "wcs_rangeset_label"    "20111108_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20111116
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20111116_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20111116_24_2010_max.tif"
+            "wms_abstract"          "20111116_24_2010_max.tif"
+            "wcs_label"             "20111116_24_2010_max.tif"
+            "wcs_rangeset_name"     "20111116_24_2010_max.tif"
+            "wcs_rangeset_label"    "20111116_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20111124
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20111124_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20111124_24_2010_max.tif"
+            "wms_abstract"          "20111124_24_2010_max.tif"
+            "wcs_label"             "20111124_24_2010_max.tif"
+            "wcs_rangeset_name"     "20111124_24_2010_max.tif"
+            "wcs_rangeset_label"    "20111124_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20111202
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20111202_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20111202_24_2010_max.tif"
+            "wms_abstract"          "20111202_24_2010_max.tif"
+            "wcs_label"             "20111202_24_2010_max.tif"
+            "wcs_rangeset_name"     "20111202_24_2010_max.tif"
+            "wcs_rangeset_label"    "20111202_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20111210
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20111210_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20111210_24_2010_max.tif"
+            "wms_abstract"          "20111210_24_2010_max.tif"
+            "wcs_label"             "20111210_24_2010_max.tif"
+            "wcs_rangeset_name"     "20111210_24_2010_max.tif"
+            "wcs_rangeset_label"    "20111210_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20111218
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20111218_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20111218_24_2010_max.tif"
+            "wms_abstract"          "20111218_24_2010_max.tif"
+            "wcs_label"             "20111218_24_2010_max.tif"
+            "wcs_rangeset_name"     "20111218_24_2010_max.tif"
+            "wcs_rangeset_label"    "20111218_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20111226
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20111226_24_2010_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20111226_24_2010_max.tif"
+            "wms_abstract"          "20111226_24_2010_max.tif"
+            "wcs_label"             "20111226_24_2010_max.tif"
+            "wcs_rangeset_name"     "20111226_24_2010_max.tif"
+            "wcs_rangeset_label"    "20111226_24_2010_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120108
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120108_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120108_24_2011_max.tif"
+            "wms_abstract"          "20120108_24_2011_max.tif"
+            "wcs_label"             "20120108_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120108_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120108_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120116
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120116_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120116_24_2011_max.tif"
+            "wms_abstract"          "20120116_24_2011_max.tif"
+            "wcs_label"             "20120116_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120116_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120116_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120124
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120124_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120124_24_2011_max.tif"
+            "wms_abstract"          "20120124_24_2011_max.tif"
+            "wcs_label"             "20120124_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120124_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120124_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120201
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120201_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120201_24_2011_max.tif"
+            "wms_abstract"          "20120201_24_2011_max.tif"
+            "wcs_label"             "20120201_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120201_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120201_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120209
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120209_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120209_24_2011_max.tif"
+            "wms_abstract"          "20120209_24_2011_max.tif"
+            "wcs_label"             "20120209_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120209_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120209_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120217
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120217_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120217_24_2011_max.tif"
+            "wms_abstract"          "20120217_24_2011_max.tif"
+            "wcs_label"             "20120217_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120217_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120217_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120225
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120225_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120225_24_2011_max.tif"
+            "wms_abstract"          "20120225_24_2011_max.tif"
+            "wcs_label"             "20120225_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120225_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120225_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120304
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120304_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120304_24_2011_max.tif"
+            "wms_abstract"          "20120304_24_2011_max.tif"
+            "wcs_label"             "20120304_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120304_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120304_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120312
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120312_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120312_24_2011_max.tif"
+            "wms_abstract"          "20120312_24_2011_max.tif"
+            "wcs_label"             "20120312_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120312_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120312_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120320
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120320_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120320_24_2011_max.tif"
+            "wms_abstract"          "20120320_24_2011_max.tif"
+            "wcs_label"             "20120320_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120320_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120320_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120328
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120328_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120328_24_2011_max.tif"
+            "wms_abstract"          "20120328_24_2011_max.tif"
+            "wcs_label"             "20120328_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120328_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120328_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120405
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120405_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120405_24_2011_max.tif"
+            "wms_abstract"          "20120405_24_2011_max.tif"
+            "wcs_label"             "20120405_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120405_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120405_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120413
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120413_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120413_24_2011_max.tif"
+            "wms_abstract"          "20120413_24_2011_max.tif"
+            "wcs_label"             "20120413_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120413_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120413_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120421
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120421_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120421_24_2011_max.tif"
+            "wms_abstract"          "20120421_24_2011_max.tif"
+            "wcs_label"             "20120421_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120421_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120421_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120429
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120429_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120429_24_2011_max.tif"
+            "wms_abstract"          "20120429_24_2011_max.tif"
+            "wcs_label"             "20120429_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120429_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120429_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120507
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120507_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120507_24_2011_max.tif"
+            "wms_abstract"          "20120507_24_2011_max.tif"
+            "wcs_label"             "20120507_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120507_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120507_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120515
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120515_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120515_24_2011_max.tif"
+            "wms_abstract"          "20120515_24_2011_max.tif"
+            "wcs_label"             "20120515_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120515_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120515_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120523
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120523_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120523_24_2011_max.tif"
+            "wms_abstract"          "20120523_24_2011_max.tif"
+            "wcs_label"             "20120523_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120523_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120523_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+END # end MAP

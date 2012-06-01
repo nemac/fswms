@@ -90,3 +90,11 @@
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "ewswcs1year">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "ewswcs3year">
+    Allow from all
+    SetHandler cgi-script
+</Files>

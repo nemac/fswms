@@ -99,7 +99,7 @@ class Template:
 #Start of attempt to create a generic function to get layers
 #At this point its a not completely generic because the color maps is 
 #specific to the tif files location
-def getLayers(dataDir, layerTemplateName, groupName, fileExt):
+def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs):
     #print 'data dir ' + dataDir
     #print 'template ' + layerTemplateName
     tifList  = []
@@ -114,7 +114,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt):
             #this conditional logic needs to be refactored out
             if re.search(r'max|med', nameform):
                 colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
-            elif re.search(r'.img', fileExt):
+            elif re.search(r'.img', fileExt) or wcs=="yes":
                 colormapline   = ''
             else:
                 colormapline   = 'INCLUDE "ewsold.cmap"'
@@ -389,6 +389,12 @@ f_new.write( mapTemplate.render( {
             } ) )
 f_new.close()
 
+wcslayerTemplate = Template("ewswcs.layer.tmpl")
+LAYERS = ""
+for tifdict in tiflist:
+    if tifdict['PROJVALID']:
+        LAYERS = LAYERS + wcslayerTemplate.render( tifdict )
+		
 f_new = openMapfileForWriting("ewswcs.map")
 SERVICE_NAME = "ewswcs"
 f_new.write( mapTemplate.render( {
@@ -412,7 +418,7 @@ f_new.close()
 ###
 ### CREATE ews1year.map FILE:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif")
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no")
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews1year.map")
 SERVICE_NAME = "ews1year"
@@ -437,9 +443,36 @@ f_new.write( template.render( {
 f_new.close()
 
 ###
+### CREATE ewswcs1year.map FILE:
+###
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "yes")
+template = Template("ews_gen.tpl.map")
+f_new = openMapfileForWriting("ewswcs1year.map")
+SERVICE_NAME = "ewswcs1year"
+WCS_LABEL = "EWS 1Year"
+f_new.write( template.render( {
+            'DATA_DIR'              : DATA_DIR,
+            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "ewswcs1year"),
+            'LAYERS'                : LAYERS,
+            'WMS_SRS'               : "EPSG:2163",
+            'MAPFILE_PROJECTION'    : '"init=epsg:2163"',
+            'SERVICE_NAME'          : SERVICE_NAME,
+            'TEMP_FILE_PREFIX'      : "ms_%s" % (SERVICE_NAME),
+            'MAPFILE'               : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+            'OWS_TITLE'             : "NEMAC %s WMS" % (SERVICE_NAME),
+            'OWS_ABSTRACT'          : "NEMAC %s WMS" % (SERVICE_NAME),
+            'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
+            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+            'MS_ERRORFILE'          : "../logs/%s.log" % (SERVICE_NAME),
+            'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
+            'WCS_LABEL'             : WCS_LABEL
+            } ) )
+f_new.close()
+
+###
 ### Create the ews3year.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif")
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no")
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews3year.map")
 SERVICE_NAME = "ews3year"
@@ -464,9 +497,36 @@ f_new.write( template.render( {
 f_new.close()
 
 ###
+### Create the ewswcs3year.map file:
+###
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "yes")
+template = Template("ews_gen.tpl.map")
+f_new = openMapfileForWriting("ewswcs3year.map")
+SERVICE_NAME = "ewswcs3year"
+WCS_LABEL = "EWS 3Year"
+f_new.write( template.render( {
+            'DATA_DIR'              : DATA_DIR,
+            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "ewswcs3year"),
+            'LAYERS'                : LAYERS,
+            'WMS_SRS'               : "EPSG:2163",
+            'MAPFILE_PROJECTION'    : '"init=epsg:2163"',
+            'SERVICE_NAME'          : SERVICE_NAME,
+            'TEMP_FILE_PREFIX'      : "ms_%s" % (SERVICE_NAME),
+            'MAPFILE'               : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+            'OWS_TITLE'             : "NEMAC %s WMS" % (SERVICE_NAME),
+            'OWS_ABSTRACT'          : "NEMAC %s WMS" % (SERVICE_NAME),
+            'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
+            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+            'MS_ERRORFILE'          : "../logs/%s.log" % (SERVICE_NAME),
+            'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
+            'WCS_LABEL'             : WCS_LABEL
+            } ) )
+f_new.close()
+
+###
 ### Create the ewstruecolor.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "truecolor.layer.tpl.map", "EFETAC-NASA_TC", ".img")
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "truecolor.layer.tpl.map", "EFETAC-NASA_TC", ".img", "no")
 template = Template("ewstruecolor.tpl.map")
 f_new = openMapfileForWriting("ewstruecolor.map")
 SERVICE_NAME = "ewstruecolor"
