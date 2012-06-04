@@ -112,10 +112,12 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs):
             nameform = re.sub(r'^.*/', '', tif)
             #print nameform
             #this conditional logic needs to be refactored out
-            if re.search(r'max|med', nameform):
+            if re.search(r'max|med', nameform) and wcs=="no":
                 colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
-            elif re.search(r'.img', fileExt) or wcs=="yes":
+            elif re.search(r'.img', fileExt):
                 colormapline   = ''
+            elif(wcs=="yes"):
+		colormapline   = ''
             else:
                 colormapline   = 'INCLUDE "ewsold.cmap"'
             group = groupName 
