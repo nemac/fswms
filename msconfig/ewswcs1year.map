@@ -53,7 +53,7 @@ MAP
             "ows_enable_request"     "*"
             "wms_title"              "NEMAC ewswcs1year WMS"
             "wms_abstract"           "NEMAC ewswcs1year WMS"
-            "wms_onlineresource"     "http://rain.nemac.org/~mwhutchi/fswms/html/ewswcs1year"
+            "wms_onlineresource"     "http://rain.nemac.org/~derek/fswms/html/ewswcs1year"
             "wms_srs"                "EPSG:2163"
             "wcs_label"              "EWS 1Year"
             "wcs_srs"                "EPSG:2163"
@@ -1897,35 +1897,6 @@ MAP
         END  # end METADATA
     END # end LAYER
     LAYER
-        NAME EFETAC-NASA_1Year_20110531
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     /flood/fsdata/efetac_nasa/1Year/20110531_24_2011_max.tif
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
-        METADATA
-            "wms_title"             "20110531_24_2011_max.tif"
-            "wms_abstract"          "20110531_24_2011_max.tif"
-            "wcs_label"             "20110531_24_2011_max.tif"
-            "wcs_rangeset_name"     "20110531_24_2011_max.tif"
-            "wcs_rangeset_label"    "20110531_24_2011_max.tif"
-            "gml_include_items"     "value_0"
-        END  # end METADATA
-    END # end LAYER
-    LAYER
         NAME EFETAC-NASA_1Year_20110601
         PROJECTION
           "+proj=laea"
@@ -3227,6 +3198,35 @@ MAP
             "wcs_label"             "20120523_24_2011_max.tif"
             "wcs_rangeset_name"     "20120523_24_2011_max.tif"
             "wcs_rangeset_label"    "20120523_24_2011_max.tif"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME EFETAC-NASA_1Year_20120531
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/1Year/20120531_24_2011_max.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20120531_24_2011_max.tif"
+            "wms_abstract"          "20120531_24_2011_max.tif"
+            "wcs_label"             "20120531_24_2011_max.tif"
+            "wcs_rangeset_name"     "20120531_24_2011_max.tif"
+            "wcs_rangeset_label"    "20120531_24_2011_max.tif"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
