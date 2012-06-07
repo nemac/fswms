@@ -23,6 +23,7 @@ class Template:
     def render(self, dict):
         return self.contents % dict
 
+
 ###
 ### Populate 'layerTitles' dict by reading contents from "layerTitles.txt" file:
 ###
@@ -144,12 +145,118 @@ template = Template("ews_config.tpl.xml")
 if not os.path.exists("../html/view/config"):
     os.makedirs("../html/view/config")
 
+
+#Section to automate NRT 8 day layers for viewer config-----------------------------------
+#http://stackoverflow.com/questions/932506/how-can-i-get-the-next-string-in-alphanumeric-ordering-in-python
+def next_alpha(s):
+    strip_zs = s.rstrip('z')
+    if strip_zs:
+        return (strip_zs[:-1] + chr(ord(strip_zs[-1]) + 1) + 'a' * (len(s) - len(strip_zs)))
+    else:
+        return 'a' * (len(s) + 1)
+
+def getNRTLID(layerName):
+    lids_list = []
+    lyrs_list = []
+    last_lid = ""
+    f = open("NRTLayerLID.csv", "r");
+    for line in f:
+        sp = line.split(',')
+        lyrs_list.append(sp[0])
+        lids_list.append(sp[1])
+    f.close();
+    sorted_array = sorted(lids_list)
+    sorted_array.reverse()
+    #print "highest lid is %s" % sorted_array[0]
+    highest_lid = sorted_array[0]
+    nlid = next_alpha(highest_lid.lower().rstrip()) #rstrip removes any newline chars or white space
+    if any(layerName.rstrip() in s for s in lyrs_list):#check to see if lid is already in list
+        i = 0
+        for item in lyrs_list:
+            if lyrs_list[i]==layerName:
+                nlid = lids_list[i]
+            i = i + 1
+    else: #this is new one, iterate and add to file
+        #print "new one"
+        f.close()
+        f = open("NRTLayerLID.csv", "a");
+        f.write(layerName+ "," + nlid.upper() + "\n")
+        f.close()
+    #print "layer: " + layerName + " lid: " + nlid.upper()
+    return nlid.rstrip().upper()
+
+
+def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
+    tifList  = []
+    for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
+        try:        
+            tif = re.sub('^' + dataDir + '/', '', tif)
+            tif_fullpath = dataDir + '/' + tif;
+            nameform = re.sub(r'^.*/', '', tif)
+            group = groupName 
+            if re.search(r'.img', nameform):
+                layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
+            else:
+               if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
+                    layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
+               else:
+                    layerName = group + "_" + re.sub(r'_.*$', '', nameform)
+            layerTitle = tif
+            lid = getNRTLID(layerName)
+            if legendYesNo=="yes":
+                legend = SERVER_URL+"/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"
+            else:
+		legend = ""
+            if groupName == "EFETAC-NASA_TC":
+                layerTitle = "True Color " + layerName[-11:]
+            else:
+                layerTitle = layerName[-8:]
+            if layerName[-2:].rstrip()!="bd": #this is one of those bd ones
+                tifList.append({ 'LAYER_LID'       : lid,
+                                 'WRAP_NAME'       : wrapName,
+                                 'LAYER_NAME'      : layerName,
+                                 'LAYER_TITLE'     : layerTitle,
+                                 'SERVER_URL'      : SERVER_URL,
+                                 'LEGEND'          : legend
+                                 })
+            layerTitles[layerName] = layerTitle
+        except:
+            print "except occured"
+            continue
+    layers = ""
+    for tifdict in tifList:
+	layers = layers + nrtWMSLayerTemplate.render(tifdict)    
+    return layers
+
+nrtWMSLayerTemplate = Template(string="""
+        <wmsLayer
+          lid="%(LAYER_LID)s"
+          visible="false"
+          url="%(SERVER_URL)s/%(WRAP_NAME)s?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="%(LAYER_NAME)s"
+          name="%(LAYER_TITLE)s"
+          styles="default" 
+          identify="true"
+          legend="%(LEGEND)s"/>	
+""")
+
+nrtTCProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "EFETAC-NASA_TC", "ewstruecolor", "no", ".img")
+nrt1YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/1Year", "EFETAC-NASA_1Year", "ews1year", "yes", ".tif")
+nrt3YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/3Year", "EFETAC-NASA_3Year", "ews3year", "yes", ".tif")
+nrtAllYrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/AllYear", "EFETAC-NASA", "ews", "yes", ".tif")
+#End NRT 8 day automation-------------------------------------------------
+
 f = open("../html/view/config/ews_config.xml", "w")
 f.write(template.render( {
             'SERVER_URL'                            : SERVER_URL,
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
             'TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : tacsModisChangeDetectionProductLayers,
-			'RSAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : rsacModisChangeDetectionProductLayers
+	    'RSAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : rsacModisChangeDetectionProductLayers,
+            'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
+            'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,
+            'NRT_3YEAR_LAYERS'        : nrt3YrProductLayers,
+            'NRT_AllYEAR_LAYERS'      : nrtAllYrProductLayers
             }))
 f.close()
 
