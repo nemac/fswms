@@ -906,6 +906,156 @@
 	   legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
     </wmsSubgroup>
     <wmsSubgroup label="2012">
+        <wmsLayer 
+	      lid="DRAAP"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120605_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120605" 
+	      styles="default"
+	      identify="false" 
+	      name="06/05/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAO"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120529_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120529" 
+	      styles="default"
+	      identify="false" 
+	      name="05/29/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAN"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120522_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120522" 
+	      styles="default"
+	      identify="false" 
+	      name="05/22/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAM"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120515_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120515" 
+	      styles="default"
+	      identify="false" 
+	      name="05/15/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAL"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120508_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120508" 
+	      styles="default"
+	      identify="false" 
+	      name="05/08/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAK"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120501_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120501" 
+	      styles="default"
+	      identify="false" 
+	      name="05/01/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAJ"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120424_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120424" 
+	      styles="default"
+	      identify="false" 
+	      name="04/24/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAI"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120417_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120417" 
+	      styles="default"
+	      identify="false" 
+	      name="04/17/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAH"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120410_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120410" 
+	      styles="default"
+	      identify="false" 
+	      name="04/10/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAG"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120403_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120403" 
+	      styles="default"
+	      identify="false" 
+	      name="04/03/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAF"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120327_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120327" 
+	      styles="default"
+	      identify="false" 
+	      name="03/27/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAE"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120320_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120320" 
+	      styles="default"
+	      identify="false" 
+	      name="03/20/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAD"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120313_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120313" 
+	      styles="default"
+	      identify="false" 
+	      name="03/13/2012 Drought Monitor" 
+	   legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" /> 
+        <wmsLayer 
+	      lid="DRAAC"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120306_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120306" 
+	      styles="default"
+	      identify="false" 
+	      name="03/06/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+        <wmsLayer 
+	      lid="DRAAB"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120228_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120228" 
+	      styles="default"
+	      identify="false" 
+	      name="02/28/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
 	<wmsLayer 
 	   lid="BQW"
 	   visible="false" 
