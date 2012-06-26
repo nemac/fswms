@@ -1,6 +1,6 @@
 MAP
-    CONFIG     "MS_ERRORFILE" "../logs/lucky.log"
-    DEBUG      5
+    #CONFIG     "MS_ERRORFILE" "../logs/lucky.log"
+    #DEBUG      5
     NAME       lucky
     STATUS     ON
     SIZE       600 400

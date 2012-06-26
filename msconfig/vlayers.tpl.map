@@ -1,8 +1,8 @@
 MAP
     # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
     # of the two lines below to enable this logging:
-    CONFIG "MS_ERRORFILE" "../logs/vlayers.log"
-    DEBUG 5
+    #CONFIG "MS_ERRORFILE" "../logs/vlayers.log"
+    #DEBUG 5
 
     # all temp files get prefixed with this string
     NAME ms_vlayers

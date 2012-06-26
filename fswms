@@ -20,7 +20,7 @@ SVN_ROOT     = "svn+ssh://svn.nemac.org/usr/local/svn-repos/fswms"
 # The deploying process will remove all current files and directories
 # from the deployment directory, except for the ones listed here:
 #
-KEEPERS = ['msconfig/Config.py','html/tmp', 'logs']
+KEEPERS = ['msconfig/Config.py','msconfig/NRTLayerLID.csv','html/tmp', 'logs']
 
 #
 # DIRS_TO_ENSURE is a list of directories to be created in the deployment
