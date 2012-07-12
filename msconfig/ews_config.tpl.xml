@@ -29,7 +29,7 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri" />
+      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
     </view>
@@ -42,7 +42,7 @@
       <viewGroup name="MODISCloud" />
       <viewGroup name="EWS_RSAC-FHTET" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri" />
+      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
     </view>
@@ -53,7 +53,7 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri" />
+      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Derived_Products" />
@@ -65,7 +65,7 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri" />
+      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Parameters" />
@@ -77,7 +77,7 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri" />
+      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Integrals" />
@@ -89,7 +89,7 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri" />
+      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_MODISNDVI" />
@@ -101,7 +101,7 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri" />
+      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Derived_Products" />
@@ -112,7 +112,7 @@
   </mapviews>
 
 <wmsLayers>
-  <wmsGroup gid="G01" name="US_Jurisdictions" label="Political Boundaries and Roads" priorService="vegdri">
+  <wmsGroup gid="G01" name="US_Jurisdictions" label="Political Boundaries and Roads">
     <wmsSubgroup label="Boundaries">
       <wmsLayer
 	 lid="AAA"
@@ -187,7 +187,7 @@
     </wmsSubgroup>
   </wmsGroup>
 
-  <wmsGroup gid="G02" name="US_Fire" label="Wildfires" priorService="vegdri">
+  <wmsGroup gid="G02" name="US_Fire" label="Wildfires">
     <wmsSubgroup label="Current/NRT Wildfire Detections">
       <wmsLayer 
 	 lid="AAG"
@@ -344,7 +344,7 @@
     </wmsSubgroup>
   </wmsGroup>
 
-  <wmsGroup gid="G03" name="US_FHM_ADS" label="Historical Aerial Disturbance Surveys (USFS FHM)" priorService="vegdri">
+  <wmsGroup gid="G03" name="US_FHM_ADS" label="Historical Aerial Disturbance Surveys (USFS FHM)">
     <wmsLayer 
        lid="AAS"
        visible="false" 
@@ -433,7 +433,7 @@
      may appear on one (but only one) <wmsGroup>  tag, and indicates that the viewer should be initialized with that accordian group
      initially open.
     -->
-  <wmsGroup gid="G04" name="MODIS_Change_Detection_Products" label="Forest Disturbance Detection Maps (MODIS NRT)" priorService="vegdri" selected="true">
+  <wmsGroup gid="G04" name="MODIS_Change_Detection_Products" label="Forest Disturbance Detection Maps (MODIS NRT)" selected="true">
     <wmsSubgroup label="Forest NDVI Change (USFS TACs-NASA)">
     </wmsSubgroup>
     %(TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
@@ -441,7 +441,7 @@
     </wmsSubgroup>
     %(RSAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
   </wmsGroup>
-  <wmsGroup gid="G05" name="Archived_NRT" label="Archived Forest Disturbance Detection Maps" priorService="vegdri">
+  <wmsGroup gid="G05" name="Archived_NRT" label="Archived Forest Disturbance Detection Maps">
     <wmsSubgroup label="Archived NRT 1-Year Baseline (TACs-NASA)">
     %(NRT_1YEAR_LAYERS)s
     </wmsSubgroup>
@@ -453,10 +453,10 @@
     </wmsSubgroup>
   </wmsGroup>
   
-  <wmsGroup gid="G06" name="MODISCloud" label="eMODIS Cloud Assessment Products" priorService="vegdri">	
+  <wmsGroup gid="G06" name="MODISCloud" label="eMODIS Cloud Assessment Products">	
         %(NRT_MODISCloud__LAYERS)s
   </wmsGroup>
-  <wmsGroup gid="G07" name="Archived_NRT" label="Archived RSAC-FHTET Forest Change Disturbance" priorService="vegdri">
+  <wmsGroup gid="G07" name="Archived_NRT" label="Archived RSAC-FHTET Forest Change Disturbance">
     <wmsSubgroup label="Archived 3-Year Baseline (RSAC-FHTET)">
 	<wmsLayer
 		lid="BJT"
@@ -892,8 +892,8 @@
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
-  <wmsGroup gid="G08" name="Drought_Monitor" label="Current Drought- US Drought Monitor" priorService="vegdri">
-    <wmsSubgroup label="Current">
+  <wmsGroup gid="G08" name="Drought_Monitor" label="Current Drought- US Drought Monitor">
+    <wmsSubgroup label="Current Drought Monitor">
 	<wmsLayer 
 	   lid="AHZ"
 	   visible="false" 
@@ -906,6 +906,46 @@
 	   legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
     </wmsSubgroup>
     <wmsSubgroup label="2012">
+	    <wmsLayer 
+	      lid="DRAAT"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120703_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120703" 
+	      styles="default"
+	      identify="false" 
+	      name="07/03/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+	    <wmsLayer 
+	      lid="DRAAS"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120626_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120626" 
+	      styles="default"
+	      identify="false" 
+	      name="06/26/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+	    <wmsLayer 
+	      lid="DRAAR"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120619_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120619" 
+	      styles="default"
+	      identify="false" 
+	      name="06/19/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
+	    <wmsLayer 
+	      lid="DRAAQ"
+	      visible="false" 
+	      url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm120612_wms.map&#38;#38;TRANSPARENT=true" 
+	      srs="EPSG:900913" 
+	      layers="usdm120612" 
+	      styles="default"
+	      identify="false" 
+	      name="06/12/2012 Drought Monitor" 
+	      legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
         <wmsLayer 
 	      lid="DRAAP"
 	      visible="false" 
@@ -2203,6 +2243,140 @@
     </wmsSubgroup>
   </wmsGroup>
 
+  <wmsGroup gid="G15" name="vegdri_new" label="USGS VegDRI Drought Assessment Products" >
+    <wmsSubgroup label="eMODIS Vegetation Moisture Status (Weekly)">
+	  <wmsLayer 
+	 lid="VDAAM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI1" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI1 (Current)" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAL"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI2" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI2" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAK"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI3" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI3" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAJ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI4" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI4" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAI"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI5" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI5" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAH"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI6" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI6" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAG"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI7" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI7" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAF"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI8" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI8" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI9" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI9" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAD"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI10" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI10" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI11" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI11" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI12" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI12" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	  <wmsLayer 
+	 lid="VDAAA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="eMODIS-VegDRI13" 
+	 styles="default" 
+	 identify="true" 
+	 name="eMODIS VegDRI13" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+    </wmsSubgroup>
+  </wmsGroup>
 
   <wmsGroup gid="G09" name="US_Climate" label="Other Weather and Climate" >
     <wmsSubgroup label="Weather">
@@ -2246,6 +2420,78 @@
 	 identify="true" 	 
 	 name="Tornado Tracks 1999-2010 (NWS)" 	 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=tornado-tracks&VERSION=1.1.1&FORMAT=image/png"/>
+    </wmsSubgroup>
+	<wmsSubgroup label="Precipitation Derivatives (NOAA NWS)">
+      <wmsLayer 
+	 lid="VDAAO"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="TotalPrecip_7" 
+	 styles="default" 
+	 identify="true" 
+	 name="7 Day Total Precipitation" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/TotalPrecip_7.png"/>
+	  <wmsLayer 
+	 lid="VDAAP"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="TotalPrecip_30" 
+	 styles="default" 
+	 identify="true" 
+	 name="30 Day Total Precipitation" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/TotalPrecip_30.png"/>
+	  <wmsLayer 
+	 lid="VDAAQ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="DaysWithPrecip_7" 
+	 styles="default" 
+	 identify="true" 
+	 name="No. Days with Precipitation (past 7 Days)" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/DaysWithPrecip_7.png"/>
+	  <wmsLayer 
+	 lid="VDAAR"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="DaysWithPrecip_30" 
+	 styles="default" 
+	 identify="true" 
+	 name="No. Days with Precipitation (past 30 Days)" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/DaysWithPrecip_30.png"/>
+	  <wmsLayer 
+	 lid="VDAAS"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="DaysSincePrecip_30" 
+	 styles="default" 
+	 identify="true" 
+	 name="No. Days since Precipitation (past 30 Days)" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/DaysSincePrecip_30.png"/>
+	  <wmsLayer 
+	 lid="VDAAT"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="MaxConDryDays_7" 
+	 styles="default" 
+	 identify="true" 
+	 name="Max. Consecutive Dry Days (past 7 Days)" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/MaxConDryDays_7.png"/>
+	  <wmsLayer 
+	 lid="VDAAU"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="MaxConDryDays_30" 
+	 styles="default" 
+	 identify="true" 
+	 name="Max. Consecutive Dry Days (past 30 Days)" 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/MaxConDryDays_30.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Percent of Normal (NOAA PRISM)">
 	  <wmsLayer 
@@ -2567,6 +2813,16 @@
 	 legend="%(SERVER_URL)s/cmapicons/SRTM-Hillshading.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Hydrography">
+	  <wmsLayer 
+	 lid="VDAAN"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="7_Day_Average_Streamflow" 
+	 styles="default" 
+	 identify="true" 
+	 name="7 Day Avg. Streamflow (USGS WaterWatch) " 
+	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/7_Day_Average_Streamflow.png"/>
       <wmsLayer 
 	 lid="AIL"
 	 visible="false" 

@@ -31,6 +31,8 @@ MAP
         EXTENSION "tif"
     END
 
+	TRANSPARENT ON
+	
     # minx miny maxx maxy
     # sets:
     # /WMT_MS_Capabilities/Capability/Layer/LatLonBoundingBox(@minx @miny @maxx @maxx)
@@ -60,6 +62,435 @@ MAP
 
     QUERYMAP
         STATUS OFF
+    END
+	LAYER
+      NAME "eMODIS-VegDRI1"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI1"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI2"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI2"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI3"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI3"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI4"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI4"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI5"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI5"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI6"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI6"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI7"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI7"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI8"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI8"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI9"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI9"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI10"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI10"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI11"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI11"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI12"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI12"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "eMODIS-VegDRI13"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "eMODIS VegDRI13"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+		"wms_bgcolor"         "0x000000"
+      END
+    END
+	LAYER
+      NAME "7_Day_Average_Streamflow"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "7_Day_Average_Streamflow"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "TotalPrecip_7"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "TotalPrecip_7"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "TotalPrecip_30"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "TotalPrecip_30"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "DaysWithPrecip_7"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "DaysWithPrecip_7"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "DaysWithPrecip_30"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "DaysWithPrecip_30"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "DaysSincePrecip_30"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "DaysSincePrecip_30"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "MaxConDryDays_7"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "MaxConDryDays_7"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "MaxConDryDays_30"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "MaxConDryDays_30"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "drought_1"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "drought_1"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "drought_2"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "drought_2"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "drought_3"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "drought_3"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "drought_4"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "drought_4"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "drought_5"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://vegdri.cr.usgs.gov/wmsconnector/com.esri.wms.Esrimap/Drought_Monitoring?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4269"
+        "wms_name"            "drought_5"
+        "wms_server_version"  "1.1.1"
+        "wms_format"          "image/png"
+      END
     END
     LAYER
       NAME "Current-Large-incidents"
