@@ -55,7 +55,7 @@ MAP
             "wms_title"              "NEMAC vlayers WMS"
             "wms_abstract"           "NEMAC vlayers WMS"
             "wms_onlineresource"     "%(SERVICE_URL)s"
-            "wms_srs"                "EPSG:3785 EPSG:4326"
+            "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913"
         END
     END
 

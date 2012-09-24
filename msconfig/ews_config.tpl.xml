@@ -2243,7 +2243,7 @@
     </wmsSubgroup>
   </wmsGroup>
 
-  <wmsGroup gid="G15" name="vegdri_new" label="USGS VegDRI Drought Assessment Products" >
+  <wmsGroup gid="G15" name="vegdri_new" label="USGS/NDMC VegDRI Drought Assessment Products" >
     <wmsSubgroup label="eMODIS Vegetation Moisture Status (Weekly)">
 	  <wmsLayer 
 	 lid="VDAAM"
