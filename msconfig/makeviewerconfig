@@ -2,6 +2,7 @@
 
 import sys, re, os
 
+
 try:
     from Config import *
 except:
@@ -9,6 +10,8 @@ except:
     print "settings appropriate for this copy of the FSWMS project.  You can use the file 'Config.py.template'"
     print "as a starting point --- make a copy of that file called 'Config.py', and edit appropriately."
     exit(-1)
+
+from LegendConfig import *
 
 class Template:
     def __init__(self, file=None, **args):
@@ -60,8 +63,11 @@ wmsLayerTemplate = Template(string="""
           name="%(LAYER_TITLE)s"
           styles="default" 
           identify="true"
-          legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=%(LAYER_NAME)s&VERSION=1.1.1&FORMAT=image/png"/>	
+          legend="../%(LEGEND)s"/>	
 """)
+
+#         legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=%(LAYER_NAME)s&VERSION=1.1.1&FORMAT=image/png"/>	
+
 
 tacsModisChangeDetectionProductLayers = ""
 for subgroup in [
@@ -90,6 +96,7 @@ for subgroup in [
                 'SERVER_URL'    : SERVER_URL,
                 'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
+                'LEGEND'        : getLegend(layer['name']),
                 'LAYER_VISIBLE' : layer['visible'],
                 'LAYER_TITLE'   : layerTitles[layer['name']]
                 })
@@ -133,6 +140,7 @@ for subgroup in [
                 'SERVER_URL'    : SERVER_URL,
                 'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
+                'LEGEND'        : getLegend(layer['name']),
                 'LAYER_VISIBLE' : layer['visible'],
                 'LAYER_TITLE'   : layerTitles[layer['name']]
                 })
@@ -204,7 +212,8 @@ def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
             layerTitle = tif
             lid = getNRTLID(layerName)
             if legendYesNo=="yes":
-                legend = SERVER_URL+"/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"
+                #legend = SERVER_URL+"/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"
+                legend = getLegend(layerName)
             else:
 		legend = ""
             if groupName == "EFETAC-NASA_TC":
@@ -238,7 +247,7 @@ nrtWMSLayerTemplate = Template(string="""
           name="%(LAYER_TITLE)s"
           styles="default" 
           identify="true"
-          legend="%(LEGEND)s"/>	
+          legend="../%(LEGEND)s"/>	
 """)
 
 nrtTCProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "EFETAC-NASA_TC", "ewstruecolor", "no", ".img")
