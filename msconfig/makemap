@@ -36,6 +36,8 @@ except:
     print "as a starting point --- make a copy of that file called 'Config.py', and edit appropriately."
     exit(-1)
 
+from LegendConfig import *
+
 ###
 ### function definitions
 ###
@@ -202,14 +204,16 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
         colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
         colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
         #keyimage       = "rsac-fhtet-legend-v3-181x277-2011-06-24.png"
-        keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
+        #keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
+        keyimage       = getLegend(group)
     else:
         group          = "EFETAC-NASA"
         group_abstract = "Layers uploaded by TACs-NASA"
         colormapfile   = "efetac_nasa_percent_change_cmap.cmap"
         colormapcsv    = "efetac_nasa_percent_change_cmap.csv"
         #keyimage       = "tacs-nasa-legend-v3-181x277-2011-06-24.png"
-        keyimage       = "TACs_NASA_CT_7-6-2011_clipped.png"
+        #keyimage       = "TACs_NASA_CT_7-6-2011_clipped.png"
+        keyimage       = getLegend(group)
 
     modDate = getModDate(tif_fullpath)
     nameform = re.sub(r'^.*/', '', tif)
@@ -254,7 +258,8 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
             colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
             colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
             #keyimage       = "rsac-fhtet-legend-v3-181x277-2011-06-24.png"
-            keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
+            #keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
+            keyimage       = getLegend(group)
             print 'jdm: see this never prints'
         else:
             group = "EFETAC-NASA"
@@ -262,7 +267,8 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
             colormapfile   = "efetac_nasa_percent_change_cmap.cmap"
             colormapcsv    = "efetac_nasa_percent_change_cmap.csv"
             #keyimage       = "tacs-nasa-legend-v3-181x277-2011-06-24.png"
-            keyimage       = "TACs_NASA_CT_7-6-2011_clipped.png"
+            #keyimage       = "TACs_NASA_CT_7-6-2011_clipped.png"
+            keyimage       = getLegend(group)
         layerName  = group + "_" + re.sub(r'_.*$', '', nameform)
         layerTitle = tif
 
@@ -306,7 +312,8 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
             group_abstract = "Layers uploaded by RSAC-FHTET"
             colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
             colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
-            keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
+            #keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
+            keyimage       = getLegend(group)
             if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
                 layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
             else:
