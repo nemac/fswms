@@ -104,13 +104,13 @@ for subgroup in [
 
 rsacModisChangeDetectionProductLayers = ""
 for subgroup in [    
-    { 'label' : '   Disturbances Since 2008 - 3-Year Baseline',
+    { 'label' : '   Change from 3-Year Baseline',
       'layers' : [
             { 'name' : 'RSAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] },
 			
-			{ 'label' : '   Disturbances Since 2008 - 5-Year Baseline',
+			{ 'label' : '   Change from 5-Year Baseline',
       'layers' : [
             { 'name' : 'RSAC-FHTET_5YrBaseline_current',        'lid' : 'AQ',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_5YrBaseline_previous1',      'lid' : 'AR',  'visible' : 'false' },
