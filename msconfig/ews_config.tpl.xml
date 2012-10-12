@@ -187,8 +187,8 @@
     </wmsSubgroup>
   </wmsGroup>
 
-  <wmsGroup gid="G02" name="US_Fire" label="Wildfires">
-    <wmsSubgroup label="Current/NRT Wildfire Detections">
+  <wmsGroup gid="G02" name="US_Fire" label="Fires">
+    <wmsSubgroup label="Current/NRT Fire Detections">
       <wmsLayer 
 	 lid="AAG"
 	 visible="false" 
@@ -230,7 +230,7 @@
 	 identify="true" 
 	 name="Cumulative Fire Detections 2010" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2010.png"/>
-    <wmsSubgroup label="Historical Wildfire Perimeters">
+    <wmsSubgroup label="Historical Fire Perimeters">
       <wmsLayer 
 	 lid="AAI"
 	 visible="false" 
@@ -239,7 +239,7 @@
 	 layers="firescars" 
 	 styles="default" 
 	 identify="true" 
-	 name="2000-2010 Wildfire Perimeters (GEOMAC+MTBS)" 
+	 name="2000-2010 Fire Perimeters (GEOMAC+MTBS)" 
 	 legend="http://ews.forestthreats.org/gis/assets/Mashup_Legends/Fire_Scars_2000-2010.PNG"/>
       <wmsLayer 
 	 lid="AAJ"
@@ -249,7 +249,7 @@
 	 layers="mtbs_2000" 
 	 styles="default" 
 	 identify="true" 
-	 name="2000 Wildfire Perimeters (MTBS)" 
+	 name="2000 Fire Perimeters (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2000&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAK"
@@ -259,7 +259,7 @@
 	 layers="mtbs_2001" 
 	 styles="default" 
 	 identify="true" 
-	 name="2001 Wildfire Perimeters (MTBS)" 
+	 name="2001 Fire Perimeters (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2001&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAL"
@@ -269,7 +269,7 @@
 	 layers="mtbs_2002" 
 	 styles="default" 
 	 identify="true" 
-	 name="2002 Wildfire Perimeters (MTBS)" 
+	 name="2002 Fire Perimeters (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2002&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAM"
@@ -279,7 +279,7 @@
 	 layers="mtbs_2003" 
 	 styles="default" 
 	 identify="true" 
-	 name="2003 Wildfire Perimeters (MTBS)" 
+	 name="2003 Fire Perimeters (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2003&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAN"
@@ -289,7 +289,7 @@
 	 layers="mtbs_2004" 
 	 styles="default" 
 	 identify="true" 
-	 name="2004 Wildfire Perimeters (MTBS)" 
+	 name="2004 Fire Perimeters (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2004&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAO"
@@ -299,7 +299,7 @@
 	 layers="mtbs_2005" 
 	 styles="default" 
 	 identify="true" 
-	 name="2005 Wildfire Perimeters (MTBS)" 
+	 name="2005 Fire Perimeters (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2005&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAP"
@@ -309,7 +309,7 @@
 	 layers="mtbs_2006" 
 	 styles="default" 
 	 identify="true" 
-	 name="2006 Wildfire Perimeters (MTBS)" 
+	 name="2006 Fire Perimeters (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2006&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAQ"
@@ -319,7 +319,7 @@
 	 layers="mtbs_2007" 
 	 styles="default" 
 	 identify="true" 
-	 name="2007 Wildfire Perimeters (MTBS)" 
+	 name="2007 Fire Perimeters (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2007&VERSION=1.1.1&FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAR"
@@ -329,7 +329,7 @@
 	 layers="mtbs_2008" 
 	 styles="default" 
 	 identify="true" 
-	 name="2008 Wildfire Perimeters (MTBS)" 
+	 name="2008 Fire Perimeters (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2008&VERSION=1.1.1&FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="BDC"
@@ -339,7 +339,7 @@
 	 layers="mtbs_2009" 
 	 styles="default" 
 	 identify="true" 
-	 name="2009 Wildfire Perimeters (MTBS)" 
+	 name="2009 Fire Perimeters (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2009&VERSION=1.1.1&FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
