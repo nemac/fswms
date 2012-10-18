@@ -509,7 +509,7 @@ MAP
       END
     END
 	LAYER
-      NAME "Cumulative-Fire-Detections"
+      NAME "All-Current-Year-AFM"
       TYPE RASTER
       STATUS OFF
       CONNECTION "http://activefiremaps.fs.fed.us/cgi-bin/mapserv.exe?map=conus.map&"
@@ -524,6 +524,54 @@ MAP
         "wms_format"          "image/png"
       END
     END
+	LAYER
+      NAME "All-Current-Year-GeoMAC"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://wildfire.cr.usgs.gov/arcgis/services/geomac_dyn/MapServer/WMSServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4326"
+        "wms_name"            "19"
+        "wms_server_version"  "1.0.0"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "Previous-MODIS-GeoMAC"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://wildfire.cr.usgs.gov/arcgis/services/geomac_dyn/MapServer/WMSServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4326"
+        "wms_name"            "17"
+        "wms_server_version"  "1.0.0"
+        "wms_format"          "image/png"
+      END
+    END
+	LAYER
+      NAME "Previous-Perimeters-GeoMAC"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "http://wildfire.cr.usgs.gov/arcgis/services/geomac_dyn/MapServer/WMSServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      METADATA
+        "wms_srs"             "EPSG:4326"
+        "wms_name"            "18"
+        "wms_server_version"  "1.0.0"
+        "wms_format"          "image/png"
+      END
+    END    
     LAYER
       NAME "TRMM_3B42_V6_10_DAY"
       TYPE RASTER

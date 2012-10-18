@@ -5,6 +5,8 @@ import sys, re, os
 
 try:
     from Config import *
+    from datetime import timedelta
+    from datetime import datetime    
 except:
     print "Cannot find local settings file 'Config.py'.  You need to create a Config.py file that contains"
     print "settings appropriate for this copy of the FSWMS project.  You can use the file 'Config.py.template'"
@@ -163,11 +165,13 @@ def next_alpha(s):
     else:
         return 'a' * (len(s) + 1)
 
-def getNRTLID(layerName):
+def getLID(layerName, csvName):
+    #print layerName
+    #print csvName
     lids_list = []
     lyrs_list = []
     last_lid = ""
-    f = open("NRTLayerLID.csv", "r");
+    f = open(csvName, "r");
     for line in f:
         sp = line.split(',')
         lyrs_list.append(sp[0])
@@ -185,15 +189,56 @@ def getNRTLID(layerName):
                 nlid = lids_list[i]
             i = i + 1
     else: #this is new one, iterate and add to file
-        #print "new one"
+        #print "new one " + layerName
         f.close()
-        f = open("NRTLayerLID.csv", "a");
+        f = open(csvName, "a");
         f.write(layerName+ "," + nlid.upper() + "\n")
         f.close()
     #print "layer: " + layerName + " lid: " + nlid.upper()
     return nlid.rstrip().upper()
 
-
+def getDRTLayers():
+    #automating the drought monitor layers
+    #note: leave a blank space at the botton of the csv to start
+    drtList  = []
+    #startDate = "100105" #year-month-day
+    startDate = "000104" #year-month-day
+    today = datetime.today();
+    #print today.strftime('%y%m%d');
+    #Loop through dates starting w/ startDate
+    #until within 8 days of current date
+    loopDate = datetime.strptime(startDate,'%y%m%d');
+    #print "Starting loopDate: " + loopDate.strftime('%y%m%d');
+    #print "today - timedelta(days=7): " + (today - timedelta(days=7)).strftime('%y%m%d');
+    while (today > loopDate):
+       #print 'The loopDate is ' + loopDate.strftime('%y%m%d')
+       lid = getLID("usdm"+loopDate.strftime('%y%m%d'), "DRTLayerLID.csv")
+       drtList.append({ 'LAYER_LID'       : lid,
+                        'LAYER_NAME'      : "usdm"+loopDate.strftime('%y%m%d'),
+                        'LAYER_TITLE'     : loopDate.strftime('%m/%d/%Y'),
+                        'SERVER_URL'      : SERVER_URL,
+                        'DRT_URL'         : "http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm"+loopDate.strftime('%y%m%d')+"_wms.map&#38;#38;TRANSPARENT=true"
+       })
+       loopDate = loopDate + timedelta(days=7)
+    #print 'Final loopDate was: ' + loopDate.strftime('%y%m%d')
+    drtList.reverse() #reverse the list so that newest dates are on top always
+    layers = ""
+    for drtDict in drtList:
+        layers = layers + drtWMSLayerTemplate.render(drtDict)    
+    return layers                 
+#drought monitor template    
+drtWMSLayerTemplate = Template(string="""
+        <wmsLayer
+          lid="%(LAYER_LID)s"
+          visible="false"
+          url="%(DRT_URL)s" 
+          srs="EPSG:900913"
+          layers="%(LAYER_NAME)s"
+          name="%(LAYER_TITLE)s"
+          styles="default" 
+          identify="false"
+          legend="%(SERVER_URL)s/cmapicons/drought-monitor.png"/>""")    
+    
 def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
     tifList  = []
     for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
@@ -210,7 +255,7 @@ def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
                else:
                     layerName = group + "_" + re.sub(r'_.*$', '', nameform)
             layerTitle = tif
-            lid = getNRTLID(layerName)
+            lid = getLID(layerName, "NRTLayerLID.csv")
             if legendYesNo=="yes":
                 #legend = SERVER_URL+"/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"
                 legend = getLegend(layerName)
@@ -234,7 +279,7 @@ def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
             continue
     layers = ""
     for tifdict in tifList:
-	layers = layers + nrtWMSLayerTemplate.render(tifdict)    
+        layers = layers + nrtWMSLayerTemplate.render(tifdict)    
     return layers
 
 nrtWMSLayerTemplate = Template(string="""
@@ -247,25 +292,26 @@ nrtWMSLayerTemplate = Template(string="""
           name="%(LAYER_TITLE)s"
           styles="default" 
           identify="true"
-          legend="../%(LEGEND)s"/>	
-""")
+          legend="../%(LEGEND)s"/>""")
 
 nrtTCProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "EFETAC-NASA_TC", "ewstruecolor", "no", ".img")
 nrt1YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/1Year", "EFETAC-NASA_1Year", "ews1year", "yes", ".tif")
 nrt3YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/3Year", "EFETAC-NASA_3Year", "ews3year", "yes", ".tif")
 nrtAllYrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/AllYear", "EFETAC-NASA", "ews", "yes", ".tif")
-#End NRT 8 day automation-------------------------------------------------
+drtLayers = getDRTLayers()
+#End NRT 8 day & drought monitor automation-------------------------------------------------
 
 f = open("../html/view/config/ews_config.xml", "w")
 f.write(template.render( {
             'SERVER_URL'                            : SERVER_URL,
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
             'TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : tacsModisChangeDetectionProductLayers,
-	    'RSAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : rsacModisChangeDetectionProductLayers,
+	        'RSAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : rsacModisChangeDetectionProductLayers,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,
             'NRT_3YEAR_LAYERS'        : nrt3YrProductLayers,
-            'NRT_AllYEAR_LAYERS'      : nrtAllYrProductLayers
+            'NRT_AllYEAR_LAYERS'      : nrtAllYrProductLayers,
+            'DRT_LAYERS'      : drtLayers
             }))
 f.close()
 
@@ -273,4 +319,3 @@ if not os.path.exists("../html/cmapicons"):
     os.makedirs("../html/cmapicons")
 
 os.system("cp -r cmapicons/* ../html/cmapicons")
-
