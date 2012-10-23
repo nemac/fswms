@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <config>
   <application title="U.S. Forest Change Assessment Viewer" >
   </application>
@@ -6,7 +7,7 @@
   <server map_path="http://arcgisserver7.nemac.org/ArcGIS/" >
   </server>
   <services>  
-    <service name="vegdri"                             folder="EWS" label="USGS VegDRI Drought Assessment Products"/>
+    <service name="vegdri" folder="EWS" label="USGS VegDRI Drought Assessment Products"/>
   </services>
   <images>
     <image name="Streets"   label="Streets"  url="http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" />
@@ -40,7 +41,6 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="Archived_NRT" />
       <viewGroup name="MODISCloud" />
-      <viewGroup name="EWS_RSAC-FHTET" />
       <viewGroup name="Drought_Monitor" />
       <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
@@ -123,7 +123,7 @@
 	 styles="default"
 	 identify="true"
 	 name="Cities"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=cities&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=cities&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer
 	 lid="AAB"
 	 visible="true"
@@ -133,7 +133,7 @@
 	 styles="default"
 	 identify="false"
 	 name="State Boundaries"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=states&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=states&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer
 	 lid="AAC"
 	 visible="false"
@@ -143,7 +143,7 @@
 	 styles="default"
 	 identify="true"
 	 name="County Boundaries"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=counties&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=counties&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer
 	 lid="AAD"
 	 visible="false"
@@ -152,7 +152,7 @@
 	 layers="federal_lands"
 	 styles="default"
 	 identify="true"
-	 name="Federal Land Boundaries" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=federal_lands&VERSION=1.1.1&FORMAT=image/png"/>
+	 name="Federal Land Boundaries" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=federal_lands&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer
 	 lid="BRH"
 	 visible="false"
@@ -173,7 +173,7 @@
 	 styles="default"
 	 identify="true"
 	 name="Interstates"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=interstates&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=interstates&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer
 	 lid="AAF"
 	 visible="false"
@@ -183,7 +183,7 @@
 	 styles="default"
 	 identify="true"
 	 name="Secondary Roads"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=roads&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=roads&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
 
@@ -260,7 +260,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2000 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2000&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAK"
 	 visible="false" 
@@ -270,7 +270,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2001 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2001&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAL"
 	 visible="false" 
@@ -280,7 +280,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2002 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2002&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAM"
 	 visible="false" 
@@ -290,7 +290,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2003 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAN"
 	 visible="false" 
@@ -300,7 +300,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2004 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAO"
 	 visible="false" 
@@ -310,7 +310,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2005 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAP"
 	 visible="false" 
@@ -320,7 +320,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2006 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAQ"
 	 visible="false" 
@@ -330,7 +330,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2007 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAR"
 	 visible="false" 
@@ -340,7 +340,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2008 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="BDC"
 	 visible="false" 
@@ -350,7 +350,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2009 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mtbs_2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="BRJ"
 	 visible="false" 
@@ -375,6 +375,7 @@
   </wmsGroup>
 
   <wmsGroup gid="G03" name="US_FHM_ADS" label="Historical Aerial Disturbance Surveys (USFS FHM)">
+    <wmsSubgroup label="USFS FHM">
     <wmsLayer 
        lid="AAS"
        visible="false" 
@@ -384,7 +385,7 @@
        styles="default" 
        identify="true" 
        name="2003 Aerial Disturbance Surveys (FHTET)" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2003&VERSION=1.1.1&FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAT"
        visible="false" 
@@ -394,7 +395,7 @@
        styles="default" 
        identify="true" 
        name="2004 Aerial Disturbance Surveys (FHTET)" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2004&VERSION=1.1.1&FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAU"
        visible="false" 
@@ -404,7 +405,7 @@
        styles="default" 
        identify="true" 
        name="2005 Aerial Disturbance Surveys (FHTET)" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2005&VERSION=1.1.1&FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAV"
        visible="false" 
@@ -414,7 +415,7 @@
        styles="default" 
        identify="true" 
        name="2006 Aerial Disturbance Surveys (FHTET)" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2006&VERSION=1.1.1&FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAW"
        visible="false" 
@@ -424,7 +425,7 @@
        styles="default" 
        identify="true" 
        name="2007 Aerial Disturbance Surveys (FHTET)" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2007&VERSION=1.1.1&FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAX"
        visible="false" 
@@ -434,7 +435,7 @@
        styles="default" 
        identify="true" 
        name="2008 Aerial Disturbance Surveys (FHTET)" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2008&VERSION=1.1.1&FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAY"
        visible="false" 
@@ -444,7 +445,7 @@
        styles="default" 
        identify="true" 
        name="2009 Aerial Disturbance Surveys (FHTET)" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ads_2009&VERSION=1.1.1&FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="BNE"
        visible="false" 
@@ -455,6 +456,7 @@
        identify="true" 
        name="EFETAC Pest Proximity (from ADS polygons, 2003-2010)" 
        legend="%(SERVER_URL)s/cmapicons/custom-pestproximity.png"/>
+    </wmsSubgroup>
   </wmsGroup>
   <!--
      Note: New as of Jan 15, 2012:
@@ -484,7 +486,9 @@
   </wmsGroup>
   
   <wmsGroup gid="G06" name="MODISCloud" label="eMODIS Cloud Assessment Products">	
-        %(NRT_MODISCloud__LAYERS)s
+    <wmsSubgroup label="MODIS (NRT)">
+    %(NRT_MODISCloud__LAYERS)s
+    </wmsSubgroup>
   </wmsGroup>
   <wmsGroup gid="G07" name="Archived_NRT" label="Archived RSAC-FHTET Forest Change Disturbance">
     <wmsSubgroup label="Archived 3-Year Baseline (RSAC-FHTET)">
@@ -497,7 +501,7 @@
 		styles="default"
 		name="RSAC-FHTET_201107113yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJX"
 		visible="false"
@@ -507,7 +511,7 @@
 		styles="default"
 		name="RSAC-FHTET_201107193yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKB"
 		visible="false"
@@ -517,7 +521,7 @@
 		styles="default"
 		name="RSAC-FHTET_201107273yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKF"
 		visible="false"
@@ -527,7 +531,7 @@
 		styles="default"
 		name="RSAC-FHTET_201108043yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKJ"
 		visible="false"
@@ -537,7 +541,7 @@
 		styles="default"
 		name="RSAC-FHTET_201108123yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKN"
 		visible="false"
@@ -547,7 +551,7 @@
 		styles="default"
 		name="RSAC-FHTET_201108203yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKR"
 		visible="false"
@@ -557,7 +561,7 @@
 		styles="default"
 		name="RSAC-FHTET_201108283yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKV"
 		visible="false"
@@ -567,7 +571,7 @@
 		styles="default"
 		name="RSAC-FHTET_201109053yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKZ"
 		visible="false"
@@ -577,7 +581,7 @@
 		styles="default"
 		name="RSAC-FHTET_201109133yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLD"
 		visible="false"
@@ -587,7 +591,7 @@
 		styles="default"
 		name="RSAC-FHTET_201109213yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLH"
 		visible="false"
@@ -597,7 +601,7 @@
 		styles="default"
 		name="RSAC-FHTET_201109293yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLL"
 		visible="false"
@@ -607,7 +611,7 @@
 		styles="default"
 		name="RSAC-FHTET_201110073yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLP"
 		visible="false"
@@ -617,7 +621,7 @@
 		styles="default"
 		name="RSAC-FHTET_201110153yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLT"
 		visible="false"
@@ -627,7 +631,7 @@
 		styles="default"
 		name="RSAC-FHTET_201110233yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLX"
 		visible="false"
@@ -637,7 +641,7 @@
 		styles="default"
 		name="RSAC-FHTET_201110313yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BMB"
 		visible="false"
@@ -647,7 +651,7 @@
 		styles="default"
 		name="RSAC-FHTET_201111083yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Archived 5-Year Baseline (RSAC-FHTET)">
 	<wmsLayer
@@ -659,7 +663,7 @@
 		styles="default"
 		name="RSAC-FHTET_201104145yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJJ"
 		visible="false"
@@ -669,7 +673,7 @@
 		styles="default"
 		name="RSAC-FHTET_201104225yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJK"
 		visible="false"
@@ -679,7 +683,7 @@
 		styles="default"
 		name="RSAC-FHTET_201104145yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJL"
 		visible="false"
@@ -689,7 +693,7 @@
 		styles="default"
 		name="RSAC-FHTET_201104225yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJM"
 		visible="false"
@@ -699,7 +703,7 @@
 		styles="default"
 		name="RSAC-FHTET_201104305yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJN"
 		visible="false"
@@ -709,7 +713,7 @@
 		styles="default"
 		name="RSAC-FHTET_201105085yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJO"
 		visible="false"
@@ -719,7 +723,7 @@
 		styles="default"
 		name="RSAC-FHTET_201105165yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJP"
 		visible="false"
@@ -729,7 +733,7 @@
 		styles="default"
 		name="RSAC-FHTET_201105245yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJQ"
 		visible="false"
@@ -739,7 +743,7 @@
 		styles="default"
 		name="RSAC-FHTET_201106015yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJR"
 		visible="false"
@@ -749,7 +753,7 @@
 		styles="default"
 		name="RSAC-FHTET_201106095yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJS"
 		visible="false"
@@ -759,7 +763,7 @@
 		styles="default"
 		name="RSAC-FHTET_201106175yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJV"
 		visible="false"
@@ -769,7 +773,7 @@
 		styles="default"
 		name="RSAC-FHTET_201107115yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BJZ"
 		visible="false"
@@ -779,7 +783,7 @@
 		styles="default"
 		name="RSAC-FHTET_201107195yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKD"
 		visible="false"
@@ -789,7 +793,7 @@
 		styles="default"
 		name="RSAC-FHTET_201107275yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKH"
 		visible="false"
@@ -799,7 +803,7 @@
 		styles="default"
 		name="RSAC-FHTET_201108045yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKL"
 		visible="false"
@@ -809,7 +813,7 @@
 		styles="default"
 		name="RSAC-FHTET_201108125yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKP"
 		visible="false"
@@ -819,7 +823,7 @@
 		styles="default"
 		name="RSAC-FHTET_201108205yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKT"
 		visible="false"
@@ -829,7 +833,7 @@
 		styles="default"
 		name="RSAC-FHTET_201108285yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BKX"
 		visible="false"
@@ -839,7 +843,7 @@
 		styles="default"
 		name="RSAC-FHTET_201109055yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLB"
 		visible="false"
@@ -849,7 +853,7 @@
 		styles="default"
 		name="RSAC-FHTET_201109135yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLF"
 		visible="false"
@@ -859,7 +863,7 @@
 		styles="default"
 		name="RSAC-FHTET_201109215yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLJ"
 		visible="false"
@@ -869,7 +873,7 @@
 		styles="default"
 		name="RSAC-FHTET_201109295yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLN"
 		visible="false"
@@ -879,7 +883,7 @@
 		styles="default"
 		name="RSAC-FHTET_201110075yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLR"
 		visible="false"
@@ -889,7 +893,7 @@
 		styles="default"
 		name="RSAC-FHTET_201110155yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLV"
 		visible="false"
@@ -899,7 +903,7 @@
 		styles="default"
 		name="RSAC-FHTET_201110235yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BLZ"
 		visible="false"
@@ -909,7 +913,7 @@
 		styles="default"
 		name="RSAC-FHTET_201110315yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	<wmsLayer
 		lid="BMD"
 		visible="false"
@@ -919,7 +923,7 @@
 		styles="default"
 		name="RSAC-FHTET_201111085yr"
 		identify="true"
-		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=RSAC-FHTET_current&VERSION=1.1.1&FORMAT=image/png"/>
+		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
   <wmsGroup gid="G08" name="Drought_Monitor" label="Drought- US Drought Monitor">
@@ -927,7 +931,7 @@
         <wmsLayer 
            lid="AHZ"
            visible="false" 
-           url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm_current_wms.map&#38;#38;TRANSPARENT=true" 
+           url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm_current_wms.map&amp;TRANSPARENT=true" 
            srs="EPSG:900913" 
            layers="usdm_current" 
            styles="default"
@@ -1104,7 +1108,7 @@
 	 styles="default" 
 	 identify="true" 	 
 	 name="Hail Swaths (NWS)" 	 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=hailswaths&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=hailswaths&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="BDB"	 
 	 visible="false" 	 
@@ -1114,7 +1118,7 @@
 	 styles="default" 
 	 identify="true" 	 
 	 name="Tornado Tracks 1999-2010 (NWS)" 	 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=tornado-tracks&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=tornado-tracks&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Precipitation Derivatives (NOAA NWS)">
       <wmsLayer 
@@ -1527,7 +1531,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Streams and Water Features" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=streams&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=streams&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AIM"
 	 visible="false" 
@@ -1537,7 +1541,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Major River Basins (HUC 6)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=HUC6&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=HUC6&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AIN"
 	 visible="false" 
@@ -1547,7 +1551,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Major River Basins (HUC 8)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=HUC8&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=HUC8&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Landcover">
       <wmsLayer 
@@ -1611,7 +1615,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Bailey's Ecoregions" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ecoregions_bailey&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ecoregions_bailey&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AIS"
 	 visible="false" 
@@ -1621,7 +1625,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Omernik Ecoregions" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=ecoregions_omernik&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ecoregions_omernik&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="BDV"
 	 visible="false" 
@@ -1631,7 +1635,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NEON Domains (NSF)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=neondomains&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=neondomains&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="BDW"
 	 visible="false" 
@@ -1641,7 +1645,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="FWS LCC Boundaries" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fws-lcc&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fws-lcc&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
   
@@ -1656,7 +1660,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="fall-brown-down-length-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fall-brown-down-length-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AIU"
 	 visible="false" 
@@ -1666,7 +1670,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="spring-leaf-out-length-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=spring-leaf-out-length-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AIV"
 	 visible="false" 
@@ -1676,7 +1680,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-length-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-length-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AIW"
 	 visible="false" 
@@ -1686,7 +1690,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-midpoint-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-midpoint-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-midpoint-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AIX"
 	 visible="false" 
@@ -1696,7 +1700,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-midpoint-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-ndvi-midpoint-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=max-ndvi-midpoint-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AIY"
 	 visible="false" 
@@ -1756,7 +1760,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-position-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-position-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJE"
 	 visible="false" 
@@ -1766,7 +1770,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-value-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-value-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJF"
 	 visible="false" 
@@ -1788,7 +1792,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="fall-brown-down-length-2008" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fall-brown-down-length-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJH"
 	 visible="false" 
@@ -1798,7 +1802,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="spring-leaf-out-length-2008" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=spring-leaf-out-length-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJI"
 	 visible="false" 
@@ -1808,7 +1812,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-length-2008" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-length-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJJ"
 	 visible="false" 
@@ -1818,7 +1822,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-midpoint-2008" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-midpoint-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-midpoint-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJK"
 	 visible="false" 
@@ -1828,7 +1832,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-midpoint-2008" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-ndvi-midpoint-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=max-ndvi-midpoint-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJL"
 	 visible="false" 
@@ -1888,7 +1892,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-position-2008" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-position-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJR"
 	 visible="false" 
@@ -1898,7 +1902,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-value-2008" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-value-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJS"
 	 visible="false" 
@@ -1920,7 +1924,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="fall-brown-down-length-2007" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fall-brown-down-length-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJU"
 	 visible="false" 
@@ -1930,7 +1934,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="spring-leaf-out-length-2007" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=spring-leaf-out-length-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJV"
 	 visible="false" 
@@ -1940,7 +1944,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-length-2007" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-length-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJW"
 	 visible="false" 
@@ -1950,7 +1954,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-midpoint-2007" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-midpoint-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-midpoint-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJX"
 	 visible="false" 
@@ -1960,7 +1964,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-midpoint-2007" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-ndvi-midpoint-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=max-ndvi-midpoint-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AJY"
 	 visible="false" 
@@ -2020,7 +2024,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-position-2007" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-position-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKE"
 	 visible="false" 
@@ -2030,7 +2034,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-value-2007" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-value-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKF"
 	 visible="false" 
@@ -2052,7 +2056,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="fall-brown-down-length-2006" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fall-brown-down-length-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKH"
 	 visible="false" 
@@ -2062,7 +2066,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="spring-leaf-out-length-2006" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=spring-leaf-out-length-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKI"
 	 visible="false" 
@@ -2072,7 +2076,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-length-2006" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-length-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKJ"
 	 visible="false" 
@@ -2082,7 +2086,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-midpoint-2006" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-midpoint-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-midpoint-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKK"
 	 visible="false" 
@@ -2092,7 +2096,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-midpoint-2006" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-ndvi-midpoint-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=max-ndvi-midpoint-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKL"
 	 visible="false" 
@@ -2152,7 +2156,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-position-2006" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-position-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKR"
 	 visible="false" 
@@ -2162,7 +2166,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-value-2006" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-value-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKS"
 	 visible="false" 
@@ -2184,7 +2188,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="fall-brown-down-length-2005" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fall-brown-down-length-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKU"
 	 visible="false" 
@@ -2194,7 +2198,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="spring-leaf-out-length-2005" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=spring-leaf-out-length-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKV"
 	 visible="false" 
@@ -2204,7 +2208,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-length-2005" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-length-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKW"
 	 visible="false" 
@@ -2214,7 +2218,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-midpoint-2005" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-midpoint-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-midpoint-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKX"
 	 visible="false" 
@@ -2224,7 +2228,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-midpoint-2005" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-ndvi-midpoint-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=max-ndvi-midpoint-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AKY"
 	 visible="false" 
@@ -2284,7 +2288,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-position-2005" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-position-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALE"
 	 visible="false" 
@@ -2294,7 +2298,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-value-2005" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-value-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALF"
 	 visible="false" 
@@ -2316,7 +2320,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="fall-brown-down-length-2004" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fall-brown-down-length-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALH"
 	 visible="false" 
@@ -2326,7 +2330,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="spring-leaf-out-length-2004" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=spring-leaf-out-length-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALI"
 	 visible="false" 
@@ -2336,7 +2340,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-length-2004" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-length-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALJ"
 	 visible="false" 
@@ -2346,7 +2350,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-midpoint-2004" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-midpoint-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-midpoint-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALK"
 	 visible="false" 
@@ -2356,7 +2360,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-midpoint-2004" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-ndvi-midpoint-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=max-ndvi-midpoint-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALL"
 	 visible="false" 
@@ -2416,7 +2420,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-position-2004" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-position-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALR"
 	 visible="false" 
@@ -2426,7 +2430,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-value-2004" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-value-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALS"
 	 visible="false" 
@@ -2448,7 +2452,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="fall-brown-down-length-2003" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-brown-down-length-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fall-brown-down-length-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALU"
 	 visible="false" 
@@ -2458,7 +2462,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="spring-leaf-out-length-2003" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-leaf-out-length-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=spring-leaf-out-length-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALV"
 	 visible="false" 
@@ -2468,7 +2472,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-length-2003" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-length-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-length-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALW"
 	 visible="false" 
@@ -2478,7 +2482,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="growing-season-midpoint-2003" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=growing-season-midpoint-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=growing-season-midpoint-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALX"
 	 visible="false" 
@@ -2488,7 +2492,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-midpoint-2003" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-ndvi-midpoint-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=max-ndvi-midpoint-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ALY"
 	 visible="false" 
@@ -2548,7 +2552,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-position-2003" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-position-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-position-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AME"
 	 visible="false" 
@@ -2558,7 +2562,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="mean-value-2003" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=mean-value-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mean-value-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AMF"
 	 visible="false" 
@@ -2580,7 +2584,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="fall-standard-deviation-2003-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-standard-deviation-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fall-standard-deviation-2003-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AMH"
 	 visible="false" 
@@ -2590,7 +2594,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="spring-standard-deviation-2003-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-standard-deviation-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=spring-standard-deviation-2003-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AMI"
 	 visible="false" 
@@ -2600,7 +2604,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="gs-standard-deviation-2003-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=gs-standard-deviation-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=gs-standard-deviation-2003-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology- Means"> 
       <wmsLayer 
@@ -2612,7 +2616,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="fall-mean-2002-2008" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=fall-mean-2002-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fall-mean-2002-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AMK"
 	 visible="false" 
@@ -2622,7 +2626,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="spring-mean-2002-2008" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=spring-mean-2002-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=spring-mean-2002-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AML"
 	 visible="false" 
@@ -2632,7 +2636,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="gs-mean-2003-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=gs-mean-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=gs-mean-2003-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AMM"
 	 visible="false" 
@@ -2642,7 +2646,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-mean-2003-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-mean-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=max-mean-2003-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AMN"
 	 visible="false" 
@@ -2652,7 +2656,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-mean-2003-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=min-mean-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=min-mean-2003-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AMO"
 	 visible="false" 
@@ -2662,7 +2666,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-min-mean-2003-2009" 
-	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=max-min-mean-2003-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/derivatives?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=max-min-mean-2003-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
   
@@ -2687,7 +2691,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2009" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AMR"
 	 visible="false" 
@@ -2859,7 +2863,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2008" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ANI"
 	 visible="false" 
@@ -3031,7 +3035,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2007" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="ANZ"
 	 visible="false" 
@@ -3203,7 +3207,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2006" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AOQ"
 	 visible="false" 
@@ -3375,7 +3379,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2005" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="APH"
 	 visible="false" 
@@ -3547,7 +3551,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2004" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="APY"
 	 visible="false" 
@@ -3719,7 +3723,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2003" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=qc-flags-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AQP"
 	 visible="false" 
@@ -5441,7 +5445,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-353-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-353-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXD"
 	 visible="false" 
@@ -5451,7 +5455,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-337-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-337-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXE"
 	 visible="false" 
@@ -5461,7 +5465,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-321-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-321-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXF"
 	 visible="false" 
@@ -5471,7 +5475,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-305-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-305-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-305-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXG"
 	 visible="false" 
@@ -5481,7 +5485,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-289-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-289-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-289-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXH"
 	 visible="false" 
@@ -5491,7 +5495,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-273-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-273-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-273-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXI"
 	 visible="false" 
@@ -5501,7 +5505,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-257-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-257-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-257-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXJ"
 	 visible="false" 
@@ -5511,7 +5515,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-241-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-241-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-241-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXK"
 	 visible="false" 
@@ -5521,7 +5525,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-225-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-225-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-225-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXL"
 	 visible="false" 
@@ -5531,7 +5535,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-209-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-209-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-209-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXM"
 	 visible="false" 
@@ -5541,7 +5545,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-193-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-193-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-193-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXN"
 	 visible="false" 
@@ -5551,7 +5555,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-177-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-177-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-177-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXO"
 	 visible="false" 
@@ -5561,7 +5565,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-161-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-161-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-161-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXP"
 	 visible="false" 
@@ -5571,7 +5575,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-145-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-145-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-145-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXQ"
 	 visible="false" 
@@ -5581,7 +5585,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-129-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-129-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-129-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXR"
 	 visible="false" 
@@ -5591,7 +5595,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-113-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-113-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-113-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXS"
 	 visible="false" 
@@ -5601,7 +5605,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-097-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-097-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-097-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXT"
 	 visible="false" 
@@ -5611,7 +5615,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-081-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-081-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-081-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXU"
 	 visible="false" 
@@ -5621,7 +5625,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-065-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-065-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-065-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXV"
 	 visible="false" 
@@ -5631,7 +5635,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-049-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-049-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXW"
 	 visible="false" 
@@ -5641,7 +5645,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-033-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-033-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXX"
 	 visible="false" 
@@ -5651,7 +5655,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-001-2009" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2009&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-001-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="MODIS NDVI- 2008">
       <wmsLayer 
@@ -5663,7 +5667,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-353-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-353-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AXZ"
 	 visible="false" 
@@ -5673,7 +5677,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-337-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-337-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYA"
 	 visible="false" 
@@ -5683,7 +5687,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-321-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-321-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYB"
 	 visible="false" 
@@ -5693,7 +5697,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-305-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-305-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-305-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYC"
 	 visible="false" 
@@ -5703,7 +5707,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-289-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-289-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-289-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYD"
 	 visible="false" 
@@ -5713,7 +5717,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-273-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-273-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-273-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYE"
 	 visible="false" 
@@ -5723,7 +5727,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-257-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-257-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-257-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYF"
 	 visible="false" 
@@ -5733,7 +5737,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-241-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-241-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-241-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYG"
 	 visible="false" 
@@ -5743,7 +5747,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-225-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-225-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-225-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYH"
 	 visible="false" 
@@ -5753,7 +5757,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-209-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-209-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-209-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYI"
 	 visible="false" 
@@ -5763,7 +5767,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-193-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-193-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-193-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYJ"
 	 visible="false" 
@@ -5773,7 +5777,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-177-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-177-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-177-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYK"
 	 visible="false" 
@@ -5783,7 +5787,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-161-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-161-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-161-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYL"
 	 visible="false" 
@@ -5793,7 +5797,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-145-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-145-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-145-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYM"
 	 visible="false" 
@@ -5803,7 +5807,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-129-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-129-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-129-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYN"
 	 visible="false" 
@@ -5813,7 +5817,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-113-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-113-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-113-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYO"
 	 visible="false" 
@@ -5823,7 +5827,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-097-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-097-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-097-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYP"
 	 visible="false" 
@@ -5833,7 +5837,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-081-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-081-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-081-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYQ"
 	 visible="false" 
@@ -5843,7 +5847,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-065-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-065-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-065-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYR"
 	 visible="false" 
@@ -5853,7 +5857,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-049-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-049-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYS"
 	 visible="false" 
@@ -5863,7 +5867,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-033-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-033-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYT"
 	 visible="false" 
@@ -5873,7 +5877,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-001-2008" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2008&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-001-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="MODIS NDVI- 2007">
       <wmsLayer 
@@ -5885,7 +5889,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-353-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-353-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYV"
 	 visible="false" 
@@ -5895,7 +5899,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-337-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-337-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYW"
 	 visible="false" 
@@ -5905,7 +5909,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-321-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-321-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYX"
 	 visible="false" 
@@ -5915,7 +5919,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-305-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-305-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-305-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYY"
 	 visible="false" 
@@ -5925,7 +5929,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-289-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-289-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-289-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AYZ"
 	 visible="false" 
@@ -5935,7 +5939,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-273-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-273-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-273-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZA"
 	 visible="false" 
@@ -5945,7 +5949,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-257-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-257-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-257-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZB"
 	 visible="false" 
@@ -5955,7 +5959,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-241-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-241-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-241-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZC"
 	 visible="false" 
@@ -5965,7 +5969,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-225-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-225-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-225-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZD"
 	 visible="false" 
@@ -5975,7 +5979,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-209-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-209-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-209-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZE"
 	 visible="false" 
@@ -5985,7 +5989,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-193-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-193-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-193-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZF"
 	 visible="false" 
@@ -5995,7 +5999,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-177-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-177-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-177-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZG"
 	 visible="false" 
@@ -6005,7 +6009,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-161-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-161-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-161-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZH"
 	 visible="false" 
@@ -6015,7 +6019,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-145-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-145-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-145-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZI"
 	 visible="false" 
@@ -6025,7 +6029,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-129-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-129-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-129-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZJ"
 	 visible="false" 
@@ -6035,7 +6039,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-113-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-113-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-113-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZK"
 	 visible="false" 
@@ -6045,7 +6049,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-097-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-097-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-097-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZL"
 	 visible="false" 
@@ -6055,7 +6059,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-081-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-081-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-081-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZM"
 	 visible="false" 
@@ -6065,7 +6069,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-065-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-065-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-065-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZN"
 	 visible="false" 
@@ -6075,7 +6079,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-049-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-049-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZO"
 	 visible="false" 
@@ -6085,7 +6089,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-033-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-033-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZP"
 	 visible="false" 
@@ -6095,7 +6099,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-001-2007" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2007&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-001-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="MODIS NDVI- 2006">
       <wmsLayer 
@@ -6107,7 +6111,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-353-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-353-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZR"
 	 visible="false" 
@@ -6117,7 +6121,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-337-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-337-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZS"
 	 visible="false" 
@@ -6127,7 +6131,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-321-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-321-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZT"
 	 visible="false" 
@@ -6137,7 +6141,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-305-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-305-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-305-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZU"
 	 visible="false" 
@@ -6147,7 +6151,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-289-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-289-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-289-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZV"
 	 visible="false" 
@@ -6157,7 +6161,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-273-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-273-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-273-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZW"
 	 visible="false" 
@@ -6167,7 +6171,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-257-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-257-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-257-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZX"
 	 visible="false" 
@@ -6177,7 +6181,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-241-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-241-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-241-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZY"
 	 visible="false" 
@@ -6187,7 +6191,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-225-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-225-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-225-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AZZ"
 	 visible="false" 
@@ -6197,7 +6201,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-209-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-209-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-209-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAA"
 	 visible="false" 
@@ -6207,7 +6211,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-193-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-193-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-193-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAB"
 	 visible="false" 
@@ -6217,7 +6221,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-177-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-177-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-177-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAC"
 	 visible="false" 
@@ -6227,7 +6231,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-161-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-161-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-161-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAD"
 	 visible="false" 
@@ -6237,7 +6241,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-145-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-145-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-145-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAE"
 	 visible="false" 
@@ -6247,7 +6251,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-129-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-129-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-129-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAF"
 	 visible="false" 
@@ -6257,7 +6261,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-113-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-113-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-113-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAG"
 	 visible="false" 
@@ -6267,7 +6271,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-097-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-097-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-097-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAH"
 	 visible="false" 
@@ -6277,7 +6281,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-081-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-081-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-081-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAI"
 	 visible="false" 
@@ -6287,7 +6291,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-065-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-065-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-065-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAJ"
 	 visible="false" 
@@ -6297,7 +6301,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-049-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-049-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAK"
 	 visible="false" 
@@ -6307,7 +6311,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-033-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-033-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAL"
 	 visible="false" 
@@ -6317,7 +6321,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-001-2006" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2006&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-001-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="MODIS NDVI- 2005">
       <wmsLayer 
@@ -6329,7 +6333,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-353-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-353-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAN"
 	 visible="false" 
@@ -6339,7 +6343,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-337-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-337-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAO"
 	 visible="false" 
@@ -6349,7 +6353,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-321-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-321-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAP"
 	 visible="false" 
@@ -6359,7 +6363,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-305-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-305-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-305-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAQ"
 	 visible="false" 
@@ -6369,7 +6373,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-289-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-289-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-289-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAR"
 	 visible="false" 
@@ -6379,7 +6383,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-273-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-273-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-273-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAS"
 	 visible="false" 
@@ -6389,7 +6393,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-257-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-257-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-257-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAT"
 	 visible="false" 
@@ -6399,7 +6403,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-241-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-241-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-241-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAU"
 	 visible="false" 
@@ -6409,7 +6413,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-225-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-225-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-225-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAV"
 	 visible="false" 
@@ -6419,7 +6423,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-209-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-209-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-209-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAW"
 	 visible="false" 
@@ -6429,7 +6433,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-193-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-193-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-193-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAX"
 	 visible="false" 
@@ -6439,7 +6443,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-177-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-177-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-177-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAY"
 	 visible="false" 
@@ -6449,7 +6453,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-161-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-161-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-161-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BAZ"
 	 visible="false" 
@@ -6459,7 +6463,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-145-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-145-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-145-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBA"
 	 visible="false" 
@@ -6469,7 +6473,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-129-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-129-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-129-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBB"
 	 visible="false" 
@@ -6479,7 +6483,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-113-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-113-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-113-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBC"
 	 visible="false" 
@@ -6489,7 +6493,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-097-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-097-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-097-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBD"
 	 visible="false" 
@@ -6499,7 +6503,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-081-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-081-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-081-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBE"
 	 visible="false" 
@@ -6509,7 +6513,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-065-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-065-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-065-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBF"
 	 visible="false" 
@@ -6519,7 +6523,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-049-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-049-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBG"
 	 visible="false" 
@@ -6529,7 +6533,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-033-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-033-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBH"
 	 visible="false" 
@@ -6539,7 +6543,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-001-2005" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2005&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-001-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="MODIS NDVI- 2004">
       <wmsLayer 
@@ -6551,7 +6555,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-353-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-353-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBJ"
 	 visible="false" 
@@ -6561,7 +6565,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-337-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-337-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBK"
 	 visible="false" 
@@ -6571,7 +6575,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-321-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-321-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBL"
 	 visible="false" 
@@ -6581,7 +6585,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-305-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-305-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-305-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBM"
 	 visible="false" 
@@ -6591,7 +6595,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-289-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-289-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-289-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBN"
 	 visible="false" 
@@ -6601,7 +6605,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-273-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-273-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-273-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBO"
 	 visible="false" 
@@ -6611,7 +6615,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-257-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-257-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-257-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBP"
 	 visible="false" 
@@ -6621,7 +6625,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-241-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-241-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-241-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBQ"
 	 visible="false" 
@@ -6631,7 +6635,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-225-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-225-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-225-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBR"
 	 visible="false" 
@@ -6641,7 +6645,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-209-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-209-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-209-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBS"
 	 visible="false" 
@@ -6651,7 +6655,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-193-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-193-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-193-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBT"
 	 visible="false" 
@@ -6661,7 +6665,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-177-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-177-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-177-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBU"
 	 visible="false" 
@@ -6671,7 +6675,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-161-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-161-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-161-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBV"
 	 visible="false" 
@@ -6681,7 +6685,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-145-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-145-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-145-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBW"
 	 visible="false" 
@@ -6691,7 +6695,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-129-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-129-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-129-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBX"
 	 visible="false" 
@@ -6701,7 +6705,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-113-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-113-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-113-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBY"
 	 visible="false" 
@@ -6711,7 +6715,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-097-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-097-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-097-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BBZ"
 	 visible="false" 
@@ -6721,7 +6725,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-081-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-081-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-081-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCA"
 	 visible="false" 
@@ -6731,7 +6735,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-065-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-065-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-065-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCB"
 	 visible="false" 
@@ -6741,7 +6745,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-049-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-049-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCC"
 	 visible="false" 
@@ -6751,7 +6755,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-033-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-033-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCD"
 	 visible="false" 
@@ -6761,7 +6765,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-001-2004" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2004&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-001-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
     <wmsSubgroup label="MODIS NDVI- 2003">
       <wmsLayer 
@@ -6773,7 +6777,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-353-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-353-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-353-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCF"
 	 visible="false" 
@@ -6783,7 +6787,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-337-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-337-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-337-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCG"
 	 visible="false" 
@@ -6793,7 +6797,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-321-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-321-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-321-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCH"
 	 visible="false" 
@@ -6803,7 +6807,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-305-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-305-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-305-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCI"
 	 visible="false" 
@@ -6813,7 +6817,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-289-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-289-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-289-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCJ"
 	 visible="false" 
@@ -6823,7 +6827,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-273-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-273-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-273-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCK"
 	 visible="false" 
@@ -6833,7 +6837,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-257-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-257-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-257-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCL"
 	 visible="false" 
@@ -6843,7 +6847,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-241-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-241-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-241-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCM"
 	 visible="false" 
@@ -6853,7 +6857,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-225-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-225-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-225-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCN"
 	 visible="false" 
@@ -6863,7 +6867,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-209-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-209-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-209-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCO"
 	 visible="false" 
@@ -6873,7 +6877,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-193-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-193-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-193-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCP"
 	 visible="false" 
@@ -6883,7 +6887,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-177-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-177-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-177-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCQ"
 	 visible="false" 
@@ -6893,7 +6897,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-161-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-161-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-161-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCR"
 	 visible="false" 
@@ -6903,7 +6907,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-145-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-145-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-145-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCS"
 	 visible="false" 
@@ -6913,7 +6917,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-129-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-129-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-129-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCT"
 	 visible="false" 
@@ -6923,7 +6927,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-113-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-113-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-113-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCU"
 	 visible="false" 
@@ -6933,7 +6937,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-097-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-097-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-097-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCV"
 	 visible="false" 
@@ -6943,7 +6947,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-081-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-081-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-081-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCW"
 	 visible="false" 
@@ -6953,7 +6957,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-065-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-065-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-065-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCX"
 	 visible="false" 
@@ -6963,7 +6967,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-049-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-049-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-049-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCY"
 	 visible="false" 
@@ -6973,7 +6977,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-033-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-033-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-033-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="BCZ"
 	 visible="false" 
@@ -6983,7 +6987,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="NDVI-001-2003" 
-	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=NDVI-001-2003&VERSION=1.1.1&FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-001-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
 </wmsLayers>
@@ -6991,34 +6995,6 @@
     <tool name="Print" label="Print Map" />
     <tool name="Export" label="Export Map to JPG" />
     <tool name="Identify" label="Identify Features" linkFields=""/>
-<!--
-    <tool name="TimeSlider" label="Time Slider" helpText = "Slider">
-      <toolGroup name="EWS_EFETAC_NASA_Time" 
-		 legendUrl="%(VIEWER_DEPLOY_DIR_URL)s/assets/Mashup_Legends/EWS/EWS_EFETAC-NASA/EFETAC-NASA_2010.png"
-		 url="http://www8.nemac.unca.edu/ArcGIS/rest/services/EWS/EWS_EFETAC_NASA_Time/ImageServer" 
-		 label="Archived NRT EFETAC-NASA" type="raster" />
-      <toolGroup name="EWS_EFETAC_NASA_MODIS_Change_2003_Baselines" 
-		 legendUrl="%(VIEWER_DEPLOY_DIR_URL)s/assets/Mashup_Legends/EWS/EWS_EFETAC-NASA/EFETAC-NASA_2010.png"
-		 url="http://www8.nemac.unca.edu/ArcGIS/rest/services/EWS/EWS_EFETAC_NASA_MODIS_Change_2003_Baselines/ImageServer" 
-		 label="2010 MODIS Change-2003 Baseline" type="raster" />
-      <toolGroup name="EWS_EFETAC_NASA_MODIS_Change_2007_Baselines" 
-		 legendUrl="%(VIEWER_DEPLOY_DIR_URL)s/assets/Mashup_Legends/EWS/EWS_EFETAC-NASA/EFETAC-NASA_2010.png"
-		 url="http://www8.nemac.unca.edu/ArcGIS/rest/services/EWS/EWS_EFETAC_NASA_MODIS_Change_2007_Baselines/ImageServer" 
-		 label="2010 MODIS Change-2007 Baseline" type="raster" />
-      <toolGroup name="EWS_EFETAC_NASA_MODIS_Change_2009_Baselines" 
-		 legendUrl="%(VIEWER_DEPLOY_DIR_URL)s/assets/Mashup_Legends/EWS/EWS_EFETAC-NASA/EFETAC-NASA_2010.png"
-		 url="http://www8.nemac.unca.edu/ArcGIS/rest/services/EWS/EWS_EFETAC_NASA_MODIS_Change_2009_Baselines/ImageServer" 
-		 label="2010 MODIS Change-2009 Baseline" type="raster" />
-      <toolGroup name="EWS_RSAC_FHTET_Time" 
-		 legendUrl="%(VIEWER_DEPLOY_DIR_URL)s/assets/Mashup_Legends/EWS/EWS_RSAC-FHTET/RSAC-FHTET_2010.png"
-		 url="http://www8.nemac.unca.edu/ArcGIS/rest/services/EWS/EWS_RSAC_FHTET_Time/ImageServer" 
-		 label="Archived NRT RSAC-FHTET" type="raster" />
-      <toolGroup name="EWS_RSAC_FHTET_MODIS_Change_2010" 
-		 legendUrl="%(VIEWER_DEPLOY_DIR_URL)s/assets/Mashup_Legends/EWS/EWS_RSAC-FHTET/RSAC-FHTET_2010.png"
-		 url="http://www8.nemac.unca.edu/ArcGIS/rest/services/EWS/EWS_RSAC_FHTET_MODIS_Change_2010/ImageServer" 
-		 label="RSAC-FHTET MODIS 2010 Change" type="raster" />
-    </tool>
--->
     <tool name="Phenograph" label="Graph NDVI" helpText = "Click the map to see NDVI for the point. Or, enter coordinates and click Make Graph."/>
     <tool name="ShareMap" label="Share this Map" helpText = "Copy the URL below to share this map with someone else."/>
   </tools>

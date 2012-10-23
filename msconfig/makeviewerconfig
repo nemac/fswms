@@ -65,7 +65,7 @@ wmsLayerTemplate = Template(string="""
           name="%(LAYER_TITLE)s"
           styles="default" 
           identify="true"
-          legend="../%(LEGEND)s"/>	
+          legend="%(LEGEND)s"/>	
 """)
 
 #         legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=%(LAYER_NAME)s&VERSION=1.1.1&FORMAT=image/png"/>	
@@ -98,7 +98,7 @@ for subgroup in [
                 'SERVER_URL'    : SERVER_URL,
                 'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
-                'LEGEND'        : getLegend(layer['name']),
+                'LEGEND'        : SERVER_URL+'/'+getLegend(layer['name']),
                 'LAYER_VISIBLE' : layer['visible'],
                 'LAYER_TITLE'   : layerTitles[layer['name']]
                 })
@@ -142,7 +142,7 @@ for subgroup in [
                 'SERVER_URL'    : SERVER_URL,
                 'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
-                'LEGEND'        : getLegend(layer['name']),
+                'LEGEND'        : SERVER_URL+'/'+getLegend(layer['name']),
                 'LAYER_VISIBLE' : layer['visible'],
                 'LAYER_TITLE'   : layerTitles[layer['name']]
                 })
@@ -213,11 +213,12 @@ def getDRTLayers():
     while (today > loopDate):
        #print 'The loopDate is ' + loopDate.strftime('%y%m%d')
        lid = getLID("usdm"+loopDate.strftime('%y%m%d'), "DRTLayerLID.csv")
+       drtURL = "http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm"+loopDate.strftime('%y%m%d')+"_wms.map&amp;TRANSPARENT=true"
        drtList.append({ 'LAYER_LID'       : lid,
                         'LAYER_NAME'      : "usdm"+loopDate.strftime('%y%m%d'),
                         'LAYER_TITLE'     : loopDate.strftime('%m/%d/%Y'),
                         'SERVER_URL'      : SERVER_URL,
-                        'DRT_URL'         : "http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm"+loopDate.strftime('%y%m%d')+"_wms.map&#38;#38;TRANSPARENT=true"
+                        'DRT_URL'         : drtURL
        })
        loopDate = loopDate + timedelta(days=7)
     #print 'Final loopDate was: ' + loopDate.strftime('%y%m%d')
@@ -271,7 +272,7 @@ def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
                                  'LAYER_NAME'      : layerName,
                                  'LAYER_TITLE'     : layerTitle,
                                  'SERVER_URL'      : SERVER_URL,
-                                 'LEGEND'          : legend
+                                 'LEGEND'          : SERVER_URL+"/"+legend
                                  })
             layerTitles[layerName] = layerTitle
         except:
@@ -292,7 +293,7 @@ nrtWMSLayerTemplate = Template(string="""
           name="%(LAYER_TITLE)s"
           styles="default" 
           identify="true"
-          legend="../%(LEGEND)s"/>""")
+          legend="%(LEGEND)s"/>""")
 
 nrtTCProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "EFETAC-NASA_TC", "ewstruecolor", "no", ".img")
 nrt1YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/1Year", "EFETAC-NASA_1Year", "ews1year", "yes", ".tif")
