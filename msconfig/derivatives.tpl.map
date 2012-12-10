@@ -1,7 +1,10 @@
 MAP
     #CONFIG     "MS_ERRORFILE" "../logs/lucky.log"
     #DEBUG      5
-    NAME       lucky
+    NAME       Derivatives
+    #jdm:added to accomodate map layers
+    #see http://trac.osgeo.org/mapserver/ticket/3055
+    MAXSIZE 3072    
     STATUS     ON
     SIZE       600 400
 #   SYMBOLSET "./symbols/symbols35.sym"
@@ -18,7 +21,7 @@ MAP
             "wms_title"              "NEMAC OWS Server"
             "wms_abstract"           "NEMAC OWS Server"
             "wms_onlineresource"     "%(SERVICE_URL)s"
-            "wms_srs"                "EPSG:4326 EPSG:3785"
+            "wms_srs"                "EPSG:4326 EPSG:3785 EPSG:900913"
         END
     END
 
@@ -79,7 +82,117 @@ MAP
             "wms_abstract"               "National Phenological Dataset"
 	 END  # end METADATA
     END # end LAYER
+    LAYER
+        NAME NLCDUrban         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/nlcd2006_landcover_4-20-11_se5_decimated_to_231p66m_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        CLASS
+            EXPRESSION ([pixel] > 20 AND [pixel] <= 25) 
+            COLOR 	16	16	16
+        END        
+        METADATA
+            "wms_title"             "NLCD 2006"
+            "wms_abstract"          "NLCD 2006"   
+            "gml_include_items"     "all"			
+        END  # end METADATA
+    END # end LAYER
 	LAYER
+        NAME     FallBrownDownUrbanMask09
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/09_fall_brown_down_length.img
+        MASK "NLCDUrban"
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "ews-cmaps/Fall-Brown-Down-Length.cmap"
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME NLCDForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/nlcd2006_landcover_4-20-11_se5_decimated_to_231p66m_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        CLASS
+            EXPRESSION ([pixel] > 40 AND [pixel] <= 44) 
+            COLOR 	16	16	16
+        END        
+        METADATA
+            "wms_title"             "NLCD 2006"
+            "wms_abstract"          "NLCD 2006"   
+            "gml_include_items"     "all"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     FallBrownDownForestMask09
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/09_fall_brown_down_length.img
+        MASK "NLCDForest"
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "ews-cmaps/Fall-Brown-Down-Length.cmap"
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "National Phenological Dataset"
+            "wms_abstract"               "National Phenological Dataset"
+	 END  # end METADATA
+    END # end LAYER	
+    LAYER
         NAME     growing-season-length-2009
         TYPE     RASTER
         DUMP     TRUE

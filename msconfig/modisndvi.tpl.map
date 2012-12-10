@@ -1,7 +1,12 @@
 MAP
     #CONFIG     "MS_ERRORFILE" "../logs/lucky.log"
     #DEBUG      5
-    NAME       lucky
+    NAME       MODISNDVI
+	
+    #jdm:added to accomodate map layers
+    #see http://trac.osgeo.org/mapserver/ticket/3055
+    MAXSIZE 3072
+	
     STATUS     ON
     SIZE       600 400
 #   SYMBOLSET "./symbols/symbols35.sym"
@@ -18,7 +23,7 @@ MAP
             "wms_title"              "NEMAC OWS Server"
             "wms_abstract"           "NEMAC OWS Server"
             "wms_onlineresource"     "%(SERVICE_URL)s"
-            "wms_srs"                "EPSG:4326 EPSG:3785"
+            "wms_srs"                "EPSG:4326 EPSG:3785 EPSG:900913"
         END
     END
 

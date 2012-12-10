@@ -7,6 +7,10 @@ MAP
     # all temp files get prefixed with this string
     NAME ms_rlayers
 
+    #jdm:added to accomodate map layers
+    #see http://trac.osgeo.org/mapserver/ticket/3055
+    MAXSIZE 3072    
+    
     # background color of image if transparency
     # is not requested
     IMAGECOLOR 255 255 255
