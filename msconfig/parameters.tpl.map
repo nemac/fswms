@@ -55,6 +55,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -86,6 +87,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -113,6 +115,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -140,6 +143,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -167,6 +171,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -194,6 +199,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -221,6 +227,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -248,6 +255,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -275,6 +283,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -302,6 +311,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -329,6 +339,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -356,6 +367,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -383,6 +395,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -410,6 +423,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -437,6 +451,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -464,6 +479,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -491,6 +507,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -518,6 +535,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -549,6 +567,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -576,6 +595,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -603,6 +623,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -630,6 +651,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -657,6 +679,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -684,6 +707,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -711,6 +735,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -738,6 +763,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -765,6 +791,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -792,6 +819,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -819,6 +847,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -846,6 +875,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -873,6 +903,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -900,6 +931,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -927,6 +959,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -954,6 +987,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -981,6 +1015,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1012,6 +1047,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1039,6 +1075,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1066,6 +1103,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1093,6 +1131,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1120,6 +1159,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1147,6 +1187,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1174,6 +1215,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1201,6 +1243,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1228,6 +1271,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1255,6 +1299,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1282,6 +1327,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1309,6 +1355,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1336,6 +1383,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1363,6 +1411,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1390,6 +1439,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1417,6 +1467,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1444,6 +1495,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1475,6 +1527,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1502,6 +1555,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1529,6 +1583,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1556,6 +1611,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1583,6 +1639,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1610,6 +1667,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1637,6 +1695,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1664,6 +1723,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1691,6 +1751,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1718,6 +1779,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1745,6 +1807,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1772,6 +1835,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1799,6 +1863,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1826,6 +1891,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1853,6 +1919,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1880,6 +1947,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1907,6 +1975,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1938,6 +2007,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1965,6 +2035,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1992,6 +2063,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2019,6 +2091,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2046,6 +2119,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2073,6 +2147,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2100,6 +2175,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2127,6 +2203,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2154,6 +2231,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2181,6 +2259,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2208,6 +2287,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2235,6 +2315,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2262,6 +2343,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2289,6 +2371,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2316,6 +2399,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2343,6 +2427,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2370,6 +2455,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2401,6 +2487,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2428,6 +2515,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2455,6 +2543,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2482,6 +2571,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2509,6 +2599,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2536,6 +2627,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2563,6 +2655,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2590,6 +2683,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2617,6 +2711,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2644,6 +2739,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2671,6 +2767,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2698,6 +2795,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2725,6 +2823,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2752,6 +2851,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2779,6 +2879,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2806,6 +2907,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2833,6 +2935,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2864,6 +2967,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2891,6 +2995,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2918,6 +3023,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2945,6 +3051,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2972,6 +3079,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -2999,6 +3107,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -3026,6 +3135,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -3053,6 +3163,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -3080,6 +3191,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -3107,6 +3219,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -3134,6 +3247,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -3161,6 +3275,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -3188,6 +3303,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -3215,6 +3331,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -3242,6 +3359,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -3269,6 +3387,7 @@ MAP
         METADATA
             "wms_title"                  "National Phenological Dataset"
             "wms_abstract"               "National Phenological Dataset"
+            "gml_include_items"          "all"            
         END  # end METADATA
     END # end LAYER
 END #Map
