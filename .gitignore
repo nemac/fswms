@@ -1,3 +1,4 @@
+*.tgz
 *.pyc
 html/ews.map
 html/ewswcs.map
