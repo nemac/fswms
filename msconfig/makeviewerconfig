@@ -9,11 +9,20 @@ try:
     from datetime import datetime    
 except:
     print "Cannot find local settings file 'Config.py'.  You need to create a Config.py file that contains"
-    print "settings appropriate for this copy of the FSWMS project.  You can use the file 'Config.py.template'"
+    print "settings appropriate for this copy of the FSWMS project.  You can use the file 'Config.tpl.py'"
     print "as a starting point --- make a copy of that file called 'Config.py', and edit appropriately."
     exit(-1)
 
 from LegendConfig import *
+
+
+if not os.path.exists(NRT_LIDFILE_PATH):
+    print "Can't read required NRT LID file '%s'.  Aborting." % (NRT_LIDFILE_PATH)
+    exit(-1)
+
+if not os.path.exists(DRT_LIDFILE_PATH):
+    print "Can't read required DRT LID file '%s'.  Aborting." % (DRT_LIDFILE_PATH)
+    exit(-1)
 
 class Template:
     def __init__(self, file=None, **args):
@@ -212,7 +221,7 @@ def getDRTLayers():
     #print "today - timedelta(days=7): " + (today - timedelta(days=7)).strftime('%y%m%d');
     while (today > loopDate):
        #print 'The loopDate is ' + loopDate.strftime('%y%m%d')
-       lid = getLID("usdm"+loopDate.strftime('%y%m%d'), "DRTLayerLID.csv")
+       lid = getLID("usdm"+loopDate.strftime('%y%m%d'), DRT_LIDFILE_PATH)
        drtURL = "http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm"+loopDate.strftime('%y%m%d')+"_wms.map&amp;TRANSPARENT=true"
        drtList.append({ 'LAYER_LID'       : lid,
                         'LAYER_NAME'      : "usdm"+loopDate.strftime('%y%m%d'),
@@ -256,7 +265,7 @@ def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
                else:
                     layerName = group + "_" + re.sub(r'_.*$', '', nameform)
             layerTitle = tif
-            lid = getLID(layerName, "NRTLayerLID.csv")
+            lid = getLID(layerName, LIDFILE_PATH)
             if legendYesNo=="yes":
                 #legend = SERVER_URL+"/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"
                 legend = getLegend(layerName)
