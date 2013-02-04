@@ -265,7 +265,7 @@ def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
                else:
                     layerName = group + "_" + re.sub(r'_.*$', '', nameform)
             layerTitle = tif
-            lid = getLID(layerName, LIDFILE_PATH)
+            lid = getLID(layerName, NRT_LIDFILE_PATH)
             if legendYesNo=="yes":
                 #legend = SERVER_URL+"/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"
                 legend = getLegend(layerName)
