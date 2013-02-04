@@ -3,6 +3,10 @@ html/ews.map
 html/ewswcs.map
 html/ewswgs84.map
 html/index.html
+html/cmapicons
+html/efetac_nasa_percent_change_cmap.csv
+html/rsac_fhtet_percent_change_cmap.csv
+html/view/config
 msconfig/Config.py
 msconfig/derivatives.map
 msconfig/ews.map
@@ -23,3 +27,5 @@ msconfig/wlayers.map
 msconfig/linkdir
 msconfig/NRTLayerLID.csv
 msconfig/DRTLayerLID.csv
+msconfig/efetac_nasa_percent_change_cmap.cmap
+msconfig/rsac_fhtet_percent_change_cmap.cmap
