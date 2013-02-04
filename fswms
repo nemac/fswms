@@ -147,7 +147,14 @@ if __name__ == "__main__":
         sys.exit(0)
 
     if command == "dist":
+        try:
+            tag = standardize_version_tag(sys.argv[2])
+        except:
+            print "usage: fswms dist TAG"
+            sys.exit(-1)
         tag = standardize_version_tag(sys.argv[2])
+        os.system("git checkout master")
+        os.system("git pull origin master")
         distfile = dist(tag)
         print "Wrote `" + distfile + "`"
         sys.exit(0)
@@ -164,20 +171,33 @@ if __name__ == "__main__":
 
 
     if command == "create":
-        tag = standardize_version_tag(sys.argv[2])
+        try:
+            tag = standardize_version_tag(sys.argv[2])
+        except:
+            print "usage: fswms create TAG"
+            sys.exit(-1)
         if tag_exists(tag):
             print "Error: The tag '%s' already exists." % tag
             sys.exit(-1)
         os.system("git checkout master")
+        os.system("git pull origin master")
         os.system(p.render("git tag -a -m 'create tag {{{tag}}}' {{{tag}}}", { 'tag' : tag }))
+        os.system("git push origin master")
+        os.system("git push origin %s" % tag)
         print "created %s " % (tag)
         sys.exit(-1)
 
     if command == "delete":
-        tag = standardize_version_tag(sys.argv[2])
+        try:
+            tag = standardize_version_tag(sys.argv[2])
+        except:
+            print "usage: fswms delete TAG"
+            sys.exit(-1)
         if not tag_exists(tag):
             print "Error: The tag '%s' does not exist." % tag
             sys.exit(-1)
+        os.system("git checkout master")
+        os.system("git pull origin master")
         os.system(p.render("git tag -d {{{tag}}}", { 'tag' : tag }))
         os.system(p.render("git push origin :refs/tags/{{{tag}}}", { 'tag' : tag }))
         print "deleted %s " % (tag)
