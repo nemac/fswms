@@ -375,7 +375,7 @@ f_new.write( mapTemplate.render( {
             'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
             'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
             'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-            'MS_ERRORFILE'            : "../logs/%s.log" % (SERVICE_NAME),
+            'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
             'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
             } ) )
 f_new.close()
@@ -394,7 +394,7 @@ f_new.write( mapTemplate.render( {
             'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
             'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
             'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-            'MS_ERRORFILE'            : "../logs/%s.log" % (SERVICE_NAME),
+            'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
             'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
             } ) )
 f_new.close()
@@ -419,7 +419,7 @@ f_new.write( mapTemplate.render( {
             'OWS_ABSTRACT'            : "NEMAC %s WCS" % (SERVICE_NAME),
             'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
             'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-            'MS_ERRORFILE'            : "../logs/%s.log" % (SERVICE_NAME),
+            'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
             'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
             } ) )
 f_new.close()
@@ -446,7 +446,7 @@ f_new.write( template.render( {
             'OWS_ABSTRACT'          : "NEMAC %s WMS" % (SERVICE_NAME),
             'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
             'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-            'MS_ERRORFILE'          : "../logs/%s.log" % (SERVICE_NAME),
+            'MS_ERRORFILE'          : "../var/log/%s.log" % (SERVICE_NAME),
             'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
             'WCS_LABEL'             : WCS_LABEL
             } ) )
@@ -473,7 +473,7 @@ f_new.write( template.render( {
             'OWS_ABSTRACT'          : "NEMAC %s WMS" % (SERVICE_NAME),
             'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
             'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-            'MS_ERRORFILE'          : "../logs/%s.log" % (SERVICE_NAME),
+            'MS_ERRORFILE'          : "../var/log/%s.log" % (SERVICE_NAME),
             'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
             'WCS_LABEL'             : WCS_LABEL
             } ) )
@@ -500,7 +500,7 @@ f_new.write( template.render( {
             'OWS_ABSTRACT'          : "NEMAC %s WMS" % (SERVICE_NAME),
             'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
             'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-            'MS_ERRORFILE'          : "../logs/%s.log" % (SERVICE_NAME),
+            'MS_ERRORFILE'          : "../var/log/%s.log" % (SERVICE_NAME),
             'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
             'WCS_LABEL'             : WCS_LABEL
             } ) )
@@ -527,7 +527,7 @@ f_new.write( template.render( {
             'OWS_ABSTRACT'          : "NEMAC %s WMS" % (SERVICE_NAME),
             'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
             'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-            'MS_ERRORFILE'          : "../logs/%s.log" % (SERVICE_NAME),
+            'MS_ERRORFILE'          : "../var/log/%s.log" % (SERVICE_NAME),
             'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
             'WCS_LABEL'             : WCS_LABEL
             } ) )
@@ -555,7 +555,7 @@ f_new.write( template.render( {
             'OWS_ABSTRACT'          : SERVICE_NAME,
             'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
             'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-            'MS_ERRORFILE'          : "../logs/%s.log" % (SERVICE_NAME),
+            'MS_ERRORFILE'          : "../var/log/%s.log" % (SERVICE_NAME),
             'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
             'WCS_LABEL'             : WCS_LABEL            
             } ) )
@@ -645,8 +645,8 @@ f_new.close()
 ### Create symlinks for the map files, and change a few permission settings
 ###
 os.system("(cd ../html ; ln -f -s ../msconfig/ews.map . ; ln -f -s ../msconfig/ewswgs84.map . ; ln -f -s ../msconfig/ewswcs.map .)")
-os.system("chmod a+w ../logs");
-os.system("chmod a+w ../logs/*.log > /dev/null 2>&1");
+os.system("chmod a+w ../var/log");
+os.system("chmod a+w ../var/log/*.log > /dev/null 2>&1");
 os.system("chmod g-w ../html/*");
 
 ###

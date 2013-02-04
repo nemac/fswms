@@ -1,5 +1,5 @@
 MAP
-    #CONFIG     "MS_ERRORFILE" "../logs/lucky.log"
+    #CONFIG     "MS_ERRORFILE" "../var/log/lucky.log"
     #DEBUG      5
     NAME       MODISNDVI
 	
