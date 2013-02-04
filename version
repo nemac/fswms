@@ -1,23 +1,35 @@
 #! /usr/bin/python
 
 #
-# This script simply prints out the version name and number of this copy of fswms
+# This script prints out the version number of this copy of fswms.
+#
+# This script must be run from the top level of a copy of a fswms git project; it works
+# by examining the git history of the project.
+#
+# If the currently checked out copy has a tag of the form "fswms-*", this script
+# prints that tag.
+#
+# If the currently checked out copy does not have a tag of the form "fswms-*", this script
+# prints the current sha, followed by "(with local mods)" if git reports and
+# uncommited modifications.
 #
 
-import re
+import re, os, subprocess, sys
 
-#
-# Subversion will modify the following line automatically so that it gives the full
-# URL of this file in the subversion repository.  Do not modify this line by hand:
-#
-HeadURL = "$HeadURL$"
+if not os.path.exists(".git"):
+    print "No .git subdirectory found."
+    sys.exit(-1)
 
-#
-# The following bit of code examines the value of HeadURL from above, extracts
-# out the version from it, and prints it:
-#
-match = re.search(r'/fswms/(.*)/version', HeadURL)
+line = subprocess.Popen(['git', 'log', '-1', '--pretty=format:"%h %ad | %s%d [%an]"', '--date=short'],
+                        stdout=subprocess.PIPE).communicate()[0]
+match = re.search(r'tag: (fswms-[^\)]+)', line)
 if (match):
-    print re.sub(r'^tags/','',match.group(1)),
+    version = match.group(1)
 else:
-    print "unknown",
+    match = re.search(r'^"(\S+)', line)
+    version = match.group(1)
+    line = subprocess.Popen(['git', 'status'], stdout=subprocess.PIPE).communicate()[0]
+    if not re.search(r'nothing to commit', line):
+        version = version + " (with local mods)"
+
+print version
