@@ -4,6 +4,7 @@ import re, os, sys, subprocess
 import pystache as p
 
 def usage():
+    # Print a short usage message for this script
     print "usage: fswms COMMAND [ARG ...]"
     print "   where COMMAND is one of: 'list', 'create', 'delete', 'deploy'"
     exit(-1)
@@ -18,10 +19,13 @@ def standardize_version_tag(tag):
         return "fswms-" + tag
 
 def system(cmd):
+    # Convenience wrapper for os.system that lets us print the command being
+    # executed, for debugging.
     #print cmd
     return os.system(cmd)
 
 def compare_versions(a,b):
+    # Sorting comparison function for tags of the form N.M
     try:
         [amajor,aminor] = [int(x) for x in a.split('.')]
         [bmajor,bminor] = [int(x) for x in b.split('.')]
@@ -44,10 +48,12 @@ def compare_versions(a,b):
     return 0
 
 def tag_list():
+    # Return a list of all tags of the form 'fswms-*'
     return sorted([re.sub(r'^fswms-(.*)$',r'\1',x) for x in
                    subprocess.Popen(['git', 'tag'], stdout=subprocess.PIPE).communicate()[0].split('\n') if x != ''], cmp=compare_versions)
 
 def tag_exists(tag):
+    # Return True if and only if the named tag exists
     tag = re.sub(r'^fswms-', '', tag)
     for t in tag_list():
         if t == tag:
@@ -61,10 +67,10 @@ def dist(tag):
     #
     # This function works by exporting the named tag from the current project's repository
     # in ./.git.  Therefore, the named tag must already exist in that repo.
-    os.system("/bin/rm -rf .stage")
+    system("/bin/rm -rf .stage")
     stagedir = p.render('.stage/{{{tag}}}', {'tag' : tag})
     os.makedirs(stagedir)
-    status = os.system(p.render("(git archive --format=tar {{{tag}}} | (cd {{{stagedir}}} ; tar xf -)) > /dev/null 2>&1",
+    status = system(p.render("(git archive --format=tar {{{tag}}} | (cd {{{stagedir}}} ; tar xf -)) > /dev/null 2>&1",
                                 { 'tag'      : tag,
                                   'stagedir' : stagedir}))
     if status != 0:
@@ -79,29 +85,43 @@ print "{{{tag}}}"
 """
     , { 'tag' : tag }))
     f.close()
-    os.system(p.render("chmod +x {{{stagedir}}}/version", { 'stagedir' : stagedir }))
+    system(p.render("chmod +x {{{stagedir}}}/version", { 'stagedir' : stagedir }))
     distfile = tag + ".tgz"
-    os.system(p.render("(cd .stage ; tar cfz - {{{tag}}}) > {{{distfile}}}",
+    system(p.render("(cd .stage ; tar cfz - {{{tag}}}) > {{{distfile}}}",
                        { 'tag'      : tag,
                          'distfile' : distfile}))
-    os.system("/bin/rm -rf .stage")
+    system("/bin/rm -rf .stage")
     return distfile
 
 
 def validate_deploy_dst(dst):
+    # Return True or False, depending on whether the given dst directory is a valid
+    # deployment destination for fswms.
+    #   make sure dst exists:
     if not os.path.exists(dst):
         return False
+    #   make sure dst contains "/var/Config.py":
     if not os.path.exists(dst + "/var/Config.py"):
         return False
+    #   load that "/var/Config.py"
     sys.path.append(dst + "/var")
     import Config
+    #   make sure that the BASE_DIR that the Config.py points to is in fact the same as dst:
     if os.stat(dst).st_ino != os.stat(Config.BASE_DIR).st_ino:
         return False
+    #   Make sure that the "/var/Config.py" file that BASE_DIR contains is the same as the
+    #   one in dst.  This is actually redundant, since we just validated that the containing
+    #   dirs are the same.
     if os.stat(dst + "/var/Config.py").st_ino != os.stat(Config.BASE_DIR + "/var/Config.py").st_ino:
         return False
+    # If we got this far, all is well
     return True
     
 def deploy(tag, dst):
+    ###
+    ### Deploy the named tag to the named dst dir
+    ###
+    
     # make sure deploy dst is valid
     if not validate_deploy_dst(dst):
         print "Directory `%s` does not appear to be a valid fswms deployment destination" % dst
@@ -153,8 +173,8 @@ if __name__ == "__main__":
             print "usage: fswms dist TAG"
             sys.exit(-1)
         tag = standardize_version_tag(sys.argv[2])
-        os.system("git checkout master")
-        os.system("git pull origin master")
+        system("git checkout master")
+        system("git pull origin master")
         distfile = dist(tag)
         print "Wrote `" + distfile + "`"
         sys.exit(0)
@@ -179,11 +199,11 @@ if __name__ == "__main__":
         if tag_exists(tag):
             print "Error: The tag '%s' already exists." % tag
             sys.exit(-1)
-        os.system("git checkout master")
-        os.system("git pull origin master")
-        os.system(p.render("git tag -a -m 'create tag {{{tag}}}' {{{tag}}}", { 'tag' : tag }))
-        os.system("git push origin master")
-        os.system("git push origin %s" % tag)
+        system("git checkout master")
+        system("git pull origin master")
+        system(p.render("git tag -a -m 'create tag {{{tag}}}' {{{tag}}}", { 'tag' : tag }))
+        system("git push origin master")
+        system("git push origin %s" % tag)
         print "created %s " % (tag)
         sys.exit(-1)
 
@@ -196,10 +216,10 @@ if __name__ == "__main__":
         if not tag_exists(tag):
             print "Error: The tag '%s' does not exist." % tag
             sys.exit(-1)
-        os.system("git checkout master")
-        os.system("git pull origin master")
-        os.system(p.render("git tag -d {{{tag}}}", { 'tag' : tag }))
-        os.system(p.render("git push origin :refs/tags/{{{tag}}}", { 'tag' : tag }))
+        system("git checkout master")
+        system("git pull origin master")
+        system(p.render("git tag -d {{{tag}}}", { 'tag' : tag }))
+        system(p.render("git push origin :refs/tags/{{{tag}}}", { 'tag' : tag }))
         print "deleted %s " % (tag)
         sys.exit(-1)
 
