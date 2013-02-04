@@ -28,6 +28,7 @@ import sys, os, subprocess, datetime, re, shutil;
 ### config
 ###
 
+sys.path.append("../var")
 try:
     from Config import *
 except:

@@ -3,6 +3,7 @@
 import sys, re, os
 
 
+sys.path.append("../var")
 try:
     from Config import *
     from datetime import timedelta
