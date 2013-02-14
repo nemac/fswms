@@ -6,7 +6,7 @@ import pystache as p
 def usage():
     # Print a short usage message for this script
     print "usage: fswms COMMAND [ARG ...]"
-    print "   where COMMAND is one of: 'list', 'create', 'delete', 'deploy'"
+    print "   where COMMAND is one of: 'list', 'create', 'delete', 'deploy', 'dist'"
     exit(-1)
 
 def standardize_version_tag(tag):
@@ -126,8 +126,10 @@ def deploy(tag, dst):
     if not validate_deploy_dst(dst):
         print "Directory `%s` does not appear to be a valid fswms deployment destination" % dst
         sys.exit(-1)
-    print "extracting %s..." % tag
-    tgzfile = dist(tag)
+    # Use the dist() function to create a tgzfile containing a copy of fswms
+    # corresponding to the given tag
+    print "retreiving tag %s from git repo..." % tag
+    tgzfile = dist(tag) 
     # make sure tgzfile is really there
     if not os.path.exists(tgzfile):
         print "Archive file %s does not exist." % tgzfile
@@ -147,6 +149,8 @@ def deploy(tag, dst):
     system(p.render("(cd .stage/{{{tag}}} ; tar cf - .) | (cd {{{dst}}} ; tar xf -)",
                        { 'tag' : tag,
                          'dst' : dst }))
+    # remove other-write and group-write permission on the dst html dir:
+    system(p.render("chmod -R g-w,o-w {{{dst}}}/html", { 'dst' : dst }))
     # run fscron in newly deploy dst dir:
     print "running fscron in %s..." % dst
     system(p.render("cd {{{dst}}}/msconfig ; ./fscron", { 'dst' : dst }))
