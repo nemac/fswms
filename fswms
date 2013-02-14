@@ -1,6 +1,6 @@
 #! /usr/bin/python
 
-import re, os, sys, subprocess
+import re, os, sys, subprocess, grp, pwd, getpass
 import pystache as p
 
 def usage():
@@ -8,6 +8,24 @@ def usage():
     print "usage: fswms COMMAND [ARG ...]"
     print "   where COMMAND is one of: 'list', 'create', 'delete', 'deploy', 'dist'"
     exit(-1)
+
+def get_file_owner(file):
+    """Return the name of the user who owns a file or directory"""
+    stat_info = os.stat(file)
+    uid = stat_info.st_uid
+    user = pwd.getpwuid(uid)[0]
+    return user
+
+def get_file_group(file):
+    """Return the name of the group owner a file or directory"""
+    stat_info = os.stat(file)
+    gid = stat_info.st_gid
+    group = pwd.getpwuid(gid)[0]
+    return group
+
+def get_current_user():
+    """Return the name of the current user"""
+    return getpass.getuser()
 
 def standardize_version_tag(tag):
     # Return a copy of the string `tag` with the prefix `fswms-` prepended to it,
@@ -21,7 +39,7 @@ def standardize_version_tag(tag):
 def system(cmd):
     # Convenience wrapper for os.system that lets us print the command being
     # executed, for debugging.
-    #print cmd
+    print cmd
     return os.system(cmd)
 
 def compare_versions(a,b):
@@ -86,10 +104,12 @@ print "{{{tag}}}"
     , { 'tag' : tag }))
     f.close()
     system(p.render("chmod +x {{{stagedir}}}/version", { 'stagedir' : stagedir }))
+    system(p.render("/bin/rm -rf {{{stagedir}}}/var", { 'stagedir' : stagedir }))
     distfile = tag + ".tgz"
-    system(p.render("(cd .stage ; tar cfz - {{{tag}}}) > {{{distfile}}}",
-                       { 'tag'      : tag,
-                         'distfile' : distfile}))
+    system(p.render("(cd .stage ; tar cfz - {{{tag}}}) > {{{distfile}}}", {
+                'tag'      : tag,
+                'distfile' : distfile
+                }))
     system("/bin/rm -rf .stage")
     return distfile
 
@@ -140,20 +160,42 @@ def deploy(tag, dst):
     system(p.render("cat {{{tgzfile}}} | ( cd .stage ; tar xfz - )", { 'tgzfile' : tgzfile }))
     # remove all files from dst except 'var' subdir:
     print "cleaning old files from %s..." % dst
+    dst_owner_different = (get_file_owner(dst) != get_current_user())
     for f in [f for f in os.listdir(dst) if f != 'var']:
-        system(p.render("/bin/rm -rf {{{dst}}}/{{{f}}}",
-                           { 'dst' : dst,
-                             'f'   : f }))
+        system(p.render("{{{sudo}}} /bin/rm -rf {{{dst}}}/{{{f}}}", {
+                    'sudo' : ( "sudo" if dst_owner_different else "" ),
+                    'dst' : dst,
+                    'f'   : f
+                    }))
     # copy everything from the staging directory to the dst:
     print "copying %s files to %s..." % (tag, dst)
-    system(p.render("(cd .stage/{{{tag}}} ; tar cf - .) | (cd {{{dst}}} ; tar xf -)",
-                       { 'tag' : tag,
-                         'dst' : dst }))
+    if dst_owner_different:
+        system(p.render("sudo chmod o+w {{{dst}}}", {
+                    'dst' : dst
+                    }))
+    system(p.render("(cd .stage/{{{tag}}} ; tar cf - *) | (cd {{{dst}}} ; tar xf -)", {
+                'tag' : tag,
+                'dst' : dst
+                }))
     # remove other-write and group-write permission on the dst html dir:
     system(p.render("chmod -R g-w,o-w {{{dst}}}/html", { 'dst' : dst }))
+    # if dst is owned by someone other than the current user, use sudo
+    # to reset ownership of copied files back to that owner
+    if dst_owner_different:
+        system(p.render("sudo chown -R {{{user}}}.{{{group}}} {{{dst}}}", {
+                    'user'  : get_file_owner(dst),
+                    'group' : get_file_group(dst),
+                    'dst'   : dst
+                    }))
+        system(p.render("sudo chmod o-w {{{dst}}}", {
+                    'dst' : dst
+                    }))
     # run fscron in newly deploy dst dir:
     print "running fscron in %s..." % dst
-    system(p.render("cd {{{dst}}}/msconfig ; ./fscron", { 'dst' : dst }))
+    system(p.render("cd {{{dst}}}/msconfig ; {{{sudo}}} ./fscron", {
+                'sudo' : (('sudo su ' + get_file_owner(dst)) if dst_owner_different else ""),
+                'dst' : dst
+                }))
     # clean up staging dir
     print "cleaning up..."
     os.unlink(tgzfile)
