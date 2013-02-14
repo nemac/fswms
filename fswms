@@ -39,7 +39,7 @@ def standardize_version_tag(tag):
 def system(cmd):
     # Convenience wrapper for os.system that lets us print the command being
     # executed, for debugging.
-    print cmd
+    #print cmd
     return os.system(cmd)
 
 def compare_versions(a,b):
