@@ -150,6 +150,7 @@ for subgroup in [
         '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
     for layer in subgroup['layers']:
         rsacModisChangeDetectionProductLayers = rsacModisChangeDetectionProductLayers + wmsLayerTemplate.render({
+                'SELECTED'      : "",
                 'SERVER_URL'    : SERVER_URL,
                 'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
