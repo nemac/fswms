@@ -1606,7 +1606,111 @@
 	 name="2001 GAP Landfire CONUS" 
 	 legend="%(SERVER_URL)s/cmapicons/legend_gapnat_lndcov_0210_rs_to_231p66m_laea.jpg"/>
     </wmsSubgroup>
-    <wmsSubgroup label="Ecoregions">
+    <wmsSubgroup label="Decadal Change">
+      <wmsLayer 
+	 lid="DCDT"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="DeciduousThrive" 
+	 styles="default" 
+	 identify="true" 
+	 name="Deciduous Thrive" 
+	 legend="%(SERVER_URL)s/cmapicons/deciduous_thrive_ramp.png"/>
+      <wmsLayer 
+	 lid="DCDD"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="DeciduousDecline" 
+	 styles="default" 
+	 identify="true" 
+	 name="Deciduous Decline" 
+	 legend="%(SERVER_URL)s/cmapicons/deciduous_decline_ramp.png"/>
+      <wmsLayer 
+	 lid="DCET"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="EvergreenThrive" 
+	 styles="default" 
+	 identify="true" 
+	 name="Evergreen Thrive" 
+	 legend="%(SERVER_URL)s/cmapicons/evergreen_thrive_ramp.png"/>
+      <wmsLayer 
+	 lid="DCED"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="EvergreenDecline" 
+	 styles="default" 
+	 identify="true" 
+	 name="Evergreen Decline" 
+	 legend="%(SERVER_URL)s/cmapicons/evergreen_decline_ramp.png"/>
+    </wmsSubgroup>
+    <wmsSubgroup label="Phenological Regions">
+	  <wmsLayer 
+	 lid="PR50MM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="Pheno50MaxMode" 
+	 styles="default" 
+	 identify="true" 
+	 name="Phenoregions 50 MaxMode" 
+	 legend=""/>
+      <wmsLayer 
+	 lid="PR100MM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="Pheno100MaxMode" 
+	 styles="default" 
+	 identify="true" 
+	 name="Phenoregions 100 MaxMode" 
+	 legend=""/>
+      <wmsLayer 
+	 lid="PR200MM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="Pheno200MaxMode" 
+	 styles="default" 
+	 identify="true" 
+	 name="Phenoregions 200 MaxMode" 
+	 legend=""/>
+      <wmsLayer 
+	 lid="PR500MM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="Pheno500MaxMode" 
+	 styles="default" 
+	 identify="true" 
+	 name="Phenoregions 500 MaxMode" 
+	 legend=""/>
+      <wmsLayer 
+	 lid="PR1000MM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="Pheno1000MaxMode" 
+	 styles="default" 
+	 identify="true" 
+	 name="Phenoregions 1000 MaxMode" 
+	 legend=""/>
+      <wmsLayer 
+	 lid="PR5000MM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="Pheno5000MaxMode" 
+	 styles="default" 
+	 identify="true" 
+	 name="Phenoregions 5000 MaxMode" 
+	 legend=""/>
+	</wmsSubgroup>
+	<wmsSubgroup label="Ecoregions">
       <wmsLayer 
 	 lid="AIR"
 	 visible="false" 
