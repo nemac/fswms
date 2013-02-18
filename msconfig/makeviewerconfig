@@ -105,7 +105,7 @@ for subgroup in [
         '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
     for layer in subgroup['layers']:
         tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + wmsLayerTemplate.render({
-                'SELECTED'      : ("selected=\"true\"\n          " if (layer['name']=='EFETAC-NASA_current') else ""),
+                'SELECTED'      : ("selected=\"true\"\n          " if (layer['name']=='EFETAC-NASA_1YrBaseline_current') else ""),
                 'SERVER_URL'    : SERVER_URL,
                 'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
