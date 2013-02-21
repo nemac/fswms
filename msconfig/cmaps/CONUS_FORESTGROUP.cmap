@@ -1,127 +1,123 @@
 CLASS
-	NAME "White/Red/Jack Pine Group"
 	EXPRESSION ([pixel] >= 100 and [pixel] <  120)
 	COLOR 	77	0	0
 END
 CLASS
-	NAME "Spruce/Fir Group"
 	EXPRESSION ([pixel] >= 120 and [pixel] <  140)
 	COLOR 	99	0	0
 END
 CLASS
-	NAME "Longleaf/Slash Pine Group"
 	EXPRESSION ([pixel] >= 140 and [pixel] <  160)
 	COLOR 	121	0	0
 END
 CLASS
-	NAME "Loblolly/Shortleaf Pine Group"
 	EXPRESSION ([pixel] >= 160 and [pixel] <  180)
 	COLOR 	143	0	0
 END
 CLASS
-	NAME "Pinyon/Juniper Group"
+	
 	EXPRESSION ([pixel] >= 180 and [pixel] <  200)
 	COLOR 	165	0	0
 END
 CLASS
-	NAME "Douglas-fir Group"
+	
 	EXPRESSION ([pixel] >= 200 and [pixel] <  220)
 	COLOR 	187	0	0
 END
 CLASS
-	NAME "Ponderosa Pine Group"
+	
 	EXPRESSION ([pixel] >= 220 and [pixel] <  240)
 	COLOR 	209	0	0
 END
 CLASS
-	NAME "Western White Pine Group"
+	
 	EXPRESSION ([pixel] >= 240 and [pixel] <  260)
 	COLOR 	231	0	0
 END
 CLASS
-	NAME "Fir/Spruce/Mountain Hemlock Grou"
+	
 	EXPRESSION ([pixel] >= 260 and [pixel] <  280)
 	COLOR 	253	0	0
 END
 CLASS
-	NAME "Lodgepole Pine Group"
+	
 	EXPRESSION ([pixel] >= 280 and [pixel] <  300)
 	COLOR 	0	55	0
 END
 CLASS
-	NAME "Hemlock/Sitka Spruce Group"
+	
 	EXPRESSION ([pixel] >= 300 and [pixel] <  320)
 	COLOR 	0	77	0
 END
 CLASS
-	NAME "Western Larch Group"
+	
 	EXPRESSION ([pixel] >= 320 and [pixel] <  340)
 	COLOR 	0	99	0
 END
 CLASS
-	NAME "Redwood Group"
+	
 	EXPRESSION ([pixel] >= 340 and [pixel] <  360)
 	COLOR 	0	121	0
 END
 CLASS
-	NAME "Other Western Softwoods Group"
+	
 	EXPRESSION ([pixel] >= 360 and [pixel] <  370)
 	COLOR 	0	143	0
 END
 CLASS
-	NAME "California Mixed Conifer Group"
+	
 	EXPRESSION ([pixel] >= 370 and [pixel] <  380)
 	COLOR 	0	165	0
 END
 CLASS
-	NAME "Exotic Softwoods Group"
+	
 	EXPRESSION ([pixel] >= 380 and [pixel] <  400)
 	COLOR 	0	187	0
 END
 CLASS
-	NAME "Oak/Pine Group"
+	
 	EXPRESSION ([pixel] >= 400 and [pixel] <  500)
 	COLOR 	0	209	0
 END
 CLASS
-	NAME "Oak/Hickory Group"
+	
 	EXPRESSION ([pixel] >= 500 and [pixel] <  600)
 	COLOR 	0	231	0
 END
 CLASS
-	NAME "Oak/Gum/Cypress Group"
+	
 	EXPRESSION ([pixel] >= 600 and [pixel] <  700)
 	COLOR 	0	253	0
 END
-CLASS	NAME "Elm/Ash/Cottonwood Group"
+CLASS	
 	EXPRESSION ([pixel] >= 700 and [pixel] <  800)
 	COLOR 	0	0	55
 END
-CLASS	NAME "Maple/Beech/Birch Group"
+CLASS	
 	EXPRESSION ([pixel] >= 800 and [pixel] <  900)
 	COLOR 	0	0	77
 END
-CLASS	NAME "Aspen/Birch Group"
+CLASS	
 	EXPRESSION ([pixel] >= 900 and [pixel] <  910)
 	COLOR 	0	0	99
 END
-CLASS	NAME "Alder/Maple Group"
+CLASS	
 	EXPRESSION ([pixel] >= 910 and [pixel] <  920)
 	COLOR 	0	0	121
 END
-CLASS	NAME "Western Oak Group"
+CLASS	
 	EXPRESSION ([pixel] >= 920 and [pixel] <  940)
 	COLOR 	0	0	143
 END
-CLASS	NAME "Tanoak/Laurel Group"
+CLASS	
 	EXPRESSION ([pixel] >= 940 and [pixel] <  950)
 	COLOR 	0	0	165
 END
-CLASS	NAME "Other Western Hardwoods Group"
+CLASS	
 	EXPRESSION ([pixel] >= 950 and [pixel] <  980)
 	COLOR 	0	0	187
 END
-CLASS	NAME "Tropical Hardwoods Group"
+CLASS
 	EXPRESSION ([pixel] >= 980 and [pixel] <  990)
 	COLOR 	0	0	209
 END
