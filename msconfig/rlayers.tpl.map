@@ -189,7 +189,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     forest-type
-        INCLUDE "cmaps/foresttype.cmap"        
+        #INCLUDE "cmaps/foresttype.cmap"        
         PROJECTION
 	      "proj=aea"
 	      "lat_1=29.5"
@@ -206,13 +206,14 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/foresttype.img
+        #DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/foresttype.img
+		DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/conus_foresttype6.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
             "wms_title"             "forest-type"
             "wms_abstract"          "forest-type"
-            "gml_include_items"     "class"
+            "gml_include_items"     "all"
         END  # end METADATA
     END # end LAYER
 	LAYER

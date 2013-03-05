@@ -1668,7 +1668,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Forest Type (USFS FIA-RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/foresttype.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/forestTypeLegend.png"/>
       <wmsLayer 
 	 lid="AIP"
 	 visible="false" 
