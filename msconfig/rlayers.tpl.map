@@ -1068,6 +1068,58 @@ MAP
         END  # end METADATA
     END # end LAYER
     LAYER
+        NAME LANDFIREFuelModel40         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/fbfm40_231maj_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/LFFM40.cmap"
+        METADATA
+            "wms_title"             "LANDFIREFuelModel40"
+            "wms_abstract"          "LANDFIREFuelModel40"   
+            "gml_include_items"     "all"			
+        END  # end METADATA
+    END # end LAYER    
+    LAYER
+        NAME LANDFIREVegetation         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/evt_231maj_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/EVT.cmap"
+        METADATA
+            "wms_title"             "LANDFIREVegetation"
+            "wms_abstract"          "LANDFIREVegetation"   
+            "gml_include_items"     "all"			
+        END  # end METADATA
+    END # end LAYER    
+    LAYER
         NAME DeciduousDecline         
         PROJECTION
           "+proj=laea"

@@ -1605,6 +1605,26 @@
 	 identify="true" 
 	 name="2001 GAP Landfire CONUS" 
 	 legend="%(SERVER_URL)s/cmapicons/legend_gapnat_lndcov_0210_rs_to_231p66m_laea.jpg"/>
+      <wmsLayer 
+	 lid="LFFM40"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="LANDFIREFuelModel40" 
+	 styles="default" 
+	 identify="true" 
+	 name="LANDFIRE Fuel Mode 40" 
+	 legend="%(SERVER_URL)s/cmapicons/fbfm40Legend.png"/>
+      <wmsLayer 
+	 lid="LFV"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="LANDFIREVegetation" 
+	 styles="default" 
+	 identify="true" 
+	 name="LANDFIRE Vegetation" 
+	 legend="%(SERVER_URL)s/cmapicons/EVTLegend.png"/>	 
     </wmsSubgroup>
     <wmsSubgroup label="Decadal Change">
       <wmsLayer 
