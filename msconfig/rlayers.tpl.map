@@ -1091,7 +1091,7 @@ MAP
         METADATA
             "wms_title"             "LANDFIREFuelModel40"
             "wms_abstract"          "LANDFIREFuelModel40"   
-            "gml_include_items"     "all"			
+            "gml_include_items"     "value_list"			
         END  # end METADATA
     END # end LAYER    
     LAYER
@@ -1117,7 +1117,7 @@ MAP
         METADATA
             "wms_title"             "LANDFIREVegetation"
             "wms_abstract"          "LANDFIREVegetation"   
-            "gml_include_items"     "all"			
+            "gml_include_items"     "value_list"			
         END  # end METADATA
     END # end LAYER    
     LAYER
