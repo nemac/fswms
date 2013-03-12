@@ -213,7 +213,7 @@ MAP
         METADATA
             "wms_title"             "forest-type"
             "wms_abstract"          "forest-type"
-            "gml_include_items"     "all"
+            "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1143,7 +1143,7 @@ MAP
         METADATA
             "wms_title"             "Deciduous Decline"
             "wms_abstract"          "Deciduous Decline"   
-            "gml_include_items"     "all"			
+            "gml_include_items"     "value_0"			
         END  # end METADATA
     END # end LAYER    
     LAYER
@@ -1169,7 +1169,7 @@ MAP
         METADATA
             "wms_title"             "Deciduous Thrive"
             "wms_abstract"          "Deciduous Thrive"   
-            "gml_include_items"     "all"			
+            "gml_include_items"     "value_0"			
         END  # end METADATA
     END # end LAYER        
     LAYER
@@ -1195,7 +1195,7 @@ MAP
         METADATA
             "wms_title"             "Evergreen Decline"
             "wms_abstract"          "Evergreen Decline"   
-            "gml_include_items"     "all"			
+            "gml_include_items"     "value_0"			
         END  # end METADATA
     END # end LAYER    
     LAYER
@@ -1221,7 +1221,7 @@ MAP
         METADATA
             "wms_title"             "Evergreen Thrive"
             "wms_abstract"          "Evergreen Thrive"   
-            "gml_include_items"     "all"			
+            "gml_include_items"     "value_0"			
         END  # end METADATA
     END # end LAYER            
     LAYER
