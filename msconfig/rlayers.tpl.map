@@ -1010,7 +1010,7 @@ MAP
         METADATA
             "wms_title"             "CONUS Federal Lands"
             "wms_abstract"          "CONUS Federal Lands"   
-            "gml_include_items"     "all"			
+            "gml_include_items"     "value_0"			
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1037,7 +1037,7 @@ MAP
         METADATA
             "wms_title"             "NLCD 2006"
             "wms_abstract"          "NLCD 2006"   
-            "gml_include_items"     "all"			
+            "gml_include_items"     "value_0"			
         END  # end METADATA
     END # end LAYER
     LAYER
@@ -1065,7 +1065,7 @@ MAP
         METADATA
             "wms_title"             "2001 GAP Landfire CONUS"
             "wms_abstract"          "2001 GAP Landfire CONUS"   
-            "gml_include_items"     "all"			
+            "gml_include_items"     "value_0"			
         END  # end METADATA
     END # end LAYER
     LAYER
