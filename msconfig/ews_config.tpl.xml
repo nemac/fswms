@@ -250,8 +250,8 @@
 	 layers="firescars" 
 	 styles="default" 
 	 identify="true" 
-	 name="2000-2010 Fire Perimeters (GEOMAC+MTBS)" 
-	 legend="http://ews.forestthreats.org/gis/assets/Mashup_Legends/Fire_Scars_2000-2010.PNG"/>
+	 name="2000-2012 Fire Perimeters (GEOMAC+MTBS)" 
+	 legend="%(SERVER_URL)s/cmapicons/Fire_Scars_2000-2012.png"/>
       <wmsLayer 
 	 lid="AAJ"
 	 visible="false" 
