@@ -39,8 +39,9 @@
       <viewGroup name="US_Fire" />
       <viewGroup name="US_FHM_ADS" />
       <viewGroup name="MODIS_Change_Detection_Products" />
-      <viewGroup name="Archived_NRT" />
+      <viewGroup name="Archived_TACS" />
       <viewGroup name="MODISCloud" />
+	  <viewGroup name="Archived_RSAC" />
       <viewGroup name="Drought_Monitor" />
       <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
@@ -474,7 +475,7 @@
     </wmsSubgroup>
     %(RSAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
   </wmsGroup>
-  <wmsGroup gid="G05" name="Archived_NRT" label="Archived Forest Disturbance Detection Maps">
+  <wmsGroup gid="G05" name="Archived_TACS" label="Archived Forest Disturbance Detection Maps">
     <wmsSubgroup label="Archived NRT 1-Year Baseline (TACs-NASA)">
     %(NRT_1YEAR_LAYERS)s
     </wmsSubgroup>
@@ -491,7 +492,7 @@
     %(NRT_MODISCloud__LAYERS)s
     </wmsSubgroup>
   </wmsGroup>
-  <wmsGroup gid="G07" name="Archived_NRT" label="Archived RSAC-FHTET Forest Change Disturbance">
+  <wmsGroup gid="G07" name="Archived_RSAC" label="Archived RSAC-FHTET Forest Change Disturbance">
     <wmsSubgroup label="Archived 3-Year Baseline (RSAC-FHTET)">
 	<wmsLayer
 		lid="BJT"
