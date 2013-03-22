@@ -41,7 +41,7 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="Archived_TACS" />
       <viewGroup name="MODISCloud" />
-	  <viewGroup name="Archived_RSAC" />
+      <viewGroup name="Archived_RSAC" />
       <viewGroup name="Drought_Monitor" />
       <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
