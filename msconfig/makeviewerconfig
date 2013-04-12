@@ -332,4 +332,4 @@ if not os.path.exists("../html/cmapicons"):
     os.makedirs("../html/cmapicons")
 
 os.system("cp -r cmapicons/* ../html/cmapicons")
-os.system("cp /var/fswms.nemac.org/html/view/config/ews_config.xml /var/ol-fcav/ews_config.xml")
+os.system("cp /var/fswms.nemac.org/html/view/config/ews_config.xml /var/ol-fcav/config/ews_config.xml")
