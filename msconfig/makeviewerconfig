@@ -83,23 +83,36 @@ wmsLayerTemplate = Template(string="""
 
 tacsModisChangeDetectionProductLayers = ""
 for subgroup in [
-    { 'label' : '   Change from All-Year Baseline',
-      'layers' : [
-            { 'name' : 'EFETAC-NASA_current',                   'lid' : 'AA',  'visible' : 'true'  },
-            { 'name' : 'EFETAC-NASA_previous1',                 'lid' : 'AB',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_previous2',                 'lid' : 'AC',  'visible' : 'false' } ] },
-
-    { 'label' : '   Change from 1-Year Baseline',
+    { 'label' : '   Change from 1-Year Baseline (recent disturbances)',
       'layers' : [
             { 'name' : 'EFETAC-NASA_1YrBaseline_current',       'lid' : 'AD',  'visible' : 'false' },
             { 'name' : 'EFETAC-NASA_1YrBaseline_previous1',     'lid' : 'AE',  'visible' : 'false' },
             { 'name' : 'EFETAC-NASA_1YrBaseline_previous2',     'lid' : 'AF',  'visible' : 'false' } ] },
-
-    { 'label' : '   Change from 3-Year Baseline',
+    { 'label' : '   Change from All-Year Baseline (all disturbances)',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_current',                   'lid' : 'AA',  'visible' : 'true'  },
+            { 'name' : 'EFETAC-NASA_previous1',                 'lid' : 'AB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_previous2',                 'lid' : 'AC',  'visible' : 'false' } ] },
+    { 'label' : '   Change from 3-Year Baseline (&lt;3-Yr old disturbances)',
       'layers' : [
             { 'name' : 'EFETAC-NASA_3YrBaseline_current',       'lid' : 'AG',  'visible' : 'false' },
             { 'name' : 'EFETAC-NASA_3YrBaseline_previous1',     'lid' : 'AH',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'lid' : 'AI',  'visible' : 'false' } ] }
+            { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'lid' : 'AI',  'visible' : 'false' } ] },
+    { 'label' : '   Early Detect (ALC) Change from previous year',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_ALC1YR_current',       'lid' : 'ALCAA',  'visible' : 'false' },
+			{ 'name' : 'EFETAC-NASA_ALC1YR_previous1',     'lid' : 'ALCAB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_ALC1YR_previous2',     'lid' : 'ALCAC',  'visible' : 'false' } ] },		
+	{ 'label' : '   Synoptic Change from All-Year pheno-cluster max (MUC)',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_MUCAllYear_current',       'lid' : 'MUCAA',  'visible' : 'false' },
+			{ 'name' : 'EFETAC-NASA_MUCAllYear_previous1',     'lid' : 'MUCAB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_MUCAllYear_previous2',     'lid' : 'MUCAC',  'visible' : 'false' } ] },			
+	{ 'label' : '   Synoptic Change from All-Year mean of maximums (MMAX)',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_MoMAllYear_current',       'lid' : 'MoMAA',  'visible' : 'false' },
+			{ 'name' : 'EFETAC-NASA_MoMAllYear_previous1',     'lid' : 'MoMAB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_MoMAllYear_previous2',     'lid' : 'MoMAC',  'visible' : 'false' } ] }			
     ]:
     tacsModisChangeDetectionProductLayers = ( tacsModisChangeDetectionProductLayers +
         '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
@@ -122,29 +135,11 @@ for subgroup in [
             { 'name' : 'RSAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] },
-			
 			{ 'label' : '   Change from 5-Year Baseline',
       'layers' : [
             { 'name' : 'RSAC-FHTET_5YrBaseline_current',        'lid' : 'AQ',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_5YrBaseline_previous1',      'lid' : 'AR',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_5YrBaseline_previous2',      'lid' : 'AS',  'visible' : 'false' } ] }
-### 
-### Hey Matt:
-###    The following RSAC layers are now available to be added, whenever you're ready!:
-###       RSAC-FHTET_3YrBaseline_previous2
-###       RSAC-FHTET_3YrBaseline_previous1
-###       RSAC-FHTET_3YrBaseline_current
-###       RSAC-FHTET_5YrBaselineBD_previous1
-###       RSAC-FHTET_5YrBaselineBD_current
-###       RSAC-FHTET_5YrBaselineBD_previous2
-###       RSAC-FHTET_3YrBaselineBD_previous2
-###       RSAC-FHTET_3YrBaselineBD_previous1
-###       RSAC-FHTET_3YrBaselineBD_current
-###       RSAC-FHTET_5YrBaseline_current
-###       RSAC-FHTET_5YrBaseline_previous2
-###       RSAC-FHTET_5YrBaseline_previous1
-###   --Mark
-### 
     ]:
     rsacModisChangeDetectionProductLayers = ( rsacModisChangeDetectionProductLayers +
         '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )

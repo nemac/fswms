@@ -1679,7 +1679,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Major Forest Group (USFS FIA-RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/CONUS_FORESTGROUP.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/ForestGrps.png"/>
       <wmsLayer 
 	 lid="AIQ"
 	 visible="false" 

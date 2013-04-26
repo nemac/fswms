@@ -121,53 +121,6 @@ linkgroups = [
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
     },
 
-
-###    {
-###        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/ews"),
-###        'regex'              : r'/ews/(\d{8})_(\d{2})\.tif$',
-###        'filter_functions'   : [
-###            lambda list : sorted(list),
-###            lambda list : list[-3:][::-1]
-###            ],
-###        'dstdir'             : os.path.join(LINK_TARGET_DIR, "efetac_nasa"),
-###        'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
-###        'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
-###    },
-###    {
-###        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/ews/x_fcav_retro_viewer_2010_vs_2009_bl"),
-###        'regex'              : r'_bl/(\d{8})_(\d{2})_(\d{4})\.tif$',
-###        'filter_functions'   : [
-###            lambda list : sorted(list),
-###            lambda list : list[-3:][::-1]
-###            ],
-###        'dstdir'             : os.path.join(LINK_TARGET_DIR, "efetac_nasa-retro/1YrBaseline"),
-###        'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
-###        'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
-###    },
-###    {
-###        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/ews/x_fcav_retro_viewer_2010_vs_2007-2009_bl"),
-###        'regex'              : r'_bl/(\d{8})_(\d{2})_(\d{4})\.tif$',
-###        'filter_functions'   : [
-###            lambda list : sorted(list),
-###            lambda list : list[-3:][::-1]
-###            ],
-###        'dstdir'             : os.path.join(LINK_TARGET_DIR, "efetac_nasa-retro/3YrBaseline"),
-###        'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
-###        'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
-###    },
-###    {
-###        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/ews/x_fcav_retro_viewer_2010_vs_2003-2009_bl"),
-###        'regex'              : r'_bl/(\d{8})_(\d{2})_(\d{4})\.tif$',
-###        'filter_functions'   : [
-###            lambda list : sorted(list),
-###            lambda list : list[-3:][::-1]
-###            ],
-###        'dstdir'             : os.path.join(LINK_TARGET_DIR, "efetac_nasa-retro/AllYrBaseline"),
-###        'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
-###        'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
-###   },
-
-
 ##  FOR VIEWER
     {
         'srcdir'             : os.path.join(DATA_DIR, "rsac_fhtet/ews"),
@@ -226,7 +179,6 @@ linkgroups = [
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
     },
 
-
     {
         # /flood/fsdata/efetac_nasa/AllYear/20110601_24_2003_max.tfw
         'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/AllYear"),
@@ -252,18 +204,6 @@ linkgroups = [
         'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
     },
-###    {
-###        # /flood/fsdata/efetac_nasa/AllYear/20110601_24_2003_med.tfw
-###        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/AllYear"),
-###        'regex'              : r'/AllYear/(\d{8})_(\d{2})_\d{4}_med\.tif$',
-###        'filter_functions'   : [
-###            lambda list : sorted(list),
-###            lambda list : list[-3:][::-1]
-###            ],
-###        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "efetac_nasa-retro/AllYrBaseline"),
-###        'linkname_generator' : lambda i,f,m: "%s_%s_med.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
-###        'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
-###    },
     {
         # /flood/fsdata/efetac_nasa/1Year/20110601_24_2010_max.tfw
         'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/1Year"),
@@ -287,8 +227,44 @@ linkgroups = [
         'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "efetac_nasa-retro/3YrBaseline"),
         'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
-    }
-
+    },
+	##	JDM: 4/24/13 new NRT products for EFETAC NASA	
+    {
+        # /flood/fsdata/efetac_nasa/X_ALC_1YR/20130414_24_alc_1yr.tif
+		'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/X_ALC_1YR"), 
+        'regex'              : r'/X_ALC_1YR/(\d{8})_(\d{2})_alc_1yr\.tif$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "efetac_nasa-retro/ALC1YR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
+        'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
+    },	
+    {
+        # /flood/fsdata/efetac_nasa/X_MUC_ALL_YR/20130422_24_muc_ayr.tif
+		'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/X_MUC_ALL_YR"), 
+        'regex'              : r'/X_MUC_ALL_YR/(\d{8})_(\d{2})_muc_ayr\.tif$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "efetac_nasa-retro/MUCAllYear"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
+        'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
+    },
+    {
+        # /flood/fsdata/efetac_nasa/X_MMAX_ALL_YR/20130414_24_mmax_ayr.tif
+		'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/X_MMAX_ALL_YR"), 
+        'regex'              : r'/X_MMAX_ALL_YR/(\d{8})_(\d{2})_mmax_ayr\.tif$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "efetac_nasa-retro/MoMAllYear"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
+        'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
+    }		
 ]
 
 def date_period_longform(YYYYMMDD, PP):

@@ -161,7 +161,7 @@ MAP
     END # end LAYER
 	LAYER
         NAME     forest-group
-        INCLUDE "cmaps/CONUS_FORESTGROUP.cmap"
+		INCLUDE "cmaps/ForestGroups.cmap"
         PROJECTION
 	      "proj=aea"
 	      "lat_1=29.5"
@@ -178,7 +178,8 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/CONUS_FORESTGROUP.img
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/ForestGroups.img
+		#DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/forest_group2.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -213,7 +214,7 @@ MAP
         METADATA
             "wms_title"             "forest-type"
             "wms_abstract"          "forest-type"
-            "gml_include_items"     "value_0"
+            "gml_include_items"     "value_list"
         END  # end METADATA
     END # end LAYER
 	LAYER
