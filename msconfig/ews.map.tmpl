@@ -179,6 +179,100 @@ MAP
 	     "wcs_rangeset_label"         "firescars WCS"
         END  # end METADATA
     END # end LAYER
+	
+	#jdm 5/9/2013: The next four layers are for support of masking
+	#This should probably be more dynamic e.g. automated through makemap.py, 
+	#but they are only asking for a few currently and this is a test to see how it will be done
+	#see  https://github.com/nemac/fswms/issues/15
+    #EFETAC-NASA_1YrBaseline_current
 
+    LAYER
+        NAME MaskForDeciduousForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/Mask/51pct_231m_fs_n6_deciduous_laea.img.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+    END # end LAYER	
+    LAYER
+        NAME MaskForConiferForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/Mask/51pct_231m_fs_n6_evergreen_laea.img.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+    END # end LAYER	
+    LAYER
+        NAME MaskForMixedForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/Mask/51pct_231m_fs_n6_mixedforest_laea.img.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+    END # end LAYER	
+    LAYER
+        NAME MaskForRangeAgricultureShrub
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/Mask/51pct_231m_fsum_crop_grass_pasture_shrubscrub_laea.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+    END # end LAYER	    
 
 END # end MAP

@@ -2,7 +2,6 @@
 
 import sys, re, os
 
-
 sys.path.append("../var")
 try:
     from Config import *
@@ -17,14 +16,6 @@ except:
 from LegendConfig import *
 
 
-if not os.path.exists(NRT_LIDFILE_PATH):
-    print "Can't read required NRT LID file '%s'.  Aborting." % (NRT_LIDFILE_PATH)
-    exit(-1)
-
-if not os.path.exists(DRT_LIDFILE_PATH):
-    print "Can't read required DRT LID file '%s'.  Aborting." % (DRT_LIDFILE_PATH)
-    exit(-1)
-
 class Template:
     def __init__(self, file=None, **args):
         if file is None and 'string' in args:
@@ -38,33 +29,6 @@ class Template:
     def render(self, dict):
         return self.contents % dict
 
-
-###
-### Populate 'layerTitles' dict by reading contents from "layerTitles.txt" file:
-###
-try:
-    f = open("layerTitles.txt", "r")
-    layerTitles = {}
-    for line in f:
-        fields = re.split(r':', line.strip())
-        layerTitles[fields[0]] = re.sub(r'^.*/([^/]+)$', '\\1', fields[1])
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("january", "jan")
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("febuary", "feb")
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("march", "mar")
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("april", "apr")
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("may", "may")
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("june", "jun")
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("july", "jul")
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("august", "aug")
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("september", "sep")
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("october", "oct")
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("november", "nov")
-        layerTitles[fields[0]] = layerTitles[fields[0]].replace("december", "dec")
-    f.close()
-except:
-    print "Can't read file layerTitles.txt; you must run 'makemap' before running this script!"
-    sys.exit(-1)
-
 wmsLayerTemplate = Template(string="""
         <wmsLayer
           %(SELECTED)slid="%(LAYER_LID)s"
@@ -75,96 +39,36 @@ wmsLayerTemplate = Template(string="""
           name="%(LAYER_TITLE)s"
           styles="default" 
           identify="true"
-          legend="%(LEGEND)s"/>	
+          legend="%(LEGEND)s"
+          mask="%(MASK)s"/>	
 """)
 
-#         legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=%(LAYER_NAME)s&VERSION=1.1.1&FORMAT=image/png"/>	
+nrtWMSLayerTemplate = Template(string="""
+        <wmsLayer
+          lid="%(LAYER_LID)s"
+          visible="false"
+          url="%(SERVER_URL)s/%(WRAP_NAME)s?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="%(LAYER_NAME)s"
+          name="%(LAYER_TITLE)s"
+          styles="default" 
+          identify="true"
+          legend="%(LEGEND)s"/>""")
 
+#drought monitor template    
+drtWMSLayerTemplate = Template(string="""
+        <wmsLayer
+          lid="%(LAYER_LID)s"
+          visible="false"
+          url="%(DRT_URL)s" 
+          srs="EPSG:900913"
+          layers="%(LAYER_NAME)s"
+          name="%(LAYER_TITLE)s"
+          styles="default" 
+          identify="false"
+          legend="%(SERVER_URL)s/cmapicons/drought-monitor.png"/>""")    
+          
 
-tacsModisChangeDetectionProductLayers = ""
-for subgroup in [
-    { 'label' : '   Change from 1-Year Baseline (recent disturbances)',
-      'layers' : [
-            { 'name' : 'EFETAC-NASA_1YrBaseline_current',       'lid' : 'AD',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_1YrBaseline_previous1',     'lid' : 'AE',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_1YrBaseline_previous2',     'lid' : 'AF',  'visible' : 'false' } ] },
-    { 'label' : '   Change from All-Year Baseline (all disturbances)',
-      'layers' : [
-            { 'name' : 'EFETAC-NASA_current',                   'lid' : 'AA',  'visible' : 'true'  },
-            { 'name' : 'EFETAC-NASA_previous1',                 'lid' : 'AB',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_previous2',                 'lid' : 'AC',  'visible' : 'false' } ] },
-    { 'label' : '   Change from 3-Year Baseline (&lt;3-Yr old disturbances)',
-      'layers' : [
-            { 'name' : 'EFETAC-NASA_3YrBaseline_current',       'lid' : 'AG',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_3YrBaseline_previous1',     'lid' : 'AH',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'lid' : 'AI',  'visible' : 'false' } ] },
-    { 'label' : '   Early Detect (ALC) Change from previous year',
-      'layers' : [
-            { 'name' : 'EFETAC-NASA_ALC1YR_current',       'lid' : 'ALCAA',  'visible' : 'false' },
-			{ 'name' : 'EFETAC-NASA_ALC1YR_previous1',     'lid' : 'ALCAB',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_ALC1YR_previous2',     'lid' : 'ALCAC',  'visible' : 'false' } ] },		
-	{ 'label' : '   Synoptic Change from All-Year pheno-cluster max (MUC)',
-      'layers' : [
-            { 'name' : 'EFETAC-NASA_MUCAllYear_current',       'lid' : 'MUCAA',  'visible' : 'false' },
-			{ 'name' : 'EFETAC-NASA_MUCAllYear_previous1',     'lid' : 'MUCAB',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_MUCAllYear_previous2',     'lid' : 'MUCAC',  'visible' : 'false' } ] },			
-	{ 'label' : '   Synoptic Change from All-Year mean of maximums (MMAX)',
-      'layers' : [
-            { 'name' : 'EFETAC-NASA_MoMAllYear_current',       'lid' : 'MoMAA',  'visible' : 'false' },
-			{ 'name' : 'EFETAC-NASA_MoMAllYear_previous1',     'lid' : 'MoMAB',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_MoMAllYear_previous2',     'lid' : 'MoMAC',  'visible' : 'false' } ] }			
-    ]:
-    tacsModisChangeDetectionProductLayers = ( tacsModisChangeDetectionProductLayers +
-        '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
-    for layer in subgroup['layers']:
-        tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + wmsLayerTemplate.render({
-                'SELECTED'      : ("selected=\"true\"\n          " if (layer['name']=='EFETAC-NASA_1YrBaseline_current') else ""),
-                'SERVER_URL'    : SERVER_URL,
-                'LAYER_LID'     : layer['lid'],
-                'LAYER_NAME'    : layer['name'],
-                'LEGEND'        : SERVER_URL+'/'+getLegend(layer['name']),
-                'LAYER_VISIBLE' : layer['visible'],
-                'LAYER_TITLE'   : layerTitles[layer['name']]
-                })
-    tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
-
-rsacModisChangeDetectionProductLayers = ""
-for subgroup in [    
-    { 'label' : '   Change from 3-Year Baseline',
-      'layers' : [
-            { 'name' : 'RSAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] },
-			{ 'label' : '   Change from 5-Year Baseline',
-      'layers' : [
-            { 'name' : 'RSAC-FHTET_5YrBaseline_current',        'lid' : 'AQ',  'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_5YrBaseline_previous1',      'lid' : 'AR',  'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_5YrBaseline_previous2',      'lid' : 'AS',  'visible' : 'false' } ] }
-    ]:
-    rsacModisChangeDetectionProductLayers = ( rsacModisChangeDetectionProductLayers +
-        '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
-    for layer in subgroup['layers']:
-        rsacModisChangeDetectionProductLayers = rsacModisChangeDetectionProductLayers + wmsLayerTemplate.render({
-                'SELECTED'      : "",
-                'SERVER_URL'    : SERVER_URL,
-                'LAYER_LID'     : layer['lid'],
-                'LAYER_NAME'    : layer['name'],
-                'LEGEND'        : SERVER_URL+'/'+getLegend(layer['name']),
-                'LAYER_VISIBLE' : layer['visible'],
-                'LAYER_TITLE'   : layerTitles[layer['name']]
-                })
-    rsacModisChangeDetectionProductLayers = rsacModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
-
-
-    
-template = Template("ews_config.tpl.xml")
-
-if not os.path.exists("../html/view/config"):
-    os.makedirs("../html/view/config")
-
-
-#Section to automate NRT 8 day layers for viewer config-----------------------------------
-#http://stackoverflow.com/questions/932506/how-can-i-get-the-next-string-in-alphanumeric-ordering-in-python
 def next_alpha(s):
     strip_zs = s.rstrip('z')
     if strip_zs:
@@ -234,19 +138,7 @@ def getDRTLayers():
     for drtDict in drtList:
         layers = layers + drtWMSLayerTemplate.render(drtDict)    
     return layers                 
-#drought monitor template    
-drtWMSLayerTemplate = Template(string="""
-        <wmsLayer
-          lid="%(LAYER_LID)s"
-          visible="false"
-          url="%(DRT_URL)s" 
-          srs="EPSG:900913"
-          layers="%(LAYER_NAME)s"
-          name="%(LAYER_TITLE)s"
-          styles="default" 
-          identify="false"
-          legend="%(SERVER_URL)s/cmapicons/drought-monitor.png"/>""")    
-    
+          
 def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
     tifList  = []
     for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
@@ -289,18 +181,130 @@ def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
     for tifdict in tifList:
         layers = layers + nrtWMSLayerTemplate.render(tifdict)    
     return layers
+          
+###
+### Beginning of run-time code *******************************************************************************
+###
 
-nrtWMSLayerTemplate = Template(string="""
-        <wmsLayer
-          lid="%(LAYER_LID)s"
-          visible="false"
-          url="%(SERVER_URL)s/%(WRAP_NAME)s?TRANSPARENT=true"
-          srs="EPSG:3785"
-          layers="%(LAYER_NAME)s"
-          name="%(LAYER_TITLE)s"
-          styles="default" 
-          identify="true"
-          legend="%(LEGEND)s"/>""")
+if not os.path.exists(NRT_LIDFILE_PATH):
+    print "Can't read required NRT LID file '%s'.  Aborting." % (NRT_LIDFILE_PATH)
+    exit(-1)
+
+if not os.path.exists(DRT_LIDFILE_PATH):
+    print "Can't read required DRT LID file '%s'.  Aborting." % (DRT_LIDFILE_PATH)
+    exit(-1)
+        
+###
+### Populate 'layerTitles' dict by reading contents from "layerTitles.txt" file:
+###
+try:
+    f = open("layerTitles.txt", "r")
+    layerTitles = {}
+    for line in f:
+        fields = re.split(r':', line.strip())
+        layerTitles[fields[0]] = re.sub(r'^.*/([^/]+)$', '\\1', fields[1])
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("january", "jan")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("febuary", "feb")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("march", "mar")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("april", "apr")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("may", "may")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("june", "jun")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("july", "jul")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("august", "aug")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("september", "sep")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("october", "oct")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("november", "nov")
+        layerTitles[fields[0]] = layerTitles[fields[0]].replace("december", "dec")
+    f.close()
+except:
+    print "Can't read file layerTitles.txt; you must run 'makemap' before running this script!"
+    sys.exit(-1)
+
+# jdm 5/13/13: relevant mask for tacs nasa products
+# these should be read out of an external config file but I have hardcoded for now
+ewsMask = "MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForRangeAgricultureShrub"
+    
+tacsModisChangeDetectionProductLayers = ""
+for subgroup in [
+    { 'label' : '   Change from 1-Year Baseline (recent disturbances)',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_1YrBaseline_current',       'lid' : 'AD',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_1YrBaseline_previous1',     'lid' : 'AE',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_1YrBaseline_previous2',     'lid' : 'AF',  'visible' : 'false' } ] },
+    { 'label' : '   Change from All-Year Baseline (all disturbances)',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_current',                   'lid' : 'AA',  'visible' : 'true'  },
+            { 'name' : 'EFETAC-NASA_previous1',                 'lid' : 'AB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_previous2',                 'lid' : 'AC',  'visible' : 'false' } ] },
+    { 'label' : '   Change from 3-Year Baseline (&lt;3-Yr old disturbances)',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_3YrBaseline_current',       'lid' : 'AG',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_3YrBaseline_previous1',     'lid' : 'AH',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'lid' : 'AI',  'visible' : 'false' } ] },
+    { 'label' : '   Early Detect (ALC) Change from previous year',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_ALC1YR_current',       'lid' : 'ALCAA',  'visible' : 'false' },
+			{ 'name' : 'EFETAC-NASA_ALC1YR_previous1',     'lid' : 'ALCAB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_ALC1YR_previous2',     'lid' : 'ALCAC',  'visible' : 'false' } ] },		
+	{ 'label' : '   Synoptic Change from All-Year pheno-cluster max (MUC)',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_MUCAllYear_current',       'lid' : 'MUCAA',  'visible' : 'false' },
+			{ 'name' : 'EFETAC-NASA_MUCAllYear_previous1',     'lid' : 'MUCAB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_MUCAllYear_previous2',     'lid' : 'MUCAC',  'visible' : 'false' } ] },			
+	{ 'label' : '   Synoptic Change from All-Year mean of maximums (MMAX)',
+      'layers' : [
+            { 'name' : 'EFETAC-NASA_MoMAllYear_current',       'lid' : 'MoMAA',  'visible' : 'false' },
+			{ 'name' : 'EFETAC-NASA_MoMAllYear_previous1',     'lid' : 'MoMAB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_MoMAllYear_previous2',     'lid' : 'MoMAC',  'visible' : 'false' } ] }			
+    ]:
+    tacsModisChangeDetectionProductLayers = ( tacsModisChangeDetectionProductLayers +
+        '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
+    for layer in subgroup['layers']:
+        tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + wmsLayerTemplate.render({
+                'SELECTED'      : ("selected=\"true\"\n          " if (layer['name']=='EFETAC-NASA_1YrBaseline_current') else ""),
+                'SERVER_URL'    : SERVER_URL,
+                'LAYER_LID'     : layer['lid'],
+                'LAYER_NAME'    : layer['name'],
+                'LEGEND'        : SERVER_URL+'/'+getLegend(layer['name']),
+                'LAYER_VISIBLE' : layer['visible'],
+                'LAYER_TITLE'   : layerTitles[layer['name']],
+                'MASK'   : ewsMask
+                })
+    tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
+
+rsacModisChangeDetectionProductLayers = ""
+
+for subgroup in [    
+    { 'label' : '   Change from 3-Year Baseline',
+      'layers' : [
+            { 'name' : 'RSAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
+            { 'name' : 'RSAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },
+            { 'name' : 'RSAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] },
+			{ 'label' : '   Change from 5-Year Baseline',
+      'layers' : [
+            { 'name' : 'RSAC-FHTET_5YrBaseline_current',        'lid' : 'AQ',  'visible' : 'false' },
+            { 'name' : 'RSAC-FHTET_5YrBaseline_previous1',      'lid' : 'AR',  'visible' : 'false' },
+            { 'name' : 'RSAC-FHTET_5YrBaseline_previous2',      'lid' : 'AS',  'visible' : 'false' } ] }
+    ]:
+    rsacModisChangeDetectionProductLayers = ( rsacModisChangeDetectionProductLayers +
+        '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
+    for layer in subgroup['layers']:
+        rsacModisChangeDetectionProductLayers = rsacModisChangeDetectionProductLayers + wmsLayerTemplate.render({
+                'SELECTED'      : "",
+                'SERVER_URL'    : SERVER_URL,
+                'LAYER_LID'     : layer['lid'],
+                'LAYER_NAME'    : layer['name'],
+                'LEGEND'        : SERVER_URL+'/'+getLegend(layer['name']),
+                'LAYER_VISIBLE' : layer['visible'],
+                'LAYER_TITLE'   : layerTitles[layer['name']],
+                'MASK'   : ''
+                })
+    rsacModisChangeDetectionProductLayers = rsacModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
+
+template = Template("ews_config.tpl.xml")
+
+if not os.path.exists("../html/view/config"):
+    os.makedirs("../html/view/config")
 
 nrtTCProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "EFETAC-NASA_TC", "ewstruecolor", "no", ".img")
 nrt1YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/1Year", "EFETAC-NASA_1Year", "ews1year", "yes", ".tif")
