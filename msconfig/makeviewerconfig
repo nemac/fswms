@@ -246,12 +246,12 @@ for subgroup in [
             { 'name' : 'EFETAC-NASA_ALC1YR_current',       'lid' : 'ALCAA',  'visible' : 'false' },
 			{ 'name' : 'EFETAC-NASA_ALC1YR_previous1',     'lid' : 'ALCAB',  'visible' : 'false' },
             { 'name' : 'EFETAC-NASA_ALC1YR_previous2',     'lid' : 'ALCAC',  'visible' : 'false' } ] },		
-	{ 'label' : '   Synoptic Change from All-Year pheno-cluster max (MUC)',
+	{ 'label' : '   Seasonally-Adjusted Change from All-Year pheno-cluster max (MUC)',
       'layers' : [
             { 'name' : 'EFETAC-NASA_MUCAllYear_current',       'lid' : 'MUCAA',  'visible' : 'false' },
 			{ 'name' : 'EFETAC-NASA_MUCAllYear_previous1',     'lid' : 'MUCAB',  'visible' : 'false' },
             { 'name' : 'EFETAC-NASA_MUCAllYear_previous2',     'lid' : 'MUCAC',  'visible' : 'false' } ] },			
-	{ 'label' : '   Synoptic Change from All-Year mean of maximums (MMAX)',
+	{ 'label' : '   Seasonally-Adjusted Change from All-Year mean of maximums (MMAX)',
       'layers' : [
             { 'name' : 'EFETAC-NASA_MoMAllYear_current',       'lid' : 'MoMAA',  'visible' : 'false' },
 			{ 'name' : 'EFETAC-NASA_MoMAllYear_previous1',     'lid' : 'MoMAB',  'visible' : 'false' },
