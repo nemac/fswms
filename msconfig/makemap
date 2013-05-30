@@ -9,9 +9,6 @@
 ###    * LAYER_DATA_DIR
 ###    * DATA_DIR/efetac_nasa/ews
 ### 
-### 
-### added last night:
-### 
 ###  * create ews1year.map using template ews1year.tpl.map
 ###  * create ews3year.map using template ews3year.tpl.map
 ###  * create ewstruecolor.map using template ewstruecolor.tpl.map
@@ -22,7 +19,7 @@
 ###
 
 from osgeo import gdal, osr
-import sys, os, subprocess, datetime, re, shutil;
+import sys, os, subprocess, datetime, re, shutil, traceback;
 
 ###
 ### config
@@ -38,6 +35,15 @@ except:
     exit(-1)
 
 from LegendConfig import *
+
+# jdm 5/9/13: for each of these go through the ewsMask and create a relavent entry
+# these should be read out of an external config file but I have hardcoded for now
+ewsMask = [
+    {'name' : 'MaskForDeciduousForest'},
+    {'name' : 'MaskForConiferForest'},
+    {'name' : 'MaskForMixedForest'},
+    {'name' : 'MaskForRangeAgricultureShrub'}
+    ]   
 
 ###
 ### function definitions
@@ -102,7 +108,7 @@ class Template:
 #Start of attempt to create a generic function to get layers
 #At this point its a not completely generic because the color maps is 
 #specific to the tif files location
-def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs):
+def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
     #print 'data dir ' + dataDir
     #print 'template ' + layerTemplateName
     tifList  = []
@@ -120,7 +126,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs):
             elif re.search(r'.img', fileExt):
                 colormapline   = ''
             elif(wcs=="yes"):
-		colormapline   = ''
+                colormapline   = ''
             else:
                 colormapline   = 'INCLUDE "ewsold.cmap"'
             group = groupName 
@@ -144,15 +150,35 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs):
                              'DATA'            : dataDir + '/' + tif,
                              'TITLE'           : layerTitle,
                              'ABSTRACT'        : layerTitle,
-                             'COLORMAPLINE'    : colormapline
+                             'COLORMAPLINE'    : colormapline,
+                             'MASK'            : ''
                              })
             layerTitles[layerName] = layerTitle
-        except:
-            print "except occured"
+            #jdm 5/29: for layers groups that we want ewsMask on do so     
+            if maskBool:
+                #print "got here"
+                for mask in ewsMask:
+                    #print "test: " + layerName + mask['name']
+                    tifList.append({ 'TIF'             : tif,
+                                     'PROJVALID'       : len(proj) > 0,
+                                     'PROJ'            : formatproj(proj,10),
+                                     'WKT'             : getwkt(tif_fullpath),
+                                     'NAME'            : layerName + mask['name'],
+                                     'GROUP'           : group,
+                                     'DATA'            : dataDir + '/' + tif,
+                                     'TITLE'           : layerTitle + mask['name'],
+                                     'ABSTRACT'        : layerTitle + mask['name'],
+                                     'COLORMAPLINE'    : colormapline,
+                                     'MASK'			   : 'MASK ' + mask['name']
+                                     })                
+        except Exception as e:
+            print e
             continue
     layerTemplate = Template(layerTemplateName)
     layers = ""
+    # print tifList
     for tifdict in tifList:
+        #print tifdict
         if tifdict['PROJVALID']:
             layers = layers + layerTemplate.render(tifdict)    
     return layers
@@ -203,16 +229,12 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
         group_abstract = "Layers uploaded by RSAC-FHTET"
         colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
         colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
-        #keyimage       = "rsac-fhtet-legend-v3-181x277-2011-06-24.png"
-        #keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
         keyimage       = getLegend(group)
     else:
         group          = "EFETAC-NASA"
         group_abstract = "Layers uploaded by TACs-NASA"
         colormapfile   = "efetac_nasa_percent_change_cmap.cmap"
         colormapcsv    = "efetac_nasa_percent_change_cmap.csv"
-        #keyimage       = "tacs-nasa-legend-v3-181x277-2011-06-24.png"
-        #keyimage       = "TACs_NASA_CT_7-6-2011_clipped.png"
         keyimage       = getLegend(group)
 
     modDate = getModDate(tif_fullpath)
@@ -239,36 +261,26 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
                      'MASK'            : ''
 					})
     layerTitles[layerName] = layerTitle
-
-	# jdm 5/9/13: for each of these go through the ewsMask and create a relavent entry
-    # these should be read out of an external config file but I have hardcoded for now
-    ewsMask = [
-        {'name' : 'MaskForDeciduousForest'},
-        {'name' : 'MaskForConiferForest'},
-        {'name' : 'MaskForMixedForest'},
-        {'name' : 'MaskForRangeAgricultureShrub'}
-        ]    
-    for mask in ewsMask:
-        tiflist.append({ 'TIF'             : tif,
-						 'PROJVALID'       : len(proj) > 0,
-						 'PROJ'            : formatproj(proj,10),
-						 'WKT'             : getwkt(tif_fullpath),
-						 'NAME'            : layerName + mask['name'],
-						 'GROUP'           : group,
-						 'DATA'            : LAYER_DATA_DIR + '/' + tif,
-						 'GROUP_ABSTRACT'  : group_abstract,
-						 'TITLE'           : layerTitle, # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
-						 'ABSTRACT'        : layerTitle, # change this to match title 
-						 'COLORMAPFILE'    : colormapfile,
-						 'COLORMAPCSV'     : colormapcsv,
-						 'KEYIMAGE'        : keyimage,
-						 'MODDATE'	       : modDate,
-						 'MASK'			   : 'MASK ' + mask['name']
-						 })
-        # jdm: I am not sure that these mask layers need to be added to the layerTitles.txt
-        # need to research this...
-        # layerTitles[layerName+mask['name']] = layerTitle
-
+    
+    #Mask are only for tacs nasa products
+    if not tif.startswith("rsac"):
+        for mask in ewsMask:
+            tiflist.append({ 'TIF'             : tif,
+                             'PROJVALID'       : len(proj) > 0,
+                             'PROJ'            : formatproj(proj,10),
+                             'WKT'             : getwkt(tif_fullpath),
+                             'NAME'            : layerName + mask['name'],
+                             'GROUP'           : group,
+                             'DATA'            : LAYER_DATA_DIR + '/' + tif,
+                             'GROUP_ABSTRACT'  : group_abstract,
+                             'TITLE'           : layerTitle + mask['name'], # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
+                             'ABSTRACT'        : layerTitle + mask['name'], # change this to match title 
+                             'COLORMAPFILE'    : colormapfile,
+                             'COLORMAPCSV'     : colormapcsv,
+                             'KEYIMAGE'        : keyimage,
+                             'MODDATE'	       : modDate,
+                             'MASK'			   : 'MASK ' + mask['name']
+                             })
 ###
 ### create a tiflist entry for each .tif file in DATA_DIR+"/efetac_nasa/ews:
 ### these are the actual data files as they are dropped off via ftp
@@ -286,8 +298,6 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
             group_abstract = "Layers uploaded by RSAC-FHTET"
             colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
             colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
-            #keyimage       = "rsac-fhtet-legend-v3-181x277-2011-06-24.png"
-            #keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
             keyimage       = getLegend(group)
             print 'jdm: see this never prints'
         else:
@@ -295,8 +305,6 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
             group_abstract = "Layers uploaded by TACs-NASA"
             colormapfile   = "efetac_nasa_percent_change_cmap.cmap"
             colormapcsv    = "efetac_nasa_percent_change_cmap.csv"
-            #keyimage       = "tacs-nasa-legend-v3-181x277-2011-06-24.png"
-            #keyimage       = "TACs_NASA_CT_7-6-2011_clipped.png"
             keyimage       = getLegend(group)
         layerName  = group + "_" + re.sub(r'_.*$', '', nameform)
         layerTitle = tif
@@ -322,6 +330,24 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
                          'MASK'            : ''
                          })
         layerTitles[layerName] = layerTitle
+
+        for mask in ewsMask:
+            tiflist.append({ 'TIF'             : tif,
+                             'PROJVALID'       : len(proj) > 0,
+                             'PROJ'            : formatproj(proj,10),
+                             'WKT'             : getwkt(tif_fullpath),
+                             'NAME'            : layerName + mask['name'],
+                             'GROUP'           : group,
+                             'DATA'            : ARCHIVE_DIR + '/' + tif,
+                             'GROUP_ABSTRACT'  : group_abstract,
+                             'TITLE'           : layerTitle + mask['name'], # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
+                             'ABSTRACT'        : layerTitle + mask['name'], # change this to match title 
+                             'COLORMAPFILE'    : colormapfile,
+                             'COLORMAPCSV'     : colormapcsv,
+                             'KEYIMAGE'        : keyimage,
+                             'MODDATE'	       : modDate,
+                             'MASK'			   : 'MASK ' + mask['name']
+                             })    
     except:
         continue
 
@@ -397,7 +423,6 @@ SERVICE_NAME = "ews"
 f_new = openMapfileForWriting("ews.map")
 f_new.write( mapTemplate.render( {
             'LAYERS'                  : LAYERS,
-#            'EPSG'                   : "3785",
             'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
             'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
             'SERVICE_NAME'            : SERVICE_NAME,
@@ -416,7 +441,6 @@ f_new = openMapfileForWriting("ewswgs84.map")
 SERVICE_NAME = "ewswgs84"
 f_new.write( mapTemplate.render( {
             'LAYERS'                  : LAYERS,
-#           'EPSG'                    : "4326",
             'WMS_SRS'                 : "EPSG:4326 EPSG:900913",
             'MAPFILE_PROJECTION'      : '"init=epsg:4326"',
             'SERVICE_NAME'            : SERVICE_NAME,
@@ -457,11 +481,16 @@ f_new.write( mapTemplate.render( {
 f_new.close()
 
 
+###-------DONE WITH curr, prev1 and prev2 SECTION------------------------------
+###-------Now on with the 1, 3 and All year parts------------------------------
+
+
 ###
 ### CREATE ews1year.map FILE:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no")
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", True)
 template = Template("ews_gen.tpl.map")
+#print LAYERS
 f_new = openMapfileForWriting("ews1year.map")
 SERVICE_NAME = "ews1year"
 WCS_LABEL = "EWS 1Year"
@@ -487,7 +516,7 @@ f_new.close()
 ###
 ### CREATE ewswcs1year.map FILE:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "yes")
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "yes", False)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ewswcs1year.map")
 SERVICE_NAME = "ewswcs1year"
@@ -514,7 +543,7 @@ f_new.close()
 ###
 ### Create the ews3year.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no")
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no", True)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews3year.map")
 SERVICE_NAME = "ews3year"
@@ -541,7 +570,7 @@ f_new.close()
 ###
 ### Create the ewswcs3year.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "yes")
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "yes", False)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ewswcs3year.map")
 SERVICE_NAME = "ewswcs3year"
@@ -568,7 +597,7 @@ f_new.close()
 ###
 ### Create the ewstruecolor.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "truecolor.layer.tpl.map", "EFETAC-NASA_TC", ".img", "no")
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "truecolor.layer.tpl.map", "EFETAC-NASA_TC", ".img", "no", False)
 template = Template("ewstruecolor.tpl.map")
 f_new = openMapfileForWriting("ewstruecolor.map")
 SERVICE_NAME = "ewstruecolor"
