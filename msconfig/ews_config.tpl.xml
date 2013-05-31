@@ -485,6 +485,15 @@
     <wmsSubgroup label="Archived NRT All-Year Baseline (TACs-NASA)">
     %(NRT_AllYEAR_LAYERS)s
     </wmsSubgroup>
+    <wmsSubgroup label="Archived Early Detect (ALC) Change from previous year">
+    %(NRT_ALC1YR_LAYERS)s
+    </wmsSubgroup> 
+    <wmsSubgroup label="Archived Seasonally-Adjusted Change from All-Year pheno-cluster max (MUC)">
+    %(NRT_MUCALLYR_LAYERS)s
+    </wmsSubgroup>
+    <wmsSubgroup label="Archived Seasonally-Adjusted Change from All-Year mean of maximums (MMAX)">
+    %(NRT_MMAXYR_LAYERS)s
+    </wmsSubgroup>
   </wmsGroup>
   
   <wmsGroup gid="G06" name="MODISCloud" label="eMODIS Cloud Assessment Products">	

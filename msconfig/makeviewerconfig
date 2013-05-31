@@ -29,6 +29,10 @@ class Template:
     def render(self, dict):
         return self.contents % dict
 
+# jdm 5/13/13: relevant mask for tacs nasa products
+# these should be read out of an external config file but I have hardcoded for now
+ewsMask = "MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForRangeAgricultureShrub"
+        
 wmsLayerTemplate = Template(string="""
         <wmsLayer
           %(SELECTED)slid="%(LAYER_LID)s"
@@ -53,8 +57,9 @@ nrtWMSLayerTemplate = Template(string="""
           name="%(LAYER_TITLE)s"
           styles="default" 
           identify="true"
-          legend="%(LEGEND)s"/>""")
-
+          legend="%(LEGEND)s"
+          mask="%(MASK)s"/>	
+""")
 #drought monitor template    
 drtWMSLayerTemplate = Template(string="""
         <wmsLayer
@@ -139,7 +144,7 @@ def getDRTLayers():
         layers = layers + drtWMSLayerTemplate.render(drtDict)    
     return layers                 
           
-def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
+def getNRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
     tifList  = []
     for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
         try:        
@@ -156,8 +161,7 @@ def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
                     layerName = group + "_" + re.sub(r'_.*$', '', nameform)
             layerTitle = tif
             lid = getLID(layerName, NRT_LIDFILE_PATH)
-            if legendYesNo=="yes":
-                #legend = SERVER_URL+"/ewswgs84?SERVICE=WMS&REQUEST=GetLegendGraphic&layer=EFETAC-NASA_20100812&VERSION=1.1.1&FORMAT=image/png"
+            if legendBool:
                 legend = getLegend(layerName)
             else:
 		legend = ""
@@ -166,13 +170,24 @@ def getNRTLayers(dataDir, groupName, wrapName, legendYesNo, fileExt):
             else:
                 layerTitle = layerName[-8:]
             if layerName[-2:].rstrip()!="bd": #this is one of those bd ones
-                tifList.append({ 'LAYER_LID'       : lid,
-                                 'WRAP_NAME'       : wrapName,
-                                 'LAYER_NAME'      : layerName,
-                                 'LAYER_TITLE'     : layerTitle,
-                                 'SERVER_URL'      : SERVER_URL,
-                                 'LEGEND'          : SERVER_URL+"/"+legend
-                                 })
+                if maskBool:
+                    tifList.append({ 'LAYER_LID'    : lid,
+                                     'WRAP_NAME'    : wrapName,
+                                     'LAYER_NAME'   : layerName,
+                                     'LAYER_TITLE'  : layerTitle,
+                                     'SERVER_URL'   : SERVER_URL,
+                                     'LEGEND'       : SERVER_URL+"/"+legend,
+                                     'MASK'         : ewsMask
+                                     })
+                else:  #no mask necessary for this one                      
+                    tifList.append({ 'LAYER_LID'    : lid,
+                                     'WRAP_NAME'    : wrapName,
+                                     'LAYER_NAME'   : layerName,
+                                     'LAYER_TITLE'  : layerTitle,
+                                     'SERVER_URL'   : SERVER_URL,
+                                     'LEGEND'       : SERVER_URL+"/"+legend,
+                                     'MASK'         : ''
+                                     })
             layerTitles[layerName] = layerTitle
         except:
             print "except occured"
@@ -220,10 +235,6 @@ except:
     print "Can't read file layerTitles.txt; you must run 'makemap' before running this script!"
     sys.exit(-1)
 
-# jdm 5/13/13: relevant mask for tacs nasa products
-# these should be read out of an external config file but I have hardcoded for now
-ewsMask = "MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForRangeAgricultureShrub"
-    
 tacsModisChangeDetectionProductLayers = ""
 for subgroup in [
     { 'label' : '   Change from 1-Year Baseline (recent disturbances)',
@@ -306,10 +317,16 @@ template = Template("ews_config.tpl.xml")
 if not os.path.exists("../html/view/config"):
     os.makedirs("../html/view/config")
 
-nrtTCProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "EFETAC-NASA_TC", "ewstruecolor", "no", ".img")
-nrt1YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/1Year", "EFETAC-NASA_1Year", "ews1year", "yes", ".tif")
-nrt3YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/3Year", "EFETAC-NASA_3Year", "ews3year", "yes", ".tif")
-nrtAllYrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/AllYear", "EFETAC-NASA", "ews", "yes", ".tif")
+nrtTCProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "EFETAC-NASA_TC", "ewstruecolor", False, ".img", False)
+nrt1YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/1Year", "EFETAC-NASA_1Year", "ews1year", True, ".tif", True)
+nrt3YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/3Year", "EFETAC-NASA_3Year", "ews3year", True, ".tif", True)
+nrtAllYrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/AllYear", "EFETAC-NASA", "ews", True, ".tif", True)
+#jdm 5/31: new nrt products
+#added additional param to getNRTLayers() to account for masking
+nrtALC1Yr = getNRTLayers(DATA_DIR + "/efetac_nasa/X_ALC_1YR", "EFETAC-NASA_ALC1YR", "ews1year", True, ".tif", True)
+nrtMUCAllYr = getNRTLayers(DATA_DIR + "/efetac_nasa/X_MUC_ALL_YR", "EFETAC-NASA_MUCAllYear", "ews", True, ".tif", True)
+nrtMMAXAllYr = getNRTLayers(DATA_DIR + "/efetac_nasa/X_MMAX_ALL_YR", "EFETAC-NASA_MoMAllYear", "ews", True, ".tif", True)
+
 drtLayers = getDRTLayers()
 #End NRT 8 day & drought monitor automation-------------------------------------------------
 
@@ -323,6 +340,9 @@ f.write(template.render( {
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,
             'NRT_3YEAR_LAYERS'        : nrt3YrProductLayers,
             'NRT_AllYEAR_LAYERS'      : nrtAllYrProductLayers,
+            'NRT_ALC1YR_LAYERS'       : nrtALC1Yr,
+            'NRT_MUCALLYR_LAYERS'     : nrtMUCAllYr,
+            'NRT_MMAXYR_LAYERS'       : nrtMMAXAllYr,
             'DRT_LAYERS'      : drtLayers
             }))
 f.close()
