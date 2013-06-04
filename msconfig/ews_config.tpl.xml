@@ -354,15 +354,15 @@
 	 name="2009 Fire Perimeters (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
-	 lid="BRJ"
+	 lid="MTBSAAA"
 	 visible="false" 
 	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="modis-fire-2011" 
+	 layers="mtbs_2010" 
 	 styles="default" 
 	 identify="true" 
-	 name="Cumulative Fire Detections 2011" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2011.png"/>
+	 name="2010 Fire Perimeters (MTBS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
 	  <wmsLayer 
 	 lid="BRK"
 	 visible="false" 
@@ -373,6 +373,26 @@
 	 identify="true" 
 	 name="Cumulative Fire Detections 2010" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2010.png"/>
+     <wmsLayer 
+	 lid="BRJ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="Cumulative Fire Detections 2011" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2011.png"/>
+	  <wmsLayer 
+	 lid="MODISFIREAAA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="Cumulative Fire Detections 2012" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2012.png"/>
      </wmsSubgroup>
   </wmsGroup>
 
