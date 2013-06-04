@@ -128,7 +128,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
             elif(wcs=="yes"):
                 colormapline   = ''
             else:
-                colormapline   = 'INCLUDE "ewsold.cmap"'
+                colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
             group = groupName 
             if re.search(r'.img', nameform):
                 layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
