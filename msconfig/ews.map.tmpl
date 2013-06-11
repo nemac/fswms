@@ -85,100 +85,85 @@ MAP
 %(LAYERS)s
 
     LAYER
-        NAME     firescars
+        NAME firescars         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        #DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/conus_fire_scars_2000_thru_2010_from_mtbs_and_geomac_us4b.img
-		DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/conus_fire_scars_2000_thru_2012_from_mtbs_and_geomac_us4b.img
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/conus_fire_scars_2000_thru_2012_from_mtbs_and_geomac_us4b.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         CLASS
-         EXPRESSION "1"
-         STYLE
-         COLOR 255 158 175
-         END
+            EXPRESSION ([pixel] = 1)
+            COLOR 255 158 175
         END
-	CLASS
-         EXPRESSION "2"
-         STYLE
-         COLOR 232 91 232
-         END
+        CLASS
+            EXPRESSION ([pixel] = 2)
+            COLOR 232 91 232
         END
-	CLASS
-         EXPRESSION "3"
-         STYLE
-         COLOR 170 0 229
-         END
+        CLASS
+            EXPRESSION ([pixel] = 3)
+            COLOR 170 0 229
         END
-	CLASS
-         EXPRESSION "4"
-         STYLE
-         COLOR 0 0 255
-         END
+        CLASS
+            EXPRESSION ([pixel] = 4)
+            COLOR 0 0 255
         END
-	CLASS
-         EXPRESSION "5"
-         STYLE
-         COLOR 0 127 255
-         END
+        CLASS
+            EXPRESSION ([pixel] = 5)
+            COLOR 0 127 255
         END
-	CLASS
-         EXPRESSION "6"
-         STYLE
-         COLOR 0 255 255
-         END
+        CLASS
+            EXPRESSION ([pixel] = 6)
+            COLOR 0 255 255
         END
-	CLASS
-         EXPRESSION "7"
-         STYLE
-         COLOR 0 204 0
-         END
+        CLASS
+            EXPRESSION ([pixel] = 7)
+            COLOR 0 204 0
         END
-	CLASS
-         EXPRESSION "8"
-         STYLE
-         COLOR 147 198 0
-         END
+        CLASS
+            EXPRESSION ([pixel] = 8)
+            COLOR 147 198 0
         END
-	CLASS
-         EXPRESSION "9"
-         STYLE
-         COLOR 255 255 0
-         END
+        CLASS
+            EXPRESSION ([pixel] = 9)
+            COLOR 255 255 0
         END
-	CLASS
-         EXPRESSION "10"
-         STYLE
-         COLOR 255 165 0
-         END
+        CLASS
+            EXPRESSION ([pixel] = 10)
+            COLOR 255 165 0
         END
-	CLASS
-         EXPRESSION "11"
-         STYLE
-         COLOR 255 0 0
-         END
+        CLASS
+            EXPRESSION ([pixel] = 11)
+            COLOR 255 0 0
         END
-	
-        PROJECTION
-	"proj=laea"
-	"lat_0=45"
-	"lon_0=-100"
-	"x_0=0"
-	"y_0=0"
-	"a=6370997"
-	"b=6370997"
-	"units=m"
-	"no_defs"
-        END
+        CLASS
+            EXPRESSION ([pixel] = 12)
+            COLOR 192 0 0
+        END        
+        CLASS
+            EXPRESSION ([pixel] = 13)
+            COLOR 140 51 25
+        END  	
         METADATA
             "wms_title"                  "Firescars 2000-2010"
             "wms_abstract"               "Firescars 2000-2010"
-	     "wcs_label"                  "firescars WCS"
-	     "wcs_rangeset_name"          "firescars WCS"
-	     "wcs_rangeset_label"         "firescars WCS"
+            "wcs_label"                  "firescars WCS"
+            "wcs_rangeset_name"          "firescars WCS"
+            "wcs_rangeset_label"         "firescars WCS"
+            "gml_include_items"          "class"		
         END  # end METADATA
-    END # end LAYER
+    END # end LAYER    
 	
 	#jdm 5/9/2013: The next four layers are for support of masking
 	#This should probably be more dynamic e.g. automated through makemap.py, 

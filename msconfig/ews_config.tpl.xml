@@ -246,7 +246,7 @@
     <wmsLayer 
 	 lid="AAI"
 	 visible="false" 
-	 url="http://fswms.nemac.org/ews?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/ews?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="firescars" 
 	 styles="default" 
