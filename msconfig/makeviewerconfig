@@ -239,12 +239,12 @@ tacsModisChangeDetectionProductLayers = ""
 for subgroup in [
     { 'label' : '   Change from 1-Year Baseline (recent disturbances)',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_1YrBaseline_current',       'lid' : 'AD',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_1YrBaseline_current',       'lid' : 'AD',  'visible' : 'true' },
             { 'name' : 'EFETAC-NASA_1YrBaseline_previous1',     'lid' : 'AE',  'visible' : 'false' },
             { 'name' : 'EFETAC-NASA_1YrBaseline_previous2',     'lid' : 'AF',  'visible' : 'false' } ] },
     { 'label' : '   Change from All-Year Baseline (all disturbances)',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_current',                   'lid' : 'AA',  'visible' : 'true'  },
+            { 'name' : 'EFETAC-NASA_current',                   'lid' : 'AA',  'visible' : 'false'  },
             { 'name' : 'EFETAC-NASA_previous1',                 'lid' : 'AB',  'visible' : 'false' },
             { 'name' : 'EFETAC-NASA_previous2',                 'lid' : 'AC',  'visible' : 'false' } ] },
     { 'label' : '   Change from 3-Year Baseline (&lt;3-Yr old disturbances)',
