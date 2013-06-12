@@ -42,7 +42,7 @@ ewsMask = [
     {'name' : 'MaskForDeciduousForest'},
     {'name' : 'MaskForConiferForest'},
     {'name' : 'MaskForMixedForest'},
-    {'name' : 'MaskForRangeAgricultureShrub'}
+    {'name' : 'MaskForEarlyNon-Forest'}
     ]   
 
 ###

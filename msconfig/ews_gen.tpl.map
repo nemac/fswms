@@ -143,7 +143,7 @@ MAP
         END
     END # end LAYER	
     LAYER
-        NAME MaskForRangeAgricultureShrub
+        NAME MaskForEarlyNon-Forest
         PROJECTION
           "+proj=laea"
           "+lat_0=45"

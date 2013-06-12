@@ -31,7 +31,7 @@ class Template:
 
 # jdm 5/13/13: relevant mask for tacs nasa products
 # these should be read out of an external config file but I have hardcoded for now
-ewsMask = "MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForRangeAgricultureShrub"
+ewsMask = "MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"
         
 wmsLayerTemplate = Template(string="""
         <wmsLayer
