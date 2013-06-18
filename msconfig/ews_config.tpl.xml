@@ -1696,7 +1696,8 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Phenoregions 50 MaxMode" 
-	 legend=""/>
+	 legend=""
+     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
       <wmsLayer 
 	 lid="PR100MM"
 	 visible="false" 
@@ -1706,7 +1707,8 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Phenoregions 100 MaxMode" 
-	 legend=""/>
+	 legend=""
+     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
       <wmsLayer 
 	 lid="PR200MM"
 	 visible="false" 
@@ -1716,7 +1718,8 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Phenoregions 200 MaxMode" 
-	 legend=""/>
+	 legend=""
+     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
       <wmsLayer 
 	 lid="PR500MM"
 	 visible="false" 
@@ -1726,7 +1729,8 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Phenoregions 500 MaxMode" 
-	 legend=""/>
+	 legend=""
+     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
       <wmsLayer 
 	 lid="PR1000MM"
 	 visible="false" 
@@ -1736,7 +1740,8 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Phenoregions 1000 MaxMode" 
-	 legend=""/>
+	 legend=""
+     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
       <wmsLayer 
 	 lid="PR5000MM"
 	 visible="false" 
@@ -1746,7 +1751,8 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Phenoregions 5000 MaxMode" 
-	 legend=""/>
+	 legend=""
+     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
 	</wmsSubgroup>
     <wmsSubgroup label="Landcover">
       <wmsLayer 
