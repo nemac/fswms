@@ -1781,7 +1781,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    INCLUDE "cmaps/Pheno1000.cmap"
+	    #INCLUDE "cmaps/Pheno1000.cmap"
         METADATA
             "wms_title"             "Pheno 1000 MaxMode"
             "wms_abstract"          "Pheno 1000 MaxMode"   
@@ -1915,7 +1915,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    INCLUDE "cmaps/Pheno5000.cmap"
+	    #INCLUDE "cmaps/Pheno5000.cmap"
         METADATA
             "wms_title"             "Pheno 5000 MaxMode"
             "wms_abstract"          "Pheno 5000 MaxMode"   
