@@ -29,10 +29,6 @@ class Template:
     def render(self, dict):
         return self.contents % dict
 
-# jdm 5/13/13: relevant mask for tacs nasa products
-# these should be read out of an external config file but I have hardcoded for now
-ewsMask = "MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"
-        
 wmsLayerTemplate = Template(string="""
         <wmsLayer
           %(SELECTED)slid="%(LAYER_LID)s"
@@ -177,7 +173,7 @@ def getNRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
                                      'LAYER_TITLE'  : layerTitle,
                                      'SERVER_URL'   : SERVER_URL,
                                      'LEGEND'       : SERVER_URL+"/"+legend,
-                                     'MASK'         : ewsMask
+                                     'MASK'         : 'true'
                                      })
                 else:  #no mask necessary for this one                      
                     tifList.append({ 'LAYER_LID'    : lid,
@@ -186,7 +182,7 @@ def getNRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
                                      'LAYER_TITLE'  : layerTitle,
                                      'SERVER_URL'   : SERVER_URL,
                                      'LEGEND'       : SERVER_URL+"/"+legend,
-                                     'MASK'         : ''
+                                     'MASK'         : 'false'
                                      })
             layerTitles[layerName] = layerTitle
         except:
@@ -279,7 +275,7 @@ for subgroup in [
                 'LEGEND'        : SERVER_URL+'/'+getLegend(layer['name']),
                 'LAYER_VISIBLE' : layer['visible'],
                 'LAYER_TITLE'   : layerTitles[layer['name']],
-                'MASK'   : ewsMask
+                'MASK'          : 'true'
                 })
     tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
 
