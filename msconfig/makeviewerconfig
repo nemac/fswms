@@ -77,6 +77,16 @@ def next_alpha(s):
     else:
         return 'a' * (len(s) + 1)
 
+def checkListForItem(layerName,my_list):
+    rtrnVal = False
+    for item in my_list:
+        #print "checking for match "+layerName.rstrip()+" for "+item
+        #if re.search(r'\b'+layerName+'\b',item):
+        if layerName == item:
+            #print "found old one"
+            rtrnVal =  True
+    return rtrnVal
+
 def getLID(layerName, csvName):
     #print layerName
     #print csvName
@@ -91,17 +101,21 @@ def getLID(layerName, csvName):
     f.close();
     sorted_array = sorted(lids_list, key=lambda s: s.lower())
     sorted_array.reverse()
-    #print "highest lid is %s" % sorted_array[0]
+    #print "highest lid is %s" % sorted_array[0].rstrip()
     highest_lid = sorted_array[0]
     nlid = next_alpha(highest_lid.lower().rstrip()) #rstrip removes any newline chars or white space
-    if any(layerName.rstrip() in s for s in lyrs_list):#check to see if lid is already in list
+    #print "next lid is "+nlid.rstrip()
+    #if any(layerName.rstrip() in s for s in lyrs_list):#jdm 8/6/13 - this method seems to have stopped working
+    if checkListForItem(layerName.rstrip(),lyrs_list): 
+        #print "old one: " + layerName
         i = 0
         for item in lyrs_list:
             if lyrs_list[i]==layerName:
                 nlid = lids_list[i]
             i = i + 1
+        #print "used lid: "+ nlid
     else: #this is new one, iterate and add to file
-        #print "new one " + layerName
+        #print "new one: " + layerName
         f.close()
         f = open(csvName, "a");
         f.write(layerName+ "," + nlid.upper() + "\n")
