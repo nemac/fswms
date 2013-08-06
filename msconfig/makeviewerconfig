@@ -89,7 +89,7 @@ def getLID(layerName, csvName):
         lyrs_list.append(sp[0])
         lids_list.append(sp[1])
     f.close();
-    sorted_array = sorted(lids_list)
+    sorted_array = sorted(lids_list, key=lambda s: s.lower())
     sorted_array.reverse()
     #print "highest lid is %s" % sorted_array[0]
     highest_lid = sorted_array[0]
