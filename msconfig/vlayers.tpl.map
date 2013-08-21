@@ -81,7 +81,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-	DATA "the_geom FROM (select round(ps.pt_id,0) as pt_id, ps.the_geom, ps.gid, coalesce(pda.agent_list,'no agents reported within 75km') as agents from pestproxshapes ps left outer join pestproxdataagents pda on ps.pt_id=pda.pt_id) as new_table USING UNIQUE gid USING SRID=4326"
+	DATA "the_geom FROM (select round(ps.pt_id,0) as pt_id, ps.the_geom, ps.gid, coalesce(pda.agent_list,'no agents reported within 75km') as agents from pestproxshapes ps left outer join pestproxdataagentsgt pda on ps.pt_id=pda.pt_id) as new_table USING UNIQUE gid USING SRID=4326"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
