@@ -293,7 +293,105 @@ MAP
             "gml_include_items"  "feature,name,state"
         END  # end METADATA
     END # end Layer
-
+	LAYER #
+        NAME mtbs_1999
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from conus_fireperims_1999"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MTBS Fire 2010"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "mtbs_1999"
+            "wms_abstract"       "mtbs_1999"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME mtbs_2011
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from conus_fireperims_2011"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MTBS Fire 2011"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "mtbs_2011"
+            "wms_abstract"       "mtbs_2011"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME mtbs_2012
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from conus_fireperims_2012"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MTBS Fire 2012"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "mtbs_2012"
+            "wms_abstract"       "mtbs_2012"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer	
 	LAYER #
         NAME mtbs_2010
         PROJECTION
@@ -2536,23 +2634,280 @@ MAP
         END  # end METADATA
     END # end Layer
 	LAYER #
-        NAME modis-fire-2010
-        
+        NAME modis-fire-2001
         PROJECTION
             "init=epsg:4326"
         END
-
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2010"
+        DATA             "the_geom from modis_fire_2001"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
-
         STATUS           OFF
         TYPE             POINT
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
-
+        CLASS
+            NAME "MODIS Fire 2001"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2001"
+            "wms_abstract"       "modis-fire-2001"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+	LAYER #
+        NAME modis-fire-2002
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from modis_fire_2002"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2002"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2002"
+            "wms_abstract"       "modis-fire-2002"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+	LAYER #
+        NAME modis-fire-2003
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from modis_fire_2003"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2003"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2003"
+            "wms_abstract"       "modis-fire-2003"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+	LAYER #
+        NAME modis-fire-2004
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from modis_fire_2004"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2004"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2004"
+            "wms_abstract"       "modis-fire-2004"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+	LAYER #
+        NAME modis-fire-2005
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from modis_fire_2005"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2005"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2005"
+            "wms_abstract"       "modis-fire-2005"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+	LAYER #
+        NAME modis-fire-2006
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from modis_fire_2006"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2006"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2006"
+            "wms_abstract"       "modis-fire-2006"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+	LAYER #
+        NAME modis-fire-2007
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from modis_fire_2007"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2007"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2007"
+            "wms_abstract"       "modis-fire-2007"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+	LAYER #
+        NAME modis-fire-2008
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from modis_fire_2008"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2008"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2008"
+            "wms_abstract"       "modis-fire-2008"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+	LAYER #
+        NAME modis-fire-2009
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from modis_fire_2009"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2010"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2009"
+            "wms_abstract"       "modis-fire-2009"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+	LAYER #
+        NAME modis-fire-2010
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from modis_fire_2010"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
         CLASS
             NAME "MODIS Fire 2010"
             STYLE

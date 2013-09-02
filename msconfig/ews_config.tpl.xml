@@ -190,7 +190,7 @@
   </wmsGroup>
 
   <wmsGroup gid="G02" name="US_Fire" label="Fires">
-    <wmsSubgroup label="Current/NRT Fire Detections">
+    <wmsSubgroup label="Current Year">
       <wmsLayer 
 	 lid="AAG"
 	 visible="false" 
@@ -199,8 +199,28 @@
 	 layers="Current-Large-incidents" 
 	 styles="default" 
 	 identify="true" 
-	 name="Current Large Incidents (Active Fire Maps)" 
+	 name="Active Named Incidents (GeoMAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/large-incidents.png"/>
+ 	  <wmsLayer 
+	 lid="FIREAAA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="All-Current-Year-GeoMAC" 
+	 styles="default" 
+	 identify="true" 
+	 name="Active Perimeters (GeoMAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/all_curryr_fires.jpg"/>     
+	  <wmsLayer 
+	 lid="FIREAAC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="Previous-Perimeters-GeoMAC" 
+	 styles="default" 
+	 identify="true" 
+	 name="Non-Active Perimeters (GeoMAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/PerimetersInactive.jpg"/>     
       <wmsLayer 
 	 lid="AAH"
 	 visible="false" 
@@ -209,161 +229,101 @@
 	 layers="All-Current-Year-AFM" 
 	 styles="default" 
 	 identify="true" 
-	 name="All Current Year (Active Fire Maps)" 
+	 name="Hotspots – Year to date (RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/cumulative-current-year.png"/>
-      <wmsLayer 
-	 lid="FIREAAA"
-	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="All-Current-Year-GeoMAC" 
-	 styles="default" 
-	 identify="true" 
-	 name="All Current Year (GeoMAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/all_curryr_fires.jpg"/>     
-     </wmsSubgroup>
-    <wmsSubgroup label="Historical Fire Perimeters">
-      <wmsLayer 
-	 lid="FIREAAB"
-	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="Previous-MODIS-GeoMAC" 
-	 styles="default" 
-	 identify="true" 
-	 name="Previous MODIS (GeoMAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/PerimetersInactive.jpg"/>     
-      <wmsLayer 
-	 lid="FIREAAC"
-	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="Previous-Perimeters-GeoMAC" 
-	 styles="default" 
-	 identify="true" 
-	 name="Previous Perimeters (GeoMAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/PerimetersInactive.jpg"/>     
-    <wmsLayer 
-	 lid="AAI"
-	 visible="false" 
-	 url="%(SERVER_URL)s/ews?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="firescars" 
-	 styles="default" 
-	 identify="true" 
-	 name="2000-2012 Fire Perimeters (GEOMAC+MTBS)" 
-	 legend="%(SERVER_URL)s/cmapicons/Fire_Scars_2000-2012.png"/>
-      <wmsLayer 
-	 lid="AAJ"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="mtbs_2000" 
-	 styles="default" 
-	 identify="true" 
-	 name="2000 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-      <wmsLayer 
-	 lid="AAK"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="mtbs_2001" 
-	 styles="default" 
-	 identify="true" 
-	 name="2001 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-      <wmsLayer 
-	 lid="AAL"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="mtbs_2002" 
-	 styles="default" 
-	 identify="true" 
-	 name="2002 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-      <wmsLayer 
-	 lid="AAM"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="mtbs_2003" 
-	 styles="default" 
-	 identify="true" 
-	 name="2003 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-      <wmsLayer 
-	 lid="AAN"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="mtbs_2004" 
-	 styles="default" 
-	 identify="true" 
-	 name="2004 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-      <wmsLayer 
-	 lid="AAO"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="mtbs_2005" 
-	 styles="default" 
-	 identify="true" 
-	 name="2005 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-      <wmsLayer 
-	 lid="AAP"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="mtbs_2006" 
-	 styles="default" 
-	 identify="true" 
-	 name="2006 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-      <wmsLayer 
-	 lid="AAQ"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="mtbs_2007" 
-	 styles="default" 
-	 identify="true" 
-	 name="2007 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-      <wmsLayer 
-	 lid="AAR"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="mtbs_2008" 
-	 styles="default" 
-	 identify="true" 
-	 name="2008 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+    </wmsSubgroup>
+	<wmsSubgroup label="Historical MODIS Hotspots">
 	  <wmsLayer 
-	 lid="BDC"
+	 lid="MFONE"
 	 visible="false" 
 	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="mtbs_2009" 
+	 layers="modis-fire-2001" 
 	 styles="default" 
 	 identify="true" 
-	 name="2009 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2001 Hotspots (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2001.png"/>
 	  <wmsLayer 
-	 lid="MTBSAAA"
+	 lid="MFTWO"
 	 visible="false" 
 	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="mtbs_2010" 
+	 layers="modis-fire-2002" 
 	 styles="default" 
 	 identify="true" 
-	 name="2010 Fire Perimeters (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
+	 name="2002 Hotspots (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2002.png"/>
 	  <wmsLayer 
+	 lid="MFTHREE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2003" 
+	 styles="default" 
+	 identify="true" 
+	 name="2003 Hotspots (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2003.png"/>
+	  <wmsLayer 
+	 lid="MFFOUR"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2004" 
+	 styles="default" 
+	 identify="true" 
+	 name="2004 Hotspots (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2004.png"/>
+	  <wmsLayer 
+	 lid="MFFIVE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2005" 
+	 styles="default" 
+	 identify="true" 
+	 name="2005 Hotspots (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2005.png"/>
+	  <wmsLayer 
+	 lid="MFSIX"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2006" 
+	 styles="default" 
+	 identify="true" 
+	 name="2006 Hotspots (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2006.png"/>
+	  <wmsLayer 
+	 lid="MFSEVEN"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2007" 
+	 styles="default" 
+	 identify="true" 
+	 name="2007 Hotspots (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2007.png"/>
+	  <wmsLayer 
+	 lid="MFEIGHT"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2008" 
+	 styles="default" 
+	 identify="true" 
+	 name="2008 Hotspots (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2008.png"/>
+	  <wmsLayer 
+	 lid="MFNINE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2009" 
+	 styles="default" 
+	 identify="true" 
+	 name="2009 Hotspots (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2009.png"/>
+  	 <wmsLayer 
 	 lid="BRK"
 	 visible="false" 
 	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
@@ -371,7 +331,7 @@
 	 layers="modis-fire-2010" 
 	 styles="default" 
 	 identify="true" 
-	 name="Cumulative Fire Detections 2010" 
+	 name="2010 Hotspots (RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2010.png"/>
      <wmsLayer 
 	 lid="BRJ"
@@ -381,7 +341,7 @@
 	 layers="modis-fire-2011" 
 	 styles="default" 
 	 identify="true" 
-	 name="Cumulative Fire Detections 2011" 
+	 name="2011 Hotspots (RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2011.png"/>
 	  <wmsLayer 
 	 lid="MODISFIREAAA"
@@ -391,9 +351,171 @@
 	 layers="modis-fire-2012" 
 	 styles="default" 
 	 identify="true" 
-	 name="Cumulative Fire Detections 2012" 
+	 name="2012 Hotspots (RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2012.png"/>
-     </wmsSubgroup>
+	</wmsSubgroup>	 
+    <wmsSubgroup label="Historical Large Fire Perimeters">
+<!--       <wmsLayer 
+	 lid="FIREAAB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="Previous-MODIS-GeoMAC" 
+	 styles="default" 
+	 identify="true" 
+	 name="Previous MODIS (GeoMAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/PerimetersInactive.jpg"/>     --> 
+     <wmsLayer 
+	 lid="AAI"
+	 visible="false" 
+	 url="%(SERVER_URL)s/ews?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="firescars" 
+	 styles="default" 
+	 identify="true" 
+	 name="2000-12 Combined Perimeters" 
+	 legend="%(SERVER_URL)s/cmapicons/Fire_Scars_2000-2012.png"/>
+	  <wmsLayer 
+	 lid="MTBSAAD"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_1999" 
+	 styles="default" 
+	 identify="true" 
+	 name="1999 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_1999&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 <wmsLayer 
+	 lid="AAJ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="2000 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+      <wmsLayer 
+	 lid="AAK"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="2001 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+      <wmsLayer 
+	 lid="AAL"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="2002 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+      <wmsLayer 
+	 lid="AAM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2003" 
+	 styles="default" 
+	 identify="true" 
+	 name="2003 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+      <wmsLayer 
+	 lid="AAN"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2004" 
+	 styles="default" 
+	 identify="true" 
+	 name="2004 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+      <wmsLayer 
+	 lid="AAO"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2005" 
+	 styles="default" 
+	 identify="true" 
+	 name="2005 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+      <wmsLayer 
+	 lid="AAP"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2006" 
+	 styles="default" 
+	 identify="true" 
+	 name="2006 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+      <wmsLayer 
+	 lid="AAQ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2007" 
+	 styles="default" 
+	 identify="true" 
+	 name="2007 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+      <wmsLayer 
+	 lid="AAR"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2008" 
+	 styles="default" 
+	 identify="true" 
+	 name="2008 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="BDC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2009" 
+	 styles="default" 
+	 identify="true" 
+	 name="2009 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="MTBSAAA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="2010 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
+	  <wmsLayer 
+	 lid="MTBSAAB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="2011 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
+	  <wmsLayer 
+	 lid="MTBSAAC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="2012 Perimeters (RSAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     	 
+    </wmsSubgroup>
   </wmsGroup>
 
   <wmsGroup gid="G03" name="US_FHM_ADS" label="Historical Aerial Disturbance Surveys (USFS FHM)">
