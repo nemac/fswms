@@ -39,10 +39,14 @@ from LegendConfig import *
 # jdm 5/9/13: for each of these go through the ewsMask and create a relavent entry
 # these should be read out of an external config file but I have hardcoded for now
 ewsMask = [
-    {'name' : 'MaskForDeciduousForest'},
+    {'name' : 'MaskForAgriculture'},
     {'name' : 'MaskForConiferForest'},
+    {'name' : 'MaskForDeciduousForest'},
+    {'name' : 'MaskForGrass'},
     {'name' : 'MaskForMixedForest'},
-    {'name' : 'MaskForEarlyNon-Forest'}
+    {'name' : 'MaskForNonVegetated'},
+    {'name' : 'MaskForShrubland'},
+    {'name' : 'MaskForUrban'}
     ]   
 
 ###

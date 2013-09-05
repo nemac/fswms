@@ -1819,7 +1819,7 @@
 	 identify="true" 
 	 name="Phenoregions 50 MaxMode" 
 	 legend=""
-     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
+     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
       <wmsLayer 
 	 lid="PR100MM"
 	 visible="false" 
@@ -1830,7 +1830,7 @@
 	 identify="true" 
 	 name="Phenoregions 100 MaxMode" 
 	 legend=""
-     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
+     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
       <wmsLayer 
 	 lid="PR200MM"
 	 visible="false" 
@@ -1841,7 +1841,7 @@
 	 identify="true" 
 	 name="Phenoregions 200 MaxMode" 
 	 legend=""
-     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
+     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
       <wmsLayer 
 	 lid="PR500MM"
 	 visible="false" 
@@ -1852,7 +1852,7 @@
 	 identify="true" 
 	 name="Phenoregions 500 MaxMode" 
 	 legend=""
-     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
+     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
       <wmsLayer 
 	 lid="PR1000MM"
 	 visible="false" 
@@ -1863,7 +1863,7 @@
 	 identify="true" 
 	 name="Phenoregions 1000 MaxMode" 
 	 legend=""
-     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
+     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
       <wmsLayer 
 	 lid="PR5000MM"
 	 visible="false" 
@@ -1874,7 +1874,7 @@
 	 identify="true" 
 	 name="Phenoregions 5000 MaxMode" 
 	 legend=""
-     mask="MaskForDeciduousForest,MaskForConiferForest,MaskForMixedForest,MaskForEarlyNon-Forest"/>
+     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
 	</wmsSubgroup>
     <wmsSubgroup label="Landcover">
       <wmsLayer 
