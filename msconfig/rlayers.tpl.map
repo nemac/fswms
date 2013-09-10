@@ -1997,7 +1997,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+        INCLUDE "cmaps/Pheno500.cmap"
         METADATA
             "wms_title"             "Pheno 500 MaxMode MaskForAgriculture"
             "wms_abstract"          "Pheno 500 MaxMode"   
@@ -2024,7 +2024,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno500.cmap"
         METADATA
             "wms_title"             "Pheno 500 MaxMode MaskForConiferForest"
             "wms_abstract"          "Pheno 500 MaxMode"   
@@ -2051,7 +2051,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno500.cmap"
         METADATA
             "wms_title"             "Pheno 500 MaxMode MaskForDeciduousForest"
             "wms_abstract"          "Pheno 500 MaxMode"   
@@ -2078,7 +2078,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno500.cmap"
         METADATA
             "wms_title"             "Pheno 500 MaxMode MaskForGrass"
             "wms_abstract"          "Pheno 500 MaxMode"   
@@ -2105,7 +2105,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno500.cmap"
         METADATA
             "wms_title"             "Pheno 500 MaxMode MaskForMixedForest"
             "wms_abstract"          "Pheno 500 MaxMode"   
@@ -2132,7 +2132,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno500.cmap"
         METADATA
             "wms_title"             "Pheno 500 MaxMode MaskForNonVegetated"
             "wms_abstract"          "Pheno 500 MaxMode"   
@@ -2159,7 +2159,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno500.cmap"
         METADATA
             "wms_title"             "Pheno 500 MaxMode MaskForShrubland"
             "wms_abstract"          "Pheno 500 MaxMode"   
@@ -2186,7 +2186,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno500.cmap"
         METADATA
             "wms_title"             "Pheno 500 MaxMode MaskForUrban "
             "wms_abstract"          "Pheno 500 MaxMode"   
@@ -2239,7 +2239,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno1000.cmap"
         METADATA
             "wms_title"             "Pheno 1000 MaxMode MaskForAgriculture"
             "wms_abstract"          "Pheno 1000 MaxMode"   
@@ -2266,7 +2266,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno1000.cmap"
         METADATA
             "wms_title"             "Pheno 1000 MaxMode MaskForConiferForest"
             "wms_abstract"          "Pheno 1000 MaxMode"   
@@ -2293,7 +2293,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno1000.cmap"
         METADATA
             "wms_title"             "Pheno 1000 MaxMode MaskForDeciduousForest"
             "wms_abstract"          "Pheno 1000 MaxMode"   
@@ -2320,7 +2320,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno1000.cmap"
         METADATA
             "wms_title"             "Pheno 1000 MaxMode MaskForGrass"
             "wms_abstract"          "Pheno 1000 MaxMode"   
@@ -2347,7 +2347,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno1000.cmap"
         METADATA
             "wms_title"             "Pheno 1000 MaxMode MaskForMixedForest"
             "wms_abstract"          "Pheno 1000 MaxMode"   
@@ -2374,7 +2374,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno1000.cmap"
         METADATA
             "wms_title"             "Pheno 1000 MaxMode MaskForNonVegetated"
             "wms_abstract"          "Pheno 1000 MaxMode"   
@@ -2401,7 +2401,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno1000.cmap"
         METADATA
             "wms_title"             "Pheno 1000 MaxMode MaskForShrubland"
             "wms_abstract"          "Pheno 1000 MaxMode"   
@@ -2428,7 +2428,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno1000.cmap"
         METADATA
             "wms_title"             "Pheno 1000 MaxMode MaskForUrban "
             "wms_abstract"          "Pheno 1000 MaxMode"   
@@ -2481,7 +2481,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno5000.cmap"
         METADATA
             "wms_title"             "Pheno 5000 MaxMode MaskForAgriculture"
             "wms_abstract"          "Pheno 5000 MaxMode"   
@@ -2508,7 +2508,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno5000.cmap"
         METADATA
             "wms_title"             "Pheno 5000 MaxMode MaskForConiferForest"
             "wms_abstract"          "Pheno 5000 MaxMode"   
@@ -2535,7 +2535,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno5000.cmap"
         METADATA
             "wms_title"             "Pheno 5000 MaxMode MaskForDeciduousForest"
             "wms_abstract"          "Pheno 5000 MaxMode"   
@@ -2562,7 +2562,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno5000.cmap"
         METADATA
             "wms_title"             "Pheno 5000 MaxMode MaskForGrass"
             "wms_abstract"          "Pheno 5000 MaxMode"   
@@ -2589,7 +2589,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno5000.cmap"
         METADATA
             "wms_title"             "Pheno 5000 MaxMode MaskForMixedForest"
             "wms_abstract"          "Pheno 5000 MaxMode"   
@@ -2616,7 +2616,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno5000.cmap"
         METADATA
             "wms_title"             "Pheno 5000 MaxMode MaskForNonVegetated"
             "wms_abstract"          "Pheno 5000 MaxMode"   
@@ -2643,7 +2643,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno5000.cmap"
         METADATA
             "wms_title"             "Pheno 5000 MaxMode MaskForShrubland"
             "wms_abstract"          "Pheno 5000 MaxMode"   
@@ -2670,7 +2670,7 @@ MAP
         DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-	    #INCLUDE "cmaps/gapnat.cmap"
+	    INCLUDE "cmaps/Pheno5000.cmap"
         METADATA
             "wms_title"             "Pheno 5000 MaxMode MaskForUrban "
             "wms_abstract"          "Pheno 5000 MaxMode"   
