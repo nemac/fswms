@@ -308,7 +308,7 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
         CLASS
-            NAME "MTBS Fire 2010"
+            NAME "MTBS Fire 1999"
             STYLE
                 COLOR        255 255 255
                 OUTLINECOLOR 32 32 32
@@ -422,7 +422,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2010"
             "wms_abstract"       "mtbs_2010"
-            "gml_include_items"  "perimeter,acres,fire_id,year,startmonth"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -462,7 +462,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2009"
             "wms_abstract"       "mtbs_2009"
-            "gml_include_items"  "perimeter,acres,fire_id,year,startmonth"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 	
@@ -504,7 +504,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2008"
             "wms_abstract"       "mtbs_2008"
-            "gml_include_items"  "perimeter,acres,fire_id,year,startmonth"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -544,7 +544,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2007"
             "wms_abstract"       "mtbs_2007"
-            "gml_include_items"  "perimeter,acres,fire_id,year,startmonth"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -584,7 +584,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2006"
             "wms_abstract"       "mtbs_2006"
-            "gml_include_items"  "perimeter,acres,fire_id,year,startmonth"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -624,7 +624,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2005"
             "wms_abstract"       "mtbs_2005"
-            "gml_include_items"  "perimeter,acres,fire_id,year,startmonth"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -664,7 +664,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2004"
             "wms_abstract"       "mtbs_2004"
-            "gml_include_items"  "perimeter,acres,fire_id,year,startmonth"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -704,7 +704,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2003"
             "wms_abstract"       "mtbs_2003"
-            "gml_include_items"  "perimeter,acres,fire_id,year,startmonth"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -744,7 +744,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2002"
             "wms_abstract"       "mtbs_2002"
-            "gml_include_items"  "perimeter,acres,fire_id,year,startmonth"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -784,7 +784,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2001"
             "wms_abstract"       "mtbs_2001"
-            "gml_include_items"  "perimeter,acres,fire_id,year,startmonth"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 
@@ -824,7 +824,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2000"
             "wms_abstract"       "mtbs_2000"
-            "gml_include_items"  "perimeter,acres,fire_id,year,startmonth"
+            "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
 

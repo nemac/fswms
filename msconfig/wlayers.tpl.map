@@ -533,6 +533,19 @@ MAP
       PROJECTION
        "init=epsg:4326"
       END
+      CLASS
+          NAME "Active fire daily progression"
+          STYLE
+              COLOR        255 255 255
+              OUTLINECOLOR 32 32 32
+          END
+          STYLE
+              SYMBOL "hatchsymbol"
+              COLOR 255 255 255
+              SIZE 2
+              ANGLE 45
+          END # STYLE
+      END	  
       METADATA
         "wms_srs"             "EPSG:4326"
         "wms_name"            "19"

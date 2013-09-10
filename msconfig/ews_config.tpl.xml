@@ -210,8 +210,8 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Active Perimeters (GeoMAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/all_curryr_fires.jpg"/>     
-	  <wmsLayer 
+	 legend="%(SERVER_URL)s/wlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=All-Current-Year-GeoMAC&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
+<!-- 	  <wmsLayer 
 	 lid="FIREAAC"
 	 visible="false" 
 	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
@@ -221,7 +221,7 @@
 	 identify="true" 
 	 name="Non-Active Perimeters (GeoMAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/PerimetersInactive.jpg"/>     
-      <wmsLayer 
+ -->  <wmsLayer 
 	 lid="AAH"
 	 visible="false" 
 	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
