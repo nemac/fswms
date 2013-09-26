@@ -1692,6 +1692,18 @@
   </wmsGroup>
   
   <wmsGroup gid="G10" name="US_Physiographic" label="Physiographic Maps" >
+    <wmsSubgroup label="Agriculture (USDA)">
+      <wmsLayer 
+	 lid="PMCL2012"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="CropLands2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="2012 Cropland Data Layer" 
+	 legend="%(SERVER_URL)s/cmapicons/CropLands.png"/>
+    </wmsSubgroup>
     <wmsSubgroup label="Elevation Products">
       <wmsLayer 
 	 lid="AII"

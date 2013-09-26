@@ -2678,6 +2678,37 @@ MAP
         END  # end METADATA
         MASK MaskForUrban
     END # end LAYER
+    LAYER
+        NAME CropLands2012         
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=29.5"
+          "+lat_2=45.5"
+          "+lat_0=23"
+          "+lon_0=-96"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/crops_2012_231maj_native_thematic_us8b.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "CropLands2012"
+            "wms_abstract"          "CropLands2012"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	
+	
+	
+	
     #jdm 9/4/2013: The next layers are for support of masking
     #see  https://github.com/nemac/fswms/issues/15
     #     https://github.com/nemac/fswms/issues/33
