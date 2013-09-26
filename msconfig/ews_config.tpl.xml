@@ -1702,7 +1702,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2012 Cropland Data Layer" 
-	 legend="%(SERVER_URL)s/cmapicons/CropLands.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/CropLands12.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Elevation Products">
       <wmsLayer 
