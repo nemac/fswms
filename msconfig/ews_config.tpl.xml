@@ -1920,6 +1920,16 @@
 	 name="Forest Biomass (USFS FIA-RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/FIA-RSAC_Forest_Biomass.png"/>
       <wmsLayer 
+	 lid="PMSC09"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="Carbon09" 
+	 styles="default" 
+	 identify="true" 
+	 name="Carbon Stock 2009" 
+	 legend="%(SERVER_URL)s/cmapicons/Carbon09.png"/>
+      <wmsLayer 
 	 lid="BRI"
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
