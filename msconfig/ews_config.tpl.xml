@@ -7367,6 +7367,7 @@
     <link name= "forwarn.forestthreats.org" url= "http://forwarn.forestthreats.org/"/>
     <link name="Data Disclaimer" url= "%(VIEWER_DEPLOY_DIR_URL)s/assets/disclaimer.htm"/>
     <link name="FCAV Users Guide" url= "%(VIEWER_DEPLOY_DIR_URL)s/assets/FCAV_Users_Guide_4.2.2012.pdf"/>
-	<link name="Change Product Descriptions" url= "%(VIEWER_DEPLOY_DIR_URL)s/assets/ForestChangeProductsDescriptions.pdf"/>
+    <link name="Change Product Descriptions" url= "%(VIEWER_DEPLOY_DIR_URL)s/assets/ForestChangeProductsDescriptions.pdf"/>
+    <link name="FCAV 2.0" url= "http://forwarn.forestthreats.org/fcav2"/>
   </links>
 </config>
