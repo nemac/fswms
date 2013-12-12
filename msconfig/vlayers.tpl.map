@@ -2983,4 +2983,98 @@ MAP
             "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
+    LAYER # 
+        NAME ozone_sites
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from ozone_sites"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Ozone Sites"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"            "ozone_sites"
+            "wms_abstract"         "ozone_sites"
+            "gml_include_items"    "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER # 
+        NAME national_forests
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from national_forests"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "National Forests"
+            STYLE
+                COLOR        232 232 232
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"            "national_forests"
+            "wms_abstract"         "national_forests"
+            "gml_include_items"    "all"
+        END  # end METADATA
+    END # end Layer
+    LAYER # 
+        NAME wildernesses
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "the_geom from wildernesses"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Wildernesses"
+            STYLE
+                COLOR        232 232 232
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"            "wildernesses"
+            "wms_abstract"         "wildernesses"
+            "gml_include_items"    "all"
+        END  # end METADATA
+    END # end Layer	
 END
