@@ -344,4 +344,26 @@ MAP
             COLOR 0 0 0
         END
     END # end LAYER	    
+    LAYER
+        NAME MaskForWetland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/Mask/wetland.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+    END # end LAYER	    	
 END # end MAP
