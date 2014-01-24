@@ -290,7 +290,7 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
 ### create a tiflist entry for each .tif file in DATA_DIR+"/efetac_nasa/ews:
 ### these are the actual data files as they are dropped off via ftp
 ###
-ARCHIVE_DIR = DATA_DIR + "/efetac_nasa/AllYear" #DATA_DIR is "/flood/fsdata" currently
+ARCHIVE_DIR = DATA_DIR + "/efetac_nasa/X_LC_ALLYEAR" #DATA_DIR is "/flood/fsdata" currently
 for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".tif")], reverse=False):
     try:
         tif = re.sub('^' + ARCHIVE_DIR + '/', '', tif)
@@ -423,12 +423,12 @@ LAYERS1 = LAYERS
 ###
 ### Append to ews.map FILE Seasonally-Adjusted Change from All-Year pheno-cluster max (MUC):
 ###
-LAYERS2 = getLayers(DATA_DIR + "/efetac_nasa/X_MUC_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", True)
+LAYERS2 = getLayers(DATA_DIR + "/efetac_nasa/X_LC_MUC_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", True)
 
 ###
 ### Append to ews.map FILE Seasonally-Adjusted Change from All-Year mean of maximums (MMAX):
 ###
-LAYERS3 = getLayers(DATA_DIR + "/efetac_nasa/X_MMAX_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", True)
+LAYERS3 = getLayers(DATA_DIR + "/efetac_nasa/X_LC_MMAX_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", True)
 
 ###
 ### write out ews.map, using EPSG 3785 (WebMercator),
@@ -531,7 +531,7 @@ f_new.close()
 ###
 ### CREATE ews1year.map FILE:
 ###
-LAYERS1 = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", True)
+LAYERS1 = getLayers(DATA_DIR + "/efetac_nasa/X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", True)
 # template = Template("ews_gen.tpl.map")
 # #print LAYERS
 # f_new = openMapfileForWriting("ews1year.map")
@@ -559,7 +559,7 @@ LAYERS1 = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "E
 ###
 ### Append to ews1year.map FILE Early Detect (ALC) Change from previous year:
 ###
-LAYERS2 = getLayers(DATA_DIR + "/efetac_nasa/X_ALC_1YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_ALC1YR", ".tif", "no", True)
+LAYERS2 = getLayers(DATA_DIR + "/efetac_nasa/X_LC_ALC_1YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_ALC1YR", ".tif", "no", True)
 LAYERSCOMBINED = LAYERS1 + LAYERS2
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews1year.map")
@@ -587,7 +587,7 @@ f_new.close()
 ###
 ### CREATE ewswcs1year.map FILE:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/1Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "yes", False)
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "yes", False)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ewswcs1year.map")
 SERVICE_NAME = "ewswcs1year"
@@ -614,7 +614,7 @@ f_new.close()
 ###
 ### Create the ews3year.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no", True)
+LAYERS = getLayers(DATA_DIR + "/efetac_nasa/X_LC_3YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no", True)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews3year.map")
 SERVICE_NAME = "ews3year"

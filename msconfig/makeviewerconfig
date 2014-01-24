@@ -249,40 +249,41 @@ tacsModisChangeDetectionProductLayers = ""
 for subgroup in [
     { 'label' : '   Change from 1-Year Baseline (recent disturbances)',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_1YrBaseline_current',       'lid' : 'AD',  'visible' : 'true' },
-            { 'name' : 'EFETAC-NASA_1YrBaseline_previous1',     'lid' : 'AE',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_1YrBaseline_previous2',     'lid' : 'AF',  'visible' : 'false' } ] },
+            { 'name' : 'EFETAC-NASA_X_LC_1YEAR_current',       'lid' : 'AD',  'visible' : 'true' },
+            { 'name' : 'EFETAC-NASA_X_LC_1YEAR_previous1',     'lid' : 'AE',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_X_LC_1YEAR_previous2',     'lid' : 'AF',  'visible' : 'false' } ] },
     { 'label' : '   Change from All-Year Baseline (all disturbances)',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_current',                   'lid' : 'AA',  'visible' : 'false'  },
-            { 'name' : 'EFETAC-NASA_previous1',                 'lid' : 'AB',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_previous2',                 'lid' : 'AC',  'visible' : 'false' } ] },
+            { 'name' : 'EFETAC-NASA_X_LC_ALLYEAR_current',      'lid' : 'AA',  'visible' : 'false'  },
+            { 'name' : 'EFETAC-NASA_X_LC_ALLYEAR_previous1',    'lid' : 'AB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_X_LC_ALLYEAR_previous2',    'lid' : 'AC',  'visible' : 'false' } ] },
     { 'label' : '   Change from 3-Year Baseline (&lt;3-Yr old disturbances)',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_3YrBaseline_current',       'lid' : 'AG',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_3YrBaseline_previous1',     'lid' : 'AH',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_3YrBaseline_previous2',     'lid' : 'AI',  'visible' : 'false' } ] },
+            { 'name' : 'EFETAC-NASA_X_LC_3YEAR_current',       'lid' : 'AG',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_X_LC_3YEAR_previous1',     'lid' : 'AH',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_X_LC_3YEAR_previous2',     'lid' : 'AI',  'visible' : 'false' } ] },
     { 'label' : '   Early Detect (ALC) Change from previous year',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_ALC1YR_current',       'lid' : 'ALCAA',  'visible' : 'false' },
-			{ 'name' : 'EFETAC-NASA_ALC1YR_previous1',     'lid' : 'ALCAB',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_ALC1YR_previous2',     'lid' : 'ALCAC',  'visible' : 'false' } ] },		
+            { 'name' : 'EFETAC-NASA_X_LC_ALC_1YR_current',       'lid' : 'ALCAA',  'visible' : 'false' },
+			{ 'name' : 'EFETAC-NASA_X_LC_ALC_1YR_previous1',     'lid' : 'ALCAB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_X_LC_ALC_1YR_previous2',     'lid' : 'ALCAC',  'visible' : 'false' } ] },		
 	{ 'label' : '   Seasonally-Adjusted Change from All-Year pheno-cluster max (MUC)',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_MUCAllYear_current',       'lid' : 'MUCAA',  'visible' : 'false' },
-			{ 'name' : 'EFETAC-NASA_MUCAllYear_previous1',     'lid' : 'MUCAB',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_MUCAllYear_previous2',     'lid' : 'MUCAC',  'visible' : 'false' } ] },			
+            { 'name' : 'EFETAC-NASA_X_LC_MUC_ALL_YR_current',       'lid' : 'MUCAA',  'visible' : 'false' },
+			{ 'name' : 'EFETAC-NASA_X_LC_MUC_ALL_YR_previous1',     'lid' : 'MUCAB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_X_LC_MUC_ALL_YR_previous2',     'lid' : 'MUCAC',  'visible' : 'false' } ] },			
 	{ 'label' : '   Seasonally-Adjusted Change from All-Year mean of maximums (MMAX)',
       'layers' : [
-            { 'name' : 'EFETAC-NASA_MoMAllYear_current',       'lid' : 'MoMAA',  'visible' : 'false' },
-			{ 'name' : 'EFETAC-NASA_MoMAllYear_previous1',     'lid' : 'MoMAB',  'visible' : 'false' },
-            { 'name' : 'EFETAC-NASA_MoMAllYear_previous2',     'lid' : 'MoMAC',  'visible' : 'false' } ] }			
+            { 'name' : 'EFETAC-NASA_X_LC_MMAX_ALL_YR_current',       'lid' : 'MoMAA',  'visible' : 'false' },
+			{ 'name' : 'EFETAC-NASA_X_LC_MMAX_ALL_YR_previous1',     'lid' : 'MoMAB',  'visible' : 'false' },
+            { 'name' : 'EFETAC-NASA_X_LC_MMAX_ALL_YR_previous2',     'lid' : 'MoMAC',  'visible' : 'false' } ] }			
     ]:
     tacsModisChangeDetectionProductLayers = ( tacsModisChangeDetectionProductLayers +
         '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
     for layer in subgroup['layers']:
-        tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + wmsLayerTemplate.render({
-                'SELECTED'      : ("selected=\"true\"\n          " if (layer['name']=='EFETAC-NASA_1YrBaseline_current') else ""),
+		#print layer['lid']
+		tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + wmsLayerTemplate.render({
+                'SELECTED'      : ("selected=\"true\"\n          " if (layer['name']=='EFETAC-NASA_X_LC_1YEAR_current') else ""),
                 'SERVER_URL'    : SERVER_URL,
                 'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
@@ -328,14 +329,14 @@ if not os.path.exists("../html/view/config"):
     os.makedirs("../html/view/config")
 
 nrtTCProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "EFETAC-NASA_TC", "ewstruecolor", False, ".img", False)
-nrt1YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/1Year", "EFETAC-NASA_1Year", "ews1year", True, ".tif", True)
-nrt3YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/3Year", "EFETAC-NASA_3Year", "ews3year", True, ".tif", True)
-nrtAllYrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/AllYear", "EFETAC-NASA", "ews", True, ".tif", True)
+nrt1YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/X_LC_1YEAR", "EFETAC-NASA_1Year", "ews1year", True, ".tif", True)
+nrt3YrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/X_LC_3YEAR", "EFETAC-NASA_3Year", "ews3year", True, ".tif", True)
+nrtAllYrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/X_LC_ALLYEAR", "EFETAC-NASA", "ews", True, ".tif", True)
 #jdm 5/31: new nrt products
 #added additional param to getNRTLayers() to account for masking
-nrtALC1Yr = getNRTLayers(DATA_DIR + "/efetac_nasa/X_ALC_1YR", "EFETAC-NASA_ALC1YR", "ews1year", True, ".tif", True)
-nrtMUCAllYr = getNRTLayers(DATA_DIR + "/efetac_nasa/X_MUC_ALL_YR", "EFETAC-NASA_MUCAllYear", "ews", True, ".tif", True)
-nrtMMAXAllYr = getNRTLayers(DATA_DIR + "/efetac_nasa/X_MMAX_ALL_YR", "EFETAC-NASA_MoMAllYear", "ews", True, ".tif", True)
+nrtALC1Yr = getNRTLayers(DATA_DIR + "/efetac_nasa/X_LC_ALC_1YR", "EFETAC-NASA_ALC1YR", "ews1year", True, ".tif", True)
+nrtMUCAllYr = getNRTLayers(DATA_DIR + "/efetac_nasa/X_LC_MUC_ALL_YR", "EFETAC-NASA_MUCAllYear", "ews", True, ".tif", True)
+nrtMMAXAllYr = getNRTLayers(DATA_DIR + "/efetac_nasa/X_LC_MMAX_ALL_YR", "EFETAC-NASA_MoMAllYear", "ews", True, ".tif", True)
 
 drtLayers = getDRTLayers()
 #End NRT 8 day & drought monitor automation-------------------------------------------------
