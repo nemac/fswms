@@ -353,6 +353,16 @@
 	 identify="true" 
 	 name="2012 Hotspots (RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2012.png"/>
+	  <wmsLayer 
+	 lid="MODISFIREAAB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="2013 Hotspots (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2013.png"/>	 
 	</wmsSubgroup>	 
     <wmsSubgroup label="Historical Large Fire Perimeters">
 <!--       <wmsLayer 
