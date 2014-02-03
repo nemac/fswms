@@ -65,7 +65,7 @@ MAP
             "wms_abstract"           "%(OWS_ABSTRACT)s"
             "wms_onlineresource"     "%(SERVICE_URL)s"
             "wms_srs"                "%(WMS_SRS)s EPSG:900913"
-	    "wcs_label"              "NEMAC ews WCS"
+			"wcs_label"              "NEMAC ews WCS"
             "wcs_srs"                "EPSG:2163 EPSG:4326"
         END
     END
@@ -100,7 +100,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/conus_fire_scars_2000_thru_2012_from_mtbs_and_geomac_us4b.img
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/conus_fire_scars_2000_thru_2013_from_mtbs_and_geomac_us4b.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         CLASS
@@ -154,10 +154,14 @@ MAP
         CLASS
             EXPRESSION ([pixel] = 13)
             COLOR 140 51 25
-        END  	
+        END  
+        CLASS
+            EXPRESSION ([pixel] = 14)
+            COLOR 255 0 255
+        END  		
         METADATA
-            "wms_title"                  "Firescars 2000-2010"
-            "wms_abstract"               "Firescars 2000-2010"
+            "wms_title"                  "Firescars 2000-2013"
+            "wms_abstract"               "Firescars 2000-2013"
             "wcs_label"                  "firescars WCS"
             "wcs_rangeset_name"          "firescars WCS"
             "wcs_rangeset_label"         "firescars WCS"
