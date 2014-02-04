@@ -384,7 +384,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2000-13 Combined Perimeters" 
-	 legend="%(SERVER_URL)s/cmapicons/Fire_Scars_2000-2013.bmp"/>
+	 legend="%(SERVER_URL)s/cmapicons/Fire_Scars_2000-2013.png"/>
 	  <wmsLayer 
 	 lid="MTBSAAD"
 	 visible="false" 
