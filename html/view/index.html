@@ -107,9 +107,14 @@ if ( hasProductInstall && !hasRequestedVersion ) {
 			"pluginspage", "http://www.adobe.com/go/getflashplayer"
 	);
   } else {  // flash is too old or we can't detect the plugin
-    var alternateContent = 'Alternate HTML content should be placed here. '
-  	+ 'This content requires the Adobe Flash Player. '
-   	+ '<a href=http://www.adobe.com/go/getflash/>Get Flash</a>';
+    var alternateContent = '<div><div>'
+        + 'This content requires the Adobe Flash Player. '
+        + '<a href="http://www.adobe.com/go/getflash/">Get Flash</a>'
+        + '</div><br/><div>'
+        + 'If your browser does not support Flash, please try a '
+        + '<a href="http://forwarn.forestthreats.org/fcav2">beta version</a> '
+        + 'of the new viewer.'
+        + '</div></div>';
     document.write(alternateContent);  // insert non-flash content
   }
 // -->
