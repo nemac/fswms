@@ -2471,7 +2471,7 @@
 	 identify="true" 
 	 name="Phenoregions 50 MaxMode" 
 	 legend="%(SERVER_URL)s/cmapicons/paintchips.phendump.2000-2011.50.1.png"
-     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
+     mask="true"/>
       <wmsLayer 
 	 lid="PR100MM"
 	 visible="false" 
@@ -2482,7 +2482,7 @@
 	 identify="true" 
 	 name="Phenoregions 100 MaxMode" 
 	 legend="%(SERVER_URL)s/cmapicons/paintchips.phendump.2000-2011.100.1.png"
-     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
+     mask="true"/>
       <wmsLayer 
 	 lid="PR200MM"
 	 visible="false" 
@@ -2493,7 +2493,7 @@
 	 identify="true" 
 	 name="Phenoregions 200 MaxMode" 
 	 legend="%(SERVER_URL)s/cmapicons/paintchips.phendump.2000-2011.200.1.png"
-     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
+     mask="true"/>
       <wmsLayer 
 	 lid="PR500MM"
 	 visible="false" 
@@ -2504,7 +2504,7 @@
 	 identify="true" 
 	 name="Phenoregions 500 MaxMode" 
 	 legend="%(SERVER_URL)s/cmapicons/paintchips.phendump.2000-2011.500.1.png"
-     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
+     mask="true"/>
       <wmsLayer 
 	 lid="PR1000MM"
 	 visible="false" 
@@ -2515,7 +2515,7 @@
 	 identify="true" 
 	 name="Phenoregions 1000 MaxMode" 
 	 legend="%(SERVER_URL)s/cmapicons/paintchips.phendump.2000-2011.1000.1.png"
-     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
+     mask="true"/>
       <wmsLayer 
 	 lid="PR5000MM"
 	 visible="false" 
@@ -2526,7 +2526,7 @@
 	 identify="true" 
 	 name="Phenoregions 5000 MaxMode" 
 	 legend="%(SERVER_URL)s/cmapicons/paintchips.phendump.2000-2011.5000.1.png"
-     mask="MaskForAgriculture,MaskForConiferForest,MaskForDeciduousForest,MaskForGrass,MaskForMixedForest,MaskForNonVegetated,MaskForShrubland,MaskForUrban"/>
+     mask="true"/>
 	</wmsSubgroup>
     <wmsSubgroup label="Landcover">
       <wmsLayer 
