@@ -2338,11 +2338,11 @@
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="CropLands2012" 
+	 layers="CropLands2013" 
 	 styles="default" 
 	 identify="true" 
-	 name="2012 Cropland Data Layer" 
-	 legend="%(SERVER_URL)s/cmapicons/CropLands12.png"/>
+	 name="2013 Cropland Data Layer" 
+	 legend="%(SERVER_URL)s/cmapicons/CropLands13.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Elevation Products">
       <wmsLayer 
