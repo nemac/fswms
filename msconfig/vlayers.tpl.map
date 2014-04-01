@@ -399,7 +399,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from conus_fireperims_2010"
+        DATA             "the_geom from conus_fireperims_2010_2"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
