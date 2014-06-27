@@ -1524,6 +1524,33 @@ MAP
         MASK MaskForWetland
     END # end LAYER  		
     LAYER
+        NAME Pheno50MaxModeMaskForForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode MaskForForest "
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER  			
+    LAYER
         NAME Pheno100MaxMode         
         PROJECTION
           "+proj=laea"
@@ -1791,7 +1818,34 @@ MAP
             "gml_include_items"     "value_list"			
         END  # end METADATA
         MASK MaskForWetland
-    END # end LAYER  		
+    END # end LAYER 
+    LAYER
+        NAME Pheno100MaxModeMaskForForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode MaskForForest "
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER  	
     LAYER
         NAME Pheno200MaxMode         
         PROJECTION
@@ -2061,6 +2115,33 @@ MAP
         END  # end METADATA
         MASK MaskForWetland
     END # end LAYER	
+    LAYER
+        NAME Pheno200MaxModeMaskForForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode MaskForForest "
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER		
     LAYER
         NAME Pheno500MaxMode         
         PROJECTION
@@ -2332,6 +2413,33 @@ MAP
         MASK MaskForWetland
     END # end LAYER	
     LAYER
+        NAME Pheno500MaxModeMaskForForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode MaskForForest "
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER		
+    LAYER
         NAME Pheno1000MaxMode         
         PROJECTION
           "+proj=laea"
@@ -2600,6 +2708,33 @@ MAP
         END  # end METADATA
         MASK MaskForWetland
     END # end LAYER	
+    LAYER
+        NAME Pheno1000MaxModeMaskForForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode MaskForForest"
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER		
     LAYER
         NAME Pheno5000MaxMode         
         PROJECTION
@@ -2898,9 +3033,29 @@ MAP
 	
 	
 	
-    #jdm 9/4/2013: The next layers are for support of masking
-    #see  https://github.com/nemac/fswms/issues/15
-    #     https://github.com/nemac/fswms/issues/33
+    #jdm: The next layers are for support of masking
+    LAYER
+        NAME MaskForForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/Mask/default_forest.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+    END # end LAYER	 
     LAYER
         NAME MaskForAgriculture
         PROJECTION

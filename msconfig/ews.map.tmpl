@@ -169,10 +169,30 @@ MAP
         END  # end METADATA
     END # end LAYER    
 	
-    #jdm 9/4/2013: The next layers are for support of masking
-    #see  https://github.com/nemac/fswms/issues/15
-    #     https://github.com/nemac/fswms/issues/33
+    #jdm: The next layers are for support of masking
     LAYER
+        NAME MaskForForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata-internal/efetac_nasa/Mask/default_forest.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+    END # end LAYER	    
+	LAYER
         NAME MaskForAgriculture
         PROJECTION
           "+proj=laea"
