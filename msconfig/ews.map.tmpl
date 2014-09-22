@@ -40,8 +40,9 @@ MAP
     # minx miny maxx maxy
     # sets:
     # /WMT_MS_Capabilities/Capability/Layer/LatLonBoundingBox(@minx @miny @maxx @maxx)
-    EXTENT -180 -90 180 90 # World
-
+    # EXTENT -180 -90 180 90 # World
+	EXTENT -124.7625 24.5210 -66.9326 49.3845 # USA
+	
     # add def pointers for symbols
     SYMBOLSET "./symbols/symbols35.sym"
     FONTSET   "./fonts/fonts.list"
@@ -191,6 +192,10 @@ MAP
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
+        METADATA
+            "wms_title"             "MaskForForest"
+			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
+        END  # end METADATA		
     END # end LAYER	    
 	LAYER
         NAME MaskForAgriculture
@@ -213,6 +218,10 @@ MAP
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
+        METADATA
+            "wms_title"             "MaskForAgriculture"
+			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
+        END  # end METADATA				
     END # end LAYER	
     LAYER
         NAME MaskForConiferForest
@@ -235,6 +244,10 @@ MAP
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
+        METADATA
+            "wms_title"             "MaskForConiferForest"
+			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
+        END  # end METADATA			
     END # end LAYER	
     LAYER
         NAME MaskForDeciduousForest
@@ -257,6 +270,10 @@ MAP
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
+        METADATA
+            "wms_title"             "MaskForDeciduousForest"
+			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
+        END  # end METADATA			
     END # end LAYER	    
     LAYER
         NAME MaskForGrass
@@ -279,6 +296,10 @@ MAP
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
+        METADATA
+            "wms_title"             "MaskForGrass"
+			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
+        END  # end METADATA				
     END # end LAYER	    
     LAYER
         NAME MaskForMixedForest
@@ -301,6 +322,10 @@ MAP
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
+        METADATA
+            "wms_title"             "MaskForMixedForest"
+			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
+        END  # end METADATA			
     END # end LAYER	    
     LAYER
         NAME MaskForNonVegetated
@@ -323,6 +348,10 @@ MAP
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
+        METADATA
+            "wms_title"             "MaskForNonVegetated"
+			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
+        END  # end METADATA			
     END # end LAYER	    
     LAYER
         NAME MaskForShrubland
@@ -345,6 +374,10 @@ MAP
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
+        METADATA
+            "wms_title"             "MaskForShrubland"
+			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
+        END  # end METADATA			
     END # end LAYER	    
     LAYER
         NAME MaskForUrban
@@ -367,6 +400,10 @@ MAP
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
+        METADATA
+            "wms_title"             "MaskForUrban"
+			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
+        END  # end METADATA				
     END # end LAYER	    
     LAYER
         NAME MaskForWetland
@@ -389,5 +426,9 @@ MAP
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
+        METADATA
+            "wms_title"             "MaskForWetland"
+			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
+        END  # end METADATA				
     END # end LAYER	    	
 END # end MAP
