@@ -2536,7 +2536,7 @@ MAP
         METADATA
             "wms_title"          "hailswaths"
             "wms_abstract"       "hailswaths"
-            "gml_include_items"  "year_,month_,day_,date_,time_,timezone,state,size_,injuries,fatalities,loss,croploss,f1,f2,f3,f4"
+            "gml_include_items"  "date,time,st,mag,inj,fat,loss,closs"
         END  # end METADATA
     END # end Layer
 	
@@ -2600,7 +2600,7 @@ MAP
         METADATA
             "wms_title"          "tornado-tracks"
             "wms_abstract"       "tornado-tracks"
-            "gml_include_items"  "year_,month_,day_,date_,time_,timezone,state,fscale,injuries,fatalities,loss,croploss,width,f1,f2,f3,f4"
+            "gml_include_items"  "date,time,st,mag,inj,fat,loss,closs"
         END  # end METADATA
     END # end Layer
 	
