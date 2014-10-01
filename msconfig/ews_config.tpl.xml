@@ -224,9 +224,9 @@
  -->  <wmsLayer 
 	 lid="AAH"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="All-Current-Year-AFM" 
+	 layers="modis-fire-current-year" 
 	 styles="default" 
 	 identify="true" 
 	 name="Hotspots – Year to date (RSAC)" 
