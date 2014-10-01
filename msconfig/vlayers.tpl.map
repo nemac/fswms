@@ -2568,7 +2568,7 @@ MAP
         METADATA
             "wms_title"          "windswaths"
             "wms_abstract"       "windswaths"
-            "gml_include_items"  "date,fat,loss"
+            "gml_include_items"  "date,time,st,mag,inj,fat,loss,closs"
         END  # end METADATA
     END # end Layer
 	
