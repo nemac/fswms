@@ -494,16 +494,24 @@ MAP
     END
     LAYER
       NAME "Current-Large-incidents"
-      TYPE RASTER
+      TYPE POINT
       STATUS OFF
-      CONNECTION "http://activefiremaps.fs.fed.us/cgi-bin/mapserv.exe?map=conus.map&"
+      CONNECTION "http://wildfire.cr.usgs.gov/arcgis/services/geomac_dyn/MapServer/WMSServer?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4269"
       END
+	  CLASS
+          NAME "Current Large Incidents"
+          STYLE
+                SYMBOL 'triangle'
+                SIZE 12
+                COLOR 50 255 50
+            END
+      END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "Current Large incidents"
+        "wms_name"            "25"
         "wms_server_version"  "1.0.0"
         "wms_format"          "image/png"
       END
@@ -525,8 +533,8 @@ MAP
       END
     END
 	LAYER
-      NAME "All-Current-Year-GeoMAC"
-      TYPE RASTER
+      NAME "Active-Perimeters-GeoMAC"
+      TYPE POLYGON
       STATUS OFF
       CONNECTION "http://wildfire.cr.usgs.gov/arcgis/services/geomac_dyn/MapServer/WMSServer?"
       CONNECTIONTYPE WMS
@@ -534,21 +542,28 @@ MAP
        "init=epsg:4326"
       END
       CLASS
-          NAME "Active fire daily progression"
+          NAME "Active Perimeters GeoMAC"
           STYLE
-              COLOR        255 255 255
-              OUTLINECOLOR 32 32 32
+              #COLOR        255 150 50
+              OUTLINECOLOR 255 150 50
+			  WIDTH 3.0
           END
           STYLE
               SYMBOL "hatchsymbol"
-              COLOR 255 255 255
-              SIZE 2
+              COLOR 255 150 50
+              SIZE 5
               ANGLE 45
+          END # STYLE
+		  STYLE
+              SYMBOL "hatchsymbol"
+              COLOR 255 150 50
+              SIZE 5
+              ANGLE 135
           END # STYLE
       END	  
       METADATA
         "wms_srs"             "EPSG:4326"
-        "wms_name"            "19"
+        "wms_name"            "24"
         "wms_server_version"  "1.0.0"
         "wms_format"          "image/png"
       END
@@ -602,7 +617,7 @@ MAP
       END
     END
     LAYER
-      NAME "TRMM_3B43_V6_ACCUM"
+      NAME "TRMM_3B43_V7"
       TYPE RASTER
       STATUS OFF
       CONNECTION "http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?"
@@ -612,7 +627,7 @@ MAP
       END
       METADATA
         "wms_srs"             "EPSG:4326"
-        "wms_name"            "TRMM_3B43_V6_ACCUM"
+        "wms_name"            "TRMM_3B43_V7_MONTHLY_precipitation"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
