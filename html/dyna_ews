@@ -1,0 +1,19 @@
+#! /usr/bin/python
+
+import sys, cgi
+sys.path.append("../msconfig")
+import CGIUtils
+
+params = cgi.FieldStorage()
+
+#MAPFILE = '../msconfig/ews.map'
+#mapFile = open("../msconfig/dyna_maps/newfile.txt", "w")
+
+layerName = str(params.getvalue("LAYERS")).split('Mask')[0]
+
+#mapFile.write(layerName[0])
+#mapFile.close()
+
+MAPSERV = '../cgi-bin/mapserv-pre-6.2-70d2510636.exe'
+
+CGIUtils.mapserv_inject_mapfile('../msconfig/dyna_maps/'+layerName+'.map', MAPSERV)

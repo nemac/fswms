@@ -50,7 +50,7 @@ wmsLayerTemplate = Template(string="""
         <wmsLayer
           %(SELECTED)slid="%(LAYER_LID)s"
           visible="%(LAYER_VISIBLE)s"
-          url="%(SERVER_URL)s/ews?TRANSPARENT=true"
+          url="%(SERVER_URL)s/dyna_ews?TRANSPARENT=true"
           srs="EPSG:3785"
           layers="%(LAYER_NAME)s"
           name="%(LAYER_TITLE)s"
@@ -352,8 +352,8 @@ nrtAllYrProductLayers = getNRTLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_ALL
 #jdm 5/31: new nrt products
 #added additional param to getNRTLayers() to account for masking
 nrtALC1Yr = getNRTLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR"), "EFETAC-NASA_ALC1YR", "ews1year", True, ".tif", True)
-nrtMUCAllYr = getNRTLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "EFETAC-NASA_MUCAllYear", "ews", True, ".tif", True)
-nrtMMAXAllYr = getNRTLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "EFETAC-NASA_MoMAllYear", "ews", True, ".tif", True)
+nrtMUCAllYr = getNRTLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "EFETAC-NASA_MUCAllYear", "dyna_ews", True, ".tif", True)
+nrtMMAXAllYr = getNRTLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "EFETAC-NASA_MoMAllYear", "dyna_ews", True, ".tif", True)
 
 drtLayers = getDRTLayers()
 #End NRT 8 day & drought monitor automation-------------------------------------------------

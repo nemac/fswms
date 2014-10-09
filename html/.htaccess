@@ -99,3 +99,7 @@ Header set Access-Control-Allow-Origin "*"
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "dyna_ews">
+    Allow from all
+    SetHandler cgi-script
+</Files>

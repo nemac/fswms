@@ -1960,7 +1960,7 @@
 	 layers="hailswaths" 	 
 	 styles="default" 
 	 identify="true" 	 
-	 name="Hail Swaths (NWS)" 	 
+	 name="Hail Swaths 2010-2013 (NWS)" 	 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=hailswaths&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="BDB"	 
@@ -1970,8 +1970,18 @@
 	 layers="tornado-tracks" 	 
 	 styles="default" 
 	 identify="true" 	 
-	 name="Tornado Tracks 1999-2010 (NWS)" 	 
+	 name="Tornado Tracks 2010-2013 (NWS)" 	 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=tornado-tracks&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="BDD"	 
+	 visible="false" 	 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 	 
+	 srs="EPSG:3785" 	 
+	 layers="windswaths" 	 
+	 styles="default" 
+	 identify="true" 	 
+	 name="Wind Swaths 2010-2013 (NWS)" 	 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=windswaths&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Precipitation Derivatives (NOAA NWS)">
       <wmsLayer 

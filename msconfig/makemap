@@ -135,6 +135,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
     #print 'template ' + layerTemplateName
     tifList  = []
     for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
+        dynaList  = []
         try:        
             tif = re.sub('^' + dataDir + '/', '', tif)
             tif_fullpath = dataDir + '/' + tif;
@@ -175,6 +176,18 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                              'COLORMAPLINE'    : colormapline,
                              'MASK'            : ''
                              })
+            dynaList.append({ 'TIF'             : tif,
+                             'PROJVALID'       : len(proj) > 0,
+                             'PROJ'            : formatproj(proj,10),
+                             'WKT'             : getwkt(tif_fullpath),
+                             'NAME'            : layerName,
+                             'GROUP'           : group,
+                             'DATA'            : dataDir + '/' + tif,
+                             'TITLE'           : layerTitle,
+                             'ABSTRACT'        : layerTitle,
+                             'COLORMAPLINE'    : colormapline,
+                             'MASK'            : ''
+                             })                             
             layerTitles[layerName] = layerTitle
             #jdm 5/29: for layers groups that we want ewsMask on do so     
             if maskBool:
@@ -192,15 +205,49 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'			   : 'MASK ' + mask['name']
-                                     })                
+                                     })    
+                    dynaList.append({ 'TIF'             : tif,
+                                     'PROJVALID'       : len(proj) > 0,
+                                     'PROJ'            : formatproj(proj,10),
+                                     'WKT'             : getwkt(tif_fullpath),
+                                     'NAME'            : layerName + mask['name'],
+                                     'GROUP'           : group,
+                                     'DATA'            : dataDir + '/' + tif,
+                                     'TITLE'           : layerTitle + mask['name'],
+                                     'ABSTRACT'        : layerTitle + mask['name'],
+                                     'COLORMAPLINE'    : colormapline,
+                                     'MASK'			   : 'MASK ' + mask['name']
+                                     })                                          
+            #Perform layer-level creation of dynamic map files:
+            layerTemplate = Template(layerTemplateName)
+            layers = ""
+            for tifdict in dynaList:
+                if tifdict['PROJVALID']:
+                    layers = layers + layerTemplate.render(tifdict)    
+                    mapTemplate = Template("ews.map.tmpl")
+                    SERVICE_NAME = "dyna_ews"
+                    f_new = openMapfileForWriting("dyna_maps/"+layerName+".map")
+                    f_new.write( mapTemplate.render( {
+                                'LAYERS'                  : layers,
+                                'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
+                                'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
+                                'SERVICE_NAME'            : SERVICE_NAME,
+                                'TEMP_FILE_PREFIX'        : "ms_%s" % (SERVICE_NAME),
+                                'MAPFILE'                 : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+                                'OWS_TITLE'               : "NEMAC %s WMS" % (SERVICE_NAME),
+                                'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
+                                'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
+                                'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+                                'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
+                                'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
+                                } ) )
+                    f_new.close()                    
         except Exception as e:
             print e
             continue
     layerTemplate = Template(layerTemplateName)
     layers = ""
-    # print tifList
     for tifdict in tifList:
-        #print tifdict
         if tifdict['PROJVALID']:
             layers = layers + layerTemplate.render(tifdict)    
     return layers
@@ -233,6 +280,7 @@ tiflist = []
 ###
 retroPattern = r'-retro/(.+)/'
 for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
+    dynaList  = []
     tif = re.sub('^' + LAYER_DATA_DIR + '/', '', tif)
     m = re.search(retroPattern, tif)
     if m != None:
@@ -282,6 +330,22 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
 					 'MODDATE'	       : modDate,
                      'MASK'            : ''
 					})
+    dynaList.append({ 'TIF'             : tif,
+					 'PROJVALID'       : len(proj) > 0,
+					 'PROJ'            : formatproj(proj,10),
+					 'WKT'             : getwkt(tif_fullpath),
+					 'NAME'            : layerName,
+					 'GROUP'           : group,
+					 'DATA'            : LAYER_DATA_DIR + '/' + tif,
+					 'GROUP_ABSTRACT'  : group_abstract,
+					 'TITLE'           : layerTitle, # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
+					 'ABSTRACT'        : layerTitle, # change this to match title 
+					 'COLORMAPFILE'    : colormapfile,
+					 'COLORMAPCSV'     : colormapcsv,
+					 'KEYIMAGE'        : keyimage,
+					 'MODDATE'	       : modDate,
+                     'MASK'            : ''
+					})                    
     layerTitles[layerName] = layerTitle
     
     #Mask are only for tacs nasa products
@@ -303,6 +367,47 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
                              'MODDATE'	       : modDate,
                              'MASK'			   : 'MASK ' + mask['name']
                              })
+            dynaList.append({ 'TIF'             : tif,
+                             'PROJVALID'       : len(proj) > 0,
+                             'PROJ'            : formatproj(proj,10),
+                             'WKT'             : getwkt(tif_fullpath),
+                             'NAME'            : layerName + mask['name'],
+                             'GROUP'           : group,
+                             'DATA'            : LAYER_DATA_DIR + '/' + tif,
+                             'GROUP_ABSTRACT'  : group_abstract,
+                             'TITLE'           : layerTitle + mask['name'], # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
+                             'ABSTRACT'        : layerTitle + mask['name'], # change this to match title 
+                             'COLORMAPFILE'    : colormapfile,
+                             'COLORMAPCSV'     : colormapcsv,
+                             'KEYIMAGE'        : keyimage,
+                             'MODDATE'	       : modDate,
+                             'MASK'			   : 'MASK ' + mask['name']
+                             })  
+    #Perform layer-level creation of dynamic map files:
+    layerTemplate = Template("ews.layer.tmpl")
+    layers = ""
+    for tifdict in dynaList:
+        if tifdict['PROJVALID']:
+            layers = layers + layerTemplate.render(tifdict)    
+            mapTemplate = Template("ews.map.tmpl")
+            SERVICE_NAME = "dyna_ews"
+            f_new = openMapfileForWriting("dyna_maps/"+layerName+".map")
+            f_new.write( mapTemplate.render( {
+                        'LAYERS'                  : layers,
+                        'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
+                        'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
+                        'SERVICE_NAME'            : SERVICE_NAME,
+                        'TEMP_FILE_PREFIX'        : "ms_%s" % (SERVICE_NAME),
+                        'MAPFILE'                 : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+                        'OWS_TITLE'               : "NEMAC %s WMS" % (SERVICE_NAME),
+                        'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
+                        'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
+                        'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+                        'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
+                        'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
+                        } ) )
+            f_new.close() 
+                             
 ###
 ### create a tiflist entry for each .tif file in DATA_DIR+"/efetac_nasa/ews:
 ### these are the actual data files as they are dropped off via ftp
@@ -433,7 +538,8 @@ LAYERS = ""
 # print tiflist
 for tifdict in tiflist:
     if tifdict['PROJVALID']:
-        LAYERS = LAYERS + layerTemplate.render( tifdict )
+		print tifdict['NAME']
+		LAYERS = LAYERS + layerTemplate.render( tifdict )
 
 LAYERS1 = LAYERS
         
