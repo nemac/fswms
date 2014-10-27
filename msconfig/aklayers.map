@@ -1,0 +1,641 @@
+MAP
+    # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+    # of the two lines below to enable this logging:
+    # CONFIG "MS_ERRORFILE" "../var/log/ewsmonthly.log"
+    #DEBUG 5
+
+    # all temp files get prefixed with this string
+    NAME ms_aklayers
+
+    #jdm:added to accomodate map layers
+    #see http://trac.osgeo.org/mapserver/ticket/3055
+    MAXSIZE 3072    
+    
+    # background color of image if transparency
+    # is not requested
+    IMAGECOLOR 255 255 255
+
+    # default output image dimensions
+    SIZE 1200 1000
+
+    # always returns a map
+    STATUS ON
+
+    # set top level projection
+    PROJECTION
+     "init=epsg:4326"
+    END
+
+    # image format options
+    OUTPUTFORMAT
+        NAME "GEOTIFF"
+        DRIVER "GDAL/GTiff"
+        MIMETYPE "image/geotiff"
+        IMAGEMODE "BYTE"
+        EXTENSION "tif"
+    END
+
+    # minx miny maxx maxy
+    # sets:
+    # /WMT_MS_Capabilities/Capability/Layer/LatLonBoundingBox(@minx @miny @maxx @maxx)
+    EXTENT -180 -90 180 90 # World
+
+    # add def pointers for symbols
+    SYMBOLSET "./symbols/symbols35.sym"
+    FONTSET   "./fonts/fonts.list"
+
+    #
+    # Start of web interface definition
+    WEB
+        # this is the real filepath to the temp dir for intermediate file creation
+        IMAGEPATH "./tmp"
+        # this is the web-accessible path to IMAGEPATH
+        IMAGEURL "/tmp/"
+        HEADER "./templates/query_header.html"
+        FOOTER "./templates/query_footer.html"
+        METADATA
+            "ows_enable_request"     "*"
+            "wms_title"              "aklayers"
+            "wms_abstract"           "aklayers"
+            "wms_onlineresource"     "http://rain.nemac.org/~derek/fswms/html/aklayers"
+            "wms_srs"                "EPSG:4326 EPSG:2163 EPSG:3785 EPSG:900913"
+        END
+    END
+
+    QUERYMAP
+        STATUS OFF
+    END
+
+    # set defaults for GetLegendGraphic requests 
+    LEGEND
+      KEYSIZE 154 297
+    END
+
+	LAYER
+        NAME AK_FC_MVC_1YR_20140708       
+        PROJECTION
+          "+proj=aea" 
+          "+lat_1=55" 
+          "+lat_2=65" 
+          "+lat_0=50" 
+          "+lon_0=-154" 
+          "+x_0=0" 
+          "+y_0=0" 
+          "+ellps=GRS80"
+          "+datum=NAD83" 
+          "+units=m" 
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR/ak_20140708_28_2013_max.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140708"
+            "wms_abstract"          "20140708"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+	END # end LAYER
+	LAYER
+        NAME AK_FC_MVC_1YR_20140715        
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR/ak_20140715_28_2013_max.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140715"
+            "wms_abstract"          "20140715"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER    
+		NAME AK_FC_MVC_1YR_20140722       
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR/ak_20140722_28_2013_max.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140722"
+            "wms_abstract"          "20140722"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME AK_FC_MVC_1YR_20140729       
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR/ak_20140729_28_2013_max.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140729"
+            "wms_abstract"          "20140729"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+	END # end LAYER
+    LAYER
+        NAME AK_FC_MVC_1YR_20140805        
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR/ak_20140805_28_2013_max.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140805"
+            "wms_abstract"          "20140805"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+	END # end LAYER
+    LAYER
+        NAME AK_FC_MVC_1YR_M3D_20140722     
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR_M3D/ak_20140722_28_2013_max_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140722"
+            "wms_abstract"          "20140722"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_1YR_M3D_20140729   
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR_M3D/ak_20140729_28_2013_max_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140729"
+            "wms_abstract"          "20140729"   
+            "gml_include_items"     "value_list"			
+		END  # end METADATA
+	END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_1YR_M3D_20140805   
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR_M3D/ak_20140805_28_2013_max_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140805"
+            "wms_abstract"          "20140805"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_20140708      
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA    /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX/ak_20140708_28_mmax_ayr.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140708"
+            "wms_abstract"          "20140708"
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_20140715      
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX/ak_20140715_28_mmax_ayr.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140715"
+            "wms_abstract"          "20140715"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_20140722      
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX/ak_20140722_28_mmax_ayr.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140722"
+            "wms_abstract"          "20140722"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_20140729      
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX/ak_20140729_28_mmax_ayr.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140729"
+            "wms_abstract"          "20140729"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_20140805      
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX/ak_20140805_28_mmax_ayr.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140805"
+            "wms_abstract"          "20140805"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_M3D_20140722      
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/ak_20140722_28_mmax_ayr_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140722"
+            "wms_abstract"          "20140722"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_M3D_20140729   
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/ak_20140729_28_mmax_ayr_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140729"
+            "wms_abstract"          "20140729"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_M3D_20140805       
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/ak_20140805_28_mmax_ayr_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140805"
+            "wms_abstract"          "20140805"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_TCC_RGB_MVC_20140708
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_TCC_RGB_MVC/ak_20140708_28_tcc_255c.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140708"
+            "wms_abstract"          "20140708"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_TCC_RGB_MVC_20140715    
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_TCC_RGB_MVC/ak_20140715_28_tcc_255c.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140715"
+            "wms_abstract"          "20140715"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_TCC_RGB_MVC_20140722   
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_TCC_RGB_MVC/ak_20140722_28_tcc_255c.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140722"
+            "wms_abstract"          "20140722"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+    LAYER
+        NAME AK_TCC_RGB_MVC_20140729
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_TCC_RGB_MVC/ak_20140729_28_tcc_255c.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140729"
+            "wms_abstract"          "20140729"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+    LAYER
+        NAME AK_TCC_RGB_MVC_20140805    
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /flood/fsdata/efetac_nasa/XX_AK_TCC_RGB_MVC/ak_20140805_28_tcc_255c.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "20140805"
+            "wms_abstract"          "20140805"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	    
+END # end MAP

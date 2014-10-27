@@ -110,6 +110,9 @@
       <viewGroup name="EWS_Integrals" />
       <viewGroup name="EWS_MODISNDVI" />
     </view>
+    <view name="MODIS_Forest_Change_Products_AK" label="Alaska Products Demo" zoom="yes" xmin="-23993751" ymin="6333741" xmax="-8965620" ymax="13564072">
+     <viewGroup name="MODIS_Change_Detection_Products_AK" />
+    </view>
   </mapviews>
 
 <wmsLayers>
@@ -8025,6 +8028,256 @@
 	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-001-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
+  <wmsGroup gid="G16" name="MODIS_Change_Detection_Products_AK" label="Forest Disturbance Detection Maps (MODIS AK)"> 
+    <wmsSubgroup label="Forest NDVI Change">
+    </wmsSubgroup>
+    <wmsSubgroup label="AK_FC_MVC_1YR">
+        <wmsLayer
+          selected="false"
+          lid="AKQ"
+          visible="true"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_1YR_20140708"
+          name="20140708"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>
+		<wmsLayer
+          selected="false"
+          lid="AKW"
+          visible="true"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_1YR_20140715"
+          name="20140715"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>
+		 <wmsLayer
+          selected="false"
+          lid="AKE"
+          visible="true"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_1YR_20140722"
+          name="20140722"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>
+		  <wmsLayer
+          selected="false"
+          lid="AKR"
+          visible="true"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_1YR_20140729"
+          name="20140729"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>
+		  <wmsLayer
+          selected="false"
+          lid="AKT"
+          visible="true"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_1YR_20140805"
+          name="20140805"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>
+      </wmsSubgroup>
+      <wmsSubgroup label="AK_FC_MVC_1YR_M3D">
+        <wmsLayer
+          lid="AKY"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_1YR_M3D_20140722"
+          name="20140722"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+		<wmsLayer
+          lid="AKU"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_1YR_M3D_20140729"
+          name="20140729"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+		<wmsLayer
+          lid="AKI"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers= "AK_FC_MVC_1YR_M3D_20140805"
+          name="20140805"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+      </wmsSubgroup>
+      <wmsSubgroup label=" AK_FC_MVC_MMAX">
+        <wmsLayer
+          lid="ZA"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_20140708"
+          name="20140708"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+        <wmsLayer
+          lid="ZS"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_20140715"
+          name="20140715"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+        <wmsLayer
+          lid="ZD"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_20140722"
+          name="20140722"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+        <wmsLayer
+          lid="ZF"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_20140729"
+          name="20140729"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+        <wmsLayer
+          lid="ZG"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_20140805"
+          name="20140805"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+      </wmsSubgroup>
+	<wmsSubgroup label="AK_FC_MVC_MMAX_M3D">
+        <wmsLayer
+          lid="ZH"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_M3D_20140722"
+          name="20140722"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>
+		<wmsLayer
+          lid="ZJ"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_M3D_20140729"
+          name="20140729"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+		<wmsLayer
+          lid="ZK"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_M3D_20140805"
+          name="20140805"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>			  
+	</wmsSubgroup>
+    <wmsSubgroup label="AK_TCC_RGB_MVC">
+        <wmsLayer
+          lid="ZL"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers= "AK_TCC_RGB_MVC_20140708"
+          name="20140708"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+		   <wmsLayer
+          lid="ZZ"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers= "AK_TCC_RGB_MVC_20140715"
+          name="20140715"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+		   <wmsLayer
+          lid="ZX"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers= "AK_TCC_RGB_MVC_20140722"
+          name="20140722"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+		   <wmsLayer
+          lid="ZC"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers= "AK_TCC_RGB_MVC_20140722"
+          name="20140722"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+		   <wmsLayer
+          lid="ZV"
+          visible="false"
+          url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers= "AK_TCC_RGB_MVC_20140805"
+          name="20140805"
+          styles="default" 
+          identify="true"
+          legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          mask="false"/>	
+	</wmsSubgroup>
+  </wmsGroup>  
 </wmsLayers>
   <tools>
     <tool name="Print" label="Print Map" />
