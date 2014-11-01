@@ -8034,7 +8034,7 @@
     <wmsSubgroup label="AK_FC_MVC_1YR">
         <wmsLayer
           selected="false"
-          lid="AKQ"
+          lid="ALSKQ"
           visible="true"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8046,7 +8046,7 @@
           mask="false"/>
 		<wmsLayer
           selected="false"
-          lid="AKW"
+          lid="ALSKW"
           visible="true"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8058,7 +8058,7 @@
           mask="false"/>
 		 <wmsLayer
           selected="false"
-          lid="AKE"
+          lid="ALSKE"
           visible="true"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8070,7 +8070,7 @@
           mask="false"/>
 		  <wmsLayer
           selected="false"
-          lid="AKR"
+          lid="ALSKR"
           visible="true"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8082,7 +8082,7 @@
           mask="false"/>
 		  <wmsLayer
           selected="false"
-          lid="AKT"
+          lid="ALSKT"
           visible="true"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8095,7 +8095,7 @@
       </wmsSubgroup>
       <wmsSubgroup label="AK_FC_MVC_1YR_M3D">
         <wmsLayer
-          lid="AKY"
+          lid="ALSKY"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8106,7 +8106,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
 		<wmsLayer
-          lid="AKU"
+          lid="ALSKU"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8117,7 +8117,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
 		<wmsLayer
-          lid="AKI"
+          lid="ALSKI"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8130,7 +8130,7 @@
       </wmsSubgroup>
       <wmsSubgroup label=" AK_FC_MVC_MMAX">
         <wmsLayer
-          lid="ZA"
+          lid="ALSKZA"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8141,7 +8141,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
         <wmsLayer
-          lid="ZS"
+          lid="ALSKZS"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8152,7 +8152,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
         <wmsLayer
-          lid="ZD"
+          lid="ALSKZD"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8163,7 +8163,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
         <wmsLayer
-          lid="ZF"
+          lid="ALSKZF"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8174,7 +8174,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
         <wmsLayer
-          lid="ZG"
+          lid="ALSKZG"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8187,7 +8187,7 @@
       </wmsSubgroup>
 	<wmsSubgroup label="AK_FC_MVC_MMAX_M3D">
         <wmsLayer
-          lid="ZH"
+          lid="ALSKZH"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8198,7 +8198,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>
 		<wmsLayer
-          lid="ZJ"
+          lid="ALSKZJ"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8209,7 +8209,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
 		<wmsLayer
-          lid="ZK"
+          lid="ALSKZK"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8222,7 +8222,7 @@
 	</wmsSubgroup>
     <wmsSubgroup label="AK_TCC_RGB_MVC">
         <wmsLayer
-          lid="ZL"
+          lid="ALSKZL"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8233,7 +8233,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
 		   <wmsLayer
-          lid="ZZ"
+          lid="ALSKZZ"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8244,7 +8244,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
 		   <wmsLayer
-          lid="ZX"
+          lid="ALSKZX"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8255,7 +8255,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
 		   <wmsLayer
-          lid="ZC"
+          lid="ALSKZC"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8266,7 +8266,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
 		   <wmsLayer
-          lid="ZV"
+          lid="ALSKZV"
           visible="false"
           url="http://rain.nemac.org/~derek/fswms/html/aklayers?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -8277,7 +8277,7 @@
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           mask="false"/>	
 	</wmsSubgroup>
-  </wmsGroup>  
+  </wmsGroup>   
 </wmsLayers>
   <tools>
     <tool name="Print" label="Print Map" />
