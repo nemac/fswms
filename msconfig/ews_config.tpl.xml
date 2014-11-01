@@ -8043,7 +8043,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>
+          />
 		<wmsLayer
           selected="false"
           lid="ALSKW"
@@ -8055,7 +8055,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>
+          />
 		 <wmsLayer
           selected="false"
           lid="ALSKE"
@@ -8067,7 +8067,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>
+          />
 		  <wmsLayer
           selected="false"
           lid="ALSKR"
@@ -8079,7 +8079,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>
+          />
 		  <wmsLayer
           selected="false"
           lid="ALSKT"
@@ -8091,7 +8091,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>
+          />
       </wmsSubgroup>
       <wmsSubgroup label="AK_FC_MVC_1YR_M3D">
         <wmsLayer
@@ -8104,7 +8104,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
 		<wmsLayer
           lid="ALSKU"
           visible="false"
@@ -8115,7 +8115,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
 		<wmsLayer
           lid="ALSKI"
           visible="false"
@@ -8126,7 +8126,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
       </wmsSubgroup>
       <wmsSubgroup label=" AK_FC_MVC_MMAX">
         <wmsLayer
@@ -8139,7 +8139,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
         <wmsLayer
           lid="ALSKZS"
           visible="false"
@@ -8150,7 +8150,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
         <wmsLayer
           lid="ALSKZD"
           visible="false"
@@ -8161,7 +8161,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
         <wmsLayer
           lid="ALSKZF"
           visible="false"
@@ -8172,7 +8172,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
         <wmsLayer
           lid="ALSKZG"
           visible="false"
@@ -8183,7 +8183,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
       </wmsSubgroup>
 	<wmsSubgroup label="AK_FC_MVC_MMAX_M3D">
         <wmsLayer
@@ -8196,7 +8196,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>
+          />
 		<wmsLayer
           lid="ALSKZJ"
           visible="false"
@@ -8207,7 +8207,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
 		<wmsLayer
           lid="ALSKZK"
           visible="false"
@@ -8218,7 +8218,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>			  
+          />			  
 	</wmsSubgroup>
     <wmsSubgroup label="AK_TCC_RGB_MVC">
         <wmsLayer
@@ -8231,7 +8231,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
 		   <wmsLayer
           lid="ALSKZZ"
           visible="false"
@@ -8242,7 +8242,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
 		   <wmsLayer
           lid="ALSKZX"
           visible="false"
@@ -8253,7 +8253,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
 		   <wmsLayer
           lid="ALSKZC"
           visible="false"
@@ -8264,7 +8264,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
 		   <wmsLayer
           lid="ALSKZV"
           visible="false"
@@ -8275,7 +8275,7 @@
           styles="default" 
           identify="true"
           legend="http://rain.nemac.org/~derek/fswms/html/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          mask="false"/>	
+          />	
 	</wmsSubgroup>
   </wmsGroup>   
 </wmsLayers>
