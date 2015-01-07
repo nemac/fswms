@@ -8293,31 +8293,31 @@
 	</wmsSubgroup>
   </wmsGroup>
   <wmsGroup gid="G17" name="MODIS_Disturbance_Events" label="Disturbances Assessed"> 
-      <wmsSubgroup label="Disturbances Assessed">
-          <wmsLayer
-            selected="false"
-            lid="DEAAA"
-            visible="true"
-            url="http://rain.nemac.org/~mwhutchi/fswms/html/wlayers?TRANSPARENT=true"
-            srs="EPSG:3785"
-            layers="events-current"
-            name="Current Year Events"
-            styles="default" 
-            identify="true"
-            legend="http://rain.nemac.org/~mwhutchi/fswms/html/wlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=events-current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-      <wmsLayer
-            selected="false"
-            lid="DEAAB"
-            visible="true"
-            url="http://rain.nemac.org/~mwhutchi/fswms/html/wlayers?TRANSPARENT=true"
-            srs="EPSG:3785"
-            layers="events-historical"
-            name="Historical Events"
-            styles="default" 
-            identify="true"
-            legend="http://rain.nemac.org/~mwhutchi/fswms/html/wlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=events-historical&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-        </wmsSubgroup>
-    </wmsGroup>  
+    <wmsSubgroup label="Disturbances Assessed">
+        <wmsLayer
+          selected="false"
+          lid="DEAAA"
+          visible="true"
+          url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="events-current"
+          name="Current Year Events"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/wlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=events-current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+        <wmsLayer
+          selected="false"
+          lid="DEAAB"
+          visible="true"
+          url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="events-historical"
+          name="Historical Events"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/wlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=events-historical&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+      </wmsSubgroup>
+  </wmsGroup>  
 </wmsLayers>
   <tools>
     <tool name="Print" label="Print Map" />
