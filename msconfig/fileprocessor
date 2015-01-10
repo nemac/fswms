@@ -50,7 +50,7 @@ linkgroups = [
 
 ## FOR FDM PICKUP
     {
-        'srcdir'             : os.path.join(DATA_DIR, "rsac_fhtet/ews"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews"),
         'regex'              : r'/ews/(\d{8})_(\d{2})_3yr\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -62,7 +62,7 @@ linkgroups = [
     },
 
     {
-        'srcdir'             : os.path.join(DATA_DIR, "rsac_fhtet/ews"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews"),
         'regex'              : r'/ews/(\d{8})_(\d{2})_5yr\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -73,7 +73,7 @@ linkgroups = [
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
     },
     {
-        'srcdir'             : os.path.join(DATA_DIR, "rsac_fhtet/ews"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews"),
         'regex'              : r'/ews/(\d{8})_(\d{2})_3yr_bd\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -84,7 +84,7 @@ linkgroups = [
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
     },
     {
-        'srcdir'             : os.path.join(DATA_DIR, "rsac_fhtet/ews"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews"),
         'regex'              : r'/ews/(\d{8})_(\d{2})_5yr_bd\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -97,7 +97,7 @@ linkgroups = [
 
 ############### EFETAC NASA
     {
-        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/3Year"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/3Year"),
         'regex'              : r'/(\d{8})_(\d{2})_(\d{4})_max\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -108,7 +108,7 @@ linkgroups = [
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
     },
     {
-        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/3Year"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/3Year"),
         'regex'              : r'/(\d{8})_(\d{2})_(\d{4})_max_bd\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -120,7 +120,7 @@ linkgroups = [
     },
 
     {
-        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/5Year"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/5Year"),
         'regex'              : r'/(\d{8})_(\d{2})_(\d{4})_max\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -132,7 +132,7 @@ linkgroups = [
     },
 
     {
-        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/5Year"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/5Year"),
         'regex'              : r'/(\d{8})_(\d{2})_(\d{4})_max_bd\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -145,7 +145,7 @@ linkgroups = [
 
 ##  FOR VIEWER
     {
-        'srcdir'             : os.path.join(DATA_DIR, "rsac_fhtet/ews"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews"),
         'regex'              : r'/ews/(\d{8})_(\d{2})_3yr\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -157,7 +157,7 @@ linkgroups = [
     },
 
     {
-        'srcdir'             : os.path.join(DATA_DIR, "rsac_fhtet/ews"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews"),
         'regex'              : r'/ews/(\d{8})_(\d{2})_3yr\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -168,7 +168,7 @@ linkgroups = [
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
     },
     {
-        'srcdir'             : os.path.join(DATA_DIR, "rsac_fhtet/ews"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews"),
         'regex'              : r'/ews/(\d{8})_(\d{2})_5yr\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -179,7 +179,7 @@ linkgroups = [
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
     },
     {
-        'srcdir'             : os.path.join(DATA_DIR, "rsac_fhtet/ews"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews"),
         'regex'              : r'/ews/(\d{8})_(\d{2})_3yr_bd\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -190,7 +190,7 @@ linkgroups = [
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
     },
     {
-        'srcdir'             : os.path.join(DATA_DIR, "rsac_fhtet/ews"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews"),
         'regex'              : r'/ews/(\d{8})_(\d{2})_5yr_bd\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -203,7 +203,7 @@ linkgroups = [
 
     {
         # /flood/fsdata/efetac_nasa/AllYear/20110601_24_2003_max.tfw
-        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/AllYear"),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/AllYear"),
         'regex'              : r'/AllYear/(\d{8})_(\d{2})_\d{4}_max\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -216,7 +216,7 @@ linkgroups = [
 
     {
         # /flood/fsdata/efetac_nasa/AllYear/20110601_24_2003_max.tfw
-        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear")),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear")),
         'regex'              : r'/'+choose("X_LC_ALLYEAR", "AllYear")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -228,7 +228,7 @@ linkgroups = [
     },
     {
         # /flood/fsdata/efetac_nasa/1Year/20110601_24_2010_max.tfw
-        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/"+choose("X_LC_1YEAR", "1Year")),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year")),
         'regex'              : r'/'+choose("X_LC_1YEAR", "1Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -240,7 +240,7 @@ linkgroups = [
     },
     {
         # /flood/fsdata/efetac_nasa/3Year/20110601_24_2010_max.tfw
-        'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/"+choose("X_LC_3YEAR", "3Year")),
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year")),
         'regex'              : r'/'+choose("X_LC_3YEAR", "3Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -253,7 +253,7 @@ linkgroups = [
 	##	JDM: 4/24/13 new NRT products for EFETAC NASA	
     {
         # /flood/fsdata/efetac_nasa/X_ALC_1YR/20130414_24_alc_1yr.tif
-		'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR")), 
+		'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR")), 
         'regex'              : r'/'+choose("X_LC_ALC_1YR", "X_ALC_1YR")+'/(\d{8})_(\d{2})'+choose("_alc_land_1yr", "_alc_1yr")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -265,7 +265,7 @@ linkgroups = [
     },	
     {
         # /flood/fsdata/efetac_nasa/X_MUC_ALL_YR/20130422_24_muc_ayr.tif
-		'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR")), 
+		'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR")), 
         'regex'              : r'/'+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR")+'/(\d{8})_(\d{2})'+choose("_muc_ayr_lc", "_muc_ayr")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -277,7 +277,7 @@ linkgroups = [
     },
     {
         # /flood/fsdata/efetac_nasa/X_MMAX_ALL_YR/20130414_24_mmax_ayr.tif
-		'srcdir'             : os.path.join(DATA_DIR, "efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR")), 
+		'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR")), 
         'regex'              : r'/'+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR")+'/(\d{8})_(\d{2})'+choose("_mmax_ayr_lc", "_mmax_ayr")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),

@@ -33,7 +33,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/09_spring_leaf_out_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/09_spring_leaf_out_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -60,7 +60,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/09_fall_brown_down_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/09_fall_brown_down_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -98,7 +98,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/nlcd2006_landcover_4-20-11_se5_decimated_to_231p66m_laea.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/nlcd2006_landcover_4-20-11_se5_decimated_to_231p66m_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         CLASS
@@ -116,7 +116,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/09_fall_brown_down_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/09_fall_brown_down_length.img
         MASK "NLCDUrban"
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
@@ -153,7 +153,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/nlcd2006_landcover_4-20-11_se5_decimated_to_231p66m_laea.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/nlcd2006_landcover_4-20-11_se5_decimated_to_231p66m_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         CLASS
@@ -171,7 +171,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/09_fall_brown_down_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/09_fall_brown_down_length.img
         MASK "NLCDForest"
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
@@ -197,7 +197,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_length/09_grow_seasn_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_length/09_grow_seasn_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -224,7 +224,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/09_grow_seasn_midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/09_grow_seasn_midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -251,7 +251,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/09max_pos-midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/09max_pos-midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -279,7 +279,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/peakyness/2009peakyness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/peakyness/2009peakyness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -304,7 +304,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/09ratio_spring_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/09ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -329,7 +329,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/2009_skewness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/skewness/2009_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -354,7 +354,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2009slope_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2009slope_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -382,7 +382,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2009slope_spring.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2009slope_spring.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -409,7 +409,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2009_mean_pos.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2009_mean_pos.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -436,7 +436,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2009_mean_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2009_mean_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -464,7 +464,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/xy_mean_2009/2009_xy_color_composite.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/xy_mean_2009/2009_xy_color_composite.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -491,7 +491,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/08_spring_leaf_out_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/08_spring_leaf_out_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -518,7 +518,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/08_fall_brown_down_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/08_fall_brown_down_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -545,7 +545,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_length/08_grow_seasn_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_length/08_grow_seasn_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -572,7 +572,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/08_grow_seasn_midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/08_grow_seasn_midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -599,7 +599,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/08max_pos-midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/08max_pos-midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -627,7 +627,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/peakyness/08peakyness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/peakyness/08peakyness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -655,7 +655,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/08ratio_spring_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/08ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -680,7 +680,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/08_skewness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/skewness/08_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -705,7 +705,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2008slope_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2008slope_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -733,7 +733,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2008slope_spring.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2008slope_spring.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -760,7 +760,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2008_mean_pos.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2008_mean_pos.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -787,7 +787,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2008_mean_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2008_mean_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -815,7 +815,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2008_mean_xy_comp.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2008_mean_xy_comp.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -842,7 +842,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/07_spring_leaf_out_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/07_spring_leaf_out_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -869,7 +869,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/07_fall_brown_down_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/07_fall_brown_down_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -896,7 +896,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_length/07_grow_seasn_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_length/07_grow_seasn_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -923,7 +923,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/07_grow_seasn_midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/07_grow_seasn_midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -950,7 +950,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/07max_pos-midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/07max_pos-midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -978,7 +978,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/peakyness/07peakyness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/peakyness/07peakyness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1006,7 +1006,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/07ratio_spring_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/07ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -1031,7 +1031,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/07_skewness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/skewness/07_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -1056,7 +1056,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2007slope_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2007slope_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1084,7 +1084,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2007slope_spring.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2007slope_spring.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1111,7 +1111,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2007_mean_pos.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2007_mean_pos.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1138,7 +1138,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2007_mean_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2007_mean_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1166,7 +1166,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2007_mean_xy_comp.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2007_mean_xy_comp.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1193,7 +1193,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/06_spring_leaf_out_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/06_spring_leaf_out_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1220,7 +1220,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/06_fall_brown_down_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/06_fall_brown_down_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1247,7 +1247,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_length/06_grow_seasn_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_length/06_grow_seasn_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1274,7 +1274,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/06_grow_seasn_midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/06_grow_seasn_midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1301,7 +1301,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/06max_pos-midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/06max_pos-midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1329,7 +1329,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/peakyness/06peakyness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/peakyness/06peakyness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1357,7 +1357,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/06ratio_spring_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/06ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -1382,7 +1382,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/06_skewness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/skewness/06_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -1407,7 +1407,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2006slope_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2006slope_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1435,7 +1435,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2006slope_spring.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2006slope_spring.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1462,7 +1462,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2006_mean_pos.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2006_mean_pos.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1489,7 +1489,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2006_mean_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2006_mean_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1517,7 +1517,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2006_mean_xy_comp.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2006_mean_xy_comp.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1544,7 +1544,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/05_spring_leaf_out_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/05_spring_leaf_out_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1571,7 +1571,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/05_fall_brown_down_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/05_fall_brown_down_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1598,7 +1598,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_length/05_grow_seasn_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_length/05_grow_seasn_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1625,7 +1625,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/05_grow_seasn_midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/05_grow_seasn_midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1652,7 +1652,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/05max_pos-midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/05max_pos-midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1680,7 +1680,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/peakyness/05peakyness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/peakyness/05peakyness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1708,7 +1708,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/05ratio_spring_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/05ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -1733,7 +1733,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/05_skewness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/skewness/05_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -1758,7 +1758,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2005slope_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2005slope_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1786,7 +1786,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2005slope_spring.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2005slope_spring.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1813,7 +1813,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2005_mean_pos.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2005_mean_pos.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1840,7 +1840,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2005_mean_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2005_mean_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1868,7 +1868,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2005_mean_xy_comp.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2005_mean_xy_comp.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1895,7 +1895,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/04_spring_leaf_out_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/04_spring_leaf_out_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1922,7 +1922,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/04_fall_brown_down_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/04_fall_brown_down_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1949,7 +1949,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_length/04_grow_seasn_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_length/04_grow_seasn_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1976,7 +1976,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/04_grow_seasn_midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/04_grow_seasn_midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2003,7 +2003,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/04max_pos-midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/04max_pos-midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2031,7 +2031,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/peakyness/04peakyness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/peakyness/04peakyness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2059,7 +2059,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/04ratio_spring_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/04ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -2084,7 +2084,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/04_skewness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/skewness/04_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -2109,7 +2109,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2004slope_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2004slope_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2137,7 +2137,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2004slope_spring.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2004slope_spring.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2164,7 +2164,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2004_mean_pos.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2004_mean_pos.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2191,7 +2191,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2004_mean_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2004_mean_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2219,7 +2219,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2004_mean_xy_comp.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2004_mean_xy_comp.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2246,7 +2246,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/03_spring_leaf_out_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/03_spring_leaf_out_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2273,7 +2273,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/03_fall_brown_down_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/duration_fall_spring/03_fall_brown_down_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2300,7 +2300,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_length/03_grow_seasn_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_length/03_grow_seasn_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2327,7 +2327,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/03_grow_seasn_midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/growing_season_midpoint/03_grow_seasn_midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2354,7 +2354,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/03max_pos-midpoint.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/max_position-midpoint/03max_pos-midpoint.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2382,7 +2382,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/peakyness/03peakyness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/peakyness/03peakyness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2410,7 +2410,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/03ratio_spring_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/ratio_spring_fall/03ratio_spring_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -2435,7 +2435,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/skewness/03_skewness.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/skewness/03_skewness.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         PROJECTION
@@ -2460,7 +2460,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2003slope_fall.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2003slope_fall.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2488,7 +2488,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2003slope_spring.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/slope_fall_spring/2003slope_spring.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2515,7 +2515,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2003_mean_pos.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2003_mean_pos.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2542,7 +2542,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2003_mean_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2003_mean_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2570,7 +2570,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/xy_mean/2003_mean_xy_comp.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/xy_mean/2003_mean_xy_comp.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2597,7 +2597,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/seasonal_standard_deviation/03-09fall_standard_deviation.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/seasonal_standard_deviation/03-09fall_standard_deviation.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2624,7 +2624,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/seasonal_standard_deviation/03-09spring_standard_deviation.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/seasonal_standard_deviation/03-09spring_standard_deviation.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2651,7 +2651,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/seasonal_standard_deviation/03-09gs_standard_deviation.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/seasonal_standard_deviation/03-09gs_standard_deviation.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2678,7 +2678,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/season_length_means/02-08fall_mean.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/season_length_means/02-08fall_mean.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2705,7 +2705,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/season_length_means/02-08spring_mean.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/season_length_means/02-08spring_mean.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2732,7 +2732,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/season_length_means/2003-2009mean_gs_length.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/season_length_means/2003-2009mean_gs_length.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2759,7 +2759,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/deciduousness/03-09max_value_mean.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/deciduousness/03-09max_value_mean.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2786,7 +2786,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/deciduousness/03-09min_value_mean.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/deciduousness/03-09min_value_mean.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2813,7 +2813,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenology_Derivatives/deciduousness/max_mean-min_mean_evergreeness03-09.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenology_Derivatives/deciduousness/max_mean-min_mean_evergreeness03-09.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        

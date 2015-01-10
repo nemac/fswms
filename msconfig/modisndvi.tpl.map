@@ -35,7 +35,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009353_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009353_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -62,7 +62,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009337_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009337_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -89,7 +89,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009321_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009321_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -116,7 +116,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009305_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009305_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -143,7 +143,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009289_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009289_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -170,7 +170,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009273_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009273_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -197,7 +197,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009257_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009257_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -224,7 +224,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009241_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009241_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -251,7 +251,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009225_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009225_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -278,7 +278,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009209_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009209_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -305,7 +305,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009193_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009193_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -332,7 +332,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009177_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009177_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -359,7 +359,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009161_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009161_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -386,7 +386,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009145_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009145_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -413,7 +413,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009129_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009129_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -440,7 +440,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009113_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009113_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -467,7 +467,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009097_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009097_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -494,7 +494,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009081_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009081_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -521,7 +521,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009065_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009065_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -548,7 +548,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009049_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009049_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -575,7 +575,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009033_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009033_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -602,7 +602,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2009_Web_Mercator/2009001_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2009_Web_Mercator/2009001_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -629,7 +629,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008353_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008353_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -656,7 +656,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008337_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008337_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -683,7 +683,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008321_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008321_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -710,7 +710,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008305_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008305_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -737,7 +737,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008289_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008289_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -764,7 +764,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008273_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008273_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -791,7 +791,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008257_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008257_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -818,7 +818,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008241_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008241_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -845,7 +845,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008225_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008225_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -872,7 +872,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008209_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008209_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -899,7 +899,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008193_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008193_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -926,7 +926,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008177_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008177_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -953,7 +953,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008161_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008161_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -980,7 +980,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008145_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008145_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1007,7 +1007,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008129_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008129_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1034,7 +1034,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008113_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008113_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1061,7 +1061,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008097_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008097_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1088,7 +1088,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008081_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008081_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1115,7 +1115,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008065_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008065_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1142,7 +1142,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008049_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008049_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1169,7 +1169,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008033_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008033_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1196,7 +1196,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2008_Web_Mercator/2008001_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2008_Web_Mercator/2008001_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1223,7 +1223,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007353_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007353_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1250,7 +1250,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007337_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007337_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1277,7 +1277,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007321_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007321_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1304,7 +1304,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007305_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007305_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1331,7 +1331,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007289_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007289_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1358,7 +1358,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007273_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007273_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1385,7 +1385,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007257_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007257_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1412,7 +1412,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007241_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007241_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1439,7 +1439,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007225_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007225_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1466,7 +1466,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007209_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007209_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1493,7 +1493,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007193_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007193_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1520,7 +1520,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007177_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007177_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1547,7 +1547,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007161_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007161_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1574,7 +1574,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007145_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007145_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1601,7 +1601,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007129_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007129_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1628,7 +1628,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007113_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007113_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1655,7 +1655,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007097_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007097_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1682,7 +1682,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007081_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007081_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1709,7 +1709,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007065_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007065_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1736,7 +1736,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007049_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007049_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1763,7 +1763,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007033_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007033_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1790,7 +1790,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2007_Web_Mercator/2007001_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2007_Web_Mercator/2007001_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1817,7 +1817,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006353_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006353_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1844,7 +1844,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006337_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006337_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1871,7 +1871,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006321_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006321_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1898,7 +1898,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006305_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006305_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1925,7 +1925,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006289_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006289_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1952,7 +1952,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006273_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006273_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -1979,7 +1979,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006257_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006257_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2006,7 +2006,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006241_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006241_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2033,7 +2033,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006225_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006225_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2060,7 +2060,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006209_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006209_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2087,7 +2087,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006193_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006193_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2114,7 +2114,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006177_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006177_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2141,7 +2141,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006161_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006161_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2168,7 +2168,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006145_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006145_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2195,7 +2195,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006129_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006129_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2222,7 +2222,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006113_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006113_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2249,7 +2249,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006097_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006097_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2276,7 +2276,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006081_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006081_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2303,7 +2303,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006065_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006065_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2330,7 +2330,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006049_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006049_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2357,7 +2357,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006033_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006033_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2384,7 +2384,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2006_Web_Mercator/2006001_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2006_Web_Mercator/2006001_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2411,7 +2411,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005353_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005353_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2438,7 +2438,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005337_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005337_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2465,7 +2465,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005321_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005321_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2492,7 +2492,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005305_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005305_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2519,7 +2519,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005289_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005289_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2546,7 +2546,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005273_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005273_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2573,7 +2573,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005257_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005257_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2600,7 +2600,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005241_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005241_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2627,7 +2627,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005225_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005225_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2654,7 +2654,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005209_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005209_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2681,7 +2681,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005193_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005193_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2708,7 +2708,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005177_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005177_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2735,7 +2735,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005161_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005161_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2762,7 +2762,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005145_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005145_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2789,7 +2789,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005129_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005129_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2816,7 +2816,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005113_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005113_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2843,7 +2843,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005097_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005097_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2870,7 +2870,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005081_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005081_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2897,7 +2897,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005065_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005065_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2924,7 +2924,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005049_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005049_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2951,7 +2951,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005033_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005033_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -2978,7 +2978,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2005_Web_Mercator/2005001_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2005_Web_Mercator/2005001_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3005,7 +3005,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004353_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004353_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3032,7 +3032,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004337_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004337_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3059,7 +3059,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004321_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004321_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3086,7 +3086,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004305_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004305_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3113,7 +3113,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004289_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004289_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3140,7 +3140,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004273_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004273_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3167,7 +3167,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004257_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004257_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3194,7 +3194,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004241_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004241_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3221,7 +3221,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004225_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004225_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3248,7 +3248,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004209_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004209_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3275,7 +3275,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004193_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004193_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3302,7 +3302,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004177_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004177_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3329,7 +3329,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004161_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004161_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3356,7 +3356,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004145_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004145_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3383,7 +3383,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004129_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004129_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3410,7 +3410,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004113_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004113_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3437,7 +3437,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004097_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004097_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3464,7 +3464,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004081_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004081_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3491,7 +3491,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004065_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004065_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3518,7 +3518,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004049_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004049_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3545,7 +3545,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004033_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004033_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3572,7 +3572,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2004_Web_Mercator/2004001_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2004_Web_Mercator/2004001_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3599,7 +3599,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003353_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003353_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3626,7 +3626,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003337_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003337_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3653,7 +3653,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003321_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003321_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3680,7 +3680,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003305_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003305_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3707,7 +3707,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003289_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003289_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3734,7 +3734,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003273_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003273_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3761,7 +3761,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003257_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003257_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3788,7 +3788,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003241_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003241_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3815,7 +3815,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003225_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003225_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3842,7 +3842,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003209_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003209_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3869,7 +3869,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003193_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003193_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3896,7 +3896,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003177_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003177_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3923,7 +3923,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003161_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003161_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3950,7 +3950,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003145_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003145_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -3977,7 +3977,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003129_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003129_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -4004,7 +4004,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003113_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003113_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -4031,7 +4031,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003097_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003097_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -4058,7 +4058,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003081_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003081_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -4085,7 +4085,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003065_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003065_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -4112,7 +4112,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003049_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003049_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -4139,7 +4139,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003033_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003033_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        
@@ -4166,7 +4166,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_NDVI/2003_Web_Mercator/2003001_webm.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_NDVI/2003_Web_Mercator/2003001_webm.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
        

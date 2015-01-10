@@ -30,7 +30,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_large_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -63,7 +63,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_qc_flags.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -95,7 +95,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -123,7 +123,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -151,7 +151,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -179,7 +179,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -207,7 +207,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -235,7 +235,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -263,7 +263,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -291,7 +291,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -319,7 +319,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_max_ndvi_position.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -347,7 +347,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_max_ndvi_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -375,7 +375,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -403,7 +403,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -431,7 +431,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -459,7 +459,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -487,7 +487,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_small_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2009/mcd13tqk_a2009_phenparams_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -515,7 +515,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_large_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -543,7 +543,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_qc_flags.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -575,7 +575,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -603,7 +603,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -631,7 +631,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -659,7 +659,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -687,7 +687,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -715,7 +715,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -743,7 +743,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -771,7 +771,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -799,7 +799,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_position.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -827,7 +827,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -855,7 +855,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -883,7 +883,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -911,7 +911,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -939,7 +939,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -967,7 +967,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_small_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2008/mcd13_a2008_phenparams_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -995,7 +995,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_large_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1023,7 +1023,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_qc_flags.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1055,7 +1055,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1083,7 +1083,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1111,7 +1111,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1139,7 +1139,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1167,7 +1167,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1195,7 +1195,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1223,7 +1223,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1251,7 +1251,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1279,7 +1279,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_position.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1307,7 +1307,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1335,7 +1335,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1363,7 +1363,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1391,7 +1391,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1419,7 +1419,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1447,7 +1447,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_small_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2007/mcd13_a2007_phenparams_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1475,7 +1475,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_large_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1503,7 +1503,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_qc_flags.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1535,7 +1535,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1563,7 +1563,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1591,7 +1591,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1619,7 +1619,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1647,7 +1647,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1675,7 +1675,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1703,7 +1703,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1731,7 +1731,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1759,7 +1759,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_position.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1787,7 +1787,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1815,7 +1815,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1843,7 +1843,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1871,7 +1871,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1899,7 +1899,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1927,7 +1927,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_small_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2006/mcd13_a2006_phenparams_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1955,7 +1955,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/01_2005_phen_large_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/01_2005_phen_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -1983,7 +1983,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/04_2005_phen_qc_flags.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/04_2005_phen_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2015,7 +2015,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/05_2005_phen_season_20pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/05_2005_phen_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2043,7 +2043,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/06_2005_phen_season_20pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/06_2005_phen_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2071,7 +2071,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/07_2005_phen_season_20pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/07_2005_phen_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2099,7 +2099,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/08_2005_phen_season_20pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/08_2005_phen_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2127,7 +2127,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/09_2005_phen_season_80pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/09_2005_phen_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2155,7 +2155,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/10_2005_phen_season_80pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/10_2005_phen_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2183,7 +2183,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/11_2005_phen_season_80pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/11_2005_phen_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2211,7 +2211,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/12_2005_phen_season_80pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/12_2005_phen_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2239,7 +2239,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/02_2005_phen_max_ndvi_position.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/02_2005_phen_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2267,7 +2267,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/03_2005_phen_max_ndvi_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/03_2005_phen_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2295,7 +2295,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/13_2005_phen_season_min_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/13_2005_phen_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2323,7 +2323,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/14_2005_phen_season_min_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/14_2005_phen_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2351,7 +2351,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/15_2005_phen_season_min_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/15_2005_phen_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2379,7 +2379,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/16_2005_phen_season_min_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/16_2005_phen_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2407,7 +2407,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2005/17_2005_phen_small_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2005/17_2005_phen_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2435,7 +2435,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/01_2004_phen_large_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/01_2004_phen_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2463,7 +2463,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/04_2004_phen_qc_flags.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/04_2004_phen_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2495,7 +2495,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/05_2004_phen_season_20pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/05_2004_phen_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2523,7 +2523,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/06_2004_phen_season_20pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/06_2004_phen_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2551,7 +2551,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/07_2004_phen_season_20pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/07_2004_phen_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2579,7 +2579,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/08_2004_phen_season_20pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/08_2004_phen_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2607,7 +2607,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/09_2004_phen_season_80pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/09_2004_phen_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2635,7 +2635,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/10_2004_phen_season_80pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/10_2004_phen_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2663,7 +2663,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/11_2004_phen_season_80pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/11_2004_phen_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2691,7 +2691,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/12_2004_phen_season_80pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/12_2004_phen_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2719,7 +2719,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/02_2004_phen_max_ndvi_position.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/02_2004_phen_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2747,7 +2747,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/03_2004_phen_max_ndvi_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/03_2004_phen_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2775,7 +2775,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/13_2004_phen_season_min_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/13_2004_phen_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2803,7 +2803,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/14_2004_phen_season_min_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/14_2004_phen_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2831,7 +2831,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/15_2004_phen_season_min_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/15_2004_phen_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2859,7 +2859,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/16_2004_phen_season_min_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/16_2004_phen_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2887,7 +2887,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2004/17_2004_phen_small_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2004/17_2004_phen_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2915,7 +2915,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/01_2003_phen_large_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/01_2003_phen_large_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2943,7 +2943,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/04_2003_phen_qc_flags.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/04_2003_phen_qc_flags.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -2975,7 +2975,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/05_2003_phen_season_20pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/05_2003_phen_season_20pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3003,7 +3003,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/06_2003_phen_season_20pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/06_2003_phen_season_20pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3031,7 +3031,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/07_2003_phen_season_20pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/07_2003_phen_season_20pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3059,7 +3059,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/08_2003_phen_season_20pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/08_2003_phen_season_20pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3087,7 +3087,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/09_2003_phen_season_80pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/09_2003_phen_season_80pct_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3115,7 +3115,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/10_2003_phen_season_80pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/10_2003_phen_season_80pct_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3143,7 +3143,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/11_2003_phen_season_80pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/11_2003_phen_season_80pct_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3171,7 +3171,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/12_2003_phen_season_80pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/12_2003_phen_season_80pct_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3199,7 +3199,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/02_2003_phen_max_ndvi_position.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/02_2003_phen_max_ndvi_position.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3227,7 +3227,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/03_2003_phen_max_ndvi_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/03_2003_phen_max_ndvi_value.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3255,7 +3255,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/13_2003_phen_season_min_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/13_2003_phen_season_min_position_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3283,7 +3283,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/14_2003_phen_season_min_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/14_2003_phen_season_min_position_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3311,7 +3311,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/15_2003_phen_season_min_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/15_2003_phen_season_min_value_left.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3339,7 +3339,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/16_2003_phen_season_min_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/16_2003_phen_season_min_value_right.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 
@@ -3367,7 +3367,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Phenological_Parameters2/2003/17_2003_phen_small_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Phenological_Parameters2/2003/17_2003_phen_small_integral.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 

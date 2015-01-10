@@ -7,7 +7,7 @@
 ###    ews.layer.tmpl - template for each layer section
 ### by looping over all tif files found in
 ###    * LAYER_DATA_DIR
-###    * DATA_DIR/efetac_nasa/ews
+###    * DATA_DIR/fsdata/efetac_nasa/ews
 ### 
 ###  * create ews1year.map using template ews1year.tpl.map
 ###  * create ews3year.map using template ews3year.tpl.map
@@ -17,6 +17,8 @@
 ###
 ### imports
 ###
+
+#print "debug: at 1"
 
 from osgeo import gdal, osr
 import sys, os, subprocess, datetime, re, shutil, traceback, getopt;
@@ -37,6 +39,8 @@ def choose(al,fo):
 		print "Using Forest-Only"
 		return fo
 
+#print "debug: at 2"
+
 ###
 ### config
 ###
@@ -51,6 +55,8 @@ except:
     exit(-1)
 
 from LegendConfig import *
+
+#print "debug: at 3"
 
 # jdm 5/9/13: for each of these go through the ewsMask and create a relavent entry
 # these should be read out of an external config file but I have hardcoded for now
@@ -70,6 +76,8 @@ ewsMask = [
 ###
 ### function definitions
 ###
+
+#print "debug: at 4"
 
 def rfind(dir, pattern):
     """Recursive find: returns a list of all files located in a directory or any of its descendent directories,
@@ -126,6 +134,8 @@ class Template:
         f.close
     def render(self, dict):
         return self.contents % dict
+
+#print "debug: at 5"
 
 #Start of attempt to create a generic function to get layers
 #At this point its a not completely generic because the color maps is 
@@ -228,6 +238,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                     SERVICE_NAME = "dyna_ews"
                     f_new = openMapfileForWriting("dyna_maps/"+layerName+".map")
                     f_new.write( mapTemplate.render( {
+                                'DATA_DIR'                : DATA_DIR,
                                 'LAYERS'                  : layers,
                                 'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
                                 'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
@@ -252,6 +263,8 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
             layers = layers + layerTemplate.render(tifdict)    
     return layers
 
+#print "debug: at 6"
+
 mapfilesWritten = []
 
 ###
@@ -274,26 +287,33 @@ layerTitles = {}
 ###
 tiflist = []
 
+#print "debug: at 7"
+
 ###
 ### create a tiflist entry for each .tif file in LAYER_DATA_DIR:
 ### these are symlinks of the most recent 3 
 ###
 retroPattern = r'-retro/(.+)/'
+#print "debug: LAYER_DATA_DIR=%s" % LAYER_DATA_DIR
 for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
+    #print "debug: at 7.1"
     dynaList  = []
     tif = re.sub('^' + LAYER_DATA_DIR + '/', '', tif)
     m = re.search(retroPattern, tif)
+    #print "debug: at 7.2"
     if m != None:
         baseLineFolder = m.group(1) + "_"
     else:
         baseLineFolder = ""
     tif_fullpath = LAYER_DATA_DIR + '/' + tif;
 
+    #print "debug: at 7.3"
     try:
         proj = getproj(tif_fullpath)
     except:
 	continue
 
+    #print "debug: at 7.4"
     if tif.startswith("rsac"):
         group          = "RSAC-FHTET"
         group_abstract = "Layers uploaded by RSAC-FHTET"
@@ -307,11 +327,13 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
         colormapcsv    = "efetac_nasa_percent_change_cmap.csv"
         keyimage       = getLegend(group)
 
+    #print "debug: at 7.5"
     modDate = getModDate(tif_fullpath)
     nameform = re.sub(r'^.*/', '', tif)
     nameformStart = re.sub(r'_.*$', '', nameform)
     layerNameForm = nameformStart
 
+    #print "debug: at 7.6"
     layerName  = group + "_" + baseLineFolder + layerNameForm    # change this to be like "EFETAC-NASA_3yr-baseline_current"
     layerTitle = tif
     tiflist.append({ 'TIF'             : tif,
@@ -330,6 +352,7 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
 					 'MODDATE'	       : modDate,
                      'MASK'            : ''
 					})
+    #print "debug: at 7.7"
     dynaList.append({ 'TIF'             : tif,
 					 'PROJVALID'       : len(proj) > 0,
 					 'PROJ'            : formatproj(proj,10),
@@ -347,6 +370,7 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
                      'MASK'            : ''
 					})                    
     layerTitles[layerName] = layerTitle
+    #print "debug: at 7.8"
     
     #Mask are only for tacs nasa products
     if not tif.startswith("rsac"):
@@ -383,16 +407,24 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
                              'MODDATE'	       : modDate,
                              'MASK'			   : 'MASK ' + mask['name']
                              })  
+    #print "debug: at 7.9"
     #Perform layer-level creation of dynamic map files:
     layerTemplate = Template("ews.layer.tmpl")
     layers = ""
     for tifdict in dynaList:
+        #if layerName != "EFETAC-NASA_1YrBaseline_previous1":
+        #    continue
         if tifdict['PROJVALID']:
+            #print "1: yaya layerName = %s" % layerName
+            #print tifdict
             layers = layers + layerTemplate.render(tifdict)    
             mapTemplate = Template("ews.map.tmpl")
             SERVICE_NAME = "dyna_ews"
-            f_new = openMapfileForWriting("dyna_maps/"+layerName+".map")
-            f_new.write( mapTemplate.render( {
+            THIS_MAPFILE="dyna_maps/"+layerName+".map"
+            #print "writing mapfile: %s" % THIS_MAPFILE
+            f_new = openMapfileForWriting(THIS_MAPFILE)
+            THIS_DATA = mapTemplate.render( {
+                        'DATA_DIR'                : DATA_DIR,
                         'LAYERS'                  : layers,
                         'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
                         'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
@@ -405,14 +437,18 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
                         'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
                         'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
                         'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
-                        } ) )
+                        } )
+            #print THIS_DATA
+            f_new.write( THIS_DATA )
             f_new.close() 
                              
+#print "debug: at 8"
+
 ###
-### create a tiflist entry for each .tif file in DATA_DIR+"/efetac_nasa/ews:
+### create a tiflist entry for each .tif file in DATA_DIR+"/fsdata/efetac_nasa/ews:
 ### these are the actual data files as they are dropped off via ftp
 ###
-ARCHIVE_DIR = DATA_DIR + "/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear") #DATA_DIR is "/flood/fsdata" currently
+ARCHIVE_DIR = DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear") #DATA_DIR is "/flood" currently
 for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".tif")], reverse=False):
     try:
         tif = re.sub('^' + ARCHIVE_DIR + '/', '', tif)
@@ -478,11 +514,13 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
     except:
         continue
 
+#print "debug: at 9"
+
 ###
 ### add in the rsac fhtet files to be available in an archive format
 ### these will go in ews.map also but will utilize a diff color map: rsac_fhtet_percent_change_cmap.cmap
 ###
-ARCHIVE_DIR = DATA_DIR + "/rsac_fhtet/ews" #DATA_DIR is "/flood/fsdata" currently
+ARCHIVE_DIR = DATA_DIR + "/fsdata/rsac_fhtet/ews" #DATA_DIR is "/flood" currently
 for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".tif")], reverse=False):
     try:
         tif = re.sub('^' + ARCHIVE_DIR + '/', '', tif)
@@ -528,6 +566,8 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
         continue
 
 
+#print "debug: at 10"
+
 ######################################
 
 ###
@@ -543,20 +583,28 @@ for tifdict in tiflist:
 
 LAYERS1 = LAYERS
         
+#print "debug: at 11"
+
 ###
 ### Append to ews.map FILE Seasonally-Adjusted Change from All-Year pheno-cluster max (MUC):
 ###
-LAYERS2 = getLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", True)
+LAYERS2 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", True)
+
+#print "debug: at 12"
 
 ###
 ### Append to ews.map FILE Seasonally-Adjusted Change from All-Year mean of maximums (MMAX):
 ###
-LAYERS3 = getLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", True)
+LAYERS3 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", True)
+
+#print "debug: at 13"
 
 ###
 ### write out ews.map, using EPSG 3785 (WebMercator),
 ### and ewswgs84, using EPSG 4326, and ewswcs, for serving WCS (using MapServer 6):
 ###
+
+#print "debug: at 14"
 
 LAYERSCOMBINED = LAYERS1 + LAYERS2 + LAYERS3
 
@@ -564,6 +612,7 @@ mapTemplate = Template("ews.map.tmpl")
 SERVICE_NAME = "ews"
 f_new = openMapfileForWriting("ews.map")
 f_new.write( mapTemplate.render( {
+            'DATA_DIR'                : DATA_DIR,
             'LAYERS'                  : LAYERSCOMBINED,
             'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
             'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
@@ -602,10 +651,12 @@ f_new.close()
             # } ) )
 # f_new.close()
 
+#print "debug: at 15"
 
 f_new = openMapfileForWriting("ewswgs84.map")
 SERVICE_NAME = "ewswgs84"
 f_new.write( mapTemplate.render( {
+            'DATA_DIR'                : DATA_DIR,
             'LAYERS'                  : LAYERS,
             'WMS_SRS'                 : "EPSG:4326 EPSG:900913",
             'MAPFILE_PROJECTION'      : '"init=epsg:4326"',
@@ -621,15 +672,20 @@ f_new.write( mapTemplate.render( {
             } ) )
 f_new.close()
 
+#print "debug: at 16"
+
 wcslayerTemplate = Template("ewswcs.layer.tmpl")
 LAYERS = ""
 for tifdict in tiflist:
     if tifdict['PROJVALID']:
         LAYERS = LAYERS + wcslayerTemplate.render( tifdict )
 		
+#print "debug: at 17"
+
 f_new = openMapfileForWriting("ewswcs.map")
 SERVICE_NAME = "ewswcs"
 f_new.write( mapTemplate.render( {
+            'DATA_DIR'                : DATA_DIR,
             'LAYERS'                  : LAYERS,
 #           'EPSG'                    : "2163",
             'WMS_SRS'                 : "EPSG:2163",
@@ -647,6 +703,8 @@ f_new.write( mapTemplate.render( {
 f_new.close()
 
 
+#print "debug: at 18"
+
 ###-------DONE WITH curr, prev1 and prev2 SECTION except that All Year is done above------------------
 ###-------Now on with the 1, 3 and All year parts-----------------------------------------------------
 
@@ -654,7 +712,7 @@ f_new.close()
 ###
 ### CREATE ews1year.map FILE:
 ###
-LAYERS1 = getLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", True)
+LAYERS1 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", True)
 # template = Template("ews_gen.tpl.map")
 # #print LAYERS
 # f_new = openMapfileForWriting("ews1year.map")
@@ -679,10 +737,12 @@ LAYERS1 = getLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "e
             # } ) )
 # f_new.close()
 
+#print "debug: at 19"
+
 ###
 ### Append to ews1year.map FILE Early Detect (ALC) Change from previous year:
 ###
-LAYERS2 = getLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR"), "ews_gen.layer.tpl.map", "EFETAC-NASA_ALC1YR", ".tif", "no", True)
+LAYERS2 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR"), "ews_gen.layer.tpl.map", "EFETAC-NASA_ALC1YR", ".tif", "no", True)
 LAYERSCOMBINED = LAYERS1 + LAYERS2
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews1year.map")
@@ -707,10 +767,12 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+#print "debug: at 20"
+
 ###
 ### CREATE ewswcs1year.map FILE:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "yes", False)
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "yes", False)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ewswcs1year.map")
 SERVICE_NAME = "ewswcs1year"
@@ -734,10 +796,12 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+#print "debug: at 21"
+
 ###
 ### Create the ews3year.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no", True)
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no", True)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews3year.map")
 SERVICE_NAME = "ews3year"
@@ -761,10 +825,12 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+#print "debug: at 22"
+
 ###
 ### Create the ewswcs3year.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "yes", False)
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "yes", False)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ewswcs3year.map")
 SERVICE_NAME = "ewswcs3year"
@@ -788,10 +854,12 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+#print "debug: at 23"
+
 ###
 ### Create the ewstruecolor.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/efetac_nasa/TrueColorData", "truecolor.layer.tpl.map", "EFETAC-NASA_TC", ".img", "no", False)
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/TrueColorData", "truecolor.layer.tpl.map", "EFETAC-NASA_TC", ".img", "no", False)
 template = Template("ewstruecolor.tpl.map")
 f_new = openMapfileForWriting("ewstruecolor.map")
 SERVICE_NAME = "ewstruecolor"
@@ -816,6 +884,8 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+#print "debug: at 24"
+
 ###
 ### Create the vlayers.map file:
 ###
@@ -828,6 +898,8 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+#print "debug: at 25"
+
 ###
 ### Create the derivatives.map file:
 ###
@@ -838,6 +910,8 @@ f_new.write( template.render( {
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "derivatives")
             } ) )
 f_new.close()
+
+#print "debug: at 26"
 
 ###
 ### Create the modisndvi.map file:
@@ -850,6 +924,8 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+#print "debug: at 27"
+
 ###
 ### Create the parameters.map file:
 ###
@@ -860,6 +936,8 @@ f_new.write( template.render( {
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "parameters")
             } ) )
 f_new.close()
+
+#print "debug: at 28"
 
 ###
 ### Create the integrals.map file:
@@ -872,6 +950,8 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+#print "debug: at 29"
+
 ###
 ### Create the rlayers.map file:
 ###
@@ -882,6 +962,8 @@ f_new.write( template.render( {
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "rlayers")
             } ) )
 f_new.close()
+
+#print "debug: at 30"
 
 ###
 ### Create the wlayers.map file:
@@ -894,7 +976,19 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+###
+### Create the aklayers.map file:
+###
+template = Template("aklayers.tpl.map")
+f_new = openMapfileForWriting("aklayers.map")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR
+            } ) )
+f_new.close()
+
 #################################################################################################
+
+#print "debug: at 31"
 
 ###
 ### Create symlinks for the map files, and change a few permission settings
@@ -904,6 +998,8 @@ os.system("chmod a+w ../var/log");
 os.system("chmod a+w ../var/log/*.log > /dev/null 2>&1");
 os.system("chmod g-w ../html/*");
 
+#print "debug: at 32"
+
 ###
 ### write out the layer titles file:
 ###
@@ -911,6 +1007,8 @@ f_out = open("layerTitles.txt", "w");
 for layerName in layerTitles:
     f_out.write("%s:%s\n" % (layerName, layerTitles[layerName]))
 f_out.close()
+
+#print "debug: at 33"
 
 ###
 ### write out the html/index.html file:
@@ -926,6 +1024,8 @@ f_out.write(interp("""
 ForWarn WMS addresses are:
 <ul>
 """))
+
+#print "debug: at 34"
 
 for mapfile in mapfilesWritten:
     service = re.sub(r'\.map$', '', mapfile)

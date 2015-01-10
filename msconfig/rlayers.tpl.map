@@ -87,7 +87,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Elevation/SRTM_231m_DEM.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Elevation/SRTM_231m_DEM.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
@@ -116,7 +116,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Elevation/SRTM_Aspect_231m.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Elevation/SRTM_Aspect_231m.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
@@ -146,7 +146,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/MODIS/CONUS_Elevation/hillshade_231m.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Elevation/hillshade_231m.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
@@ -178,8 +178,8 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/ForestGroups.img
-		#DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/forest_group2.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/ForestGroups.img
+		#DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/forest_group2.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -207,8 +207,8 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        #DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/foresttype.img
-		DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/conus_foresttype6.img
+        #DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/foresttype.img
+		DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/conus_foresttype6.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -236,7 +236,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/CONUS_FOREST_BIOMASS.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/CONUS_FOREST_BIOMASS.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -265,7 +265,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/carbon_8bit_ag_mg_ha.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/carbon_8bit_ag_mg_ha.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -287,7 +287,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/PRECIP_1971_2000_INCHES.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/PRECIP_1971_2000_INCHES.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -308,7 +308,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMAX_NORMAL_1970_2000.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMAX_NORMAL_1970_2000.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -330,7 +330,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMIN_NORMAL_1970_2000.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/PRISM_TMIN_NORMAL_1970_2000.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
@@ -359,7 +359,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0201.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0201.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -386,7 +386,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0301.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0301.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -413,7 +413,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0401.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0401.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -440,7 +440,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0501.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0501.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -467,7 +467,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0601.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0601.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -494,7 +494,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0701.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0701.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -521,7 +521,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0801.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0801.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -548,7 +548,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0901.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_0901.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -575,7 +575,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_1001.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_1001.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -602,7 +602,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_1101.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_1101.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -629,7 +629,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_1201.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2010_1201.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -656,7 +656,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0101.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0101.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -683,7 +683,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0201.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0201.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -710,7 +710,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0301.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0301.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -737,7 +737,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0401.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0401.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -764,7 +764,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0501.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0501.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -791,7 +791,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0601.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0601.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -818,7 +818,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0701.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0701.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -845,7 +845,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0801.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0801.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -872,7 +872,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0901.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_0901.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -899,7 +899,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_1001.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_1001.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -926,7 +926,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_1101.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_1101.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -953,7 +953,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_1201.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2011_1201.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -980,7 +980,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2012_0101.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2012_0101.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -1007,7 +1007,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2012_0201.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/percent_precip_2012_0201.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/precip.cmap"
@@ -1034,7 +1034,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/conus_federal_lands_laea_231p66m_us4b.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/conus_federal_lands_laea_231p66m_us4b.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -1061,7 +1061,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/nlcd2006_aea.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/nlcd2006_aea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -1088,7 +1088,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/gapnat_aea.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/gapnat_aea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	INCLUDE "cmaps/gapnat.cmap"
@@ -1114,7 +1114,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/fbfm40_231maj_laea.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fbfm40_231maj_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/LFFM40.cmap"
@@ -1140,7 +1140,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/evt_231maj_laea.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/evt_231maj_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/EVT.cmap"
@@ -1166,7 +1166,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/DeciduousDecline.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/DeciduousDecline.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/decadalChange.cmap"
@@ -1192,7 +1192,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/DeciduousThrive.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/DeciduousThrive.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/decadalChange.cmap"
@@ -1218,7 +1218,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/EvergreenDecline.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/EvergreenDecline.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/decadalChange.cmap"
@@ -1244,7 +1244,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/EvergreenThrive.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/EvergreenThrive.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/decadalChange.cmap"
@@ -1270,7 +1270,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1296,7 +1296,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1323,7 +1323,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1350,7 +1350,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1377,7 +1377,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1404,7 +1404,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1431,7 +1431,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1458,7 +1458,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1485,7 +1485,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1512,7 +1512,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1539,7 +1539,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1566,7 +1566,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1592,7 +1592,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1619,7 +1619,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1646,7 +1646,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1673,7 +1673,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1700,7 +1700,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1727,7 +1727,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1754,7 +1754,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1781,7 +1781,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1808,7 +1808,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1835,7 +1835,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1862,7 +1862,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1888,7 +1888,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1915,7 +1915,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1942,7 +1942,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1969,7 +1969,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -1996,7 +1996,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -2023,7 +2023,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -2050,7 +2050,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -2077,7 +2077,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -2104,7 +2104,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -2131,7 +2131,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    #INCLUDE "cmaps/gapnat.cmap"
@@ -2158,8 +2158,8 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
-		#DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/test500.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+		#DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/test500.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno500.cmap"
@@ -2185,7 +2185,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         INCLUDE "cmaps/Pheno500.cmap"
@@ -2212,7 +2212,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno500.cmap"
@@ -2239,7 +2239,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno500.cmap"
@@ -2266,7 +2266,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno500.cmap"
@@ -2293,7 +2293,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno500.cmap"
@@ -2320,7 +2320,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno500.cmap"
@@ -2347,7 +2347,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno500.cmap"
@@ -2374,7 +2374,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno500.cmap"
@@ -2401,7 +2401,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno500.cmap"
@@ -2428,7 +2428,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno500.cmap"
@@ -2455,7 +2455,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno1000.cmap"
@@ -2481,7 +2481,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno1000.cmap"
@@ -2508,7 +2508,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno1000.cmap"
@@ -2535,7 +2535,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno1000.cmap"
@@ -2562,7 +2562,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno1000.cmap"
@@ -2589,7 +2589,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno1000.cmap"
@@ -2616,7 +2616,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno1000.cmap"
@@ -2643,7 +2643,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno1000.cmap"
@@ -2670,7 +2670,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno1000.cmap"
@@ -2697,7 +2697,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno1000.cmap"
@@ -2724,7 +2724,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno1000.cmap"
@@ -2751,7 +2751,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno5000.cmap"
@@ -2777,7 +2777,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno5000.cmap"
@@ -2804,7 +2804,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno5000.cmap"
@@ -2831,7 +2831,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno5000.cmap"
@@ -2858,7 +2858,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno5000.cmap"
@@ -2885,7 +2885,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno5000.cmap"
@@ -2912,7 +2912,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno5000.cmap"
@@ -2939,7 +2939,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno5000.cmap"
@@ -2966,7 +2966,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno5000.cmap"
@@ -2993,7 +2993,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 	    INCLUDE "cmaps/Pheno5000.cmap"
@@ -3020,7 +3020,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/AncillaryData/2013_Crops.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/2013_Crops.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -3050,7 +3050,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/Mask/default_forest.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/default_forest.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -3072,7 +3072,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/Mask/agriculture.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/agriculture.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -3094,7 +3094,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/Mask/conifer.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/conifer.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -3116,7 +3116,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/Mask/hardwood.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/hardwood.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -3138,7 +3138,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/Mask/grass.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/grass.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -3160,7 +3160,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/Mask/conifer_hardwood.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/conifer_hardwood.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -3182,7 +3182,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/Mask/nonvegetated.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nonvegetated.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -3204,7 +3204,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/Mask/shrubland.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/shrubland.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -3226,7 +3226,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/Mask/urban.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/urban.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -3248,7 +3248,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /flood/fsdata-internal/efetac_nasa/Mask/wetland.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/wetland.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
