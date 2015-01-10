@@ -81,7 +81,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-	DATA "the_geom FROM (select round(ps.pt_id,0) as pt_id, ps.the_geom, ps.gid, coalesce(pda.agent_list,'no agents reported within 75km') as agents from pestproxshapes ps left outer join pestproxdataagentsgt pda on ps.pt_id=pda.pt_id) as new_table USING UNIQUE gid USING SRID=4326"
+	DATA "geom FROM (select round(ps.pt_id,0) as pt_id, ps.geom, ps.gid, coalesce(pda.agent_list,'no agents reported within 75km') as agents from pestproxshapes ps left outer join pestproxdataagentsgt pda on ps.pt_id=pda.pt_id) as new_table USING UNIQUE gid USING SRID=4326"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
@@ -112,7 +112,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from cities"
+        DATA             "geom from cities"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         
         STATUS           OFF
@@ -145,7 +145,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from dtl_states"
+        DATA             "geom from dtl_states"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -177,7 +177,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from dtl_counties"
+        DATA             "geom from dtl_counties"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -208,7 +208,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from federal_lands"
+        DATA             "geom from federal_lands"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -239,7 +239,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from interstates"
+        DATA             "geom from interstates"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -271,7 +271,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from roads"
+        DATA             "geom from roads"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -300,7 +300,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
 		FILTER           "year = 1999"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
@@ -335,7 +335,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
 		FILTER           "year = 2011"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
@@ -370,7 +370,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
 		FILTER           "year = 2012"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
@@ -405,7 +405,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
 		FILTER           "year = 2013"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
@@ -440,7 +440,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
 		FILTER           "year = 2010"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
@@ -478,7 +478,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
         FILTER           "year = 2009"
 
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
@@ -518,7 +518,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
         FILTER           "year = 2008"
 
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
@@ -560,7 +560,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -600,7 +600,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -640,7 +640,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -680,7 +680,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -720,7 +720,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -760,7 +760,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -800,7 +800,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -840,7 +840,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from mtbs_conus_perims_1999_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -878,7 +878,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2013"
+        DATA             "geom from fhm_ads_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
@@ -994,7 +994,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2012"
+        DATA             "geom from fhm_ads_2012"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
@@ -1109,7 +1109,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2011"
+        DATA             "geom from fhm_ads_2011"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
@@ -1224,7 +1224,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2010"
+        DATA             "geom from fhm_ads_2010"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
@@ -1339,7 +1339,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2002"
+        DATA             "geom from fhm_ads_2002"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
@@ -1454,7 +1454,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2001"
+        DATA             "geom from fhm_ads_2001"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
@@ -1569,7 +1569,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2000"
+        DATA             "geom from fhm_ads_2000"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
@@ -1687,7 +1687,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2009"
+        DATA             "geom from fhm_ads_2009"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -1807,7 +1807,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2008"
+        DATA             "geom from fhm_ads_2008"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -1926,7 +1926,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2007"
+        DATA             "geom from fhm_ads_2007"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2045,7 +2045,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2006"
+        DATA             "geom from fhm_ads_2006"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2164,7 +2164,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2005"
+        DATA             "geom from fhm_ads_2005"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2283,7 +2283,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2004"
+        DATA             "geom from fhm_ads_2004"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2402,7 +2402,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fhm_ads_2003"
+        DATA             "geom from fhm_ads_2003"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2521,7 +2521,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from streams_waterbodies"
+        DATA             "geom from streams_waterbodies"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2552,7 +2552,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from hydrologic_units_huc6_albers"
+        DATA             "geom from hydrologic_units_huc6_albers"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2583,7 +2583,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from new_development_by_huc8_2000_2030"
+        DATA             "geom from new_development_by_huc8_2000_2030"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2614,7 +2614,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from ecoregions_bailey"
+        DATA             "geom from ecoregions_bailey"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2645,7 +2645,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from ecoregions_omernik"
+        DATA             "geom from ecoregions_omernik"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2676,7 +2676,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from hailswaths"
+        DATA             "geom from hailswaths"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2708,7 +2708,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from windswaths"
+        DATA             "geom from windswaths"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2740,7 +2740,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from tornadoes"
+        DATA             "geom from tornadoes"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2772,7 +2772,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from neondomains"
+        DATA             "geom from neondomains"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2803,7 +2803,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from fws_lcc"
+        DATA             "geom from fws_lcc"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -2831,7 +2831,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2001"
+        DATA             "geom from modis_fire_2001"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
@@ -2860,7 +2860,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2002"
+        DATA             "geom from modis_fire_2002"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
@@ -2889,7 +2889,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2003"
+        DATA             "geom from modis_fire_2003"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
@@ -2918,7 +2918,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2004"
+        DATA             "geom from modis_fire_2004"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
@@ -2947,7 +2947,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2005"
+        DATA             "geom from modis_fire_2005"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
@@ -2976,7 +2976,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2006"
+        DATA             "geom from modis_fire_2006"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
@@ -3005,7 +3005,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2007"
+        DATA             "geom from modis_fire_2007"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
@@ -3034,7 +3034,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2008"
+        DATA             "geom from modis_fire_2008"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
@@ -3063,7 +3063,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2009"
+        DATA             "geom from modis_fire_2009"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
@@ -3092,7 +3092,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2010"
+        DATA             "geom from modis_fire_2010"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
@@ -3122,7 +3122,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2011"
+        DATA             "geom from modis_fire_2011"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -3152,7 +3152,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2012"
+        DATA             "geom from modis_fire_2012"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -3181,7 +3181,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_2013"
+        DATA             "geom from modis_fire_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -3212,7 +3212,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from ozone_sites"
+        DATA             "geom from ozone_sites"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -3244,7 +3244,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from national_forests"
+        DATA             "geom from national_forests"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -3285,7 +3285,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from wildernesses"
+        DATA             "geom from wildernesses"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -3324,7 +3324,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "the_geom from modis_fire_detections_current_year"
+        DATA             "geom from modis_fire_detections_current_year"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
