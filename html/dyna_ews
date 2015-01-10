@@ -3,6 +3,8 @@
 import sys, cgi
 sys.path.append("../msconfig")
 import CGIUtils
+sys.path.append("../var")
+from Config import MAPSERVER_EXE
 
 params = cgi.FieldStorage()
 
@@ -14,6 +16,6 @@ layerName = str(params.getvalue("LAYERS")).split('Mask')[0]
 #mapFile.write(layerName[0])
 #mapFile.close()
 
-MAPSERV = '../cgi-bin/mapserv-pre-6.2-70d2510636.exe'
+MAPFILE = '../msconfig/dyna_maps/'+layerName+'.map'
 
-CGIUtils.mapserv_inject_mapfile('../msconfig/dyna_maps/'+layerName+'.map', MAPSERV)
+CGIUtils.mapserv_inject_mapfile(MAPFILE, MAPSERVER_EXE)
