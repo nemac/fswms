@@ -25,6 +25,7 @@ msconfig/parameters.map
 msconfig/rlayers.map
 msconfig/vlayers.map
 msconfig/wlayers.map
+msconfig/aklayers.map
 msconfig/linkdir
 msconfig/NRTLayerLID.csv
 msconfig/DRTLayerLID.csv
