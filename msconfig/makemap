@@ -982,7 +982,8 @@ f_new.close()
 template = Template("aklayers.tpl.map")
 f_new = openMapfileForWriting("aklayers.map")
 f_new.write( template.render( {
-            'DATA_DIR'     : DATA_DIR
+            'DATA_DIR'     : DATA_DIR,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "aklayers")
             } ) )
 f_new.close()
 
