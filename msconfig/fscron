@@ -7,11 +7,11 @@
 
 export PYTHONPATH=/usr/local/lib64/python2.6/site-packages
 
-./fileprocessor
+./fileprocessor -al
 
-./makemap > ../var/log/makemap.log  2>&1
+./makemap -al > ../var/log/makemap.log  2>&1
 
-./makeviewerconfig
+./makeviewerconfig -al
 
 #./makeicon -q -W 137 -p 0 -h 15 -f 8 -t '% change' -l -100 -r 100 efetac_nasa_percent_change_cmap.csv legendicons/efetac_nasa.png
 #./makeicon -q -W 137 -p 0 -h 15 -f 8 -t '% change' -l -100 -r 100 rsac_fhtet_percent_change_cmap.csv legendicons/rsac_fhtet.png
