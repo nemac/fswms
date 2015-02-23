@@ -293,111 +293,7 @@ MAP
             "gml_include_items"  "feature,name,state"
         END  # end METADATA
     END # end Layer
-	LAYER #
-        NAME mtbs_1999
-        PROJECTION
-            "init=epsg:4326"
-        END
-        CONNECTIONTYPE   postgis
-        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
-		FILTER           "year = 1999"
-		
-        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
-        STATUS           OFF
-        TYPE             POLYGON
-        DUMP             TRUE
-        HEADER           ./templates/layer_query_header.html
-        TEMPLATE         ./templates/layer_query_body.html
-        CLASS
-            NAME "MTBS Fire 1999"
-            STYLE
-                COLOR        255 255 255
-                OUTLINECOLOR 32 32 32
-            END
-            STYLE
-                SYMBOL "hatchsymbol"
-                COLOR 210 105 30
-                SIZE 2
-                ANGLE 45
-            END # STYLE
-        END
-        METADATA
-            "wms_title"          "mtbs_1999"
-            "wms_abstract"       "mtbs_1999"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
-        END  # end METADATA
-    END # end Layer
-	LAYER #
-        NAME mtbs_2011
-        PROJECTION
-            "init=epsg:4326"
-        END
-        CONNECTIONTYPE   postgis
-        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
-		FILTER           "year = 2011"
-		
-        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
-        STATUS           OFF
-        TYPE             POLYGON
-        DUMP             TRUE
-        HEADER           ./templates/layer_query_header.html
-        TEMPLATE         ./templates/layer_query_body.html
-        CLASS
-            NAME "MTBS Fire 2011"
-            STYLE
-                COLOR        255 255 255
-                OUTLINECOLOR 32 32 32
-            END
-            STYLE
-                SYMBOL "hatchsymbol"
-                COLOR 210 105 30
-                SIZE 2
-                ANGLE 45
-            END # STYLE
-        END
-        METADATA
-            "wms_title"          "mtbs_2011"
-            "wms_abstract"       "mtbs_2011"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
-        END  # end METADATA
-    END # end Layer
-	LAYER #
-        NAME mtbs_2012
-        PROJECTION
-            "init=epsg:4326"
-        END
-        CONNECTIONTYPE   postgis
-        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
-		FILTER           "year = 2012"
-		
-        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
-        STATUS           OFF
-        TYPE             POLYGON
-        DUMP             TRUE
-        HEADER           ./templates/layer_query_header.html
-        TEMPLATE         ./templates/layer_query_body.html
-        CLASS
-            NAME "MTBS Fire 2012"
-            STYLE
-                COLOR        255 255 255
-                OUTLINECOLOR 32 32 32
-            END
-            STYLE
-                SYMBOL "hatchsymbol"
-                COLOR 210 105 30
-                SIZE 2
-                ANGLE 45
-            END # STYLE
-        END
-        METADATA
-            "wms_title"          "mtbs_2012"
-            "wms_abstract"       "mtbs_2012"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
-        END  # end METADATA
-    END # end Layer	
+	
 	LAYER #
         NAME mtbs_2013
         PROJECTION
@@ -405,7 +301,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
 		FILTER           "year = 2013"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
@@ -433,6 +329,79 @@ MAP
             "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
         END  # end METADATA
     END # end Layer
+	
+	LAYER #
+        NAME mtbs_2012
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
+		FILTER           "year = 2012"
+		
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MTBS Fire 2012"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "mtbs_2012"
+            "wms_abstract"       "mtbs_2012"
+            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
+        NAME mtbs_2011
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
+		FILTER           "year = 2011"
+		
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MTBS Fire 2011"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "mtbs_2011"
+            "wms_abstract"       "mtbs_2011"
+            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+        END  # end METADATA
+    END # end Layer
+	
 	LAYER #
         NAME mtbs_2010
         PROJECTION
@@ -440,7 +409,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
 		FILTER           "year = 2010"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
@@ -478,7 +447,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
         FILTER           "year = 2009"
 
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
@@ -518,7 +487,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
         FILTER           "year = 2008"
 
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
@@ -560,7 +529,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -600,7 +569,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -640,7 +609,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -680,7 +649,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -720,7 +689,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -760,7 +729,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -800,7 +769,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -840,7 +809,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from mtbs_conus_perims_1999_2013"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -871,6 +840,145 @@ MAP
         END  # end METADATA
     END # end Layer
 
+	LAYER #
+        NAME mtbs_1984_1999
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
+		FILTER           "year <= 1999"
+		
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MTBS Fire 1984-1999"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "mtbs_1984_1999"
+            "wms_abstract"       "mtbs_1984_1999"
+            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+        END  # end METADATA
+    END # end Layer	
+	
+	LAYER #
+        NAME mtbs_2000_2013
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_fire_mtbs_1984_2013"
+		FILTER           "year >= 2000"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MTBS/GEOMAC Fire 2000-2014"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "mtbs_2000_2013"
+            "wms_abstract"       "mtbs_2000_2013"
+            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
+        NAME geomac_2014
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_fireperims_geomac_2014"		
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "GEOMAC Fire 2014"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "geomac_2014"
+            "wms_abstract"       "geomac_2014"
+            "gml_include_items"  "year,fire_name,fire_num,acres,date_"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
+        NAME mtbs_2000_2013_geomac_2014
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_mtbs_2000_2013_geomac_2014"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MTBS/GEOMAC Fire 2000-2014"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "mtbs_2000_2013_geomac_2014"
+            "wms_abstract"       "mtbs_2000_2013_geomac_2014"
+            "gml_include_items"  "year,year_,fire_name,fire_id,fire_nam_1,fire_num,acres,acres_1,date_,startmonth,startday,firetype,inc_num,inciweb_id"
+        END  # end METADATA
+    END # end Layer
+	
     LAYER #
         NAME ads_2013
         PROJECTION
@@ -3203,6 +3311,35 @@ MAP
             "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer	
+	LAYER #
+        NAME modis-fire-2014
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from modis_fire_2014"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2014"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2014"
+            "wms_abstract"       "modis-fire-2014"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
     LAYER # 
         NAME ozone_sites
         

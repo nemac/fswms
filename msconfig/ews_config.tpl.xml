@@ -248,139 +248,7 @@
 	 identify="true" 
 	 name="Hotspots – Year to date (RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/cumulative-current-year.png"/>
-    </wmsSubgroup>
-	<wmsSubgroup label="Historical MODIS Hotspots">
-	  <wmsLayer 
-	 lid="MFONE"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2001" 
-	 styles="default" 
-	 identify="true" 
-	 name="2001 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2001.png"/>
-	  <wmsLayer 
-	 lid="MFTWO"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2002" 
-	 styles="default" 
-	 identify="true" 
-	 name="2002 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2002.png"/>
-	  <wmsLayer 
-	 lid="MFTHREE"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2003" 
-	 styles="default" 
-	 identify="true" 
-	 name="2003 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2003.png"/>
-	  <wmsLayer 
-	 lid="MFFOUR"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2004" 
-	 styles="default" 
-	 identify="true" 
-	 name="2004 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2004.png"/>
-	  <wmsLayer 
-	 lid="MFFIVE"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2005" 
-	 styles="default" 
-	 identify="true" 
-	 name="2005 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2005.png"/>
-	  <wmsLayer 
-	 lid="MFSIX"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2006" 
-	 styles="default" 
-	 identify="true" 
-	 name="2006 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2006.png"/>
-	  <wmsLayer 
-	 lid="MFSEVEN"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2007" 
-	 styles="default" 
-	 identify="true" 
-	 name="2007 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2007.png"/>
-	  <wmsLayer 
-	 lid="MFEIGHT"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2008" 
-	 styles="default" 
-	 identify="true" 
-	 name="2008 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2008.png"/>
-	  <wmsLayer 
-	 lid="MFNINE"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2009" 
-	 styles="default" 
-	 identify="true" 
-	 name="2009 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2009.png"/>
-  	 <wmsLayer 
-	 lid="BRK"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2010" 
-	 styles="default" 
-	 identify="true" 
-	 name="2010 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2010.png"/>
-     <wmsLayer 
-	 lid="BRJ"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2011" 
-	 styles="default" 
-	 identify="true" 
-	 name="2011 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2011.png"/>
-	  <wmsLayer 
-	 lid="MODISFIREAAA"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2012" 
-	 styles="default" 
-	 identify="true" 
-	 name="2012 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2012.png"/>
-	  <wmsLayer 
-	 lid="MODISFIREAAB"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="modis-fire-2013" 
-	 styles="default" 
-	 identify="true" 
-	 name="2013 Hotspots (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2013.png"/>	 
-	</wmsSubgroup>	 
+    </wmsSubgroup>	 
     <wmsSubgroup label="Historical Large Fire Perimeters">
 <!--       <wmsLayer 
 	 lid="FIREAAB"
@@ -392,7 +260,27 @@
 	 identify="true" 
 	 name="Previous MODIS (GeoMAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/PerimetersInactive.jpg"/>     --> 
-     <wmsLayer 
+	  <wmsLayer 
+	 lid="MTBSABA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_1984_1999" 
+	 styles="default" 
+	 identify="true" 
+	 name="1984-1999 Combined (MTBS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_1984_1999&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 <wmsLayer 
+	 lid="MTBSABB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs_2000_2013_geomac_2014" 
+	 styles="default" 
+	 identify="true" 
+	 name="2000-14 Combined (MTBS/GEOMAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2000_2013_geomac_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 <wmsLayer 
 	 lid="AAI"
 	 visible="false" 
 	 url="%(SERVER_URL)s/ews?TRANSPARENT=true" 
@@ -400,18 +288,8 @@
 	 layers="firescars" 
 	 styles="default" 
 	 identify="true" 
-	 name="2000-13 Combined Perimeters" 
+	 name="2000-13 Combined (Fire Scars)" 
 	 legend="%(SERVER_URL)s/cmapicons/Fire_Scars_2000-2013.png"/>
-	  <wmsLayer 
-	 lid="MTBSAAD"
-	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="mtbs_1999" 
-	 styles="default" 
-	 identify="true" 
-	 name="1999 Perimeters (RSAC)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_1999&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	 <wmsLayer 
 	 lid="AAJ"
 	 visible="false" 
@@ -420,7 +298,7 @@
 	 layers="mtbs_2000" 
 	 styles="default" 
 	 identify="true" 
-	 name="2000 Perimeters (RSAC)" 
+	 name="2000 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAK"
@@ -430,7 +308,7 @@
 	 layers="mtbs_2001" 
 	 styles="default" 
 	 identify="true" 
-	 name="2001 Perimeters (RSAC)" 
+	 name="2001 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAL"
@@ -440,7 +318,7 @@
 	 layers="mtbs_2002" 
 	 styles="default" 
 	 identify="true" 
-	 name="2002 Perimeters (RSAC)" 
+	 name="2002 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAM"
@@ -450,7 +328,7 @@
 	 layers="mtbs_2003" 
 	 styles="default" 
 	 identify="true" 
-	 name="2003 Perimeters (RSAC)" 
+	 name="2003 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAN"
@@ -460,7 +338,7 @@
 	 layers="mtbs_2004" 
 	 styles="default" 
 	 identify="true" 
-	 name="2004 Perimeters (RSAC)" 
+	 name="2004 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAO"
@@ -470,7 +348,7 @@
 	 layers="mtbs_2005" 
 	 styles="default" 
 	 identify="true" 
-	 name="2005 Perimeters (RSAC)" 
+	 name="2005 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAP"
@@ -480,7 +358,7 @@
 	 layers="mtbs_2006" 
 	 styles="default" 
 	 identify="true" 
-	 name="2006 Perimeters (RSAC)" 
+	 name="2006 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAQ"
@@ -490,7 +368,7 @@
 	 layers="mtbs_2007" 
 	 styles="default" 
 	 identify="true" 
-	 name="2007 Perimeters (RSAC)" 
+	 name="2007 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAR"
@@ -500,7 +378,7 @@
 	 layers="mtbs_2008" 
 	 styles="default" 
 	 identify="true" 
-	 name="2008 Perimeters (RSAC)" 
+	 name="2008 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="BDC"
@@ -510,7 +388,7 @@
 	 layers="mtbs_2009" 
 	 styles="default" 
 	 identify="true" 
-	 name="2009 Perimeters (RSAC)" 
+	 name="2009 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="MTBSAAA"
@@ -520,7 +398,7 @@
 	 layers="mtbs_2010" 
 	 styles="default" 
 	 identify="true" 
-	 name="2010 Perimeters (RSAC)" 
+	 name="2010 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
 	  <wmsLayer 
 	 lid="MTBSAAB"
@@ -530,7 +408,7 @@
 	 layers="mtbs_2011" 
 	 styles="default" 
 	 identify="true" 
-	 name="2011 Perimeters (RSAC)" 
+	 name="2011 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
 	  <wmsLayer 
 	 lid="MTBSAAC"
@@ -540,7 +418,7 @@
 	 layers="mtbs_2012" 
 	 styles="default" 
 	 identify="true" 
-	 name="2012 Perimeters (RSAC)" 
+	 name="2012 (MTBS)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>  
 	  <wmsLayer 
 	 lid="MTBSAAE"
@@ -550,9 +428,161 @@
 	 layers="mtbs_2013" 
 	 styles="default" 
 	 identify="true" 
-	 name="2013 Perimeters (RSAC)" 
+	 name="2013 (MTBS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="GEOMACA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="geomac_2014" 
+	 styles="default" 
+	 identify="true" 
+	 name="2014 (GEOMAC)" 
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
+	<wmsSubgroup label="Historical MODIS Hotspots">
+	  <wmsLayer 
+	 lid="MFONE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="2001 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2001.png"/>
+	  <wmsLayer 
+	 lid="MFTWO"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="2002 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2002.png"/>
+	  <wmsLayer 
+	 lid="MFTHREE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2003" 
+	 styles="default" 
+	 identify="true" 
+	 name="2003 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2003.png"/>
+	  <wmsLayer 
+	 lid="MFFOUR"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2004" 
+	 styles="default" 
+	 identify="true" 
+	 name="2004 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2004.png"/>
+	  <wmsLayer 
+	 lid="MFFIVE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2005" 
+	 styles="default" 
+	 identify="true" 
+	 name="2005 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2005.png"/>
+	  <wmsLayer 
+	 lid="MFSIX"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2006" 
+	 styles="default" 
+	 identify="true" 
+	 name="2006 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2006.png"/>
+	  <wmsLayer 
+	 lid="MFSEVEN"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2007" 
+	 styles="default" 
+	 identify="true" 
+	 name="2007 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2007.png"/>
+	  <wmsLayer 
+	 lid="MFEIGHT"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2008" 
+	 styles="default" 
+	 identify="true" 
+	 name="2008 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2008.png"/>
+	  <wmsLayer 
+	 lid="MFNINE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2009" 
+	 styles="default" 
+	 identify="true" 
+	 name="2009 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2009.png"/>
+  	 <wmsLayer 
+	 lid="BRK"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="2010 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2010.png"/>
+     <wmsLayer 
+	 lid="BRJ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="2011 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2011.png"/>
+	  <wmsLayer 
+	 lid="MODISFIREAAA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="2012 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2012.png"/>
+	  <wmsLayer 
+	 lid="MODISFIREAAB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="2013 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2013.png"/>	
+      <wmsLayer 
+	 lid="MODISFIREAAC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2014" 
+	 styles="default" 
+	 identify="true" 
+	 name="2014 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2014.png"/>	 
+	</wmsSubgroup>
   </wmsGroup>
 
   <wmsGroup gid="G03" name="US_FHM_ADS" label="Historical Aerial Disturbance Surveys (USFS FHM)">
@@ -2381,7 +2411,7 @@
   <wmsGroup gid="G10" name="US_Physiographic" label="Physiographic Maps" >
     <wmsSubgroup label="Agriculture (USDA)">
       <wmsLayer 
-	 lid="PMCL2012"
+	 lid="PMCL2013"
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
@@ -3723,7 +3753,867 @@
   </wmsGroup>
   
   <wmsGroup gid="G12" name="EWS_Parameters" label="MODIS Phenological Parameters" >
-    <wmsSubgroup label="Phenology Parameters- 2009">
+    <wmsSubgroup label="Phenology Parameters- 2013">
+      <wmsLayer 
+	 lid="PARAMSACA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="large-integral-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="large-integral-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+      <wmsLayer 
+	 lid="PARAMSACB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="qc-flags-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="qc-flags-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
+      <wmsLayer 
+	 lid="PARAMSACC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-20pct-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-20pct-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSACD"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-20pct-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-20pct-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSACE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-20pct-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-20pct-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSACF"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-20pct-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-20pct-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSACG"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-80pct-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-80pct-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSACH"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-80pct-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-80pct-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSACI"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-80pct-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-80pct-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSACJ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-80pct-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-80pct-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSACK"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-pos-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-pos-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSACL"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-value-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-value-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSACM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-left-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-left-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSACN"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-right-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-right-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSACO"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSACP"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSACQ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="small-integral-2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="small-integral-2013" 
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+    </wmsSubgroup>
+	<wmsSubgroup label="Phenology Parameters- 2012">
+      <wmsLayer 
+	 lid="PARAMSACR"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="large-integral-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="large-integral-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+      <wmsLayer 
+	 lid="PARAMSACS"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="qc-flags-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="qc-flags-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
+      <wmsLayer 
+	 lid="PARAMSACT"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-20pct-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-20pct-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSACU"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-20pct-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-20pct-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSACV"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-20pct-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-20pct-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSACW"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-20pct-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-20pct-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSACX"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-80pct-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-80pct-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSACY"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-80pct-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-80pct-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSACZ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-80pct-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-80pct-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-80pct-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-80pct-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-pos-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-pos-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSADC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-value-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-value-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADD"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-left-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-left-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSADE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-right-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-right-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSADF"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADG"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADH"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="small-integral-2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="small-integral-2012" 
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+    </wmsSubgroup>
+	<wmsSubgroup label="Phenology Parameters- 2011">
+      <wmsLayer 
+	 lid="PARAMSADI"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="large-integral-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="large-integral-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+      <wmsLayer 
+	 lid="PARAMSADJ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="qc-flags-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="qc-flags-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
+      <wmsLayer 
+	 lid="PARAMSADK"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-20pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-20pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSADL"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-20pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-20pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSADM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-20pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-20pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADN"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-20pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-20pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADO"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-80pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-80pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSADP"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-80pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-80pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSADQ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-80pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-80pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADR"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-80pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-80pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADS"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-pos-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-pos-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSADT"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-value-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-value-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADU"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-left-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-left-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSADV"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-right-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-right-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSADW"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADX"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSADY"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="small-integral-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="small-integral-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+    </wmsSubgroup>
+	<wmsSubgroup label="Phenology Parameters- 2011">
+      <wmsLayer 
+	 lid="PARAMSADX"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="large-integral-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="large-integral-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="qc-flags-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="qc-flags-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-20pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-20pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-20pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-20pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAED"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-20pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-20pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-20pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-20pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEF"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-80pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-80pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEG"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-80pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-80pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEH"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-80pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-80pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEI"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-80pct-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-80pct-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEJ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-pos-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-pos-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEK"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-value-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-value-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEL"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-left-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-left-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-right-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-right-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEN"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEO"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEP"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="small-integral-2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="small-integral-2011" 
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+    </wmsSubgroup>
+	<wmsSubgroup label="Phenology Parameters- 2010">
+      <wmsLayer 
+	 lid="PARAMSAEQ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="large-integral-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="large-integral-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+      <wmsLayer 
+	 lid="PARAMSAER"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="qc-flags-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="qc-flags-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
+      <wmsLayer 
+	 lid="PARAMSAES"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-20pct-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-20pct-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAET"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-20pct-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-20pct-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEU"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-20pct-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-20pct-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEV"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-20pct-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-20pct-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEW"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-80pct-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-80pct-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEX"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-80pct-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-80pct-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEY"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-80pct-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-80pct-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAEZ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-80pct-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-80pct-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAFA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-pos-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-pos-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAFB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-value-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-value-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAFC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-left-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-left-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAFD"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-right-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-right-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAFE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAFF"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAFG"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="small-integral-2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="small-integral-2010" 
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+    </wmsSubgroup>
+	<wmsSubgroup label="Phenology Parameters- 2009">
       <wmsLayer 
 	 lid="AMP"
 	 visible="false" 
@@ -3733,7 +4623,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_large_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
       <wmsLayer 
 	 lid="AMQ"
 	 visible="false" 
@@ -3743,7 +4633,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2009" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
       <wmsLayer 
 	 lid="AMR"
 	 visible="false" 
@@ -3753,7 +4643,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_20pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AMS"
 	 visible="false" 
@@ -3763,27 +4653,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_20pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AMT"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-20pct-2009" 
+	 layers="left-value-20pct-2009" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-20pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_20pct_value_left.png"/>
+	 name="left-value-20pct-2009" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AMU"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-20pct-2009" 
+	 layers="right-value-20pct-2009" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-20pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_20pct_value_right.png"/>
+	 name="right-value-20pct-2009" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AMV"
 	 visible="false" 
@@ -3793,7 +4683,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_80pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AMW"
 	 visible="false" 
@@ -3803,27 +4693,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_80pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AMX"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-80pct-2009" 
+	 layers="left-value-80pct-2009" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-80pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_80pct_value_left.png"/>
+	 name="left-value-80pct-2009" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AMY"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-80pct-2009" 
+	 layers="right-value-80pct-2009" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-80pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_80pct_value_right.png"/>
+	 name="right-value-80pct-2009" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AMZ"
 	 visible="false" 
@@ -3833,17 +4723,17 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_max_ndvi_position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="ANA"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="max-ndvi-val-2009" 
+	 layers="max-ndvi-value-2009" 
 	 styles="default" 
 	 identify="true" 
-	 name="max-ndvi-val-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_max_ndvi_value.png"/>
+	 name="max-ndvi-value-2009" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ANB"
 	 visible="false" 
@@ -3853,7 +4743,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_min_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="ANC"
 	 visible="false" 
@@ -3863,27 +4753,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_min_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AND"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-left-2009" 
+	 layers="min-value-left-2009" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-left-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_min_value_left.png"/>
+	 name="min-value-left-2009" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ANE"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-right-2009" 
+	 layers="min-value-left-2009" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-right-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_season_min_value_right.png"/>
+	 name="min-value-left-2009" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ANF"
 	 visible="false" 
@@ -3893,7 +4783,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13tqk_a2009_phenparams_small_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2008">
       <wmsLayer 
@@ -3905,7 +4795,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_large_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
       <wmsLayer 
 	 lid="ANH"
 	 visible="false" 
@@ -3915,7 +4805,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2008" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
       <wmsLayer 
 	 lid="ANI"
 	 visible="false" 
@@ -3925,7 +4815,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_20pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="ANJ"
 	 visible="false" 
@@ -3935,27 +4825,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_20pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="ANK"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-20pct-2008" 
+	 layers="left-value-20pct-2008" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-20pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_20pct_value_left.png"/>
+	 name="left-value-20pct-2008" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ANL"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-20pct-2008" 
+	 layers="right-value-20pct-2008" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-20pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_20pct_value_right.png"/>
+	 name="right-value-20pct-2008" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ANM"
 	 visible="false" 
@@ -3965,7 +4855,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_80pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="ANN"
 	 visible="false" 
@@ -3975,27 +4865,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_80pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="ANO"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-80pct-2008" 
+	 layers="left-value-80pct-2008" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-80pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_80pct_value_left.png"/>
+	 name="left-value-80pct-2008" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ANP"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-80pct-2008" 
+	 layers="right-value-80pct-2008" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-80pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_80pct_value_right.png"/>
+	 name="right-value-80pct-2008" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ANQ"
 	 visible="false" 
@@ -4005,17 +4895,17 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_max_ndvi_position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="ANR"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="max-ndvi-val-2008" 
+	 layers="max-ndvi-value-2008" 
 	 styles="default" 
 	 identify="true" 
-	 name="max-ndvi-val-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_max_ndvi_value.png"/>
+	 name="max-ndvi-value-2008" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ANS"
 	 visible="false" 
@@ -4025,7 +4915,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_min_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="ANT"
 	 visible="false" 
@@ -4035,27 +4925,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_min_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="ANU"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-left-2008" 
+	 layers="min-value-left-2008" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-left-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_min_value_left.png"/>
+	 name="min-value-left-2008" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ANV"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-right-2008" 
+	 layers="min-value-left-2008" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-right-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_season_min_value_right.png"/>
+	 name="min-value-left-2008" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ANW"
 	 visible="false" 
@@ -4065,7 +4955,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2008_phenparams_small_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2007">
       <wmsLayer 
@@ -4077,7 +4967,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_large_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
       <wmsLayer 
 	 lid="ANY"
 	 visible="false" 
@@ -4087,7 +4977,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2007" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
       <wmsLayer 
 	 lid="ANZ"
 	 visible="false" 
@@ -4097,7 +4987,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_20pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOA"
 	 visible="false" 
@@ -4107,27 +4997,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_20pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOB"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-20pct-2007" 
+	 layers="left-value-20pct-2007" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-20pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_20pct_value_left.png"/>
+	 name="left-value-20pct-2007" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AOC"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-20pct-2007" 
+	 layers="right-value-20pct-2007" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-20pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_20pct_value_right.png"/>
+	 name="right-value-20pct-2007" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AOD"
 	 visible="false" 
@@ -4137,7 +5027,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_80pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOE"
 	 visible="false" 
@@ -4147,27 +5037,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_80pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOF"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-80pct-2007" 
+	 layers="left-value-80pct-2007" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-80pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_80pct_value_left.png"/>
+	 name="left-value-80pct-2007" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AOG"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-80pct-2007" 
+	 layers="right-value-80pct-2007" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-80pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_80pct_value_right.png"/>
+	 name="right-value-80pct-2007" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AOH"
 	 visible="false" 
@@ -4177,17 +5067,17 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_max_ndvi_position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOI"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="max-ndvi-val-2007" 
+	 layers="max-ndvi-value-2007" 
 	 styles="default" 
 	 identify="true" 
-	 name="max-ndvi-val-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_max_ndvi_value.png"/>
+	 name="max-ndvi-value-2007" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AOJ"
 	 visible="false" 
@@ -4197,7 +5087,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_min_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOK"
 	 visible="false" 
@@ -4207,27 +5097,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_min_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOL"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-left-2007" 
+	 layers="min-value-left-2007" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-left-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_min_value_left.png"/>
+	 name="min-value-left-2007" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AOM"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-right-2007" 
+	 layers="min-value-left-2007" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-right-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_season_min_value_right.png"/>
+	 name="min-value-left-2007" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AON"
 	 visible="false" 
@@ -4237,7 +5127,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2007_phenparams_small_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2006">
       <wmsLayer 
@@ -4249,7 +5139,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_large_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
       <wmsLayer 
 	 lid="AOP"
 	 visible="false" 
@@ -4259,7 +5149,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2006" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
       <wmsLayer 
 	 lid="AOQ"
 	 visible="false" 
@@ -4269,7 +5159,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_20pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOR"
 	 visible="false" 
@@ -4279,27 +5169,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_20pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOS"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-20pct-2006" 
+	 layers="left-value-20pct-2006" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-20pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_20pct_value_left.png"/>
+	 name="left-value-20pct-2006" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AOT"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-20pct-2006" 
+	 layers="right-value-20pct-2006" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-20pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_20pct_value_right.png"/>
+	 name="right-value-20pct-2006" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AOU"
 	 visible="false" 
@@ -4309,7 +5199,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_80pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOV"
 	 visible="false" 
@@ -4319,27 +5209,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_80pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOW"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-80pct-2006" 
+	 layers="left-value-80pct-2006" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-80pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_80pct_value_left.png"/>
+	 name="left-value-80pct-2006" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AOX"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-80pct-2006" 
+	 layers="right-value-80pct-2006" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-80pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_80pct_value_right.png"/>
+	 name="right-value-80pct-2006" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AOY"
 	 visible="false" 
@@ -4349,17 +5239,17 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_max_ndvi_position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AOZ"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="max-ndvi-val-2006" 
+	 layers="max-ndvi-value-2006" 
 	 styles="default" 
 	 identify="true" 
-	 name="max-ndvi-val-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_max_ndvi_value.png"/>
+	 name="max-ndvi-value-2006" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="APA"
 	 visible="false" 
@@ -4369,7 +5259,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_min_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="APB"
 	 visible="false" 
@@ -4379,27 +5269,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_min_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="APC"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-left-2006" 
+	 layers="min-value-left-2006" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-left-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_min_value_left.png"/>
+	 name="min-value-left-2006" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="APD"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-right-2006" 
+	 layers="min-value-left-2006" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-right-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_season_min_value_right.png"/>
+	 name="min-value-left-2006" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="APE"
 	 visible="false" 
@@ -4409,7 +5299,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/mcd13_a2006_phenparams_small_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2005">
       <wmsLayer 
@@ -4421,7 +5311,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/01_2005_phen_large_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
       <wmsLayer 
 	 lid="APG"
 	 visible="false" 
@@ -4431,7 +5321,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2005" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
       <wmsLayer 
 	 lid="APH"
 	 visible="false" 
@@ -4441,7 +5331,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/05_2005_phen_season_20pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="API"
 	 visible="false" 
@@ -4451,27 +5341,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/06_2005_phen_season_20pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="APJ"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-20pct-2005" 
+	 layers="left-value-20pct-2005" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-20pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/07_2005_phen_season_20pct_value_left.png"/>
+	 name="left-value-20pct-2005" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="APK"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-20pct-2005" 
+	 layers="right-value-20pct-2005" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-20pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/08_2005_phen_season_20pct_value_right.png"/>
+	 name="right-value-20pct-2005" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="APL"
 	 visible="false" 
@@ -4481,7 +5371,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/09_2005_phen_season_80pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="APM"
 	 visible="false" 
@@ -4491,27 +5381,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/10_2005_phen_season_80pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="APN"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-80pct-2005" 
+	 layers="left-value-80pct-2005" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-80pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/11_2005_phen_season_80pct_value_left.png"/>
+	 name="left-value-80pct-2005" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="APO"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-80pct-2005" 
+	 layers="right-value-80pct-2005" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-80pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/12_2005_phen_season_80pct_value_right.png"/>
+	 name="right-value-80pct-2005" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="APP"
 	 visible="false" 
@@ -4521,17 +5411,17 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/02_2005_phen_max_ndvi_position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="APQ"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="max-ndvi-val-2005" 
+	 layers="max-ndvi-value-2005" 
 	 styles="default" 
 	 identify="true" 
-	 name="max-ndvi-val-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/03_2005_phen_max_ndvi_value.png"/>
+	 name="max-ndvi-value-2005" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="APR"
 	 visible="false" 
@@ -4541,7 +5431,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/13_2005_phen_season_min_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="APS"
 	 visible="false" 
@@ -4551,27 +5441,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/14_2005_phen_season_min_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="APT"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-left-2005" 
+	 layers="min-value-left-2005" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-left-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/15_2005_phen_season_min_value_left.png"/>
+	 name="min-value-left-2005" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="APU"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-right-2005" 
+	 layers="min-value-left-2005" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-right-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/16_2005_phen_season_min_value_right.png"/>
+	 name="min-value-left-2005" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="APV"
 	 visible="false" 
@@ -4581,7 +5471,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/17_2005_phen_small_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2004">
       <wmsLayer 
@@ -4593,7 +5483,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/01_2004_phen_large_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
       <wmsLayer 
 	 lid="APX"
 	 visible="false" 
@@ -4603,7 +5493,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2004" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
       <wmsLayer 
 	 lid="APY"
 	 visible="false" 
@@ -4613,7 +5503,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/05_2004_phen_season_20pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="APZ"
 	 visible="false" 
@@ -4623,27 +5513,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/06_2004_phen_season_20pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AQA"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-20pct-2004" 
+	 layers="left-value-20pct-2004" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-20pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/07_2004_phen_season_20pct_value_left.png"/>
+	 name="left-value-20pct-2004" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQB"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-20pct-2004" 
+	 layers="right-value-20pct-2004" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-20pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/08_2004_phen_season_20pct_value_right.png"/>
+	 name="right-value-20pct-2004" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQC"
 	 visible="false" 
@@ -4653,7 +5543,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/09_2004_phen_season_80pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AQD"
 	 visible="false" 
@@ -4663,27 +5553,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/10_2004_phen_season_80pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AQE"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-80pct-2004" 
+	 layers="left-value-80pct-2004" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-80pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/11_2004_phen_season_80pct_value_left.png"/>
+	 name="left-value-80pct-2004" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQF"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-80pct-2004" 
+	 layers="right-value-80pct-2004" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-80pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/12_2004_phen_season_80pct_value_right.png"/>
+	 name="right-value-80pct-2004" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQG"
 	 visible="false" 
@@ -4693,17 +5583,17 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/02_2004_phen_max_ndvi_position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AQH"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="max-ndvi-val-2004" 
+	 layers="max-ndvi-value-2004" 
 	 styles="default" 
 	 identify="true" 
-	 name="max-ndvi-val-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/03_2004_phen_max_ndvi_value.png"/>
+	 name="max-ndvi-value-2004" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQI"
 	 visible="false" 
@@ -4713,7 +5603,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/13_2004_phen_season_min_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AQJ"
 	 visible="false" 
@@ -4723,27 +5613,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/14_2004_phen_season_min_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AQK"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-left-2004" 
+	 layers="min-value-left-2004" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-left-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/15_2004_phen_season_min_value_left.png"/>
+	 name="min-value-left-2004" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQL"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-right-2004" 
+	 layers="min-value-left-2004" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-right-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/16_2004_phen_season_min_value_right.png"/>
+	 name="min-value-left-2004" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQM"
 	 visible="false" 
@@ -4753,7 +5643,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/17_2004_phen_small_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2003">
       <wmsLayer 
@@ -4765,7 +5655,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/01_2003_phen_large_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
       <wmsLayer 
 	 lid="AQO"
 	 visible="false" 
@@ -4775,7 +5665,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="qc-flags-2003" 
-	 legend="%(SERVER_URL)s/parameters?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=qc-flags-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
       <wmsLayer 
 	 lid="AQP"
 	 visible="false" 
@@ -4785,7 +5675,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/05_2003_phen_season_20pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AQQ"
 	 visible="false" 
@@ -4795,27 +5685,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/06_2003_phen_season_20pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AQR"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-20pct-2003" 
+	 layers="left-value-20pct-2003" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-20pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/07_2003_phen_season_20pct_value_left.png"/>
+	 name="left-value-20pct-2003" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQS"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-20pct-2003" 
+	 layers="right-value-20pct-2003" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-20pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/08_2003_phen_season_20pct_value_right.png"/>
+	 name="right-value-20pct-2003" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQT"
 	 visible="false" 
@@ -4825,7 +5715,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/09_2003_phen_season_80pct_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AQU"
 	 visible="false" 
@@ -4835,27 +5725,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/10_2003_phen_season_80pct_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AQV"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="left-val-80pct-2003" 
+	 layers="left-value-80pct-2003" 
 	 styles="default" 
 	 identify="true" 
-	 name="left-val-80pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/11_2003_phen_season_80pct_value_left.png"/>
+	 name="left-value-80pct-2003" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQW"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="right-val-80pct-2003" 
+	 layers="right-value-80pct-2003" 
 	 styles="default" 
 	 identify="true" 
-	 name="right-val-80pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/12_2003_phen_season_80pct_value_right.png"/>
+	 name="right-value-80pct-2003" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQX"
 	 visible="false" 
@@ -4865,17 +5755,17 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/02_2003_phen_max_ndvi_position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="AQY"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="max-ndvi-val-2003" 
+	 layers="max-ndvi-value-2003" 
 	 styles="default" 
 	 identify="true" 
-	 name="max-ndvi-val-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/03_2003_phen_max_ndvi_value.png"/>
+	 name="max-ndvi-value-2003" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="AQZ"
 	 visible="false" 
@@ -4885,7 +5775,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/13_2003_phen_season_min_position_left.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="ARA"
 	 visible="false" 
@@ -4895,27 +5785,27 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/14_2003_phen_season_min_position_right.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
       <wmsLayer 
 	 lid="ARB"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-left-2003" 
+	 layers="min-value-left-2003" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-left-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/15_2003_phen_season_min_value_left.png"/>
+	 name="min-value-left-2003" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ARC"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="min-val-right-2003" 
+	 layers="min-value-left-2003" 
 	 styles="default" 
 	 identify="true" 
-	 name="min-val-right-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/16_2003_phen_season_min_value_right.png"/>
+	 name="min-value-left-2003" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
       <wmsLayer 
 	 lid="ARD"
 	 visible="false" 
@@ -4925,7 +5815,523 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/17_2003_phen_small_integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+    </wmsSubgroup>
+	<wmsSubgroup label="Phenology Parameters- 2002">
+      <wmsLayer 
+	 lid="PARAMSAAA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="large-integral-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="large-integral-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="qc-flags-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="qc-flags-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-20pct-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-20pct-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAD"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-20pct-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-20pct-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-20pct-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-20pct-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAF"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-20pct-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-20pct-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAG"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-80pct-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-80pct-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAH"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-80pct-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-80pct-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAI"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-80pct-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-80pct-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAJ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-80pct-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-80pct-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAK"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-pos-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-pos-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAL"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-value-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-value-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-left-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-left-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAN"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-right-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-right-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAO"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAP"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAQ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="small-integral-2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="small-integral-2002" 
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+    </wmsSubgroup>
+	<wmsSubgroup label="Phenology Parameters- 2001">
+      <wmsLayer 
+	 lid="PARAMSAAR"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="large-integral-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="large-integral-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAS"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="qc-flags-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="qc-flags-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAT"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-20pct-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-20pct-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAU"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-20pct-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-20pct-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAV"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-20pct-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-20pct-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAW"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-20pct-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-20pct-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAX"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-80pct-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-80pct-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAY"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-80pct-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-80pct-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSAAZ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-80pct-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-80pct-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-80pct-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-80pct-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-pos-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-pos-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSABC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-value-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-value-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABD"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-left-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-left-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSABE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-right-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-right-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSABF"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABG"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABH"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="small-integral-2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="small-integral-2001" 
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+    </wmsSubgroup>
+	<wmsSubgroup label="Phenology Parameters- 2000">
+      <wmsLayer 
+	 lid="PARAMSABI"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="large-integral-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="large-integral-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+      <wmsLayer 
+	 lid="PARAMSABJ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="qc-flags-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="qc-flags-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
+      <wmsLayer 
+	 lid="PARAMSABK"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-20pct-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-20pct-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSABL"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-20pct-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-20pct-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSABM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-20pct-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-20pct-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABN"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-20pct-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-20pct-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABO"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-pos-80pct-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-pos-80pct-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSABP"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-pos-80pct-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-pos-80pct-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSABQ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="left-value-80pct-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="left-value-80pct-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABR"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="right-value-80pct-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="right-value-80pct-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABS"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-pos-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-pos-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSABT"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="max-ndvi-value-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="max-ndvi-value-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABU"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-left-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-left-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSABV"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-pos-right-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-pos-right-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+      <wmsLayer 
+	 lid="PARAMSABW"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABX"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="min-value-left-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="min-value-left-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+      <wmsLayer 
+	 lid="PARAMSABY"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="small-integral-2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="small-integral-2000" 
+	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
     </wmsSubgroup>
   </wmsGroup>
   
