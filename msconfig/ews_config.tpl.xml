@@ -2419,7 +2419,17 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2013 Cropland Data Layer" 
-	 legend="%(SERVER_URL)s/cmapicons/CropLands13.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/CropLands.png"/>
+	  <wmsLayer 
+	 lid="PMCL2014"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="CropLands2014" 
+	 styles="default" 
+	 identify="true" 
+	 name="2014 Cropland Data Layer" 
+	 legend="%(SERVER_URL)s/cmapicons/CropLands.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Elevation Products">
       <wmsLayer 
@@ -3763,7 +3773,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="PARAMSACB"
 	 visible="false" 
@@ -3783,7 +3793,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSACD"
 	 visible="false" 
@@ -3793,7 +3803,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSACE"
 	 visible="false" 
@@ -3803,7 +3813,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSACF"
 	 visible="false" 
@@ -3813,7 +3823,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSACG"
 	 visible="false" 
@@ -3823,7 +3833,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSACH"
 	 visible="false" 
@@ -3833,7 +3843,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSACI"
 	 visible="false" 
@@ -3843,7 +3853,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSACJ"
 	 visible="false" 
@@ -3853,7 +3863,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSACK"
 	 visible="false" 
@@ -3863,7 +3873,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSACL"
 	 visible="false" 
@@ -3873,7 +3883,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSACM"
 	 visible="false" 
@@ -3883,7 +3893,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSACN"
 	 visible="false" 
@@ -3893,7 +3903,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSACO"
 	 visible="false" 
@@ -3903,7 +3913,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSACP"
 	 visible="false" 
@@ -3913,7 +3923,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSACQ"
 	 visible="false" 
@@ -3923,7 +3933,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Phenology Parameters- 2012">
       <wmsLayer 
@@ -3935,7 +3945,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="PARAMSACS"
 	 visible="false" 
@@ -3955,7 +3965,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSACU"
 	 visible="false" 
@@ -3965,7 +3975,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSACV"
 	 visible="false" 
@@ -3975,7 +3985,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSACW"
 	 visible="false" 
@@ -3985,7 +3995,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSACX"
 	 visible="false" 
@@ -3995,7 +4005,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSACY"
 	 visible="false" 
@@ -4005,7 +4015,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSACZ"
 	 visible="false" 
@@ -4015,7 +4025,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADA"
 	 visible="false" 
@@ -4025,7 +4035,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADB"
 	 visible="false" 
@@ -4035,7 +4045,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSADC"
 	 visible="false" 
@@ -4045,7 +4055,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADD"
 	 visible="false" 
@@ -4055,7 +4065,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSADE"
 	 visible="false" 
@@ -4065,7 +4075,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSADF"
 	 visible="false" 
@@ -4075,7 +4085,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADG"
 	 visible="false" 
@@ -4085,7 +4095,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADH"
 	 visible="false" 
@@ -4095,7 +4105,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Phenology Parameters- 2011">
       <wmsLayer 
@@ -4107,7 +4117,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="PARAMSADJ"
 	 visible="false" 
@@ -4127,7 +4137,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSADL"
 	 visible="false" 
@@ -4137,7 +4147,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSADM"
 	 visible="false" 
@@ -4147,7 +4157,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADN"
 	 visible="false" 
@@ -4157,7 +4167,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADO"
 	 visible="false" 
@@ -4167,7 +4177,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSADP"
 	 visible="false" 
@@ -4177,7 +4187,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSADQ"
 	 visible="false" 
@@ -4187,7 +4197,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADR"
 	 visible="false" 
@@ -4197,7 +4207,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADS"
 	 visible="false" 
@@ -4207,7 +4217,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSADT"
 	 visible="false" 
@@ -4217,7 +4227,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADU"
 	 visible="false" 
@@ -4227,7 +4237,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSADV"
 	 visible="false" 
@@ -4237,7 +4247,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSADW"
 	 visible="false" 
@@ -4247,7 +4257,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADX"
 	 visible="false" 
@@ -4257,7 +4267,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSADY"
 	 visible="false" 
@@ -4267,7 +4277,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Phenology Parameters- 2011">
       <wmsLayer 
@@ -4279,7 +4289,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEA"
 	 visible="false" 
@@ -4299,7 +4309,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEC"
 	 visible="false" 
@@ -4309,7 +4319,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAED"
 	 visible="false" 
@@ -4319,7 +4329,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEE"
 	 visible="false" 
@@ -4329,7 +4339,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEF"
 	 visible="false" 
@@ -4339,7 +4349,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEG"
 	 visible="false" 
@@ -4349,7 +4359,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEH"
 	 visible="false" 
@@ -4359,7 +4369,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEI"
 	 visible="false" 
@@ -4369,7 +4379,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEJ"
 	 visible="false" 
@@ -4379,7 +4389,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEK"
 	 visible="false" 
@@ -4389,7 +4399,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEL"
 	 visible="false" 
@@ -4399,7 +4409,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEM"
 	 visible="false" 
@@ -4409,7 +4419,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEN"
 	 visible="false" 
@@ -4419,7 +4429,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEO"
 	 visible="false" 
@@ -4429,7 +4439,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEP"
 	 visible="false" 
@@ -4439,7 +4449,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Phenology Parameters- 2010">
       <wmsLayer 
@@ -4451,7 +4461,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="PARAMSAER"
 	 visible="false" 
@@ -4471,7 +4481,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAET"
 	 visible="false" 
@@ -4481,7 +4491,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEU"
 	 visible="false" 
@@ -4491,7 +4501,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEV"
 	 visible="false" 
@@ -4501,7 +4511,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEW"
 	 visible="false" 
@@ -4511,7 +4521,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEX"
 	 visible="false" 
@@ -4521,7 +4531,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEY"
 	 visible="false" 
@@ -4531,7 +4541,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAEZ"
 	 visible="false" 
@@ -4541,7 +4551,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAFA"
 	 visible="false" 
@@ -4551,7 +4561,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAFB"
 	 visible="false" 
@@ -4561,7 +4571,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAFC"
 	 visible="false" 
@@ -4571,7 +4581,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAFD"
 	 visible="false" 
@@ -4581,7 +4591,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAFE"
 	 visible="false" 
@@ -4591,7 +4601,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAFF"
 	 visible="false" 
@@ -4601,7 +4611,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAFG"
 	 visible="false" 
@@ -4611,7 +4621,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Phenology Parameters- 2009">
       <wmsLayer 
@@ -4623,7 +4633,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="AMQ"
 	 visible="false" 
@@ -4643,7 +4653,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AMS"
 	 visible="false" 
@@ -4653,7 +4663,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AMT"
 	 visible="false" 
@@ -4663,7 +4673,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AMU"
 	 visible="false" 
@@ -4673,7 +4683,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AMV"
 	 visible="false" 
@@ -4683,7 +4693,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AMW"
 	 visible="false" 
@@ -4693,7 +4703,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AMX"
 	 visible="false" 
@@ -4703,7 +4713,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AMY"
 	 visible="false" 
@@ -4713,7 +4723,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AMZ"
 	 visible="false" 
@@ -4723,7 +4733,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="ANA"
 	 visible="false" 
@@ -4733,7 +4743,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ANB"
 	 visible="false" 
@@ -4743,7 +4753,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="ANC"
 	 visible="false" 
@@ -4753,7 +4763,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AND"
 	 visible="false" 
@@ -4763,7 +4773,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ANE"
 	 visible="false" 
@@ -4773,7 +4783,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ANF"
 	 visible="false" 
@@ -4783,7 +4793,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2008">
       <wmsLayer 
@@ -4795,7 +4805,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="ANH"
 	 visible="false" 
@@ -4815,7 +4825,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="ANJ"
 	 visible="false" 
@@ -4825,7 +4835,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="ANK"
 	 visible="false" 
@@ -4835,7 +4845,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ANL"
 	 visible="false" 
@@ -4845,7 +4855,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ANM"
 	 visible="false" 
@@ -4855,7 +4865,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="ANN"
 	 visible="false" 
@@ -4865,7 +4875,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="ANO"
 	 visible="false" 
@@ -4875,7 +4885,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ANP"
 	 visible="false" 
@@ -4885,7 +4895,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ANQ"
 	 visible="false" 
@@ -4895,7 +4905,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="ANR"
 	 visible="false" 
@@ -4905,7 +4915,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ANS"
 	 visible="false" 
@@ -4915,7 +4925,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="ANT"
 	 visible="false" 
@@ -4925,7 +4935,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="ANU"
 	 visible="false" 
@@ -4935,7 +4945,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ANV"
 	 visible="false" 
@@ -4945,7 +4955,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ANW"
 	 visible="false" 
@@ -4955,7 +4965,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2007">
       <wmsLayer 
@@ -4967,7 +4977,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="ANY"
 	 visible="false" 
@@ -4987,7 +4997,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOA"
 	 visible="false" 
@@ -4997,7 +5007,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOB"
 	 visible="false" 
@@ -5007,7 +5017,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AOC"
 	 visible="false" 
@@ -5017,7 +5027,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AOD"
 	 visible="false" 
@@ -5027,7 +5037,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOE"
 	 visible="false" 
@@ -5037,7 +5047,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOF"
 	 visible="false" 
@@ -5047,7 +5057,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AOG"
 	 visible="false" 
@@ -5057,7 +5067,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AOH"
 	 visible="false" 
@@ -5067,7 +5077,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOI"
 	 visible="false" 
@@ -5077,7 +5087,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AOJ"
 	 visible="false" 
@@ -5087,7 +5097,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOK"
 	 visible="false" 
@@ -5097,7 +5107,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOL"
 	 visible="false" 
@@ -5107,7 +5117,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AOM"
 	 visible="false" 
@@ -5117,7 +5127,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AON"
 	 visible="false" 
@@ -5127,7 +5137,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2006">
       <wmsLayer 
@@ -5139,7 +5149,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="AOP"
 	 visible="false" 
@@ -5159,7 +5169,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOR"
 	 visible="false" 
@@ -5169,7 +5179,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOS"
 	 visible="false" 
@@ -5179,7 +5189,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AOT"
 	 visible="false" 
@@ -5189,7 +5199,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AOU"
 	 visible="false" 
@@ -5199,7 +5209,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOV"
 	 visible="false" 
@@ -5209,7 +5219,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOW"
 	 visible="false" 
@@ -5219,7 +5229,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AOX"
 	 visible="false" 
@@ -5229,7 +5239,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AOY"
 	 visible="false" 
@@ -5239,7 +5249,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AOZ"
 	 visible="false" 
@@ -5249,7 +5259,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="APA"
 	 visible="false" 
@@ -5259,7 +5269,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="APB"
 	 visible="false" 
@@ -5269,7 +5279,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="APC"
 	 visible="false" 
@@ -5279,7 +5289,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="APD"
 	 visible="false" 
@@ -5289,7 +5299,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="APE"
 	 visible="false" 
@@ -5299,7 +5309,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2005">
       <wmsLayer 
@@ -5311,7 +5321,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="APG"
 	 visible="false" 
@@ -5331,7 +5341,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="API"
 	 visible="false" 
@@ -5341,7 +5351,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="APJ"
 	 visible="false" 
@@ -5351,7 +5361,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="APK"
 	 visible="false" 
@@ -5361,7 +5371,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="APL"
 	 visible="false" 
@@ -5371,7 +5381,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="APM"
 	 visible="false" 
@@ -5381,7 +5391,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="APN"
 	 visible="false" 
@@ -5391,7 +5401,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="APO"
 	 visible="false" 
@@ -5401,7 +5411,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="APP"
 	 visible="false" 
@@ -5411,7 +5421,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="APQ"
 	 visible="false" 
@@ -5421,7 +5431,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="APR"
 	 visible="false" 
@@ -5431,7 +5441,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="APS"
 	 visible="false" 
@@ -5441,7 +5451,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="APT"
 	 visible="false" 
@@ -5451,7 +5461,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="APU"
 	 visible="false" 
@@ -5461,7 +5471,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="APV"
 	 visible="false" 
@@ -5471,7 +5481,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2004">
       <wmsLayer 
@@ -5483,7 +5493,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="APX"
 	 visible="false" 
@@ -5503,7 +5513,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="APZ"
 	 visible="false" 
@@ -5513,7 +5523,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AQA"
 	 visible="false" 
@@ -5523,7 +5533,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQB"
 	 visible="false" 
@@ -5533,7 +5543,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQC"
 	 visible="false" 
@@ -5543,7 +5553,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AQD"
 	 visible="false" 
@@ -5553,7 +5563,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AQE"
 	 visible="false" 
@@ -5563,7 +5573,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQF"
 	 visible="false" 
@@ -5573,7 +5583,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQG"
 	 visible="false" 
@@ -5583,7 +5593,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AQH"
 	 visible="false" 
@@ -5593,7 +5603,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQI"
 	 visible="false" 
@@ -5603,7 +5613,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AQJ"
 	 visible="false" 
@@ -5613,7 +5623,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AQK"
 	 visible="false" 
@@ -5623,7 +5633,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQL"
 	 visible="false" 
@@ -5633,7 +5643,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQM"
 	 visible="false" 
@@ -5643,7 +5653,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2003">
       <wmsLayer 
@@ -5655,7 +5665,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="AQO"
 	 visible="false" 
@@ -5675,7 +5685,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AQQ"
 	 visible="false" 
@@ -5685,7 +5695,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AQR"
 	 visible="false" 
@@ -5695,7 +5705,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQS"
 	 visible="false" 
@@ -5705,7 +5715,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQT"
 	 visible="false" 
@@ -5715,7 +5725,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AQU"
 	 visible="false" 
@@ -5725,7 +5735,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AQV"
 	 visible="false" 
@@ -5735,7 +5745,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQW"
 	 visible="false" 
@@ -5745,7 +5755,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQX"
 	 visible="false" 
@@ -5755,7 +5765,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="AQY"
 	 visible="false" 
@@ -5765,7 +5775,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="AQZ"
 	 visible="false" 
@@ -5775,7 +5785,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="ARA"
 	 visible="false" 
@@ -5785,7 +5795,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="ARB"
 	 visible="false" 
@@ -5795,7 +5805,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ARC"
 	 visible="false" 
@@ -5805,7 +5815,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="ARD"
 	 visible="false" 
@@ -5815,7 +5825,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Phenology Parameters- 2002">
       <wmsLayer 
@@ -5827,7 +5837,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAB"
 	 visible="false" 
@@ -5847,7 +5857,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAD"
 	 visible="false" 
@@ -5857,7 +5867,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAE"
 	 visible="false" 
@@ -5867,7 +5877,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAF"
 	 visible="false" 
@@ -5877,7 +5887,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAG"
 	 visible="false" 
@@ -5887,7 +5897,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAH"
 	 visible="false" 
@@ -5897,7 +5907,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAI"
 	 visible="false" 
@@ -5907,7 +5917,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAJ"
 	 visible="false" 
@@ -5917,7 +5927,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAK"
 	 visible="false" 
@@ -5927,7 +5937,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAL"
 	 visible="false" 
@@ -5937,7 +5947,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAM"
 	 visible="false" 
@@ -5947,7 +5957,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAN"
 	 visible="false" 
@@ -5957,7 +5967,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAO"
 	 visible="false" 
@@ -5967,7 +5977,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAP"
 	 visible="false" 
@@ -5977,7 +5987,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAQ"
 	 visible="false" 
@@ -5987,7 +5997,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Phenology Parameters- 2001">
       <wmsLayer 
@@ -5999,7 +6009,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAS"
 	 visible="false" 
@@ -6019,7 +6029,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAU"
 	 visible="false" 
@@ -6029,7 +6039,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAV"
 	 visible="false" 
@@ -6039,7 +6049,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAW"
 	 visible="false" 
@@ -6049,7 +6059,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAX"
 	 visible="false" 
@@ -6059,7 +6069,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAY"
 	 visible="false" 
@@ -6069,7 +6079,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSAAZ"
 	 visible="false" 
@@ -6079,7 +6089,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSABA"
 	 visible="false" 
@@ -6089,7 +6099,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSABB"
 	 visible="false" 
@@ -6099,7 +6109,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSABC"
 	 visible="false" 
@@ -6109,7 +6119,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSABD"
 	 visible="false" 
@@ -6119,7 +6129,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSABE"
 	 visible="false" 
@@ -6129,7 +6139,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSABF"
 	 visible="false" 
@@ -6139,7 +6149,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSABG"
 	 visible="false" 
@@ -6149,7 +6159,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSABH"
 	 visible="false" 
@@ -6159,7 +6169,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="small-integral-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/small-integral2.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Phenology Parameters- 2000">
       <wmsLayer 
@@ -6171,7 +6181,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="large-integral-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
       <wmsLayer 
 	 lid="PARAMSABJ"
 	 visible="false" 
@@ -6191,7 +6201,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-20pct-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSABL"
 	 visible="false" 
@@ -6201,7 +6211,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-20pct-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSABM"
 	 visible="false" 
@@ -6211,7 +6221,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-20pct-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSABN"
 	 visible="false" 
@@ -6221,7 +6231,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-20pct-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSABO"
 	 visible="false" 
@@ -6231,7 +6241,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-pos-80pct-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSABP"
 	 visible="false" 
@@ -6241,7 +6251,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-pos-80pct-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSABQ"
 	 visible="false" 
@@ -6251,7 +6261,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="left-value-80pct-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSABR"
 	 visible="false" 
@@ -6261,7 +6271,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="right-value-80pct-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSABS"
 	 visible="false" 
@@ -6271,7 +6281,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-pos-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSABT"
 	 visible="false" 
@@ -6281,7 +6291,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="max-ndvi-value-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSABU"
 	 visible="false" 
@@ -6291,7 +6301,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-left-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSABV"
 	 visible="false" 
@@ -6301,7 +6311,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-pos-right-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/position.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
       <wmsLayer 
 	 lid="PARAMSABW"
 	 visible="false" 
@@ -6311,7 +6321,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
       <wmsLayer 
 	 lid="PARAMSABX"
 	 visible="false" 
@@ -6321,17 +6331,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="min-value-left-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/value.png"/>
-      <wmsLayer 
-	 lid="PARAMSABY"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="small-integral-2000" 
-	 styles="default" 
-	 identify="true" 
-	 name="small-integral-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/small-integral.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
     </wmsSubgroup>
   </wmsGroup>
   

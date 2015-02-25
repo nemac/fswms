@@ -50,7 +50,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2013"
             "wms_abstract"               "small-integral-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -78,7 +78,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2013"
             "wms_abstract"               "min-value-right-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -106,7 +106,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2013"
             "wms_abstract"               "min-value-left-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -134,7 +134,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2013"
             "wms_abstract"               "min-pos-right-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -162,7 +162,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2013"
             "wms_abstract"               "min-pos-left-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -190,7 +190,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2013"
             "wms_abstract"               "right-value-80pct-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -218,7 +218,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2013"
             "wms_abstract"               "left-value-80pct-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -246,7 +246,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2013"
             "wms_abstract"               "right-pos-80pct-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -274,7 +274,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2013"
             "wms_abstract"               "left-pos-80pct-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -302,7 +302,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2013"
             "wms_abstract"               "right-value-20pct-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -330,7 +330,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2013"
             "wms_abstract"               "left-value-20pct-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -358,7 +358,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2013"
             "wms_abstract"               "right-pos-20pct-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -386,7 +386,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2013"
             "wms_abstract"               "left-pos-20pct-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -414,7 +414,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2013"
             "wms_abstract"               "qc-flags-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -442,7 +442,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2013"
             "wms_abstract"               "max-ndvi-value-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -470,7 +470,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2013"
             "wms_abstract"               "max-ndvi-pos-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -498,7 +498,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2013"
             "wms_abstract"               "large-integral-2013"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -527,7 +527,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2012"
             "wms_abstract"               "small-integral-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -555,7 +555,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2012"
             "wms_abstract"               "min-value-right-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -583,7 +583,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2012"
             "wms_abstract"               "min-value-left-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -611,7 +611,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2012"
             "wms_abstract"               "min-pos-right-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -639,7 +639,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2012"
             "wms_abstract"               "min-pos-left-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -667,7 +667,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2012"
             "wms_abstract"               "right-value-80pct-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -695,7 +695,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2012"
             "wms_abstract"               "left-value-80pct-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -723,7 +723,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2012"
             "wms_abstract"               "right-pos-80pct-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -751,7 +751,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2012"
             "wms_abstract"               "left-pos-80pct-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -779,7 +779,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2012"
             "wms_abstract"               "right-value-20pct-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -807,7 +807,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2012"
             "wms_abstract"               "left-value-20pct-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -835,7 +835,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2012"
             "wms_abstract"               "right-pos-20pct-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -863,7 +863,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2012"
             "wms_abstract"               "left-pos-20pct-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -891,7 +891,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2012"
             "wms_abstract"               "qc-flags-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -919,7 +919,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2012"
             "wms_abstract"               "max-ndvi-value-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -947,7 +947,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2012"
             "wms_abstract"               "max-ndvi-pos-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -975,7 +975,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2012"
             "wms_abstract"               "large-integral-2012"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -1004,7 +1004,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2011"
             "wms_abstract"               "small-integral-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1032,7 +1032,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2011"
             "wms_abstract"               "min-value-right-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1060,7 +1060,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2011"
             "wms_abstract"               "min-value-left-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1088,7 +1088,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2011"
             "wms_abstract"               "min-pos-right-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1116,7 +1116,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2011"
             "wms_abstract"               "min-pos-left-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1144,7 +1144,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2011"
             "wms_abstract"               "right-value-80pct-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1172,7 +1172,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2011"
             "wms_abstract"               "left-value-80pct-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1200,7 +1200,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2011"
             "wms_abstract"               "right-pos-80pct-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1228,7 +1228,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2011"
             "wms_abstract"               "left-pos-80pct-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1256,7 +1256,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2011"
             "wms_abstract"               "right-value-20pct-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1284,7 +1284,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2011"
             "wms_abstract"               "left-value-20pct-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1312,7 +1312,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2011"
             "wms_abstract"               "right-pos-20pct-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1340,7 +1340,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2011"
             "wms_abstract"               "left-pos-20pct-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1368,7 +1368,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2011"
             "wms_abstract"               "qc-flags-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1396,7 +1396,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2011"
             "wms_abstract"               "max-ndvi-value-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1424,7 +1424,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2011"
             "wms_abstract"               "max-ndvi-pos-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1452,7 +1452,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2011"
             "wms_abstract"               "large-integral-2011"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -1481,7 +1481,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2010"
             "wms_abstract"               "small-integral-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1509,7 +1509,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2010"
             "wms_abstract"               "min-value-right-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1537,7 +1537,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2010"
             "wms_abstract"               "min-value-left-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1565,7 +1565,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2010"
             "wms_abstract"               "min-pos-right-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1593,7 +1593,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2010"
             "wms_abstract"               "min-pos-left-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1621,7 +1621,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2010"
             "wms_abstract"               "right-value-80pct-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1649,7 +1649,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2010"
             "wms_abstract"               "left-value-80pct-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1677,7 +1677,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2010"
             "wms_abstract"               "right-pos-80pct-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1705,7 +1705,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2010"
             "wms_abstract"               "left-pos-80pct-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1733,7 +1733,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2010"
             "wms_abstract"               "right-value-20pct-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1761,7 +1761,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2010"
             "wms_abstract"               "left-value-20pct-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1789,7 +1789,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2010"
             "wms_abstract"               "right-pos-20pct-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1817,7 +1817,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2010"
             "wms_abstract"               "left-pos-20pct-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1845,7 +1845,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2010"
             "wms_abstract"               "qc-flags-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1873,7 +1873,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2010"
             "wms_abstract"               "max-ndvi-value-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1901,7 +1901,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2010"
             "wms_abstract"               "max-ndvi-pos-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1929,7 +1929,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2010"
             "wms_abstract"               "large-integral-2010"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -1958,7 +1958,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2009"
             "wms_abstract"               "small-integral-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -1986,7 +1986,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2009"
             "wms_abstract"               "min-value-right-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2014,7 +2014,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2009"
             "wms_abstract"               "min-value-left-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2042,7 +2042,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2009"
             "wms_abstract"               "min-pos-right-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2070,7 +2070,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2009"
             "wms_abstract"               "min-pos-left-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2098,7 +2098,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2009"
             "wms_abstract"               "right-value-80pct-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2126,7 +2126,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2009"
             "wms_abstract"               "left-value-80pct-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2154,7 +2154,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2009"
             "wms_abstract"               "right-pos-80pct-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2182,7 +2182,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2009"
             "wms_abstract"               "left-pos-80pct-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2210,7 +2210,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2009"
             "wms_abstract"               "right-value-20pct-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2238,7 +2238,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2009"
             "wms_abstract"               "left-value-20pct-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2266,7 +2266,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2009"
             "wms_abstract"               "right-pos-20pct-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2294,7 +2294,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2009"
             "wms_abstract"               "left-pos-20pct-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2322,7 +2322,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2009"
             "wms_abstract"               "qc-flags-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2350,7 +2350,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2009"
             "wms_abstract"               "max-ndvi-value-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2378,7 +2378,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2009"
             "wms_abstract"               "max-ndvi-pos-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2406,7 +2406,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2009"
             "wms_abstract"               "large-integral-2009"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -2435,7 +2435,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2008"
             "wms_abstract"               "small-integral-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2463,7 +2463,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2008"
             "wms_abstract"               "min-value-right-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2491,7 +2491,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2008"
             "wms_abstract"               "min-value-left-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2519,7 +2519,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2008"
             "wms_abstract"               "min-pos-right-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2547,7 +2547,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2008"
             "wms_abstract"               "min-pos-left-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2575,7 +2575,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2008"
             "wms_abstract"               "right-value-80pct-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2603,7 +2603,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2008"
             "wms_abstract"               "left-value-80pct-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2631,7 +2631,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2008"
             "wms_abstract"               "right-pos-80pct-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2659,7 +2659,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2008"
             "wms_abstract"               "left-pos-80pct-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2687,7 +2687,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2008"
             "wms_abstract"               "right-value-20pct-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2715,7 +2715,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2008"
             "wms_abstract"               "left-value-20pct-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2743,7 +2743,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2008"
             "wms_abstract"               "right-pos-20pct-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2771,7 +2771,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2008"
             "wms_abstract"               "left-pos-20pct-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2799,7 +2799,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2008"
             "wms_abstract"               "qc-flags-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2827,7 +2827,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2008"
             "wms_abstract"               "max-ndvi-value-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2855,7 +2855,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2008"
             "wms_abstract"               "max-ndvi-pos-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2883,7 +2883,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2008"
             "wms_abstract"               "large-integral-2008"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -2912,7 +2912,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2007"
             "wms_abstract"               "small-integral-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2940,7 +2940,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2007"
             "wms_abstract"               "min-value-right-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2968,7 +2968,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2007"
             "wms_abstract"               "min-value-left-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -2996,7 +2996,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2007"
             "wms_abstract"               "min-pos-right-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3024,7 +3024,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2007"
             "wms_abstract"               "min-pos-left-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3052,7 +3052,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2007"
             "wms_abstract"               "right-value-80pct-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3080,7 +3080,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2007"
             "wms_abstract"               "left-value-80pct-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3108,7 +3108,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2007"
             "wms_abstract"               "right-pos-80pct-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3136,7 +3136,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2007"
             "wms_abstract"               "left-pos-80pct-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3164,7 +3164,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2007"
             "wms_abstract"               "right-value-20pct-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3192,7 +3192,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2007"
             "wms_abstract"               "left-value-20pct-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3220,7 +3220,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2007"
             "wms_abstract"               "right-pos-20pct-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3248,7 +3248,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2007"
             "wms_abstract"               "left-pos-20pct-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3276,7 +3276,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2007"
             "wms_abstract"               "qc-flags-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3304,7 +3304,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2007"
             "wms_abstract"               "max-ndvi-value-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3332,7 +3332,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2007"
             "wms_abstract"               "max-ndvi-pos-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3360,7 +3360,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2007"
             "wms_abstract"               "large-integral-2007"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -3389,7 +3389,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2006"
             "wms_abstract"               "small-integral-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3417,7 +3417,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2006"
             "wms_abstract"               "min-value-right-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3445,7 +3445,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2006"
             "wms_abstract"               "min-value-left-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3473,7 +3473,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2006"
             "wms_abstract"               "min-pos-right-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3501,7 +3501,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2006"
             "wms_abstract"               "min-pos-left-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3529,7 +3529,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2006"
             "wms_abstract"               "right-value-80pct-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3557,7 +3557,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2006"
             "wms_abstract"               "left-value-80pct-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3585,7 +3585,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2006"
             "wms_abstract"               "right-pos-80pct-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3613,7 +3613,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2006"
             "wms_abstract"               "left-pos-80pct-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3641,7 +3641,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2006"
             "wms_abstract"               "right-value-20pct-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3669,7 +3669,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2006"
             "wms_abstract"               "left-value-20pct-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3697,7 +3697,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2006"
             "wms_abstract"               "right-pos-20pct-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3725,7 +3725,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2006"
             "wms_abstract"               "left-pos-20pct-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3753,7 +3753,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2006"
             "wms_abstract"               "qc-flags-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3781,7 +3781,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2006"
             "wms_abstract"               "max-ndvi-value-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3809,7 +3809,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2006"
             "wms_abstract"               "max-ndvi-pos-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3837,7 +3837,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2006"
             "wms_abstract"               "large-integral-2006"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -3866,7 +3866,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2005"
             "wms_abstract"               "small-integral-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3894,7 +3894,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2005"
             "wms_abstract"               "min-value-right-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3922,7 +3922,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2005"
             "wms_abstract"               "min-value-left-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3950,7 +3950,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2005"
             "wms_abstract"               "min-pos-right-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -3978,7 +3978,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2005"
             "wms_abstract"               "min-pos-left-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4006,7 +4006,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2005"
             "wms_abstract"               "right-value-80pct-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4034,7 +4034,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2005"
             "wms_abstract"               "left-value-80pct-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4062,7 +4062,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2005"
             "wms_abstract"               "right-pos-80pct-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4090,7 +4090,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2005"
             "wms_abstract"               "left-pos-80pct-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4118,7 +4118,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2005"
             "wms_abstract"               "right-value-20pct-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4146,7 +4146,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2005"
             "wms_abstract"               "left-value-20pct-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4174,7 +4174,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2005"
             "wms_abstract"               "right-pos-20pct-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4202,7 +4202,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2005"
             "wms_abstract"               "left-pos-20pct-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4230,7 +4230,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2005"
             "wms_abstract"               "qc-flags-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4258,7 +4258,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2005"
             "wms_abstract"               "max-ndvi-value-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4286,7 +4286,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2005"
             "wms_abstract"               "max-ndvi-pos-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4314,7 +4314,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2005"
             "wms_abstract"               "large-integral-2005"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -4343,7 +4343,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2004"
             "wms_abstract"               "small-integral-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4371,7 +4371,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2004"
             "wms_abstract"               "min-value-right-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4399,7 +4399,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2004"
             "wms_abstract"               "min-value-left-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4427,7 +4427,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2004"
             "wms_abstract"               "min-pos-right-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4455,7 +4455,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2004"
             "wms_abstract"               "min-pos-left-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4483,7 +4483,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2004"
             "wms_abstract"               "right-value-80pct-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4511,7 +4511,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2004"
             "wms_abstract"               "left-value-80pct-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4539,7 +4539,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2004"
             "wms_abstract"               "right-pos-80pct-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4567,7 +4567,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2004"
             "wms_abstract"               "left-pos-80pct-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4595,7 +4595,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2004"
             "wms_abstract"               "right-value-20pct-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4623,7 +4623,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2004"
             "wms_abstract"               "left-value-20pct-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4651,7 +4651,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2004"
             "wms_abstract"               "right-pos-20pct-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4679,7 +4679,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2004"
             "wms_abstract"               "left-pos-20pct-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4707,7 +4707,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2004"
             "wms_abstract"               "qc-flags-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4735,7 +4735,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2004"
             "wms_abstract"               "max-ndvi-value-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4763,7 +4763,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2004"
             "wms_abstract"               "max-ndvi-pos-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4791,7 +4791,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2004"
             "wms_abstract"               "large-integral-2004"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -4820,7 +4820,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2003"
             "wms_abstract"               "small-integral-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4848,7 +4848,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2003"
             "wms_abstract"               "min-value-right-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4876,7 +4876,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2003"
             "wms_abstract"               "min-value-left-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4904,7 +4904,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2003"
             "wms_abstract"               "min-pos-right-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4932,7 +4932,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2003"
             "wms_abstract"               "min-pos-left-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4960,7 +4960,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2003"
             "wms_abstract"               "right-value-80pct-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -4988,7 +4988,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2003"
             "wms_abstract"               "left-value-80pct-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5016,7 +5016,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2003"
             "wms_abstract"               "right-pos-80pct-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5044,7 +5044,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2003"
             "wms_abstract"               "left-pos-80pct-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5072,7 +5072,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2003"
             "wms_abstract"               "right-value-20pct-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5100,7 +5100,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2003"
             "wms_abstract"               "left-value-20pct-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5128,7 +5128,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2003"
             "wms_abstract"               "right-pos-20pct-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5156,7 +5156,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2003"
             "wms_abstract"               "left-pos-20pct-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5184,7 +5184,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2003"
             "wms_abstract"               "qc-flags-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5212,7 +5212,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2003"
             "wms_abstract"               "max-ndvi-value-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5240,7 +5240,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2003"
             "wms_abstract"               "max-ndvi-pos-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5268,7 +5268,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2003"
             "wms_abstract"               "large-integral-2003"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -5297,7 +5297,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2002"
             "wms_abstract"               "small-integral-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5325,7 +5325,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2002"
             "wms_abstract"               "min-value-right-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5353,7 +5353,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2002"
             "wms_abstract"               "min-value-left-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5381,7 +5381,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2002"
             "wms_abstract"               "min-pos-right-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5409,7 +5409,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2002"
             "wms_abstract"               "min-pos-left-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5437,7 +5437,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2002"
             "wms_abstract"               "right-value-80pct-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5465,7 +5465,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2002"
             "wms_abstract"               "left-value-80pct-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5493,7 +5493,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2002"
             "wms_abstract"               "right-pos-80pct-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5521,7 +5521,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2002"
             "wms_abstract"               "left-pos-80pct-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5549,7 +5549,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2002"
             "wms_abstract"               "right-value-20pct-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5577,7 +5577,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2002"
             "wms_abstract"               "left-value-20pct-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5605,7 +5605,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2002"
             "wms_abstract"               "right-pos-20pct-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5633,7 +5633,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2002"
             "wms_abstract"               "left-pos-20pct-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5661,7 +5661,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2002"
             "wms_abstract"               "qc-flags-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5689,7 +5689,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2002"
             "wms_abstract"               "max-ndvi-value-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5717,7 +5717,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2002"
             "wms_abstract"               "max-ndvi-pos-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5745,7 +5745,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2002"
             "wms_abstract"               "large-integral-2002"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -5774,7 +5774,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2001"
             "wms_abstract"               "small-integral-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5802,7 +5802,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2001"
             "wms_abstract"               "min-value-right-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5830,7 +5830,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2001"
             "wms_abstract"               "min-value-left-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5858,7 +5858,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2001"
             "wms_abstract"               "min-pos-right-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5886,7 +5886,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2001"
             "wms_abstract"               "min-pos-left-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5914,7 +5914,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2001"
             "wms_abstract"               "right-value-80pct-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5942,7 +5942,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2001"
             "wms_abstract"               "left-value-80pct-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5970,7 +5970,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2001"
             "wms_abstract"               "right-pos-80pct-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -5998,7 +5998,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2001"
             "wms_abstract"               "left-pos-80pct-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6026,7 +6026,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2001"
             "wms_abstract"               "right-value-20pct-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6054,7 +6054,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2001"
             "wms_abstract"               "left-value-20pct-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6082,7 +6082,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2001"
             "wms_abstract"               "right-pos-20pct-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6110,7 +6110,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2001"
             "wms_abstract"               "left-pos-20pct-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6138,7 +6138,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2001"
             "wms_abstract"               "qc-flags-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6166,7 +6166,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2001"
             "wms_abstract"               "max-ndvi-value-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6194,7 +6194,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2001"
             "wms_abstract"               "max-ndvi-pos-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6222,7 +6222,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2001"
             "wms_abstract"               "large-integral-2001"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
@@ -6251,7 +6251,7 @@ MAP
         METADATA
             "wms_title"                  "small-integral-2000"
             "wms_abstract"               "small-integral-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6279,7 +6279,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-right-2000"
             "wms_abstract"               "min-value-right-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6307,7 +6307,7 @@ MAP
         METADATA
             "wms_title"                  "min-value-left-2000"
             "wms_abstract"               "min-value-left-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6335,7 +6335,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-right-2000"
             "wms_abstract"               "min-pos-right-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6363,7 +6363,7 @@ MAP
         METADATA
             "wms_title"                  "min-pos-left-2000"
             "wms_abstract"               "min-pos-left-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6391,7 +6391,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-80pct-2000"
             "wms_abstract"               "right-value-80pct-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6419,7 +6419,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-80pct-2000"
             "wms_abstract"               "left-value-80pct-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6447,7 +6447,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-80pct-2000"
             "wms_abstract"               "right-pos-80pct-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6475,7 +6475,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-80pct-2000"
             "wms_abstract"               "left-pos-80pct-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6503,7 +6503,7 @@ MAP
         METADATA
             "wms_title"                  "right-value-20pct-2000"
             "wms_abstract"               "right-value-20pct-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6531,7 +6531,7 @@ MAP
         METADATA
             "wms_title"                  "left-value-20pct-2000"
             "wms_abstract"               "left-value-20pct-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6559,7 +6559,7 @@ MAP
         METADATA
             "wms_title"                  "right-pos-20pct-2000"
             "wms_abstract"               "right-pos-20pct-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6587,7 +6587,7 @@ MAP
         METADATA
             "wms_title"                  "left-pos-20pct-2000"
             "wms_abstract"               "left-pos-20pct-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6615,7 +6615,7 @@ MAP
         METADATA
             "wms_title"                  "qc-flags-2000"
             "wms_abstract"               "qc-flags-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6643,7 +6643,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-value-2000"
             "wms_abstract"               "max-ndvi-value-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6671,7 +6671,7 @@ MAP
         METADATA
             "wms_title"                  "max-ndvi-pos-2000"
             "wms_abstract"               "max-ndvi-pos-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	LAYER
@@ -6699,7 +6699,7 @@ MAP
         METADATA
             "wms_title"                  "large-integral-2000"
             "wms_abstract"               "large-integral-2000"
-            "gml_include_items"          "all"            
+            "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER
 	
