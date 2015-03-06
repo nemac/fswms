@@ -68,9 +68,232 @@ MAP
 
     # set defaults for GetLegendGraphic requests 
     LEGEND
-      KEYSIZE 154 297
+      KEYSIZE 20 10
     END
 
+	LAYER
+        NAME     mtbs-raster-84-99
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/mtbs/mtbs_84_99.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		
+		CLASS
+			NAME "MTBS 1984-1999"
+            EXPRESSION ""
+            COLOR 255 255 255
+        END
+		CLASS
+			NAME "1984"
+            EXPRESSION ([pixel] = 1984)
+            COLOR 255 158 175
+        END
+        CLASS
+			NAME "1985"
+            EXPRESSION ([pixel] = 1985)
+            COLOR 232 91 232
+        END
+        CLASS
+			NAME "1986"
+            EXPRESSION ([pixel] = 1986)
+            COLOR 170 0 229
+        END
+        CLASS
+			NAME "1987"
+            EXPRESSION ([pixel] = 1987)
+            COLOR 0 0 255
+        END
+        CLASS
+			NAME "1988"
+            EXPRESSION ([pixel] = 1988)
+            COLOR 0 127 255
+        END
+        CLASS
+			NAME "1989"
+            EXPRESSION ([pixel] = 1989)
+            COLOR 0 255 255
+        END
+        CLASS
+			NAME "1990"
+            EXPRESSION ([pixel] = 1990)
+            COLOR 0 204 0
+        END
+        CLASS
+			NAME "1991"
+            EXPRESSION ([pixel] = 1991)
+            COLOR 147 198 0
+        END
+        CLASS
+			NAME "1992"
+            EXPRESSION ([pixel] = 1992)
+            COLOR 255 255 0
+        END
+        CLASS
+			NAME "1993"
+            EXPRESSION ([pixel] = 1993)
+            COLOR 255 165 0
+        END
+        CLASS
+			NAME "1994"
+            EXPRESSION ([pixel] = 1994)
+            COLOR 255 0 0
+        END
+        CLASS
+			NAME "1995"
+            EXPRESSION ([pixel] = 1995)
+            COLOR 192 0 0
+        END        
+        CLASS
+			NAME "1996"
+            EXPRESSION ([pixel] = 1996)
+            COLOR 140 51 25
+        END  
+        CLASS
+			NAME "1997"
+            EXPRESSION ([pixel] = 1997)
+            COLOR 255 0 255
+        END  	
+		CLASS
+			NAME "1998"
+            EXPRESSION ([pixel] = 1998)
+            COLOR 255 235 190
+        END 
+		CLASS
+			NAME "1999"
+            EXPRESSION ([pixel] = 1999)
+            COLOR 255 85 0
+        END 
+        
+        METADATA
+            "wms_title"             "mtbs-raster-84-99"
+            "wms_abstract"          "mtbs-raster-84-99"
+            "gml_include_items"     "value_0"
+			#"gml_value_0_alias"     "Fire Year"
+        END  # end METADATA
+    END # end LAYER
+	
+	LAYER
+        NAME     mtbs-raster-00-14
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/mtbs/mtbs_gm_00_14.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		
+		CLASS
+			NAME "MTBS/GEOMAC 2000-2014"
+            EXPRESSION ""
+            COLOR 255 255 255
+        END
+		CLASS
+			NAME "2000"
+            EXPRESSION ([pixel] = 2000)
+            COLOR 255 158 175
+        END
+        CLASS
+			NAME "2001"
+            EXPRESSION ([pixel] = 2001)
+            COLOR 232 91 232
+        END
+        CLASS
+			NAME "2002"
+            EXPRESSION ([pixel] = 2002)
+            COLOR 170 0 229
+        END
+        CLASS
+			NAME "2003"
+            EXPRESSION ([pixel] = 2003)
+            COLOR 0 0 255
+        END
+        CLASS
+			NAME "2004"
+            EXPRESSION ([pixel] = 2004)
+            COLOR 0 127 255
+        END
+        CLASS
+			NAME "2005"
+            EXPRESSION ([pixel] = 2005)
+            COLOR 0 255 255
+        END
+        CLASS
+			NAME "2006"
+            EXPRESSION ([pixel] = 2006)
+            COLOR 0 204 0
+        END
+        CLASS
+			NAME "2007"
+            EXPRESSION ([pixel] = 2007)
+            COLOR 147 198 0
+        END
+        CLASS
+			NAME "2008"
+            EXPRESSION ([pixel] = 2008)
+            COLOR 255 255 0
+        END
+        CLASS
+			NAME "2009"
+            EXPRESSION ([pixel] = 2009)
+            COLOR 255 165 0
+        END
+        CLASS
+			NAME "2010"
+            EXPRESSION ([pixel] = 2010)
+            COLOR 255 0 0
+        END
+        CLASS
+			NAME "2011"
+            EXPRESSION ([pixel] = 2011)
+            COLOR 192 0 0
+        END        
+        CLASS
+			NAME "2012"
+            EXPRESSION ([pixel] = 2012)
+            COLOR 140 51 25
+        END  
+        CLASS
+			NAME "2013"
+            EXPRESSION ([pixel] = 2013)
+            COLOR 255 0 255
+        END  	
+		CLASS
+			NAME "2014"
+            EXPRESSION ([pixel] = 2014)
+            COLOR 255 235 190
+        END   
+        
+        METADATA
+            "wms_title"             "mtbs-raster-00-14"
+            "wms_abstract"          "mtbs-raster-00-14"
+            "gml_include_items"     "value_0"
+			#"gml_value_0_alias"     "Fire Year"
+        END  # end METADATA
+    END # end LAYER
+	
     LAYER
         NAME     srtm-dem-231m
         PROJECTION

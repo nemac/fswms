@@ -849,7 +849,6 @@ MAP
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
         DATA             "geom from conus_fire_mtbs_1984_2013"
 		FILTER           "year <= 1999"
-		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
@@ -874,7 +873,7 @@ MAP
             "wms_abstract"       "mtbs_1984_1999"
             "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
         END  # end METADATA
-    END # end Layer	
+    END # end Layer		
 	
 	LAYER #
         NAME mtbs_2000_2013
@@ -3482,4 +3481,148 @@ MAP
             "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
+	LAYER # 
+        NAME events-historical
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   OGR
+        #CONNECTION       test-events.geojson
+		CONNECTION       "http://forwarn.forestthreats.org/events-geojson"
+		#DATA
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         events.html
+        CLASSITEM 	field_event_status_rendered
+		CLASS
+            NAME "Historical Disturbances Assessed"
+			EXPRESSION ""
+            STYLE
+				#SYMBOL 'circle'
+                #SIZE 10
+                COLOR        225 255 255
+				#OUTLINECOLOR 50 50 50
+            END
+        END
+		CLASS
+            NAME "Alert Issued"
+			EXPRESSION "Alert Issued"
+            STYLE
+				SYMBOL 'circle'
+                SIZE 10
+                COLOR        225 0 0
+				OUTLINECOLOR 50 50 50
+            END
+        END
+		CLASS
+            NAME "Identified/Active"
+			EXPRESSION "Identified/Active"
+            STYLE
+				SYMBOL 'circle'
+                SIZE 10
+                COLOR        255 150 50
+				OUTLINECOLOR 50 50 50
+            END
+        END
+		CLASS
+            NAME "Watching"
+			EXPRESSION "Watching"
+            STYLE
+				SYMBOL 'circle'
+                SIZE 10
+                COLOR        255 255 51
+				OUTLINECOLOR 50 50 50
+            END
+        END
+		CLASS
+            NAME "No Alert Necessary"
+			EXPRESSION "No Alert Necessary"
+            STYLE
+				SYMBOL 'circle'
+                SIZE 10
+                COLOR        34 139 34
+				OUTLINECOLOR 50 50 50
+            END
+        END
+        METADATA
+            "wms_title"          "events-historical"
+            "wms_abstract"       "events-historical"
+            "gml_include_items"  "description"
+        END  # end METADATA
+    END #
+    LAYER # 
+        NAME events-current
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   OGR
+        CONNECTION       "http://forwarn.forestthreats.org/events-geojson-current"
+		#DATA
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM 	field_event_status_rendered
+		CLASS
+            NAME "Current Year Disturbances Assessed"
+			EXPRESSION ""
+            STYLE
+				#SYMBOL 'circle'
+                #SIZE 10
+                COLOR        225 255 255
+				#OUTLINECOLOR 50 50 50
+            END
+        END
+		CLASS
+            NAME "Alert Issued"
+			EXPRESSION "Alert Issued"
+            STYLE
+				SYMBOL 'circle'
+                SIZE 10
+                COLOR        225 0 0
+				OUTLINECOLOR 50 50 50
+            END
+        END
+		CLASS
+            NAME "Identified/Active"
+			EXPRESSION "Identified/Active"
+            STYLE
+				SYMBOL 'circle'
+                SIZE 10
+                COLOR        255 150 50
+				OUTLINECOLOR 50 50 50
+            END
+        END
+		CLASS
+            NAME "Watching"
+			EXPRESSION "Watching"
+            STYLE
+				SYMBOL 'circle'
+                SIZE 10
+                COLOR        255 255 51
+				OUTLINECOLOR 50 50 50
+            END
+        END
+		CLASS
+            NAME "No Alert Necessary"
+			EXPRESSION "No Alert Necessary"
+            STYLE
+				SYMBOL 'circle'
+                SIZE 10
+                COLOR        34 139 34
+				OUTLINECOLOR 50 50 50
+            END
+        END
+        METADATA
+            "wms_title"          "events-current-year"
+            "wms_abstract"       "events-current-year"
+            "gml_include_items"  "description"
+        END  # end METADATA
+    END #
 END
