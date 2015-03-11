@@ -302,15 +302,16 @@ MAP
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
         DATA             "geom from conus_fire_mtbs_1984_2013"
-		FILTER           "year = 2013"
-		
+				
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
-        CLASS
+        FILTERITEM year
+		FILTER year=2013
+		CLASS
             NAME "MTBS Fire 2013"
             STYLE
                 COLOR        255 255 255
@@ -338,7 +339,6 @@ MAP
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
         DATA             "geom from conus_fire_mtbs_1984_2013"
-		FILTER           "year = 2012"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -346,7 +346,10 @@ MAP
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
-        CLASS
+        
+		FILTERITEM year
+		FILTER year=2012
+		CLASS
             NAME "MTBS Fire 2012"
             STYLE
                 COLOR        255 255 255
@@ -374,7 +377,6 @@ MAP
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
         DATA             "geom from conus_fire_mtbs_1984_2013"
-		FILTER           "year = 2011"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -382,6 +384,9 @@ MAP
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
+		
+		FILTERITEM year
+		FILTER year=2011
         CLASS
             NAME "MTBS Fire 2011"
             STYLE
@@ -410,7 +415,6 @@ MAP
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
         DATA             "geom from conus_fire_mtbs_1984_2013"
-		FILTER           "year = 2010"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -418,6 +422,9 @@ MAP
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
+		
+		FILTERITEM year
+		FILTER year=2010
         CLASS
             NAME "MTBS Fire 2010"
             STYLE
@@ -448,7 +455,6 @@ MAP
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
         DATA             "geom from conus_fire_mtbs_1984_2013"
-        FILTER           "year = 2009"
 
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
@@ -458,6 +464,8 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 
+		FILTERITEM year
+		FILTER year=2009
         CLASS
             NAME "MTBS Fire 2009"
             STYLE
@@ -488,7 +496,6 @@ MAP
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
         DATA             "geom from conus_fire_mtbs_1984_2013"
-        FILTER           "year = 2008"
 
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
@@ -498,10 +505,10 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 
-        CLASSITEM        year
+        FILTERITEM year
+		FILTER year=2008
         CLASS
             NAME "MTBS Fire 2008"
-            #EXPRESSION ([year] = 2008)
             STYLE
                 COLOR        255 255 255
                 OUTLINECOLOR 32 32 32
@@ -538,10 +545,10 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 
-        CLASSITEM        year
+        FILTERITEM year
+		FILTER year=2007
         CLASS
             NAME "MTBS Fire 2007"
-            EXPRESSION ([year] = 2007)
             STYLE
                 COLOR        255 255 255
                 OUTLINECOLOR 32 32 32
@@ -578,10 +585,10 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 
-        CLASSITEM        year
+        FILTERITEM year
+		FILTER year=2006
         CLASS
             NAME "MTBS Fire 2006"
-            EXPRESSION ([year] = 2006)
             STYLE
                 COLOR        255 255 255
                 OUTLINECOLOR 32 32 32
@@ -618,10 +625,10 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 
-        CLASSITEM        year
+        FILTERITEM year
+		FILTER year=2005
         CLASS
             NAME "MTBS Fire 2005"
-            EXPRESSION ([year] = 2005)
             STYLE
                 COLOR        255 255 255
                 OUTLINECOLOR 32 32 32
@@ -658,10 +665,10 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 
-        CLASSITEM        year
+        FILTERITEM year
+		FILTER year=2004
         CLASS
             NAME "MTBS Fire 2004"
-            EXPRESSION ([year] = 2004)
             STYLE
                 COLOR        255 255 255
                 OUTLINECOLOR 32 32 32
@@ -698,10 +705,10 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 
-        CLASSITEM        year
+        FILTERITEM year
+		FILTER year=2003
         CLASS   
             NAME "MTBS Fire 2003"
-            EXPRESSION ([year] = 2003)
             STYLE
                 COLOR        255 255 255
                 OUTLINECOLOR 32 32 32
@@ -738,10 +745,10 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 
-        CLASSITEM        year
+        FILTERITEM year
+		FILTER year=2002
         CLASS
             NAME "MTBS Fire 2002"
-            EXPRESSION ([year] = 2002)
             STYLE
                 COLOR        255 255 255
                 OUTLINECOLOR 32 32 32
@@ -778,10 +785,10 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 
-        CLASSITEM        year
+        FILTERITEM year
+		FILTER year=2001
         CLASS
             NAME "MTBS Fire 2001"
-            EXPRESSION ([year] = 2001)
             STYLE
                 COLOR        255 255 255
                 OUTLINECOLOR 32 32 32
@@ -818,10 +825,10 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 
-        CLASSITEM        year
+        FILTERITEM year
+		FILTER year=2000
         CLASS
             NAME "MTBS Fire 2000"
-            EXPRESSION ([year] = 2000)
             STYLE
                 COLOR        255 255 255
                 OUTLINECOLOR 32 32 32
