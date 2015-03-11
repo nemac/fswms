@@ -585,8 +585,8 @@
 	</wmsSubgroup>
   </wmsGroup>
 
-  <wmsGroup gid="G03" name="US_FHM_ADS" label="Historical Aerial Disturbance Surveys (USFS FHM)">
-    <wmsSubgroup label="USFS FHM">
+  <wmsGroup gid="G03" name="US_FHM_ADS" label="Historical Insect and Disease Surveys (USDA FS, Forest Health)">
+    <wmsSubgroup label="USDA FS FHTET">
     <wmsLayer 
        lid="ADS2000"
        visible="false" 
@@ -595,7 +595,7 @@
        layers="ads_2000" 
        styles="default" 
        identify="true" 
-       name="2000 Aerial Disturbance Surveys (FHTET)" 
+       name="2000 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
     <wmsLayer 
        lid="ADS2001"
@@ -605,7 +605,7 @@
        layers="ads_2001" 
        styles="default" 
        identify="true" 
-       name="2001 Aerial Disturbance Surveys (FHTET)" 
+       name="2001 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
     <wmsLayer 
        lid="ADS2002"
@@ -615,7 +615,7 @@
        layers="ads_2002" 
        styles="default" 
        identify="true" 
-       name="2002 Aerial Disturbance Surveys (FHTET)" 
+       name="2002 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
     <wmsLayer 
        lid="AAS"
@@ -625,7 +625,7 @@
        layers="ads_2003" 
        styles="default" 
        identify="true" 
-       name="2003 Aerial Disturbance Surveys (FHTET)" 
+       name="2003 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAT"
@@ -635,7 +635,7 @@
        layers="ads_2004" 
        styles="default" 
        identify="true" 
-       name="2004 Aerial Disturbance Surveys (FHTET)" 
+       name="2004 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAU"
@@ -645,7 +645,7 @@
        layers="ads_2005" 
        styles="default" 
        identify="true" 
-       name="2005 Aerial Disturbance Surveys (FHTET)" 
+       name="2005 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAV"
@@ -655,7 +655,7 @@
        layers="ads_2006" 
        styles="default" 
        identify="true" 
-       name="2006 Aerial Disturbance Surveys (FHTET)" 
+       name="2006 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAW"
@@ -665,7 +665,7 @@
        layers="ads_2007" 
        styles="default" 
        identify="true" 
-       name="2007 Aerial Disturbance Surveys (FHTET)" 
+       name="2007 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAX"
@@ -675,7 +675,7 @@
        layers="ads_2008" 
        styles="default" 
        identify="true" 
-       name="2008 Aerial Disturbance Surveys (FHTET)" 
+       name="2008 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAY"
@@ -685,7 +685,7 @@
        layers="ads_2009" 
        styles="default" 
        identify="true" 
-       name="2009 Aerial Disturbance Surveys (FHTET)" 
+       name="2009 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="ADS2010"
@@ -695,7 +695,7 @@
        layers="ads_2010" 
        styles="default" 
        identify="true" 
-       name="2010 Aerial Disturbance Surveys (FHTET)" 
+       name="2010 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
     <wmsLayer 
        lid="ADS2011"
@@ -705,7 +705,7 @@
        layers="ads_2011" 
        styles="default" 
        identify="true" 
-       name="2011 Aerial Disturbance Surveys (FHTET)" 
+       name="2011 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
      <wmsLayer 
        lid="ADS2012"
@@ -715,7 +715,7 @@
        layers="ads_2012" 
        styles="default" 
        identify="true" 
-       name="2012 Aerial Disturbance Surveys (FHTET)" 
+       name="2012 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"/> 
      <wmsLayer 
        lid="ADS2013"
@@ -725,7 +725,7 @@
        layers="ads_2013" 
        styles="default" 
        identify="true" 
-       name="2013 Aerial Disturbance Surveys (FHTET)" 
+       name="2013 surveys" 
        legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>	   
     <wmsLayer 
        lid="BNE"
