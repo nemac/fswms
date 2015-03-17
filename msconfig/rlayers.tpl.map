@@ -283,7 +283,7 @@ MAP
 		CLASS
 			NAME "2014"
             EXPRESSION ([pixel] = 2014)
-            COLOR 255 235 190
+            COLOR 192 64 64
         END   
         
         METADATA
