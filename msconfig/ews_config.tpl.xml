@@ -3773,7 +3773,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Start of greenup day (20L)" 
-	 legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/greenup.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Phenology Parameters- 2013">
       <wmsLayer 
