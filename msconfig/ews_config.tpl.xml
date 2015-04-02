@@ -3774,6 +3774,16 @@
 	 identify="true" 
 	 name="Start of greenup day (20L)" 
 	 legend="%(SERVER_URL)s/cmapicons/greenup.png"/>
+      <wmsLayer 
+	 lid="PARAMGREENSTARTNDVI"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="greenstartupndvi" 
+	 styles="default" 
+	 identify="true" 
+	 name="Start of greenup NDVI (20L)" 
+	 legend="%(SERVER_URL)s/cmapicons/greenupndvi.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Phenology Parameters- 2013">
       <wmsLayer 
