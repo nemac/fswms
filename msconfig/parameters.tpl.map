@@ -6754,4 +6754,30 @@ MAP
             "gml_include_items"          "value_0"            
         END  # end METADATA
     END # end LAYER		
+	LAYER
+        NAME     browndown
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/MODIS/CONUS_Medians/browndown.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "cmaps/browndown.cmap"
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "browndown"
+            "wms_abstract"               "browndown"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER			
 END #Map

@@ -3784,6 +3784,16 @@
 	 identify="true" 
 	 name="Start of greenup NDVI (20L)" 
 	 legend="%(SERVER_URL)s/cmapicons/greenupndvi.png"/>
+      <wmsLayer 
+	 lid="PARAMBROWNDOWN"
+	 visible="false" 
+	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="browndown" 
+	 styles="default" 
+	 identify="true" 
+	 name="Start of browndown day (80R)" 
+	 legend="%(SERVER_URL)s/cmapicons/browndown.png"/>	 
     </wmsSubgroup>
 	<wmsSubgroup label="Phenology Parameters- 2013">
       <wmsLayer 
