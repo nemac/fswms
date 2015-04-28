@@ -204,6 +204,78 @@
 	 name="Secondary Roads"
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=roads&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
+	<wmsSubgroup label="Urbanness Density Zones">
+      <wmsLayer
+	 lid="URBLEVA"
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="urban-level-3"
+	 styles="default"
+	 identify="true"
+	 name="Urban Level 3"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=urban-level-3&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer
+	 lid="URBLEVB"
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="urban-level-4"
+	 styles="default"
+	 identify="true"
+	 name="Urban Level 4"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=urban-level-4&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer
+	 lid="URBLEVC"
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="urban-level-5"
+	 styles="default"
+	 identify="true"
+	 name="Urban Level 5"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=urban-level-5&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer
+	 lid="URBLEVD"
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="urban-level-6"
+	 styles="default"
+	 identify="true"
+	 name="Urban Level 6"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=urban-level-6&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer
+	 lid="URBLEVE"
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="urban-level-7"
+	 styles="default"
+	 identify="true"
+	 name="Urban Level 7"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=urban-level-7&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer
+	 lid="URBLEVF"
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="urban-level-8"
+	 styles="default"
+	 identify="true"
+	 name="Urban Level 8"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=urban-level-8&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer
+	 lid="URBLEVG"
+	 visible="false"
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 srs="EPSG:3785"
+	 layers="urban-level-9"
+	 styles="default"
+	 identify="true"
+	 name="Urban Level 9"
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=urban-level-9&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+    </wmsSubgroup>
   </wmsGroup>
 
   <wmsGroup gid="G02" name="US_Fire" label="Fires">

@@ -199,6 +199,230 @@ MAP
         END  # end METADATA
     END # end Layer
 
+	LAYER # 
+        NAME urban-level-3
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from urban_level_3"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Urban Level 3"
+            STYLE
+                COLOR        0 191 64
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"            "urban-level-3"
+            "wms_abstract"         "urban-level-3"
+            "gml_include_items"    "cat"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER # 
+        NAME urban-level-4
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from urban_level_4"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Urban Level 4"
+            STYLE
+                COLOR        31 255 0
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"            "urban-level-4"
+            "wms_abstract"         "urban-level-4"
+            "gml_include_items"    "cat"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER # 
+        NAME urban-level-5
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from urban_level_5"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Urban Level 5"
+            STYLE
+                COLOR        127 255 0
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"            "urban-level-5"
+            "wms_abstract"         "urban-level-5"
+            "gml_include_items"    "cat"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER # 
+        NAME urban-level-6
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from urban_level_6"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Urban Level 6"
+            STYLE
+                COLOR        223 255 0
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"            "urban-level-6"
+            "wms_abstract"         "urban-level-6"
+            "gml_include_items"    "cat"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER # 
+        NAME urban-level-7
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from urban_level_7"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Urban Level 7"
+            STYLE
+                COLOR        255 192 0
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"            "urban-level-7"
+            "wms_abstract"         "urban-level-7"
+            "gml_include_items"    "cat"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER # 
+        NAME urban-level-8
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from urban_level_8"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Urban Level 8"
+            STYLE
+                COLOR        255 96 0
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"            "urban-level-8"
+            "wms_abstract"         "urban-level-8"
+            "gml_include_items"    "cat"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER # 
+        NAME urban-level-9
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from urban_level_9"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Urban Level 9"
+            STYLE
+                COLOR        255 0 0
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"            "urban-level-9"
+            "wms_abstract"         "urban-level-9"
+            "gml_include_items"    "cat"
+        END  # end METADATA
+    END # end Layer
+	
     LAYER # 
         NAME federal_lands
         
