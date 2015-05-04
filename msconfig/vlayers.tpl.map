@@ -200,7 +200,7 @@ MAP
     END # end Layer
 
 	LAYER # 
-        NAME urban-level-3
+        NAME urban-size-3
         
         PROJECTION
             "init=epsg:4326"
@@ -218,21 +218,21 @@ MAP
         TEMPLATE         ./templates/layer_query_body.html
 
         CLASS
-            NAME "Urban Level 3"
+            NAME "Urban Size 3"
             STYLE
-                COLOR        0 191 64
-                OUTLINECOLOR 0 0 0 
+                #COLOR        0 191 64
+                OUTLINECOLOR 0 0 0  
             END
         END
         METADATA
-            "wms_title"            "urban-level-3"
-            "wms_abstract"         "urban-level-3"
+            "wms_title"            "urban-size-3"
+            "wms_abstract"         "urban-size-3"
             "gml_include_items"    "cat"
         END  # end METADATA
     END # end Layer
 	
 	LAYER # 
-        NAME urban-level-4
+        NAME urban-size-4
         
         PROJECTION
             "init=epsg:4326"
@@ -250,21 +250,21 @@ MAP
         TEMPLATE         ./templates/layer_query_body.html
 
         CLASS
-            NAME "Urban Level 4"
+            NAME "Urban Size 4"
             STYLE
-                COLOR        31 255 0
+                #COLOR        31 255 0
                 OUTLINECOLOR 0 0 0 
             END
         END
         METADATA
-            "wms_title"            "urban-level-4"
-            "wms_abstract"         "urban-level-4"
+            "wms_title"            "urban-size-4"
+            "wms_abstract"         "urban-size-4"
             "gml_include_items"    "cat"
         END  # end METADATA
     END # end Layer
 	
 	LAYER # 
-        NAME urban-level-5
+        NAME urban-size-5
         
         PROJECTION
             "init=epsg:4326"
@@ -282,21 +282,21 @@ MAP
         TEMPLATE         ./templates/layer_query_body.html
 
         CLASS
-            NAME "Urban Level 5"
+            NAME "Urban Size 5"
             STYLE
-                COLOR        127 255 0
+                #COLOR        127 255 0
                 OUTLINECOLOR 0 0 0 
             END
         END
         METADATA
-            "wms_title"            "urban-level-5"
-            "wms_abstract"         "urban-level-5"
+            "wms_title"            "urban-size-5"
+            "wms_abstract"         "urban-size-5"
             "gml_include_items"    "cat"
         END  # end METADATA
     END # end Layer
 	
 	LAYER # 
-        NAME urban-level-6
+        NAME urban-size-6
         
         PROJECTION
             "init=epsg:4326"
@@ -314,21 +314,21 @@ MAP
         TEMPLATE         ./templates/layer_query_body.html
 
         CLASS
-            NAME "Urban Level 6"
+            NAME "Urban Size 6"
             STYLE
-                COLOR        223 255 0
+                #COLOR        223 255 0
                 OUTLINECOLOR 0 0 0 
             END
         END
         METADATA
-            "wms_title"            "urban-level-6"
-            "wms_abstract"         "urban-level-6"
+            "wms_title"            "urban-size-6"
+            "wms_abstract"         "urban-size-6"
             "gml_include_items"    "cat"
         END  # end METADATA
     END # end Layer
 	
 	LAYER # 
-        NAME urban-level-7
+        NAME urban-size-7
         
         PROJECTION
             "init=epsg:4326"
@@ -346,21 +346,21 @@ MAP
         TEMPLATE         ./templates/layer_query_body.html
 
         CLASS
-            NAME "Urban Level 7"
+            NAME "Urban Size 7"
             STYLE
-                COLOR        255 192 0
+                #COLOR        255 192 0
                 OUTLINECOLOR 0 0 0 
             END
         END
         METADATA
-            "wms_title"            "urban-level-7"
-            "wms_abstract"         "urban-level-7"
+            "wms_title"            "urban-size-7"
+            "wms_abstract"         "urban-size-7"
             "gml_include_items"    "cat"
         END  # end METADATA
     END # end Layer
 	
 	LAYER # 
-        NAME urban-level-8
+        NAME urban-size-8
         
         PROJECTION
             "init=epsg:4326"
@@ -378,21 +378,21 @@ MAP
         TEMPLATE         ./templates/layer_query_body.html
 
         CLASS
-            NAME "Urban Level 8"
+            NAME "Urban Size 8"
             STYLE
-                COLOR        255 96 0
+                #COLOR        255 96 0
                 OUTLINECOLOR 0 0 0 
             END
         END
         METADATA
-            "wms_title"            "urban-level-8"
-            "wms_abstract"         "urban-level-8"
+            "wms_title"            "urban-size-8"
+            "wms_abstract"         "urban-size-8"
             "gml_include_items"    "cat"
         END  # end METADATA
     END # end Layer
 	
 	LAYER # 
-        NAME urban-level-9
+        NAME urban-size-9
         
         PROJECTION
             "init=epsg:4326"
@@ -410,16 +410,117 @@ MAP
         TEMPLATE         ./templates/layer_query_body.html
 
         CLASS
-            NAME "Urban Level 9"
+            NAME "Urban Size 9"
             STYLE
-                COLOR        255 0 0
+                #COLOR        255 0 0
                 OUTLINECOLOR 0 0 0 
             END
         END
         METADATA
-            "wms_title"            "urban-level-9"
-            "wms_abstract"         "urban-level-9"
+            "wms_title"            "urban-size-9"
+            "wms_abstract"         "urban-size-9"
             "gml_include_items"    "cat"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER # 
+        NAME urban-contours
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from urban_contours"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+		CLASSITEM        gridcode
+		CLASS
+			NAME "All Urban Levels"
+			EXPRESSION ""
+		END
+		CLASS
+            NAME "Urban Level 1"
+			EXPRESSION "1"
+            STYLE
+                #COLOR        250 252 164
+                OUTLINECOLOR 0 0 255
+            END
+        END
+		CLASS
+            NAME "Urban Level 2"
+			EXPRESSION "2"
+            STYLE
+                #COLOR        250 252 164
+                OUTLINECOLOR 0 95 160
+            END
+        END
+		CLASS
+            NAME "Urban Level 3"
+			EXPRESSION "3"
+            STYLE
+                #COLOR        250 252 164
+                OUTLINECOLOR 0 191 64
+            END
+        END
+		CLASS
+            NAME "Urban Level 4"
+			EXPRESSION "4"
+            STYLE
+                #COLOR        255 211 127
+                OUTLINECOLOR 31 255 0
+            END
+        END
+		CLASS
+            NAME "Urban Level 5"
+			EXPRESSION "5"
+            STYLE
+                #COLOR        56 168 0
+                OUTLINECOLOR 127 255 0
+            END
+        END
+		CLASS
+            NAME "Urban Level 6"
+			EXPRESSION "6"
+            STYLE
+                #COLOR        115 0 76
+                OUTLINECOLOR 223 255 0
+            END
+        END
+		CLASS
+            NAME "Urban Level 7"
+			EXPRESSION "7"
+            STYLE
+                #COLOR        223 115 255
+                OUTLINECOLOR 255 192 0
+            END
+        END
+		CLASS
+            NAME "Urban Level 8"
+			EXPRESSION "8"
+            STYLE
+                #COLOR        223 115 255
+                OUTLINECOLOR 255 96 0
+            END
+        END
+		CLASS
+            NAME "Urban Level 9"
+			EXPRESSION "9"
+            STYLE
+                OUTLINECOLOR 255 0 0
+            END
+        END
+        METADATA
+            "wms_title"            "urban-contours"
+            "wms_abstract"         "urban-contours"
+            "gml_include_items"    "gridcode"
         END  # end METADATA
     END # end Layer
 	

@@ -3277,6 +3277,81 @@ MAP
             "gml_include_items"     "value_list"			
         END  # end METADATA
     END # end LAYER
+	LAYER
+        NAME urban-raster        
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/urban/lloydurban9.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		CLASS
+			NAME "All Urban Levels"
+			EXPRESSION ""
+			COLOR 	255 255 255
+		END
+		CLASS
+			NAME "Urban Level 1"
+			EXPRESSION ([pixel] = 1)
+			COLOR 	0 0 255
+		END
+		CLASS
+			NAME "Urban Level 2"
+			EXPRESSION ([pixel] = 2)
+			COLOR 	0 95 160
+		END
+		CLASS
+			NAME "Urban Level 3"
+			EXPRESSION ([pixel] = 3)
+			COLOR 	0 191 64
+		END
+		CLASS
+			NAME "Urban Level 4"
+			EXPRESSION ([pixel] = 4)
+			COLOR 	31 255 0
+		END
+		CLASS
+			NAME "Urban Level 5"
+			EXPRESSION ([pixel] = 5)
+			COLOR 	127 255 0
+		END
+		CLASS
+			NAME "Urban Level 6"
+			EXPRESSION ([pixel] = 6)
+			COLOR 	223 255 0
+		END
+		CLASS
+			NAME "Urban Level 7"
+			EXPRESSION ([pixel] = 7)
+			COLOR 	255 192 0
+		END
+		CLASS
+			NAME "Urban Level 8"
+			EXPRESSION ([pixel] = 8)
+			COLOR 	255 96 0
+		END
+		CLASS
+			NAME "Urban Level 9"
+			EXPRESSION ([pixel] = 9)
+			COLOR 	255 0 0
+		END
+        METADATA
+            "wms_title"             "urban-raster"
+            "wms_abstract"          "urban-raster"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
 	
 	
 	
