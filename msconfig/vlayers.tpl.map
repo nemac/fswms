@@ -221,7 +221,7 @@ MAP
             NAME "Urban Size 3"
             STYLE
                 #COLOR        0 191 64
-                OUTLINECOLOR 0 0 0  
+                OUTLINECOLOR 0 191 64 
             END
         END
         METADATA
@@ -253,7 +253,7 @@ MAP
             NAME "Urban Size 4"
             STYLE
                 #COLOR        31 255 0
-                OUTLINECOLOR 0 0 0 
+                OUTLINECOLOR 31 255 0 
             END
         END
         METADATA
@@ -285,7 +285,7 @@ MAP
             NAME "Urban Size 5"
             STYLE
                 #COLOR        127 255 0
-                OUTLINECOLOR 0 0 0 
+                OUTLINECOLOR 127 255 0
             END
         END
         METADATA
@@ -317,7 +317,7 @@ MAP
             NAME "Urban Size 6"
             STYLE
                 #COLOR        223 255 0
-                OUTLINECOLOR 0 0 0 
+                OUTLINECOLOR 223 255 0
             END
         END
         METADATA
@@ -349,7 +349,7 @@ MAP
             NAME "Urban Size 7"
             STYLE
                 #COLOR        255 192 0
-                OUTLINECOLOR 0 0 0 
+                OUTLINECOLOR 255 192 0 
             END
         END
         METADATA
@@ -381,7 +381,7 @@ MAP
             NAME "Urban Size 8"
             STYLE
                 #COLOR        255 96 0
-                OUTLINECOLOR 0 0 0 
+                OUTLINECOLOR 255 96 0 
             END
         END
         METADATA
@@ -413,7 +413,7 @@ MAP
             NAME "Urban Size 9"
             STYLE
                 #COLOR        255 0 0
-                OUTLINECOLOR 0 0 0 
+                OUTLINECOLOR 255 0 0 
             END
         END
         METADATA
