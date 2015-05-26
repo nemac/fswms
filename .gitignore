@@ -1,5 +1,6 @@
 *.tgz
 *.pyc
+*~
 html/ews.map
 html/ewswcs.map
 html/ewswgs84.map
