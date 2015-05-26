@@ -9688,7 +9688,10 @@
   </wmsGroup>  
 </wmsLayers>
   <tools>
-    <tool name="Print" label="Print Map" />
+    <tool name="Print" label="Print Map"
+          service_url="http://olprint.nemac.org"
+          service_name="print"
+          title="U.S Forest Change Assessment Viewer"/>
     <tool name="Export" label="Export Map to JPG" />
     <tool name="Identify" label="Identify Features" linkFields=""/>
     <tool name="Phenograph" label="Graph NDVI" helpText = "Click the map to see NDVI for the point. Or, enter coordinates and click Make Graph."
