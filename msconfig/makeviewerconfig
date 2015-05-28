@@ -318,12 +318,12 @@ for subgroup in [
       'layers' : [
             { 'name' : 'RSAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] },
-			{ 'label' : '   Change from 5-Year Baseline',
-      'layers' : [
-            { 'name' : 'RSAC-FHTET_5YrBaseline_current',        'lid' : 'AQ',  'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_5YrBaseline_previous1',      'lid' : 'AR',  'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_5YrBaseline_previous2',      'lid' : 'AS',  'visible' : 'false' } ] }
+            { 'name' : 'RSAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] }
+			# { 'label' : '   Change from 5-Year Baseline',
+      # 'layers' : [
+            # { 'name' : 'RSAC-FHTET_5YrBaseline_current',        'lid' : 'AQ',  'visible' : 'false' },
+            # { 'name' : 'RSAC-FHTET_5YrBaseline_previous1',      'lid' : 'AR',  'visible' : 'false' },
+            # { 'name' : 'RSAC-FHTET_5YrBaseline_previous2',      'lid' : 'AS',  'visible' : 'false' } ] }
     ]:
     rsacModisChangeDetectionProductLayers = ( rsacModisChangeDetectionProductLayers +
         '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
