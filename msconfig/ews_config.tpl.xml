@@ -863,6 +863,9 @@
     <wmsSubgroup label="Archived MODIS NRT 3-Year Baseline (TACs-NASA)">
     %(NRT_3YEAR_LAYERS)s
     </wmsSubgroup>
+	<wmsSubgroup label="Archived MODIS NRT 5-Year Baseline (TACs-NASA)">
+    %(NRT_5YEAR_LAYERS)s
+    </wmsSubgroup>
     <wmsSubgroup label="Archived NRT All-Year Baseline (TACs-NASA)">
     %(NRT_AllYEAR_LAYERS)s
     </wmsSubgroup>

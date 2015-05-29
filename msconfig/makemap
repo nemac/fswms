@@ -11,6 +11,7 @@
 ### 
 ###  * create ews1year.map using template ews1year.tpl.map
 ###  * create ews3year.map using template ews3year.tpl.map
+###  * create ews5year.map using template ews5year.tpl.map
 ###  * create ewstruecolor.map using template ewstruecolor.tpl.map
 
 
@@ -838,6 +839,62 @@ WCS_LABEL = "EWS 3Year"
 f_new.write( template.render( {
             'DATA_DIR'              : DATA_DIR,
             'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "ewswcs3year"),
+            'LAYERS'                : LAYERS,
+            'WMS_SRS'               : "EPSG:2163",
+            'MAPFILE_PROJECTION'    : '"init=epsg:2163"',
+            'SERVICE_NAME'          : SERVICE_NAME,
+            'TEMP_FILE_PREFIX'      : "ms_%s" % (SERVICE_NAME),
+            'MAPFILE'               : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+            'OWS_TITLE'             : "NEMAC %s WMS" % (SERVICE_NAME),
+            'OWS_ABSTRACT'          : "NEMAC %s WMS" % (SERVICE_NAME),
+            'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
+            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+            'MS_ERRORFILE'          : "../var/log/%s.log" % (SERVICE_NAME),
+            'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
+            'WCS_LABEL'             : WCS_LABEL
+            } ) )
+f_new.close()
+
+###
+### Create the ews5year.map file:
+###
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_5YEAR", "5Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "no", True)
+template = Template("ews_gen.tpl.map")
+f_new = openMapfileForWriting("ews5year.map")
+SERVICE_NAME = "ews5year"
+WCS_LABEL = "EWS 5Year"
+f_new.write( template.render( {
+            'DATA_DIR'              : DATA_DIR,
+            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "ews5year"),
+            'LAYERS'                : LAYERS,
+            'WMS_SRS'               : "EPSG:4326 EPSG:2163 EPSG:3785 EPSG:900913",
+            'MAPFILE_PROJECTION'    : '"init=epsg:3785"',
+            'SERVICE_NAME'          : SERVICE_NAME,
+            'TEMP_FILE_PREFIX'      : "ms_%s" % (SERVICE_NAME),
+            'MAPFILE'               : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+            'OWS_TITLE'             : "NEMAC %s WMS" % (SERVICE_NAME),
+            'OWS_ABSTRACT'          : "NEMAC %s WMS" % (SERVICE_NAME),
+            'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
+            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+            'MS_ERRORFILE'          : "../var/log/%s.log" % (SERVICE_NAME),
+            'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
+            'WCS_LABEL'             : WCS_LABEL
+            } ) )
+f_new.close()
+
+#print "debug: at 22"
+
+###
+### Create the ewswcs5year.map file:
+###
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/5Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "yes", False)
+template = Template("ews_gen.tpl.map")
+f_new = openMapfileForWriting("ewswcs5year.map")
+SERVICE_NAME = "ewswcs5year"
+WCS_LABEL = "EWS 5Year"
+f_new.write( template.render( {
+            'DATA_DIR'              : DATA_DIR,
+            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "ewswcs5year"),
             'LAYERS'                : LAYERS,
             'WMS_SRS'               : "EPSG:2163",
             'MAPFILE_PROJECTION'    : '"init=epsg:2163"',

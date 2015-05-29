@@ -250,6 +250,19 @@ linkgroups = [
         'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
     },
+	## MWH: 5/28/2015 new NRT 5 year product for EFETAC NASA
+	{
+        # /flood/fsdata/efetac_nasa/3Year/20110601_24_2010_max.tfw
+        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_5YEAR", "5Year")),
+        'regex'              : r'/'+choose("X_LC_5YEAR", "5Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "efetac_nasa-retro/"+choose("X_LC_5YEAR", "5YrBaseline")+""),
+        'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
+        'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
+    },
 	##	JDM: 4/24/13 new NRT products for EFETAC NASA	
     {
         # /flood/fsdata/efetac_nasa/X_ALC_1YR/20130414_24_alc_1yr.tif

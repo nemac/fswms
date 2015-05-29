@@ -279,6 +279,11 @@ for subgroup in [
             { 'name' : ''+choose("EFETAC-NASA_X_LC_3YEAR_current", "EFETAC-NASA_3YrBaseline_current")+'',       'lid' : 'AG',  'visible' : 'false' },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_3YEAR_previous1", "EFETAC-NASA_3YrBaseline_previous1")+'',   'lid' : 'AH',  'visible' : 'false' },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_3YEAR_previous2", "EFETAC-NASA_3YrBaseline_previous2")+'',   'lid' : 'AI',  'visible' : 'false' } ] },
+	{ 'label' : '   Change from 5-Year Baseline (&lt;5-Yr old disturbances)',
+      'layers' : [
+            { 'name' : ''+choose("EFETAC-NASA_X_LC_5YEAR_current", "EFETAC-NASA_5YrBaseline_current")+'',       'lid' : 'FVYRA',  'visible' : 'false' },
+            { 'name' : ''+choose("EFETAC-NASA_X_LC_5YEAR_previous1", "EFETAC-NASA_5YrBaseline_previous1")+'',   'lid' : 'FVYRB',  'visible' : 'false' },
+            { 'name' : ''+choose("EFETAC-NASA_X_LC_5YEAR_previous2", "EFETAC-NASA_5YrBaseline_previous2")+'',   'lid' : 'FVYRC',  'visible' : 'false' } ] },
     { 'label' : '   Early Detect (ALC) Change from previous year',
       'layers' : [
             { 'name' : ''+choose("EFETAC-NASA_X_LC_ALC_1YR_current", "EFETAC-NASA_ALC1YR_current")+'',       'lid' : 'ALCAA',  'visible' : 'false' },
@@ -348,6 +353,7 @@ if not os.path.exists("../html/view/config"):
 nrtTCProductLayers = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/TrueColorData", "EFETAC-NASA_TC", "ewstruecolor", False, ".img", False)
 nrt1YrProductLayers = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "EFETAC-NASA_1Year", "ews1year", True, ".tif", True)
 nrt3YrProductLayers = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "EFETAC-NASA_3Year", "ews3year", True, ".tif", True)
+nrt5YrProductLayers = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_5YEAR", "5Year"), "EFETAC-NASA_5Year", "ews5year", True, ".tif", True)
 nrtAllYrProductLayers = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear"), "EFETAC-NASA", "ews", True, ".tif", True)
 #jdm 5/31: new nrt products
 #added additional param to getNRTLayers() to account for masking
@@ -367,6 +373,7 @@ f.write(template.render( {
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,
             'NRT_3YEAR_LAYERS'        : nrt3YrProductLayers,
+			'NRT_5YEAR_LAYERS'        : nrt5YrProductLayers,
             'NRT_AllYEAR_LAYERS'      : nrtAllYrProductLayers,
             'NRT_ALC1YR_LAYERS'       : nrtALC1Yr,
             'NRT_MUCALLYR_LAYERS'     : nrtMUCAllYr,

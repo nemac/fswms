@@ -67,6 +67,10 @@ Header set Access-Control-Allow-Origin "*"
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "ews5year">
+    Allow from all
+    SetHandler cgi-script
+</Files>
 <Files "vlayers">
     Allow from all
     SetHandler cgi-script
@@ -96,6 +100,10 @@ Header set Access-Control-Allow-Origin "*"
     SetHandler cgi-script
 </Files>
 <Files "ewswcs3year">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "ewswcs5year">
     Allow from all
     SetHandler cgi-script
 </Files>
