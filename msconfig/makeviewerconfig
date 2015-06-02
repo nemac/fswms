@@ -264,37 +264,37 @@ except:
 
 tacsModisChangeDetectionProductLayers = ""
 for subgroup in [
-    { 'label' : '   Change from 1-Year Baseline (recent disturbances)',
+    { 'label' : '   From Prior Year',
       'layers' : [
             { 'name' : ''+choose("EFETAC-NASA_X_LC_1YEAR_current", "EFETAC-NASA_1YrBaseline_current")+'',       'lid' : 'AD',  'visible' : 'true' },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_1YEAR_previous1", "EFETAC-NASA_1YrBaseline_previous1")+'',   'lid' : 'AE',  'visible' : 'false' },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_1YEAR_previous2", "EFETAC-NASA_1YrBaseline_previous2")+'',   'lid' : 'AF',  'visible' : 'false' } ] },
-    { 'label' : '   Change from All-Year Baseline (all disturbances)',
+    { 'label' : '   From All-Year Max',
       'layers' : [
             { 'name' : ''+choose("EFETAC-NASA_X_LC_ALLYEAR_current", "EFETAC-NASA_current")+'',      'lid' : 'AA',  'visible' : 'false'  },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_ALLYEAR_previous1", "EFETAC-NASA_previous1")+'',  'lid' : 'AB',  'visible' : 'false' },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_ALLYEAR_previous2", "EFETAC-NASA_previous2")+'',  'lid' : 'AC',  'visible' : 'false' } ] },
-    { 'label' : '   Change from 3-Year Baseline (&lt;3-Yr old disturbances)',
+    { 'label' : '   From Prior 3-Year Max',
       'layers' : [
             { 'name' : ''+choose("EFETAC-NASA_X_LC_3YEAR_current", "EFETAC-NASA_3YrBaseline_current")+'',       'lid' : 'AG',  'visible' : 'false' },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_3YEAR_previous1", "EFETAC-NASA_3YrBaseline_previous1")+'',   'lid' : 'AH',  'visible' : 'false' },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_3YEAR_previous2", "EFETAC-NASA_3YrBaseline_previous2")+'',   'lid' : 'AI',  'visible' : 'false' } ] },
-	{ 'label' : '   Change from 5-Year Baseline (&lt;5-Yr old disturbances)',
+	{ 'label' : '   From Prior 5-Year Max',
       'layers' : [
             { 'name' : ''+choose("EFETAC-NASA_X_LC_5YEAR_current", "EFETAC-NASA_5YrBaseline_current")+'',       'lid' : 'FVYRA',  'visible' : 'false' },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_5YEAR_previous1", "EFETAC-NASA_5YrBaseline_previous1")+'',   'lid' : 'FVYRB',  'visible' : 'false' },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_5YEAR_previous2", "EFETAC-NASA_5YrBaseline_previous2")+'',   'lid' : 'FVYRC',  'visible' : 'false' } ] },
-    { 'label' : '   Early Detect (ALC) Change from previous year',
+    { 'label' : '   Early Detect (From Prior Year)',
       'layers' : [
             { 'name' : ''+choose("EFETAC-NASA_X_LC_ALC_1YR_current", "EFETAC-NASA_ALC1YR_current")+'',       'lid' : 'ALCAA',  'visible' : 'false' },
 			{ 'name' : ''+choose("EFETAC-NASA_X_LC_ALC_1YR_previous1", "EFETAC-NASA_ALC1YR_previous1")+'',   'lid' : 'ALCAB',  'visible' : 'false' },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_ALC_1YR_previous2", "EFETAC-NASA_ALC1YR_previous2")+'',   'lid' : 'ALCAC',  'visible' : 'false' } ] },		
-	{ 'label' : '   Seasonally-Adjusted Change from All-Year pheno-cluster max (MUC)',
+	{ 'label' : '   From All-Year Phenotype Max',
       'layers' : [
             { 'name' : ''+choose("EFETAC-NASA_X_LC_MUC_ALL_YR_current", "EFETAC-NASA_MUCAllYear_current")+'',       'lid' : 'MUCAA',  'visible' : 'false' },
 			{ 'name' : ''+choose("EFETAC-NASA_X_LC_MUC_ALL_YR_previous1", "EFETAC-NASA_MUCAllYear_previous1")+'',   'lid' : 'MUCAB',  'visible' : 'false' },
             { 'name' : ''+choose("EFETAC-NASA_X_LC_MUC_ALL_YR_previous2", "EFETAC-NASA_MUCAllYear_previous2")+'',   'lid' : 'MUCAC',  'visible' : 'false' } ] },			
-	{ 'label' : '   Seasonally-Adjusted Change from All-Year mean of maximums (MMAX)',
+	{ 'label' : '   From All-Year Mean (of Maxes)',
       'layers' : [
             { 'name' : ''+choose("EFETAC-NASA_X_LC_MMAX_ALL_YR_current", "EFETAC-NASA_MoMAllYear_current")+'',       'lid' : 'MoMAA',  'visible' : 'false' },
 			{ 'name' : ''+choose("EFETAC-NASA_X_LC_MMAX_ALL_YR_previous1", "EFETAC-NASA_MoMAllYear_previous1")+'',   'lid' : 'MoMAB',  'visible' : 'false' },
@@ -319,7 +319,7 @@ for subgroup in [
 rsacModisChangeDetectionProductLayers = ""
 
 for subgroup in [    
-    { 'label' : '   Change from 3-Year Baseline',
+    { 'label' : '   From Prior 3-Year Max',
       'layers' : [
             { 'name' : 'RSAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },

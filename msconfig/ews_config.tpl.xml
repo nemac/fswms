@@ -34,7 +34,7 @@
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
     </view>
-    <view name="MODIS_Forest_Change_Products" label="Archived Forest Disturbance Detection Maps (MODIS NRT)">
+    <view name="MODIS_Forest_Change_Products" label="Archived Near-Real-Time Change Maps (MODIS NDVI)">
       <viewGroup name="US_Jurisdictions" />
       <viewGroup name="US_Fire" />
       <viewGroup name="US_FHM_ADS" />
@@ -848,34 +848,34 @@
      may appear on one (but only one) <wmsGroup>  tag, and indicates that the viewer should be initialized with that accordian group
      initially open.
     -->
-  <wmsGroup gid="G04" name="MODIS_Change_Detection_Products" label="Forest Disturbance Detection Maps (MODIS NRT)" selected="true">
-    <wmsSubgroup label="Forest NDVI Change (USFS TACs-NASA)">
+  <wmsGroup gid="G04" name="MODIS_Change_Detection_Products" label="Near-Real-Time Change Maps (MODIS NDVI)" selected="true">
+    <wmsSubgroup label="ForWarn Change">
     </wmsSubgroup>
     %(TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
-    <wmsSubgroup label="RSAC-FHTET Forest Change">
+    <wmsSubgroup label="RSAC-FHTET Change">
     </wmsSubgroup>
     %(RSAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
   </wmsGroup>
-  <wmsGroup gid="G05" name="Archived_TACS" label="Archived Forest Disturbance Detection Maps">
-    <wmsSubgroup label="Archived NRT 1-Year Baseline (TACs-NASA)">
+  <wmsGroup gid="G05" name="Archived_TACS" label="Archived ForWarn Change Maps">
+    <wmsSubgroup label="Archived Prior Year Baseline">
     %(NRT_1YEAR_LAYERS)s
     </wmsSubgroup>
-    <wmsSubgroup label="Archived MODIS NRT 3-Year Baseline (TACs-NASA)">
-    %(NRT_3YEAR_LAYERS)s
-    </wmsSubgroup>
-	<wmsSubgroup label="Archived MODIS NRT 5-Year Baseline (TACs-NASA)">
-    %(NRT_5YEAR_LAYERS)s
-    </wmsSubgroup>
-    <wmsSubgroup label="Archived NRT All-Year Baseline (TACs-NASA)">
+	<wmsSubgroup label="Archived All-Year Max Baseline">
     %(NRT_AllYEAR_LAYERS)s
     </wmsSubgroup>
-    <wmsSubgroup label="Archived Early Detect (ALC) Change from previous year">
+    <wmsSubgroup label="Archived Prior 3-Year Max Baseline">
+    %(NRT_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="Archived Prior 5-Year Max Baseline">
+    %(NRT_5YEAR_LAYERS)s
+    </wmsSubgroup>
+    <wmsSubgroup label="Archived Early Detect (Prior Year Baseline)">
     %(NRT_ALC1YR_LAYERS)s
     </wmsSubgroup> 
-    <wmsSubgroup label="Archived Seasonally-Adjusted Change from All-Year pheno-cluster max (MUC)">
+    <wmsSubgroup label="Archived All-Year Phenotype Max Baseline">
     %(NRT_MUCALLYR_LAYERS)s
     </wmsSubgroup>
-    <wmsSubgroup label="Archived Seasonally-Adjusted Change from All-Year mean of maximums (MMAX)">
+    <wmsSubgroup label="Archived All-Year Mean (of maxes) Baseline">
     %(NRT_MMAXYR_LAYERS)s
     </wmsSubgroup>
   </wmsGroup>
@@ -885,8 +885,8 @@
     %(NRT_MODISCloud__LAYERS)s
     </wmsSubgroup>
   </wmsGroup>
-  <wmsGroup gid="G07" name="Archived_RSAC" label="Archived RSAC-FHTET Forest Change Disturbance">
-    <wmsSubgroup label="Archived 3-Year Baseline (RSAC-FHTET)">
+  <wmsGroup gid="G07" name="Archived_RSAC" label="Archived RSAC-FHTET Change Maps">
+    <wmsSubgroup label="Archived Prior 3-Year Baseline">
 	<wmsLayer
 		lid="BJT"
 		visible="false"
@@ -1678,7 +1678,7 @@
 		identify="true"
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>	
     </wmsSubgroup>
-    <wmsSubgroup label="Archived 5-Year Baseline (RSAC-FHTET)">
+    <wmsSubgroup label="Archived Prior 5-Year Baseline">
 	<wmsLayer
 		lid="BJI"
 		visible="false"
