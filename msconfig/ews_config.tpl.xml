@@ -180,7 +180,7 @@
 	 layers="conus-federal-lands"
 	 styles="default"
 	 identify="true"
-	 name="Federal Lands (Agencies)" legend="%(SERVER_URL)s/cmapicons/custom-fed-lands.png"/>
+	 name="Federal Lands (Agencies)" legend="%(SERVER_URL)s/cmapicons/custom-fed-lands-nums.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Roads">
       <wmsLayer
