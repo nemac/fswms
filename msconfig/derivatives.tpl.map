@@ -4,7 +4,7 @@ MAP
     NAME       Derivatives
     #jdm:added to accomodate map layers
     #see http://trac.osgeo.org/mapserver/ticket/3055
-    MAXSIZE 3072    
+    MAXSIZE 4000    
     STATUS     ON
     SIZE       600 400
 #   SYMBOLSET "./symbols/symbols35.sym"

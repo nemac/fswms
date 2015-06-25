@@ -13,7 +13,7 @@ MAP
 
     # default output image dimensions
     SIZE 600 400
-	MAXSIZE 3600
+	MAXSIZE 4000
     # always returns a map
     STATUS ON
 

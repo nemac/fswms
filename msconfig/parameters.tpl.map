@@ -2,6 +2,7 @@ MAP
     #CONFIG     "MS_ERRORFILE" "../var/log/lucky.log"
     #DEBUG      5
     NAME       parameters
+	MAXSIZE 4000
     STATUS     ON
     SIZE       600 400
         #   SYMBOLSET "./symbols/symbols35.sym"
