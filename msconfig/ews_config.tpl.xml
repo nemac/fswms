@@ -30,7 +30,6 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
     </view>
@@ -43,7 +42,6 @@
       <viewGroup name="MODISCloud" />
       <viewGroup name="Archived_RSAC" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
     </view>
@@ -54,7 +52,6 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Derived_Products" />
@@ -66,7 +63,6 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Parameters" />
@@ -78,7 +74,6 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Integrals" />
@@ -90,7 +85,6 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_MODISNDVI" />
@@ -102,7 +96,6 @@
       <viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="MODISCloud" />
       <viewGroup name="Drought_Monitor" />
-      <viewGroup name="vegdri_new" />
       <viewGroup name="US_Climate" />
       <viewGroup name="US_Physiographic" />	
       <viewGroup name="EWS_Derived_Products" />
@@ -123,14 +116,13 @@
           <viewGroup name="MODISCloud" />
           <viewGroup name="Archived_RSAC" />
           <viewGroup name="Drought_Monitor" />
-          <viewGroup name="vegdri_new" />
           <viewGroup name="US_Climate" />
           <viewGroup name="US_Physiographic" />	
     </view>    
   </mapviews>
 
 <wmsLayers>
-  <wmsGroup gid="G01" name="US_Jurisdictions" label="Political Boundaries and Roads">
+  <wmsGroup gid="G01" name="US_Jurisdictions" label="Boundaries">
     <wmsSubgroup label="Boundaries">
       <wmsLayer
 	 lid="AAA"
@@ -677,8 +669,8 @@
 	</wmsSubgroup>
   </wmsGroup>
 
-  <wmsGroup gid="G03" name="US_FHM_ADS" label="Historical Insect and Disease Surveys (USDA FS, Forest Health)">
-    <wmsSubgroup label="USDA FS FHTET">
+  <wmsGroup gid="G03" name="US_FHM_ADS" label="Insect and Disease Surveys">
+    <wmsSubgroup label="USDA FS Forest Health (aerial detections)">
     <wmsLayer 
        lid="ADS2000"
        visible="false" 
@@ -848,8 +840,8 @@
      may appear on one (but only one) <wmsGroup>  tag, and indicates that the viewer should be initialized with that accordian group
      initially open.
     -->
-  <wmsGroup gid="G04" name="MODIS_Change_Detection_Products" label="Near-Real-Time Change Maps (MODIS NDVI)" selected="true">
-    <wmsSubgroup label="ForWarn Change">
+  <wmsGroup gid="G04" name="MODIS_Change_Detection_Products" label="ForWarn’s Near-Real-Time Change Maps" selected="true">
+    <wmsSubgroup label="ForWarn NDVI Change (eMODIS/MODIS)">
     </wmsSubgroup>
     %(TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS)s
     <wmsSubgroup label="RSAC-FHTET Change">
@@ -880,8 +872,8 @@
     </wmsSubgroup>
   </wmsGroup>
   
-  <wmsGroup gid="G06" name="MODISCloud" label="eMODIS Cloud Assessment Products">	
-    <wmsSubgroup label="MODIS (NRT)">
+  <wmsGroup gid="G06" name="MODISCloud" label="ForWarn’s Cloud Assessment Maps">	
+    <wmsSubgroup label="For use with ForWarn’s standard NDVI change products (not Early Detect)">
     %(NRT_MODISCloud__LAYERS)s
     </wmsSubgroup>
   </wmsGroup>
@@ -1951,8 +1943,8 @@
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
-  <wmsGroup gid="G08" name="Drought_Monitor" label="Drought- US Drought Monitor">
-    <wmsSubgroup label="Drought Monitor">
+  <wmsGroup gid="G08" name="Drought_Monitor" label="Drought Assessment Maps">
+    <wmsSubgroup label="US Drought Monitor (NDMC)">
         <wmsLayer 
            lid="AHZ"
            visible="false" 
@@ -1965,10 +1957,7 @@
            legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
         %(DRT_LAYERS)s
     </wmsSubgroup>
-  </wmsGroup>
-
-  <wmsGroup gid="G15" name="vegdri_new" label="USGS/NDMC VegDRI Drought Assessment Products" >
-    <wmsSubgroup label="eMODIS Vegetation Moisture Status (Weekly)">
+	<wmsSubgroup label="VegDRI Veg. Moisture Status (USGS/NDMC; weekly eMODIS)">
 	  <wmsLayer 
 	 lid="VDAAM"
 	 visible="false" 
@@ -2101,8 +2090,7 @@
 	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
     </wmsSubgroup>
   </wmsGroup>
-
-  <wmsGroup gid="G09" name="US_Climate" label="Other Weather and Climate" >
+  <wmsGroup gid="G09" name="US_Climate" label="Other Weather and Climate Maps" >
     <wmsSubgroup label="Weather">
 <!--      <wmsLayer
 	 lid="AID"
@@ -2513,7 +2501,7 @@
     </wmsSubgroup>
   </wmsGroup>
   
-  <wmsGroup gid="G10" name="US_Physiographic" label="Physiographic Maps" >
+  <wmsGroup gid="G10" name="US_Physiographic" label="Additional Assessment Maps" >
     <wmsSubgroup label="Agriculture (USDA)">
       <wmsLayer 
 	 lid="PMCL2013"
