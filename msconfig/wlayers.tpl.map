@@ -511,7 +511,7 @@ MAP
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "25"
+        "wms_name"            "26"
         "wms_server_version"  "1.0.0"
         "wms_format"          "image/png"
       END
@@ -563,7 +563,7 @@ MAP
       END	  
       METADATA
         "wms_srs"             "EPSG:4326"
-        "wms_name"            "24"
+        "wms_name"            "25"
         "wms_server_version"  "1.0.0"
         "wms_format"          "image/png"
       END
