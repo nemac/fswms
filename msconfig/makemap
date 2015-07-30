@@ -831,7 +831,7 @@ f_new.close()
 ###
 ### Create the ewswcs3year.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/3Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "yes", False)
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/X_LC_3YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "yes", False)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ewswcs3year.map")
 SERVICE_NAME = "ewswcs3year"
@@ -887,7 +887,7 @@ f_new.close()
 ###
 ### Create the ewswcs5year.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/5Year", "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "yes", False)
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/X_LC_5YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "yes", False)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ewswcs5year.map")
 SERVICE_NAME = "ewswcs5year"
