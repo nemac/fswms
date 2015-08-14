@@ -206,6 +206,90 @@ MAP
             "gml_include_items"     "value_list"			
         END  # end METADATA
 	END # end LAYER
+	LAYER
+        NAME AK_FC_MVC_1YR_20150715        
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR/ak_20150715_24_2014_max.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150715"
+            "wms_abstract"          "20150715"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+	END # end LAYER
+	LAYER
+        NAME AK_FC_MVC_1YR_20150722        
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR/ak_20150722_24_2014_max.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150722"
+            "wms_abstract"          "20150722"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+	END # end LAYER
+	LAYER
+        NAME AK_FC_MVC_1YR_20150729        
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR/ak_20150729_24_2014_max.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150729"
+            "wms_abstract"          "20150729"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+	END # end LAYER
     LAYER
         NAME AK_FC_MVC_1YR_M3D_20140722     
         PROJECTION
@@ -284,6 +368,90 @@ MAP
         METADATA
             "wms_title"             "20140805"
             "wms_abstract"          "20140805"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_1YR_M3D_20150715   
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR_M3D/ak_20150715_24_2014_max_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150715"
+            "wms_abstract"          "20150715"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_1YR_M3D_20150722   
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR_M3D/ak_20150722_24_2014_max_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150722"
+            "wms_abstract"          "20150722"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_1YR_M3D_20150729   
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_1YR_M3D/ak_20150729_24_2014_max_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150729"
+            "wms_abstract"          "20150729"   
             "gml_include_items"     "value_list"			
         END  # end METADATA
     END # end LAYER	
@@ -423,6 +591,90 @@ MAP
         END  # end METADATA
     END # end LAYER	
 	LAYER
+        NAME AK_FC_MVC_MMAX_20150715      
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX/ak_20150715_24_mmax_ayr.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150715"
+            "wms_abstract"          "20150715"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_20150722      
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX/ak_20150722_24_mmax_ayr.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150722"
+            "wms_abstract"          "20150722"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_20150729      
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX/ak_20150729_24_mmax_ayr.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150729"
+            "wms_abstract"          "20150729"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
         NAME AK_FC_MVC_MMAX_M3D_20140722      
         PROJECTION
           "+proj=aea"
@@ -440,7 +692,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/ak_20140722_28_mmax_ayr_m3d.img
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/20140722_28_mmax_ayr_m3d.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -467,7 +719,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/ak_20140729_28_mmax_ayr_m3d.img
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/20140729_28_mmax_ayr_m3d.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
@@ -494,12 +746,96 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/ak_20140805_28_mmax_ayr_m3d.img
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/20140805_28_mmax_ayr_m3d.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
             "wms_title"             "20140805"
             "wms_abstract"          "20140805"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_M3D_20150715       
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/20150715_24_mmax_ayr_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150715"
+            "wms_abstract"          "20150715"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_M3D_20150722     
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/20150722_24_mmax_ayr_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150722"
+            "wms_abstract"          "20150722"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER	
+	LAYER
+        NAME AK_FC_MVC_MMAX_M3D_20150729      
+        PROJECTION
+          "+proj=aea"
+          "+lat_1=55"
+          "+lat_2=65"
+          "+lat_0=50"
+          "+lon_0=-154"
+          "+x_0=0"
+          "+y_0=0"
+          "+ellps=WGS84"
+          "+datum=WGS84"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata/efetac_nasa/XX_AK_FC_MVC_MMAX_M3D/20150729_24_mmax_ayr_m3d.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+		INCLUDE "efetac_nasa_percent_change_cmap.cmap"
+        METADATA
+            "wms_title"             "20150729"
+            "wms_abstract"          "20150729"   
             "gml_include_items"     "value_list"			
         END  # end METADATA
     END # end LAYER	

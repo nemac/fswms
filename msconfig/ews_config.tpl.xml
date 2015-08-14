@@ -9465,6 +9465,42 @@
           identify="true"
           legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
           />
+		  <wmsLayer
+          selected="false"
+          lid="ALSAJ"
+          visible="true"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_1YR_20150715"
+          name="20150715"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
+		  <wmsLayer
+          selected="false"
+          lid="ALSAK"
+          visible="true"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_1YR_20150722"
+          name="20150722"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
+		  <wmsLayer
+          selected="false"
+          lid="ALSAL"
+          visible="true"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_1YR_20150729"
+          name="20150729"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
       </wmsSubgroup>
       <wmsSubgroup label="AK_FC_MVC_1YR_M3D">
         <wmsLayer
@@ -9499,7 +9535,40 @@
           styles="default" 
           identify="true"
           legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          />	
+          />
+		<wmsLayer
+          lid="ALSAG"
+          visible="false"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers= "AK_FC_MVC_1YR_M3D_20150715"
+          name="20150715"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
+		<wmsLayer
+          lid="ALSAH"
+          visible="false"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers= "AK_FC_MVC_1YR_M3D_20150722"
+          name="20150722"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
+		<wmsLayer
+          lid="ALSAI"
+          visible="false"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers= "AK_FC_MVC_1YR_M3D_20150729"
+          name="20150729"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
       </wmsSubgroup>
       <wmsSubgroup label=" AK_FC_MVC_MMAX">
         <wmsLayer
@@ -9556,7 +9625,40 @@
           styles="default" 
           identify="true"
           legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          />	
+          />
+		<wmsLayer
+          lid="ALSKAD"
+          visible="false"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_20150715"
+          name="20150715"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
+		<wmsLayer
+          lid="ALSKAE"
+          visible="false"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_20150722"
+          name="20150722"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
+		<wmsLayer
+          lid="ALSKAF"
+          visible="false"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_20150729"
+          name="20150729"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
       </wmsSubgroup>
 	<wmsSubgroup label="AK_FC_MVC_MMAX_M3D">
         <wmsLayer
@@ -9591,7 +9693,40 @@
           styles="default" 
           identify="true"
           legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
-          />			  
+          />
+		<wmsLayer
+          lid="ALSKAA"
+          visible="false"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_M3D_20150715"
+          name="20150715"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
+		<wmsLayer
+          lid="ALSKAB"
+          visible="false"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_M3D_20150722"
+          name="20150722"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
+		<wmsLayer
+          lid="ALSKAC"
+          visible="false"
+          url="%(SERVER_URL)s/aklayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="AK_FC_MVC_MMAX_M3D_20150729"
+          name="20150729"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/cmapicons/TACs_NASA_CT_7-6-2011_clipped.png"
+          />
 	</wmsSubgroup>
     <wmsSubgroup label="AK_TCC_RGB_MVC">
         <wmsLayer
