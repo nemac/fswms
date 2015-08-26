@@ -290,8 +290,8 @@
     </wmsSubgroup>
   </wmsGroup>
 
-  <wmsGroup gid="G02" name="US_Fire" label="Fires">
-    <wmsSubgroup label="Current Year">
+  <wmsGroup gid="G02" name="US_Fire" label="Fires and Fuels Treatments">
+    <wmsSubgroup label="Current Year Fires">
       <wmsLayer 
 	 lid="AAG"
 	 visible="false" 
@@ -667,6 +667,188 @@
 	 name="2014 (RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2014.png"/>	 
 	</wmsSubgroup>
+	<wmsSubgroup label="Forest Service Fuels Treatments">
+      <wmsLayer 
+	 lid="FTAAA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs-fuel-treatments-00-16" 
+	 styles="default" 
+	 identify="true" 
+	 name="2000-2016 Combined (FS)" 
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-fuel-treatments-00-16&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2000" 
+	 styles="default" 
+	 identify="true" 
+	 name="2000 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2001" 
+	 styles="default" 
+	 identify="true" 
+	 name="2001 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAD"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2002" 
+	 styles="default" 
+	 identify="true" 
+	 name="2002 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2003" 
+	 styles="default" 
+	 identify="true" 
+	 name="2003 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAF"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2004" 
+	 styles="default" 
+	 identify="true" 
+	 name="2004 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAG"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2005" 
+	 styles="default" 
+	 identify="true" 
+	 name="2005 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAH"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2006" 
+	 styles="default" 
+	 identify="true" 
+	 name="2006 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAI"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2007" 
+	 styles="default" 
+	 identify="true" 
+	 name="2007(FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAJ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2008" 
+	 styles="default" 
+	 identify="true" 
+	 name="2008 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAK"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2009" 
+	 styles="default" 
+	 identify="true" 
+	 name="2009 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAL"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2010" 
+	 styles="default" 
+	 identify="true" 
+	 name="2010 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAM"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2011" 
+	 styles="default" 
+	 identify="true" 
+	 name="2011 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAN"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2012" 
+	 styles="default" 
+	 identify="true" 
+	 name="2012 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAO"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2013" 
+	 styles="default" 
+	 identify="true" 
+	 name="2013 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAP"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2014" 
+	 styles="default" 
+	 identify="true" 
+	 name="2014 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAQ"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2015" 
+	 styles="default" 
+	 identify="true" 
+	 name="2015 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2016" 
+	 styles="default" 
+	 identify="true" 
+	 name="2016 (FS)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+    </wmsSubgroup>
   </wmsGroup>
 
   <wmsGroup gid="G03" name="US_FHM_ADS" label="Insect and Disease Surveys">

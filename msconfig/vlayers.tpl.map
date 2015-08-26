@@ -620,6 +620,619 @@ MAP
     END # end Layer
 	
 	LAYER #
+        NAME fs_treatment_2000
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2000"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2000"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2000"
+            "wms_abstract"       "fs_treatment_2000"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2001
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2001"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2001"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2001"
+            "wms_abstract"       "fs_treatment_2001"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2002
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2002"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2002"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2002"
+            "wms_abstract"       "fs_treatment_2002"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2003
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2003"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2003"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2003"
+            "wms_abstract"       "fs_treatment_2003"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2004
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2004"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2004"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2004"
+            "wms_abstract"       "fs_treatment_2004"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2005
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2005"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2005"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2005"
+            "wms_abstract"       "fs_treatment_2005"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2006
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2006"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2006"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2006"
+            "wms_abstract"       "fs_treatment_2006"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2007
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2007"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2007"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2007"
+            "wms_abstract"       "fs_treatment_2007"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2008
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2008"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2008"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2008"
+            "wms_abstract"       "fs_treatment_2008"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2009
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2009"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2009"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2009"
+            "wms_abstract"       "fs_treatment_2009"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2010
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2010"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2010"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2010"
+            "wms_abstract"       "fs_treatment_2010"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2011
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2011"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2011"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2011"
+            "wms_abstract"       "fs_treatment_2011"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2012
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2012"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2012"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2012"
+            "wms_abstract"       "fs_treatment_2012"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2013
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2013"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2013"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2013"
+            "wms_abstract"       "fs_treatment_2013"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2014
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2014"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2014"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2014"
+            "wms_abstract"       "fs_treatment_2014"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2015
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2015"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2015"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2015"
+            "wms_abstract"       "fs_treatment_2015"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME fs_treatment_2016
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2016"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "FS Fuel Treatments 2016"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2016"
+            "wms_abstract"       "fs_treatment_2016"
+            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
         NAME mtbs_2013
         PROJECTION
             "init=epsg:4326"
