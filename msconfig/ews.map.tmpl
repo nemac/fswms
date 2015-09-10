@@ -184,17 +184,21 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/default_forest.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_forest.tif 
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
-        METADATA
+		METADATA
             "wms_title"             "MaskForForest"
-			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
-        END  # end METADATA		
-    END # end LAYER	    
-	LAYER
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForForest"
+            "wcs_label"             "MaskForForest"
+            "wcs_rangeset_name"     "MaskForForest"
+            "wcs_rangeset_label"    "MaskForForest"
+        END  # end METADATA
+    END # end LAYER	 
+    LAYER
         NAME MaskForAgriculture
         PROJECTION
           "+proj=laea"
@@ -210,15 +214,19 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/agriculture.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_agriculture.tif
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
-        METADATA
+		METADATA
             "wms_title"             "MaskForAgriculture"
-			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
-        END  # end METADATA				
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForAgriculture"
+            "wcs_label"             "MaskForAgriculture"
+            "wcs_rangeset_name"     "MaskForAgriculture"
+            "wcs_rangeset_label"    "MaskForAgriculture"
+        END  # end METADATA
     END # end LAYER	
     LAYER
         NAME MaskForConiferForest
@@ -236,15 +244,19 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/conifer.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_conifer.tif
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
-        METADATA
+		METADATA
             "wms_title"             "MaskForConiferForest"
-			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
-        END  # end METADATA			
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForConiferForest"
+            "wcs_label"             "MaskForConiferForest"
+            "wcs_rangeset_name"     "MaskForConiferForest"
+            "wcs_rangeset_label"    "MaskForConiferForest"
+        END  # end METADATA
     END # end LAYER	
     LAYER
         NAME MaskForDeciduousForest
@@ -262,15 +274,19 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/hardwood.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_deciduous.tif
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
-        METADATA
+		METADATA
             "wms_title"             "MaskForDeciduousForest"
-			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
-        END  # end METADATA			
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForDeciduousForest"
+            "wcs_label"             "MaskForDeciduousForest"
+            "wcs_rangeset_name"     "MaskForDeciduousForest"
+            "wcs_rangeset_label"    "MaskForDeciduousForest"
+        END  # end METADATA
     END # end LAYER	    
     LAYER
         NAME MaskForGrass
@@ -288,15 +304,19 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/grass.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_grass.tif
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
-        METADATA
+		METADATA
             "wms_title"             "MaskForGrass"
-			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
-        END  # end METADATA				
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForGrass"
+            "wcs_label"             "MaskForGrass"
+            "wcs_rangeset_name"     "MaskForGrass"
+            "wcs_rangeset_label"    "MaskForGrass"
+        END  # end METADATA
     END # end LAYER	    
     LAYER
         NAME MaskForMixedForest
@@ -314,15 +334,19 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/conifer_hardwood.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_mixed.tif
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
-        METADATA
+		METADATA
             "wms_title"             "MaskForMixedForest"
-			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
-        END  # end METADATA			
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForMixedForest"
+            "wcs_label"             "MaskForMixedForest"
+            "wcs_rangeset_name"     "MaskForMixedForest"
+            "wcs_rangeset_label"    "MaskForMixedForest"
+        END  # end METADATA
     END # end LAYER	    
     LAYER
         NAME MaskForNonVegetated
@@ -340,15 +364,19 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nonvegetated.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_nonveg.tif
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
-        METADATA
+		METADATA
             "wms_title"             "MaskForNonVegetated"
-			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
-        END  # end METADATA			
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForNonVegetated"
+            "wcs_label"             "MaskForNonVegetated"
+            "wcs_rangeset_name"     "MaskForNonVegetated"
+            "wcs_rangeset_label"    "MaskForNonVegetated"
+        END  # end METADATA
     END # end LAYER	    
     LAYER
         NAME MaskForShrubland
@@ -366,15 +394,19 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/shrubland.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_shrub.tif
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
-        METADATA
+		METADATA
             "wms_title"             "MaskForShrubland"
-			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
-        END  # end METADATA			
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForShrubland"
+            "wcs_label"             "MaskForShrubland"
+            "wcs_rangeset_name"     "MaskForShrubland"
+            "wcs_rangeset_label"    "MaskForShrubland"
+        END  # end METADATA
     END # end LAYER	    
     LAYER
         NAME MaskForUrban
@@ -392,16 +424,20 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/urban.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_urban.tif
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
-        METADATA
+		METADATA
             "wms_title"             "MaskForUrban"
-			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
-        END  # end METADATA				
-    END # end LAYER	    
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForUrban"
+            "wcs_label"             "MaskForUrban"
+            "wcs_rangeset_name"     "MaskForUrban"
+            "wcs_rangeset_label"    "MaskForUrban"
+        END  # end METADATA
+    END # end LAYER	
     LAYER
         NAME MaskForWetland
         PROJECTION
@@ -418,14 +454,18 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/wetland.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_wetland.tif
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
         END
-        METADATA
+		METADATA
             "wms_title"             "MaskForWetland"
-			"wms_extent"            "-124.7625 24.5210 -66.9326 49.3845"
-        END  # end METADATA				
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForWetland"
+            "wcs_label"             "MaskForWetland"
+            "wcs_rangeset_name"     "MaskForWetland"
+            "wcs_rangeset_label"    "MaskForWetland"
+        END  # end METADATA
     END # end LAYER	    	
 END # end MAP
