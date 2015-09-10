@@ -2951,6 +2951,26 @@
 	 identify="true" 
 	 name="2001 GAP Landfire CONUS" 
 	 legend="%(SERVER_URL)s/cmapicons/legend_gapnat_lndcov_0210_rs_to_231p66m_laea.jpg"/>
+	  <wmsLayer 
+	 lid="NALC05"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="landcover-2005-NALCMS" 
+	 styles="default" 
+	 identify="true" 
+	 name="Land Cover 2005 (NALCMS)" 
+	 legend="%(SERVER_URL)s/cmapicons/landcover_2005_ncalcms.png"/>
+	  <wmsLayer 
+	 lid="NALC10"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="landcover-2010-NALCMS" 
+	 styles="default" 
+	 identify="true" 
+	 name="Land Cover 2010 (NALCMS)" 
+	 legend="%(SERVER_URL)s/cmapicons/landcover_2010_ncalcms.png"/>
       <wmsLayer 
 	 lid="LFFM40"
 	 visible="false" 

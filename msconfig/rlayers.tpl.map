@@ -72,6 +72,60 @@ MAP
     END
 
 	LAYER
+        NAME     landcover-2005-NALCMS
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/NA_LandCover_2005v2_eMODIS_231m_CONUS3.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "landcover-2005-NALCMS"
+            "wms_abstract"          "landcover-2005-NALCMS"
+            "gml_include_items"     "value_0"
+			#"gml_value_0_alias"     "Fire Year"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     landcover-2010-NALCMS
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/NA_LandCover_2010_eMODIS_231m_CONUS3.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        
+        METADATA
+            "wms_title"             "landcover-2010-NALCMS"
+            "wms_abstract"          "landcover-2010-NALCMS"
+            "gml_include_items"     "value_0"
+			#"gml_value_0_alias"     "Fire Year"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
         NAME     fs-fuel-treatments-00-16
         PROJECTION
 			"proj=aea"
