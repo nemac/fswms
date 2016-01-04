@@ -1417,7 +1417,8 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     conus-federal-lands         
+        NAME     conus-federal-lands-general    
+		GROUP conus-federal-lands
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -1429,6 +1430,7 @@ MAP
           "+units=m"
           "+no_defs"
         END
+		MINSCALEDENOM 500000
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -1436,6 +1438,37 @@ MAP
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         METADATA
+			"gml_groups"        	"conus-federal-lands"
+			"gml_conus-federal-lands_group" "value_0"
+            "wms_title"             "CONUS Federal Lands"
+            "wms_abstract"          "CONUS Federal Lands"   
+            "gml_include_items"     "value_0"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     conus-federal-lands-detailed   
+		GROUP conus-federal-lands
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+		MAXSCALEDENOM 500000
+		TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/padus13_fed6b_231m.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+			"gml_groups"        	"conus-federal-lands"
+			"gml_conus-federal-lands_group" "value_0"
             "wms_title"             "CONUS Federal Lands"
             "wms_abstract"          "CONUS Federal Lands"   
             "gml_include_items"     "value_0"			
@@ -3548,7 +3581,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_forest.tif 
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/new_forest.tif 
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -3638,7 +3671,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_deciduous.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_deciduous_new2.tif
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -3818,7 +3851,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_wetland.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_wetland_new.tif
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
