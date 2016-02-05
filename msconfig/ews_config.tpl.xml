@@ -17,7 +17,7 @@
     <image name="Imagery"   label="Imagery"  url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer" />
     <image name="Topo_Map"  label="Topo Map" url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" />
     <image name="USA_Topo"  label="USA Topo" url="http://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer" />
-    <image name="None"      label="None"     url="http://arcgisserver7.nemac.org/ArcGIS/rest/services/US/US_Jurisdictions_filled2/MapServer/" />
+    <image name="None"      label="None"     url="http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer" />
   </images>
   <legend type="Image" legendServerPath="http://ews.forestthreats.org/GIS/assets/Mashup_Legends/">
     <legendGroup name="RSAC-FHTET 2010" />
