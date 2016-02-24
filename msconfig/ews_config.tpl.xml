@@ -2149,7 +2149,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI1 (Current)" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAL"
 	 visible="false" 
@@ -2335,7 +2335,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="7 Day Total Precipitation" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/TotalPrecip_7.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/7_day_totprecip.png"/>
 	  <wmsLayer 
 	 lid="VDAAP"
 	 visible="false" 
@@ -2345,7 +2345,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="30 Day Total Precipitation" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/TotalPrecip_30.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/30_day_totprecip.png"/>
 	  <wmsLayer 
 	 lid="VDAAQ"
 	 visible="false" 
@@ -2355,7 +2355,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="No. Days with Precipitation (past 7 Days)" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/DaysWithPrecip_7.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/Days_with_precip_7.png"/>
 	  <wmsLayer 
 	 lid="VDAAR"
 	 visible="false" 
@@ -2365,7 +2365,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="No. Days with Precipitation (past 30 Days)" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/DaysWithPrecip_30.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/Days_with_precip_30.png"/>
 	  <wmsLayer 
 	 lid="VDAAS"
 	 visible="false" 
@@ -2375,7 +2375,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="No. Days since Precipitation (past 30 Days)" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/DaysSincePrecip_30.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/Days_since_precip.png"/>
 	  <wmsLayer 
 	 lid="VDAAT"
 	 visible="false" 
@@ -2385,7 +2385,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Max. Consecutive Dry Days (past 7 Days)" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/MaxConDryDays_7.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/MaxConDryDays_7.png"/>
 	  <wmsLayer 
 	 lid="VDAAU"
 	 visible="false" 
@@ -2395,7 +2395,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="Max. Consecutive Dry Days (past 30 Days)" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/MaxConDryDays_30.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/MaxConDryDays_30.png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Percent of Normal (NOAA PRISM)">
 	  <wmsLayer 
@@ -2748,7 +2748,7 @@
 	 styles="default" 
 	 identify="true" 
 	 name="7 Day Avg. Streamflow (USGS WaterWatch) " 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/7_Day_Average_Streamflow.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/WaterWatchLegend.png"/>
       <wmsLayer 
 	 lid="AIL"
 	 visible="false" 
