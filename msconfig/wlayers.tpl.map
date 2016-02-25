@@ -67,14 +67,14 @@ MAP
       NAME "eMODIS-VegDRI1"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "DROUGHT_VDRI_EMODIS_1"
+		"wms_name"			  "qdrivegdriemodis:qdrivegdriemodis_pd_1-sevenday-08-2016_mm_data"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
 		"wms_bgcolor"         "0x000000"
@@ -288,15 +288,15 @@ MAP
       NAME "7_Day_Average_Streamflow"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
-        "wms_srs"             "EPSG:4269"
-        "wms_name"            "7_Day_Average_Streamflow"
-        "wms_server_version"  "1.1.1"
+        "wms_srs"             "EPSG:4326"
+        "wms_name"            "qdriwaterwatchshapefile:water_watch_today"
+        "wms_server_version"  "1.0.0"
         "wms_format"          "image/png"
       END
     END
@@ -304,14 +304,14 @@ MAP
       NAME "TotalPrecip_7"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "DROUGHT_TP7_1"
+        "wms_name"            "qdripreciptp7:qdripreciptp7_pd_1-day-53-2016_mm_data"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -320,14 +320,14 @@ MAP
       NAME "TotalPrecip_30"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "DROUGHT_TP30_1"
+		"wms_name"			  "qdripreciptp30:qdripreciptp30_pd_1-day-53-2016_mm_data"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -336,14 +336,14 @@ MAP
       NAME "DaysWithPrecip_7"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "DROUGHT_RD7_1"
+        "wms_name"            "qdripreciprd7:qdripreciprd7_pd_1-day-53-2016_mm_data"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -352,14 +352,14 @@ MAP
       NAME "DaysWithPrecip_30"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "DROUGHT_RD30_1"
+        "wms_name"            "qdripreciprd30:qdripreciprd30_pd_1-day-53-2016_mm_data"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -368,14 +368,14 @@ MAP
       NAME "DaysSincePrecip_30"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "DROUGHT_DSR30_1"
+        "wms_name"            "qdriprecipdsr:qdriprecipdsr_pd_1-day-53-2016_mm_data"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -384,14 +384,14 @@ MAP
       NAME "MaxConDryDays_7"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "DROUGHT_CDD7_1"
+        "wms_name"            "qdriprecipcdd7:qdriprecipcdd7_pd_1-day-53-2016_mm_data"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -400,14 +400,14 @@ MAP
       NAME "MaxConDryDays_30"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "DROUGHT_CDD30_1"
+        "wms_name"            "qdriprecipcdd30:qdriprecipcdd30_pd_1-day-53-2016_mm_data"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
