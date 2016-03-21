@@ -67,14 +67,14 @@ MAP
       NAME "eMODIS-VegDRI1"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-		"wms_name"			  "qdrivegdriemodis:qdrivegdriemodis_pd_1-sevenday-08-2016_mm_data"
+		"wms_name"			  "DROUGHT_VDRI_EMODIS_1"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
 		"wms_bgcolor"         "0x000000"
@@ -84,7 +84,7 @@ MAP
       NAME "eMODIS-VegDRI2"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
@@ -101,7 +101,7 @@ MAP
       NAME "eMODIS-VegDRI3"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
@@ -118,7 +118,7 @@ MAP
       NAME "eMODIS-VegDRI4"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
@@ -135,7 +135,7 @@ MAP
       NAME "eMODIS-VegDRI5"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
@@ -152,7 +152,7 @@ MAP
       NAME "eMODIS-VegDRI6"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
@@ -169,7 +169,7 @@ MAP
       NAME "eMODIS-VegDRI7"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
@@ -186,7 +186,7 @@ MAP
       NAME "eMODIS-VegDRI8"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
@@ -203,7 +203,7 @@ MAP
       NAME "eMODIS-VegDRI9"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
@@ -220,7 +220,7 @@ MAP
       NAME "eMODIS-VegDRI10"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
@@ -237,7 +237,7 @@ MAP
       NAME "eMODIS-VegDRI11"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
@@ -254,7 +254,7 @@ MAP
       NAME "eMODIS-VegDRI12"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
@@ -271,7 +271,7 @@ MAP
       NAME "eMODIS-VegDRI13"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://landfire.cr.usgs.gov/arcgis/services/Drought/Drought_Monitoring/MapServer/WMSServer?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
