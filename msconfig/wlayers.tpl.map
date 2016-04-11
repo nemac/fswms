@@ -304,14 +304,14 @@ MAP
       NAME "TotalPrecip_7"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "qdripreciptp7:qdripreciptp7_pd_1-day-53-2016_mm_data"
+        "wms_name"            "PRECIP_TP7"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -320,14 +320,14 @@ MAP
       NAME "TotalPrecip_30"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-		"wms_name"			  "qdripreciptp30:qdripreciptp30_pd_1-day-53-2016_mm_data"
+		"wms_name"			  "PRECIP_TP30"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -336,14 +336,14 @@ MAP
       NAME "DaysWithPrecip_7"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "qdripreciprd7:qdripreciprd7_pd_1-day-53-2016_mm_data"
+        "wms_name"            "PRECIP_RD7"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -352,14 +352,14 @@ MAP
       NAME "DaysWithPrecip_30"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "qdripreciprd30:qdripreciprd30_pd_1-day-53-2016_mm_data"
+        "wms_name"            "PRECIP_RD30"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -368,14 +368,14 @@ MAP
       NAME "DaysSincePrecip_30"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "qdriprecipdsr:qdriprecipdsr_pd_1-day-53-2016_mm_data"
+        "wms_name"            "PRECIP_DSR"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -384,14 +384,14 @@ MAP
       NAME "MaxConDryDays_7"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "qdriprecipcdd7:qdriprecipcdd7_pd_1-day-53-2016_mm_data"
+        "wms_name"            "PRECIP_CDD7"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
@@ -400,14 +400,14 @@ MAP
       NAME "MaxConDryDays_30"
       TYPE RASTER
       STATUS OFF
-      CONNECTION "http://edcintl.cr.usgs.gov/geoserver/wms?"
+      CONNECTION "http://vegdri.cr.usgs.gov/wms.php?"
       CONNECTIONTYPE WMS
       PROJECTION
        "init=epsg:4326"
       END
       METADATA
         "wms_srs"             "EPSG:4269"
-        "wms_name"            "qdriprecipcdd30:qdriprecipcdd30_pd_1-day-53-2016_mm_data"
+        "wms_name"            "PRECIP_CDD30"
         "wms_server_version"  "1.1.1"
         "wms_format"          "image/png"
       END
