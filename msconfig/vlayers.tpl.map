@@ -1856,6 +1856,40 @@ MAP
     END # end Layer
 	
 	LAYER #
+        NAME geomac_2015
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_fireperims_geomac_2015"		
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "GEOMAC Fire 2014"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "geomac_2014"
+            "wms_abstract"       "geomac_2014"
+            "gml_include_items"  "year,fire_name,fire_num,acres,date_"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
         NAME geomac_2014
         PROJECTION
             "init=epsg:4326"
@@ -4397,6 +4431,35 @@ MAP
         METADATA
             "wms_title"          "modis-fire-2014"
             "wms_abstract"       "modis-fire-2014"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
+        NAME modis-fire-2015
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from modis_fire_2015"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2015"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2015"
+            "wms_abstract"       "modis-fire-2015"
             "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer

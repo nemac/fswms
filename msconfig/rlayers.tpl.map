@@ -361,27 +361,29 @@ MAP
     END # end LAYER
 	
 	LAYER
-        NAME     mtbs-raster-00-14
+        NAME     mtbs-raster-00-15
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
+			"proj=aea"
+			"lat_1=29.5"
+			"lat_2=45.5"
+			"lat_0=23"
+			"lon_0=-96"
+			"x_0=0"
+			"y_0=0"
+			"ellps=GRS80"
+			"datum=NAD83"
+			"units=m"
+			"no_defs"
+		END
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/mtbs/mtbs_gm_00_14.tif
+        DATA     %(DATA_DIR)s/MODIS/mtbs/mtbs_gm_00_15.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
 		CLASS
-			NAME "MTBS/GEOMAC 2000-2014"
+			NAME "MTBS/GEOMAC 2000-2015"
             EXPRESSION ""
             COLOR 255 255 255
         END
@@ -459,11 +461,16 @@ MAP
 			NAME "2014"
             EXPRESSION ([pixel] = 2014)
             COLOR 192 64 64
-        END   
+        END  
+		CLASS
+			NAME "2015"
+            EXPRESSION ([pixel] = 2015)
+            COLOR 192 64 64
+        END  		
         
         METADATA
-            "wms_title"             "mtbs-raster-00-14"
-            "wms_abstract"          "mtbs-raster-00-14"
+            "wms_title"             "mtbs-raster-00-15"
+            "wms_abstract"          "mtbs-raster-00-15"
             "gml_include_items"     "value_0"
 			#"gml_value_0_alias"     "Fire Year"
         END  # end METADATA
@@ -3482,6 +3489,33 @@ MAP
         METADATA
             "wms_title"             "CropLands2014"
             "wms_abstract"          "CropLands2014"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME CropLands2015        
+        PROJECTION
+			"proj=aea"
+			"lat_1=29.5"
+			"lat_2=45.5"
+			"lat_0=23"
+			"lon_0=-96"
+			"x_0=0"
+			"y_0=0"
+			"ellps=GRS80"
+			"datum=NAD83"
+			"units=m"
+			"no_defs"
+		END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/Cropland/cropland_2015_laea.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "CropLands2015"
+            "wms_abstract"          "CropLands2015"   
             "gml_include_items"     "value_list"			
         END  # end METADATA
     END # end LAYER

@@ -359,11 +359,11 @@
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="mtbs-raster-00-14" 
+	 layers="mtbs-raster-00-15" 
 	 styles="default" 
 	 identify="true" 
 	 name="2000-14 Combined (MTBS/GEOMAC)" 
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-00-14&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-00-15&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 <!-- <wmsLayer 
 	 lid="AAI"
 	 visible="false" 
@@ -523,7 +523,17 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2014 (GEOMAC)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=geomac_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="GEOMACB"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="geomac_2015" 
+	 styles="default" 
+	 identify="true" 
+	 name="2015 (GEOMAC)" 
+	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=geomac_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Historical MODIS Hotspots">
 	  <wmsLayer 
@@ -665,7 +675,17 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2014 (RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/modis-2014.png"/>	 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2014.png"/>	
+      <wmsLayer 
+	 lid="MODISFIREAAD"
+	 visible="false" 
+	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2015" 
+	 styles="default" 
+	 identify="true" 
+	 name="2015 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2015.png"/>	 
 	</wmsSubgroup>
 	<wmsSubgroup label="Forest Service Fuels Treatments">
       <wmsLayer 
@@ -2704,6 +2724,16 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2014 Cropland Data Layer" 
+	 legend="%(SERVER_URL)s/cmapicons/CropLands.png"/>
+	  <wmsLayer 
+	 lid="PMCL2015"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="CropLands2015" 
+	 styles="default" 
+	 identify="true" 
+	 name="2015 Cropland Data Layer" 
 	 legend="%(SERVER_URL)s/cmapicons/CropLands.png"/>
     </wmsSubgroup>
     <wmsSubgroup label="Elevation Products">
