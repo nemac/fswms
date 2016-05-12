@@ -6061,7 +6061,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fs_treatments/FS_Fuel_Treatments_00_16.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fs_treatments/ras_FS_Fuel_Treatments_2000_2016_combinedmax.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
@@ -6180,7 +6180,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/mtbs/mtbs_84_99.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/combined_ras_mtbs_perims_1984_1999.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
@@ -6281,27 +6281,25 @@ MAP
 	LAYER
         NAME     mtbs-raster-00-15
         PROJECTION
-			"proj=aea"
-			"lat_1=29.5"
-			"lat_2=45.5"
-			"lat_0=23"
-			"lon_0=-96"
-			"x_0=0"
-			"y_0=0"
-			"ellps=GRS80"
-			"datum=NAD83"
-			"units=m"
-			"no_defs"
-		END
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/mtbs/mtbs_gm_00_15.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/combined_ras_mtbs_perims_2000_2016.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
 		CLASS
-			NAME "MTBS/GEOMAC 2000-2015"
+			NAME "MTBS/GEOMAC 2000-2015 (Partial 2016)"
             EXPRESSION ""
             COLOR 255 255 255
         END
@@ -6384,7 +6382,12 @@ MAP
 			NAME "2015"
             EXPRESSION ([pixel] = 2015)
             COLOR 0 115 76
-        END  		
+        END 
+        CLASS
+			NAME "2015"
+            EXPRESSION ([pixel] = 2015)
+            COLOR 0 115 150
+        END 		
         
         METADATA
             "wms_title"             "mtbs-raster-00-15"

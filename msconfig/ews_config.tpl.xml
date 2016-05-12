@@ -118,7 +118,21 @@
           <viewGroup name="Drought_Monitor" />
           <viewGroup name="US_Climate" />
           <viewGroup name="US_Physiographic" />	
-    </view>    
+    </view> 
+    <view name="Duration" label="Duration Products">
+      <viewGroup name="US_Jurisdictions" />
+	  <viewGroup name="MODIS_Disturbance_Events" />	
+      <viewGroup name="US_Fire" />
+      <viewGroup name="US_FHM_ADS" />
+	  <viewGroup name="MODIS_Change_Detection_Products" />
+      <viewGroup name="Archived_TACS" />
+	  <viewGroup name="Duration" />
+      <viewGroup name="MODISCloud" />
+      <viewGroup name="Archived_RSAC" />
+      <viewGroup name="Drought_Monitor" />
+      <viewGroup name="US_Climate" />
+      <viewGroup name="US_Physiographic" />	
+    </view>	
   </mapviews>
 
 <wmsLayers>
@@ -362,7 +376,7 @@
 	 layers="mtbs-raster-00-15" 
 	 styles="default" 
 	 identify="true" 
-	 name="2000-15 Combined (MTBS/GEOMAC)" 
+	 name="2000-16 Combined (MTBS/GEOMAC)" 
 	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-00-15&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 <!-- <wmsLayer 
 	 lid="AAI"
@@ -10044,6 +10058,252 @@
           legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=events-historical&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       </wmsSubgroup>
   </wmsGroup>  
+  <wmsGroup gid="G18" name="Duration" label="Duration Products"> 
+    <wmsSubgroup label="Fixed Period: Jun 26 - Aug 5">
+        <wmsLayer
+          selected="false"
+          lid="DUAAJ"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="esumcount2015"
+          name="2015"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=esumcount2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+		<wmsLayer
+          selected="false"
+          lid="DUAAI"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="esumcount2014"
+          name="2014"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=esumcount2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUAAH"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="esumcount2013"
+          name="2013"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=esumcount2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUAAG"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="esumcount2012"
+          name="2012"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=esumcount2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUAAF"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="esumcount2011"
+          name="2011"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=esumcount2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUAAE"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="esumcount2010"
+          name="2010"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=esumcount2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUAAD"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="esumcount2009"
+          name="2009"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=esumcount2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUAAC"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="esumcount2008"
+          name="2008"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=esumcount2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUAAB"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="esumcount2007"
+          name="2007"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=esumcount2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUAAA"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="esumcount2006"
+          name="2006"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=esumcount2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>		  
+      </wmsSubgroup>
+	  <wmsSubgroup label="Fixed Period: Aug 12 - Sept 21">
+        <wmsLayer
+          selected="false"
+          lid="DUWAJ"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="wsumcount2015"
+          name="2015"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=wsumcount2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+		<wmsLayer
+          selected="false"
+          lid="DUWAI"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="wsumcount2014"
+          name="2014"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=wsumcount2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUWAH"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="wsumcount2013"
+          name="2013"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=wsumcount2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUWAG"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="wsumcount2012"
+          name="2012"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=wsumcount2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUWAF"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="wsumcount2011"
+          name="2011"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=wsumcount2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUWAE"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="wsumcount2010"
+          name="2010"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=wsumcount2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUWAD"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="wsumcount2009"
+          name="2009"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=wsumcount2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUWAC"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="wsumcount2008"
+          name="2008"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=wsumcount2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUWAB"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="wsumcount2007"
+          name="2007"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=wsumcount2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+        <wmsLayer
+          selected="false"
+          lid="DUWAA"
+          visible="true"
+          url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="wsumcount2006"
+          name="2006"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=wsumcount2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>		  
+      </wmsSubgroup>
+  </wmsGroup>
 </wmsLayers>
   <tools>
     <tool name="Print" label="Print Map"
