@@ -1233,6 +1233,43 @@ MAP
     END # end Layer
 	
 	LAYER #
+        NAME mtbs_2014
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_fireperims_2014"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+		#FILTER year=2013
+		CLASS
+            NAME "MTBS Fire 2014"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "mtbs_2014"
+            "wms_abstract"       "mtbs_2014"
+            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
         NAME mtbs_2013
         PROJECTION
             "init=epsg:4326"
