@@ -6384,8 +6384,8 @@ MAP
             COLOR 0 115 76
         END 
         CLASS
-			NAME "2015"
-            EXPRESSION ([pixel] = 2015)
+			NAME "2016"
+            EXPRESSION ([pixel] = 2016)
             COLOR 0 115 150
         END 		
         
