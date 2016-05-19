@@ -6061,7 +6061,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fs_treatments/ras_FS_Fuel_Treatments_2000_2016_combinedmax.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fs_treatments/combined_ras_FS_Fuel_Treatments2_v040116_LAEA_2000_2016.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
@@ -6180,7 +6180,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/combined_ras_mtbs_perims_1984_1999.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/combined_ras3_mtbs_perims_1984_1999_DD_20160401_conus_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
@@ -6294,7 +6294,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/combined_ras_mtbs_perims_2000_2016.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/combined_ras3_mtbs_perims_2000_2016_DD_20160401_conus_laea.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		

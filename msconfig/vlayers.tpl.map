@@ -652,7 +652,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2000"
             "wms_abstract"       "fs_treatment_2000"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -688,7 +688,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2001"
             "wms_abstract"       "fs_treatment_2001"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -724,7 +724,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2002"
             "wms_abstract"       "fs_treatment_2002"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -760,7 +760,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2003"
             "wms_abstract"       "fs_treatment_2003"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -796,7 +796,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2004"
             "wms_abstract"       "fs_treatment_2004"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -832,7 +832,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2005"
             "wms_abstract"       "fs_treatment_2005"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -868,7 +868,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2006"
             "wms_abstract"       "fs_treatment_2006"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -904,7 +904,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2007"
             "wms_abstract"       "fs_treatment_2007"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -940,7 +940,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2008"
             "wms_abstract"       "fs_treatment_2008"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -976,7 +976,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2009"
             "wms_abstract"       "fs_treatment_2009"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -1012,7 +1012,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2010"
             "wms_abstract"       "fs_treatment_2010"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -1048,7 +1048,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2011"
             "wms_abstract"       "fs_treatment_2011"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -1084,7 +1084,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2012"
             "wms_abstract"       "fs_treatment_2012"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -1120,7 +1120,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2013"
             "wms_abstract"       "fs_treatment_2013"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -1156,7 +1156,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2014"
             "wms_abstract"       "fs_treatment_2014"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -1192,7 +1192,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2015"
             "wms_abstract"       "fs_treatment_2015"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -1228,7 +1228,7 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2016"
             "wms_abstract"       "fs_treatment_2016"
-            "gml_include_items"  "activity,date_plann,date_accom,date_compl,fy_planned,treatment_,cwpp,cat_nm,method,fs_unit_na,t_name"
+            "gml_include_items"  "treatment_,method,rev_date,gis_acres,year_out,dateplanne,dateaccomp,datecomple"
         END  # end METADATA
     END # end Layer
 	
