@@ -359,16 +359,6 @@
 	 name="Previous MODIS (GeoMAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/PerimetersInactive.jpg"/>     --> 
 	  <wmsLayer 
-	 lid="MTBSABA"
-	 visible="false" 
-	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="mtbs-raster-84-99" 
-	 styles="default" 
-	 identify="true" 
-	 name="1984-1999 Combined (MTBS)" 
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-84-99&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-	 <wmsLayer 
 	 lid="MTBSABB"
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
@@ -378,6 +368,16 @@
 	 identify="true" 
 	 name="2000-15 Combined (MTBS/GEOMAC)" 
 	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-00-15&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="MTBSABA"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="mtbs-raster-84-99" 
+	 styles="default" 
+	 identify="true" 
+	 name="1984-1999 Combined (MTBS)" 
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-84-99&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 <!-- <wmsLayer 
 	 lid="AAI"
 	 visible="false" 
@@ -1036,7 +1036,17 @@
        styles="default" 
        identify="true" 
        name="2014 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>	   
+       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>	
+     <wmsLayer 
+       lid="ADS2015"
+       visible="false" 
+       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       srs="EPSG:3785" 
+       layers="ads_2015" 
+       styles="default" 
+       identify="true" 
+       name="2015 surveys" 
+       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>	   
     <wmsLayer 
        lid="BNE"
        visible="false" 
