@@ -1076,25 +1076,231 @@
   </wmsGroup>
   <wmsGroup gid="G05" name="Archived_TACS" label="Archived ForWarn Change Maps">
     <wmsSubgroup label="Archived Prior Year Baseline">
-    %(NRT_1YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2016">
+    %(NRT_2016_1YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2015">
+    %(NRT_2015_1YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2014">
+    %(NRT_2014_1YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2013">
+    %(NRT_2013_1YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2012">
+    %(NRT_2012_1YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2011">
+    %(NRT_2011_1YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2010">
+    %(NRT_2010_1YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2009">
+    %(NRT_2009_1YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2008">
+    %(NRT_2008_1YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2007">
+    %(NRT_2007_1YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2006">
+    %(NRT_2006_1YEAR_LAYERS)s
     </wmsSubgroup>
 	<wmsSubgroup label="Archived All-Year Max Baseline">
-    %(NRT_AllYEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2016">
+    %(NRT_2016_AllYEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2015">
+    %(NRT_2015_AllYEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2014">
+    %(NRT_2014_AllYEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2013">
+    %(NRT_2013_AllYEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2012">
+    %(NRT_2012_AllYEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2011">
+    %(NRT_2011_AllYEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2010">
+    %(NRT_2010_AllYEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2009">
+    %(NRT_2009_AllYEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2008">
+    %(NRT_2008_AllYEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2007">
+    %(NRT_2007_AllYEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2006">
+    %(NRT_2006_AllYEAR_LAYERS)s
     </wmsSubgroup>
     <wmsSubgroup label="Archived Prior 3-Year Max Baseline">
-    %(NRT_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2016">
+    %(NRT_2016_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2015">
+    %(NRT_2015_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2014">
+    %(NRT_2014_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2013">
+    %(NRT_2013_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2012">
+    %(NRT_2012_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2011">
+    %(NRT_2011_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2010">
+    %(NRT_2010_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2009">
+    %(NRT_2009_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2008">
+    %(NRT_2008_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2007">
+    %(NRT_2007_3YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2006">
+    %(NRT_2006_3YEAR_LAYERS)s
     </wmsSubgroup>
 	<wmsSubgroup label="Archived Prior 5-Year Max Baseline">
-    %(NRT_5YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2016">
+    %(NRT_2016_5YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2015">
+    %(NRT_2015_5YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2014">
+    %(NRT_2014_5YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2013">
+    %(NRT_2013_5YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2012">
+    %(NRT_2012_5YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2011">
+    %(NRT_2011_5YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2010">
+    %(NRT_2010_5YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2009">
+    %(NRT_2009_5YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2008">
+    %(NRT_2008_5YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2007">
+    %(NRT_2007_5YEAR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2006">
+    %(NRT_2006_5YEAR_LAYERS)s
     </wmsSubgroup>
     <wmsSubgroup label="Archived Early Detect (Prior Year Baseline)">
-    %(NRT_ALC1YR_LAYERS)s
     </wmsSubgroup> 
+	<wmsSubgroup label="2016">
+    %(NRT_2016_ALC1YR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2015">
+    %(NRT_2015_ALC1YR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2014">
+    %(NRT_2014_ALC1YR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2013">
+    %(NRT_2013_ALC1YR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2012">
+    %(NRT_2012_ALC1YR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2011">
+    %(NRT_2011_ALC1YR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2010">
+    %(NRT_2010_ALC1YR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2009">
+    %(NRT_2009_ALC1YR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2008">
+    %(NRT_2008_ALC1YR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2007">
+    %(NRT_2007_ALC1YR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2006">
+    %(NRT_2006_ALC1YR_LAYERS)s
+    </wmsSubgroup>
     <wmsSubgroup label="Archived All-Year Phenotype Max Baseline">
-    %(NRT_MUCALLYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2016">
+    %(NRT_2016_MUCALLYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2015">
+    %(NRT_2015_MUCALLYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2014">
+    %(NRT_2014_MUCALLYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2013">
+    %(NRT_2013_MUCALLYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2009">
+    %(NRT_2009_MUCALLYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2008">
+    %(NRT_2008_MUCALLYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2007">
+    %(NRT_2007_MUCALLYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2006">
+    %(NRT_2006_MUCALLYR_LAYERS)s
     </wmsSubgroup>
     <wmsSubgroup label="Archived All-Year Mean (of maxes) Baseline">
-    %(NRT_MMAXYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2016">
+    %(NRT_2016_MMAXYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2015">
+    %(NRT_2015_MMAXYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2014">
+    %(NRT_2014_MMAXYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2013">
+    %(NRT_2013_MMAXYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2009">
+    %(NRT_2009_MMAXYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2008">
+    %(NRT_2008_MMAXYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2007">
+    %(NRT_2007_MMAXYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2006">
+    %(NRT_2006_MMAXYR_LAYERS)s
     </wmsSubgroup>
   </wmsGroup>
   
