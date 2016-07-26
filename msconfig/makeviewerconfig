@@ -1,6 +1,7 @@
 #! /usr/bin/python
 
 import sys, re, os, getopt
+from xml.dom.minidom import parseString
 
 sys.path.append("../var")
 try:
@@ -1036,7 +1037,9 @@ drtLayers = getDRTLayers()
 #End NRT 8 day & drought monitor automation-------------------------------------------------
 
 f = open("../html/view/config/ews_config.xml", "w")
-f.write(template.render( {
+fMin = open("../html/view/config/ews_config_min.xml", "w+")
+
+configXML = template.render( {
             'SERVER_URL'                            : SERVER_URL,
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
             'TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : tacsModisChangeDetectionProductLayers,
@@ -1127,8 +1130,18 @@ f.write(template.render( {
             'NRT_2007_MMAXYR_LAYERS'       : nrt2007MMAXAllYr,
             'NRT_2006_MMAXYR_LAYERS'       : nrt2006MMAXAllYr,
             'DRT_LAYERS'      : drtLayers
-            }))
+            })
+
+minXML = parseString(configXML).toprettyxml('', '', 'UTF-8')
+minXML = minXML.splitlines()
+minXML = map(str.strip, minXML)
+minXML = ''.join(minXML)
+
+f.write(configXML)
+fMin.write(minXML)
+
 f.close()
+fMin.close()
 
 if not os.path.exists("../html/cmapicons"):
     os.makedirs("../html/cmapicons")
