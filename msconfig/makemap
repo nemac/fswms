@@ -106,8 +106,36 @@ def interp(string):
   return string
 
 def getwkt(tif):
-    dataSet = gdal.Open( tif, gdal.GA_ReadOnly )
-    return dataSet.GetProjection()
+
+    #function to get the well known text version of the
+    #  spatail reference (proejction) of the image (tif)
+    wktFile = tif + '.wkt'
+    wktData = ''
+
+    #check if a wkt tile exists
+    wktFileExists = os.path.exists(wktFile)
+
+    if wktFileExists:
+        #if the wkt file exists read the file
+        #  trying to avoid doing gdal.open its resource expensive
+        #  doing a normal file read of the of MUCH smaller text file seems to speed things up
+        with open(wktFile, 'r') as myfile:
+            wktData = myfile.read()
+
+    else:
+        #if the wkt file does not exist thane use gdal to write it.
+        dataSet = gdal.Open( tif, gdal.GA_ReadOnly )
+        wktData = dataSet.GetProjection()
+        f = open( wktFile, 'w' )
+        f.write( wktData )
+        f.close()
+
+    return wktData
+
+#mark out for testing new function above
+#def getwkt(tif):
+#    dataSet = gdal.Open( tif, gdal.GA_ReadOnly )
+#    return dataSet.GetProjection()
 
 # formatproj reformats a "proj4" projection string into the form required by a Mapserver mapfile.
 # Specifically, it splits it into one expression per line, delimited by double quotes.  It takes
