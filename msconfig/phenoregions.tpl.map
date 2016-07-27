@@ -1,0 +1,2153 @@
+MAP
+    # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+    # of the two lines below to enable this logging:
+    # CONFIG "MS_ERRORFILE" "../var/log/ewsmonthly.log"
+    #DEBUG 5
+
+    # all temp files get prefixed with this string
+    NAME ms_phenoregions
+
+    #jdm:added to accomodate map layers
+    #see http://trac.osgeo.org/mapserver/ticket/3055
+    MAXSIZE 4000    
+    
+    # background color of image if transparency
+    # is not requested
+    IMAGECOLOR 255 255 255
+
+    # default output image dimensions
+    SIZE 1200 1000
+
+    # always returns a map
+    STATUS ON
+
+    # set top level projection
+    PROJECTION
+     "init=epsg:4326"
+    END
+
+    # image format options
+    OUTPUTFORMAT
+        NAME "GEOTIFF"
+        DRIVER "GDAL/GTiff"
+        MIMETYPE "image/geotiff"
+        IMAGEMODE "BYTE"
+        EXTENSION "tif"
+    END
+
+    # minx miny maxx maxy
+    # sets:
+    # /WMT_MS_Capabilities/Capability/Layer/LatLonBoundingBox(@minx @miny @maxx @maxx)
+    EXTENT -180 -90 180 90 # World
+
+    # add def pointers for symbols
+    SYMBOLSET "./symbols/symbols35.sym"
+    FONTSET   "./fonts/fonts.list"
+
+    #
+    # Start of web interface definition
+    WEB
+        # this is the real filepath to the temp dir for intermediate file creation
+        IMAGEPATH "./tmp"
+        # this is the web-accessible path to IMAGEPATH
+        IMAGEURL "/tmp/"
+        HEADER "./templates/query_header.html"
+        FOOTER "./templates/query_footer.html"
+        METADATA
+            "ows_enable_request"     "*"
+            "wms_title"              "phenoregions"
+            "wms_abstract"           "phenoregions"
+            "wms_onlineresource"     "%(SERVICE_URL)s"
+            "wms_srs"                "EPSG:4326 EPSG:2163 EPSG:3785 EPSG:900913"
+        END
+    END
+
+    QUERYMAP
+        STATUS OFF
+    END
+
+    # set defaults for GetLegendGraphic requests 
+    LEGEND
+      KEYSIZE 20 10
+    END
+   
+    LAYER
+        NAME Pheno50MaxMode         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode"
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER            
+    LAYER
+        NAME Pheno50MaxModeMaskForAgriculture         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode MaskForAgriculture"
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForAgriculture
+    END # end LAYER            
+    LAYER
+        NAME Pheno50MaxModeMaskForConiferForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode MaskForConiferForest"
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForConiferForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno50MaxModeMaskForDeciduousForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode MaskForDeciduousForest"
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForDeciduousForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno50MaxModeMaskForGrass         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode MaskForGrass"
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForGrass
+    END # end LAYER            	
+    LAYER
+        NAME Pheno50MaxModeMaskForMixedForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode MaskForMixedForest"
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForMixedForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno50MaxModeMaskForNonVegetated         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode MaskForNonVegetated"
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForNonVegetated
+    END # end LAYER            
+    LAYER
+        NAME Pheno50MaxModeMaskForShrubland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode MaskForShrubland"
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForShrubland
+    END # end LAYER  
+    LAYER
+        NAME Pheno50MaxModeMaskForUrban         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode MaskForUrban "
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForUrban
+    END # end LAYER  	
+    LAYER
+        NAME Pheno50MaxModeMaskForWetland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode MaskForWetland "
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForWetland
+    END # end LAYER  		
+    LAYER
+        NAME Pheno50MaxModeMaskForForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.50.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 50 MaxMode MaskForForest "
+            "wms_abstract"          "Pheno 50 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER  			
+    LAYER
+        NAME Pheno100MaxMode         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode"
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME Pheno100MaxModeMaskForAgriculture         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode MaskForAgriculture"
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForAgriculture
+    END # end LAYER            
+    LAYER
+        NAME Pheno100MaxModeMaskForConiferForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode MaskForConiferForest"
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForConiferForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno100MaxModeMaskForDeciduousForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode MaskForDeciduousForest"
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForDeciduousForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno100MaxModeMaskForGrass         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode MaskForGrass"
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForGrass
+    END # end LAYER            	
+    LAYER
+        NAME Pheno100MaxModeMaskForMixedForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode MaskForMixedForest"
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForMixedForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno100MaxModeMaskForNonVegetated         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode MaskForNonVegetated"
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForNonVegetated
+    END # end LAYER            
+    LAYER
+        NAME Pheno100MaxModeMaskForShrubland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode MaskForShrubland"
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForShrubland
+    END # end LAYER  
+    LAYER
+        NAME Pheno100MaxModeMaskForUrban         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode MaskForUrban "
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForUrban
+    END # end LAYER  	
+    LAYER
+        NAME Pheno100MaxModeMaskForWetland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode MaskForWetland "
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForWetland
+    END # end LAYER 
+    LAYER
+        NAME Pheno100MaxModeMaskForForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.100.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 100 MaxMode MaskForForest "
+            "wms_abstract"          "Pheno 100 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER  	
+    LAYER
+        NAME Pheno200MaxMode         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode"
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME Pheno200MaxModeMaskForAgriculture         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode MaskForAgriculture"
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForAgriculture
+    END # end LAYER            
+    LAYER
+        NAME Pheno200MaxModeMaskForConiferForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode MaskForConiferForest"
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForConiferForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno200MaxModeMaskForDeciduousForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode MaskForDeciduousForest"
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForDeciduousForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno200MaxModeMaskForGrass         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode MaskForGrass"
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForGrass
+    END # end LAYER            	
+    LAYER
+        NAME Pheno200MaxModeMaskForMixedForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode MaskForMixedForest"
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForMixedForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno200MaxModeMaskForNonVegetated         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode MaskForNonVegetated"
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForNonVegetated
+    END # end LAYER            
+    LAYER
+        NAME Pheno200MaxModeMaskForShrubland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode MaskForShrubland"
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForShrubland
+    END # end LAYER  
+    LAYER
+        NAME Pheno200MaxModeMaskForUrban         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode MaskForUrban "
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForUrban
+    END # end LAYER
+    LAYER
+        NAME Pheno200MaxModeMaskForWetland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode MaskForWetland "
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForWetland
+    END # end LAYER	
+    LAYER
+        NAME Pheno200MaxModeMaskForForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.200.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "Pheno 200 MaxMode MaskForForest "
+            "wms_abstract"          "Pheno 200 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER		
+    LAYER
+        NAME Pheno500MaxMode         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+		#DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/test500.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode"
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME Pheno500MaxModeMaskForAgriculture         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode MaskForAgriculture"
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForAgriculture
+    END # end LAYER            
+    LAYER
+        NAME Pheno500MaxModeMaskForConiferForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode MaskForConiferForest"
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForConiferForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno500MaxModeMaskForDeciduousForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode MaskForDeciduousForest"
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForDeciduousForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno500MaxModeMaskForGrass         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode MaskForGrass"
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForGrass
+    END # end LAYER            	
+    LAYER
+        NAME Pheno500MaxModeMaskForMixedForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode MaskForMixedForest"
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForMixedForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno500MaxModeMaskForNonVegetated         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode MaskForNonVegetated"
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForNonVegetated
+    END # end LAYER            
+    LAYER
+        NAME Pheno500MaxModeMaskForShrubland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode MaskForShrubland"
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForShrubland
+    END # end LAYER  
+    LAYER
+        NAME Pheno500MaxModeMaskForUrban         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode MaskForUrban "
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForUrban
+    END # end LAYER
+    LAYER
+        NAME Pheno500MaxModeMaskForWetland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode MaskForWetland "
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForWetland
+    END # end LAYER	
+    LAYER
+        NAME Pheno500MaxModeMaskForForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.500.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno500.cmap"
+        METADATA
+            "wms_title"             "Pheno 500 MaxMode MaskForForest "
+            "wms_abstract"          "Pheno 500 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER		
+    LAYER
+        NAME Pheno1000MaxMode         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode"
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME Pheno1000MaxModeMaskForAgriculture         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode MaskForAgriculture"
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForAgriculture
+    END # end LAYER            
+    LAYER
+        NAME Pheno1000MaxModeMaskForConiferForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode MaskForConiferForest"
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForConiferForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno1000MaxModeMaskForDeciduousForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode MaskForDeciduousForest"
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForDeciduousForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno1000MaxModeMaskForGrass         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode MaskForGrass"
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForGrass
+    END # end LAYER            	
+    LAYER
+        NAME Pheno1000MaxModeMaskForMixedForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode MaskForMixedForest"
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForMixedForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno1000MaxModeMaskForNonVegetated         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode MaskForNonVegetated"
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForNonVegetated
+    END # end LAYER            
+    LAYER
+        NAME Pheno1000MaxModeMaskForShrubland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode MaskForShrubland"
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForShrubland
+    END # end LAYER  
+    LAYER
+        NAME Pheno1000MaxModeMaskForUrban         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode MaskForUrban "
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForUrban
+    END # end LAYER
+    LAYER
+        NAME Pheno1000MaxModeMaskForWetland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode MaskForWetland "
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForWetland
+    END # end LAYER	
+    LAYER
+        NAME Pheno1000MaxModeMaskForForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.1000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno1000.cmap"
+        METADATA
+            "wms_title"             "Pheno 1000 MaxMode MaskForForest"
+            "wms_abstract"          "Pheno 1000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER		
+    LAYER
+        NAME Pheno5000MaxMode         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno5000.cmap"
+        METADATA
+            "wms_title"             "Pheno 5000 MaxMode"
+            "wms_abstract"          "Pheno 5000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME Pheno5000MaxModeMaskForAgriculture         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno5000.cmap"
+        METADATA
+            "wms_title"             "Pheno 5000 MaxMode MaskForAgriculture"
+            "wms_abstract"          "Pheno 5000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForAgriculture
+    END # end LAYER            
+    LAYER
+        NAME Pheno5000MaxModeMaskForConiferForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno5000.cmap"
+        METADATA
+            "wms_title"             "Pheno 5000 MaxMode MaskForConiferForest"
+            "wms_abstract"          "Pheno 5000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForConiferForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno5000MaxModeMaskForDeciduousForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno5000.cmap"
+        METADATA
+            "wms_title"             "Pheno 5000 MaxMode MaskForDeciduousForest"
+            "wms_abstract"          "Pheno 5000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForDeciduousForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno5000MaxModeMaskForGrass         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno5000.cmap"
+        METADATA
+            "wms_title"             "Pheno 5000 MaxMode MaskForGrass"
+            "wms_abstract"          "Pheno 5000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForGrass
+    END # end LAYER            	
+    LAYER
+        NAME Pheno5000MaxModeMaskForMixedForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno5000.cmap"
+        METADATA
+            "wms_title"             "Pheno 5000 MaxMode MaskForMixedForest"
+            "wms_abstract"          "Pheno 5000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForMixedForest
+    END # end LAYER            
+    LAYER
+        NAME Pheno5000MaxModeMaskForNonVegetated         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno5000.cmap"
+        METADATA
+            "wms_title"             "Pheno 5000 MaxMode MaskForNonVegetated"
+            "wms_abstract"          "Pheno 5000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForNonVegetated
+    END # end LAYER            
+    LAYER
+        NAME Pheno5000MaxModeMaskForShrubland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno5000.cmap"
+        METADATA
+            "wms_title"             "Pheno 5000 MaxMode MaskForShrubland"
+            "wms_abstract"          "Pheno 5000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForShrubland
+    END # end LAYER  
+    LAYER
+        NAME Pheno5000MaxModeMaskForUrban         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno5000.cmap"
+        METADATA
+            "wms_title"             "Pheno 5000 MaxMode MaskForUrban "
+            "wms_abstract"          "Pheno 5000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForUrban
+    END # end LAYER
+    LAYER
+        NAME Pheno5000MaxModeMaskForWetland         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno5000.cmap"
+        METADATA
+            "wms_title"             "Pheno 5000 MaxMode MaskForWetland "
+            "wms_abstract"          "Pheno 5000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForWetland
+    END # end LAYER	
+	LAYER
+        NAME Pheno5000MaxModeMaskForForest         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/phendump.2000-2011.5000.maxmode.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+	    INCLUDE "cmaps/Pheno5000.cmap"
+        METADATA
+            "wms_title"             "Pheno 5000 MaxMode MaskForForest"
+            "wms_abstract"          "Pheno 5000 MaxMode"   
+            "gml_include_items"     "value_list"			
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER	
+	
+    #jdm: The next layers are for support of masking
+    LAYER
+        NAME MaskForForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/new_forest.tif 
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForForest"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForForest"
+            "wcs_label"             "MaskForForest"
+            "wcs_rangeset_name"     "MaskForForest"
+            "wcs_rangeset_label"    "MaskForForest"
+        END  # end METADATA
+    END # end LAYER	 
+    LAYER
+        NAME MaskForAgriculture
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_agriculture.tif
+        CLASS
+            EXPRESSION ([pixel] = 1)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForAgriculture"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForAgriculture"
+            "wcs_label"             "MaskForAgriculture"
+            "wcs_rangeset_name"     "MaskForAgriculture"
+            "wcs_rangeset_label"    "MaskForAgriculture"
+        END  # end METADATA
+    END # end LAYER	
+    LAYER
+        NAME MaskForConiferForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_conifer.tif
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForConiferForest"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForConiferForest"
+            "wcs_label"             "MaskForConiferForest"
+            "wcs_rangeset_name"     "MaskForConiferForest"
+            "wcs_rangeset_label"    "MaskForConiferForest"
+        END  # end METADATA
+    END # end LAYER	
+    LAYER
+        NAME MaskForDeciduousForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_deciduous_new2.tif
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForDeciduousForest"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForDeciduousForest"
+            "wcs_label"             "MaskForDeciduousForest"
+            "wcs_rangeset_name"     "MaskForDeciduousForest"
+            "wcs_rangeset_label"    "MaskForDeciduousForest"
+        END  # end METADATA
+    END # end LAYER	    
+    LAYER
+        NAME MaskForGrass
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_grass.tif
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForGrass"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForGrass"
+            "wcs_label"             "MaskForGrass"
+            "wcs_rangeset_name"     "MaskForGrass"
+            "wcs_rangeset_label"    "MaskForGrass"
+        END  # end METADATA
+    END # end LAYER	    
+    LAYER
+        NAME MaskForMixedForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_mixed.tif
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForMixedForest"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForMixedForest"
+            "wcs_label"             "MaskForMixedForest"
+            "wcs_rangeset_name"     "MaskForMixedForest"
+            "wcs_rangeset_label"    "MaskForMixedForest"
+        END  # end METADATA
+    END # end LAYER	    
+    LAYER
+        NAME MaskForNonVegetated
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_nonveg.tif
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForNonVegetated"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForNonVegetated"
+            "wcs_label"             "MaskForNonVegetated"
+            "wcs_rangeset_name"     "MaskForNonVegetated"
+            "wcs_rangeset_label"    "MaskForNonVegetated"
+        END  # end METADATA
+    END # end LAYER	    
+    LAYER
+        NAME MaskForShrubland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_shrub.tif
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForShrubland"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForShrubland"
+            "wcs_label"             "MaskForShrubland"
+            "wcs_rangeset_name"     "MaskForShrubland"
+            "wcs_rangeset_label"    "MaskForShrubland"
+        END  # end METADATA
+    END # end LAYER	    
+    LAYER
+        NAME MaskForUrban
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_urban.tif
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForUrban"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForUrban"
+            "wcs_label"             "MaskForUrban"
+            "wcs_rangeset_name"     "MaskForUrban"
+            "wcs_rangeset_label"    "MaskForUrban"
+        END  # end METADATA
+    END # end LAYER	
+    LAYER
+        NAME MaskForWetland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_wetland_new.tif
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForWetland"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForWetland"
+            "wcs_label"             "MaskForWetland"
+            "wcs_rangeset_name"     "MaskForWetland"
+            "wcs_rangeset_label"    "MaskForWetland"
+        END  # end METADATA
+    END # end LAYER	    		
+END # end MAP

@@ -141,43 +141,43 @@
       <wmsLayer
 	 lid="AAA"
 	 visible="false"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 url="%(SERVER_URL)s/boundaries?TRANSPARENT=true"
 	 srs="EPSG:3785"
 	 layers="cities"
 	 styles="default"
 	 identify="true"
 	 name="Cities"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=cities&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/boundaries?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=cities&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer
      selected="true"
 	 lid="AAB"
 	 visible="true"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 url="%(SERVER_URL)s/boundaries?TRANSPARENT=true"
 	 srs="EPSG:3785"
 	 layers="states"
 	 styles="default"
 	 identify="false"
 	 name="State Boundaries"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=states&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/boundaries?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=states&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer
 	 lid="AAC"
 	 visible="false"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 url="%(SERVER_URL)s/boundaries?TRANSPARENT=true"
 	 srs="EPSG:3785"
 	 layers="counties"
 	 styles="default"
 	 identify="true"
 	 name="County Boundaries"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=counties&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/boundaries?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=counties&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer
 	 lid="AAD"
 	 visible="false"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+	 url="%(SERVER_URL)s/boundaries?TRANSPARENT=true"
 	 srs="EPSG:3785"
 	 layers="federal_lands"
 	 styles="default"
 	 identify="true"
-	 name="Federal Land Boundaries" legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=federal_lands&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="Federal Land Boundaries" legend="%(SERVER_URL)s/boundaries?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=federal_lands&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer
 	 lid="BRH"
 	 visible="false"
@@ -339,7 +339,7 @@
  -->  <wmsLayer 
 	 lid="AAH"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-current-year" 
 	 styles="default" 
@@ -391,169 +391,169 @@
 	 <wmsLayer 
 	 lid="AAJ"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2000" 
 	 styles="default" 
 	 identify="true" 
 	 name="2000 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAK"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2001" 
 	 styles="default" 
 	 identify="true" 
 	 name="2001 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAL"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2002" 
 	 styles="default" 
 	 identify="true" 
 	 name="2002 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAM"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2003" 
 	 styles="default" 
 	 identify="true" 
 	 name="2003 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAN"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2004" 
 	 styles="default" 
 	 identify="true" 
 	 name="2004 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAO"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2005" 
 	 styles="default" 
 	 identify="true" 
 	 name="2005 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAP"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2006" 
 	 styles="default" 
 	 identify="true" 
 	 name="2006 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAQ"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2007" 
 	 styles="default" 
 	 identify="true" 
 	 name="2007 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
       <wmsLayer 
 	 lid="AAR"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2008" 
 	 styles="default" 
 	 identify="true" 
 	 name="2008 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="BDC"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2009" 
 	 styles="default" 
 	 identify="true" 
 	 name="2009 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="MTBSAAA"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2010" 
 	 styles="default" 
 	 identify="true" 
 	 name="2010 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
 	  <wmsLayer 
 	 lid="MTBSAAB"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2011" 
 	 styles="default" 
 	 identify="true" 
 	 name="2011 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
 	  <wmsLayer 
 	 lid="MTBSAAC"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2012" 
 	 styles="default" 
 	 identify="true" 
 	 name="2012 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>  
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>  
 	  <wmsLayer 
 	 lid="MTBSAAE"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2013" 
 	 styles="default" 
 	 identify="true" 
 	 name="2013 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="GEOMACA"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="mtbs_2014" 
 	 styles="default" 
 	 identify="true" 
 	 name="2014 (MTBS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="GEOMACB"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="geomac_2015" 
 	 styles="default" 
 	 identify="true" 
 	 name="2015 (GEOMAC)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=geomac_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=geomac_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Historical MODIS Hotspots">
 	  <wmsLayer 
 	 lid="MFONE"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2001" 
 	 styles="default" 
@@ -563,7 +563,7 @@
 	  <wmsLayer 
 	 lid="MFTWO"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2002" 
 	 styles="default" 
@@ -573,7 +573,7 @@
 	  <wmsLayer 
 	 lid="MFTHREE"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2003" 
 	 styles="default" 
@@ -583,7 +583,7 @@
 	  <wmsLayer 
 	 lid="MFFOUR"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2004" 
 	 styles="default" 
@@ -593,7 +593,7 @@
 	  <wmsLayer 
 	 lid="MFFIVE"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2005" 
 	 styles="default" 
@@ -603,7 +603,7 @@
 	  <wmsLayer 
 	 lid="MFSIX"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2006" 
 	 styles="default" 
@@ -613,7 +613,7 @@
 	  <wmsLayer 
 	 lid="MFSEVEN"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2007" 
 	 styles="default" 
@@ -623,7 +623,7 @@
 	  <wmsLayer 
 	 lid="MFEIGHT"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2008" 
 	 styles="default" 
@@ -633,7 +633,7 @@
 	  <wmsLayer 
 	 lid="MFNINE"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2009" 
 	 styles="default" 
@@ -643,7 +643,7 @@
   	 <wmsLayer 
 	 lid="BRK"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2010" 
 	 styles="default" 
@@ -653,7 +653,7 @@
      <wmsLayer 
 	 lid="BRJ"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2011" 
 	 styles="default" 
@@ -663,7 +663,7 @@
 	  <wmsLayer 
 	 lid="MODISFIREAAA"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2012" 
 	 styles="default" 
@@ -673,7 +673,7 @@
 	  <wmsLayer 
 	 lid="MODISFIREAAB"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2013" 
 	 styles="default" 
@@ -683,7 +683,7 @@
       <wmsLayer 
 	 lid="MODISFIREAAC"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2014" 
 	 styles="default" 
@@ -693,7 +693,7 @@
       <wmsLayer 
 	 lid="MODISFIREAAD"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="modis-fire-2015" 
 	 styles="default" 
@@ -715,173 +715,173 @@
 	  <wmsLayer 
 	 lid="FTAAB"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2000" 
 	 styles="default" 
 	 identify="true" 
 	 name="2000 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAC"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2001" 
 	 styles="default" 
 	 identify="true" 
 	 name="2001 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAD"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2002" 
 	 styles="default" 
 	 identify="true" 
 	 name="2002 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAE"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2003" 
 	 styles="default" 
 	 identify="true" 
 	 name="2003 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAF"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2004" 
 	 styles="default" 
 	 identify="true" 
 	 name="2004 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAG"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2005" 
 	 styles="default" 
 	 identify="true" 
 	 name="2005 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAH"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2006" 
 	 styles="default" 
 	 identify="true" 
 	 name="2006 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAI"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2007" 
 	 styles="default" 
 	 identify="true" 
 	 name="2007(FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAJ"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2008" 
 	 styles="default" 
 	 identify="true" 
 	 name="2008 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAK"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2009" 
 	 styles="default" 
 	 identify="true" 
 	 name="2009 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAL"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2010" 
 	 styles="default" 
 	 identify="true" 
 	 name="2010 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAM"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2011" 
 	 styles="default" 
 	 identify="true" 
 	 name="2011 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAN"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2012" 
 	 styles="default" 
 	 identify="true" 
 	 name="2012 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAO"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2013" 
 	 styles="default" 
 	 identify="true" 
 	 name="2013 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAP"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2014" 
 	 styles="default" 
 	 identify="true" 
 	 name="2014 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAQ"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2015" 
 	 styles="default" 
 	 identify="true" 
 	 name="2015 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAB"
 	 visible="false" 
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="fs_treatment_2016" 
 	 styles="default" 
 	 identify="true" 
 	 name="2016 (FS)" 
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
 
@@ -890,163 +890,163 @@
     <wmsLayer 
        lid="ADS2000"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2000" 
        styles="default" 
        identify="true" 
        name="2000 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2000&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
     <wmsLayer 
        lid="ADS2001"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2001" 
        styles="default" 
        identify="true" 
        name="2001 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2001&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
     <wmsLayer 
        lid="ADS2002"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2002" 
        styles="default" 
        identify="true" 
        name="2002 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2002&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
     <wmsLayer 
        lid="AAS"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2003" 
        styles="default" 
        identify="true" 
        name="2003 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAT"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2004" 
        styles="default" 
        identify="true" 
        name="2004 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2004&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAU"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2005" 
        styles="default" 
        identify="true" 
        name="2005 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2005&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAV"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2006" 
        styles="default" 
        identify="true" 
        name="2006 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAW"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2007" 
        styles="default" 
        identify="true" 
        name="2007 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAX"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2008" 
        styles="default" 
        identify="true" 
        name="2008 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="AAY"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2009" 
        styles="default" 
        identify="true" 
        name="2009 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     <wmsLayer 
        lid="ADS2010"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2010" 
        styles="default" 
        identify="true" 
        name="2010 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
     <wmsLayer 
        lid="ADS2011"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2011" 
        styles="default" 
        identify="true" 
        name="2011 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>       
      <wmsLayer 
        lid="ADS2012"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2012" 
        styles="default" 
        identify="true" 
        name="2012 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"/> 
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"/> 
      <wmsLayer 
        lid="ADS2013"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2013" 
        styles="default" 
        identify="true" 
        name="2013 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>	
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>	
      <wmsLayer 
        lid="ADS2014"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2014" 
        styles="default" 
        identify="true" 
        name="2014 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>	
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>	
      <wmsLayer 
        lid="ADS2015"
        visible="false" 
-       url="%(SERVER_URL)s/vlayers?TRANSPARENT=true" 
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
        srs="EPSG:3785" 
        layers="ads_2015" 
        styles="default" 
        identify="true" 
        name="2015 surveys" 
-       legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>	   
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>	   
     <wmsLayer 
        lid="BNE"
        visible="false" 
@@ -3086,7 +3086,7 @@
 	  <wmsLayer 
 	 lid="PR50MM"
 	 visible="false" 
-	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/phenoregions?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="Pheno50MaxMode" 
 	 styles="default" 
@@ -3097,7 +3097,7 @@
       <wmsLayer 
 	 lid="PR100MM"
 	 visible="false" 
-	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/phenoregions?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="Pheno100MaxMode" 
 	 styles="default" 
@@ -3108,7 +3108,7 @@
       <wmsLayer 
 	 lid="PR200MM"
 	 visible="false" 
-	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/phenoregions?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="Pheno200MaxMode" 
 	 styles="default" 
@@ -3119,7 +3119,7 @@
       <wmsLayer 
 	 lid="PR500MM"
 	 visible="false" 
-	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/phenoregions?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="Pheno500MaxMode" 
 	 styles="default" 
@@ -3130,7 +3130,7 @@
       <wmsLayer 
 	 lid="PR1000MM"
 	 visible="false" 
-	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/phenoregions?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="Pheno1000MaxMode" 
 	 styles="default" 
@@ -3141,7 +3141,7 @@
       <wmsLayer 
 	 lid="PR5000MM"
 	 visible="false" 
-	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/phenoregions?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="Pheno5000MaxMode" 
 	 styles="default" 

@@ -1078,6 +1078,76 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+###
+### Create the duration.map file:
+###
+template = Template("duration.tpl.map")
+f_new = openMapfileForWriting("duration.map")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "duration")
+            } ) )
+f_new.close()
+
+###
+### Create the treatments.map file:
+###
+template = Template("treatments.tpl.map")
+f_new = openMapfileForWriting("treatments.map")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'POSTGIS_CONNECTION_STRING' : POSTGIS_CONNECTION_STRING,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "treatments")
+            } ) )
+f_new.close()
+
+###
+### Create the phenoregions.map file:
+###
+template = Template("phenoregions.tpl.map")
+f_new = openMapfileForWriting("phenoregions.map")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "phenoregions")
+            } ) )
+f_new.close()
+
+###
+### Create the boundaries.map file:
+###
+template = Template("boundaries.tpl.map")
+f_new = openMapfileForWriting("boundaries.map")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'POSTGIS_CONNECTION_STRING' : POSTGIS_CONNECTION_STRING,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "boundaries")
+            } ) )
+f_new.close()
+
+###
+### Create the fire.map file:
+###
+template = Template("fire.tpl.map")
+f_new = openMapfileForWriting("fire.map")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'POSTGIS_CONNECTION_STRING' : POSTGIS_CONNECTION_STRING,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "fire")
+            } ) )
+f_new.close()
+
+###
+### Create the ads.map file:
+###
+template = Template("ads.tpl.map")
+f_new = openMapfileForWriting("ads.map")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'POSTGIS_CONNECTION_STRING' : POSTGIS_CONNECTION_STRING,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "ads")
+            } ) )
+f_new.close()
+
 #################################################################################################
 
 #print "debug: at 31"

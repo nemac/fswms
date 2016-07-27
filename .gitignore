@@ -36,3 +36,9 @@ msconfig/efetac_nasa_percent_change_cmap.cmap
 msconfig/rsac_fhtet_percent_change_cmap.cmap
 msconfig/dyna_maps/*.map
 msconfig/hotspot_update
+msconfig/duration.map
+msconfig/treatments.map
+msconfig/phenoregions.map
+msconfig/fire.map
+msconfig/ads.map
+msconfig/boundaries.map

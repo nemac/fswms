@@ -115,3 +115,27 @@ Header set Access-Control-Allow-Origin "*"
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "duration">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "phenoregions">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "treatments">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "fire">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "ads">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "boundaries">
+    Allow from all
+    SetHandler cgi-script
+</Files>

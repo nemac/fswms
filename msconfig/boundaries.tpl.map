@@ -1,0 +1,202 @@
+MAP
+    # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+    # of the two lines below to enable this logging:
+    #CONFIG "MS_ERRORFILE" "../var/log/vlayers.log"
+    #DEBUG 5
+
+    # all temp files get prefixed with this string
+    NAME ms_boundaries
+
+    #jdm:added to accomodate map layers
+    #see http://trac.osgeo.org/mapserver/ticket/3055
+    MAXSIZE 3072 
+    
+    # background color of image if transparency
+    # is not requested
+    IMAGECOLOR 255 255 255
+
+    # default output image dimensions
+    SIZE 600 400
+
+    # always returns a map
+    STATUS ON
+
+    # set top level projection
+    PROJECTION
+        "init=epsg:3785"
+    END
+
+    # image format options
+    OUTPUTFORMAT
+        NAME "PNG"
+        DRIVER "GDAL/PNG"
+        MIMETYPE "image/png"
+        IMAGEMODE "RGB"
+        EXTENSION "png"
+    END
+
+    # minx miny maxx maxy
+    EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+    # add def pointers for symbols
+    SYMBOLSET "./symbols/symbols35.sym"
+    FONTSET   "./fonts/fonts.list"
+
+    # Start of web interface definition
+    WEB
+
+        # this is the real filepath to the temp dir for intermediate file creation
+        IMAGEPATH "./tmp"
+
+        # this is the web-accessible path to IMAGEPATH
+        IMAGEURL "/tmp/"
+
+        HEADER "./templates/query_header.html"
+        FOOTER "./templates/query_footer.html"
+
+        METADATA
+            "ows_enable_request"     "*"
+            "wms_title"              "NEMAC boundaries WMS"
+            "wms_abstract"           "NEMAC boundaries WMS"
+            "wms_onlineresource"     "%(SERVICE_URL)s"
+            "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913"
+        END
+    END
+
+    QUERYMAP
+        STATUS OFF
+    END
+
+    # set defaults for GetLegendGraphic requests 
+    LEGEND
+        KEYSIZE 30 20
+    END
+
+    LAYER # 
+        NAME cities
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from cities"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        
+        CLASS
+            NAME "Cities"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"          "cities"
+            "wms_abstract"       "cities"
+            "gml_include_items"  "feature,name,county,state"
+        END  # end METADATA
+    END # 
+
+    LAYER # 
+        NAME states
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from dtl_states"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "States"
+            STYLE
+                #COLOR        232 232 232
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"            "states"
+            "wms_abstract"         "states"
+            "gml_include_items"    "state_name"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER # counties polygon layer begins here
+        NAME counties
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from dtl_counties"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Counties"
+            STYLE
+                OUTLINECOLOR 32 32 32
+            END
+        END
+        METADATA
+            "wms_title"          "counties"
+            "wms_abstract"       "counties"
+            "gml_include_items"  "name,state_name"
+        END  # end METADATA
+    END # end Layer
+	
+    LAYER # 
+        NAME federal_lands
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from federal_lands"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Federal Lands"
+            STYLE
+                OUTLINECOLOR 50 50 50 
+            END
+        END
+        METADATA
+            "wms_title"          "federal_lands"
+            "wms_abstract"       "federal_lands"
+            "gml_include_items"  "feature1,feature2,feature3,agbur,url,name1,name2,name3,state"
+        END  # end METADATA
+    END # end Layer
+
+END
