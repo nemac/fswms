@@ -3,22 +3,6 @@ Header set Access-Control-Allow-Origin "*"
     Allow from all
     SetHandler cgi-script
 </Files>
-<Files "ews">
-    Allow from all
-    SetHandler cgi-script
-</Files>
-<Files "ewswgs84">
-    Allow from all
-    SetHandler cgi-script
-</Files>
-<Files "ewswcs">
-    Allow from all
-    SetHandler cgi-script
-</Files>
-<Files "ewswgs84d">
-    Allow from all
-    SetHandler cgi-script
-</Files>
 <Files "activefire">
     Allow from all
     SetHandler cgi-script
