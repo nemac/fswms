@@ -110,7 +110,7 @@ def getLID(layerName, csvName):
         highest_lid = max(lids_list)
         nlid = next_alpha(highest_lid)
 
-        lyrsdict[layerName] = nlid
+        lyrs_dict[layerName] = nlid
         lids_list.append(nlid)
         
         f = open(csvName, "a");
