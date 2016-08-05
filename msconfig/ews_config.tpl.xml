@@ -309,23 +309,23 @@
       <wmsLayer 
 	 lid="AAG"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="Current-Large-incidents" 
 	 styles="default" 
 	 identify="true" 
 	 name="Active Named Incidents (GeoMAC)" 
-	 legend="%(SERVER_URL)s/wlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=Current-Large-incidents&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=Current-Large-incidents&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
  	  <wmsLayer 
 	 lid="FIREAAA"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
 	 layers="Active-Perimeters-GeoMAC" 
 	 styles="default" 
 	 identify="true" 
 	 name="Active Perimeters (GeoMAC)" 
-	 legend="%(SERVER_URL)s/wlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=active-perimeters-geomac&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=active-perimeters-geomac&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>     
 <!-- 	  <wmsLayer 
 	 lid="FIREAAC"
 	 visible="false" 
@@ -1289,6 +1289,15 @@
     </wmsSubgroup>
 	<wmsSubgroup label="2013">
     %(NRT_2013_MMAXYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2012">
+    %(NRT_2012_MMAXYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2011">
+    %(NRT_2011_MMAXYR_LAYERS)s
+    </wmsSubgroup>
+	<wmsSubgroup label="2010">
+    %(NRT_2010_MMAXYR_LAYERS)s
     </wmsSubgroup>
 	<wmsSubgroup label="2009">
     %(NRT_2009_MMAXYR_LAYERS)s

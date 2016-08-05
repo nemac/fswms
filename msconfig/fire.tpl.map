@@ -1277,9 +1277,7 @@ MAP
         PROJECTION
             "init=epsg:4326"
         END
-        CONNECTIONTYPE   postgis
-        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from modis_fire_detections_current_year"
+        DATA             "%(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/active_fire/hotspots/hotspot_update_4326.shp"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
@@ -1297,6 +1295,83 @@ MAP
         METADATA
             "wms_title"          "modis-fire-current-year"
             "wms_abstract"       "modis-fire-current-year"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
+        NAME Active-Perimeters-GeoMAC
+        PROJECTION
+            "init=epsg:4326"
+        END
+        DATA             "%(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/active_fire/active_perimeters/perimeters_update_4326.shp"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+          NAME "Active Perimeters GeoMAC"
+          STYLE
+              #COLOR        255 150 50
+              OUTLINECOLOR 255 150 50
+			  WIDTH 3.0
+          END
+          STYLE
+              SYMBOL "hatchsymbol"
+              COLOR 255 150 50
+              SIZE 5
+              ANGLE 45
+          END # STYLE
+		  STYLE
+              SYMBOL "hatchsymbol"
+              COLOR 255 150 50
+              SIZE 5
+              ANGLE 135
+          END # STYLE
+      END
+        METADATA
+            "wms_title"          "Active-Perimeters-GeoMAC"
+            "wms_abstract"       "Active-Perimeters-GeoMAC"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+	
+	LAYER #
+        NAME Current-Large-incidents
+        PROJECTION
+            "init=epsg:4326"
+        END
+        DATA             "%(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/active_fire/large_incidents/incidents_update_4326.shp"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        LABELITEM    "INCIDENTNA"
+		CLASS
+          NAME "Current Large Incidents"
+          STYLE
+                SYMBOL 'triangle'
+                SIZE 12
+                COLOR 50 255 50
+				OUTLINECOLOR 110 110 110
+          END
+		  LABEL
+			  COLOR  25 25 25
+			  OUTLINECOLOR 255 255 255
+			  FONT "arial"
+			  TYPE truetype
+			  SIZE 9
+			  POSITION AUTO
+			  PARTIALS FALSE
+		  END
+        END
+        METADATA
+            "wms_title"          "Current-Large-incidents"
+            "wms_abstract"       "Current-Large-incidents"
             "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
