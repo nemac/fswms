@@ -4108,6 +4108,32 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
+        NAME     durperiod1_2016
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2016_0624_0804.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2016"
+            "wms_abstract"          "durperiod1_2016"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
         NAME     durcomb_2006MaskForForest
         PROJECTION
           "+proj=laea"
@@ -4914,6 +4940,33 @@ MAP
         METADATA
             "wms_title"             "durperiod1_2015"
             "wms_abstract"          "durperiod1_2015"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     durperiod1_2016MaskForForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2016_0624_0804.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2016"
+            "wms_abstract"          "durperiod1_2016"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -5728,6 +5781,33 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
+        NAME     durperiod1_2016MaskForConiferForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForConiferForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2016_0624_0804.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2016"
+            "wms_abstract"          "durperiod1_2016"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
         NAME     durcomb_2006MaskForDeciduousForest
         PROJECTION
           "+proj=laea"
@@ -6534,6 +6614,33 @@ MAP
         METADATA
             "wms_title"             "durperiod1_2015"
             "wms_abstract"          "durperiod1_2015"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     durperiod1_2016MaskForDeciduousForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForDeciduousForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2016_0624_0804.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2016"
+            "wms_abstract"          "durperiod1_2016"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -7348,6 +7455,33 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
+        NAME     durperiod1_2016MaskForMixedForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForMixedForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2016_0624_0804.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2016"
+            "wms_abstract"          "durperiod1_2016"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
         NAME     durcomb_2006MaskForWetland
         PROJECTION
           "+proj=laea"
@@ -8154,6 +8288,33 @@ MAP
         METADATA
             "wms_title"             "durperiod1_2015"
             "wms_abstract"          "durperiod1_2015"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     durperiod1_2016MaskForWetland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForWetland
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2016_0624_0804.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2016"
+            "wms_abstract"          "durperiod1_2016"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -8968,6 +9129,33 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
+        NAME     durperiod1_2016MaskForUrban
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForUrban
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2016_0624_0804.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2016"
+            "wms_abstract"          "durperiod1_2016"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
         NAME     durcomb_2006MaskForShrubland
         PROJECTION
           "+proj=laea"
@@ -9774,6 +9962,33 @@ MAP
         METADATA
             "wms_title"             "durperiod1_2015"
             "wms_abstract"          "durperiod1_2015"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     durperiod1_2016MaskForShrubland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForShrubland
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2016_0624_0804.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2016"
+            "wms_abstract"          "durperiod1_2016"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -10588,6 +10803,33 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
+        NAME     durperiod1_2016MaskForNonVegetated
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForNonVegetated
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2016_0624_0804.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2016"
+            "wms_abstract"          "durperiod1_2016"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
         NAME     durcomb_2006MaskForGrass
         PROJECTION
           "+proj=laea"
@@ -11398,6 +11640,33 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
+        NAME     durperiod1_2016MaskForGrass
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForGrass
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2016_0624_0804.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2016"
+            "wms_abstract"          "durperiod1_2016"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
         NAME     durcomb_2006MaskForAgriculture
         PROJECTION
           "+proj=laea"
@@ -12204,6 +12473,33 @@ MAP
         METADATA
             "wms_title"             "durperiod1_2015"
             "wms_abstract"          "durperiod1_2015"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     durperiod1_2016MaskForAgriculture
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForAgriculture
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2016_0624_0804.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2016"
+            "wms_abstract"          "durperiod1_2016"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER

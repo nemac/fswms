@@ -10543,6 +10543,18 @@
 	  <wmsSubgroup label="Fixed 6-Period: Jun 24 - Aug 4">
         <wmsLayer
           selected="false"
+          lid="DUWAK"
+          visible="true"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="durperiod1_2016"
+          name="2016"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+		<wmsLayer
+          selected="false"
           lid="DUWAJ"
           visible="true"
           url="%(SERVER_URL)s/duration?TRANSPARENT=true"
