@@ -10469,6 +10469,18 @@
     <wmsSubgroup label="Fixed 12-Period: Jun 24 – Sep 21">
         <wmsLayer
           selected="false"
+          lid="DUBAK"
+          visible="true"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="durcomb_2016"
+          name="2016"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+		<wmsLayer
+          selected="false"
           lid="DUBAA"
           visible="true"
           url="%(SERVER_URL)s/duration?TRANSPARENT=true"
@@ -10858,6 +10870,18 @@
       </wmsSubgroup>
 	  <wmsSubgroup label="Fixed 6-Period: Aug 12 - Sep 21">
 	    <wmsLayer
+          selected="false"
+          lid="DUAAK"
+          visible="true"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3785"
+          layers="durperiod2_2016"
+          name="2016"
+          styles="default" 
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+		  mask="true"/>
+		<wmsLayer
           selected="false"
           lid="DUAAJ"
           visible="true"
