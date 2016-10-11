@@ -170,14 +170,19 @@ MAP
 	
     LAYER # 
         NAME federal_lands
-        
+        SCALETOKEN
+			NAME "%%scale%%"
+			VALUES
+			  "0" "federal_lands_detailed_new"
+			  "50000" "federal_lands"
+			END
+		END
         PROJECTION
             "init=epsg:4326"
         END
-
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from federal_lands"
+        DATA             "geom from %%scale%%"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -185,7 +190,6 @@ MAP
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
-
         CLASS
             NAME "Federal Lands"
             STYLE
@@ -195,7 +199,8 @@ MAP
         METADATA
             "wms_title"          "federal_lands"
             "wms_abstract"       "federal_lands"
-            "gml_include_items"  "feature1,feature2,feature3,agbur,url,name1,name2,name3,state"
+            "gml_include_items"  "all"
+			"gml_exclude_items" "gid,area_,perimeter,fedlanp020,state_fips,shape_area,shape_len,vxcount"
         END  # end METADATA
     END # end Layer
 

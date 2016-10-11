@@ -1544,8 +1544,14 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     conus-federal-lands-general    
-		GROUP conus-federal-lands
+        NAME     conus-federal-lands   
+		SCALETOKEN
+			NAME "%%scale%%"
+			VALUES
+			  "0" "padus13_fed6b_231m.img"
+			  "50000" "conus_federal_lands_laea_231p66m_us4b.img"
+			END
+		END
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -1557,45 +1563,23 @@ MAP
           "+units=m"
           "+no_defs"
         END
-		MINSCALEDENOM 500000
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/conus_federal_lands_laea_231p66m_us4b.img
+        DATA     "%(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/%%scale%%"
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
+		CLASS EXPRESSION "1" COLOR  248 71 64  END
+		CLASS EXPRESSION "2" COLOR  225 179 140  END
+		CLASS EXPRESSION "3" COLOR  92 143 97  END
+		CLASS EXPRESSION "4" COLOR  128 171 194  END
+		CLASS EXPRESSION "5" COLOR  130 217 33  END
+		CLASS EXPRESSION "6" COLOR  255 166 0  END
+		CLASS EXPRESSION "7" COLOR  128 128 128  END
+		CLASS EXPRESSION "8" COLOR  255 255 0  END
+		CLASS EXPRESSION "9" COLOR  33 76 158  END
+		CLASS EXPRESSION "10" COLOR 20 64 23  END
         METADATA
-			"gml_groups"        	"conus-federal-lands"
-			"gml_conus-federal-lands_group" "value_0"
-            "wms_title"             "CONUS Federal Lands"
-            "wms_abstract"          "CONUS Federal Lands"   
-            "gml_include_items"     "value_0"			
-        END  # end METADATA
-    END # end LAYER
-	LAYER
-        NAME     conus-federal-lands-detailed   
-		GROUP conus-federal-lands
-        PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
-          "+no_defs"
-        END
-		MAXSCALEDENOM 500000
-		TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/padus13_fed6b_231m.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-        METADATA
-			"gml_groups"        	"conus-federal-lands"
-			"gml_conus-federal-lands_group" "value_0"
             "wms_title"             "CONUS Federal Lands"
             "wms_abstract"          "CONUS Federal Lands"   
             "gml_include_items"     "value_0"			
