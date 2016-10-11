@@ -1548,7 +1548,7 @@ MAP
 		SCALETOKEN
 			NAME "%%scale%%"
 			VALUES
-			  "0" "padus13_fed6b_231m.img"
+			  "0" "FedLands_FWGroups_PADUS14d_LAEA.img"
 			  "850000" "conus_federal_lands_laea_231p66m_us4b.img"
 			END
 		END
