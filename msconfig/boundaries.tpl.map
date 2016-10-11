@@ -174,7 +174,7 @@ MAP
 			NAME "%%scale%%"
 			VALUES
 			  "0" "federal_lands_detailed_new"
-			  "50000" "federal_lands"
+			  "850000" "federal_lands"
 			END
 		END
         PROJECTION

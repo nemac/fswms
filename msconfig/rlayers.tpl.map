@@ -1549,7 +1549,7 @@ MAP
 			NAME "%%scale%%"
 			VALUES
 			  "0" "padus13_fed6b_231m.img"
-			  "50000" "conus_federal_lands_laea_231p66m_us4b.img"
+			  "850000" "conus_federal_lands_laea_231p66m_us4b.img"
 			END
 		END
         PROJECTION
