@@ -27,6 +27,958 @@ MAP
                 "init=epsg:4326"
     END
 	LAYER
+        NAME     small-integral-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.small_integral.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+           
+        INCLUDE "cmaps/small-integral.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "small-integral-2015"
+            "wms_abstract"               "small-integral-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-value-right-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_min_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+          
+        INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "min-value-right-2015"
+            "wms_abstract"               "min-value-right-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-value-left-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_min_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "min-value-left-2015"
+            "wms_abstract"               "min-value-left-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-pos-right-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_min_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "min-pos-right-2015"
+            "wms_abstract"               "min-pos-right-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-pos-left-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_min_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "min-pos-left-2015"
+            "wms_abstract"               "min-pos-left-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     right-value-80pct-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_80pct_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "right-value-80pct-2015"
+            "wms_abstract"               "right-value-80pct-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     left-value-80pct-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_80pct_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "left-value-80pct-2015"
+            "wms_abstract"               "left-value-80pct-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     right-pos-80pct-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_80pct_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "right-pos-80pct-2015"
+            "wms_abstract"               "right-pos-80pct-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     left-pos-80pct-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_80pct_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "left-pos-80pct-2015"
+            "wms_abstract"               "left-pos-80pct-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     right-value-20pct-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_20pct_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "right-value-20pct-2015"
+            "wms_abstract"               "right-value-20pct-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     left-value-20pct-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_20pct_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "left-value-20pct-2015"
+            "wms_abstract"               "left-value-20pct-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     right-pos-20pct-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_20pct_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "right-pos-20pct-2015"
+            "wms_abstract"               "right-pos-20pct-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     left-pos-20pct-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.season_20pct_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "left-pos-20pct-2015"
+            "wms_abstract"               "left-pos-20pct-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     qc-flags-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.qc_flags.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/qc-flags.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "qc-flags-2015"
+            "wms_abstract"               "qc-flags-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     max-ndvi-value-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.max_ndvi_value.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "max-ndvi-value-2015"
+            "wms_abstract"               "max-ndvi-value-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     max-ndvi-pos-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.max_ndvi_position.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "max-ndvi-pos-2015"
+            "wms_abstract"               "max-ndvi-pos-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     large-integral-2015
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2015.phenparams.large_integral.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/large-integral.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "large-integral-2015"
+            "wms_abstract"               "large-integral-2015"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     small-integral-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.small_integral.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+           
+        INCLUDE "cmaps/small-integral.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "small-integral-2014"
+            "wms_abstract"               "small-integral-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-value-right-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_min_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+          
+        INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "min-value-right-2014"
+            "wms_abstract"               "min-value-right-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-value-left-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_min_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "min-value-left-2014"
+            "wms_abstract"               "min-value-left-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-pos-right-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_min_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "min-pos-right-2014"
+            "wms_abstract"               "min-pos-right-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     min-pos-left-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_min_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "min-pos-left-2014"
+            "wms_abstract"               "min-pos-left-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     right-value-80pct-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_80pct_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "right-value-80pct-2014"
+            "wms_abstract"               "right-value-80pct-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     left-value-80pct-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_80pct_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "left-value-80pct-2014"
+            "wms_abstract"               "left-value-80pct-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     right-pos-80pct-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_80pct_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "right-pos-80pct-2014"
+            "wms_abstract"               "right-pos-80pct-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     left-pos-80pct-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_80pct_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "left-pos-80pct-2014"
+            "wms_abstract"               "left-pos-80pct-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     right-value-20pct-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_20pct_value_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "right-value-20pct-2014"
+            "wms_abstract"               "right-value-20pct-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     left-value-20pct-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_20pct_value_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "left-value-20pct-2014"
+            "wms_abstract"               "left-value-20pct-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     right-pos-20pct-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_20pct_position_right.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "right-pos-20pct-2014"
+            "wms_abstract"               "right-pos-20pct-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     left-pos-20pct-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.season_20pct_position_left.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "left-pos-20pct-2014"
+            "wms_abstract"               "left-pos-20pct-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     qc-flags-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.qc_flags.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/qc-flags.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "qc-flags-2014"
+            "wms_abstract"               "qc-flags-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     max-ndvi-value-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.max_ndvi_value.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/value.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "max-ndvi-value-2014"
+            "wms_abstract"               "max-ndvi-value-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     max-ndvi-pos-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.max_ndvi_position.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/position.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "max-ndvi-pos-2014"
+            "wms_abstract"               "max-ndvi-pos-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
+        NAME     large-integral-2014
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2014.phenparams.large_integral.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+		INCLUDE "cmaps/large-integral.cmap"
+
+        PROJECTION
+                        "+proj=laea"
+                        "+lat_0=45"
+                        "+lon_0=-100"
+                        "+x_0=0"
+                        "+y_0=0"
+                        "+a=6370997"
+                        "+b=6370997"
+                        "+units=m"
+                        "+no_defs"
+        END
+        METADATA
+            "wms_title"                  "large-integral-2014"
+            "wms_abstract"               "large-integral-2014"
+            "gml_include_items"          "value_0"            
+        END  # end METADATA
+    END # end LAYER
+	LAYER
         NAME     small-integral-2013
         TYPE     RASTER
         DUMP     TRUE
