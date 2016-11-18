@@ -123,3 +123,11 @@ Header set Access-Control-Allow-Origin "*"
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "muc">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "mmax">
+    Allow from all
+    SetHandler cgi-script
+</Files>

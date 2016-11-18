@@ -638,14 +638,56 @@ LAYERS3 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR",
 
 #print "debug: at 14"
 
+#This was used when all layers were combined into the one ews service which was taken down
 LAYERSCOMBINED = LAYERS1 + LAYERS2 + LAYERS3
 
+#This service is no longer being written due to getting pegged
+# mapTemplate = Template("ews.map.tmpl")
+# SERVICE_NAME = "ews"
+# f_new = openMapfileForWriting("ews.map")
+# f_new.write( mapTemplate.render( {
+            # 'DATA_DIR'                : DATA_DIR,
+            # 'LAYERS'                  : LAYERSCOMBINED,
+            # 'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
+            # 'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
+            # 'SERVICE_NAME'            : SERVICE_NAME,
+            # 'TEMP_FILE_PREFIX'        : "ms_%s" % (SERVICE_NAME),
+            # 'MAPFILE'                 : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+            # 'OWS_TITLE'               : "NEMAC %s WMS" % (SERVICE_NAME),
+            # 'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
+            # 'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
+            # 'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+            # 'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
+            # 'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
+            # } ) )
+# f_new.close()
+
 mapTemplate = Template("ews.map.tmpl")
-SERVICE_NAME = "ews"
-f_new = openMapfileForWriting("ews.map")
+SERVICE_NAME = "muc"
+f_new = openMapfileForWriting("muc.map")
 f_new.write( mapTemplate.render( {
             'DATA_DIR'                : DATA_DIR,
-            'LAYERS'                  : LAYERSCOMBINED,
+            'LAYERS'                  : LAYERS2,
+            'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
+            'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
+            'SERVICE_NAME'            : SERVICE_NAME,
+            'TEMP_FILE_PREFIX'        : "ms_%s" % (SERVICE_NAME),
+            'MAPFILE'                 : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+            'OWS_TITLE'               : "NEMAC %s WMS" % (SERVICE_NAME),
+            'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
+            'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
+            'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+            'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
+            'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
+            } ) )
+f_new.close()
+
+mapTemplate = Template("ews.map.tmpl")
+SERVICE_NAME = "mmax"
+f_new = openMapfileForWriting("mmax.map")
+f_new.write( mapTemplate.render( {
+            'DATA_DIR'                : DATA_DIR,
+            'LAYERS'                  : LAYERS3,
             'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
             'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
             'SERVICE_NAME'            : SERVICE_NAME,
@@ -685,24 +727,25 @@ f_new.close()
 
 #print "debug: at 15"
 
-f_new = openMapfileForWriting("ewswgs84.map")
-SERVICE_NAME = "ewswgs84"
-f_new.write( mapTemplate.render( {
-            'DATA_DIR'                : DATA_DIR,
-            'LAYERS'                  : LAYERS,
-            'WMS_SRS'                 : "EPSG:4326 EPSG:900913",
-            'MAPFILE_PROJECTION'      : '"init=epsg:4326"',
-            'SERVICE_NAME'            : SERVICE_NAME,
-            'TEMP_FILE_PREFIX'        : "ms_%s" % (SERVICE_NAME),
-            'MAPFILE'                 : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
-            'OWS_TITLE'               : "NEMAC %s WMS" % (SERVICE_NAME),
-            'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
-            'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
-            'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-            'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
-            'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
-            } ) )
-f_new.close()
+#This service is no longer being written due to getting pegged
+# f_new = openMapfileForWriting("ewswgs84.map")
+# SERVICE_NAME = "ewswgs84"
+# f_new.write( mapTemplate.render( {
+            # 'DATA_DIR'                : DATA_DIR,
+            # 'LAYERS'                  : LAYERS,
+            # 'WMS_SRS'                 : "EPSG:4326 EPSG:900913",
+            # 'MAPFILE_PROJECTION'      : '"init=epsg:4326"',
+            # 'SERVICE_NAME'            : SERVICE_NAME,
+            # 'TEMP_FILE_PREFIX'        : "ms_%s" % (SERVICE_NAME),
+            # 'MAPFILE'                 : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+            # 'OWS_TITLE'               : "NEMAC %s WMS" % (SERVICE_NAME),
+            # 'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
+            # 'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
+            # 'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+            # 'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
+            # 'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
+            # } ) )
+# f_new.close()
 
 #print "debug: at 16"
 
