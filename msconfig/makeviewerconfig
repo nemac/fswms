@@ -952,7 +952,7 @@ template = Template("ews_config.tpl.xml")
 if not os.path.exists("../html/view/config"):
     os.makedirs("../html/view/config")
 
-nrtTCProductLayers = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/TrueColorData", "EFETAC-NASA_TC", "ewstruecolor", False, ".img", False)
+nrtTCProductLayers = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/TrueColorData", "EFETAC-NASA_TC", "truecolor", False, ".img", False)
 nrt1YrProductLayers = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "EFETAC-NASA_1Year", "dyna_ews", True, ".tif", True)
 nrt3YrProductLayers = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "EFETAC-NASA_3Year", "dyna_ews", True, ".tif", True)
 nrt5YrProductLayers = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_5YEAR", "5Year"), "EFETAC-NASA_5Year", "dyna_ews", True, ".tif", True)

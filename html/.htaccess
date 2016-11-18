@@ -31,7 +31,7 @@ Header set Access-Control-Allow-Origin "*"
     Allow from all
     SetHandler cgi-script
 </Files>
-<Files "ewstruecolor">
+<Files "truecolor">
     Allow from all
     SetHandler cgi-script
 </Files>
@@ -120,10 +120,6 @@ Header set Access-Control-Allow-Origin "*"
     SetHandler cgi-script
 </Files>
 <Files "boundaries">
-    Allow from all
-    SetHandler cgi-script
-</Files>
-<Files "ews">
     Allow from all
     SetHandler cgi-script
 </Files>
