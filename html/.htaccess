@@ -131,3 +131,7 @@ Header set Access-Control-Allow-Origin "*"
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "max">
+    Allow from all
+    SetHandler cgi-script
+</Files>
