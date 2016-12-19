@@ -10,14 +10,14 @@
     <service name="vegdri" folder="EWS" label="USGS VegDRI Drought Assessment Products"/>
   </services>
   <images>
-    <image name="Streets"   label="Streets"  url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" selected="true" />
-    <image name="Basic"     label="Basic"    url="http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer" />
-    <image name="Relief"    label="Relief"   url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer" />
-    <image name="Terrain"   label="Terrain"  url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" />
-    <image name="Imagery"   label="Imagery"  url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer" />
-    <image name="Topo_Map"  label="Topo Map" url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" />
-    <image name="USA_Topo"  label="USA Topo" url="http://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer" />
-    <image name="None"      label="None"     url="http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer" />
+    <image name="Streets"   label="Streets"  url="https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" selected="true" />
+    <image name="Basic"     label="Basic"    url="https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer" />
+    <image name="Relief"    label="Relief"   url="https://services.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer" />
+    <image name="Terrain"   label="Terrain"  url="https://services.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" />
+    <image name="Imagery"   label="Imagery"  url="https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer" />
+    <image name="Topo_Map"  label="Topo Map" url="https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" />
+    <image name="USA_Topo"  label="USA Topo" url="https://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer" />
+    <image name="None"      label="None"     url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer" />
   </images>
   <legend type="Image" legendServerPath="http://ews.forestthreats.org/GIS/assets/Mashup_Legends/">
     <legendGroup name="RSAC-FHTET 2010" />
