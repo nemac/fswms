@@ -700,6 +700,16 @@
 	 identify="true" 
 	 name="2015 (RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2015.png"/>	 
+	  <wmsLayer 
+	 lid="MODISFIREAAE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="modis-fire-2016" 
+	 styles="default" 
+	 identify="true" 
+	 name="2016 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2016.png"/>	 
 	</wmsSubgroup>
   </wmsGroup>
 
@@ -895,6 +905,9 @@
   <wmsGroup gid="G05" name="Archived_TACS" label="Archived ForWarn Change Maps">
     <wmsSubgroup label="Archived Prior Year Baseline">
     </wmsSubgroup>
+	<wmsSubgroup label="2017">
+    %(NRT_2017_1YEAR_LAYERS)s
+    </wmsSubgroup>
 	<wmsSubgroup label="2016">
     %(NRT_2016_1YEAR_LAYERS)s
     </wmsSubgroup>
@@ -930,6 +943,9 @@
     </wmsSubgroup>
 	<wmsSubgroup label="Archived All-Year Max Baseline">
     </wmsSubgroup>
+	<wmsSubgroup label="2017">
+    %(NRT_2017_AllYEAR_LAYERS)s
+    </wmsSubgroup>
 	<wmsSubgroup label="2016">
     %(NRT_2016_AllYEAR_LAYERS)s
     </wmsSubgroup>
@@ -964,6 +980,9 @@
     %(NRT_2006_AllYEAR_LAYERS)s
     </wmsSubgroup>
     <wmsSubgroup label="Archived Prior 3-Year Max Baseline">
+    </wmsSubgroup>
+	<wmsSubgroup label="2017">
+    %(NRT_2017_3YEAR_LAYERS)s
     </wmsSubgroup>
 	<wmsSubgroup label="2016">
     %(NRT_2016_3YEAR_LAYERS)s
@@ -1034,7 +1053,10 @@
     %(NRT_2006_5YEAR_LAYERS)s
     </wmsSubgroup>
     <wmsSubgroup label="Archived Early Detect (Prior Year Baseline)">
-    </wmsSubgroup> 
+    </wmsSubgroup>
+    <wmsSubgroup label="2017">
+    %(NRT_2017_ALC1YR_LAYERS)s
+    </wmsSubgroup>	
 	<wmsSubgroup label="2016">
     %(NRT_2016_ALC1YR_LAYERS)s
     </wmsSubgroup>
@@ -1070,6 +1092,9 @@
     </wmsSubgroup>
     <wmsSubgroup label="Archived All-Year Phenotype Max Baseline">
     </wmsSubgroup>
+	<wmsSubgroup label="2017">
+    %(NRT_2017_MUCALLYR_LAYERS)s
+    </wmsSubgroup>
 	<wmsSubgroup label="2016">
     %(NRT_2016_MUCALLYR_LAYERS)s
     </wmsSubgroup>
@@ -1095,6 +1120,9 @@
     %(NRT_2006_MUCALLYR_LAYERS)s
     </wmsSubgroup>
     <wmsSubgroup label="Archived All-Year Mean (of maxes) Baseline">
+    </wmsSubgroup>
+	<wmsSubgroup label="2017">
+    %(NRT_2017_MMAXYR_LAYERS)s
     </wmsSubgroup>
 	<wmsSubgroup label="2016">
     %(NRT_2016_MMAXYR_LAYERS)s

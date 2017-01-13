@@ -232,6 +232,60 @@ def getNRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
     for tifdict in tifList:
         layers = layers + nrtWMSLayerTemplate.render(tifdict)    
     return layers
+def get2017NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
+    tifList  = []
+    for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=True):
+        try:        
+            tif = re.sub('^' + dataDir + '/', '', tif)
+            tif_fullpath = dataDir + '/' + tif;
+            nameform = re.sub(r'^.*/', '', tif)
+            group = groupName 
+            if re.search(r'.img', nameform):
+                layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
+            else:
+               if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
+                    layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
+               else:
+                    layerName = group + "_" + re.sub(r'_.*$', '', nameform)
+            if re.match(r'2017', nameform):
+                 layerTitle = tif
+                 lid = getLID(layerName, NRT_LIDFILE_PATH)
+                 if legendBool:
+                     legend = getLegend(layerName)
+                 else:
+		     legend = ""
+                 if groupName == "EFETAC-NASA_TC":
+                     layerTitle = "True Color " + layerName[-11:]
+                 else:
+                     layerTitle = layerName[-8:]
+                 if layerName[-2:].rstrip()!="bd": #this is one of those bd ones
+                     if maskBool:
+                         tifList.append({ 'LAYER_LID'    : lid,
+                                          'WRAP_NAME'    : wrapName,
+                                          'LAYER_NAME'   : layerName,
+                                          'LAYER_TITLE'  : layerTitle,
+                                          'SERVER_URL'   : SERVER_URL,
+                                          'LEGEND'       : SERVER_URL+"/"+legend,
+                                          'MASK'         : 'true'
+                                          })
+                     else:  #no mask necessary for this one                      
+                         tifList.append({ 'LAYER_LID'    : lid,
+                                          'WRAP_NAME'    : wrapName,
+                                          'LAYER_NAME'   : layerName,
+                                          'LAYER_TITLE'  : layerTitle,
+                                          'SERVER_URL'   : SERVER_URL,
+                                          'LEGEND'       : SERVER_URL+"/"+legend,
+                                          'MASK'         : 'false'
+                                          })
+                 layerTitles[layerName] = layerTitle
+        except:
+            print "except occured"
+            continue
+    layers = ""
+    for tifdict in tifList:
+        layers = layers + nrtWMSLayerTemplate.render(tifdict)    
+    return layers
+
 def get2016NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
     tifList  = []
     for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=True):
@@ -963,6 +1017,7 @@ nrtALC1Yr = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR"
 nrtMUCAllYr = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "EFETAC-NASA_MUCAllYear", "dyna_ews", True, ".tif", True)
 nrtMMAXAllYr = getNRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "EFETAC-NASA_MoMAllYear", "dyna_ews", True, ".tif", True)
 #get products by year
+nrt20171YrProductLayers = get2017NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "EFETAC-NASA_1Year", "dyna_ews", True, ".tif", True)
 nrt20161YrProductLayers = get2016NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "EFETAC-NASA_1Year", "dyna_ews", True, ".tif", True)
 nrt20151YrProductLayers = get2015NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "EFETAC-NASA_1Year", "dyna_ews", True, ".tif", True)
 nrt20141YrProductLayers = get2014NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "EFETAC-NASA_1Year", "dyna_ews", True, ".tif", True)
@@ -974,6 +1029,7 @@ nrt20091YrProductLayers = get2009NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+cho
 nrt20081YrProductLayers = get2008NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "EFETAC-NASA_1Year", "dyna_ews", True, ".tif", True)
 nrt20071YrProductLayers = get2007NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "EFETAC-NASA_1Year", "dyna_ews", True, ".tif", True)
 nrt20061YrProductLayers = get2006NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "EFETAC-NASA_1Year", "dyna_ews", True, ".tif", True)
+nrt20173YrProductLayers = get2017NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "EFETAC-NASA_3Year", "dyna_ews", True, ".tif", True)
 nrt20163YrProductLayers = get2016NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "EFETAC-NASA_3Year", "dyna_ews", True, ".tif", True)
 nrt20153YrProductLayers = get2015NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "EFETAC-NASA_3Year", "dyna_ews", True, ".tif", True)
 nrt20143YrProductLayers = get2014NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "EFETAC-NASA_3Year", "dyna_ews", True, ".tif", True)
@@ -985,6 +1041,7 @@ nrt20093YrProductLayers = get2009NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+cho
 nrt20083YrProductLayers = get2008NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "EFETAC-NASA_3Year", "dyna_ews", True, ".tif", True)
 nrt20073YrProductLayers = get2007NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "EFETAC-NASA_3Year", "dyna_ews", True, ".tif", True)
 nrt20063YrProductLayers = get2006NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "EFETAC-NASA_3Year", "dyna_ews", True, ".tif", True)
+nrt20175YrProductLayers = get2017NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+"X_LC_5YEAR", "EFETAC-NASA_5Year", "dyna_ews", True, ".tif", True)
 nrt20165YrProductLayers = get2016NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+"X_LC_5YEAR", "EFETAC-NASA_5Year", "dyna_ews", True, ".tif", True)
 nrt20155YrProductLayers = get2015NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+"X_LC_5YEAR", "EFETAC-NASA_5Year", "dyna_ews", True, ".tif", True)
 nrt20145YrProductLayers = get2014NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+"X_LC_5YEAR", "EFETAC-NASA_5Year", "dyna_ews", True, ".tif", True)
@@ -996,6 +1053,7 @@ nrt20095YrProductLayers = get2009NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+"X_
 nrt20085YrProductLayers = get2008NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+"X_LC_5YEAR", "EFETAC-NASA_5Year", "dyna_ews", True, ".tif", True)
 nrt20075YrProductLayers = get2007NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+"X_LC_5YEAR", "EFETAC-NASA_5Year", "dyna_ews", True, ".tif", True)
 nrt20065YrProductLayers = get2006NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+"X_LC_5YEAR", "EFETAC-NASA_5Year", "dyna_ews", True, ".tif", True)
+nrt2017AllYrProductLayers = get2017NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear"), "EFETAC-NASA", "dyna_ews", True, ".tif", True)
 nrt2016AllYrProductLayers = get2016NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear"), "EFETAC-NASA", "dyna_ews", True, ".tif", True)
 nrt2015AllYrProductLayers = get2015NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear"), "EFETAC-NASA", "dyna_ews", True, ".tif", True)
 nrt2014AllYrProductLayers = get2014NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear"), "EFETAC-NASA", "dyna_ews", True, ".tif", True)
@@ -1007,6 +1065,7 @@ nrt2009AllYrProductLayers = get2009NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+c
 nrt2008AllYrProductLayers = get2008NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear"), "EFETAC-NASA", "dyna_ews", True, ".tif", True)
 nrt2007AllYrProductLayers = get2007NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear"), "EFETAC-NASA", "dyna_ews", True, ".tif", True)
 nrt2006AllYrProductLayers = get2006NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear"), "EFETAC-NASA", "dyna_ews", True, ".tif", True)
+nrt2017ALC1Yr = get2017NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR"), "EFETAC-NASA_ALC1YR", "dyna_ews", True, ".tif", True)
 nrt2016ALC1Yr = get2016NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR"), "EFETAC-NASA_ALC1YR", "dyna_ews", True, ".tif", True)
 nrt2015ALC1Yr = get2015NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR"), "EFETAC-NASA_ALC1YR", "dyna_ews", True, ".tif", True)
 nrt2014ALC1Yr = get2014NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR"), "EFETAC-NASA_ALC1YR", "dyna_ews", True, ".tif", True)
@@ -1018,6 +1077,7 @@ nrt2009ALC1Yr = get2009NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_
 nrt2008ALC1Yr = get2008NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR"), "EFETAC-NASA_ALC1YR", "dyna_ews", True, ".tif", True)
 nrt2007ALC1Yr = get2007NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR"), "EFETAC-NASA_ALC1YR", "dyna_ews", True, ".tif", True)
 nrt2006ALC1Yr = get2006NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR"), "EFETAC-NASA_ALC1YR", "dyna_ews", True, ".tif", True)
+nrt2017MUCAllYr = get2017NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "EFETAC-NASA_MUCAllYear", "dyna_ews", True, ".tif", True)
 nrt2016MUCAllYr = get2016NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "EFETAC-NASA_MUCAllYear", "dyna_ews", True, ".tif", True)
 nrt2015MUCAllYr = get2015NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "EFETAC-NASA_MUCAllYear", "dyna_ews", True, ".tif", True)
 nrt2014MUCAllYr = get2014NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "EFETAC-NASA_MUCAllYear", "dyna_ews", True, ".tif", True)
@@ -1029,6 +1089,7 @@ nrt2009MUCAllYr = get2009NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_L
 nrt2008MUCAllYr = get2008NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "EFETAC-NASA_MUCAllYear", "dyna_ews", True, ".tif", True)
 nrt2007MUCAllYr = get2007NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "EFETAC-NASA_MUCAllYear", "dyna_ews", True, ".tif", True)
 nrt2006MUCAllYr = get2006NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "EFETAC-NASA_MUCAllYear", "dyna_ews", True, ".tif", True)
+nrt2017MMAXAllYr = get2017NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "EFETAC-NASA_MoMAllYear", "dyna_ews", True, ".tif", True)
 nrt2016MMAXAllYr = get2016NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "EFETAC-NASA_MoMAllYear", "dyna_ews", True, ".tif", True)
 nrt2015MMAXAllYr = get2015NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "EFETAC-NASA_MoMAllYear", "dyna_ews", True, ".tif", True)
 nrt2014MMAXAllYr = get2014NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "EFETAC-NASA_MoMAllYear", "dyna_ews", True, ".tif", True)
@@ -1060,6 +1121,7 @@ configXML = template.render( {
             'NRT_ALC1YR_LAYERS'       : nrtALC1Yr,
             'NRT_MUCALLYR_LAYERS'     : nrtMUCAllYr,
             'NRT_MMAXYR_LAYERS'       : nrtMMAXAllYr,
+            'NRT_2017_1YEAR_LAYERS'        : nrt20171YrProductLayers,
             'NRT_2016_1YEAR_LAYERS'        : nrt20161YrProductLayers,
             'NRT_2015_1YEAR_LAYERS'        : nrt20151YrProductLayers,
             'NRT_2014_1YEAR_LAYERS'        : nrt20141YrProductLayers,
@@ -1071,6 +1133,7 @@ configXML = template.render( {
             'NRT_2008_1YEAR_LAYERS'        : nrt20081YrProductLayers,
             'NRT_2007_1YEAR_LAYERS'        : nrt20071YrProductLayers,
             'NRT_2006_1YEAR_LAYERS'        : nrt20061YrProductLayers,
+            'NRT_2017_3YEAR_LAYERS'        : nrt20173YrProductLayers,
             'NRT_2016_3YEAR_LAYERS'        : nrt20163YrProductLayers,
             'NRT_2015_3YEAR_LAYERS'        : nrt20153YrProductLayers,
             'NRT_2014_3YEAR_LAYERS'        : nrt20143YrProductLayers,
@@ -1082,6 +1145,7 @@ configXML = template.render( {
             'NRT_2008_3YEAR_LAYERS'        : nrt20083YrProductLayers,
             'NRT_2007_3YEAR_LAYERS'        : nrt20073YrProductLayers,
             'NRT_2006_3YEAR_LAYERS'        : nrt20063YrProductLayers,
+            'NRT_2017_5YEAR_LAYERS'        : nrt20175YrProductLayers,
             'NRT_2016_5YEAR_LAYERS'        : nrt20165YrProductLayers,
             'NRT_2015_5YEAR_LAYERS'        : nrt20155YrProductLayers,
             'NRT_2014_5YEAR_LAYERS'        : nrt20145YrProductLayers,
@@ -1093,6 +1157,7 @@ configXML = template.render( {
             'NRT_2008_5YEAR_LAYERS'        : nrt20085YrProductLayers,
             'NRT_2007_5YEAR_LAYERS'        : nrt20075YrProductLayers,
             'NRT_2006_5YEAR_LAYERS'        : nrt20065YrProductLayers,
+            'NRT_2017_AllYEAR_LAYERS'      : nrt2017AllYrProductLayers,
             'NRT_2016_AllYEAR_LAYERS'      : nrt2016AllYrProductLayers,
             'NRT_2015_AllYEAR_LAYERS'      : nrt2015AllYrProductLayers,
             'NRT_2014_AllYEAR_LAYERS'      : nrt2014AllYrProductLayers,
@@ -1104,6 +1169,7 @@ configXML = template.render( {
             'NRT_2008_AllYEAR_LAYERS'      : nrt2008AllYrProductLayers,
             'NRT_2007_AllYEAR_LAYERS'      : nrt2007AllYrProductLayers,
             'NRT_2006_AllYEAR_LAYERS'      : nrt2006AllYrProductLayers,
+            'NRT_2017_ALC1YR_LAYERS'       : nrt2017ALC1Yr,
             'NRT_2016_ALC1YR_LAYERS'       : nrt2016ALC1Yr,
             'NRT_2015_ALC1YR_LAYERS'       : nrt2015ALC1Yr,
             'NRT_2014_ALC1YR_LAYERS'       : nrt2014ALC1Yr,
@@ -1115,7 +1181,8 @@ configXML = template.render( {
             'NRT_2008_ALC1YR_LAYERS'       : nrt2008ALC1Yr,
             'NRT_2007_ALC1YR_LAYERS'       : nrt2007ALC1Yr,
             'NRT_2006_ALC1YR_LAYERS'       : nrt2006ALC1Yr,
-			'NRT_2016_MUCALLYR_LAYERS'     : nrt2016MUCAllYr,
+            'NRT_2017_MUCALLYR_LAYERS'     : nrt2017MUCAllYr,
+            'NRT_2016_MUCALLYR_LAYERS'     : nrt2016MUCAllYr,
             'NRT_2015_MUCALLYR_LAYERS'     : nrt2015MUCAllYr,
             'NRT_2014_MUCALLYR_LAYERS'     : nrt2014MUCAllYr,
             'NRT_2013_MUCALLYR_LAYERS'     : nrt2013MUCAllYr,
@@ -1126,6 +1193,7 @@ configXML = template.render( {
             'NRT_2008_MUCALLYR_LAYERS'     : nrt2008MUCAllYr,
             'NRT_2007_MUCALLYR_LAYERS'     : nrt2007MUCAllYr,
             'NRT_2006_MUCALLYR_LAYERS'     : nrt2006MUCAllYr,
+            'NRT_2017_MMAXYR_LAYERS'       : nrt2017MMAXAllYr,
             'NRT_2016_MMAXYR_LAYERS'       : nrt2016MMAXAllYr,
             'NRT_2015_MMAXYR_LAYERS'       : nrt2015MMAXAllYr,
             'NRT_2014_MMAXYR_LAYERS'       : nrt2014MMAXAllYr,
