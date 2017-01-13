@@ -186,8 +186,12 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
             #this conditional logic needs to be refactored out
             if re.search(r'max|med', nameform) and wcs=="no":
                 colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
-            elif re.search(r'.img', fileExt):
+            elif re.search(r'255c.img', nameform):
                 colormapline   = ''
+            elif re.search(r'u16b.img', nameform):
+                colormapline   = 'INCLUDE "truecolor16b.cmap"'	
+            #elif re.search(r'.img', fileExt):
+                #colormapline   = ''
             elif(wcs=="yes"):
                 colormapline   = ''
             else:
