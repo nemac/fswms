@@ -2248,9 +2248,9 @@
 	  <wmsLayer 
 	 lid="VDAAM"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI1" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_1" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI1 (Current)" 
@@ -2258,123 +2258,123 @@
 	  <wmsLayer 
 	 lid="VDAAL"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI2" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_2" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI2" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAK"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI3" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_3" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI3" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAJ"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI4" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_4" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI4" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAI"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI5" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_5" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI5" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAH"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI6" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_6" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI6" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAG"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI7" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_7" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI7" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAF"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI8" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_8" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI8" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAE"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI9" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_9" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI9" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAD"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI10" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_10" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI10" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAC"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI11" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_11" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI11" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAB"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI12" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_12" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI12" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 	  <wmsLayer 
 	 lid="VDAAA"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="eMODIS-VegDRI13" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_vegdri_raster" 
+	 srs="EPSG:900913" 
+	 layers="DROUGHT_VDRI_EMODIS_13" 
 	 styles="default" 
 	 identify="true" 
 	 name="eMODIS VegDRI13" 
-	 legend="http://www1.nemac.unca.edu/NEMAC_MapViewer/assets/Mashup_Legends/EWS/vegdri/eMODIS_VegDRI1.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
     </wmsSubgroup>
   </wmsGroup>
   <wmsGroup gid="G09" name="US_Climate" label="Other Weather and Climate Maps" >
@@ -2434,9 +2434,9 @@
       <wmsLayer 
 	 lid="VDAAO"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="TotalPrecip_7" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_preciptp7_raster" 
+	 srs="EPSG:900913" 
+	 layers="PRECIP_TP7" 
 	 styles="default" 
 	 identify="true" 
 	 name="7 Day Total Precipitation" 
@@ -2444,9 +2444,9 @@
 	  <wmsLayer 
 	 lid="VDAAP"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="TotalPrecip_30" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_preciptp30_raster" 
+	 srs="EPSG:900913" 
+	 layers="PRECIP_TP30" 
 	 styles="default" 
 	 identify="true" 
 	 name="30 Day Total Precipitation" 
@@ -2454,9 +2454,9 @@
 	  <wmsLayer 
 	 lid="VDAAQ"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="DaysWithPrecip_7" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_preciptp7_raster" 
+	 srs="EPSG:900913" 
+	 layers="PRECIP_RD7" 
 	 styles="default" 
 	 identify="true" 
 	 name="No. Days with Precipitation (past 7 Days)" 
@@ -2464,9 +2464,9 @@
 	  <wmsLayer 
 	 lid="VDAAR"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="DaysWithPrecip_30" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_preciptp30_raster" 
+	 srs="EPSG:900913" 
+	 layers="PRECIP_RD30" 
 	 styles="default" 
 	 identify="true" 
 	 name="No. Days with Precipitation (past 30 Days)" 
@@ -2474,9 +2474,9 @@
 	  <wmsLayer 
 	 lid="VDAAS"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="DaysSincePrecip_30" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_precipdsr_raster" 
+	 srs="EPSG:900913" 
+	 layers="PRECIP_DSR" 
 	 styles="default" 
 	 identify="true" 
 	 name="No. Days since Precipitation (past 30 Days)" 
@@ -2484,9 +2484,9 @@
 	  <wmsLayer 
 	 lid="VDAAT"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="MaxConDryDays_7" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_precipcdd7_raster" 
+	 srs="EPSG:900913" 
+	 layers="PRECIP_CDD7" 
 	 styles="default" 
 	 identify="true" 
 	 name="Max. Consecutive Dry Days (past 7 Days)" 
@@ -2494,9 +2494,9 @@
 	  <wmsLayer 
 	 lid="VDAAU"
 	 visible="false" 
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true" 
-	 srs="EPSG:3785" 
-	 layers="MaxConDryDays_30" 
+	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_precipcdd30_raster" 
+	 srs="EPSG:900913" 
+	 layers="PRECIP_CDD30" 
 	 styles="default" 
 	 identify="true" 
 	 name="Max. Consecutive Dry Days (past 30 Days)" 
