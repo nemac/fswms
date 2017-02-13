@@ -1019,6 +1019,9 @@
     </wmsSubgroup>
 	<wmsSubgroup label="Archived Prior 5-Year Max Baseline">
     </wmsSubgroup>
+	<wmsSubgroup label="2017">
+    %(NRT_2017_5YEAR_LAYERS)s
+    </wmsSubgroup>
 	<wmsSubgroup label="2016">
     %(NRT_2016_5YEAR_LAYERS)s
     </wmsSubgroup>
