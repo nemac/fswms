@@ -733,6 +733,39 @@ MAP
     END # end Layer
 	
 	LAYER #
+        NAME geomac_2016
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_fireperims_geomac_2016"		
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "GEOMAC Fire 2016"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 210 105 30
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "geomac_2016"
+            "wms_abstract"       "geomac_2016"
+            "gml_include_items"  "fire_name,sum_gisacr"
+        END  # end METADATA
+    END # end Layer
+	LAYER #
         NAME geomac_2015
         PROJECTION
             "init=epsg:4326"
@@ -760,8 +793,8 @@ MAP
             END # STYLE
         END
         METADATA
-            "wms_title"          "geomac_2014"
-            "wms_abstract"       "geomac_2014"
+            "wms_title"          "geomac_2015"
+            "wms_abstract"       "geomac_2015"
             "gml_include_items"  "year,fire_name,fire_num,acres,date_"
         END  # end METADATA
     END # end Layer

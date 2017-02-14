@@ -548,6 +548,16 @@
 	 identify="true" 
 	 name="2015 (GEOMAC)" 
 	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=geomac_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="GEOMACC"
+	 visible="false" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="geomac_2016" 
+	 styles="default" 
+	 identify="true" 
+	 name="2016 (GEOMAC)" 
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=geomac_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="Historical MODIS Hotspots">
 	  <wmsLayer 
