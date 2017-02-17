@@ -2248,7 +2248,7 @@
         <wmsLayer 
            lid="AHZ"
            visible="false" 
-           url="http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm_current_wms.map&amp;TRANSPARENT=true" 
+           url="http://ndmc-001.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/usdm/service/usdm_current_wms.map&amp;TRANSPARENT=true" 
            srs="EPSG:900913" 
            layers="usdm_current" 
            styles="default"

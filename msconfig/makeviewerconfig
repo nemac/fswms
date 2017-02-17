@@ -165,9 +165,9 @@ def getDRTLayers():
     while (today > loopDate):
        #print 'The loopDate is ' + loopDate.strftime('%y%m%d')
        lid = getLID("usdm"+loopDate.strftime('%y%m%d'), DRT_LIDFILE_PATH)
-       drtURL = "http://torka.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/dm/service/usdm"+loopDate.strftime('%y%m%d')+"_wms.map&amp;TRANSPARENT=true"
+       drtURL = "http://ndmc-001.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/usdm/service/usdm_"+loopDate.strftime('%Y%m%d')+"_wms.map&amp;TRANSPARENT=true"
        drtList.append({ 'LAYER_LID'       : lid,
-                        'LAYER_NAME'      : "usdm"+loopDate.strftime('%y%m%d'),
+                        'LAYER_NAME'      : "usdm"+loopDate.strftime('%Y%m%d'),
                         'LAYER_TITLE'     : loopDate.strftime('%m/%d/%Y'),
                         'SERVER_URL'      : SERVER_URL,
                         'DRT_URL'         : drtURL
