@@ -479,7 +479,7 @@ MAP
     END # end LAYER
 	
 	LAYER
-        NAME     mtbs-raster-00-15
+        NAME     mtbs-raster-00-16
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -494,12 +494,12 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/combined_ras3_mtbs_perims_2000_2016_DD_20160401_conus_laea.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/ras_combined_2000_2016_v022817.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
 		CLASS
-			NAME "MTBS/GEOMAC 2000-2015 (Partial 2016)"
+			NAME "MTBS/GEOMAC 2000-2016"
             EXPRESSION ""
             COLOR 255 255 255
         END
@@ -590,8 +590,8 @@ MAP
         END 		
         
         METADATA
-            "wms_title"             "mtbs-raster-00-15"
-            "wms_abstract"          "mtbs-raster-00-15"
+            "wms_title"             "mtbs-raster-00-16"
+            "wms_abstract"          "mtbs-raster-00-16"
             "gml_include_items"     "value_0"
 			#"gml_value_0_alias"     "Fire Year"
         END  # end METADATA

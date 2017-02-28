@@ -360,11 +360,11 @@
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="mtbs-raster-00-15" 
+	 layers="mtbs-raster-00-16" 
 	 styles="default" 
 	 identify="true" 
-	 name="2000-15 Combined (MTBS/GEOMAC)" 
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-00-15&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2000-16 Combined (MTBS/GEOMAC)" 
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-00-16&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="MTBSABA"
 	 visible="false" 
