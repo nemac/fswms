@@ -90,7 +90,7 @@ MAP
         #FILTERITEM year
 		#FILTER year=2013
 		CLASS
-            NAME "MTBS Fire 2014"
+            #NAME "MTBS Fire 2014"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -133,7 +133,7 @@ MAP
         #FILTERITEM year
 		#FILTER year=2013
 		CLASS
-            NAME "MTBS Fire 2013"
+            #NAME "MTBS Fire 2013"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -165,7 +165,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from conus_fireperims_2012"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -174,10 +174,10 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
         
-		FILTERITEM year
-		FILTER year=2012
+		#FILTERITEM year
+		#FILTER year=2012
 		CLASS
-            NAME "MTBS Fire 2012"
+            #NAME "MTBS Fire 2012"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -198,7 +198,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2012"
             "wms_abstract"       "mtbs_2012"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,acres"
         END  # end METADATA
     END # end Layer
 	
@@ -209,7 +209,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from conus_fireperims_2011"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -218,10 +218,10 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 		
-		FILTERITEM year
-		FILTER year=2011
+		#FILTERITEM year
+		#FILTER year=2011
         CLASS
-            NAME "MTBS Fire 2011"
+            #NAME "MTBS Fire 2011"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -242,7 +242,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2011"
             "wms_abstract"       "mtbs_2011"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,acres"
         END  # end METADATA
     END # end Layer
 	
@@ -265,7 +265,7 @@ MAP
 		FILTERITEM year
 		FILTER year=2010
         CLASS
-            NAME "MTBS Fire 2010"
+            #NAME "MTBS Fire 2010"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -312,7 +312,7 @@ MAP
 		FILTERITEM year
 		FILTER year=2009
         CLASS
-            NAME "MTBS Fire 2009"
+            #NAME "MTBS Fire 2009"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -359,7 +359,7 @@ MAP
         FILTERITEM year
 		FILTER year=2008
         CLASS
-            NAME "MTBS Fire 2008"
+            #NAME "MTBS Fire 2008"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -405,7 +405,7 @@ MAP
         FILTERITEM year
 		FILTER year=2007
         CLASS
-            NAME "MTBS Fire 2007"
+            #NAME "MTBS Fire 2007"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -451,7 +451,7 @@ MAP
         FILTERITEM year
 		FILTER year=2006
         CLASS
-            NAME "MTBS Fire 2006"
+            #NAME "MTBS Fire 2006"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -497,7 +497,7 @@ MAP
         FILTERITEM year
 		FILTER year=2005
         CLASS
-            NAME "MTBS Fire 2005"
+            #NAME "MTBS Fire 2005"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -543,7 +543,7 @@ MAP
         FILTERITEM year
 		FILTER year=2004
         CLASS
-            NAME "MTBS Fire 2004"
+            #NAME "MTBS Fire 2004"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -589,7 +589,7 @@ MAP
         FILTERITEM year
 		FILTER year=2003
         CLASS
-            NAME "MTBS Fire 2003"
+            #NAME "MTBS Fire 2003"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -635,7 +635,7 @@ MAP
         FILTERITEM year
 		FILTER year=2002
         CLASS
-            NAME "MTBS Fire 2002"
+            #NAME "MTBS Fire 2002"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -681,7 +681,7 @@ MAP
         FILTERITEM year
 		FILTER year=2001
         CLASS
-            NAME "MTBS Fire 2001"
+            #NAME "MTBS Fire 2001"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -727,7 +727,7 @@ MAP
         FILTERITEM year
 		FILTER year=2000
         CLASS
-            NAME "MTBS Fire 2000"
+            #NAME "MTBS Fire 2000"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -768,7 +768,7 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 		CLASS
-            NAME "MTBS Fire 1984-1999"
+            #NAME "MTBS Fire 1984-1999"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -809,7 +809,7 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
         CLASS
-            NAME "MTBS/GEOMAC Fire 2000-2014"
+            #NAME "MTBS/GEOMAC Fire 2000-2014"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -849,7 +849,7 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
         CLASS
-            NAME "GEOMAC Fire 2016"
+            #NAME "GEOMAC Fire 2016"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -888,7 +888,7 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
         CLASS
-            NAME "GEOMAC Fire 2015"
+            #NAME "GEOMAC Fire 2015"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -928,7 +928,7 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
         CLASS
-            NAME "GEOMAC Fire 2014"
+            #NAME "GEOMAC Fire 2014"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -968,7 +968,7 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
         CLASS
-            NAME "MTBS/GEOMAC Fire 2000-2014"
+            #NAME "MTBS/GEOMAC Fire 2000-2014"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
@@ -1500,7 +1500,7 @@ MAP
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
 	    CLASS
-            NAME "Active Perimeters GeoMAC"
+            #NAME "Active Perimeters GeoMAC"
 			MINSCALEDENOM 0
 			MAXSCALEDENOM 200000
             STYLE
