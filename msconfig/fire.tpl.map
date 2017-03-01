@@ -870,7 +870,7 @@ MAP
         METADATA
             "wms_title"          "geomac_2016"
             "wms_abstract"       "geomac_2016"
-            "gml_include_items"  "fire_name,sum_gisacr"
+            "gml_include_items"  "fire_name,acres"
         END  # end METADATA
     END # end Layer
 	LAYER #
