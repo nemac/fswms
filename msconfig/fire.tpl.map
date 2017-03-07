@@ -79,7 +79,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fireperims_2014"
+        DATA             "geom from vw_conus_fireperims_2014 USING UNIQUE gid"
 				
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -111,7 +111,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2014"
             "wms_abstract"       "mtbs_2014"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 	
@@ -122,7 +122,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fireperims_2013"
+        DATA             "geom from vw_conus_fireperims_2013 USING UNIQUE gid"
 				
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -154,7 +154,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2013"
             "wms_abstract"       "mtbs_2013"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 	
@@ -165,7 +165,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fireperims_2012"
+        DATA             "geom from vw_conus_fireperims_2012 USING UNIQUE gid"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -198,7 +198,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2012"
             "wms_abstract"       "mtbs_2012"
-            "gml_include_items"  "fire_name,acres"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 	
@@ -209,7 +209,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fireperims_2011"
+        DATA             "geom from vw_conus_fireperims_2011 USING UNIQUE gid"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -242,7 +242,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2011"
             "wms_abstract"       "mtbs_2011"
-            "gml_include_items"  "fire_name,acres"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 	
@@ -253,7 +253,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013 USING UNIQUE gid"
 		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -286,7 +286,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2010"
             "wms_abstract"       "mtbs_2010"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 
@@ -299,7 +299,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013 USING UNIQUE gid"
 
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
@@ -333,7 +333,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2009"
             "wms_abstract"       "mtbs_2009"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 	
@@ -346,7 +346,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013 USING UNIQUE gid"
 
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
@@ -380,7 +380,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2008"
             "wms_abstract"       "mtbs_2008"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 
@@ -393,7 +393,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013 USING UNIQUE gid"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -426,7 +426,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2007"
             "wms_abstract"       "mtbs_2007"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 
@@ -439,7 +439,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013 USING UNIQUE gid"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -472,7 +472,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2006"
             "wms_abstract"       "mtbs_2006"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 
@@ -485,7 +485,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013 USING UNIQUE gid"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -518,7 +518,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2005"
             "wms_abstract"       "mtbs_2005"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 
@@ -531,7 +531,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013 USING UNIQUE gid"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -564,7 +564,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2004"
             "wms_abstract"       "mtbs_2004"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 
@@ -577,7 +577,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013 USING UNIQUE gid"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -610,7 +610,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2003"
             "wms_abstract"       "mtbs_2003"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 
@@ -623,7 +623,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013 USING UNIQUE gid"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -656,7 +656,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2002"
             "wms_abstract"       "mtbs_2002"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 
@@ -669,7 +669,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013 USING UNIQUE gid"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -702,7 +702,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2001"
             "wms_abstract"       "mtbs_2001"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 
@@ -715,7 +715,7 @@ MAP
 
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013 USING UNIQUE gid"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
 
         STATUS           OFF
@@ -748,7 +748,7 @@ MAP
         METADATA
             "wms_title"          "mtbs_2000"
             "wms_abstract"       "mtbs_2000"
-            "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 
@@ -759,7 +759,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013"
 		FILTER           "year <= 1999"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -800,7 +800,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fire_mtbs_1984_2013"
+        DATA             "geom from vw_conus_fire_mtbs_1984_2013"
 		FILTER           "year >= 2000"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
@@ -841,7 +841,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fireperims_geomac_2016"		
+        DATA             "geom from vw_conus_fireperims_geomac_2016 USING UNIQUE id"		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
@@ -870,7 +870,7 @@ MAP
         METADATA
             "wms_title"          "geomac_2016"
             "wms_abstract"       "geomac_2016"
-            "gml_include_items"  "fire_name,acres"
+            "gml_include_items"  "fire_name,fire_id,initial_date,end_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 	LAYER #
@@ -880,7 +880,7 @@ MAP
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from conus_fireperims_geomac_2015"		
+        DATA             "geom from vw_conus_fireperims_geomac_2015 USING UNIQUE gid"		
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
@@ -909,7 +909,7 @@ MAP
         METADATA
             "wms_title"          "geomac_2015"
             "wms_abstract"       "geomac_2015"
-            "gml_include_items"  "year,fire_name,fire_num,acres,date_"
+            "gml_include_items"  "fire_name,fire_id,fire_date,acres,fire_type"
         END  # end METADATA
     END # end Layer
 	
