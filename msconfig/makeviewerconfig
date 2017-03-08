@@ -182,7 +182,7 @@ def getDRTLayers():
           
 def getNRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
     tifList  = []
-    for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
+    for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=True):
         try:        
             tif = re.sub('^' + dataDir + '/', '', tif)
             tif_fullpath = dataDir + '/' + tif;
