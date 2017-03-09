@@ -1168,12 +1168,6 @@
     %(NRT_2006_MMAXYR_LAYERS)s
     </wmsSubgroup>
   </wmsGroup>
-  
-  <wmsGroup gid="G06" name="MODISCloud" label="ForWarn’s Cloud Assessment Maps">	
-    <wmsSubgroup label="For use with ForWarn’s standard NDVI change products (not Early Detect)">
-    %(NRT_MODISCloud__LAYERS)s
-    </wmsSubgroup>
-  </wmsGroup>
   <wmsGroup gid="G07" name="Archived_RSAC" label="Archived RSAC-FHTET Change Maps">
     <wmsSubgroup label="Archived Prior 3-Year Baseline">
 	<wmsLayer
@@ -3524,7 +3518,11 @@
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fws-lcc&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
   </wmsGroup>
-  
+  <wmsGroup gid="G06" name="MODISCloud" label="ForWarn’s Cloud Assessment Maps">	
+    <wmsSubgroup label="For use with ForWarn’s standard NDVI change products (not Early Detect)">
+    %(NRT_MODISCloud__LAYERS)s
+    </wmsSubgroup>
+  </wmsGroup>
   <wmsGroup gid="G11" name="EWS_Derived_Products" label="MODIS Phenology Derived Products" >
     <wmsSubgroup label="Phenology- Derived Products 2009">
       <wmsLayer 
