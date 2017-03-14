@@ -2799,11 +2799,11 @@
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="fs-fuel-treatments-00-16" 
+	 layers="fs-fuel-treatments-00-17" 
 	 styles="default" 
 	 identify="true" 
-	 name="2000-2016 Combined (FS)" 
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-fuel-treatments-00-16&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2000-2017 Combined (FS)" 
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-fuel-treatments-00-17&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FTAAB"
 	 visible="false" 
@@ -2965,7 +2965,7 @@
 	 name="2015 (FS)" 
 	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
-	 lid="FTAAB"
+	 lid="FTAAR"
 	 visible="false" 
 	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
@@ -2974,6 +2974,16 @@
 	 identify="true" 
 	 name="2016 (FS)" 
 	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FTAAS"
+	 visible="false" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_treatment_2017" 
+	 styles="default" 
+	 identify="true" 
+	 name="2017 (FS)" 
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="USFS Logging Activity">
       <wmsLayer 
@@ -2981,11 +2991,11 @@
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
-	 layers="fs-timber-harvests-00-16" 
+	 layers="fs-timber-harvests-00-17" 
 	 styles="default" 
 	 identify="true" 
-	 name="2000-2016 Combined (FS)" 
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-timber-harvests-00-16&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2000-2017 Combined (FS)" 
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-timber-harvests-00-17&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
 	 lid="FHAAB"
 	 visible="false" 
@@ -3147,7 +3157,7 @@
 	 name="2015 (FS)" 
 	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_harvests_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 	  <wmsLayer 
-	 lid="FHAAB"
+	 lid="FHAAR"
 	 visible="false" 
 	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
 	 srs="EPSG:3785" 
@@ -3156,6 +3166,16 @@
 	 identify="true" 
 	 name="2016 (FS)" 
 	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_harvests_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	  <wmsLayer 
+	 lid="FHAAS"
+	 visible="false" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
+	 srs="EPSG:3785" 
+	 layers="fs_harvests_2017" 
+	 styles="default" 
+	 identify="true" 
+	 name="2017 (FS)" 
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_harvests_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
     </wmsSubgroup>
 	<wmsSubgroup label="USDA Agriculture">
       <wmsLayer 
