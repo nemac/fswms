@@ -299,6 +299,86 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
             layers = layers + layerTemplate.render(tifdict)    
     return layers
 
+def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
+    #print 'data dir ' + dataDir
+    #print 'template ' + layerTemplateName
+    tifList  = []
+    for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
+        dynaList  = []
+        try:        
+            tif = re.sub('^' + dataDir + '/', '', tif)
+            tif_fullpath = dataDir + '/' + tif;
+            proj = getproj(tif_fullpath)
+            modDate = getModDate(tif_fullpath)
+            nameform = re.sub(r'^.*/', '', tif)
+            #print nameform
+            #this conditional logic needs to be refactored out
+            if re.search(r'max|med', nameform) and wcs=="no":
+                colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
+            elif re.search(r'255c.img', nameform):
+                colormapline   = ''
+            elif re.search(r'u16b.img', nameform):
+                colormapline   = 'INCLUDE "truecolor16b.cmap"'	
+            #elif re.search(r'.img', fileExt):
+                #colormapline   = ''
+            elif(wcs=="yes"):
+                colormapline   = ''
+            else:
+                colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
+            group = groupName 
+            if re.search(r'.img', nameform):
+                layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
+            else:
+                #jdm 1/26 check for the occurace of bd after the last underscore
+                #this is the same layer but w/ a slightly diff algorithm on the remote
+                #sensing side of things.
+                if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
+                    layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
+                else:
+                    layerName = group + "_" + re.sub(r'_.*$', '', nameform)
+            layerTitle = tif
+            tifList.append({ 'TIF'             : tif,
+                             'PROJVALID'       : len(proj) > 0,
+                             'PROJ'            : formatproj(proj,10),
+                             'WKT'             : getwkt(tif_fullpath),
+                             'NAME'            : layerName,
+                             'GROUP'           : group,
+                             'DATA'            : dataDir + '/' + tif,
+                             'TITLE'           : layerTitle,
+                             'ABSTRACT'        : layerTitle,
+                             'COLORMAPLINE'    : colormapline,
+                             'MASK'            : ''
+                             })                           
+            layerTitles[layerName] = layerTitle
+            #jdm 5/29: for layers groups that we want ewsMask on do so     
+            if maskBool:
+                #print "got here"
+                for mask in ewsMask:
+                    #print "test mask: " + layerName + mask['name']
+                    #print proj
+                    #print len(proj) > 0
+                    tifList.append({ 'TIF'             : tif,
+                                     'PROJVALID'       : len(proj) > 0,
+                                     'PROJ'            : formatproj(proj,10),
+                                     'WKT'             : getwkt(tif_fullpath),
+                                     'NAME'            : layerName + mask['name'],
+                                     'GROUP'           : group,
+                                     'DATA'            : dataDir + '/' + tif,
+                                     'TITLE'           : layerTitle + mask['name'],
+                                     'ABSTRACT'        : layerTitle + mask['name'],
+                                     'COLORMAPLINE'    : colormapline,
+                                     'MASK'			   : 'MASK ' + mask['name']
+                                     })                                                              
+        except Exception as e:
+            print e
+            continue
+    layerTemplate = Template(layerTemplateName)
+    layers = ""
+    for tifdict in tifList:
+        if tifdict['PROJVALID']:
+            layers = layers + layerTemplate.render(tifdict)    
+    return layers
+
 #print "debug: at 6"
 
 mapfilesWritten = []
@@ -624,18 +704,18 @@ LAYERS1 = LAYERS
 ###
 ### Append to ews.map FILE Seasonally-Adjusted Change from All-Year pheno-cluster max (MUC):
 ###
-LAYERS2 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR"), "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", True)
+LAYERS2 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MUC_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", False)
 
 #print "debug: at 12"
 
 ###
 ### Append to ews.map FILE Seasonally-Adjusted Change from All-Year mean of maximums (MMAX):
 ###
-LAYERS3 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", True)
+LAYERS3 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MMAX_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", False)
 
 #print "debug: at 13"
 
-LAYERS4 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear"), "ews_gen.layer.tpl.map", "EFETAC-NASA_AllYear", ".tif", "no", True)
+LAYERS4 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_AllYear", ".tif", "no", False)
 
 ###
 ### write out ews.map, using EPSG 3785 (WebMercator),
@@ -813,7 +893,7 @@ f_new.close()
 ###
 ### CREATE ewswcs1year.map FILE:
 ###
-LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "yes", False)
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "yes", False)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ewswcs1year.map")
 SERVICE_NAME = "ewswcs1year"
@@ -896,7 +976,8 @@ f_new.close()
 ###
 ### CREATE ews1year.map FILE:
 ###
-LAYERS1 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", True)
+LAYERS1 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", True)
+LAYERS1_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", False)
 # template = Template("ews_gen.tpl.map")
 # #print LAYERS
 # f_new = openMapfileForWriting("ews1year.map")
@@ -926,8 +1007,10 @@ LAYERS1 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Yea
 ###
 ### Append to ews1year.map FILE Early Detect (ALC) Change from previous year:
 ###
-LAYERS2 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR"), "ews_gen.layer.tpl.map", "EFETAC-NASA_ALC1YR", ".tif", "no", True)
+LAYERS2 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALC_1YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_ALC1YR", ".tif", "no", True)
+LAYERS2_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALC_1YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_ALC1YR", ".tif", "no", False)
 LAYERSCOMBINED = LAYERS1 + LAYERS2
+LAYERSCOMBINED_NOMASK = LAYERS1_NOMASK + LAYERS2_NOMASK
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews1year.map")
 SERVICE_NAME = "ews1year"
@@ -935,7 +1018,7 @@ WCS_LABEL = "EWS 1Year"
 f_new.write( template.render( {
             'DATA_DIR'              : DATA_DIR,
             'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "ews1year"),
-            'LAYERS'                : LAYERSCOMBINED,
+            'LAYERS'                : LAYERSCOMBINED_NOMASK,
             'WMS_SRS'               : "EPSG:4326 EPSG:2163 EPSG:3785 EPSG:900913",
             'MAPFILE_PROJECTION'    : '"init=epsg:3785"',
             'SERVICE_NAME'          : SERVICE_NAME,
@@ -958,7 +1041,8 @@ f_new.close()
 ###
 ### Create the ews3year.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no", True)
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_3YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no", True)
+LAYERS_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_3YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no", False)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews3year.map")
 SERVICE_NAME = "ews3year"
@@ -966,7 +1050,7 @@ WCS_LABEL = "EWS 3Year"
 f_new.write( template.render( {
             'DATA_DIR'              : DATA_DIR,
             'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "ews3year"),
-            'LAYERS'                : LAYERS,
+            'LAYERS'                : LAYERS_NOMASK,
             'WMS_SRS'               : "EPSG:4326 EPSG:2163 EPSG:3785 EPSG:900913",
             'MAPFILE_PROJECTION'    : '"init=epsg:3785"',
             'SERVICE_NAME'          : SERVICE_NAME,
@@ -987,7 +1071,8 @@ f_new.close()
 ###
 ### Create the ews5year.map file:
 ###
-LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_5YEAR", "5Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "no", True)
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_5YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "no", True)
+LAYERS_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_5YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "no", False)
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews5year.map")
 SERVICE_NAME = "ews5year"
@@ -995,7 +1080,7 @@ WCS_LABEL = "EWS 5Year"
 f_new.write( template.render( {
             'DATA_DIR'              : DATA_DIR,
             'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "ews5year"),
-            'LAYERS'                : LAYERS,
+            'LAYERS'                : LAYERS_NOMASK,
             'WMS_SRS'               : "EPSG:4326 EPSG:2163 EPSG:3785 EPSG:900913",
             'MAPFILE_PROJECTION'    : '"init=epsg:3785"',
             'SERVICE_NAME'          : SERVICE_NAME,
@@ -1013,7 +1098,7 @@ f_new.close()
 
 #print "debug: at 22"
 #create the all year dyna_ews map files
-LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear"), "ews_gen.layer.tpl.map", "EFETAC-NASA", ".tif", "no", True)
+LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA", ".tif", "no", True)
 #print "debug: at 23"
 
 ###
@@ -1120,6 +1205,17 @@ f_new = openMapfileForWriting("rlayers.map")
 f_new.write( template.render( {
             'DATA_DIR'     : DATA_DIR,
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "rlayers")
+            } ) )
+f_new.close()
+
+###
+### Create the landcover-mask.map file:
+###
+template = Template("landcover-mask.tpl.map")
+f_new = openMapfileForWriting("landcover-mask.map")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "landcover-mask")
             } ) )
 f_new.close()
 
