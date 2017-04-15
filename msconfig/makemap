@@ -704,18 +704,21 @@ LAYERS1 = LAYERS
 ###
 ### Append to ews.map FILE Seasonally-Adjusted Change from All-Year pheno-cluster max (MUC):
 ###
-LAYERS2 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MUC_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", False)
+LAYERS2 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MUC_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", True)
+LAYERS2_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MUC_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", False)
 
 #print "debug: at 12"
 
 ###
 ### Append to ews.map FILE Seasonally-Adjusted Change from All-Year mean of maximums (MMAX):
 ###
-LAYERS3 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MMAX_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", False)
+LAYERS3 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MMAX_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", True)
+LAYERS3_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MMAX_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", False)
 
 #print "debug: at 13"
 
-LAYERS4 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_AllYear", ".tif", "no", False)
+LAYERS4 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_AllYear", ".tif", "no", True)
+LAYERS4_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_AllYear", ".tif", "no", False)
 
 ###
 ### write out ews.map, using EPSG 3785 (WebMercator),
@@ -753,7 +756,7 @@ SERVICE_NAME = "muc"
 f_new = openMapfileForWriting("muc.map")
 f_new.write( mapTemplate.render( {
             'DATA_DIR'                : DATA_DIR,
-            'LAYERS'                  : LAYERS2,
+            'LAYERS'                  : LAYERS2_NOMASK,
             'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
             'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
             'SERVICE_NAME'            : SERVICE_NAME,
@@ -773,7 +776,7 @@ SERVICE_NAME = "mmax"
 f_new = openMapfileForWriting("mmax.map")
 f_new.write( mapTemplate.render( {
             'DATA_DIR'                : DATA_DIR,
-            'LAYERS'                  : LAYERS3,
+            'LAYERS'                  : LAYERS3_NOMASK,
             'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
             'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
             'SERVICE_NAME'            : SERVICE_NAME,
@@ -793,7 +796,7 @@ SERVICE_NAME = "max"
 f_new = openMapfileForWriting("max.map")
 f_new.write( mapTemplate.render( {
             'DATA_DIR'                : DATA_DIR,
-            'LAYERS'                  : LAYERS4,
+            'LAYERS'                  : LAYERS4_NOMASK,
             'WMS_SRS'                 : "EPSG:3785 EPSG:4326 EPSG:900913",
             'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
             'SERVICE_NAME'            : SERVICE_NAME,
