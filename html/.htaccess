@@ -139,3 +139,7 @@ Header set Access-Control-Allow-Origin "*"
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "forwarn-ndvi-change">
+    Allow from all
+    SetHandler cgi-script
+</Files>

@@ -1316,6 +1316,18 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+###
+### Create the forwarn-ndvi-change.map file:
+###
+template = Template("forwarn-ndvi-change.tpl.map")
+f_new = openMapfileForWriting("forwarn-ndvi-change.map")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'POSTGIS_CONNECTION_STRING' : POSTGIS_CONNECTION_STRING,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "forwarn-ndvi-change")
+            } ) )
+f_new.close()
+
 #################################################################################################
 
 #print "debug: at 31"
