@@ -147,3 +147,57 @@ Header set Access-Control-Allow-Origin "*"
     Allow from all
     SetHandler cgi-script
 </Files>
+
+<Files "FW2_PHENO_PROGRESS">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_1YR">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_5YR">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_MEDIAN_ALL_YR">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_3YR">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_90_10_YR">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_ALC">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_MUTED_1YR">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_MUTED_5YR">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_MUTED_MEDIAN_ALL_YR">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_MUTED_3YR">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_MUTED_90_10_YR">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+<Files "FW2_MUTED_ALC">
+    Allow from all
+    SetHandler cgi-script
+</Files>
+
