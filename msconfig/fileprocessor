@@ -48,6 +48,19 @@ linkgroups = [
 #        'reps'               : "repititions" --- list of patterns and replacements to use when repeating symlink creation
 #    },
 
+#    {
+#        'srcdir'             : os.path.join(FW2_COMPARE_DIR, "production", "1-yr-max"),
+#        'regex'              : r'(\d{4})\.(\d{2})\.tif$',
+#        'filter_functions'   : [
+#            lambda list : sorted(list),
+#            lambda list : list[-3:][::-1]
+#            ],
+#        'dstdir'             : os.path.join(LINK_TARGET_DIR, "rsac_fhtet"),
+#        'linkname_generator' : lambda i,f,m: "%s_%s_3yr.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
+#        'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
+#    },
+
+
 ## FOR FDM PICKUP
     {
         'srcdir'             : os.path.join(SYM_DIR, "fsdata/rsac_fhtet/ews"),
@@ -214,9 +227,11 @@ linkgroups = [
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
     },
 
+
+
     {
         # /flood/fsdata/efetac_nasa/AllYear/20110601_24_2003_max.tfw
-        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_ALLYEAR", "AllYear")),
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_ALLYEAR", "AllYear")),
         'regex'              : r'/'+choose("X_LC_ALLYEAR", "AllYear")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -228,7 +243,7 @@ linkgroups = [
     },
     {
         # /flood/fsdata/efetac_nasa/1Year/20110601_24_2010_max.tfw
-        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year")),
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_1YEAR", "1Year")),
         'regex'              : r'/'+choose("X_LC_1YEAR", "1Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -240,7 +255,7 @@ linkgroups = [
     },
     {
         # /flood/fsdata/efetac_nasa/3Year/20110601_24_2010_max.tfw
-        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_3YEAR", "3Year")),
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_3YEAR", "3Year")),
         'regex'              : r'/'+choose("X_LC_3YEAR", "3Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -253,7 +268,7 @@ linkgroups = [
 	## MWH: 5/28/2015 new NRT 5 year product for EFETAC NASA
 	{
         # /flood/fsdata/efetac_nasa/3Year/20110601_24_2010_max.tfw
-        'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_5YEAR", "5Year")),
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_5YEAR", "5Year")),
         'regex'              : r'/'+choose("X_LC_5YEAR", "5Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -266,7 +281,7 @@ linkgroups = [
 	##	JDM: 4/24/13 new NRT products for EFETAC NASA	
     {
         # /flood/fsdata/efetac_nasa/X_ALC_1YR/20130414_24_alc_1yr.tif
-		'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_ALC_1YR", "X_ALC_1YR")), 
+		'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_ALC_1YR", "X_ALC_1YR")), 
         'regex'              : r'/'+choose("X_LC_ALC_1YR", "X_ALC_1YR")+'/(\d{8})_(\d{2})'+choose("_alc_land_1yr", "_alc_1yr")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -278,7 +293,7 @@ linkgroups = [
     },	
     {
         # /flood/fsdata/efetac_nasa/X_MUC_ALL_YR/20130422_24_muc_ayr.tif
-		'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR")), 
+		'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR")), 
         'regex'              : r'/'+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR")+'/(\d{8})_(\d{2})'+choose("_muc_ayr_lc", "_muc_ayr")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -290,7 +305,7 @@ linkgroups = [
     },
     {
         # /flood/fsdata/efetac_nasa/X_MMAX_ALL_YR/20130414_24_mmax_ayr.tif
-		'srcdir'             : os.path.join(DATA_DIR, "fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR")), 
+		'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR")), 
         'regex'              : r'/'+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR")+'/(\d{8})_(\d{2})'+choose("_mmax_ayr_lc", "_mmax_ayr")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -299,7 +314,184 @@ linkgroups = [
         'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "efetac_nasa-retro/"+choose("X_LC_MMAX_ALL_YR", "MoMAllYear")+""),
         'linkname_generator' : lambda i,f,m: "%s_%s.tif" % (curprev_prefix[i], date_period_longform(m.group(1),int(m.group(2)))),
         'reps'               : [ { 'pattern' : r'\.tif$', 'replacement' : '.tfw' } ]
-    }		
+    },
+
+
+    # ForWarn2
+
+    #X_LC_1YEAR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_1YEAR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2", "X_LC_1YEAR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+    #X_LC_ALC_1YR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_ALC_1YR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2", "X_LC_ALC_1YR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+    #X_LC_3YEAR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_3YEAR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2", "X_LC_3YEAR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+    #X_LC_5YEAR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_5YEAR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2", "X_LC_5YEAR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+    #X_LC_90_10_YR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_90_10_YR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2", "X_LC_90_10_YR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+    #X_LC_MEDIAN_ALL_YR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_MEDIAN_ALL_YR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2", "X_LC_MEDIAN_ALL_YR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+    #X_LC_PCTPROGRESS
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_PCTPROGRESS"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2", "X_LC_PCTPROGRESS"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+
+    # ForWarn2 Muted Grass/Shrub
+
+    #X_LC_1YEAR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_1YEAR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2_Sqrt", "X_LC_1YEAR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+    #X_LC_ALC_1YR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_ALC_1YR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2_Sqrt", "X_LC_ALC_1YR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+    #X_LC_3YEAR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_3YEAR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2_Sqrt", "X_LC_3YEAR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+    #X_LC_5YEAR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_5YEAR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2_Sqrt", "X_LC_5YEAR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+    #X_LC_90_10_YR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_90_10_YR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2_Sqrt", "X_LC_90_10_YR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    },
+
+    #X_LC_MEDIAN_ALL_YR
+    {
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_MEDIAN_ALL_YR"), 
+        'regex'              : r'/(\d{8})*\.img$',
+        'filter_functions'   : [
+            lambda list : sorted(list),
+            lambda list : list[-3:][::-1]
+            ],
+        'dstdir'             : os.path.join(VIEWER_LINK_TARGET_DIR, "ForWarn2_Sqrt", "X_LC_MEDIAN_ALL_YR"),
+        'linkname_generator' : lambda i,f,m: "%s_%s.img" % (curprev_prefix[i], date_period_longform(m.group(1),24)),
+        'reps'               : []
+    }
+
+
 ]
 
 def date_period_longform(YYYYMMDD, PP):

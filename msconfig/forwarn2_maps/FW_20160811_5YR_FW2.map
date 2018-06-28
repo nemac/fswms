@@ -1,0 +1,812 @@
+MAP
+    # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+    # of the two lines below to enable this logging:
+    #CONFIG "MS_ERRORFILE" "../var/log/forwarn_compare.log"
+    #DEBUG 5
+
+    # all temp files get prefixed with this string
+    NAME ms_forwarn_compare
+
+    #jdm:added to accomodate map layers
+    #see http://trac.osgeo.org/mapserver/ticket/3055
+    MAXSIZE 4000      
+    
+    # background color of image if transparency
+    # is not requested
+    IMAGECOLOR 255 255 255
+
+    # default output image dimensions
+    SIZE 600 400
+
+    # always returns a map
+    STATUS ON
+
+    # set top level projection
+    PROJECTION
+     "init=epsg:3785"
+    END
+
+    # image format options
+    OUTPUTFORMAT
+     NAME png
+     DRIVER "GD/PNG"
+     MIMETYPE "image/png"
+     IMAGEMODE RGB
+#     IMAGEMODE RGBA
+#     TRANSPARENT ON
+     EXTENSION "png"
+    END
+
+    # minx miny maxx maxy
+    # sets:
+    # /WMT_MS_Capabilities/Capability/Layer/LatLonBoundingBox(@minx @miny @maxx @maxx)
+    # EXTENT -180 -90 180 90 # World
+    EXTENT -124.7625 24.5210 -66.9326 49.3845 # USA
+
+    # add def pointers for symbols
+    SYMBOLSET "./symbols/symbols35.sym"
+    FONTSET   "./fonts/fonts.list"
+
+    #
+    # Start of web interface definition
+    WEB
+
+        # this is the real filepath to the temp dir for intermediate file creation
+        IMAGEPATH "./tmp"
+
+        # this is the web-accessible path to IMAGEPATH
+        IMAGEURL "/tmp/"
+
+        HEADER "./templates/query_header.html"
+        FOOTER "./templates/query_footer.html"
+
+        METADATA
+            "ows_enable_request"     "*"
+            "wms_title"              "NEMAC forwarn_compare WMS"
+            "wms_abstract"           "NEMAC forwarn_compare WMS"
+            "wms_onlineresource"     "https://fswms-dev.nemac.org/forwarn_compare"
+            "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913"
+			"wcs_label"              "NEMAC ews WCS"
+            "wcs_srs"                "EPSG:2163 EPSG:4326"
+        END
+    END
+
+    QUERYMAP
+        STATUS OFF
+    END
+
+    # set defaults for GetLegendGraphic requests 
+    LEGEND
+      KEYSIZE 154 297
+    END
+
+    LAYER
+        NAME FW_20160811_5YR_FW2
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms-dev.nemac.org/data/forwarn2_products/ForWarn2/X_LC_5YEAR/ForWarnLAEA.20160811.5-yr-baseline.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "new-forwarn2-standard.cmap"
+        METADATA
+            "wms_title"             "FW_20160811_5YR_FW2"
+			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "FW_20160811_5YR_FW2"
+            "wcs_label"             "FW_20160811_5YR_FW2"
+            "wcs_rangeset_name"     "FW_20160811_5YR_FW2"
+            "wcs_rangeset_label"    "FW_20160811_5YR_FW2"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+        
+    END # end LAYER
+    LAYER
+        NAME FW_20160811_5YR_FW2MaskForForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms-dev.nemac.org/data/forwarn2_products/ForWarn2/X_LC_5YEAR/ForWarnLAEA.20160811.5-yr-baseline.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "new-forwarn2-standard.cmap"
+        METADATA
+            "wms_title"             "FW_20160811_5YR_FW2MaskForForest"
+			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "FW_20160811_5YR_FW2MaskForForest"
+            "wcs_label"             "FW_20160811_5YR_FW2MaskForForest"
+            "wcs_rangeset_name"     "FW_20160811_5YR_FW2MaskForForest"
+            "wcs_rangeset_label"    "FW_20160811_5YR_FW2MaskForForest"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+        MASK MaskForForest
+    END # end LAYER
+    LAYER
+        NAME FW_20160811_5YR_FW2MaskForAgriculture
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms-dev.nemac.org/data/forwarn2_products/ForWarn2/X_LC_5YEAR/ForWarnLAEA.20160811.5-yr-baseline.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "new-forwarn2-standard.cmap"
+        METADATA
+            "wms_title"             "FW_20160811_5YR_FW2MaskForAgriculture"
+			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "FW_20160811_5YR_FW2MaskForAgriculture"
+            "wcs_label"             "FW_20160811_5YR_FW2MaskForAgriculture"
+            "wcs_rangeset_name"     "FW_20160811_5YR_FW2MaskForAgriculture"
+            "wcs_rangeset_label"    "FW_20160811_5YR_FW2MaskForAgriculture"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+        MASK MaskForAgriculture
+    END # end LAYER
+    LAYER
+        NAME FW_20160811_5YR_FW2MaskForConiferForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms-dev.nemac.org/data/forwarn2_products/ForWarn2/X_LC_5YEAR/ForWarnLAEA.20160811.5-yr-baseline.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "new-forwarn2-standard.cmap"
+        METADATA
+            "wms_title"             "FW_20160811_5YR_FW2MaskForConiferForest"
+			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "FW_20160811_5YR_FW2MaskForConiferForest"
+            "wcs_label"             "FW_20160811_5YR_FW2MaskForConiferForest"
+            "wcs_rangeset_name"     "FW_20160811_5YR_FW2MaskForConiferForest"
+            "wcs_rangeset_label"    "FW_20160811_5YR_FW2MaskForConiferForest"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+        MASK MaskForConiferForest
+    END # end LAYER
+    LAYER
+        NAME FW_20160811_5YR_FW2MaskForDeciduousForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms-dev.nemac.org/data/forwarn2_products/ForWarn2/X_LC_5YEAR/ForWarnLAEA.20160811.5-yr-baseline.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "new-forwarn2-standard.cmap"
+        METADATA
+            "wms_title"             "FW_20160811_5YR_FW2MaskForDeciduousForest"
+			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "FW_20160811_5YR_FW2MaskForDeciduousForest"
+            "wcs_label"             "FW_20160811_5YR_FW2MaskForDeciduousForest"
+            "wcs_rangeset_name"     "FW_20160811_5YR_FW2MaskForDeciduousForest"
+            "wcs_rangeset_label"    "FW_20160811_5YR_FW2MaskForDeciduousForest"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+        MASK MaskForDeciduousForest
+    END # end LAYER
+    LAYER
+        NAME FW_20160811_5YR_FW2MaskForGrass
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms-dev.nemac.org/data/forwarn2_products/ForWarn2/X_LC_5YEAR/ForWarnLAEA.20160811.5-yr-baseline.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "new-forwarn2-standard.cmap"
+        METADATA
+            "wms_title"             "FW_20160811_5YR_FW2MaskForGrass"
+			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "FW_20160811_5YR_FW2MaskForGrass"
+            "wcs_label"             "FW_20160811_5YR_FW2MaskForGrass"
+            "wcs_rangeset_name"     "FW_20160811_5YR_FW2MaskForGrass"
+            "wcs_rangeset_label"    "FW_20160811_5YR_FW2MaskForGrass"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+        MASK MaskForGrass
+    END # end LAYER
+    LAYER
+        NAME FW_20160811_5YR_FW2MaskForMixedForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms-dev.nemac.org/data/forwarn2_products/ForWarn2/X_LC_5YEAR/ForWarnLAEA.20160811.5-yr-baseline.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "new-forwarn2-standard.cmap"
+        METADATA
+            "wms_title"             "FW_20160811_5YR_FW2MaskForMixedForest"
+			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "FW_20160811_5YR_FW2MaskForMixedForest"
+            "wcs_label"             "FW_20160811_5YR_FW2MaskForMixedForest"
+            "wcs_rangeset_name"     "FW_20160811_5YR_FW2MaskForMixedForest"
+            "wcs_rangeset_label"    "FW_20160811_5YR_FW2MaskForMixedForest"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+        MASK MaskForMixedForest
+    END # end LAYER
+    LAYER
+        NAME FW_20160811_5YR_FW2MaskForNonVegetated
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms-dev.nemac.org/data/forwarn2_products/ForWarn2/X_LC_5YEAR/ForWarnLAEA.20160811.5-yr-baseline.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "new-forwarn2-standard.cmap"
+        METADATA
+            "wms_title"             "FW_20160811_5YR_FW2MaskForNonVegetated"
+			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "FW_20160811_5YR_FW2MaskForNonVegetated"
+            "wcs_label"             "FW_20160811_5YR_FW2MaskForNonVegetated"
+            "wcs_rangeset_name"     "FW_20160811_5YR_FW2MaskForNonVegetated"
+            "wcs_rangeset_label"    "FW_20160811_5YR_FW2MaskForNonVegetated"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+        MASK MaskForNonVegetated
+    END # end LAYER
+    LAYER
+        NAME FW_20160811_5YR_FW2MaskForShrubland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms-dev.nemac.org/data/forwarn2_products/ForWarn2/X_LC_5YEAR/ForWarnLAEA.20160811.5-yr-baseline.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "new-forwarn2-standard.cmap"
+        METADATA
+            "wms_title"             "FW_20160811_5YR_FW2MaskForShrubland"
+			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "FW_20160811_5YR_FW2MaskForShrubland"
+            "wcs_label"             "FW_20160811_5YR_FW2MaskForShrubland"
+            "wcs_rangeset_name"     "FW_20160811_5YR_FW2MaskForShrubland"
+            "wcs_rangeset_label"    "FW_20160811_5YR_FW2MaskForShrubland"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+        MASK MaskForShrubland
+    END # end LAYER
+    LAYER
+        NAME FW_20160811_5YR_FW2MaskForUrban
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms-dev.nemac.org/data/forwarn2_products/ForWarn2/X_LC_5YEAR/ForWarnLAEA.20160811.5-yr-baseline.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "new-forwarn2-standard.cmap"
+        METADATA
+            "wms_title"             "FW_20160811_5YR_FW2MaskForUrban"
+			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "FW_20160811_5YR_FW2MaskForUrban"
+            "wcs_label"             "FW_20160811_5YR_FW2MaskForUrban"
+            "wcs_rangeset_name"     "FW_20160811_5YR_FW2MaskForUrban"
+            "wcs_rangeset_label"    "FW_20160811_5YR_FW2MaskForUrban"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+        MASK MaskForUrban
+    END # end LAYER
+    LAYER
+        NAME FW_20160811_5YR_FW2MaskForWetland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms-dev.nemac.org/data/forwarn2_products/ForWarn2/X_LC_5YEAR/ForWarnLAEA.20160811.5-yr-baseline.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "new-forwarn2-standard.cmap"
+        METADATA
+            "wms_title"             "FW_20160811_5YR_FW2MaskForWetland"
+			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "FW_20160811_5YR_FW2MaskForWetland"
+            "wcs_label"             "FW_20160811_5YR_FW2MaskForWetland"
+            "wcs_rangeset_name"     "FW_20160811_5YR_FW2MaskForWetland"
+            "wcs_rangeset_label"    "FW_20160811_5YR_FW2MaskForWetland"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+        MASK MaskForWetland
+    END # end LAYER
+
+
+    LAYER
+        NAME firescars         
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/AncillaryData/conus_fire_scars_2000_thru_2013_from_mtbs_and_geomac_us4b.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        CLASS
+            EXPRESSION ([pixel] = 1)
+            COLOR 255 158 175
+        END
+        CLASS
+            EXPRESSION ([pixel] = 2)
+            COLOR 232 91 232
+        END
+        CLASS
+            EXPRESSION ([pixel] = 3)
+            COLOR 170 0 229
+        END
+        CLASS
+            EXPRESSION ([pixel] = 4)
+            COLOR 0 0 255
+        END
+        CLASS
+            EXPRESSION ([pixel] = 5)
+            COLOR 0 127 255
+        END
+        CLASS
+            EXPRESSION ([pixel] = 6)
+            COLOR 0 255 255
+        END
+        CLASS
+            EXPRESSION ([pixel] = 7)
+            COLOR 0 204 0
+        END
+        CLASS
+            EXPRESSION ([pixel] = 8)
+            COLOR 147 198 0
+        END
+        CLASS
+            EXPRESSION ([pixel] = 9)
+            COLOR 255 255 0
+        END
+        CLASS
+            EXPRESSION ([pixel] = 10)
+            COLOR 255 165 0
+        END
+        CLASS
+            EXPRESSION ([pixel] = 11)
+            COLOR 255 0 0
+        END
+        CLASS
+            EXPRESSION ([pixel] = 12)
+            COLOR 192 0 0
+        END        
+        CLASS
+            EXPRESSION ([pixel] = 13)
+            COLOR 140 51 25
+        END  
+        CLASS
+            EXPRESSION ([pixel] = 14)
+            COLOR 255 0 255
+        END  		
+        METADATA
+            "wms_title"                  "Firescars 2000-2013"
+            "wms_abstract"               "Firescars 2000-2013"
+            "wcs_label"                  "firescars WCS"
+            "wcs_rangeset_name"          "firescars WCS"
+            "wcs_rangeset_label"         "firescars WCS"
+            "gml_include_items"          "class"		
+        END  # end METADATA
+    END # end LAYER    
+	
+    #jdm: The next layers are for support of masking
+    LAYER
+        NAME MaskForForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_3foresttypes_conusHybrid.img 
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForForest"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForForest"
+            "wcs_label"             "MaskForForest"
+            "wcs_rangeset_name"     "MaskForForest"
+            "wcs_rangeset_label"    "MaskForForest"
+        END  # end METADATA
+    END # end LAYER	 
+    LAYER
+        NAME MaskForAgriculture
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_agriculture_conusHybrid.img
+        CLASS
+            EXPRESSION ([pixel] = 1)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForAgriculture"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForAgriculture"
+            "wcs_label"             "MaskForAgriculture"
+            "wcs_rangeset_name"     "MaskForAgriculture"
+            "wcs_rangeset_label"    "MaskForAgriculture"
+        END  # end METADATA
+    END # end LAYER	
+    LAYER
+        NAME MaskForConiferForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_evergreen_conusHybrid.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForConiferForest"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForConiferForest"
+            "wcs_label"             "MaskForConiferForest"
+            "wcs_rangeset_name"     "MaskForConiferForest"
+            "wcs_rangeset_label"    "MaskForConiferForest"
+        END  # end METADATA
+    END # end LAYER	
+    LAYER
+        NAME MaskForDeciduousForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_deciduous_conusHybrid.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForDeciduousForest"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForDeciduousForest"
+            "wcs_label"             "MaskForDeciduousForest"
+            "wcs_rangeset_name"     "MaskForDeciduousForest"
+            "wcs_rangeset_label"    "MaskForDeciduousForest"
+        END  # end METADATA
+    END # end LAYER	    
+    LAYER
+        NAME MaskForGrass
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_grass_conusHybrid.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForGrass"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForGrass"
+            "wcs_label"             "MaskForGrass"
+            "wcs_rangeset_name"     "MaskForGrass"
+            "wcs_rangeset_label"    "MaskForGrass"
+        END  # end METADATA
+    END # end LAYER	    
+    LAYER
+        NAME MaskForMixedForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_mixedforest_conusHybrid.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForMixedForest"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForMixedForest"
+            "wcs_label"             "MaskForMixedForest"
+            "wcs_rangeset_name"     "MaskForMixedForest"
+            "wcs_rangeset_label"    "MaskForMixedForest"
+        END  # end METADATA
+    END # end LAYER	    
+    LAYER
+        NAME MaskForNonVegetated
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_non_veg_conusHybrid.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForNonVegetated"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForNonVegetated"
+            "wcs_label"             "MaskForNonVegetated"
+            "wcs_rangeset_name"     "MaskForNonVegetated"
+            "wcs_rangeset_label"    "MaskForNonVegetated"
+        END  # end METADATA
+    END # end LAYER	    
+    LAYER
+        NAME MaskForShrubland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_shrub_conusHybrid.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForShrubland"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForShrubland"
+            "wcs_label"             "MaskForShrubland"
+            "wcs_rangeset_name"     "MaskForShrubland"
+            "wcs_rangeset_label"    "MaskForShrubland"
+        END  # end METADATA
+    END # end LAYER	    
+    LAYER
+        NAME MaskForUrban
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_urban_conusHybrid.img
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForUrban"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForUrban"
+            "wcs_label"             "MaskForUrban"
+            "wcs_rangeset_name"     "MaskForUrban"
+            "wcs_rangeset_label"    "MaskForUrban"
+        END  # end METADATA
+    END # end LAYER	
+    LAYER
+        NAME MaskForWetland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_wetland_conusHybrid.img
+        CLASS
+            EXPRESSION ([pixel] = 1)
+            COLOR 0 0 0
+        END
+		METADATA
+            "wms_title"             "MaskForWetland"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "MaskForWetland"
+            "wcs_label"             "MaskForWetland"
+            "wcs_rangeset_name"     "MaskForWetland"
+            "wcs_rangeset_label"    "MaskForWetland"
+        END  # end METADATA
+    END # end LAYER	    	
+END # end MAP

@@ -143,3 +143,7 @@ Header set Access-Control-Allow-Origin "*"
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "forwarn_compare">
+    Allow from all
+    SetHandler cgi-script
+</Files>

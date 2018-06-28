@@ -1,0 +1,45 @@
+#! /usr/bin/python
+
+from osgeo import gdal, osr
+import sys, os, subprocess, datetime, re, shutil, traceback, getopt;
+
+tif = sys.argv[1]
+
+def getwkt(tif):
+
+    #function to get the well known text version of the
+    #  spatail reference (proejction) of the image (tif)
+    wktFile = tif + '.wkt'
+    wktData = ''
+
+    #check if a wkt tile exists
+    wktFileExists = os.path.exists(wktFile)
+
+    if wktFileExists:
+        #if the wkt file exists read the file
+        #  trying to avoid doing gdal.open its resource expensive
+        with open(wktFile, 'r') as myfile:
+            wktData = myfile.read()
+
+    else:
+        #if the wkt file does not exist thane use gdal to write it.
+        dataSet = gdal.Open( tif, gdal.GA_ReadOnly )
+        wktData = dataSet.GetProjection()
+        f = open( wktFile, 'w' )
+        f.write( wktData )
+        f.close()
+
+    return wktData
+
+wktProjection = getwkt(tif)
+print wktProjection
+
+
+def getproj(tif):
+    projectionWkt = getwkt(tif)
+    spatialReferenceObj = osr.SpatialReference(projectionWkt)
+    projectionProj4 = spatialReferenceObj.ExportToProj4()
+    return projectionProj4
+
+wktProjectionGetProj = getproj(tif)
+print wktProjectionGetProj

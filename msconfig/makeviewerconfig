@@ -1,13 +1,13 @@
 #! /usr/bin/python
 
-import sys, re, os, getopt
+import sys, re, os, glob, getopt, time
 from xml.dom.minidom import parseString
 
 sys.path.append("../var")
+
 try:
     from Config import *
-    from datetime import timedelta
-    from datetime import datetime    
+    import datetime
 except:
     print "Cannot find local settings file 'Config.py'.  You need to create a Config.py file that contains"
     print "settings appropriate for this copy of the FSWMS project.  You can use the file 'Config.tpl.py'"
@@ -15,7 +15,6 @@ except:
     exit(-1)
 
 from LegendConfig import *
-
 
 opts, args = getopt.getopt(sys.argv[1:],"al")
 
@@ -52,7 +51,7 @@ class Template:
 
 wmsLayerTemplate = Template(string="""
         <wmsLayer
-          %(SELECTED)slid="%(LAYER_LID)s"
+          %(SELECTED)s %(BREAK)s lid="%(LAYER_LID)s"
           visible="%(LAYER_VISIBLE)s"
           url="%(SERVER_URL)s/dyna_ews?TRANSPARENT=true"
           srs="EPSG:3785"
@@ -153,15 +152,11 @@ def getDRTLayers():
     #automating the drought monitor layers
     #note: leave a blank space at the botton of the csv to start
     drtList  = []
-    #startDate = "100105" #year-month-day
     startDate = "000104" #year-month-day
-    today = datetime.today();
-    #print today.strftime('%y%m%d');
+    today = datetime.datetime.today();
     #Loop through dates starting w/ startDate
     #until within 8 days of current date
-    loopDate = datetime.strptime(startDate,'%y%m%d');
-    #print "Starting loopDate: " + loopDate.strftime('%y%m%d');
-    #print "today - timedelta(days=7): " + (today - timedelta(days=7)).strftime('%y%m%d');
+    loopDate = datetime.datetime.strptime(startDate,'%y%m%d');
     while (today > loopDate):
        #print 'The loopDate is ' + loopDate.strftime('%y%m%d')
        lid = getLID("usdm"+loopDate.strftime('%y%m%d'), DRT_LIDFILE_PATH)
@@ -172,14 +167,22 @@ def getDRTLayers():
                         'SERVER_URL'      : SERVER_URL,
                         'DRT_URL'         : drtURL
        })
-       loopDate = loopDate + timedelta(days=7)
+       loopDate = loopDate + datetime.timedelta(days=7)
     #print 'Final loopDate was: ' + loopDate.strftime('%y%m%d')
     drtList.reverse() #reverse the list so that newest dates are on top always
-    layers = ""
+
+    year = drtList[0]['LAYER_NAME'].lstrip('usdm')[0:4]
+    layers = '<wmsSubgroup label="{0}" collapsible="true">\n'.format(year)
     for drtDict in drtList:
-        layers = layers + drtWMSLayerTemplate.render(drtDict)    
+        layerYear = drtDict['LAYER_NAME'].lstrip('usdm')[0:4]
+        if layerYear < year:
+          year = layerYear
+          layers += '</wmsSubgroup>\n'
+          layers += '<wmsSubgroup label="{0}" collapsible="true">\n'.format(year)
+        layers = layers + drtWMSLayerTemplate.render(drtDict)
+    layers += "</wmsSubgroup>\n"
     return layers                 
-          
+
 def getNRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
     tifList  = []
     for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=True):
@@ -198,13 +201,13 @@ def getNRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
             layerTitle = tif
             lid = getLID(layerName, NRT_LIDFILE_PATH)
             if legendBool:
-                legend = getLegend(layerName)
+                legend = "cmapicons/new-forwarn2-standard-legend.png"
             else:
-		legend = ""
+		          legend = ""
             if groupName == "EFETAC-NASA_TC":
                 layerTitle = "True Color " + layerName[-11:]
             else:
-                layerTitle = layerName[-8:]
+                layerTitle = ''.join(nameform.split('.')[:-1])
             if layerName[-2:].rstrip()!="bd": #this is one of those bd ones
                 if maskBool:
                     tifList.append({ 'LAYER_LID'    : lid,
@@ -232,6 +235,7 @@ def getNRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
     for tifdict in tifList:
         layers = layers + nrtWMSLayerTemplate.render(tifdict)    
     return layers
+
 def get2017NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
     tifList  = []
     for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=True):
@@ -251,7 +255,7 @@ def get2017NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -305,7 +309,7 @@ def get2016NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -359,7 +363,7 @@ def get2015NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -413,7 +417,7 @@ def get2014NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -467,7 +471,7 @@ def get2013NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -521,7 +525,7 @@ def get2012NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -575,7 +579,7 @@ def get2011NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -629,7 +633,7 @@ def get2010NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -683,7 +687,7 @@ def get2009NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -737,7 +741,7 @@ def get2008NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -791,7 +795,7 @@ def get2007NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -845,7 +849,7 @@ def get2006NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = getLegend(layerName)
+                     legend = "cmapicons/new-forwarn2-standard-legend.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -965,10 +969,11 @@ for subgroup in [
                 'SERVER_URL'    : SERVER_URL,
                 'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
-                'LEGEND'        : SERVER_URL+'/'+getLegend(layer['name']),
+                'LEGEND'        : SERVER_URL+'/'+"cmapicons/new-forwarn2-standard-legend.png",
                 'LAYER_VISIBLE' : layer['visible'],
-                'LAYER_TITLE'   : layerTitles[layer['name']],
-                'MASK'          : 'true'
+                'LAYER_TITLE'   : re.sub(r'\.tif', '', layerTitles[layer['name']]),
+                'MASK'          : 'true',
+                'BREAK'         : ''
                 })
     tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
 
@@ -994,10 +999,11 @@ for subgroup in [
                 'SERVER_URL'    : SERVER_URL,
                 'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
-                'LEGEND'        : SERVER_URL+'/'+getLegend(layer['name']),
+                'LEGEND'        : SERVER_URL+'/'+"cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png",
                 'LAYER_VISIBLE' : layer['visible'],
                 'LAYER_TITLE'   : layerTitles[layer['name']],
-                'MASK'   : ''
+                'MASK'   : '',
+                'BREAK'  : '',
                 })
     rsacModisChangeDetectionProductLayers = rsacModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
 
@@ -1102,8 +1108,450 @@ nrt2008MMAXAllYr = get2008NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_
 nrt2007MMAXAllYr = get2007NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "EFETAC-NASA_MoMAllYear", "dyna_ews", True, ".tif", True)
 nrt2006MMAXAllYr = get2006NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR"), "EFETAC-NASA_MoMAllYear", "dyna_ews", True, ".tif", True)
 
+
+
+
+
+
+###################### FORWARN II ################################
+
+'''
+
+Folder Structure
+
+FW2_DATA_DIR
+ - SOURCE
+  - PRODUCT_TYPE
+    - YEAR
+      - FILE
+
+
+
+
+PRODUCT_TYPES = {
+  '1-yr-max'       : '1YR',
+  '3-yr-max'       : '3YR',
+  '5-yr-max'       : '5YR',
+  'all-yr-max'     : 'AYR',
+  'mean-all-yr-max': 'MYR',
+  'ALC'            : 'ALC'
+}
+
+'''
+
+
+#### CONFIG ####
+
+class Template:
+    def __init__(self, file=None, **args):
+        if file is None and 'string' in args:
+            self.contents = args['string']
+        else:
+            f = open(file, "r")
+            self.contents = ""
+            for line in f:
+                self.contents = self.contents + line
+            f.close
+    def render(self, dict):
+        return self.contents % dict
+
+
+WMS_LAYER_TEMPLATE = Template(string="""
+  <wmsLayer
+    %(SELECTED)s %(BREAK)s
+    lid="%(LAYER_LID)s"
+    visible="false"
+    url="%(SERVER_URL)s/forwarn_compare?TRANSPARENT=true"
+    srs="EPSG:3785"
+    layers="%(LAYER_NAME)s"
+    name="%(LAYER_TITLE)s"
+    styles="default" 
+    identify="true"
+    legend="%(SERVER_URL)s/%(LEGEND)s"
+    mask="true"
+/>  
+""")
+
+WMTS_LAYER_TEMPLATE = Template(string="""
+  <wmtsLayer
+    lid="GLAM_%(SATELLITE_ID)s_%(YEAR)s_%(JULIAN_DAY)s"
+    visible="false"
+    url="https://glam1n1.gsfc.nasa.gov/wmt/MODIS/std/%(SATELLITE_URL_PART)s/%(YEAR)s/%(JULIAN_DAY)s/wmts"
+    srs="EPSG:3857"
+    layers="0"
+    identify="false"
+    name="%(SATELLITE_ID)s Bands %(SATELLITE_ID_NUM)s"
+    mask="false"
+    />
+""")
+
+ALL_PRODUCT_TYPES = PRODUCT_TYPES.copy()
+ALL_PRODUCT_TYPES.update(LEGACY_PRODUCT_TYPES)
+
+# Path to a product dir to extract current dates
+A_PATH_TO_FW2_PRODUCTS = os.path.join(FW2_DATA_DIR, FW2_SOURCES_AS_LIST[0], 'X_LC_1YEAR')
+
+def extractDateString(f):
+  match = re.search(r"(\d{8})", f)
+  if (match.groups(1)):
+    return match.groups(1)[0]
+  return None
+
+
+def getCurrentDates(pwd, date_format=None):
+  files = os.listdir(pwd)
+  dateStrings = map(lambda f: extractDateString(f), files)
+  # remove duplicates from wkt files
+  dateStrings = list(set(dateStrings))
+  dates = map(lambda ds: datetime.datetime.strptime(ds, "%Y%m%d"), dateStrings)
+  sorted_timestamps = list(reversed(sorted(map(lambda d: time.mktime(d.timetuple()), dates))))
+  current_timestamps = sorted_timestamps[:3]
+  current_dates = map(lambda t: datetime.datetime.fromtimestamp(t), current_timestamps)
+  if (date_format):
+    return map(lambda d: datetime.datetime.strftime(d, date_format), current_dates)
+  return current_dates
+
+
+def getDateRangeFor(d):
+  d2 = d - datetime.timedelta(days=23)
+  d1_day = datetime.datetime.strftime(d, '%d').lstrip('0')
+  d2_day = datetime.datetime.strftime(d2, '%d').lstrip('0')
+  d1_f = datetime.datetime.strftime(d, '%b') + d1_day
+  d2_f = datetime.datetime.strftime(d2, '%b') + d2_day
+  return d2_f + '-' + d1_f
+
+
+def makeFW2CurrentLayerTitles():
+  pwd = A_PATH_TO_FW2_PRODUCTS
+  current_dates = getCurrentDates(pwd)
+  date_ranges = map(getDateRangeFor, current_dates)
+  date_strings = map(lambda d: datetime.datetime.strftime(d, '%Y%m%d'), current_dates)
+  titles = [
+    {
+      'ForWarn2' : 'Current %Departure {0}'.format(date_ranges[0]),
+      'ForWarn2_Sqrt': 'Current Muted Grass/Shrub',
+      'Leidos': 'Current %Departure Legacy',
+    },
+    {
+      'ForWarn2': 'Previous1 %Departure {0}'.format(date_ranges[1]),
+      'ForWarn2_Sqrt': 'Previous1 Muted Grass/Shrub' ,
+      'Leidos': 'Previous1 %Departure Legacy',
+    },
+    {
+      'ForWarn2': 'Previous2 %Departure {0}'.format(date_ranges[2]),
+      'ForWarn2_Sqrt': 'Previous2 Muted Grass/Shrub',
+      'Leidos': 'Previous2 %Departure Legacy',
+    }
+  ]
+  dates_dict = {}
+  dates_dict[date_strings[0]] = titles[0]
+  dates_dict[date_strings[1]] = titles[1]
+  dates_dict[date_strings[2]] = titles[2]
+
+  return dates_dict
+
+
+FW2_CURRENT_DATE_STRINGS = getCurrentDates(A_PATH_TO_FW2_PRODUCTS, '%Y%m%d')
+
+FW2_CURRENT_DATES_TITLES = makeFW2CurrentLayerTitles()
+
+RSAC_CONFIG = {}
+RSAC_CONFIG[FW2_CURRENT_DATE_STRINGS[0]] = { 'name': 'RSAC-FHTET_current', 'title' : 'Current RSAC-FHAAST FDM', 'lid' : 'AM',  'visible' : 'false' }
+RSAC_CONFIG[FW2_CURRENT_DATE_STRINGS[1]] = { 'name': 'RSAC-FHTET_previous1', 'title' : 'Previous1 RSAC-FHAAST FDM', 'lid' : 'AN',  'visible' : 'false' }
+RSAC_CONFIG[FW2_CURRENT_DATE_STRINGS[2]] = { 'name': 'RSAC-FHTET_previous2', 'title' : 'Previous2 RSAC-FHAAST FDM', 'lid' : 'AP',  'visible' : 'false' }
+
+
+def renderGlamLayerBlocksFor(yr):
+  sats = ['Aqua', 'Terra']
+  blocks = ''
+  dates = makeDateRangesForGLAMLayers(yr)
+  for d in dates:
+    jd = d[0].strftime('%j')
+    # hackery to sync up date ranges with forwarn product date conventions
+    # make it a 16-day window for some reason
+    d1 = (d[0] - datetime.timedelta(days=8))
+    d2 = (d[1] - datetime.timedelta(days=1))
+    day_of_month1 = d1.strftime('%d').lstrip('0')
+    day_of_month2 = d2.strftime('%d').lstrip('0')
+    month_name1 = d1.strftime('%b').lstrip('0')
+    month_name2 = d2.strftime('%b').lstrip('0')
+    blocks += '<wmsSubgroup label="'+ month_name1 + day_of_month1 + '-' + month_name2 + day_of_month2 + '">\n'
+    for sat_id in sats:
+      url_part = GLAM_CONFIG[sat_id]
+      id_num = '721' if sat_id == 'Aqua' else '621'
+      blocks += renderGLAMLayerBlock(sat_id, id_num, yr, url_part, jd)
+    blocks += '</wmsSubgroup>'
+  return blocks
+
+
+def makeDateRangesForGLAMLayers(yr):
+  dates = makeDatesForYear(yr, '01-01', 46)
+  more_dates = []
+  today = datetime.datetime.today()
+  for d in dates:
+    md_format = d.strftime('%m-%d')
+    d_plus_8_days = d + datetime.timedelta(days=8)
+    if d_plus_8_days < today:
+      more_dates.append((d, d_plus_8_days))
+  return more_dates
+
+
+def renderGLAMLayerBlock(satellite_id, sat_id_num, yr, satellite_url_part, jd, template=WMTS_LAYER_TEMPLATE):
+  return template.render({
+    'SATELLITE_ID' : satellite_id,
+    'YEAR' : yr,
+    'SATELLITE_URL_PART' : satellite_url_part,
+    'JULIAN_DAY' : jd,
+    'SATELLITE_ID_NUM' : sat_id_num
+  })
+
+
+def makeDatesForYear(year, start_date='01-08', cutoff=45):
+  dates = []
+  d = datetime.datetime.strptime(start_date+'-'+year, '%m-%d-%Y')
+  while len(dates) < cutoff:
+    dates.append(d)
+    d = d + datetime.timedelta(days=8)
+  return list(reversed(dates))
+
+
+dates = dict( (year, makeDatesForYear(year)) for year in YEARS)
+
+
+def makeLID(source, product_type, date_string, sources=SOURCES, product_types=ALL_PRODUCT_TYPES):
+  return '_'.join([
+    'FW',
+    date_string,
+    product_types[product_type],
+    sources[source]
+  ])
+
+
+def renderWMSLayerBlock(lid, layer_name, layer_title, selected=False, lineBreak=False, server_url=SERVER_URL, template=WMS_LAYER_TEMPLATE):
+  if 'PHENO_PROGRESS' in lid:
+    legend = 'cmapicons/pctprogresslegend.png'
+  else:
+    legend = 'cmapicons/new-forwarn2-standard-legend.png'
+  return template.render({
+    'SELECTED'    : 'selected="true"' if selected is True else '',
+    'LAYER_LID'   : lid,
+    'LAYER_NAME'  : layer_name,
+    'LAYER_TITLE' : layer_title,
+    'SERVER_URL'  : server_url,
+    'BREAK'       : 'break="true"' if lineBreak else '',
+    'LEGEND'      : legend
+  })
+
+
+def layerIsSelectedByDefault(source, product_type, date_string):
+  most_recent_date = FW2_CURRENT_DATE_STRINGS[0]
+  tests = [
+    most_recent_date == date_string and product_type == 'X_LC_5YEAR' and source == 'ForWarn2'
+  ]
+  return len(filter(lambda t: t, tests)) > 0
+
+
+def makeXMLBlockForLayer(source, product_type, date_string, lineBreak=False):
+  pwd = os.path.join(FW2_DATA_DIR, source, product_type)
+  match = glob.glob(pwd +'/*'+date_string+'*')
+  if len(match):
+    lid = makeLID(source, product_type, date_string)
+    file = match[0]
+    layer_name = lid
+    layer_title = FW2_CURRENT_DATES_TITLES[date_string][source]
+    selected = layerIsSelectedByDefault(source, product_type, date_string)
+    block = renderWMSLayerBlock(lid, layer_name, layer_title, selected, lineBreak)
+    return block
+  else:
+    return ''
+
+
+def makeFW2ArchiveLayerListFor(product_type, year):
+  blocks = ''
+  for d in dates[year]:
+    for src_dirname in FW2_SOURCES_AS_LIST:
+      pwd = os.path.join(FW2_DATA_DIR, src_dirname, product_type)
+      date_string = d.strftime('%Y%m%d')
+      match = glob.glob(pwd + '/*'+date_string+'*')
+      if len(match):
+        lid = makeLID(src_dirname, product_type, date_string, SOURCES, ALL_PRODUCT_TYPES)
+        file = match[0]
+        layer_name = lid
+        layer_title = date_string
+        if src_dirname == 'ForWarn2_Sqrt':
+          layer_title += '(Muted Grass/Shrub)'
+        selected = layerIsSelectedByDefault(src_dirname, product_type, date_string)
+        block = renderWMSLayerBlock(lid, layer_name, layer_title, selected)
+        blocks += block
+  return blocks
+
+
+def makeFW2LegacyArchiveLayerListFor(product_type, year):
+  blocks = ''
+  src_dir = os.path.join(FW2_DATA_DIR, FW2_LEGACY_SOURCE_DIR)
+  pwd = os.path.join(src_dir, product_type)
+  for d in dates[year]:
+    date_string = d.strftime('%Y%m%d')
+    match = glob.glob(pwd + '/*'+date_string+'*')
+    if len(match):
+      lid = makeLID(FW2_LEGACY_SOURCE_DIR, product_type, date_string, SOURCES, ALL_PRODUCT_TYPES)
+      file = match[0]
+      layer_name = lid
+      layer_title = date_string
+      selected = layerIsSelectedByDefault(FW2_LEGACY_SOURCE_DIR, product_type, date_string)
+      block = renderWMSLayerBlock(lid, layer_name, layer_title, selected)
+      blocks += block
+  return blocks
+
+
+def makeFW2CurrentLegacyLayerListFor(product_type):
+  title_formats = [
+    'Current %Departure {0}',
+    'Previous1 %Departure {0}',
+    'Previous2 %Departure {0}'
+  ]
+  current_dates = getCurrentDates(A_PATH_TO_FW2_PRODUCTS)
+  date_ranges = map(getDateRangeFor, current_dates)
+  blockList = ''
+  pwd = os.path.join(FW2_DATA_DIR, FW2_LEGACY_SOURCE_DIR, product_type)
+  for i in range(0, len(FW2_CURRENT_DATE_STRINGS)):
+    d = FW2_CURRENT_DATE_STRINGS[i]
+    match = glob.glob(pwd + '/*' + d + '*')
+    if len(match):
+      lid = makeLID(FW2_LEGACY_SOURCE_DIR, product_type, d, SOURCES, ALL_PRODUCT_TYPES)
+      file = match[0]
+      layer_name = lid
+      layer_title = title_formats[i].format(date_ranges[i])
+      selected = layerIsSelectedByDefault(FW2_LEGACY_SOURCE_DIR, product_type, d)
+      block = renderWMSLayerBlock(lid, layer_name, layer_title, selected)
+      blockList += block
+  return blockList
+
+
+def makeFW2CurrentLayerListFor(product_type, list_type):
+  if list_type == "current":
+    sources = FW2_SOURCES_AS_LIST
+  if list_type == "current_compare":
+    sources = SOURCES_AS_LIST
+  if list_type == "current_legacy":
+    sources = [ FW2_LEGACY_SOURCE_DIR ]
+  blockList = ''
+  for i in range(0, len(FW2_CURRENT_DATE_STRINGS)):
+    d = FW2_CURRENT_DATE_STRINGS[i]
+    for i_source in range(0, len(sources)):
+      source = sources[i_source]
+      if i_source == len(sources)-1:
+        if product_type == 'X_LC_3YEAR' and list_type == 'current_compare':
+          blockList += makeXMLBlockForLayer(source, product_type, d)
+        else:
+          blockList += makeXMLBlockForLayer(source, product_type, d, True)
+      else:
+        blockList += makeXMLBlockForLayer(source, product_type, d)
+    # get hacked son
+    if product_type == 'X_LC_3YEAR' and list_type == 'current_compare':
+      blockList += wmsLayerTemplate.render({
+        'SELECTED'      : "",
+        'SERVER_URL'    : SERVER_URL,
+        'LAYER_LID'     : RSAC_CONFIG[d]['lid'],
+        'LAYER_NAME'    : RSAC_CONFIG[d]['name'],
+        'LEGEND'        : SERVER_URL+'/'+"cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png",
+        'LAYER_VISIBLE' : 'false',
+        'LAYER_TITLE'   : RSAC_CONFIG[d]['title'],
+        'MASK'   : '',
+        'BREAK'  : 'break="true"'
+      })
+  return blockList
+
+
+FW2_LEGACY_2018_PRIOR_YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_1YEAR', '2018')
+FW2_LEGACY_2017_PRIOR_YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_1YEAR', '2017')
+FW2_LEGACY_2016_PRIOR_YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_1YEAR', '2016')
+
+FW2_LEGACY_2018_3YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_3YEAR', '2018')
+FW2_LEGACY_2017_3YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_3YEAR', '2017')
+FW2_LEGACY_2016_3YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_3YEAR', '2016')
+
+FW2_LEGACY_2018_ALC = makeFW2LegacyArchiveLayerListFor('X_LC_ALC_1YR', '2018')
+FW2_LEGACY_2017_ALC = makeFW2LegacyArchiveLayerListFor('X_LC_ALC_1YR', '2017')
+FW2_LEGACY_2016_ALC = makeFW2LegacyArchiveLayerListFor('X_LC_ALC_1YR', '2016')
+
+FW2_LEGACY_2018_5YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_5YEAR', '2018')
+FW2_LEGACY_2017_5YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_5YEAR', '2017')
+FW2_LEGACY_2016_5YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_5YEAR', '2016')
+
+FW2_LEGACY_2018_ALLYEAR = makeFW2LegacyArchiveLayerListFor('X_LC_ALLYEAR', '2018')
+FW2_LEGACY_2017_ALLYEAR = makeFW2LegacyArchiveLayerListFor('X_LC_ALLYEAR', '2017')
+FW2_LEGACY_2016_ALLYEAR = makeFW2LegacyArchiveLayerListFor('X_LC_ALLYEAR', '2016')
+
+FW2_LEGACY_2018_MUC = makeFW2LegacyArchiveLayerListFor('X_LC_MUC_ALL_YR', '2018')
+FW2_LEGACY_2017_MUC = makeFW2LegacyArchiveLayerListFor('X_LC_MUC_ALL_YR', '2017')
+FW2_LEGACY_2016_MUC = makeFW2LegacyArchiveLayerListFor('X_LC_MUC_ALL_YR', '2016')
+
+FW2_LEGACY_2018_MMAX = makeFW2LegacyArchiveLayerListFor('X_LC_MMAX_ALL_YR', '2018')
+FW2_LEGACY_2017_MMAX = makeFW2LegacyArchiveLayerListFor('X_LC_MMAX_ALL_YR', '2017')
+FW2_LEGACY_2016_MMAX = makeFW2LegacyArchiveLayerListFor('X_LC_MMAX_ALL_YR', '2016')
+
+GLAM_WMTS_2017_LAYERS = renderGlamLayerBlocksFor('2017')
+GLAM_WMTS_2018_LAYERS = renderGlamLayerBlocksFor('2018')
+
+FW2_ARCHIVE_2018__PRIOR_YEAR = makeFW2ArchiveLayerListFor('X_LC_1YEAR', '2018')
+FW2_ARCHIVE_2017__PRIOR_YEAR = makeFW2ArchiveLayerListFor('X_LC_1YEAR', '2017')
+FW2_ARCHIVE_2016__PRIOR_YEAR = makeFW2ArchiveLayerListFor('X_LC_1YEAR', '2016')
+
+FW2_ARCHIVE_2018__ALC = makeFW2ArchiveLayerListFor('X_LC_ALC_1YR', '2018')
+FW2_ARCHIVE_2017__ALC = makeFW2ArchiveLayerListFor('X_LC_ALC_1YR', '2017')
+FW2_ARCHIVE_2016__ALC = makeFW2ArchiveLayerListFor('X_LC_ALC_1YR', '2016')
+
+FW2_ARCHIVE_2018__3_YEAR = makeFW2ArchiveLayerListFor('X_LC_3YEAR', '2018')
+FW2_ARCHIVE_2017__3_YEAR = makeFW2ArchiveLayerListFor('X_LC_3YEAR', '2017')
+FW2_ARCHIVE_2016__3_YEAR = makeFW2ArchiveLayerListFor('X_LC_3YEAR', '2016')
+
+FW2_ARCHIVE_2018__5_YEAR = makeFW2ArchiveLayerListFor('X_LC_5YEAR', '2018')
+FW2_ARCHIVE_2017__5_YEAR = makeFW2ArchiveLayerListFor('X_LC_5YEAR', '2017')
+FW2_ARCHIVE_2016__5_YEAR = makeFW2ArchiveLayerListFor('X_LC_5YEAR', '2016')
+
+FW2_ARCHIVE_2018__10_YEAR = makeFW2ArchiveLayerListFor('X_LC_90_10_YR', '2018')
+#FW2_ARCHIVE_2017__10_YEAR = makeFW2ArchiveLayerListFor('X_LC_90_10_YR', '2017')
+#FW2_ARCHIVE_2016__10_YEAR = makeFW2ArchiveLayerListFor('X_LC_90_10_YR', '2016')
+
+FW2_ARCHIVE_2018__YEAR_MEDIAN = makeFW2ArchiveLayerListFor('X_LC_MEDIAN_ALL_YR', '2018')
+#FW2_ARCHIVE_2017__YEAR_MEDIAN = makeFW2ArchiveLayerListFor('X_LC_MEDIAN_ALL_YR', '2017')
+#FW2_ARCHIVE_2016__YEAR_MEDIAN = makeFW2ArchiveLayerListFor('X_LC_MEDIAN_ALL_YR', '2016')
+
+FW2_ARCHIVE_2018__PCTPROGRESS = makeFW2ArchiveLayerListFor('X_LC_PCTPROGRESS', '2018')
+#FW2_ARCHIVE_2017__PCTPROGRESS = makeFW2ArchiveLayerListFor('X_LC_PCTPROGRESS', '2017')
+#FW2_ARCHIVE_2016__PCTPROGRESS = makeFW2ArchiveLayerListFor('X_LC_PCTPROGRESS', '2016')
+
+
+FW2_CURRENT_LAYERS__PRIOR_YEAR = makeFW2CurrentLayerListFor('X_LC_1YEAR', 'current')
+FW2_CURRENT_LAYERS__ALC = makeFW2CurrentLayerListFor('X_LC_ALC_1YR', 'current')
+FW2_CURRENT_LAYERS__3_YEAR = makeFW2CurrentLayerListFor('X_LC_3YEAR', 'current')
+FW2_CURRENT_LAYERS__5_YEAR = makeFW2CurrentLayerListFor('X_LC_5YEAR', 'current')
+FW2_CURRENT_LAYERS__10_YEAR = makeFW2CurrentLayerListFor('X_LC_90_10_YR', 'current')
+FW2_CURRENT_LAYERS__YEAR_MEDIAN = makeFW2CurrentLayerListFor('X_LC_MEDIAN_ALL_YR', 'current')
+FW2_CURRENT_LAYERS__PCTPROGRESS = makeFW2CurrentLayerListFor('X_LC_PCTPROGRESS', 'current')
+
+
+FW2_COMPARE_LAYERS__PRIOR_YEAR = makeFW2CurrentLayerListFor('X_LC_1YEAR', 'current_compare')
+FW2_COMPARE_LAYERS__ALC = makeFW2CurrentLayerListFor('X_LC_ALC_1YR', 'current_compare')
+FW2_COMPARE_LAYERS__3_YEAR = makeFW2CurrentLayerListFor('X_LC_3YEAR', 'current_compare')
+FW2_COMPARE_LAYERS__5_YEAR = makeFW2CurrentLayerListFor('X_LC_5YEAR', 'current_compare')
+FW2_COMPARE_LAYERS__10_YEAR = makeFW2CurrentLayerListFor('X_LC_90_10_YR', 'current_compare')
+FW2_COMPARE_LAYERS__YEAR_MEDIAN = makeFW2CurrentLayerListFor('X_LC_MEDIAN_ALL_YR', 'current_compare')
+FW2_COMPARE_LAYERS__PCTPROGRESS = makeFW2CurrentLayerListFor('X_LC_PCTPROGRESS', 'current_compare')
+
+
+FW2_CURRENT_LEGACY_LAYERS__PRIOR_YEAR = makeFW2CurrentLegacyLayerListFor('X_LC_1YEAR')
+FW2_CURRENT_LEGACY_LAYERS__ALC = makeFW2CurrentLegacyLayerListFor('X_LC_ALC_1YR')
+FW2_CURRENT_LEGACY_LAYERS__3_YEAR = makeFW2CurrentLegacyLayerListFor('X_LC_3YEAR')
+FW2_CURRENT_LEGACY_LAYERS__5_YEAR = makeFW2CurrentLegacyLayerListFor('X_LC_5YEAR')
+FW2_CURRENT_LEGACY_LAYERS__ALLYEAR = makeFW2CurrentLegacyLayerListFor('X_LC_ALLYEAR')
+FW2_CURRENT_LEGACY_LAYERS__MUC = makeFW2CurrentLegacyLayerListFor('X_LC_MUC_ALL_YR')
+FW2_CURRENT_LEGACY_LAYERS__MMAX = makeFW2CurrentLegacyLayerListFor('X_LC_MMAX_ALL_YR')
+
 drtLayers = getDRTLayers()
 #End NRT 8 day & drought monitor automation-------------------------------------------------
+
 
 f = open("../html/view/config/ews_config.xml", "w")
 fMin = open("../html/view/config/ews_config_min.xml", "w+")
@@ -1121,7 +1569,6 @@ configXML = template.render( {
             'NRT_ALC1YR_LAYERS'       : nrtALC1Yr,
             'NRT_MUCALLYR_LAYERS'     : nrtMUCAllYr,
             'NRT_MMAXYR_LAYERS'       : nrtMMAXAllYr,
-            'NRT_2017_1YEAR_LAYERS'        : nrt20171YrProductLayers,
             'NRT_2016_1YEAR_LAYERS'        : nrt20161YrProductLayers,
             'NRT_2015_1YEAR_LAYERS'        : nrt20151YrProductLayers,
             'NRT_2014_1YEAR_LAYERS'        : nrt20141YrProductLayers,
@@ -1157,7 +1604,6 @@ configXML = template.render( {
             'NRT_2008_5YEAR_LAYERS'        : nrt20085YrProductLayers,
             'NRT_2007_5YEAR_LAYERS'        : nrt20075YrProductLayers,
             'NRT_2006_5YEAR_LAYERS'        : nrt20065YrProductLayers,
-            'NRT_2017_AllYEAR_LAYERS'      : nrt2017AllYrProductLayers,
             'NRT_2016_AllYEAR_LAYERS'      : nrt2016AllYrProductLayers,
             'NRT_2015_AllYEAR_LAYERS'      : nrt2015AllYrProductLayers,
             'NRT_2014_AllYEAR_LAYERS'      : nrt2014AllYrProductLayers,
@@ -1169,7 +1615,6 @@ configXML = template.render( {
             'NRT_2008_AllYEAR_LAYERS'      : nrt2008AllYrProductLayers,
             'NRT_2007_AllYEAR_LAYERS'      : nrt2007AllYrProductLayers,
             'NRT_2006_AllYEAR_LAYERS'      : nrt2006AllYrProductLayers,
-            'NRT_2017_ALC1YR_LAYERS'       : nrt2017ALC1Yr,
             'NRT_2016_ALC1YR_LAYERS'       : nrt2016ALC1Yr,
             'NRT_2015_ALC1YR_LAYERS'       : nrt2015ALC1Yr,
             'NRT_2014_ALC1YR_LAYERS'       : nrt2014ALC1Yr,
@@ -1181,7 +1626,6 @@ configXML = template.render( {
             'NRT_2008_ALC1YR_LAYERS'       : nrt2008ALC1Yr,
             'NRT_2007_ALC1YR_LAYERS'       : nrt2007ALC1Yr,
             'NRT_2006_ALC1YR_LAYERS'       : nrt2006ALC1Yr,
-            'NRT_2017_MUCALLYR_LAYERS'     : nrt2017MUCAllYr,
             'NRT_2016_MUCALLYR_LAYERS'     : nrt2016MUCAllYr,
             'NRT_2015_MUCALLYR_LAYERS'     : nrt2015MUCAllYr,
             'NRT_2014_MUCALLYR_LAYERS'     : nrt2014MUCAllYr,
@@ -1193,7 +1637,6 @@ configXML = template.render( {
             'NRT_2008_MUCALLYR_LAYERS'     : nrt2008MUCAllYr,
             'NRT_2007_MUCALLYR_LAYERS'     : nrt2007MUCAllYr,
             'NRT_2006_MUCALLYR_LAYERS'     : nrt2006MUCAllYr,
-            'NRT_2017_MMAXYR_LAYERS'       : nrt2017MMAXAllYr,
             'NRT_2016_MMAXYR_LAYERS'       : nrt2016MMAXAllYr,
             'NRT_2015_MMAXYR_LAYERS'       : nrt2015MMAXAllYr,
             'NRT_2014_MMAXYR_LAYERS'       : nrt2014MMAXAllYr,
@@ -1205,8 +1648,73 @@ configXML = template.render( {
             'NRT_2008_MMAXYR_LAYERS'       : nrt2008MMAXAllYr,
             'NRT_2007_MMAXYR_LAYERS'       : nrt2007MMAXAllYr,
             'NRT_2006_MMAXYR_LAYERS'       : nrt2006MMAXAllYr,
-            'DRT_LAYERS'      : drtLayers
-            })
+            'GLAM_WMTS_2017_LAYERS' : GLAM_WMTS_2017_LAYERS,
+            'GLAM_WMTS_2018_LAYERS' : GLAM_WMTS_2018_LAYERS,
+            'DRT_LAYERS'      : drtLayers,
+            'FW2_CURRENT_LAYERS__PRIOR_YEAR' : FW2_CURRENT_LAYERS__PRIOR_YEAR,
+            'FW2_CURRENT_LAYERS__ALC' : FW2_CURRENT_LAYERS__ALC,
+            'FW2_CURRENT_LAYERS__3_YEAR' : FW2_CURRENT_LAYERS__3_YEAR,
+            'FW2_CURRENT_LAYERS__5_YEAR' : FW2_CURRENT_LAYERS__5_YEAR,
+            'FW2_CURRENT_LAYERS__10_YEAR' : FW2_CURRENT_LAYERS__10_YEAR,
+            'FW2_CURRENT_LAYERS__YEAR_MEDIAN' : FW2_CURRENT_LAYERS__YEAR_MEDIAN,
+            'FW2_CURRENT_LAYERS__PCTPROGRESS' : FW2_CURRENT_LAYERS__PCTPROGRESS,
+            'FW2_COMPARE_LAYERS__PRIOR_YEAR' : FW2_COMPARE_LAYERS__PRIOR_YEAR,
+            'FW2_COMPARE_LAYERS__ALC' : FW2_COMPARE_LAYERS__ALC,
+            'FW2_COMPARE_LAYERS__3_YEAR' : FW2_COMPARE_LAYERS__3_YEAR,
+            'FW2_COMPARE_LAYERS__5_YEAR' : FW2_COMPARE_LAYERS__5_YEAR,
+            'FW2_COMPARE_LAYERS__10_YEAR' : FW2_COMPARE_LAYERS__10_YEAR,
+            'FW2_COMPARE_LAYERS__YEAR_MEDIAN' : FW2_COMPARE_LAYERS__YEAR_MEDIAN,
+            'FW2_COMPARE_LAYERS__PCTPROGRESS' : FW2_COMPARE_LAYERS__PCTPROGRESS,
+            'FW2_LEGACY_2018_PRIOR_YEAR' : FW2_LEGACY_2018_PRIOR_YEAR,
+            'FW2_LEGACY_2017_PRIOR_YEAR' : FW2_LEGACY_2017_PRIOR_YEAR,
+            'FW2_LEGACY_2016_PRIOR_YEAR' : FW2_LEGACY_2016_PRIOR_YEAR,
+            'FW2_LEGACY_2018_3YEAR' : FW2_LEGACY_2018_3YEAR,
+            'FW2_LEGACY_2017_3YEAR' : FW2_LEGACY_2017_3YEAR,
+            'FW2_LEGACY_2016_3YEAR' : FW2_LEGACY_2016_3YEAR,
+            'FW2_LEGACY_2018_ALC' : FW2_LEGACY_2018_ALC,
+            'FW2_LEGACY_2017_ALC' : FW2_LEGACY_2017_ALC,
+            'FW2_LEGACY_2016_ALC' : FW2_LEGACY_2016_ALC,
+            'FW2_LEGACY_2018_5YEAR' : FW2_LEGACY_2018_5YEAR,
+            'FW2_LEGACY_2017_5YEAR' : FW2_LEGACY_2017_5YEAR,
+            'FW2_LEGACY_2016_5YEAR' : FW2_LEGACY_2016_5YEAR,
+            'FW2_LEGACY_2018_ALLYEAR' : FW2_LEGACY_2018_ALLYEAR,
+            'FW2_LEGACY_2017_ALLYEAR' : FW2_LEGACY_2017_ALLYEAR,
+            'FW2_LEGACY_2016_ALLYEAR' : FW2_LEGACY_2016_ALLYEAR,
+            'FW2_LEGACY_2018_MUC' : FW2_LEGACY_2018_MUC,
+            'FW2_LEGACY_2017_MUC' : FW2_LEGACY_2017_MUC,
+            'FW2_LEGACY_2016_MUC' : FW2_LEGACY_2016_MUC,
+            'FW2_LEGACY_2018_MMAX' : FW2_LEGACY_2018_MMAX,
+            'FW2_LEGACY_2017_MMAX' : FW2_LEGACY_2017_MMAX,
+            'FW2_LEGACY_2016_MMAX' : FW2_LEGACY_2016_MMAX,
+            'FW2_CURRENT_LEGACY_LAYERS__PRIOR_YEAR' : FW2_CURRENT_LEGACY_LAYERS__PRIOR_YEAR,
+            'FW2_CURRENT_LEGACY_LAYERS__ALC' : FW2_CURRENT_LEGACY_LAYERS__ALC,
+            'FW2_CURRENT_LEGACY_LAYERS__3_YEAR' : FW2_CURRENT_LEGACY_LAYERS__3_YEAR,
+            'FW2_CURRENT_LEGACY_LAYERS__5_YEAR' : FW2_CURRENT_LEGACY_LAYERS__5_YEAR,
+            'FW2_CURRENT_LEGACY_LAYERS__ALLYEAR' : FW2_CURRENT_LEGACY_LAYERS__ALLYEAR,
+            'FW2_CURRENT_LEGACY_LAYERS__MUC' : FW2_CURRENT_LEGACY_LAYERS__MUC,
+            'FW2_CURRENT_LEGACY_LAYERS__MMAX' : FW2_CURRENT_LEGACY_LAYERS__MMAX,
+            'FW2_ARCHIVE_2018__PRIOR_YEAR' : FW2_ARCHIVE_2018__PRIOR_YEAR,
+            'FW2_ARCHIVE_2017__PRIOR_YEAR' : FW2_ARCHIVE_2017__PRIOR_YEAR,
+            'FW2_ARCHIVE_2016__PRIOR_YEAR' : FW2_ARCHIVE_2016__PRIOR_YEAR,
+            'FW2_ARCHIVE_2018__ALC' : FW2_ARCHIVE_2018__ALC,
+            'FW2_ARCHIVE_2017__ALC' : FW2_ARCHIVE_2017__ALC,
+            'FW2_ARCHIVE_2016__ALC' : FW2_ARCHIVE_2016__ALC,
+            'FW2_ARCHIVE_2018__3_YEAR' : FW2_ARCHIVE_2018__3_YEAR,
+            'FW2_ARCHIVE_2017__3_YEAR' : FW2_ARCHIVE_2017__3_YEAR,
+            'FW2_ARCHIVE_2016__3_YEAR' : FW2_ARCHIVE_2016__3_YEAR,
+            'FW2_ARCHIVE_2018__5_YEAR' : FW2_ARCHIVE_2018__5_YEAR,
+            'FW2_ARCHIVE_2017__5_YEAR' : FW2_ARCHIVE_2017__5_YEAR,
+            'FW2_ARCHIVE_2016__5_YEAR' : FW2_ARCHIVE_2016__5_YEAR,
+            'FW2_ARCHIVE_2018__10_YEAR' : FW2_ARCHIVE_2018__10_YEAR,
+            #'FW2_ARCHIVE_2017__10_YEAR' : FW2_ARCHIVE_2017__10_YEAR,
+            #'FW2_ARCHIVE_2016__10_YEAR' : FW2_ARCHIVE_2016__10_YEAR,
+            'FW2_ARCHIVE_2018__YEAR_MEDIAN' : FW2_ARCHIVE_2018__YEAR_MEDIAN,
+            #'FW2_ARCHIVE_2017__YEAR_MEDIAN' : FW2_ARCHIVE_2017__YEAR_MEDIAN,
+            #'FW2_ARCHIVE_2016__YEAR_MEDIAN' : FW2_ARCHIVE_2016__YEAR_MEDIAN,
+            'FW2_ARCHIVE_2018__PCTPROGRESS' : FW2_ARCHIVE_2018__PCTPROGRESS
+            #'FW2_ARCHIVE_2017__PCTPROGRESS' : FW2_ARCHIVE_2017__PCTPROGRESS,
+            #'FW2_ARCHIVE_2016__PCTPROGRESS' : FW2_ARCHIVE_2016__PCTPROGRESS
+          })
 
 minXML = parseString(configXML).toprettyxml('', '', 'UTF-8')
 minXML = minXML.splitlines()

@@ -47,3 +47,16 @@ msconfig/muc.map
 msconfig/max.map
 msconfig/landcover-mask.map
 msconfig/forwarn-ndvi-change.map
+msconfig/FW2_PHENO_PROGRESS.map
+msconfig/FW2_1YR.map
+msconfig/FW2_5YR.map
+msconfig/FW2_MEDIAN_ALL_YR.map
+msconfig/FW2_3YR.map
+msconfig/FW2_90_10_YR.map
+msconfig/FW2_ALC.map
+msconfig/FW2_MUTED_1YR.map
+msconfig/FW2_MUTED_5YR.map
+msconfig/FW2_MUTED_MEDIAN_ALL_YR.map
+msconfig/FW2_MUTED_3YR.map
+msconfig/FW2_MUTED_90_10_YR.map
+msconfig/FW2_MUTED_ALC.map

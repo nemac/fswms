@@ -1,0 +1,20 @@
+#! /usr/bin/python
+
+import sys, cgi, cgitb
+sys.path.append("../msconfig")
+import CGIUtils
+sys.path.append("../var")
+from Config import MAPSERVER_EXE
+
+cgitb.enable()
+
+params = cgi.FieldStorage()
+
+#MAPFILE = '../msconfig/ews.map'
+#mapFile = open("../msconfig/dyna_maps/newfile.txt", "w")
+
+layerName = str(params.getvalue("LAYERS")).split('Mask')[0]
+
+MAPFILE = '../msconfig/forwarn2_maps/'+layerName+'.map'
+
+CGIUtils.mapserv_inject_mapfile(MAPFILE, MAPSERVER_EXE)

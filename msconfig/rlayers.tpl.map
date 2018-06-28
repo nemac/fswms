@@ -127,7 +127,7 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     fs-fuel-treatments-00-16
+        NAME     fs-fuel-treatments-00-19
         PROJECTION
 			"proj=laea"
 			"lat_0=45"
@@ -142,130 +142,12 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fs_treatments/combined_ras_FS_Fuel_Treatments2_v040116_LAEA_2000_2016.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fs_treatments/ras_fs_fuel_treatments_v032818_2000_2019_combined.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
 		CLASS
-			NAME "FS Fuel Treatments 2000-2016"
-            EXPRESSION ""
-            COLOR 255 255 255
-        END
-		CLASS
-			NAME "2000"
-            EXPRESSION ([pixel] = 2000)
-            COLOR 255 158 175
-        END
-        CLASS
-			NAME "2001"
-            EXPRESSION ([pixel] = 2001)
-            COLOR 232 91 232
-        END
-        CLASS
-			NAME "2002"
-            EXPRESSION ([pixel] = 2002)
-            COLOR 170 0 229
-        END
-        CLASS
-			NAME "2003"
-            EXPRESSION ([pixel] = 2003)
-            COLOR 0 0 255
-        END
-        CLASS
-			NAME "2004"
-            EXPRESSION ([pixel] = 2004)
-            COLOR 0 127 255
-        END
-        CLASS
-			NAME "2005"
-            EXPRESSION ([pixel] = 2005)
-            COLOR 0 255 255
-        END
-        CLASS
-			NAME "2006"
-            EXPRESSION ([pixel] = 2006)
-            COLOR 0 204 0
-        END
-        CLASS
-			NAME "2007"
-            EXPRESSION ([pixel] = 2007)
-            COLOR 147 198 0
-        END
-        CLASS
-			NAME "2008"
-            EXPRESSION ([pixel] = 2008)
-            COLOR 255 255 0
-        END
-        CLASS
-			NAME "2009"
-            EXPRESSION ([pixel] = 2009)
-            COLOR 255 165 0
-        END
-        CLASS
-			NAME "2010"
-            EXPRESSION ([pixel] = 2010)
-            COLOR 255 0 0
-        END
-        CLASS
-			NAME "2011"
-            EXPRESSION ([pixel] = 2011)
-            COLOR 192 0 0
-        END        
-        CLASS
-			NAME "2012"
-            EXPRESSION ([pixel] = 2012)
-            COLOR 140 51 25
-        END  
-        CLASS
-			NAME "2013"
-            EXPRESSION ([pixel] = 2013)
-            COLOR 255 0 255
-        END  	
-		CLASS
-			NAME "2014"
-            EXPRESSION ([pixel] = 2014)
-            COLOR 192 64 64
-        END   
-		CLASS
-			NAME "2015"
-            EXPRESSION ([pixel] = 2015)
-            COLOR 0 128 128
-        END
-		CLASS
-			NAME "2016"
-            EXPRESSION ([pixel] = 2016)
-            COLOR 0 70 70
-        END
-        
-        METADATA
-            "wms_title"             "fs-fuel-treatments-00-16"
-            "wms_abstract"          "fs-fuel-treatments-00-16"
-            "gml_include_items"     "value_0"
-			#"gml_value_0_alias"     "Fire Year"
-        END  # end METADATA
-    END # end LAYER
-	LAYER
-        NAME     fs-fuel-treatments-00-17
-        PROJECTION
-			"proj=laea"
-			"lat_0=45"
-			"lon_0=-100"
-			"x_0=0"
-			"y_0=0"
-			"a=6370997"
-			"b=6370997"
-			"units=m"
-			"no_defs"
-		END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fs_treatments/fueltreatments_2000_2017_v030617_laea.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-		
-		CLASS
-			NAME "FS Fuel Treatments 2000-2017"
+			NAME "FS Fuel Treatments 2000-2019"
             EXPRESSION ""
             COLOR 255 255 255
         END
@@ -359,256 +241,151 @@ MAP
             EXPRESSION ([pixel] = 2017)
             COLOR 0 255 255
         END
-        
+        CLASS
+            NAME "2018"
+            EXPRESSION ([pixel] = 2018)
+            COLOR 0 255 150
+        END
+        CLASS
+            NAME "2019"
+            EXPRESSION ([pixel] = 2019)
+            COLOR 0 54 255
+        END     
         METADATA
-            "wms_title"             "fs-fuel-treatments-00-17"
-            "wms_abstract"          "fs-fuel-treatments-00-17"
+            "wms_title"             "fs-fuel-treatments-00-19"
+            "wms_abstract"          "fs-fuel-treatments-00-19"
             "gml_include_items"     "value_0"
 			#"gml_value_0_alias"     "Fire Year"
         END  # end METADATA
     END # end LAYER
-	
-	LAYER
-        NAME     fs-timber-harvests-00-16
+    LAYER
+        NAME     fs-timber-harvests-00-18
         PROJECTION
-			"proj=laea"
-			"lat_0=45"
-			"lon_0=-100"
-			"x_0=0"
-			"y_0=0"
-			"a=6370997"
-			"b=6370997"
-			"units=m"
-			"no_defs"
-		END
+            "proj=laea"
+            "lat_0=45"
+            "lon_0=-100"
+            "x_0=0"
+            "y_0=0"
+            "a=6370997"
+            "b=6370997"
+            "units=m"
+            "no_defs"
+        END
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/harvests/ras_cellmax_FS_TimberHarvests_20002016_v041216.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/harvests/timberharvests_combined_2000_2018.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-		
-		CLASS
-			NAME "FS Timber Harvests 2000-2016"
-            EXPRESSION ""
-            COLOR 255 255 255
-        END
-		CLASS
-			NAME "2000"
-            EXPRESSION ([pixel] = 2000)
-            COLOR 255 158 175
-        END
-        CLASS
-			NAME "2001"
-            EXPRESSION ([pixel] = 2001)
-            COLOR 232 91 232
-        END
-        CLASS
-			NAME "2002"
-            EXPRESSION ([pixel] = 2002)
-            COLOR 170 0 229
-        END
-        CLASS
-			NAME "2003"
-            EXPRESSION ([pixel] = 2003)
-            COLOR 0 0 255
-        END
-        CLASS
-			NAME "2004"
-            EXPRESSION ([pixel] = 2004)
-            COLOR 0 127 255
-        END
-        CLASS
-			NAME "2005"
-            EXPRESSION ([pixel] = 2005)
-            COLOR 0 255 255
-        END
-        CLASS
-			NAME "2006"
-            EXPRESSION ([pixel] = 2006)
-            COLOR 0 204 0
-        END
-        CLASS
-			NAME "2007"
-            EXPRESSION ([pixel] = 2007)
-            COLOR 147 198 0
-        END
-        CLASS
-			NAME "2008"
-            EXPRESSION ([pixel] = 2008)
-            COLOR 255 255 0
-        END
-        CLASS
-			NAME "2009"
-            EXPRESSION ([pixel] = 2009)
-            COLOR 255 165 0
-        END
-        CLASS
-			NAME "2010"
-            EXPRESSION ([pixel] = 2010)
-            COLOR 255 0 0
-        END
-        CLASS
-			NAME "2011"
-            EXPRESSION ([pixel] = 2011)
-            COLOR 192 0 0
-        END        
-        CLASS
-			NAME "2012"
-            EXPRESSION ([pixel] = 2012)
-            COLOR 140 51 25
-        END  
-        CLASS
-			NAME "2013"
-            EXPRESSION ([pixel] = 2013)
-            COLOR 255 0 255
-        END  	
-		CLASS
-			NAME "2014"
-            EXPRESSION ([pixel] = 2014)
-            COLOR 192 64 64
-        END   
-		CLASS
-			NAME "2015"
-            EXPRESSION ([pixel] = 2015)
-            COLOR 0 128 128
-        END
-		CLASS
-			NAME "2016"
-            EXPRESSION ([pixel] = 2016)
-            COLOR 0 70 70
-        END
         
-        METADATA
-            "wms_title"             "fs-timber-harvests-00-16"
-            "wms_abstract"          "fs-timber-harvests-00-16"
-            "gml_include_items"     "value_0"
-			#"gml_value_0_alias"     "Fire Year"
-        END  # end METADATA
-    END # end LAYER
-	LAYER
-        NAME     fs-timber-harvests-00-17
-        PROJECTION
-			"proj=laea"
-			"lat_0=45"
-			"lon_0=-100"
-			"x_0=0"
-			"y_0=0"
-			"a=6370997"
-			"b=6370997"
-			"units=m"
-			"no_defs"
-		END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/harvests/timberharvests_combined_2000_2017.img
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-		
-		CLASS
-			NAME "FS Timber Harvests 2000-2017"
+        CLASS
+            NAME "FS Timber Harvests 2000-2018"
             EXPRESSION ""
             COLOR 255 255 255
         END
-		CLASS
-			NAME "2000"
+        CLASS
+            NAME "2000"
             EXPRESSION ([pixel] = 2000)
             COLOR 255 158 175
         END
         CLASS
-			NAME "2001"
+            NAME "2001"
             EXPRESSION ([pixel] = 2001)
             COLOR 232 91 232
         END
         CLASS
-			NAME "2002"
+            NAME "2002"
             EXPRESSION ([pixel] = 2002)
             COLOR 170 0 229
         END
         CLASS
-			NAME "2003"
+            NAME "2003"
             EXPRESSION ([pixel] = 2003)
             COLOR 0 0 255
         END
         CLASS
-			NAME "2004"
+            NAME "2004"
             EXPRESSION ([pixel] = 2004)
             COLOR 0 127 255
         END
         CLASS
-			NAME "2005"
+            NAME "2005"
             EXPRESSION ([pixel] = 2005)
             COLOR 0 255 255
         END
         CLASS
-			NAME "2006"
+            NAME "2006"
             EXPRESSION ([pixel] = 2006)
             COLOR 0 204 0
         END
         CLASS
-			NAME "2007"
+            NAME "2007"
             EXPRESSION ([pixel] = 2007)
             COLOR 147 198 0
         END
         CLASS
-			NAME "2008"
+            NAME "2008"
             EXPRESSION ([pixel] = 2008)
             COLOR 255 255 0
         END
         CLASS
-			NAME "2009"
+            NAME "2009"
             EXPRESSION ([pixel] = 2009)
             COLOR 255 165 0
         END
         CLASS
-			NAME "2010"
+            NAME "2010"
             EXPRESSION ([pixel] = 2010)
             COLOR 255 0 0
         END
         CLASS
-			NAME "2011"
+            NAME "2011"
             EXPRESSION ([pixel] = 2011)
             COLOR 192 0 0
         END        
         CLASS
-			NAME "2012"
+            NAME "2012"
             EXPRESSION ([pixel] = 2012)
             COLOR 140 51 25
         END  
         CLASS
-			NAME "2013"
+            NAME "2013"
             EXPRESSION ([pixel] = 2013)
             COLOR 255 0 255
-        END  	
-		CLASS
-			NAME "2014"
+        END     
+        CLASS
+            NAME "2014"
             EXPRESSION ([pixel] = 2014)
             COLOR 192 64 64
         END   
-		CLASS
-			NAME "2015"
+        CLASS
+            NAME "2015"
             EXPRESSION ([pixel] = 2015)
             COLOR 0 128 128
         END
-		CLASS
-			NAME "2016"
+        CLASS
+            NAME "2016"
             EXPRESSION ([pixel] = 2016)
             COLOR 0 70 70
         END
-		CLASS
-			NAME "2017"
+        CLASS
+            NAME "2017"
             EXPRESSION ([pixel] = 2017)
             COLOR 0 255 255
         END
-        
+        CLASS
+            NAME "2018"
+            EXPRESSION ([pixel] = 2018)
+            COLOR 70 24 10
+        END
         METADATA
-            "wms_title"             "fs-timber-harvests-00-17"
-            "wms_abstract"          "fs-timber-harvests-00-17"
+            "wms_title"             "fs-timber-harvests-00-18"
+            "wms_abstract"          "fs-timber-harvests-00-18"
             "gml_include_items"     "value_0"
-			#"gml_value_0_alias"     "Fire Year"
+            #"gml_value_0_alias"     "Fire Year"
         END  # end METADATA
     END # end LAYER
+
 	
 	LAYER
         NAME     mtbs-raster-84-99
@@ -725,7 +502,7 @@ MAP
     END # end LAYER
 	
 	LAYER
-        NAME     mtbs-raster-00-16
+        NAME     mtbs-raster-00-17
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -740,12 +517,12 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/ras_combined_2000_2016_v022817.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/ras_fire_perimeters_2000_2017_v010818.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
 		CLASS
-			NAME "MTBS/GEOMAC 2000-2016"
+			NAME "MTBS/GEOMAC 2000-2017"
             EXPRESSION ""
             COLOR 255 255 255
         END
@@ -834,10 +611,14 @@ MAP
             EXPRESSION ([pixel] = 2016)
             COLOR 0 115 150
         END 		
-        
+        CLASS
+            NAME "2017"
+            EXPRESSION ([pixel] = 2017)
+            COLOR 0 115 0
+        END   
         METADATA
-            "wms_title"             "mtbs-raster-00-16"
-            "wms_abstract"          "mtbs-raster-00-16"
+            "wms_title"             "mtbs-raster-00-17"
+            "wms_abstract"          "mtbs-raster-00-17"
             "gml_include_items"     "value_0"
 			#"gml_value_0_alias"     "Fire Year"
         END  # end METADATA
@@ -2120,6 +1901,58 @@ MAP
             "gml_include_items"     "value_list"			
         END  # end METADATA
     END # end LAYER
+    LAYER
+        NAME CropLands2016
+        PROJECTION
+            "+proj=laea"
+            "+lat_0=45"
+            "+lon_0=-100"
+            "+x_0=0"
+            "+y_0=0"
+            "+a=6370997"
+            "+b=6370997"
+            "+towgs84=0,0,0,0,0,0,0"
+            "+units=m"
+            "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/Cropland/cropland_2016_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "CropLands2016"
+            "wms_abstract"          "CropLands2016"   
+            "gml_include_items"     "value_list"            
+        END  # end METADATA
+    END # end LAYER
+    LAYER
+        NAME CropLands2017
+        PROJECTION
+            "+proj=laea"
+            "+lat_0=45"
+            "+lon_0=-100"
+            "+x_0=0"
+            "+y_0=0"
+            "+a=6370997"
+            "+b=6370997"
+            "+towgs84=0,0,0,0,0,0,0"
+            "+units=m"
+            "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/Cropland/cropland_2017_laea.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "CropLands2017"
+            "wms_abstract"          "CropLands2017"   
+            "gml_include_items"     "value_list"            
+        END  # end METADATA
+    END # end LAYER
 	LAYER
         NAME urban-raster        
         PROJECTION
@@ -2216,7 +2049,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/new_forest.tif 
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_3foresttypes_conusHybrid.img 
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -2246,7 +2079,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_agriculture.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_agriculture_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] = 1)
             COLOR 0 0 0
@@ -2276,7 +2109,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_conifer.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_evergreen_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -2306,7 +2139,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_deciduous_new2.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_deciduous_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -2336,7 +2169,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_grass.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_grass_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -2366,7 +2199,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_mixed.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_mixedforest_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -2396,7 +2229,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_nonveg.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_non_veg_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -2426,7 +2259,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_shrub.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_shrub_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -2456,7 +2289,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_urban.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_urban_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -2486,7 +2319,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_wetland_new.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_wetland_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0

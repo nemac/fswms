@@ -88,7 +88,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/new_forest.tif 
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_3foresttypes_conusHybrid.img 
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -118,7 +118,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_agriculture.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_agriculture_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] = 1)
             COLOR 0 0 0
@@ -148,7 +148,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_conifer.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_evergreen_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -178,7 +178,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_deciduous_new2.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_deciduous_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -208,7 +208,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_grass.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_grass_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -238,7 +238,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_mixed.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_mixedforest_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -268,7 +268,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_nonveg.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_non_veg_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -298,7 +298,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_shrub.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_shrub_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -328,7 +328,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_urban.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_urban_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -358,7 +358,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/N10_wetland_new.tif
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/nAM2010_wetland_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] = 1)
             COLOR 0 0 0

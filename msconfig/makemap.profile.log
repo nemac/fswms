@@ -1,0 +1,209 @@
+3159731 function calls (3159649 primitive calls) in 262.009 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.643    0.643  262.074  262.074 makemap:24(<module>)
+       11    6.694    0.609  252.225   22.930 makemap:145(getLayers)
+    86993    0.492    0.000  208.307    0.002 makemap:108(getwkt)
+    86993  198.293    0.002  198.293    0.002 {_gdal.Open}
+     6059    0.402    0.000  148.562    0.025 makemap:94(getproj)
+    80526   23.680    0.000   23.680    0.000 {open}
+    37677    0.084    0.000   23.424    0.001 makemap:279(openMapfileForWriting)
+    42847   10.760    0.000   11.112    0.000 makemap:130(__init__)
+    86991    0.204    0.000    9.521    0.000 gdal.py:712(GetProjection)
+    86991    9.318    0.000    9.318    0.000 {_gdal.Dataset_GetProjection}
+    80934    1.133    0.000    2.722    0.000 makemap:115(formatproj)
+    37679    0.331    0.000    2.061    0.000 makemap:100(interp)
+    37684    1.440    0.000    1.440    0.000 {method 'close' of 'file' objects}
+    80934    0.158    0.000    1.292    0.000 re.py:164(split)
+   113032    1.225    0.000    1.290    0.000 {eval}
+   124737    1.181    0.000    1.181    0.000 makemap:136(render)
+    60839    0.126    0.000    1.072    0.000 re.py:144(sub)
+    79462    1.022    0.000    1.022    0.000 {method 'write' of 'file' objects}
+    80934    0.814    0.000    0.814    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+       36    0.786    0.022    0.786    0.022 {posix.listdir}
+    60839    0.764    0.000    0.764    0.000 {method 'sub' of '_sre.SRE_Pattern' objects}
+   194499    0.391    0.000    0.620    0.000 re.py:226(_compile)
+    37679    0.046    0.000    0.308    0.000 re.py:169(findall)
+   849996    0.285    0.000    0.285    0.000 {method 'append' of 'list' objects}
+     6057    0.085    0.000    0.282    0.000 osr.py:248(__init__)
+     6057    0.010    0.000    0.238    0.000 osr.py:720(ExportToProj4)
+     6057    0.033    0.000    0.233    0.000 makemap:125(getModDate)
+     6057    0.228    0.000    0.228    0.000 {_osr.SpatialReference_ExportToProj4}
+   200569    0.223    0.000    0.223    0.000 {method 'get' of 'dict' objects}
+    37679    0.195    0.000    0.195    0.000 {method 'findall' of '_sre.SRE_Pattern' objects}
+        4    0.136    0.034    0.136    0.034 {posix.system}
+     6057    0.119    0.000    0.119    0.000 {_osr.new_SpatialReference}
+     6057    0.113    0.000    0.113    0.000 {built-in method fromtimestamp}
+    14788    0.022    0.000    0.105    0.000 re.py:139(search)
+   113032    0.101    0.000    0.101    0.000 {method 'replace' of 'str' objects}
+     6199    0.089    0.000    0.089    0.000 {posix.stat}
+    80934    0.083    0.000    0.083    0.000 {method 'join' of 'str' objects}
+82845/82829    0.054    0.000    0.054    0.000 {len}
+     6057    0.010    0.000    0.046    0.000 osr.py:246(<lambda>)
+    86991    0.040    0.000    0.040    0.000 gdal.py:703(<lambda>)
+     6057    0.032    0.000    0.036    0.000 osr.py:50(_swig_getattr)
+    14788    0.033    0.000    0.033    0.000 {method 'search' of '_sre.SRE_Pattern' objects}
+     6057    0.007    0.000    0.032    0.000 osr.py:244(<lambda>)
+    75358    0.031    0.000    0.031    0.000 {sys._getframe}
+     6057    0.007    0.000    0.026    0.000 osr.py:47(_swig_setattr)
+        4    0.019    0.005    0.019    0.005 {imp.load_module}
+        3    0.000    0.000    0.018    0.006 subprocess.py:475(_eintr_retry_call)
+     6057    0.018    0.000    0.018    0.000 osr.py:34(_swig_setattr_nondynamic)
+        1    0.000    0.000    0.018    0.018 __init__.py:4(<module>)
+        1    0.000    0.000    0.018    0.018 __init__.py:6(swig_import_helper)
+        1    0.000    0.000    0.013    0.013 subprocess.py:775(communicate)
+        1    0.013    0.013    0.013    0.013 {method 'read' of 'file' objects}
+        1    0.000    0.000    0.011    0.011 subprocess.py:650(__init__)
+        1    0.005    0.005    0.011    0.011 subprocess.py:1173(_execute_child)
+       25    0.000    0.000    0.009    0.000 sre_compile.py:496(compile)
+      926    0.002    0.000    0.009    0.000 LegendConfig.py:8(getLegend)
+       25    0.000    0.000    0.006    0.000 sre_parse.py:676(parse)
+    28/25    0.000    0.000    0.006    0.000 sre_parse.py:302(_parse_sub)
+    31/28    0.002    0.000    0.005    0.000 sre_parse.py:380(_parse)
+        1    0.005    0.005    0.005    0.005 {posix.read}
+    12221    0.005    0.000    0.005    0.000 {method 'endswith' of 'str' objects}
+     23/1    0.001    0.000    0.004    0.004 makemap:83(rfind)
+       25    0.000    0.000    0.003    0.000 sre_compile.py:481(_code)
+     6057    0.003    0.000    0.003    0.000 osr.py:254(<lambda>)
+        1    0.001    0.001    0.002    0.002 subprocess.py:389(<module>)
+      802    0.001    0.000    0.002    0.000 sre_parse.py:202(get)
+       13    0.002    0.000    0.002    0.000 {sorted}
+      839    0.001    0.000    0.002    0.000 sre_parse.py:183(__next)
+      259    0.000    0.000    0.002    0.000 re.py:134(match)
+    44/25    0.001    0.000    0.001    0.000 sre_compile.py:33(_compile)
+        1    0.001    0.001    0.001    0.001 pickle.py:25(<module>)
+        1    0.001    0.001    0.001    0.001 shutil.py:5(<module>)
+      142    0.000    0.000    0.001    0.000 genericpath.py:38(isdir)
+       25    0.000    0.000    0.001    0.000 sre_compile.py:362(_compile_info)
+        1    0.000    0.000    0.001    0.001 gdal.py:8(<module>)
+      823    0.001    0.000    0.001    0.000 {method 'startswith' of 'str' objects}
+      729    0.001    0.000    0.001    0.000 sre_parse.py:139(append)
+    55/36    0.001    0.000    0.001    0.000 sre_parse.py:141(getwidth)
+        1    0.000    0.000    0.001    0.001 collections.py:1(<module>)
+      224    0.000    0.000    0.001    0.000 posixpath.py:68(join)
+        1    0.000    0.000    0.001    0.001 osr.py:8(<module>)
+        1    0.000    0.000    0.000    0.000 osr.py:10(swig_import_helper)
+        1    0.000    0.000    0.000    0.000 {posix.fork}
+        1    0.000    0.000    0.000    0.000 gdalconst.py:8(<module>)
+        1    0.000    0.000    0.000    0.000 heapq.py:31(<module>)
+        1    0.000    0.000    0.000    0.000 gdalconst.py:10(swig_import_helper)
+      259    0.000    0.000    0.000    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+      103    0.000    0.000    0.000    0.000 sre_parse.py:131(__getitem__)
+      682    0.000    0.000    0.000    0.000 {ord}
+        4    0.000    0.000    0.000    0.000 sre_compile.py:179(_compile_charset)
+      142    0.000    0.000    0.000    0.000 stat.py:40(S_ISDIR)
+        4    0.000    0.000    0.000    0.000 sre_compile.py:208(_optimize_charset)
+      180    0.000    0.000    0.000    0.000 {isinstance}
+       25    0.000    0.000    0.000    0.000 sre_parse.py:179(__init__)
+        1    0.000    0.000    0.000    0.000 gdal.py:267(StatBuf)
+       93    0.000    0.000    0.000    0.000 {min}
+       25    0.000    0.000    0.000    0.000 {_sre.compile}
+        2    0.000    0.000    0.000    0.000 subprocess.py:1147(pipe_cloexec)
+       50    0.000    0.000    0.000    0.000 sre_compile.py:475(isstring)
+       63    0.000    0.000    0.000    0.000 sre_parse.py:196(match)
+      142    0.000    0.000    0.000    0.000 stat.py:24(S_IFMT)
+        1    0.000    0.000    0.000    0.000 subprocess.py:1089(_get_handles)
+       57    0.000    0.000    0.000    0.000 sre_parse.py:127(__len__)
+        1    0.000    0.000    0.000    0.000 gdal.py:10(swig_import_helper)
+       11    0.000    0.000    0.000    0.000 sre_compile.py:355(_simple)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:259(_mk_bitmap)
+        4    0.000    0.000    0.000    0.000 posixpath.py:127(dirname)
+       44    0.000    0.000    0.000    0.000 sre_parse.py:91(__init__)
+        4    0.000    0.000    0.000    0.000 subprocess.py:1134(_set_cloexec_flag)
+        4    0.000    0.000    0.000    0.000 {imp.find_module}
+        1    0.000    0.000    0.000    0.000 subprocess.py:1352(wait)
+       54    0.000    0.000    0.000    0.000 {method 'group' of '_sre.SRE_Match' objects}
+        7    0.000    0.000    0.000    0.000 sre_parse.py:258(_escape)
+        1    0.000    0.000    0.000    0.000 {posix.fdopen}
+        1    0.000    0.000    0.000    0.000 getopt.py:15(<module>)
+        8    0.000    0.000    0.000    0.000 {fcntl.fcntl}
+       25    0.000    0.000    0.000    0.000 sre_parse.py:68(__init__)
+        1    0.000    0.000    0.000    0.000 {dir}
+        1    0.000    0.000    0.000    0.000 getopt.py:51(getopt)
+        1    0.000    0.000    0.000    0.000 osr.py:241(SpatialReference)
+        3    0.000    0.000    0.000    0.000 {posix.close}
+        1    0.000    0.000    0.000    0.000 gdal.py:978(Band)
+        1    0.000    0.000    0.000    0.000 gdal.py:686(Dataset)
+        1    0.000    0.000    0.000    0.000 pickle.py:827(Unpickler)
+        2    0.000    0.000    0.000    0.000 {posix.pipe}
+        1    0.000    0.000    0.000    0.000 gdal.py:373(Driver)
+        2    0.000    0.000    0.000    0.000 {_gdal.VersionInfo}
+        1    0.000    0.000    0.000    0.000 getopt.py:187(do_shorts)
+        9    0.000    0.000    0.000    0.000 makemap:36(choose)
+        1    0.000    0.000    0.000    0.000 pickle.py:171(Pickler)
+        1    0.000    0.000    0.000    0.000 {posix.waitpid}
+        1    0.000    0.000    0.000    0.000 collections.py:26(OrderedDict)
+        1    0.000    0.000    0.000    0.000 keyword.py:11(<module>)
+       16    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 gdal.py:456(GCP)
+        2    0.000    0.000    0.000    0.000 getopt.py:202(short_has_arg)
+       25    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 subprocess.py:1311(_handle_exitstatus)
+        1    0.000    0.000    0.000    0.000 {gc.enable}
+        1    0.000    0.000    0.000    0.000 subprocess.py:761(__del__)
+       11    0.000    0.000    0.000    0.000 sre_parse.py:135(__setitem__)
+        3    0.000    0.000    0.000    0.000 sre_parse.py:84(closegroup)
+        1    0.000    0.000    0.000    0.000 gdal.py:427(ColorEntry)
+        1    0.000    0.000    0.000    0.000 fnmatch.py:11(<module>)
+        1    0.000    0.000    0.000    0.000 gdal.py:1362(RasterAttributeTable)
+        1    0.000    0.000    0.000    0.000 {_gdal.StatBuf_swigregister}
+        1    0.000    0.000    0.000    0.000 LegendConfig.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 subprocess.py:649(Popen)
+       10    0.000    0.000    0.000    0.000 {_sre.getlower}
+        6    0.000    0.000    0.000    0.000 {range}
+        4    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 osr.py:776(CoordinateTransformation)
+        3    0.000    0.000    0.000    0.000 sre_parse.py:73(opengroup)
+        1    0.000    0.000    0.000    0.000 collections.py:381(Counter)
+        8    0.000    0.000    0.000    0.000 {getattr}
+        4    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 Config.py:2(<module>)
+        1    0.000    0.000    0.000    0.000 gdal.py:322(MajorObject)
+        1    0.000    0.000    0.000    0.000 {_osr.SpatialReference_swigregister}
+        1    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {posix.sysconf}
+        6    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 gdal.py:636(VirtualMem)
+        1    0.000    0.000    0.000    0.000 subprocess.py:460(_cleanup)
+        1    0.000    0.000    0.000    0.000 {_gdal.AsyncReader_swigregister}
+        1    0.000    0.000    0.000    0.000 {_gdal.Driver_swigregister}
+        1    0.000    0.000    0.000    0.000 gdal.py:1582(Transformer)
+        1    0.000    0.000    0.000    0.000 {_gdal.MajorObject_swigregister}
+        5    0.000    0.000    0.000    0.000 {max}
+        1    0.000    0.000    0.000    0.000 gdal.py:657(AsyncReader)
+        1    0.000    0.000    0.000    0.000 {_gdal.Band_swigregister}
+        1    0.000    0.000    0.000    0.000 {_gdal.Dataset_swigregister}
+        1    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
+       13    0.000    0.000    0.000    0.000 sre_compile.py:25(_identityfunction)
+        1    0.000    0.000    0.000    0.000 {_osr.CoordinateTransformation_swigregister}
+        1    0.000    0.000    0.000    0.000 gdal.py:1314(ColorTable)
+        1    0.000    0.000    0.000    0.000 {_gdal.ColorTable_swigregister}
+        2    0.000    0.000    0.000    0.000 sre_parse.py:129(__delitem__)
+        1    0.000    0.000    0.000    0.000 {_gdal.VirtualMem_swigregister}
+        1    0.000    0.000    0.000    0.000 {_gdal.GCP_swigregister}
+        1    0.000    0.000    0.000    0.000 pickle.py:69(UnpicklingError)
+        1    0.000    0.000    0.000    0.000 subprocess.py:1325(_internal_poll)
+        1    0.000    0.000    0.000    0.000 {posix.WIFSIGNALED}
+        1    0.000    0.000    0.000    0.000 pickle.py:58(PickleError)
+        3    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {_gdal.RasterAttributeTable_swigregister}
+        1    0.000    0.000    0.000    0.000 makemap:129(Template)
+        1    0.000    0.000    0.000    0.000 {hasattr}
+        1    0.000    0.000    0.000    0.000 pickle.py:62(PicklingError)
+        1    0.000    0.000    0.000    0.000 {_gdal.ColorEntry_swigregister}
+        1    0.000    0.000    0.000    0.000 shutil.py:31(Error)
+        1    0.000    0.000    0.000    0.000 {posix.WEXITSTATUS}
+        1    0.000    0.000    0.000    0.000 {posix.WIFEXITED}
+        1    0.000    0.000    0.000    0.000 {gc.disable}
+        1    0.000    0.000    0.000    0.000 getopt.py:38(GetoptError)
+        1    0.000    0.000    0.000    0.000 pickle.py:82(_Stop)
+        1    0.000    0.000    0.000    0.000 {_gdal.Transformer_swigregister}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 subprocess.py:402(CalledProcessError)
+        1    0.000    0.000    0.000    0.000 shutil.py:34(SpecialFileError)
+        1    0.000    0.000    0.000    0.000 shutil.py:38(ExecError)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 pickle.py:1261(_EmptyClass)
+        1    0.000    0.000    0.000    0.000 {gc.isenabled}

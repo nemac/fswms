@@ -28,17 +28,17 @@ opts, args = getopt.getopt(sys.argv[1:],"al")
 
 use_all_lands = False
 for opt, arg in opts:
-	if opt in ("-al"):
-		use_all_lands = True
-		print "Using All-Lands"
+    if opt in ("-al"):
+        use_all_lands = True
+        print "Using All-Lands"
 
 
 def choose(al,fo):
     if use_all_lands:
-		return al
+        return al
     else:
-		print "Using Forest-Only"
-		return fo
+        print "Using Forest-Only"
+        return fo
 
 #print "debug: at 2"
 
@@ -63,7 +63,7 @@ from LegendConfig import *
 # these should be read out of an external config file but I have hardcoded for now
 ewsMask = [
     {'name' : 'MaskForForest'},
-	{'name' : 'MaskForAgriculture'},
+    {'name' : 'MaskForAgriculture'},
     {'name' : 'MaskForConiferForest'},
     {'name' : 'MaskForDeciduousForest'},
     {'name' : 'MaskForGrass'},
@@ -71,7 +71,7 @@ ewsMask = [
     {'name' : 'MaskForNonVegetated'},
     {'name' : 'MaskForShrubland'},
     {'name' : 'MaskForUrban'},
-	{'name' : 'MaskForWetland'}
+    {'name' : 'MaskForWetland'}
     ]   
 
 ###
@@ -146,13 +146,13 @@ def formatproj(projstring, indentlevel=0):
     lines = []
     for line in re.split(r'\s+', projstring):
         if line != "":
-	   lines.append("%s%s\"%s\"" % (answer, indentation, line))
+            lines.append("%s%s\"%s\"" % (answer, indentation, line))
     return "\n".join(lines)
 
 # getModDate gets the date when a file was last edited and formats that timestamp in a readable form
 def getModDate(filename):
-	t = os.stat(filename).st_mtime
-	return datetime.datetime.fromtimestamp(t)
+    t = os.stat(filename).st_mtime
+    return datetime.datetime.fromtimestamp(t)
 
 class Template:
     def __init__(self, file):
@@ -185,17 +185,17 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
             #print nameform
             #this conditional logic needs to be refactored out
             if re.search(r'max|med', nameform) and wcs=="no":
-                colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
+                colormapline   = 'INCLUDE "new-forwarn2-standard.cmap"'
             elif re.search(r'255c.img', nameform):
                 colormapline   = ''
             elif re.search(r'u16b.img', nameform):
-                colormapline   = 'INCLUDE "truecolor16b.cmap"'	
+                colormapline   = 'INCLUDE "truecolor16b.cmap"'  
             #elif re.search(r'.img', fileExt):
                 #colormapline   = ''
             elif(wcs=="yes"):
                 colormapline   = ''
             else:
-                colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
+                colormapline   = 'INCLUDE "new-forwarn2-standard.cmap"'
             group = groupName 
             if re.search(r'.img', nameform):
                 layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
@@ -250,7 +250,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                                      'TITLE'           : layerTitle + mask['name'],
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
-                                     'MASK'			   : 'MASK ' + mask['name']
+                                     'MASK'            : 'MASK ' + mask['name']
                                      })    
                     dynaList.append({ 'TIF'             : tif,
                                      'PROJVALID'       : len(proj) > 0,
@@ -314,17 +314,17 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
             #print nameform
             #this conditional logic needs to be refactored out
             if re.search(r'max|med', nameform) and wcs=="no":
-                colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
+                colormapline   = 'INCLUDE "new-forwarn2-standard.cmap"'
             elif re.search(r'255c.img', nameform):
                 colormapline   = ''
             elif re.search(r'u16b.img', nameform):
-                colormapline   = 'INCLUDE "truecolor16b.cmap"'	
+                colormapline   = 'INCLUDE "truecolor16b.cmap"'  
             #elif re.search(r'.img', fileExt):
                 #colormapline   = ''
             elif(wcs=="yes"):
                 colormapline   = ''
             else:
-                colormapline   = 'INCLUDE "efetac_nasa_percent_change_cmap.cmap"'
+                colormapline   = 'INCLUDE "new-forwarn2-standard.cmap"'
             group = groupName 
             if re.search(r'.img', nameform):
                 layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
@@ -367,7 +367,7 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
                                      'TITLE'           : layerTitle + mask['name'],
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
-                                     'MASK'			   : 'MASK ' + mask['name']
+                                     'MASK'            : 'MASK ' + mask['name']
                                      })                                                              
         except Exception as e:
             print e
@@ -427,21 +427,21 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
     try:
         proj = getproj(tif_fullpath)
     except:
-	continue
+        continue
 
     #print "debug: at 7.4"
     if tif.startswith("rsac"):
         group          = "RSAC-FHTET"
         group_abstract = "Layers uploaded by RSAC-FHTET"
-        colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
+        colormapfile   = "new-forwarn2-standard.cmap"
         colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
-        keyimage       = getLegend(group)
+        keyimage       = "cmapicons/new-forwarn2-standard-legend.png"
     else:
         group          = "EFETAC-NASA"
         group_abstract = "Layers uploaded by TACs-NASA"
-        colormapfile   = "efetac_nasa_percent_change_cmap.cmap"
+        colormapfile   = "new-forwarn2-standard.cmap"
         colormapcsv    = "efetac_nasa_percent_change_cmap.csv"
-        keyimage       = getLegend(group)
+        keyimage       = "cmapicons/new-forwarn2-standard-legend.png"
 
     #print "debug: at 7.5"
     modDate = getModDate(tif_fullpath)
@@ -453,38 +453,38 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
     layerName  = group + "_" + baseLineFolder + layerNameForm    # change this to be like "EFETAC-NASA_3yr-baseline_current"
     layerTitle = tif
     tiflist.append({ 'TIF'             : tif,
-					 'PROJVALID'       : len(proj) > 0,
-					 'PROJ'            : formatproj(proj,10),
-					 'WKT'             : getwkt(tif_fullpath),
-					 'NAME'            : layerName,
-					 'GROUP'           : group,
-					 'DATA'            : LAYER_DATA_DIR + '/' + tif,
-					 'GROUP_ABSTRACT'  : group_abstract,
-					 'TITLE'           : layerTitle, # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
-					 'ABSTRACT'        : layerTitle, # change this to match title 
-					 'COLORMAPFILE'    : colormapfile,
-					 'COLORMAPCSV'     : colormapcsv,
-					 'KEYIMAGE'        : keyimage,
-					 'MODDATE'	       : modDate,
+                     'PROJVALID'       : len(proj) > 0,
+                     'PROJ'            : formatproj(proj,10),
+                     'WKT'             : getwkt(tif_fullpath),
+                     'NAME'            : layerName,
+                     'GROUP'           : group,
+                     'DATA'            : LAYER_DATA_DIR + '/' + tif,
+                     'GROUP_ABSTRACT'  : group_abstract,
+                     'TITLE'           : layerTitle, # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
+                     'ABSTRACT'        : layerTitle, # change this to match title 
+                     'COLORMAPFILE'    : colormapfile,
+                     'COLORMAPCSV'     : colormapcsv,
+                     'KEYIMAGE'        : keyimage,
+                     'MODDATE'         : modDate,
                      'MASK'            : ''
-					})
+                    })
     #print "debug: at 7.7"
     dynaList.append({ 'TIF'             : tif,
-					 'PROJVALID'       : len(proj) > 0,
-					 'PROJ'            : formatproj(proj,10),
-					 'WKT'             : getwkt(tif_fullpath),
-					 'NAME'            : layerName,
-					 'GROUP'           : group,
-					 'DATA'            : LAYER_DATA_DIR + '/' + tif,
-					 'GROUP_ABSTRACT'  : group_abstract,
-					 'TITLE'           : layerTitle, # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
-					 'ABSTRACT'        : layerTitle, # change this to match title 
-					 'COLORMAPFILE'    : colormapfile,
-					 'COLORMAPCSV'     : colormapcsv,
-					 'KEYIMAGE'        : keyimage,
-					 'MODDATE'	       : modDate,
+                     'PROJVALID'       : len(proj) > 0,
+                     'PROJ'            : formatproj(proj,10),
+                     'WKT'             : getwkt(tif_fullpath),
+                     'NAME'            : layerName,
+                     'GROUP'           : group,
+                     'DATA'            : LAYER_DATA_DIR + '/' + tif,
+                     'GROUP_ABSTRACT'  : group_abstract,
+                     'TITLE'           : layerTitle, # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
+                     'ABSTRACT'        : layerTitle, # change this to match title 
+                     'COLORMAPFILE'    : colormapfile,
+                     'COLORMAPCSV'     : colormapcsv,
+                     'KEYIMAGE'        : keyimage,
+                     'MODDATE'         : modDate,
                      'MASK'            : ''
-					})                    
+                    })                    
     layerTitles[layerName] = layerTitle
     #print "debug: at 7.8"
     
@@ -504,8 +504,8 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
                              'COLORMAPFILE'    : colormapfile,
                              'COLORMAPCSV'     : colormapcsv,
                              'KEYIMAGE'        : keyimage,
-                             'MODDATE'	       : modDate,
-                             'MASK'			   : 'MASK ' + mask['name']
+                             'MODDATE'         : modDate,
+                             'MASK'            : 'MASK ' + mask['name']
                              })
             dynaList.append({ 'TIF'             : tif,
                              'PROJVALID'       : len(proj) > 0,
@@ -520,8 +520,8 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
                              'COLORMAPFILE'    : colormapfile,
                              'COLORMAPCSV'     : colormapcsv,
                              'KEYIMAGE'        : keyimage,
-                             'MODDATE'	       : modDate,
-                             'MASK'			   : 'MASK ' + mask['name']
+                             'MODDATE'         : modDate,
+                             'MASK'            : 'MASK ' + mask['name']
                              })  
     #print "debug: at 7.9"
     #Perform layer-level creation of dynamic map files:
@@ -558,8 +558,6 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
             f_new.write( THIS_DATA )
             f_new.close() 
                              
-#print "debug: at 8"
-
 ###
 ### create a tiflist entry for each .tif file in DATA_DIR+"/fsdata/efetac_nasa/ews:
 ### these are the actual data files as they are dropped off via ftp
@@ -575,16 +573,16 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
         if tif.startswith("rsac"): #jdm: I don't think this if is needed Marked4Delete
             group = "RSAC-FHTET"
             group_abstract = "Layers uploaded by RSAC-FHTET"
-            colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
+            colormapfile   = "new-forwarn2-standard.cmap"
             colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
-            keyimage       = getLegend(group)
+            keyimage       = "cmapicons/new-forwarn2-standard-legend.png"
             print 'jdm: see this never prints'
         else:
             group = "EFETAC-NASA"
             group_abstract = "Layers uploaded by TACs-NASA"
-            colormapfile   = "efetac_nasa_percent_change_cmap.cmap"
+            colormapfile   = "new-forwarn2-standard.cmap"
             colormapcsv    = "efetac_nasa_percent_change_cmap.csv"
-            keyimage       = getLegend(group)
+            keyimage       = "cmapicons/new-forwarn2-standard-legend.png"
         layerName  = group + "_" + re.sub(r'_.*$', '', nameform)
         layerTitle = tif
 
@@ -605,7 +603,7 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
                          'COLORMAPFILE'    : colormapfile,
                          'COLORMAPCSV'     : colormapcsv,
                          'KEYIMAGE'        : keyimage,
-                         'MODDATE'	       : modDate,
+                         'MODDATE'         : modDate,
                          'MASK'            : ''
                          })
         layerTitles[layerName] = layerTitle
@@ -624,8 +622,8 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
                              'COLORMAPFILE'    : colormapfile,
                              'COLORMAPCSV'     : colormapcsv,
                              'KEYIMAGE'        : keyimage,
-                             'MODDATE'	       : modDate,
-                             'MASK'			   : 'MASK ' + mask['name']
+                             'MODDATE'         : modDate,
+                             'MASK'            : 'MASK ' + mask['name']
                              })    
     except:
         continue
@@ -650,7 +648,7 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
             colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
             colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
             #keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
-            keyimage       = getLegend(group)
+            keyimage       = "cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"
             if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
                 layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
             else:
@@ -673,16 +671,15 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
                              'COLORMAPFILE'    : colormapfile,
                              'COLORMAPCSV'     : colormapcsv,
                              'KEYIMAGE'        : keyimage,
-                             'MODDATE'	       : modDate,
+                             'MODDATE'         : modDate,
                              'MASK'            : ''
                              })
-            layerTitles[layerName] = layerTitle	
+            layerTitles[layerName] = layerTitle 
     except:
         print 'except occured'
         continue
 
 
-#print "debug: at 10"
 
 ######################################
 
@@ -691,41 +688,39 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
 ###
 layerTemplate = Template("ews.layer.tmpl")
 LAYERS = ""
-# print tiflist
 for tifdict in tiflist:
     if tifdict['PROJVALID']:
-		print tifdict['NAME']
-		LAYERS = LAYERS + layerTemplate.render( tifdict )
+        print tifdict['NAME']
+        LAYERS = LAYERS + layerTemplate.render( tifdict )
 
 LAYERS1 = LAYERS
         
-#print "debug: at 11"
-
 ###
 ### Append to ews.map FILE Seasonally-Adjusted Change from All-Year pheno-cluster max (MUC):
 ###
 LAYERS2 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MUC_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", True)
 LAYERS2_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MUC_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", False)
-
-#print "debug: at 12"
+LAYERS2_NOMASK_FW2_LEIDOS = getLayersNoMask(FW2_DATA_DIR + "/Leidos/" + "X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MUCAllYear", ".tif", "no", False)
+LAYERS2_NOMASK = LAYERS2_NOMASK + LAYERS2_NOMASK_FW2_LEIDOS
 
 ###
 ### Append to ews.map FILE Seasonally-Adjusted Change from All-Year mean of maximums (MMAX):
 ###
 LAYERS3 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MMAX_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", True)
 LAYERS3_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MMAX_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", False)
-
+LAYERS3_NOMASK_FW2_LEIDOS = getLayersNoMask(FW2_DATA_DIR + "/Leidos/" + "X_LC_MMAX_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", False)
+LAYERS3_NOMASK = LAYERS3_NOMASK + LAYERS3_NOMASK_FW2_LEIDOS
 #print "debug: at 13"
 
 LAYERS4 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_AllYear", ".tif", "no", True)
 LAYERS4_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_AllYear", ".tif", "no", False)
+LAYERS4_NOMASK_FW2_LEIDOS = getLayersNoMask(FW2_DATA_DIR + "/Leidos/" + "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_AllYear", ".tif", "no", False)
+LAYERS4_NOMASK = LAYERS4_NOMASK + LAYERS4_NOMASK_FW2_LEIDOS
 
 ###
 ### write out ews.map, using EPSG 3785 (WebMercator),
 ### and ewswgs84, using EPSG 4326, and ewswcs, for serving WCS (using MapServer 6):
 ###
-
-#print "debug: at 14"
 
 #This was used when all layers were combined into the one ews service which was taken down
 LAYERSCOMBINED = LAYERS1 + LAYERS2 + LAYERS3
@@ -863,7 +858,7 @@ LAYERS = ""
 for tifdict in tiflist:
     if tifdict['PROJVALID']:
         LAYERS = LAYERS + wcslayerTemplate.render( tifdict )
-		
+        
 #print "debug: at 17"
 
 f_new = openMapfileForWriting("ewswcs.map")
@@ -897,6 +892,9 @@ f_new.close()
 ### CREATE ewswcs1year.map FILE:
 ###
 LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "yes", False)
+# Add new Leidos layers living in /fsdata3
+LAYERS_FW2_LEIDOS = getLayers(FW2_DATA_DIR + "/Leidos/" + "X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "yes", False)
+LAYERS = LAYERS + LAYERS_FW2_LEIDOS
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ewswcs1year.map")
 SERVICE_NAME = "ewswcs1year"
@@ -925,6 +923,8 @@ f_new.close()
 ### Create the ewswcs3year.map file:
 ###
 LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/X_LC_3YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "yes", False)
+LAYERS_FW2_LEIDOS = getLayers(FW2_DATA_DIR + "/Leidos/" + "X_LC_3YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "yes", False)
+LAYERS = LAYERS + LAYERS_FW2_LEIDOS
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ewswcs3year.map")
 SERVICE_NAME = "ewswcs3year"
@@ -953,6 +953,8 @@ f_new.close()
 ### Create the ewswcs5year.map file:
 ###
 LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/X_LC_5YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "yes", False)
+LAYERS_FW2_LEIDOS = getLayers(FW2_DATA_DIR + "/Leidos/" + "X_LC_5YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "yes", False)
+LAYERS = LAYERS + LAYERS_FW2_LEIDOS
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ewswcs5year.map")
 SERVICE_NAME = "ewswcs5year"
@@ -981,6 +983,8 @@ f_new.close()
 ###
 LAYERS1 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", True)
 LAYERS1_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", False)
+LAYERS1_FW2_LEIDOS_NOMASK = getLayersNoMask(FW2_DATA_DIR + "/Leidos/" + "X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", False)
+LAYERS1_NOMASK = LAYERS1_NOMASK + LAYERS1_FW2_LEIDOS_NOMASK
 # template = Template("ews_gen.tpl.map")
 # #print LAYERS
 # f_new = openMapfileForWriting("ews1year.map")
@@ -1012,8 +1016,9 @@ LAYERS1_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_1YEAR"
 ###
 LAYERS2 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALC_1YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_ALC1YR", ".tif", "no", True)
 LAYERS2_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALC_1YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_ALC1YR", ".tif", "no", False)
+LAYERS2_FW2_LEIDOS_NOMASK = getLayersNoMask(FW2_DATA_DIR + "/Leidos/" + "X_LC_ALC_1YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_ALC1YR", ".tif", "no", False)
 LAYERSCOMBINED = LAYERS1 + LAYERS2
-LAYERSCOMBINED_NOMASK = LAYERS1_NOMASK + LAYERS2_NOMASK
+LAYERSCOMBINED_NOMASK = LAYERS1_NOMASK + LAYERS2_NOMASK + LAYERS2_FW2_LEIDOS_NOMASK
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews1year.map")
 SERVICE_NAME = "ews1year"
@@ -1046,6 +1051,8 @@ f_new.close()
 ###
 LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_3YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no", True)
 LAYERS_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_3YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no", False)
+LAYERS_FW2_LEIDOS_NOMASK = getLayersNoMask(FW2_DATA_DIR + "/Leidos/" + "X_LC_3YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_3Year", ".tif", "no", False)
+LAYERS_NOMASK = LAYERS_NOMASK + LAYERS_FW2_LEIDOS_NOMASK
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews3year.map")
 SERVICE_NAME = "ews3year"
@@ -1076,6 +1083,8 @@ f_new.close()
 ###
 LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_5YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "no", True)
 LAYERS_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_5YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "no", False)
+LAYERS_FW2_LEIDOS_NOMASK = getLayersNoMask(FW2_DATA_DIR + "/Leidos/" + "X_LC_5YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_5Year", ".tif", "no", False)
+LAYERS_NOMASK = LAYERS_NOMASK + LAYERS_FW2_LEIDOS_NOMASK
 template = Template("ews_gen.tpl.map")
 f_new = openMapfileForWriting("ews5year.map")
 SERVICE_NAME = "ews5year"
@@ -1104,33 +1113,6 @@ f_new.close()
 LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA", ".tif", "no", True)
 #print "debug: at 23"
 
-###
-### Create the ewstruecolor.map file:
-###
-LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/TrueColorData", "truecolor.layer.tpl.map", "EFETAC-NASA_TC", ".img", "no", False)
-template = Template("ewstruecolor.tpl.map")
-f_new = openMapfileForWriting("ewstruecolor.map")
-SERVICE_NAME = "truecolor"
-WCS_LABEL = "Truecolor WCS"
-#print LAYERS
-f_new.write( template.render( {
-            'DATA_DIR'              : DATA_DIR,
-            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "truecolor"),
-            'LAYERS'                : LAYERS,
-            'WMS_SRS'               : "EPSG:4326 EPSG:2163 EPSG:3785 EPSG:900913",
-            'MAPFILE_PROJECTION'    : '"init=epsg:3785"',
-            'SERVICE_NAME'          : SERVICE_NAME,
-            'TEMP_FILE_PREFIX'      : "ms_%s" % (SERVICE_NAME),
-            'MAPFILE'               : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
-            'OWS_TITLE'             : SERVICE_NAME,
-            'OWS_ABSTRACT'          : SERVICE_NAME,
-            'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
-            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-            'MS_ERRORFILE'          : "../var/log/%s.log" % (SERVICE_NAME),
-            'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
-            'WCS_LABEL'             : WCS_LABEL            
-            } ) )
-f_new.close()
 
 #print "debug: at 24"
 
@@ -1377,3 +1359,133 @@ for mapfile in mapfilesWritten:
 f_out.write(interp("""</ul>\n"""))
 
 f_out.close()
+
+
+
+#### FORWARN II #####
+
+ALL_PRODUCT_TYPES = PRODUCT_TYPES.copy()
+ALL_PRODUCT_TYPES.update(LEGACY_PRODUCT_TYPES)
+
+def makeBundledMapfileFor(source, product_type, cgi_endpoint):
+    print cgi_endpoint + '.map'
+    groupName = SOURCES[source]+ALL_PRODUCT_TYPES[product_type]
+    LAYERS_NOMASK = getLayersNoMask(os.path.join(FW2_DATA_DIR, source, product_type), "ews_gen.layer.tpl.map", groupName, ".img", "no", False)
+    template = Template("ews_gen.tpl.map")
+    f_new = openMapfileForWriting('{0}.map'.format(cgi_endpoint))
+    SERVICE_NAME = cgi_endpoint
+    WCS_LABEL = groupName
+    f_new.write( template.render( {
+                'DATA_DIR'              : DATA_DIR,
+                'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+                'LAYERS'                : LAYERS_NOMASK,
+                'WMS_SRS'               : "EPSG:4326 EPSG:2163 EPSG:3785 EPSG:900913",
+                'MAPFILE_PROJECTION'    : '"init=epsg:3785"',
+                'SERVICE_NAME'          : SERVICE_NAME,
+                'TEMP_FILE_PREFIX'      : "ms_%s" % (SERVICE_NAME),
+                'MAPFILE'               : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+                'OWS_TITLE'             : "NEMAC %s WMS" % (SERVICE_NAME),
+                'OWS_ABSTRACT'          : "NEMAC %s WMS" % (SERVICE_NAME),
+                'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (SERVICE_NAME),
+                'SERVICE_URL'           : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+                'MS_ERRORFILE'          : "../var/log/%s.log" % (SERVICE_NAME),
+                'WFS_NAMESPACE_PREFIX'  : SERVICE_NAME, 
+                'WCS_LABEL'             : WCS_LABEL
+                } ) )
+    f_new.close()
+
+
+
+def makeLID(source, product_type, date_string, sources=SOURCES, product_types=ALL_PRODUCT_TYPES):
+  return '_'.join([
+    'FW',
+    date_string,
+    product_types[product_type],
+    sources[source]
+  ])
+
+def makeFW2MapfilesFor(source, p_type):
+  pwd = os.path.join(FW2_DATA_DIR, source, p_type)
+  if not os.path.exists(pwd):
+    return
+
+  for f in os.listdir(pwd):
+    products = []
+
+    if not f.endswith(('tif', 'img')):
+        continue
+
+    print f
+
+    f_path = os.path.join(pwd, f)
+    
+    # Assume a string of 8 digits in the filename is the date formatted as %Y%m%d
+    match = re.search(r"(\d{8})", f)
+    if not match:
+      continue
+
+    date_string = str(match.groups(1)[0])
+
+    lid = makeLID(source, p_type, date_string)
+    proj = getproj(f_path)
+    if p_type == 'X_LC_PCTPROGRESS':
+      colormapline = 'INCLUDE "percent_progress_color_table.cmap"'
+    else:
+      colormapline = 'INCLUDE "new-forwarn2-standard.cmap"'
+    products.append({
+             'NAME'            : lid,
+             'PROJ'            : formatproj(proj,10),
+             'DATA'            : f_path,
+             'COLORMAPLINE'    : colormapline,
+             'TITLE'           : lid,
+             'ABSTRACT'        : lid,
+             'MASK'            : ''
+    })
+    for mask in ewsMask:
+      products.append({
+               'NAME'            : lid + mask['name'],
+               'PROJ'            : formatproj(proj,10),
+               'DATA'            : f_path,
+               'COLORMAPLINE'    : colormapline,
+               'TITLE'           : lid + mask['name'],
+               'ABSTRACT'        : lid + mask['name'],
+               'MASK'            : 'MASK ' + mask['name']
+      })
+
+    layerTemplate = Template('ews_gen.layer.tpl.map')
+    layers = ""
+
+    for props in products:
+        layers = layers + layerTemplate.render(props)    
+        mapTemplate = Template("ews.map.tmpl")
+        SERVICE_NAME = "forwarn_compare"
+        f_new = open("forwarn2_maps/"+lid+".map", "w")
+        f_new.write(mapTemplate.render({
+              'DATA_DIR'                : DATA_DIR,
+              'LAYERS'                  : layers,
+              'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
+              'WMS_SRS'                 : "EPSG:3785 EPSG:4326",
+              'MAPFILE_PROJECTION'      : '"init=epsg:3785"',
+              'TEMP_FILE_PREFIX'        : "ms_%s" % (SERVICE_NAME),
+              'OWS_TITLE'               : "NEMAC %s WMS" % (SERVICE_NAME),
+              'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
+              'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+          })
+        )
+        f_new.close()                    
+
+
+def makeForWarn2Maps():
+  for s in SOURCES:
+    for p in ALL_PRODUCT_TYPES:
+        makeFW2MapfilesFor(s, p)
+
+
+makeForWarn2Maps()
+
+for s in FW2_SOURCES:
+    for p in PRODUCT_TYPES:
+        if s == 'ForWarn2_Sqrt' and p == 'X_LC_PCTPROGRESS':
+            continue
+        cgi_endpoint = '{0}_{1}'.format(FW2_SOURCES[s], PRODUCT_TYPES[p])
+        makeBundledMapfileFor(s, p, cgi_endpoint)

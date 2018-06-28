@@ -1,0 +1,171 @@
+         166433114 function calls (166432988 primitive calls) in 108.465 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.063    0.063  108.465  108.465 makeviewerconfig:3(<module>)
+     7745   39.833    0.005  104.716    0.014 makeviewerconfig:107(getLID)
+        8    0.414    0.052   55.557    6.945 makeviewerconfig:174(getNRTLayers)
+     7836   12.984    0.002   36.478    0.005 {sorted}
+ 33027859   15.536    0.000   23.494    0.000 makeviewerconfig:119(<lambda>)
+ 33027859   13.288    0.000   13.288    0.000 {method 'split' of 'str' objects}
+ 66065891   12.954    0.000   12.954    0.000 {method 'append' of 'list' objects}
+ 33035650    7.961    0.000    7.961    0.000 {method 'lower' of 'str' objects}
+        7    0.059    0.008    5.101    0.729 makeviewerconfig:658(get2008NRTLayers)
+        7    0.057    0.008    4.854    0.693 makeviewerconfig:388(get2013NRTLayers)
+        7    0.058    0.008    4.852    0.693 makeviewerconfig:604(get2009NRTLayers)
+        7    0.057    0.008    4.845    0.692 makeviewerconfig:712(get2007NRTLayers)
+        7    0.057    0.008    4.841    0.692 makeviewerconfig:766(get2006NRTLayers)
+        7    0.057    0.008    4.841    0.692 makeviewerconfig:280(get2015NRTLayers)
+        7    0.057    0.008    4.811    0.687 makeviewerconfig:334(get2014NRTLayers)
+        7    0.052    0.007    4.203    0.600 makeviewerconfig:442(get2012NRTLayers)
+        7    0.052    0.007    4.173    0.596 makeviewerconfig:550(get2010NRTLayers)
+        7    0.052    0.007    4.170    0.596 makeviewerconfig:496(get2011NRTLayers)
+        7    0.039    0.006    2.735    0.391 makeviewerconfig:226(get2016NRTLayers)
+        1    0.026    0.026    2.463    2.463 makeviewerconfig:143(getDRTLayers)
+     7745    1.868    0.000    1.868    0.000 makeviewerconfig:97(checkListForItem)
+   159359    0.188    0.000    0.788    0.000 re.py:144(sub)
+        1    0.582    0.582    0.582    0.582 {posix.system}
+       85    0.492    0.006    0.492    0.006 {posix.listdir}
+   244097    0.264    0.000    0.395    0.000 re.py:226(_compile)
+   159367    0.340    0.000    0.351    0.000 {method 'sub' of '_sre.SRE_Pattern' objects}
+        4    0.285    0.071    0.287    0.072 makeviewerconfig:37(__init__)
+    45368    0.056    0.000    0.208    0.000 re.py:139(search)
+   248238    0.124    0.000    0.124    0.000 {method 'get' of 'dict' objects}
+     7747    0.122    0.000    0.122    0.000 {method 'close' of 'file' objects}
+    35255    0.041    0.000    0.121    0.000 re.py:134(match)
+     7748    0.088    0.000    0.088    0.000 {open}
+     6434    0.020    0.000    0.083    0.000 LegendConfig.py:8(getLegend)
+    45368    0.067    0.000    0.067    0.000 {method 'search' of '_sre.SRE_Pattern' objects}
+     7745    0.041    0.000    0.064    0.000 makeviewerconfig:90(next_alpha)
+        1    0.012    0.012    0.030    0.030 {built-in method strptime}
+    35256    0.028    0.000    0.028    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+    37861    0.025    0.000    0.025    0.000 {method 'rstrip' of 'str' objects}
+    77860    0.025    0.000    0.025    0.000 {method 'endswith' of 'str' objects}
+     7746    0.020    0.000    0.020    0.000 {method 'reverse' of 'list' objects}
+     3494    0.019    0.000    0.019    0.000 {method 'strftime' of 'datetime.date' objects}
+     7764    0.018    0.000    0.018    0.000 makeviewerconfig:46(render)
+    49339    0.018    0.000    0.018    0.000 {method 'replace' of 'str' objects}
+        1    0.015    0.015    0.017    0.017 _strptime.py:12(<module>)
+     4106    0.005    0.000    0.016    0.000 re.py:164(split)
+     4114    0.005    0.000    0.010    0.000 re.py:268(_subx)
+       31    0.000    0.000    0.009    0.000 sre_compile.py:496(compile)
+     7746    0.006    0.000    0.006    0.000 {chr}
+     4114    0.003    0.000    0.005    0.000 re.py:248(_compile_repl)
+17533/17519    0.005    0.000    0.005    0.000 {len}
+       31    0.000    0.000    0.005    0.000 sre_parse.py:676(parse)
+     4106    0.005    0.000    0.005    0.000 {method 'split' of '_sre.SRE_Pattern' objects}
+    37/31    0.000    0.000    0.005    0.000 sre_parse.py:302(_parse_sub)
+    45/33    0.001    0.000    0.004    0.000 sre_parse.py:380(_parse)
+     8358    0.004    0.000    0.004    0.000 {ord}
+       31    0.000    0.000    0.003    0.000 sre_compile.py:481(_code)
+     7745    0.003    0.000    0.003    0.000 {method 'upper' of 'str' objects}
+      769    0.001    0.000    0.002    0.000 sre_parse.py:202(get)
+    57/31    0.001    0.000    0.002    0.000 sre_compile.py:33(_compile)
+        9    0.000    0.000    0.002    0.000 re.py:188(compile)
+        1    0.002    0.002    0.002    0.002 {method 'write' of 'file' objects}
+        1    0.000    0.000    0.001    0.001 _strptime.py:179(__init__)
+      837    0.001    0.000    0.001    0.000 sre_parse.py:183(__next)
+     4106    0.001    0.000    0.001    0.000 {method 'strip' of 'str' objects}
+       31    0.000    0.000    0.001    0.000 sre_compile.py:362(_compile_info)
+        1    0.000    0.000    0.001    0.001 _strptime.py:295(_strptime)
+        1    0.000    0.000    0.001    0.001 _strptime.py:263(compile)
+    66/40    0.001    0.000    0.001    0.000 sre_parse.py:141(getwidth)
+        4    0.000    0.000    0.001    0.000 _strptime.py:240(pattern)
+      642    0.000    0.000    0.001    0.000 sre_parse.py:139(append)
+        1    0.000    0.000    0.001    0.001 _strptime.py:50(__init__)
+       13    0.000    0.000    0.000    0.000 sre_compile.py:179(_compile_charset)
+       13    0.000    0.000    0.000    0.000 sre_compile.py:208(_optimize_charset)
+        1    0.000    0.000    0.000    0.000 {built-in method today}
+       60    0.000    0.000    0.000    0.000 re.py:274(filter)
+        6    0.000    0.000    0.000    0.000 _strptime.py:221(__seqToRE)
+        1    0.000    0.000    0.000    0.000 calendar.py:6(<module>)
+       60    0.000    0.000    0.000    0.000 sre_parse.py:791(expand_template)
+   108/66    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 _strptime.py:96(__calc_month)
+      114    0.000    0.000    0.000    0.000 sre_parse.py:131(__getitem__)
+       34    0.000    0.000    0.000    0.000 sre_parse.py:179(__init__)
+      250    0.000    0.000    0.000    0.000 {isinstance}
+       48    0.000    0.000    0.000    0.000 _strptime.py:236(<genexpr>)
+       26    0.000    0.000    0.000    0.000 calendar.py:55(__getitem__)
+       42    0.000    0.000    0.000    0.000 re.py:204(escape)
+        1    0.000    0.000    0.000    0.000 _strptime.py:88(__calc_weekday)
+      115    0.000    0.000    0.000    0.000 sre_parse.py:196(match)
+      125    0.000    0.000    0.000    0.000 {min}
+       14    0.000    0.000    0.000    0.000 calendar.py:74(__getitem__)
+        1    0.000    0.000    0.000    0.000 _strptime.py:115(__calc_date_time)
+       62    0.000    0.000    0.000    0.000 sre_compile.py:475(isstring)
+        4    0.000    0.000    0.000    0.000 genericpath.py:15(exists)
+       31    0.000    0.000    0.000    0.000 {_sre.compile}
+        3    0.000    0.000    0.000    0.000 sre_parse.py:704(parse_template)
+      115    0.000    0.000    0.000    0.000 makeviewerconfig:28(choose)
+        4    0.000    0.000    0.000    0.000 {posix.stat}
+        3    0.000    0.000    0.000    0.000 _strptime.py:27(_getlang)
+       57    0.000    0.000    0.000    0.000 sre_parse.py:91(__init__)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:259(_mk_bitmap)
+        3    0.000    0.000    0.000    0.000 locale.py:514(getlocale)
+       50    0.000    0.000    0.000    0.000 sre_parse.py:127(__len__)
+       32    0.000    0.000    0.000    0.000 sre_compile.py:52(fixup)
+        9    0.000    0.000    0.000    0.000 sre_compile.py:355(_simple)
+        1    0.000    0.000    0.000    0.000 getopt.py:15(<module>)
+        3    0.000    0.000    0.000    0.000 locale.py:415(_parse_localename)
+       31    0.000    0.000    0.000    0.000 sre_parse.py:68(__init__)
+        3    0.000    0.000    0.000    0.000 locale.py:347(normalize)
+       60    0.000    0.000    0.000    0.000 {method 'group' of '_sre.SRE_Match' objects}
+        1    0.000    0.000    0.000    0.000 getopt.py:51(getopt)
+       47    0.000    0.000    0.000    0.000 {_sre.getlower}
+        1    0.000    0.000    0.000    0.000 _strptime.py:160(__calc_timezone)
+        1    0.000    0.000    0.000    0.000 calendar.py:47(_localized_month)
+        8    0.000    0.000    0.000    0.000 {time.strftime}
+        6    0.000    0.000    0.000    0.000 sre_parse.py:258(_escape)
+        5    0.000    0.000    0.000    0.000 sre_parse.py:226(_class_escape)
+        1    0.000    0.000    0.000    0.000 getopt.py:187(do_shorts)
+       30    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 _strptime.py:103(__calc_am_pm)
+        1    0.000    0.000    0.000    0.000 {time.tzset}
+       31    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        6    0.000    0.000    0.000    0.000 sre_parse.py:73(opengroup)
+        2    0.000    0.000    0.000    0.000 getopt.py:202(short_has_arg)
+       16    0.000    0.000    0.000    0.000 {method 'index' of 'str' objects}
+       17    0.000    0.000    0.000    0.000 {range}
+        6    0.000    0.000    0.000    0.000 sre_parse.py:84(closegroup)
+       11    0.000    0.000    0.000    0.000 {max}
+        1    0.000    0.000    0.000    0.000 calendar.py:66(_localized_day)
+        3    0.000    0.000    0.000    0.000 sre_parse.py:217(isname)
+        1    0.000    0.000    0.000    0.000 LegendConfig.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 calendar.py:126(Calendar)
+        9    0.000    0.000    0.000    0.000 sre_parse.py:135(__setitem__)
+        3    0.000    0.000    0.000    0.000 {method 'toordinal' of 'datetime.date' objects}
+       14    0.000    0.000    0.000    0.000 sre_compile.py:25(_identityfunction)
+        3    0.000    0.000    0.000    0.000 {_locale.setlocale}
+        3    0.000    0.000    0.000    0.000 sre_parse.py:711(literal)
+        4    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'groupdict' of '_sre.SRE_Match' objects}
+        1    0.000    0.000    0.000    0.000 calendar.py:259(TextCalendar)
+        1    0.000    0.000    0.000    0.000 Config.py:2(<module>)
+        1    0.000    0.000    0.000    0.000 calendar.py:132(__init__)
+        1    0.000    0.000    0.000    0.000 calendar.py:376(HTMLCalendar)
+        1    0.000    0.000    0.000    0.000 _strptime.py:31(LocaleTime)
+        3    0.000    0.000    0.000    0.000 sre_parse.py:211(isident)
+        6    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 calendar.py:21(IllegalMonthError)
+        3    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 calendar.py:28(IllegalWeekdayError)
+        1    0.000    0.000    0.000    0.000 calendar.py:488(TimeEncoding)
+        1    0.000    0.000    0.000    0.000 calendar.py:536(LocaleHTMLCalendar)
+        3    0.000    0.000    0.000    0.000 _strptime.py:212(<genexpr>)
+        1    0.000    0.000    0.000    0.000 calendar.py:501(LocaleTextCalendar)
+        1    0.000    0.000    0.000    0.000 _strptime.py:176(TimeRE)
+        2    0.000    0.000    0.000    0.000 calendar.py:71(__init__)
+        1    0.000    0.000    0.000    0.000 calendar.py:138(setfirstweekday)
+        1    0.000    0.000    0.000    0.000 {method 'iterkeys' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 makeviewerconfig:36(Template)
+        1    0.000    0.000    0.000    0.000 getopt.py:38(GetoptError)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {method 'weekday' of 'datetime.date' objects}
+        1    0.000    0.000    0.000    0.000 {method 'insert' of 'list' objects}
+        2    0.000    0.000    0.000    0.000 calendar.py:50(<lambda>)
+        2    0.000    0.000    0.000    0.000 calendar.py:52(__init__)
+        1    0.000    0.000    0.000    0.000 {thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 {method '__getitem__' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'end' of '_sre.SRE_Match' objects}
