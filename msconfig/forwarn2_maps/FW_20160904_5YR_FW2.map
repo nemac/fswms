@@ -108,6 +108,7 @@ MAP
             "wcs_rangeset_name"     "FW_20160904_5YR_FW2"
             "wcs_rangeset_label"    "FW_20160904_5YR_FW2"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         
     END # end LAYER
@@ -139,6 +140,7 @@ MAP
             "wcs_rangeset_name"     "FW_20160904_5YR_FW2MaskForForest"
             "wcs_rangeset_label"    "FW_20160904_5YR_FW2MaskForForest"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForForest
     END # end LAYER
@@ -170,6 +172,7 @@ MAP
             "wcs_rangeset_name"     "FW_20160904_5YR_FW2MaskForAgriculture"
             "wcs_rangeset_label"    "FW_20160904_5YR_FW2MaskForAgriculture"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForAgriculture
     END # end LAYER
@@ -201,6 +204,7 @@ MAP
             "wcs_rangeset_name"     "FW_20160904_5YR_FW2MaskForConiferForest"
             "wcs_rangeset_label"    "FW_20160904_5YR_FW2MaskForConiferForest"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForConiferForest
     END # end LAYER
@@ -232,6 +236,7 @@ MAP
             "wcs_rangeset_name"     "FW_20160904_5YR_FW2MaskForDeciduousForest"
             "wcs_rangeset_label"    "FW_20160904_5YR_FW2MaskForDeciduousForest"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForDeciduousForest
     END # end LAYER
@@ -263,6 +268,7 @@ MAP
             "wcs_rangeset_name"     "FW_20160904_5YR_FW2MaskForGrass"
             "wcs_rangeset_label"    "FW_20160904_5YR_FW2MaskForGrass"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForGrass
     END # end LAYER
@@ -294,6 +300,7 @@ MAP
             "wcs_rangeset_name"     "FW_20160904_5YR_FW2MaskForMixedForest"
             "wcs_rangeset_label"    "FW_20160904_5YR_FW2MaskForMixedForest"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForMixedForest
     END # end LAYER
@@ -325,6 +332,7 @@ MAP
             "wcs_rangeset_name"     "FW_20160904_5YR_FW2MaskForNonVegetated"
             "wcs_rangeset_label"    "FW_20160904_5YR_FW2MaskForNonVegetated"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForNonVegetated
     END # end LAYER
@@ -356,6 +364,7 @@ MAP
             "wcs_rangeset_name"     "FW_20160904_5YR_FW2MaskForShrubland"
             "wcs_rangeset_label"    "FW_20160904_5YR_FW2MaskForShrubland"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForShrubland
     END # end LAYER
@@ -387,6 +396,7 @@ MAP
             "wcs_rangeset_name"     "FW_20160904_5YR_FW2MaskForUrban"
             "wcs_rangeset_label"    "FW_20160904_5YR_FW2MaskForUrban"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForUrban
     END # end LAYER
@@ -418,6 +428,7 @@ MAP
             "wcs_rangeset_name"     "FW_20160904_5YR_FW2MaskForWetland"
             "wcs_rangeset_label"    "FW_20160904_5YR_FW2MaskForWetland"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForWetland
     END # end LAYER

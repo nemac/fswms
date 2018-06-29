@@ -322,7 +322,7 @@ linkgroups = [
     #X_LC_1YEAR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_1YEAR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -335,7 +335,7 @@ linkgroups = [
     #X_LC_ALC_1YR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_ALC_1YR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -348,7 +348,7 @@ linkgroups = [
     #X_LC_3YEAR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_3YEAR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -361,7 +361,7 @@ linkgroups = [
     #X_LC_5YEAR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_5YEAR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -374,7 +374,7 @@ linkgroups = [
     #X_LC_90_10_YR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_90_10_YR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -387,7 +387,7 @@ linkgroups = [
     #X_LC_MEDIAN_ALL_YR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_MEDIAN_ALL_YR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -400,7 +400,7 @@ linkgroups = [
     #X_LC_PCTPROGRESS
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2", "X_LC_PCTPROGRESS"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -416,7 +416,7 @@ linkgroups = [
     #X_LC_1YEAR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_1YEAR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -429,7 +429,7 @@ linkgroups = [
     #X_LC_ALC_1YR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_ALC_1YR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -442,7 +442,7 @@ linkgroups = [
     #X_LC_3YEAR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_3YEAR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -455,7 +455,7 @@ linkgroups = [
     #X_LC_5YEAR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_5YEAR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -468,7 +468,7 @@ linkgroups = [
     #X_LC_90_10_YR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_90_10_YR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -481,7 +481,7 @@ linkgroups = [
     #X_LC_MEDIAN_ALL_YR
     {
         'srcdir'             : os.path.join(FW2_DATA_DIR, "ForWarn2_Sqrt", "X_LC_MEDIAN_ALL_YR"), 
-        'regex'              : r'/(\d{8})*\.img$',
+        'regex'              : r'.*(\d{8}).*\.img$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]

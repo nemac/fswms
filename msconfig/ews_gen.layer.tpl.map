@@ -18,6 +18,7 @@
             "wcs_rangeset_name"     "%(TITLE)s"
             "wcs_rangeset_label"    "%(TITLE)s"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/%(LAYER_GROUP_NAME)s"
         END  # end METADATA
         %(MASK)s
     END # end LAYER

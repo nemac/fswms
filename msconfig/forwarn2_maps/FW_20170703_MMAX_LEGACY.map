@@ -108,6 +108,7 @@ MAP
             "wcs_rangeset_name"     "FW_20170703_MMAX_LEGACY"
             "wcs_rangeset_label"    "FW_20170703_MMAX_LEGACY"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         
     END # end LAYER
@@ -139,6 +140,7 @@ MAP
             "wcs_rangeset_name"     "FW_20170703_MMAX_LEGACYMaskForForest"
             "wcs_rangeset_label"    "FW_20170703_MMAX_LEGACYMaskForForest"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForForest
     END # end LAYER
@@ -170,6 +172,7 @@ MAP
             "wcs_rangeset_name"     "FW_20170703_MMAX_LEGACYMaskForAgriculture"
             "wcs_rangeset_label"    "FW_20170703_MMAX_LEGACYMaskForAgriculture"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForAgriculture
     END # end LAYER
@@ -201,6 +204,7 @@ MAP
             "wcs_rangeset_name"     "FW_20170703_MMAX_LEGACYMaskForConiferForest"
             "wcs_rangeset_label"    "FW_20170703_MMAX_LEGACYMaskForConiferForest"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForConiferForest
     END # end LAYER
@@ -232,6 +236,7 @@ MAP
             "wcs_rangeset_name"     "FW_20170703_MMAX_LEGACYMaskForDeciduousForest"
             "wcs_rangeset_label"    "FW_20170703_MMAX_LEGACYMaskForDeciduousForest"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForDeciduousForest
     END # end LAYER
@@ -263,6 +268,7 @@ MAP
             "wcs_rangeset_name"     "FW_20170703_MMAX_LEGACYMaskForGrass"
             "wcs_rangeset_label"    "FW_20170703_MMAX_LEGACYMaskForGrass"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForGrass
     END # end LAYER
@@ -294,6 +300,7 @@ MAP
             "wcs_rangeset_name"     "FW_20170703_MMAX_LEGACYMaskForMixedForest"
             "wcs_rangeset_label"    "FW_20170703_MMAX_LEGACYMaskForMixedForest"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForMixedForest
     END # end LAYER
@@ -325,6 +332,7 @@ MAP
             "wcs_rangeset_name"     "FW_20170703_MMAX_LEGACYMaskForNonVegetated"
             "wcs_rangeset_label"    "FW_20170703_MMAX_LEGACYMaskForNonVegetated"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForNonVegetated
     END # end LAYER
@@ -356,6 +364,7 @@ MAP
             "wcs_rangeset_name"     "FW_20170703_MMAX_LEGACYMaskForShrubland"
             "wcs_rangeset_label"    "FW_20170703_MMAX_LEGACYMaskForShrubland"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForShrubland
     END # end LAYER
@@ -387,6 +396,7 @@ MAP
             "wcs_rangeset_name"     "FW_20170703_MMAX_LEGACYMaskForUrban"
             "wcs_rangeset_label"    "FW_20170703_MMAX_LEGACYMaskForUrban"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForUrban
     END # end LAYER
@@ -418,6 +428,7 @@ MAP
             "wcs_rangeset_name"     "FW_20170703_MMAX_LEGACYMaskForWetland"
             "wcs_rangeset_label"    "FW_20170703_MMAX_LEGACYMaskForWetland"
             "gml_include_items"     "value_0"
+            "wms_layer_group"       "/"
         END  # end METADATA
         MASK MaskForWetland
     END # end LAYER
