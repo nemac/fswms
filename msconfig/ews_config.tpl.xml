@@ -154,71 +154,6 @@
 
 <wmsLayers>
 
-	<wmsGroup gid="G15" name="Legacy_Products" label="ForWarn Legacy Products">
-
-		<wmsSubgroup label="ForWarn Legacy Near-Real-Time Change Maps">
-		</wmsSubgroup>
-
-		<wmsSubgroup label="From Prior Year">
-		%(FW2_CURRENT_LEGACY_LAYERS__PRIOR_YEAR)s
-
-		</wmsSubgroup>
-
-		<wmsSubgroup label="Early Detect (Recent Priority From Prior Year)">
-        %(FW2_CURRENT_LEGACY_LAYERS__ALC)s
-
-		</wmsSubgroup>
-
-		<wmsSubgroup label="From Prior 3-Year Maximum">
-        %(FW2_CURRENT_LEGACY_LAYERS__3_YEAR)s
-
-		</wmsSubgroup>
-
-		<wmsSubgroup label="From Prior 5-Year Maximum">
-        %(FW2_CURRENT_LEGACY_LAYERS__5_YEAR)s
-		</wmsSubgroup>
-
-		<wmsSubgroup label="From All-Year Max Baseline">
-        %(FW2_CURRENT_LEGACY_LAYERS__ALLYEAR)s
-
-		</wmsSubgroup>
-
-		<wmsSubgroup label="From All-Year Phenotype Max Baseline">
-        %(FW2_CURRENT_LEGACY_LAYERS__MUC)s
-
-		</wmsSubgroup>
-
-		<wmsSubgroup label="From All-Year Mean (of Maxes) Baseline">
-        %(FW2_CURRENT_LEGACY_LAYERS__MMAX)s
-
-		</wmsSubgroup>
-
-
-
-	</wmsGroup>
-
-	<wmsGroup gid="G16" name="ForWarn2_Compare_Products" label="ForWarn II Comparisons">
-
-
-		<wmsSubgroup label="From Prior 1-Year Maximum">
-
-			%(FW2_COMPARE_LAYERS__PRIOR_YEAR)s
-		</wmsSubgroup>
-
-
-		<wmsSubgroup label="Early Detect (Recent Priority From Prior Year)">
-
-			%(FW2_COMPARE_LAYERS__ALC)s
-		</wmsSubgroup>
-
-		<wmsSubgroup label="From Prior 3-Year Maximum">
-
-			%(FW2_COMPARE_LAYERS__3_YEAR)s
-		</wmsSubgroup>
-
-	</wmsGroup>
-
-
 	<wmsGroup gid="G01" name="US_Jurisdictions" label="Boundaries">
 		<wmsSubgroup label="Boundaries">
 			<wmsLayer
@@ -1022,6 +957,7 @@
 		</wmsSubgroup>
 	</wmsGroup>
 
+
 	<wmsGroup gid="G04" name="MODIS_Change_Detection_Products" label="ForWarn II Near-Real-Time Change Maps">
 
 		<wmsSubgroup label="From Prior Year">
@@ -1064,6 +1000,70 @@
 			%(FW2_CURRENT_LAYERS__PCTPROGRESS)s
 
 		</wmsSubgroup>
+		
+	<wmsGroup gid="G15" name="Legacy_Products" label="ForWarn Legacy Products">
+
+		<wmsSubgroup label="ForWarn Legacy Near-Real-Time Change Maps">
+		</wmsSubgroup>
+
+		<wmsSubgroup label="From Prior Year">
+		%(FW2_CURRENT_LEGACY_LAYERS__PRIOR_YEAR)s
+
+		</wmsSubgroup>
+
+		<wmsSubgroup label="Early Detect (Recent Priority From Prior Year)">
+        %(FW2_CURRENT_LEGACY_LAYERS__ALC)s
+
+		</wmsSubgroup>
+
+		<wmsSubgroup label="From Prior 3-Year Maximum">
+        %(FW2_CURRENT_LEGACY_LAYERS__3_YEAR)s
+
+		</wmsSubgroup>
+
+		<wmsSubgroup label="From Prior 5-Year Maximum">
+        %(FW2_CURRENT_LEGACY_LAYERS__5_YEAR)s
+		</wmsSubgroup>
+
+		<wmsSubgroup label="From All-Year Max Baseline">
+        %(FW2_CURRENT_LEGACY_LAYERS__ALLYEAR)s
+
+		</wmsSubgroup>
+
+		<wmsSubgroup label="From All-Year Phenotype Max Baseline">
+        %(FW2_CURRENT_LEGACY_LAYERS__MUC)s
+
+		</wmsSubgroup>
+
+		<wmsSubgroup label="From All-Year Mean (of Maxes) Baseline">
+        %(FW2_CURRENT_LEGACY_LAYERS__MMAX)s
+
+		</wmsSubgroup>
+
+
+
+	</wmsGroup>
+
+	<wmsGroup gid="G16" name="ForWarn2_Compare_Products" label="ForWarn II Comparisons">
+
+
+		<wmsSubgroup label="From Prior 1-Year Maximum">
+
+			%(FW2_COMPARE_LAYERS__PRIOR_YEAR)s
+		</wmsSubgroup>
+
+
+		<wmsSubgroup label="Early Detect (Recent Priority From Prior Year)">
+
+			%(FW2_COMPARE_LAYERS__ALC)s
+		</wmsSubgroup>
+
+		<wmsSubgroup label="From Prior 3-Year Maximum">
+
+			%(FW2_COMPARE_LAYERS__3_YEAR)s
+		</wmsSubgroup>
+
+	</wmsGroup>
 
 
 	</wmsGroup>
