@@ -1371,19 +1371,31 @@ f_out.close()
 ALL_PRODUCT_TYPES = PRODUCT_TYPES.copy()
 ALL_PRODUCT_TYPES.update(LEGACY_PRODUCT_TYPES)
 
-def getFW2Layers(dataDir, product_type, layerTemplateName, groupName, fileExt, wcs, maskBool):
+
+def getFW2Layers(dataDir, product_type, layerTemplateName, fileExt, wcs, maskBool, source='', period=''):
     tifList  = []
-    for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
+    files = sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False)
+
+    if period:
+        files = list(filter(lambda x: period in x, files))
+
+    for tif in files:
         dynaList  = []
-        try:        
+        try:
             tif = re.sub('^' + dataDir + '/', '', tif)
             tif_fullpath = dataDir + '/' + tif;
             proj = getproj(tif_fullpath)
-            layerName = re.sub(r'^.*/', '', tif)
+
+            if period:
+                layerName = '{0}_{1}_{2}'.format(SOURCES[source], PRODUCT_TYPES[product_type], period)
+            else:
+                layerName = re.sub(r'^.*/', '', tif)
+
             if product_type == 'X_LC_PCTPROGRESS':
               colormapline = 'INCLUDE "percent_progress_color_table.cmap"'
             else:
               colormapline = 'INCLUDE "new-forwarn2-standard.cmap"'
+
             tifList.append({ 'TIF'             : tif,
                              'PROJVALID'       : len(proj) > 0,
                              'PROJ'            : formatproj(proj,10),
@@ -1395,9 +1407,10 @@ def getFW2Layers(dataDir, product_type, layerTemplateName, groupName, fileExt, w
                              'ABSTRACT'        : layerName,
                              'COLORMAPLINE'    : colormapline,
                              'MASK'            : '',
-                             'LAYER_GROUP_NAME': layerName
                              })
+
             layerTitles[layerName] = layerName
+
             if maskBool:
                 for mask in ewsMask:
                     tifList.append({ 'TIF'             : tif,
@@ -1415,21 +1428,58 @@ def getFW2Layers(dataDir, product_type, layerTemplateName, groupName, fileExt, w
                                      })
             layerTemplate = Template(layerTemplateName)
             layers = ""
+
         except Exception as e:
             print e
             continue
+
     layerTemplate = Template(layerTemplateName)
     layers = ""
+
     for tifdict in tifList:
         if tifdict['PROJVALID']:
             layers = layers + layerTemplate.render(tifdict)    
+
     return layers
+
+
+def makeCurrentMapfilesFor(source, product_type):
+    path = os.path.join(VIEWER_LINK_TARGET_DIR, source, product_type)
+    periods = [ 'current', 'previous1', 'previous2' ]
+    for period in periods:
+        LAYERS = getFW2Layers(path, product_type, "ews_gen.layer.tpl.map", ".img", "no", True, source, period)
+        template = Template("ews_gen.tpl.map")
+        layerName = '{0}_{1}_{2}'.format(SOURCES[source], ALL_PRODUCT_TYPES[product_type], period)
+        mapfile_path = "forwarn2_maps/"+layerName+".map"
+        try:
+            os.remove(mapfile_path)
+        except:
+            pass
+        f_new = open(mapfile_path, "w")
+        f_new.write( template.render( {
+                    'DATA_DIR'              : DATA_DIR,
+                    'SERVICE_URL'           : "%s/%s" % (SERVER_URL, 'forwarn_compare'),
+                    'LAYERS'                : LAYERS,
+                    'WMS_SRS'               : "EPSG:4326 EPSG:2163 EPSG:3785 EPSG:900913",
+                    'MAPFILE_PROJECTION'    : '"init=epsg:3785"',
+                    'SERVICE_NAME'          : 'forwarn_compare',
+                    'TEMP_FILE_PREFIX'      : "ms_%s" % (layerName),
+                    'MAPFILE'               : "%s/msconfig/%s.map" % (BASE_DIR, layerName),
+                    'OWS_TITLE'             : "NEMAC %s WMS" % (layerName),
+                    'OWS_ABSTRACT'          : "NEMAC %s WMS" % (layerName),
+                    'OWS_KEYWORDLIST'       : "mapserver,ogc,%s" % (layerName),
+                    'SERVICE_URL'           : "%s/%s" % (SERVER_URL, 'forwarn_compare'),
+                    'MS_ERRORFILE'          : "../var/log/%s.log" % (layerName),
+                    'WFS_NAMESPACE_PREFIX'  : layerName, 
+                    'WCS_LABEL'             : layerName
+                    } ) )
+        f_new.close()
 
 
 def makeBundledMapfileFor(source, product_type, cgi_endpoint):
     print cgi_endpoint + '.map'
     groupName = SOURCES[source]+ALL_PRODUCT_TYPES[product_type]
-    LAYERS = getFW2Layers(os.path.join(FW2_DATA_DIR, source, product_type), product_type, "ews_gen.layer.tpl.map", groupName, ".img", "no", True)
+    LAYERS = getFW2Layers(os.path.join(FW2_DATA_DIR, source, product_type), product_type, "ews_gen.layer.tpl.map", ".img", "no", True)
     template = Template("ews_gen.tpl.map")
     f_new = openMapfileForWriting('{0}.map'.format(cgi_endpoint))
     SERVICE_NAME = cgi_endpoint
@@ -1536,13 +1586,9 @@ def makeFW2MapfilesFor(source, p_type):
         f_new.close()                    
 
 
-def makeForWarn2Maps():
-  for s in SOURCES:
+for s in SOURCES:
     for p in ALL_PRODUCT_TYPES:
         makeFW2MapfilesFor(s, p)
-
-
-makeForWarn2Maps()
 
 for s in FW2_SOURCES:
     for p in PRODUCT_TYPES:
@@ -1550,3 +1596,4 @@ for s in FW2_SOURCES:
             continue
         cgi_endpoint = '{0}_{1}'.format(FW2_SOURCES[s], PRODUCT_TYPES[p])
         makeBundledMapfileFor(s, p, cgi_endpoint)
+        makeCurrentMapfilesFor(s, p)

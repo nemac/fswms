@@ -14,6 +14,7 @@ params = cgi.FieldStorage()
 #mapFile = open("../msconfig/dyna_maps/newfile.txt", "w")
 
 layerName = str(params.getvalue("LAYERS")).split('Mask')[0]
+layerName = layerName.rstrip('_')
 
 MAPFILE = '../msconfig/forwarn2_maps/'+layerName+'.map'
 
