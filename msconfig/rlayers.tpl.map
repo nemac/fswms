@@ -23,7 +23,7 @@ MAP
 
     # set top level projection
     PROJECTION
-        "init=epsg:3785"
+        "init=epsg:3857"
     END
 
     # image format options
@@ -59,7 +59,7 @@ MAP
             "wms_title"              "NEMAC landat vector WMS"
             "wms_abstract"           "NEMAC landat vector WMS"
             "wms_onlineresource"     "%(SERVICE_URL)s"
-            "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:2163 EPSG:900913"
+            "wms_srs"                "EPSG:3857 EPSG:4326 EPSG:2163 EPSG:900913"
         END
     END
 
