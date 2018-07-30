@@ -2500,19 +2500,7 @@
 		</wmsSubgroup>
 	</wmsGroup>
 	<wmsGroup gid="G08" name="Drought_Monitor" label="Drought Assessment Maps">
-		<wmsSubgroup label="North American Drought Monitor (NADM)">
-			<restLayer
-				lid="NADM"
-				name="Current Drought Monitor (NADM)"
-				visible="false"
-				url="https://gis.ncdc.noaa.gov/arcgis/rest/services/nadm/NADM/MapServer/export?TRANSPARENT=true&amp;layers=show%%3A5"
-				format="png">
-					<param name="IMAGESR" value="3857"></param>
-					<param name="BBOXSR" value="3857"></param>
-					<param name="layers" value="show%%3A5"></param>
-					<param name="layerDefs" value="{%%221%%22%%3A%%22YEAR_MONTH%%3D%%27201806%%27%%22%%2C%%222%%22%%3A%%22YEAR_MONTH%%3D%%27201806%%27%%22%%2C%%223%%22%%3A%%22YEAR_MONTH%%3D%%27201806%%27%%22%%2C%%225%%22%%3A%%22YEAR_MONTH%%3D%%27201806%%27%%22}"></param>
-			</restLayer>
-		</wmsSubgroup>
+
 		<wmsSubgroup label="US Drought Monitor (NDMC)">
 				<wmsLayer 
 					 lid="AHZ"
@@ -2526,6 +2514,10 @@
 					 legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
 		</wmsSubgroup>
 				%(DRT_LAYERS)s
+
+
+		%(NADM_DROUGHT_LAYERS)s
+
 
 	<wmsSubgroup label="CONUS VegDRI Veg. Moisture Status (USGS/NDMC; weekly eMODIS)">
 		<wmsLayer 
