@@ -10,12 +10,12 @@ cgitb.enable()
 
 params = cgi.FieldStorage()
 
-#MAPFILE = '../msconfig/ews.map'
-#mapFile = open("../msconfig/dyna_maps/newfile.txt", "w")
+# Workaround for integrating WMS service into ArcGIS Online
+if 'MAPFILE' in params:
+	mapfileName = str(params.getvalue("MAPFILE"))
+else:
+	mapfileName = str(params.getvalue("LAYERS")).split('Mask')[0].rstrip('_')
 
-layerName = str(params.getvalue("LAYERS")).split('Mask')[0]
-layerName = layerName.rstrip('_')
-
-MAPFILE = '../msconfig/forwarn2_maps/'+layerName+'.map'
+MAPFILE = '../msconfig/forwarn2_maps/'+mapfileName+'.map'
 
 CGIUtils.mapserv_inject_mapfile(MAPFILE, MAPSERVER_EXE)
