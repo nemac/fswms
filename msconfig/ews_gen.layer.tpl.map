@@ -12,13 +12,13 @@
         %(COLORMAPLINE)s
         METADATA
             "wms_title"             "%(TITLE)s"
-			#"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "%(ABSTRACT)s"
             "wcs_label"             "%(TITLE)s"
             "wcs_rangeset_name"     "%(TITLE)s"
             "wcs_rangeset_label"    "%(TITLE)s"
             "gml_include_items"     "value_0"
-            "wms_layer_group"       "/%(LAYER_GROUP_NAME)s"
+            "wms_layer_group"       "/"
         END  # end METADATA
         %(MASK)s
     END # end LAYER

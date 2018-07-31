@@ -219,7 +219,6 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                              'ABSTRACT'        : layerTitle,
                              'COLORMAPLINE'    : colormapline,
                              'MASK'            : '',
-                             'LAYER_GROUP_NAME': layerName
                              })
             dynaList.append({ 'TIF'             : tif,
                              'PROJVALID'       : len(proj) > 0,
@@ -232,7 +231,6 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                              'ABSTRACT'        : layerTitle,
                              'COLORMAPLINE'    : colormapline,
                              'MASK'            : '',
-                             'LAYER_GROUP_NAME': layerName
                              })                             
             layerTitles[layerName] = layerTitle
             #jdm 5/29: for layers groups that we want ewsMask on do so     
@@ -253,7 +251,6 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
-                                     'LAYER_GROUP_NAME': layerName
                                      })    
                     dynaList.append({ 'TIF'             : tif,
                                      'PROJVALID'       : len(proj) > 0,
@@ -266,7 +263,6 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
-                                     'LAYER_GROUP_NAME': layerName
                                      })                                          
             #Perform layer-level creation of dynamic map files:
             layerTemplate = Template(layerTemplateName)
@@ -350,7 +346,6 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
                              'ABSTRACT'        : layerTitle,
                              'COLORMAPLINE'    : colormapline,
                              'MASK'            : '',
-                             'LAYER_GROUP_NAME': ''
                              })                           
             layerTitles[layerName] = layerTitle
             #jdm 5/29: for layers groups that we want ewsMask on do so     
@@ -371,7 +366,6 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
-                                     'LAYER_GROUP_NAME': ''
                                      })                                                              
         except Exception as e:
             print e
@@ -1401,7 +1395,6 @@ def getFW2Layers(dataDir, product_type, layerTemplateName, fileExt, wcs, maskBoo
                              'PROJ'            : formatproj(proj,10),
                              'WKT'             : getwkt(tif_fullpath),
                              'NAME'            : layerName,
-                             'LAYER_GROUP_NAME': layerName,
                              'DATA'            : dataDir + '/' + tif,
                              'TITLE'           : layerName,
                              'ABSTRACT'        : layerName,
@@ -1418,13 +1411,11 @@ def getFW2Layers(dataDir, product_type, layerTemplateName, fileExt, wcs, maskBoo
                                      'PROJ'            : formatproj(proj,10),
                                      'WKT'             : getwkt(tif_fullpath),
                                      'NAME'            : layerName + '_' + mask['name'],
-                                     'LAYER_GROUP_NAME': layerName,
                                      'DATA'            : dataDir + '/' + tif,
                                      'TITLE'           : layerName + '_' + mask['name'],
                                      'ABSTRACT'        : layerName + '_' + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
-                                     'LAYER_GROUP_NAME': layerName
                                      })
             layerTemplate = Template(layerTemplateName)
             layers = ""
@@ -1549,7 +1540,6 @@ def makeFW2MapfilesFor(source, p_type):
              'TITLE'           : lid,
              'ABSTRACT'        : lid,
              'MASK'            : '',
-             'LAYER_GROUP_NAME': ''
     })
     for mask in ewsMask:
       products.append({
@@ -1560,7 +1550,6 @@ def makeFW2MapfilesFor(source, p_type):
                'TITLE'           : lid + mask['name'],
                'ABSTRACT'        : lid + mask['name'],
                'MASK'            : 'MASK ' + mask['name'],
-               'LAYER_GROUP_NAME': ''
       })
 
     layerTemplate = Template('ews_gen.layer.tpl.map')
