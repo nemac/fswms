@@ -3598,7 +3598,19 @@
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fws-lcc&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		</wmsSubgroup>
 	</wmsGroup>
-	<wmsGroup gid="G06" name="MODISCloud" label="ForWarn II Cloud Assessment Maps">	
+	<wmsGroup gid="G06" name="MODISCloud" label="ForWarn II Cloud Assessment Maps">
+
+		<wmsSubgroup label="Sentinel 2 (Current)">
+			<wmsLayer 
+				 lid="SENTINEL2_CURRENT"
+				 visible="false" 
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=true&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=40&amp;gain=1.0&amp;gamma=1.0&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_DATE_RANGE_PARAM)s" 
+				 srs="EPSG:3857"
+				 layers="2_FALSE_COLOR"
+				 identify="true" 
+				 name="Sentinel 2 False Color"/>
+		</wmsSubgroup>
+
 			%(GLAM_WMTS_2018_LAYERS)s
 
 			%(GLAM_WMTS_2017_LAYERS)s
