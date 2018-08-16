@@ -266,7 +266,7 @@ def getNRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
             layerTitle = tif
             lid = getLID(layerName, NRT_LIDFILE_PATH)
             if legendBool:
-                legend = "cmapicons/new-forwarn2-standard-legend.png"
+                legend = "cmapicons/new-forwarn2-standard-legend-2.png"
             else:
 		          legend = ""
             if groupName == "EFETAC-NASA_TC":
@@ -320,7 +320,7 @@ def get2017NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -374,7 +374,7 @@ def get2016NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -428,7 +428,7 @@ def get2015NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -482,7 +482,7 @@ def get2014NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -536,7 +536,7 @@ def get2013NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -590,7 +590,7 @@ def get2012NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -644,7 +644,7 @@ def get2011NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -698,7 +698,7 @@ def get2010NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -752,7 +752,7 @@ def get2009NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -806,7 +806,7 @@ def get2008NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -860,7 +860,7 @@ def get2007NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -914,7 +914,7 @@ def get2006NRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool
                  layerTitle = tif
                  lid = getLID(layerName, NRT_LIDFILE_PATH)
                  if legendBool:
-                     legend = "cmapicons/new-forwarn2-standard-legend.png"
+                     legend = "cmapicons/new-forwarn2-standard-legend-2.png"
                  else:
 		     legend = ""
                  if groupName == "EFETAC-NASA_TC":
@@ -1034,7 +1034,7 @@ for subgroup in [
                 'SERVER_URL'    : SERVER_URL,
                 'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
-                'LEGEND'        : SERVER_URL+'/'+"cmapicons/new-forwarn2-standard-legend.png",
+                'LEGEND'        : SERVER_URL+'/'+"cmapicons/new-forwarn2-standard-legend-2.png",
                 'LAYER_VISIBLE' : layer['visible'],
                 'LAYER_TITLE'   : re.sub(r'\.tif', '', layerTitles[layer['name']]),
                 'MASK'          : 'true',
@@ -1397,7 +1397,7 @@ def renderWMSLayerBlock(lid, layer_name, layer_title, selected=False, lineBreak=
   if 'PHENO_PROGRESS' in lid:
     legend = 'cmapicons/pctprogresslegend.png'
   else:
-    legend = 'cmapicons/new-forwarn2-standard-legend.png'
+    legend = 'cmapicons/new-forwarn2-standard-legend-2.png'
   return template.render({
     'SELECTED'    : 'selected="true"' if selected is True else '',
     'LAYER_LID'   : lid,
