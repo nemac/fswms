@@ -1529,15 +1529,21 @@ def makeFW2CurrentLayerListFor(product_type, list_type):
   return blockList
 
 
-def makeCurrentSentinelTwoDateRange():
-  today = datetime.datetime.today()
-  before = today - datetime.timedelta(days=24)
-  today_f = datetime.datetime.strftime(today, '%Y-%m-%d')
-  before_f = datetime.datetime.strftime(before, '%Y-%m-%d')
-  date_range = '{0}%2F{1}'.format(before_f, today_f)
+def makeCurrentSentinelTwoDateRanges(prior_year=False):
+  d = getCurrentDates(A_PATH_TO_FW2_PRODUCTS)[0]
+  d1 = d - datetime.timedelta(days=8)
+  d2 = d1 - datetime.timedelta(days=24)
+  if prior_year:
+    d1 = d1 - datetime.timedelta(days=365)
+    d2 = d2 - datetime.timedelta(days=365)
+  d1 = datetime.datetime.strftime(d1, '%Y-%m-%d')
+  d2 = datetime.datetime.strftime(d2, '%Y-%m-%d')
+  date_range = '{0}%2F{1}'.format(d2, d1)
   return date_range
 
-SENTINEL2_DATE_RANGE_PARAM = makeCurrentSentinelTwoDateRange()
+
+SENTINEL2_CURRENT_DATE_RANGE = makeCurrentSentinelTwoDateRanges()
+SENTINEL2_PRIOR_YEAR_DATE_RANGE = makeCurrentSentinelTwoDateRanges(True)
 
 FW2_LEGACY_2018_PRIOR_YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_1YEAR', '2018')
 FW2_LEGACY_2017_PRIOR_YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_1YEAR', '2017')
@@ -1785,9 +1791,10 @@ configXML = template.render( {
             'FW2_ARCHIVE_2016__5_YEAR' : FW2_ARCHIVE_2016__5_YEAR,
             'FW2_ARCHIVE_2018__10_YEAR' : FW2_ARCHIVE_2018__10_YEAR,
             'FW2_ARCHIVE_2018__YEAR_MEDIAN' : FW2_ARCHIVE_2018__YEAR_MEDIAN,
-            'SENTINEL2_DATE_RANGE_PARAM' : SENTINEL2_DATE_RANGE_PARAM,
             'FW2_ARCHIVE_2018__PCTPROGRESS' : FW2_ARCHIVE_2018__PCTPROGRESS,
-            'NADM_DROUGHT_LAYERS' : NADM_DROUGHT_LAYERS
+            'NADM_DROUGHT_LAYERS' : NADM_DROUGHT_LAYERS,
+            'SENTINEL2_CURRENT_DATE_RANGE' : SENTINEL2_CURRENT_DATE_RANGE,
+            'SENTINEL2_PRIOR_YEAR_DATE_RANGE' : SENTINEL2_PRIOR_YEAR_DATE_RANGE
           })
 
 minXML = parseString(configXML).toprettyxml('', '', 'UTF-8')
