@@ -30,7 +30,8 @@
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
-			<viewGroup name="US_Physiographic" />	
+			<viewGroup name="US_Physiographic" />
+			<viewGroup name="Sentinel" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="ForWarn_Legacy_Products" label="ForWarn Legacy Products">
@@ -40,7 +41,8 @@
 			<viewGroup name="Legacy_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
-			<viewGroup name="US_Physiographic" />	
+			<viewGroup name="US_Physiographic" />
+			<viewGroup name="Sentinel" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="ForWarn2_Compare" label="ForWarn II Comparisons">
@@ -50,6 +52,7 @@
 			<viewGroup name="GLAM_WMTS" />
 			<viewGroup name="ForWarn2_Compare_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
+			<viewGroup name="Sentinel" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="MODIS_Forest_Change_Products" label="Archived Near-Real-Time Change Maps (MODIS NDVI)">
@@ -62,8 +65,9 @@
 			<viewGroup name="Archived_RSAC" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
-			<viewGroup name="US_Physiographic" />	
-		<viewGroup name="MODISCloud" />
+			<viewGroup name="US_Physiographic" />
+			<viewGroup name="Sentinel" />
+			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="MODIS_Phenology_Derived_Products" label="MODIS Phenology Derived Products">
 			<viewGroup name="US_Jurisdictions" />
@@ -72,7 +76,8 @@
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
-			<viewGroup name="US_Physiographic" />	
+			<viewGroup name="US_Physiographic" />
+			<viewGroup name="Sentinel" />
 			<viewGroup name="MODISCloud" />
 			<viewGroup name="EWS_Derived_Products" />
 		</view>
@@ -85,6 +90,7 @@
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />	
 			<viewGroup name="MODISCloud" />
+			<viewGroup name="Sentinel" />
 			<viewGroup name="EWS_Parameters" />
 		</view>
 		<view name="MODIS_Cumulative_NDVI_Products" label="MODIS Cumulative NDVI Products">
@@ -96,6 +102,7 @@
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />	
 			<viewGroup name="MODISCloud" />
+			<viewGroup name="Sentinel" />
 			<viewGroup name="EWS_Integrals" />
 		</view>
 		<view name="MODIS_NDVI_Time_series_Profiling_Capability" label="MODIS NDVI Time series Profiling Capability">
@@ -107,6 +114,7 @@
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />	
 			<viewGroup name="MODISCloud" />
+			<viewGroup name="Sentinel" />
 			<viewGroup name="EWS_MODISNDVI" />
 		</view>
 		<view name="MODIS_Phenology_Time_Series_2003-2009" label="MODIS Phenology Time Series 2003-2009">
@@ -121,6 +129,7 @@
 			<viewGroup name="EWS_Derived_Products" />
 			<viewGroup name="EWS_Parameters" />
 			<viewGroup name="EWS_Integrals" />
+			<viewGroup name="Sentinel" />
 			<viewGroup name="EWS_MODISNDVI" selected="true" />
 		</view>
 		<view name="MODIS_Disturbance_Events" label="Disturbances Assessed">
@@ -133,7 +142,8 @@
 			<viewGroup name="Archived_RSAC" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
-			<viewGroup name="US_Physiographic" />	
+			<viewGroup name="US_Physiographic" />
+			<viewGroup name="Sentinel" />
 			<viewGroup name="MODISCloud" />
 		</view> 
 		<view name="Duration" label="Duration Products">
@@ -147,7 +157,8 @@
 			<viewGroup name="Archived_RSAC" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
-			<viewGroup name="US_Physiographic" />	
+			<viewGroup name="US_Physiographic" />
+			<viewGroup name="Sentinel" />
 			<viewGroup name="MODISCloud" />
 		</view>	
 	</mapviews>
@@ -1002,7 +1013,7 @@
 		</wmsSubgroup>
 	</wmsGroup>
 		
-	<wmsGroup gid="G15" name="Legacy_Products" label="ForWarn Legacy Products">
+	<wmsGroup gid="G05" name="Legacy_Products" label="ForWarn Legacy Products">
 
 		<wmsSubgroup label="ForWarn Legacy Near-Real-Time Change Maps">
 		</wmsSubgroup>
@@ -1045,7 +1056,7 @@
 
 	</wmsGroup>
 
-	<wmsGroup gid="G16" name="ForWarn2_Compare_Products" label="ForWarn II Comparisons">
+	<wmsGroup gid="G06" name="ForWarn2_Compare_Products" label="ForWarn II Comparisons">
 
 
 		<wmsSubgroup label="From Prior 1-Year Maximum">
@@ -1066,7 +1077,7 @@
 
 	</wmsGroup>
 
-	<wmsGroup gid="G19" name="Archived_FW2" label="Archived ForWarn II Change Maps">
+	<wmsGroup gid="G07" name="Archived_FW2" label="Archived ForWarn II Change Maps">
 		<wmsSubgroup label="Archived Prior Year Baseline">
 		</wmsSubgroup>
 
@@ -1147,7 +1158,7 @@
 
 	</wmsGroup>
 
-	<wmsGroup gid="G05" name="Archived_TACS" label="Archived ForWarn Legacy Change Maps">
+	<wmsGroup gid="G08" name="Archived_TACS" label="Archived ForWarn Legacy Change Maps">
 		<wmsSubgroup label="Archived Prior Year Baseline">
 		</wmsSubgroup>
 	<wmsSubgroup label="2018" collapsible="true">
@@ -1433,7 +1444,7 @@
 		%(NRT_2006_MMAXYR_LAYERS)s
 		</wmsSubgroup>
 	</wmsGroup>
-	<wmsGroup gid="G07" name="Archived_RSAC" label="Archived RSAC-FHTET Change Maps">
+	<wmsGroup gid="G09" name="Archived_RSAC" label="Archived RSAC-FHTET Change Maps">
 		<wmsSubgroup label="Archived Prior 3-Year Baseline">
 	<wmsLayer
 		lid="BJT"
@@ -2499,7 +2510,7 @@
 		legend="%(SERVER_URL)s/ewswgs84?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=RSAC-FHTET_current&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		</wmsSubgroup>
 	</wmsGroup>
-	<wmsGroup gid="G08" name="Drought_Monitor" label="Drought Assessment Maps">
+	<wmsGroup gid="G10" name="Drought_Monitor" label="Drought Assessment Maps">
 
 		<wmsSubgroup label="US Drought Monitor (NDMC)">
 				<wmsLayer 
@@ -2652,7 +2663,7 @@
 	 legend="%(SERVER_URL)s/cmapicons/VegDri_7day.png"/>
 		</wmsSubgroup>
 	</wmsGroup>
-	<wmsGroup gid="G09" name="US_Climate" label="Other Weather and Climate Maps" >
+	<wmsGroup gid="G11" name="US_Climate" label="Other Weather and Climate Maps" >
 		<wmsSubgroup label="Weather">
 <!--      <wmsLayer
 	 lid="AID"
@@ -2812,7 +2823,7 @@
 		</wmsSubgroup>
 	</wmsGroup>
 	
-	<wmsGroup gid="G10" name="US_Physiographic" label="Additional Assessment Maps" >
+	<wmsGroup gid="G12" name="US_Physiographic" label="Additional Assessment Maps" >
 		<wmsSubgroup label="USFS Fuels Treatments">
 			<wmsLayer 
 	 lid="FTAAA"
@@ -3598,13 +3609,59 @@
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fws-lcc&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		</wmsSubgroup>
 	</wmsGroup>
-	<wmsGroup gid="G06" name="MODISCloud" label="ForWarn II Cloud Assessment Maps">	
+	<wmsGroup gid="G13" name="Sentinel" label="High-Resolution Sentinel Imagery">
+
+		<wmsSubgroup label="Current">
+			<wmsLayer 
+				 lid="SENTINEL2_TRUE_COLOR_CURRENT"
+				 visible="false" 
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=50&amp;gain=1.0&amp;gamma=0.5&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_CURRENT_DATE_RANGE)s" 
+				 srs="EPSG:3857"
+				 layers="1_TRUE_COLOR"
+				 identify="true" 
+				 name="True Color Current 24-day"
+				 maxResolution="152.8740565703525"/>
+			<wmsLayer 
+				 lid="SENTINEL2_FALSE_COLOR_CURRENT"
+				 visible="false" 
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=50&amp;gain=1.5&amp;gamma=3.5&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_CURRENT_DATE_RANGE)s" 
+				 srs="EPSG:3857"
+				 layers="2_FALSE_COLOR"
+				 identify="true" 
+				 name="False Color Current 24-day"
+				 maxResolution="152.8740565703525"/>
+		</wmsSubgroup>
+		<wmsSubgroup label="Prior Year">
+			<wmsLayer 
+				 lid="SENTINEL2_TRUE_COLOR_PRIOR_YEAR"
+				 visible="false" 
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=50&amp;gain=1.0&amp;gamma=0.5&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_PRIOR_YEAR_DATE_RANGE)s" 
+				 srs="EPSG:3857"
+				 layers="1_TRUE_COLOR"
+				 identify="true" 
+				 name="True Color 1-Year Prior 24-day"
+				 maxResolution="152.8740565703525"/>
+			<wmsLayer 
+				 lid="SENTINEL2_FALSE_COLOR_PRIOR_YEAR"
+				 visible="false" 
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=50&amp;gain=1.5&amp;gamma=3.5&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_PRIOR_YEAR_DATE_RANGE)s" 
+				 srs="EPSG:3857"
+				 layers="2_FALSE_COLOR"
+				 identify="true" 
+				 name="False Color 1-Year Prior 24-day"
+				 maxResolution="152.8740565703525"/>
+		</wmsSubgroup>
+
+
+	</wmsGroup>
+	<wmsGroup gid="G14" name="MODISCloud" label="ForWarn II Cloud Assessment Maps">
+
 			%(GLAM_WMTS_2018_LAYERS)s
 
 			%(GLAM_WMTS_2017_LAYERS)s
 
 	</wmsGroup>
-	<wmsGroup gid="G11" name="EWS_Derived_Products" label="MODIS Phenology Derived Products" >
+	<wmsGroup gid="G15" name="EWS_Derived_Products" label="MODIS Phenology Derived Products" >
 		<wmsSubgroup label="Phenology- Derived Products 2009">
 			<wmsLayer 
 	 lid="AIT"
@@ -4625,7 +4682,7 @@
 		</wmsSubgroup>
 	</wmsGroup>
 	
-	<wmsGroup gid="G12" name="EWS_Parameters" label="MODIS Phenological Parameters" >
+	<wmsGroup gid="G16" name="EWS_Parameters" label="MODIS Phenological Parameters" >
 		<wmsSubgroup label="2000-2013 Medians">
 			<wmsLayer 
 	 lid="PARAMGREENSTART"
@@ -7575,7 +7632,7 @@
 		</wmsSubgroup>
 	</wmsGroup>
 	
-	<wmsGroup gid="G13" name="EWS_Integrals" label="MODIS Cumulative Integrals" >
+	<wmsGroup gid="G17" name="EWS_Integrals" label="MODIS Cumulative Integrals" >
 		<wmsSubgroup label="Cumulative Integrals- 2009">
 			<wmsLayer 
 	 lid="ARE"
@@ -9132,7 +9189,7 @@
 		</wmsSubgroup>
 	</wmsGroup>
 	
-	<wmsGroup gid="G14" name="EWS_MODISNDVI" label="MODIS NDVI" >
+	<wmsGroup gid="G18" name="EWS_MODISNDVI" label="MODIS NDVI" >
 		<wmsSubgroup label="MODIS NDVI- 2009">
 			<wmsLayer 
 	 lid="AXC"
@@ -10688,7 +10745,7 @@
 	 legend="%(SERVER_URL)s/modisndvi?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=NDVI-001-2003&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		</wmsSubgroup>
 	</wmsGroup>
-	<wmsGroup gid="G17" name="MODIS_Disturbance_Events" label="Disturbances Assessed"> 
+	<wmsGroup gid="G19" name="MODIS_Disturbance_Events" label="Disturbances Assessed"> 
 		<wmsSubgroup label="Disturbances Assessed">
 				<wmsLayer
 					selected="false"
@@ -10714,7 +10771,7 @@
 					legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=events-historical&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 			</wmsSubgroup>
 	</wmsGroup>  
-	<wmsGroup gid="G18" name="Duration" label="Duration Products (at -3%% departure)"> 
+	<wmsGroup gid="G20" name="Duration" label="Duration Products (at -3%% departure)"> 
 		<wmsSubgroup label="Fixed 12-Period: Jun 24 – Sep 21">
 				<wmsLayer
 					selected="false"
