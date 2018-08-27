@@ -3624,7 +3624,7 @@
 			<wmsLayer 
 				 lid="SENTINEL2_FALSE_COLOR_CURRENT"
 				 visible="false" 
-				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=50&amp;gain=1.5&amp;gamma=3.5&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_CURRENT_DATE_RANGE)s" 
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=50&amp;gain=2.0&amp;gamma=2.0&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_CURRENT_DATE_RANGE)s" 
 				 srs="EPSG:3857"
 				 layers="2_FALSE_COLOR"
 				 identify="true" 
@@ -3644,7 +3644,7 @@
 			<wmsLayer 
 				 lid="SENTINEL2_FALSE_COLOR_PRIOR_YEAR"
 				 visible="false" 
-				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=50&amp;gain=1.5&amp;gamma=3.5&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_PRIOR_YEAR_DATE_RANGE)s" 
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=50&amp;gain=2.0&amp;gamma=2.0&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_PRIOR_YEAR_DATE_RANGE)s" 
 				 srs="EPSG:3857"
 				 layers="2_FALSE_COLOR"
 				 identify="true" 
