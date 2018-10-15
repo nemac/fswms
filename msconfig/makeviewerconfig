@@ -1494,6 +1494,22 @@ def makeFW2CurrentLegacyLayerListFor(product_type):
   return blockList
 
 
+def makeXMLBlockForLayer(source, product_type, date_string, lineBreak=False, lid=''):
+  pwd = os.path.join(FW2_DATA_DIR, source, product_type)
+  match = glob.glob(pwd +'/*'+date_string+'*')
+  if len(match):
+    if not lid:
+        lid = makeLID(source, product_type, date_string)
+    file = match[0]
+    layer_name = lid
+    layer_title = FW2_CURRENT_DATES_TITLES[date_string][source]
+    selected = layerIsSelectedByDefault(source, product_type, date_string)
+    block = renderWMSLayerBlock(lid, layer_name, layer_title, selected, lineBreak)
+    return block
+  else:
+    return ''
+
+
 def makeFW2CurrentLayerListFor(product_type, list_type):
   if list_type == "current":
     sources = FW2_SOURCES_AS_LIST
@@ -1506,13 +1522,23 @@ def makeFW2CurrentLayerListFor(product_type, list_type):
     d = FW2_CURRENT_DATE_STRINGS[i]
     for i_source in range(0, len(sources)):
       source = sources[i_source]
+      if list_type != "current_legacy" and source != "Leidos":
+        if i == 0:
+          how_current = "current"
+        elif i == 1:
+          how_current = "previous1"
+        else:
+          how_current = "previous2"
+        lid = "{0}_{1}_{2}".format(SOURCES[source], PRODUCT_TYPES[product_type], how_current)
+      else:
+        lid = ''
       if i_source == len(sources)-1:
         if product_type == 'X_LC_3YEAR' and list_type == 'current_compare':
-          blockList += makeXMLBlockForLayer(source, product_type, d)
+          blockList += makeXMLBlockForLayer(source, product_type, d, False, lid)
         else:
-          blockList += makeXMLBlockForLayer(source, product_type, d, True)
+          blockList += makeXMLBlockForLayer(source, product_type, d, True, lid)
       else:
-        blockList += makeXMLBlockForLayer(source, product_type, d)
+        blockList += makeXMLBlockForLayer(source, product_type, d, False, lid)
     # get hacked son
     if product_type == 'X_LC_3YEAR' and list_type == 'current_compare':
       blockList += wmsLayerTemplate.render({

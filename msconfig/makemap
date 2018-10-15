@@ -1410,10 +1410,10 @@ def getFW2Layers(dataDir, product_type, layerTemplateName, fileExt, wcs, maskBoo
                                      'PROJVALID'       : len(proj) > 0,
                                      'PROJ'            : formatproj(proj,10),
                                      'WKT'             : getwkt(tif_fullpath),
-                                     'NAME'            : layerName + '_' + mask['name'],
+                                     'NAME'            : layerName + mask['name'],
                                      'DATA'            : dataDir + '/' + tif,
-                                     'TITLE'           : layerName + '_' + mask['name'],
-                                     'ABSTRACT'        : layerName + '_' + mask['name'],
+                                     'TITLE'           : layerName + mask['name'],
+                                     'ABSTRACT'        : layerName + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
                                      })

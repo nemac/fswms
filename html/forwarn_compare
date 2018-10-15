@@ -12,9 +12,15 @@ params = cgi.FieldStorage()
 
 # Workaround for integrating WMS service into ArcGIS Online
 if 'MAPFILE' in params:
-	mapfileName = str(params.getvalue("MAPFILE"))
+    param = "MAPFILE"
+# For WCS requests: extract  mapfile name from param
+elif 'COVERAGE' in params:
+    param = "COVERAGE"
+# Assume we're dealing with a WMS request
 else:
-	mapfileName = str(params.getvalue("LAYERS")).split('Mask')[0].rstrip('_')
+    param = "LAYERS"
+
+mapfileName = str(params.getvalue(param)).split('Mask')[0].rstrip('_')
 
 MAPFILE = '../msconfig/forwarn2_maps/'+mapfileName+'.map'
 
