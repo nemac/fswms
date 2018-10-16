@@ -1511,6 +1511,7 @@ def makeXMLBlockForLayer(source, product_type, date_string, lineBreak=False, lid
 
 
 def makeFW2CurrentLayerListFor(product_type, list_type):
+  how_current = [ "current", "previous1", "previous2" ]
   if list_type == "current":
     sources = FW2_SOURCES_AS_LIST
   if list_type == "current_compare":
@@ -1522,24 +1523,15 @@ def makeFW2CurrentLayerListFor(product_type, list_type):
     d = FW2_CURRENT_DATE_STRINGS[i]
     for i_source in range(0, len(sources)):
       source = sources[i_source]
-      if list_type != "current_legacy" and source != "Leidos":
-        if i == 0:
-          how_current = "current"
-        elif i == 1:
-          how_current = "previous1"
-        else:
-          how_current = "previous2"
-        lid = "{0}_{1}_{2}".format(SOURCES[source], PRODUCT_TYPES[product_type], how_current)
-      else:
-        lid = ''
-      if i_source == len(sources)-1:
+      how_current_label = how_current[i] 
+      lid = "{0}_{1}_{2}".format(SOURCES[source], ALL_PRODUCT_TYPES[product_type], how_current_label)
+      if i_source == len(sources)-1 and list_type != 'current_legacy':
         if product_type == 'X_LC_3YEAR' and list_type == 'current_compare':
           blockList += makeXMLBlockForLayer(source, product_type, d, False, lid)
         else:
           blockList += makeXMLBlockForLayer(source, product_type, d, True, lid)
       else:
         blockList += makeXMLBlockForLayer(source, product_type, d, False, lid)
-    # get hacked son
     if product_type == 'X_LC_3YEAR' and list_type == 'current_compare':
       blockList += wmsLayerTemplate.render({
         'SELECTED'      : "",
@@ -1649,13 +1641,13 @@ FW2_COMPARE_LAYERS__YEAR_MEDIAN = makeFW2CurrentLayerListFor('X_LC_MEDIAN_ALL_YR
 FW2_COMPARE_LAYERS__PCTPROGRESS = makeFW2CurrentLayerListFor('X_LC_PCTPROGRESS', 'current_compare')
 
 
-FW2_CURRENT_LEGACY_LAYERS__PRIOR_YEAR = makeFW2CurrentLegacyLayerListFor('X_LC_1YEAR')
-FW2_CURRENT_LEGACY_LAYERS__ALC = makeFW2CurrentLegacyLayerListFor('X_LC_ALC_1YR')
-FW2_CURRENT_LEGACY_LAYERS__3_YEAR = makeFW2CurrentLegacyLayerListFor('X_LC_3YEAR')
-FW2_CURRENT_LEGACY_LAYERS__5_YEAR = makeFW2CurrentLegacyLayerListFor('X_LC_5YEAR')
-FW2_CURRENT_LEGACY_LAYERS__ALLYEAR = makeFW2CurrentLegacyLayerListFor('X_LC_ALLYEAR')
-FW2_CURRENT_LEGACY_LAYERS__MUC = makeFW2CurrentLegacyLayerListFor('X_LC_MUC_ALL_YR')
-FW2_CURRENT_LEGACY_LAYERS__MMAX = makeFW2CurrentLegacyLayerListFor('X_LC_MMAX_ALL_YR')
+FW2_CURRENT_LEGACY_LAYERS__PRIOR_YEAR = makeFW2CurrentLayerListFor('X_LC_1YEAR', 'current_legacy')
+FW2_CURRENT_LEGACY_LAYERS__ALC = makeFW2CurrentLayerListFor('X_LC_ALC_1YR', 'current_legacy')
+FW2_CURRENT_LEGACY_LAYERS__3_YEAR = makeFW2CurrentLayerListFor('X_LC_3YEAR', 'current_legacy')
+FW2_CURRENT_LEGACY_LAYERS__5_YEAR = makeFW2CurrentLayerListFor('X_LC_5YEAR', 'current_legacy')
+FW2_CURRENT_LEGACY_LAYERS__ALLYEAR = makeFW2CurrentLayerListFor('X_LC_ALLYEAR', 'current_legacy')
+FW2_CURRENT_LEGACY_LAYERS__MUC = makeFW2CurrentLayerListFor('X_LC_MUC_ALL_YR', 'current_legacy')
+FW2_CURRENT_LEGACY_LAYERS__MMAX = makeFW2CurrentLayerListFor('X_LC_MMAX_ALL_YR', 'current_legacy')
 
 NADM_DROUGHT_LAYERS = getNADMLayers()
 

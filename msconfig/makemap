@@ -1381,7 +1381,7 @@ def getFW2Layers(dataDir, product_type, layerTemplateName, fileExt, wcs, maskBoo
             proj = getproj(tif_fullpath)
 
             if period:
-                layerName = '{0}_{1}_{2}'.format(SOURCES[source], PRODUCT_TYPES[product_type], period)
+                layerName = '{0}_{1}_{2}'.format(SOURCES[source], ALL_PRODUCT_TYPES[product_type], period)
             else:
                 layerName = re.sub(r'^.*/', '', tif)
 
@@ -1434,11 +1434,11 @@ def getFW2Layers(dataDir, product_type, layerTemplateName, fileExt, wcs, maskBoo
     return layers
 
 
-def makeCurrentMapfilesFor(source, product_type):
+def makeCurrentMapfilesFor(source, product_type, fileExt='.img'):
     path = os.path.join(VIEWER_LINK_TARGET_DIR, source, product_type)
     periods = [ 'current', 'previous1', 'previous2' ]
     for period in periods:
-        LAYERS = getFW2Layers(path, product_type, "ews_gen.layer.tpl.map", ".img", "no", True, source, period)
+        LAYERS = getFW2Layers(path, product_type, "ews_gen.layer.tpl.map", fileExt, "no", True, source, period)
         template = Template("ews_gen.tpl.map")
         layerName = '{0}_{1}_{2}'.format(SOURCES[source], ALL_PRODUCT_TYPES[product_type], period)
         mapfile_path = "forwarn2_maps/"+layerName+".map"
@@ -1574,7 +1574,6 @@ def makeFW2MapfilesFor(source, p_type):
         )
         f_new.close()                    
 
-
 for s in SOURCES:
     for p in ALL_PRODUCT_TYPES:
         makeFW2MapfilesFor(s, p)
@@ -1586,3 +1585,9 @@ for s in FW2_SOURCES:
         cgi_endpoint = '{0}_{1}'.format(FW2_SOURCES[s], PRODUCT_TYPES[p])
         makeBundledMapfileFor(s, p, cgi_endpoint)
         makeCurrentMapfilesFor(s, p)
+
+for s in LEGACY_SOURCES:
+  for p in ALL_LEGACY_PRODUCT_TYPES:
+    makeCurrentMapfilesFor(s, p, '.tif')
+ 
+
