@@ -56,7 +56,8 @@ MAP
             "wms_onlineresource"     "%(SERVICE_URL)s"
             "wms_srs"                "%(WMS_SRS)s"
             "wcs_label"              "%(WCS_LABEL)s"
-            "wcs_srs"                "EPSG:2163"
+            "wcs_srs"                "EPSG:4326"
+            "ows_contactorganization" "UNCA's NEMAC"
         END
     END
 

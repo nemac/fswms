@@ -3620,7 +3620,8 @@
 				 layers="1_TRUE_COLOR"
 				 identify="true" 
 				 name="True Color Current 24-day"
-				 maxResolution="152.8740565703525"/>
+				 maxResolution="152.8740565703525"
+				 legend="%(SERVER_URL)s/cmapicons/sentinellegend.png" />
 			<wmsLayer 
 				 lid="SENTINEL2_FALSE_COLOR_CURRENT"
 				 visible="false" 
@@ -3629,8 +3630,9 @@
 				 layers="2_FALSE_COLOR"
 				 identify="true" 
 				 name="Ag False Color Current 24-day"
-				 maxResolution="152.8740565703525"/>
-		</wmsSubgroup>
+				 maxResolution="152.8740565703525"
+				 legend="%(SERVER_URL)s/cmapicons/sentinellegend.png" />
+	</wmsSubgroup>
 		<wmsSubgroup label="Prior Year">
 			<wmsLayer 
 				 lid="SENTINEL2_TRUE_COLOR_PRIOR_YEAR"
@@ -3640,7 +3642,8 @@
 				 layers="1_TRUE_COLOR"
 				 identify="true" 
 				 name="True Color 1-Year Prior 24-day"
-				 maxResolution="152.8740565703525"/>
+				 maxResolution="152.8740565703525"
+				 legend="%(SERVER_URL)s/cmapicons/sentinellegend.png" />
 			<wmsLayer 
 				 lid="SENTINEL2_FALSE_COLOR_PRIOR_YEAR"
 				 visible="false" 
@@ -3649,7 +3652,8 @@
 				 layers="2_FALSE_COLOR"
 				 identify="true" 
 				 name="Ag False Color 1-Year Prior 24-day"
-				 maxResolution="152.8740565703525"/>
+				 maxResolution="152.8740565703525"
+				 legend="%(SERVER_URL)s/cmapicons/sentinellegend.png" />
 		</wmsSubgroup>
 
 
