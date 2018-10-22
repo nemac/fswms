@@ -27,6 +27,12 @@ MAP
                 "init=epsg:4326"
     END
 
+    # set defaults for GetLegendGraphic requests 
+    LEGEND
+        KEYSIZE 30 20
+    END
+
+
     LAYER
         NAME     small-integral-2016
         TYPE     RASTER
