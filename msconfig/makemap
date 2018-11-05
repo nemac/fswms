@@ -431,7 +431,7 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
     if tif.startswith("rsac"):
         group          = "RSAC-FHTET"
         group_abstract = "Layers uploaded by RSAC-FHTET"
-        colormapfile   = "rsac-fhtet_percent_change_cmap.cmap"
+        colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
         colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
         keyimage       = "getLegend(group)"
     else:
@@ -571,7 +571,7 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
         if tif.startswith("rsac"): #jdm: I don't think this if is needed Marked4Delete
             group = "RSAC-FHTET"
             group_abstract = "Layers uploaded by RSAC-FHTET"
-            colormapfile   = "rsac-fhtet_percent_change_cmap.cmap"
+            colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
             colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
             keyimage       = "cmapicons/new-forwarn2-standard-legend-2.png"
             print 'jdm: see this never prints'
