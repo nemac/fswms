@@ -1,4 +1,8 @@
 Header set Access-Control-Allow-Origin "*"
+<Files "ewswgs84">
+    Allow from all
+    SetHandler cgi-script
+</Files>
 <Files "ews">
     Allow from all
     SetHandler cgi-script
