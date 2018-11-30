@@ -1154,6 +1154,65 @@
 			%(FW2_ARCHIVE_2018__PCTPROGRESS)s
 			</wmsSubgroup>
 
+			<wmsSubgroup label="2017" collapsible="true">
+			 %(FW2_ARCHIVE_2017__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2016" collapsible="true">
+			%(FW2_ARCHIVE_2016__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2015" collapsible="true">
+			%(FW2_ARCHIVE_2015__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2014" collapsible="true">
+			%(FW2_ARCHIVE_2014__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2013" collapsible="true">
+			%(FW2_ARCHIVE_2013__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2012" collapsible="true">
+			%(FW2_ARCHIVE_2012__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2011" collapsible="true">
+			%(FW2_ARCHIVE_2011__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2010" collapsible="true">
+			%(FW2_ARCHIVE_2010__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2009" collapsible="true">
+			%(FW2_ARCHIVE_2009__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2008" collapsible="true">
+			%(FW2_ARCHIVE_2008__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2007" collapsible="true">
+			%(FW2_ARCHIVE_2007__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2006" collapsible="true">
+			%(FW2_ARCHIVE_2006__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2005" collapsible="true">
+			%(FW2_ARCHIVE_2005__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2004" collapsible="true">
+			%(FW2_ARCHIVE_2004__PCTPROGRESS)s
+			</wmsSubgroup>
+
+			<wmsSubgroup label="2003" collapsible="true">
+			%(FW2_ARCHIVE_2003__PCTPROGRESS)s
+			</wmsSubgroup>
 
 
 	</wmsGroup>
