@@ -31,6 +31,14 @@ MAP
      EXTENSION "png"
     END
 
+    OUTPUTFORMAT
+      NAME "GEOTIFF"
+      DRIVER "GDAL/GTiff"
+      MIMETYPE "image/tiff"
+      IMAGEMODE "BYTE"
+      EXTENSION "tif"
+    END
+
     # minx miny maxx maxy
     # sets:
     # /WMT_MS_Capabilities/Capability/Layer/LatLonBoundingBox(@minx @miny @maxx @maxx)
