@@ -1387,6 +1387,8 @@ def getFW2Layers(dataDir, product_type, layerTemplateName, fileExt, wcs, maskBoo
 
             if product_type == 'X_LC_PCTPROGRESS':
               colormapline = 'INCLUDE "percent_progress_color_table.cmap"'
+            if source == 'Leidos':
+              colormapline = 'INCLUDE "new-forwarn2-legacy-2.cmap"'
             else:
               colormapline = 'INCLUDE "new-forwarn2-standard-2.cmap"'
 
@@ -1530,6 +1532,8 @@ def makeFW2MapfilesFor(source, p_type):
     proj = getproj(f_path)
     if p_type == 'X_LC_PCTPROGRESS':
       colormapline = 'INCLUDE "percent_progress_color_table.cmap"'
+    if source == 'Leidos':
+      colormapline = 'INCLUDE "new-forwarn2-legacy-2.cmap"'
     else:
       colormapline = 'INCLUDE "new-forwarn2-standard-2.cmap"'
     products.append({
