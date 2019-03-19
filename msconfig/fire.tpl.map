@@ -71,8 +71,85 @@ MAP
     LEGEND
         KEYSIZE 30 20
     END
+
+    LAYER #
+        NAME mtbs_2016
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from vw_conus_fireperims_mtbs_2016 USING UNIQUE gid"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+	CLASS
+		MINSCALEDENOM 0
+		MAXSCALEDENOM 200000
+            STYLE
+                OUTLINECOLOR 90 0 0 
+				WIDTH 4
+            END
+        END
+		CLASS
+            NAME "MTBS Fire 2016"
+	    MINSCALEDENOM 200000
+            STYLE
+                OUTLINECOLOR 90 0 0 
+				WIDTH 2
+            END
+        END
+        METADATA
+            "wms_title"          "mtbs_2016"
+            "wms_abstract"       "mtbs_2016"
+            "gml_include_items"  "fire_name,fire_id,fire_startmonth,fire_startday,acres,fire_type"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
+        NAME mtbs_2015
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from vw_conus_fireperims_mtbs_2015 USING UNIQUE gid"
+				
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+	CLASS
+		MINSCALEDENOM 0
+		MAXSCALEDENOM 200000
+            STYLE
+                OUTLINECOLOR 90 0 0 
+				WIDTH 4
+            END
+        END
+		CLASS
+            NAME "MTBS Fire 2015"
+			MINSCALEDENOM 200000
+            STYLE
+                OUTLINECOLOR 90 0 0 
+				WIDTH 2
+            END
+        END
+        METADATA
+            "wms_title"          "mtbs_2015"
+            "wms_abstract"       "mtbs_2015"
+            "gml_include_items"  "fire_name,fire_id,fire_startmonth,fire_startday,acres,fire_type"
+        END  # end METADATA
+    END # end Layer
 	
-	LAYER #
+	
+    LAYER #
         NAME mtbs_2014
         PROJECTION
             "init=epsg:4326"
@@ -833,6 +910,47 @@ MAP
             "gml_include_items"  "year,fire_name,fire_id,acres,startmonth,startday,firetype"
         END  # end METADATA
     END # end Layer
+
+    LAYER #
+        NAME geomac_2018
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from vw_conus_fireperims_geomac_2018 USING UNIQUE gid"        
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            MINSCALEDENOM 0
+            MAXSCALEDENOM 200000
+            STYLE
+                #COLOR        255 255 255
+                OUTLINECOLOR 90 0 0 
+                WIDTH 4
+            END
+        END
+        CLASS
+            NAME "GEOMAC Fire 2018"
+            MINSCALEDENOM 200000
+            STYLE
+                #COLOR        255 255 255
+                OUTLINECOLOR 90 0 0 
+                WIDTH 2
+            END
+        END
+        METADATA
+            "wms_title"          "geomac_2018"
+            "wms_abstract"       "geomac_2018"
+            "gml_include_items"  "agency,end_date,acres,incidentna"
+        END  # end METADATA
+    END # end Layer
+
+
     LAYER #
         NAME geomac_2017
         PROJECTION
@@ -869,7 +987,7 @@ MAP
         METADATA
             "wms_title"          "geomac_2017"
             "wms_abstract"       "geomac_2017"
-            "gml_include_items"  "fire_name,fire_id,initial_date,end_date,acres,fire_type"
+            "gml_include_items"  "agency,end_date,acres,fire_type,incidentna"
         END  # end METADATA
     END # end Layer
 
@@ -1527,6 +1645,38 @@ MAP
             "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
+
+    LAYER #
+        NAME modis-fire-2018
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from modis_fire_2018"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2018"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0 
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2018"
+            "wms_abstract"       "modis-fire-2018"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+ 
+
     	LAYER #
         NAME modis-fire-current-year
         PROJECTION

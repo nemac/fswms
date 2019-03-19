@@ -500,9 +500,9 @@ MAP
 			#"gml_value_0_alias"     "Fire Year"
         END  # end METADATA
     END # end LAYER
-	
+
 	LAYER
-        NAME     mtbs-raster-00-17
+        NAME     mtbs-raster-00-18
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -517,12 +517,12 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/ras_fire_perimeters_2000_2017_v010818.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/ras_fire_perimeters_conus_MTBS_2000_2016_GEOMAC_2017_2018_dd_v022719.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
 		CLASS
-			NAME "MTBS/GEOMAC 2000-2017"
+			NAME "MTBS/GEOMAC 2000-2018"
             EXPRESSION ""
             COLOR 255 255 255
         END
@@ -615,7 +615,12 @@ MAP
             NAME "2017"
             EXPRESSION ([pixel] = 2017)
             COLOR 0 115 0
-        END   
+        END
+        CLASS
+            NAME "2018"
+            EXPRESSION ([pixel] = 2018)
+            COLOR 128 255 128
+        END  
         METADATA
             "wms_title"             "mtbs-raster-00-17"
             "wms_abstract"          "mtbs-raster-00-17"
@@ -623,7 +628,7 @@ MAP
 			#"gml_value_0_alias"     "Fire Year"
         END  # end METADATA
     END # end LAYER
-	
+
     LAYER
         NAME     srtm-dem-231m
         PROJECTION

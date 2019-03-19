@@ -392,11 +392,11 @@
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
-	 layers="mtbs-raster-00-17" 
+	 layers="mtbs-raster-00-18" 
 	 styles="default" 
 	 identify="true" 
-	 name="2000-17 Combined (MTBS/GEOMAC)" 
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-00-17&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2000-18 Combined (MTBS/GEOMAC)" 
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-00-18&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer 
 	 lid="MTBSABA"
 	 visible="false" 
@@ -572,21 +572,21 @@
 	 visible="false" 
 	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
-	 layers="geomac_2015" 
+	 layers="mtbs_2015" 
 	 styles="default" 
 	 identify="true" 
-	 name="2015 (GEOMAC)" 
-	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=geomac_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2015 (MTBS)" 
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer 
 	 lid="GEOMACC"
 	 visible="false" 
 	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
-	 layers="geomac_2016" 
+	 layers="mtbs_2016" 
 	 styles="default" 
 	 identify="true" 
-	 name="2016 (GEOMAC)" 
-	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=geomac_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2016 (MTBS)" 
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer 
 	 lid="GEOMACD"
 	 visible="false" 
@@ -597,6 +597,17 @@
 	 identify="true" 
 	 name="2017 (GEOMAC)" 
 	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=geomac_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+		<wmsLayer 
+	 lid="GEOMACE"
+	 visible="false" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
+	 srs="EPSG:3857" 
+	 layers="geomac_2018" 
+	 styles="default" 
+	 identify="true" 
+	 name="2018 (GEOMAC)" 
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=geomac_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
 		</wmsSubgroup>
 	<wmsSubgroup label="Historical MODIS Hotspots">
 		<wmsLayer 
@@ -768,7 +779,18 @@
 	 styles="default" 
 	 identify="true" 
 	 name="2017 (RSAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/modis-2016.png"/>
+		<wmsLayer 
+	 lid="MODISFIREAAG"
+	 visible="false" 
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true" 
+	 srs="EPSG:3857" 
+	 layers="modis-fire-2018" 
+	 styles="default" 
+	 identify="true" 
+	 name="2018 (RSAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2016.png"/>	 
+
 	</wmsSubgroup>
 	</wmsGroup>
 
@@ -936,25 +958,36 @@
 			 name="2015 surveys" 
 			 legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		 <wmsLayer 
-			 lid="ADS2016PTS"
+			 lid="ADS2016"
 			 visible="false" 
 			 url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
 			 srs="EPSG:3857" 
-			 layers="ads_2016_pts" 
+			 layers="ads_2016" 
 			 styles="default" 
 			 identify="true" 
-			 name="2016 surveys (point)" 
-			 legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2016_pts&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+			 name="2016 surveys" 
+			 legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
 		 <wmsLayer 
-			 lid="ADS2016POLY"
+			 lid="ADS2017PTS"
 			 visible="false" 
 			 url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
 			 srs="EPSG:3857" 
-			 layers="ads_2016_poly" 
+			 layers="ads_2017_pts" 
 			 styles="default" 
 			 identify="true" 
-			 name="2016 surveys (polygon)" 
-			 legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2016_poly&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+			 name="2017 surveys (point)" 
+			 legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2017_pts&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+		 <wmsLayer 
+			 lid="ADS2017POLY"
+			 visible="false" 
+			 url="%(SERVER_URL)s/ads?TRANSPARENT=true" 
+			 srs="EPSG:3857" 
+			 layers="ads_2017_poly" 
+			 styles="default" 
+			 identify="true" 
+			 name="2017 surveys (polygon)" 
+			 legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2017_poly&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer 
 			 lid="BNE"
 			 visible="false" 
