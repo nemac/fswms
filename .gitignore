@@ -61,3 +61,4 @@ msconfig/FW2_MUTED_MEDIAN_ALL_YR.map
 msconfig/FW2_MUTED_3YR.map
 msconfig/FW2_MUTED_90_10_YR.map
 msconfig/FW2_MUTED_ALC.map
+*.swp

@@ -391,7 +391,7 @@
 	 lid="MTBSABB"
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
+	 srs="EPSG:3857"
 	 layers="mtbs-raster-00-18" 
 	 styles="default" 
 	 identify="true" 
@@ -3787,6 +3787,8 @@
 
 	</wmsGroup>
 	<wmsGroup gid="G14" name="MODISCloud" label="ForWarn II Cloud Assessment Maps">
+
+			%(GLAM_WMTS_2019_LAYERS)s
 
 			%(GLAM_WMTS_2018_LAYERS)s
 
