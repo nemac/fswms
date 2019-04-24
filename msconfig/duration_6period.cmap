@@ -6,20 +6,37 @@ END
 CLASS
 	NAME "0"
 	EXPRESSION ([pixel] = 0)
-	COLOR 38 140 212
+	COLOR 240 240 240
 END
 CLASS
-	NAME "1 - 2"
-	EXPRESSION ([pixel] >= 1 AND [pixel] <= 2)
-	COLOR 176 198 255
+	NAME "1"
+	EXPRESSION ([pixel] = 1)
+	COLOR 190 232 255
 END
 CLASS
-	NAME "3 - 4"
-	EXPRESSION ([pixel] >= 3 AND [pixel] <= 4)
-	COLOR 255 237 0
+	NAME "2"
+	EXPRESSION ([pixel] = 2)
+	COLOR 0 197 255
 END
 CLASS
-	NAME "5 - 6"
-	EXPRESSION ([pixel] >= 5 AND [pixel] <= 6)
+	NAME "3"
+	EXPRESSION ([pixel] = 3)
+	COLOR 255 255 115
+END
+CLASS
+	NAME "4"
+	EXPRESSION ([pixel] = 4)
+	COLOR 230 230 0
+END
+CLASS
+	NAME "5"
+	EXPRESSION ([pixel] = 5)
 	COLOR 255 170 0
 END
+CLASS
+	NAME "6"
+	EXPRESSION ([pixel] = 6)
+	COLOR 230 76 0
+END
+
+

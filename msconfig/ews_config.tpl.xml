@@ -10907,10 +10907,40 @@
 	</wmsGroup>  
 	<wmsGroup gid="G20" name="Duration" label="Duration Products (at -3%% departure)"> 
 		<wmsSubgroup label="Fixed 12-Period: Jun 24 – Sep 21">
+
+
+				<wmsLayer
+					selected="false"
+					lid="DURCOMB2018"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durcomb_2018"
+					name="2018"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+
+				<wmsLayer
+					selected="false"
+					lid="DURCOMB2017"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durcomb_2017"
+					name="2017"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+
 				<wmsLayer
 					selected="false"
 					lid="DUBAK"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durcomb_2016"
@@ -10922,7 +10952,7 @@
 		<wmsLayer
 					selected="false"
 					lid="DUBAA"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durcomb_2015"
@@ -10934,7 +10964,7 @@
 		<wmsLayer
 					selected="false"
 					lid="DUBAB"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durcomb_2014"
@@ -10946,7 +10976,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUBAC"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durcomb_2013"
@@ -10958,7 +10988,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUBAD"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durcomb_2012"
@@ -10970,7 +11000,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUBAE"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durcomb_2011"
@@ -10982,7 +11012,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUBAF"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durcomb_2010"
@@ -10994,7 +11024,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUBAG"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durcomb_2009"
@@ -11006,7 +11036,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUBAH"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durcomb_2008"
@@ -11018,7 +11048,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUBAI"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durcomb_2007"
@@ -11030,7 +11060,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUBAJ"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durcomb_2006"
@@ -11041,10 +11071,39 @@
 			mask="true"/>		  
 			</wmsSubgroup>
 	<wmsSubgroup label="Fixed 6-Period: May 8 – Jun 17">
+
+				<wmsLayer
+					selected="false"
+					lid="DURSP2018"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiodsp_2018"
+					name="2018"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+
+				<wmsLayer
+					selected="false"
+					lid="DURSP2017"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiodsp_2017"
+					name="2017"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+
 				<wmsLayer
 					selected="false"
 					lid="DUSAK"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiodsp_2016"
@@ -11056,7 +11115,7 @@
 		<wmsLayer
 					selected="false"
 					lid="DUSAJ"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiodsp_2015"
@@ -11068,7 +11127,7 @@
 		<wmsLayer
 					selected="false"
 					lid="DUSAI"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiodsp_2014"
@@ -11080,7 +11139,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUSAH"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiodsp_2013"
@@ -11092,7 +11151,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUSAG"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiodsp_2012"
@@ -11104,7 +11163,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUSAF"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiodsp_2011"
@@ -11116,7 +11175,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUSAE"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiodsp_2010"
@@ -11128,7 +11187,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUSAD"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiodsp_2009"
@@ -11140,7 +11199,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUSAC"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiodsp_2008"
@@ -11152,7 +11211,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUSAB"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiodsp_2007"
@@ -11164,7 +11223,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUSAA"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiodsp_2006"
@@ -11175,10 +11234,40 @@
 			mask="true"/>		  
 			</wmsSubgroup>
 		<wmsSubgroup label="Fixed 6-Period: Jun 24 - Aug 4">
+
+				<wmsLayer
+					selected="false"
+					lid="DURP12018"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiod1_2018"
+					name="2018"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+
+
+				<wmsLayer
+					selected="false"
+					lid="DURP12017"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiod1_2017"
+					name="2017"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+
 				<wmsLayer
 					selected="false"
 					lid="DUWAK"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod1_2016"
@@ -11190,7 +11279,7 @@
 		<wmsLayer
 					selected="false"
 					lid="DUWAJ"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod1_2015"
@@ -11202,7 +11291,7 @@
 		<wmsLayer
 					selected="false"
 					lid="DUWAI"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod1_2014"
@@ -11214,7 +11303,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUWAH"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod1_2013"
@@ -11226,7 +11315,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUWAG"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod1_2012"
@@ -11238,7 +11327,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUWAF"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod1_2011"
@@ -11250,7 +11339,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUWAE"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod1_2010"
@@ -11262,7 +11351,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUWAD"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod1_2009"
@@ -11274,7 +11363,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUWAC"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod1_2008"
@@ -11286,7 +11375,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUWAB"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod1_2007"
@@ -11298,7 +11387,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUWAA"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod1_2006"
@@ -11309,10 +11398,40 @@
 			mask="true"/>		  
 			</wmsSubgroup>
 		<wmsSubgroup label="Fixed 6-Period: Aug 12 - Sep 21">
+
+
+			<wmsLayer
+					selected="false"
+					lid="DURP22018"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiod2_2018"
+					name="2018"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+
+			<wmsLayer
+					selected="false"
+					lid="DURP22017"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiod2_2017"
+					name="2017"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+
 			<wmsLayer
 					selected="false"
 					lid="DUAAK"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod2_2016"
@@ -11324,7 +11443,7 @@
 		<wmsLayer
 					selected="false"
 					lid="DUAAJ"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod2_2015"
@@ -11336,7 +11455,7 @@
 		<wmsLayer
 					selected="false"
 					lid="DUAAI"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod2_2014"
@@ -11348,7 +11467,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUAAH"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod2_2013"
@@ -11360,7 +11479,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUAAG"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod2_2012"
@@ -11372,7 +11491,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUAAF"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod2_2011"
@@ -11384,7 +11503,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUAAE"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod2_2010"
@@ -11396,7 +11515,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUAAD"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod2_2009"
@@ -11408,7 +11527,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUAAC"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod2_2008"
@@ -11420,7 +11539,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUAAB"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod2_2007"
@@ -11432,7 +11551,7 @@
 				<wmsLayer
 					selected="false"
 					lid="DUAAA"
-					visible="true"
+					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
 					layers="durperiod2_2006"
