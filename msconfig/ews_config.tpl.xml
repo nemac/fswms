@@ -4851,7 +4851,7 @@
 		</wmsSubgroup>
     <wmsSubgroup label="Phenology Parameters- 2016">
             <wmsLayer 
-     lid="PARAMSAFH"
+     lid="PARAMSAFH2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4861,7 +4861,7 @@
      name="large-integral-2016" 
      legend="%(SERVER_URL)s/cmapicons/large-integral2.png"/>
             <wmsLayer 
-     lid="PARAMSAFI"
+     lid="PARAMSAFI2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4871,7 +4871,7 @@
      name="qc-flags-2016" 
      legend="%(SERVER_URL)s/cmapicons/qc-flags.png"/>
             <wmsLayer 
-     lid="PARAMSAFJ"
+     lid="PARAMSAFJ2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4881,7 +4881,7 @@
      name="left-pos-20pct-2016" 
      legend="%(SERVER_URL)s/cmapicons/position2.png"/>
             <wmsLayer 
-     lid="PARAMSAFK"
+     lid="PARAMSAFK2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4891,7 +4891,7 @@
      name="right-pos-20pct-2016" 
      legend="%(SERVER_URL)s/cmapicons/position2.png"/>
             <wmsLayer 
-     lid="PARAMSAFL"
+     lid="PARAMSAFL2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4901,7 +4901,7 @@
      name="left-value-20pct-2016" 
      legend="%(SERVER_URL)s/cmapicons/value2.png"/>
             <wmsLayer 
-     lid="PARAMSAFM"
+     lid="PARAMSAFM2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4911,7 +4911,7 @@
      name="right-value-20pct-2016" 
      legend="%(SERVER_URL)s/cmapicons/value2.png"/>
             <wmsLayer 
-     lid="PARAMSAFN"
+     lid="PARAMSAFN2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4921,7 +4921,7 @@
      name="left-pos-80pct-2016" 
      legend="%(SERVER_URL)s/cmapicons/position2.png"/>
             <wmsLayer 
-     lid="PARAMSAFO"
+     lid="PARAMSAFO2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4931,7 +4931,7 @@
      name="right-pos-80pct-2016" 
      legend="%(SERVER_URL)s/cmapicons/position2.png"/>
             <wmsLayer 
-     lid="PARAMSAFP"
+     lid="PARAMSAFP2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4941,7 +4941,7 @@
      name="left-value-80pct-2016" 
      legend="%(SERVER_URL)s/cmapicons/value2.png"/>
             <wmsLayer 
-     lid="PARAMSAFQ"
+     lid="PARAMSAFQ2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4951,7 +4951,7 @@
      name="right-value-80pct-2016" 
      legend="%(SERVER_URL)s/cmapicons/value2.png"/>
             <wmsLayer 
-     lid="PARAMSAFR"
+     lid="PARAMSAFR2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4961,7 +4961,7 @@
      name="max-ndvi-pos-2016" 
      legend="%(SERVER_URL)s/cmapicons/position2.png"/>
             <wmsLayer 
-     lid="PARAMSAFS"
+     lid="PARAMSAFS2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4971,7 +4971,7 @@
      name="max-ndvi-value-2016" 
      legend="%(SERVER_URL)s/cmapicons/value2.png"/>
             <wmsLayer 
-     lid="PARAMSAFT"
+     lid="PARAMSAFT2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4981,7 +4981,7 @@
      name="min-pos-left-2016" 
      legend="%(SERVER_URL)s/cmapicons/position2.png"/>
             <wmsLayer 
-     lid="PARAMSAFU"
+     lid="PARAMSAFU2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -4991,7 +4991,7 @@
      name="min-pos-right-2016" 
      legend="%(SERVER_URL)s/cmapicons/position2.png"/>
             <wmsLayer 
-     lid="PARAMSAFV"
+     lid="PARAMSAFV2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -5001,7 +5001,7 @@
      name="min-value-left-2016" 
      legend="%(SERVER_URL)s/cmapicons/value2.png"/>
             <wmsLayer 
-     lid="PARAMSAFW"
+     lid="PARAMSAFW2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
@@ -5011,7 +5011,7 @@
      name="min-value-left-2016" 
      legend="%(SERVER_URL)s/cmapicons/value2.png"/>
             <wmsLayer 
-     lid="PARAMSAFX"
+     lid="PARAMSAFX2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
      srs="EPSG:3857" 
