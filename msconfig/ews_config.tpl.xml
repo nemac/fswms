@@ -5001,16 +5001,6 @@
      name="min-value-left-2016" 
      legend="%(SERVER_URL)s/cmapicons/value2.png"/>
             <wmsLayer 
-     lid="PARAMSAFW2016"
-     visible="false" 
-     url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-     srs="EPSG:3857" 
-     layers="min-value-left-2016" 
-     styles="default" 
-     identify="true" 
-     name="min-value-left-2016" 
-     legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-            <wmsLayer 
      lid="PARAMSAFX2016"
      visible="false" 
      url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
@@ -5165,16 +5155,6 @@
 	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
 			<wmsLayer 
 	 lid="PARAMSAFV"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2015" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2015" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
-	 lid="PARAMSAFW"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
@@ -5346,16 +5326,6 @@
 	 name="min-value-left-2014" 
 	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
 			<wmsLayer 
-	 lid="PARAMSAGN"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2014" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2014" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
 	 lid="PARAMSAGO"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
@@ -5518,16 +5488,6 @@
 	 name="min-value-left-2013" 
 	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
 			<wmsLayer 
-	 lid="PARAMSACP"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2013" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2013" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
 	 lid="PARAMSACQ"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
@@ -5679,16 +5639,6 @@
 	 identify="true" 
 	 name="min-pos-right-2012" 
 	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
-			<wmsLayer 
-	 lid="PARAMSADF"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2012" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2012" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
 			<wmsLayer 
 	 lid="PARAMSADG"
 	 visible="false" 
@@ -5862,16 +5812,6 @@
 	 name="min-value-left-2011" 
 	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
 			<wmsLayer 
-	 lid="PARAMSAEO"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2011" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2011" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
 	 lid="PARAMSAEP"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
@@ -6025,16 +5965,6 @@
 	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
 			<wmsLayer 
 	 lid="PARAMSAFE"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2010" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2010" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
-	 lid="PARAMSAFF"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
@@ -6206,16 +6136,6 @@
 	 name="min-value-left-2009" 
 	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
 			<wmsLayer 
-	 lid="ANE"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2009" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2009" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
 	 lid="ANF"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
@@ -6369,16 +6289,6 @@
 	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
 			<wmsLayer 
 	 lid="ANU"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2008" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2008" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
-	 lid="ANV"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
@@ -6550,16 +6460,6 @@
 	 name="min-value-left-2007" 
 	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
 			<wmsLayer 
-	 lid="AOM"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2007" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2007" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
 	 lid="AON"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
@@ -6713,16 +6613,6 @@
 	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
 			<wmsLayer 
 	 lid="APC"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2006" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2006" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
-	 lid="APD"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
@@ -6894,16 +6784,6 @@
 	 name="min-value-left-2005" 
 	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
 			<wmsLayer 
-	 lid="APU"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2005" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2005" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
 	 lid="APV"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
@@ -7057,16 +6937,6 @@
 	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
 			<wmsLayer 
 	 lid="AQK"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2004" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2004" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
-	 lid="AQL"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
@@ -7238,16 +7108,6 @@
 	 name="min-value-left-2003" 
 	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
 			<wmsLayer 
-	 lid="ARC"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2003" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2003" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
 	 lid="ARD"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
@@ -7401,16 +7261,6 @@
 	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
 			<wmsLayer 
 	 lid="PARAMSAAO"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2002" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2002" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
-	 lid="PARAMSAAP"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
@@ -7582,16 +7432,6 @@
 	 name="min-value-left-2001" 
 	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
 			<wmsLayer 
-	 lid="PARAMSABG"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2001" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2001" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
 	 lid="PARAMSABH"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
@@ -7745,16 +7585,6 @@
 	 legend="%(SERVER_URL)s/cmapicons/position2.png"/>
 			<wmsLayer 
 	 lid="PARAMSABW"
-	 visible="false" 
-	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
-	 srs="EPSG:3857" 
-	 layers="min-value-left-2000" 
-	 styles="default" 
-	 identify="true" 
-	 name="min-value-left-2000" 
-	 legend="%(SERVER_URL)s/cmapicons/value2.png"/>
-			<wmsLayer 
-	 lid="PARAMSABX"
 	 visible="false" 
 	 url="%(SERVER_URL)s/parameters?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
