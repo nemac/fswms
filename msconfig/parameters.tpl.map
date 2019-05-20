@@ -38,7 +38,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.small_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.small_integral.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
            
@@ -66,7 +66,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_min_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_min_value_right.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
           
@@ -94,7 +94,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_min_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_min_value_left.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -122,7 +122,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_min_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_min_position_right.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -150,7 +150,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_min_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_min_position_left.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -178,7 +178,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_80pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_80pct_value_right.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -206,7 +206,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_80pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_80pct_value_left.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -234,7 +234,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_80pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_80pct_position_right.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -262,7 +262,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_80pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_80pct_position_left.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -290,7 +290,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_20pct_value_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_20pct_value_right.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -318,7 +318,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_20pct_value_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_20pct_value_left.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -346,7 +346,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_20pct_position_right.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_20pct_position_right.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -374,7 +374,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_20pct_position_left.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.season_20pct_position_left.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -402,7 +402,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.qc_flags.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.qc_flags.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -430,7 +430,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.max_ndvi_value.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.max_ndvi_value.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -458,7 +458,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.max_ndvi_position.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.max_ndvi_position.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -486,7 +486,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.large_integral.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Parameters/MCD13.A2016.phenparams.large_integral.img.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
