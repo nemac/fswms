@@ -62,6 +62,8 @@ linkgroups = [
 
 
 ## FOR FDM PICKUP
+
+
     {
         'srcdir'             : os.path.join(SYM_DIR, "fsdata/rsac_fhtet/ews"),
         'regex'              : r'/ews/(\d{8})_(\d{2})_3yr\.tif$',
@@ -157,6 +159,8 @@ linkgroups = [
     },
 
 ##  FOR VIEWER
+
+
     {
         'srcdir'             : os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews"),
         'regex'              : r'/ews/(\d{8})_(\d{2})_3yr\.tif$',

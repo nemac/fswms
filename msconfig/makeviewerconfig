@@ -1044,13 +1044,14 @@ for subgroup in [
 
 rsacModisChangeDetectionProductLayers = ""
 
-for subgroup in [    
+subgroups = [    
     { 'label' : '   From Prior 3-Year Max',
       'layers' : [
             { 'name' : 'RSAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },
             { 'name' : 'RSAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] }
-    ]:
+]
+for subgroup in subgroups:
     rsacModisChangeDetectionProductLayers = ( rsacModisChangeDetectionProductLayers +
         '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
     for layer in subgroup['layers']:
@@ -1245,6 +1246,10 @@ WMTS_LAYER_TEMPLATE = Template(string="""
     />
 """)
 
+inlineNoticeTemplate = Template(string="""
+        <layerNotice text="%(TEXT)s" />
+""")
+
 
 ALL_PRODUCT_TYPES = PRODUCT_TYPES.copy()
 ALL_PRODUCT_TYPES.update(LEGACY_PRODUCT_TYPES)
@@ -1253,10 +1258,13 @@ ALL_PRODUCT_TYPES.update(LEGACY_PRODUCT_TYPES)
 A_PATH_TO_FW2_PRODUCTS = os.path.join(FW2_DATA_DIR, FW2_SOURCES_AS_LIST[0], 'X_LC_1YEAR')
 
 def extractDateString(f):
-  match = re.search(r"(\d{8})", f)
-  if (match.groups(1)):
-    return match.groups(1)[0]
-  return None
+  try:
+    match = re.search(r"(\d{8})", f)
+    if (match.groups(1)):
+      return match.groups(1)[0]
+    return None
+  except:
+    return None
 
 
 def getCurrentDates(pwd, date_format=None):
@@ -1264,6 +1272,7 @@ def getCurrentDates(pwd, date_format=None):
   dateStrings = map(lambda f: extractDateString(f), files)
   # remove duplicates from wkt files
   dateStrings = list(set(dateStrings))
+  dateStrings = list(filter(lambda s: s is not None, dateStrings))
   dates = map(lambda ds: datetime.datetime.strptime(ds, "%Y%m%d"), dateStrings)
   sorted_timestamps = list(reversed(sorted(map(lambda d: time.mktime(d.timetuple()), dates))))
   current_timestamps = sorted_timestamps[:3]
@@ -1312,14 +1321,33 @@ def makeFW2CurrentLayerTitles():
   return dates_dict
 
 
-FW2_CURRENT_DATE_STRINGS = getCurrentDates(A_PATH_TO_FW2_PRODUCTS, '%Y%m%d')
+
+def getCurrentRSACDates(path, ext='tif'):
+  all_files = os.listdir(path)
+  files = filter(lambda s: s.endswith(ext), all_files)
+
+
+PATH_TO_RSAC_PRODUCTS = os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews")
+
+rsac_current_datestrings = getCurrentDates(PATH_TO_RSAC_PRODUCTS, '%Y%m%d')
+
+fw2_current_datestrings = getCurrentDates(A_PATH_TO_FW2_PRODUCTS, '%Y%m%d')
 
 FW2_CURRENT_DATES_TITLES = makeFW2CurrentLayerTitles()
 
-RSAC_CONFIG = {}
-RSAC_CONFIG[FW2_CURRENT_DATE_STRINGS[0]] = { 'name': 'RSAC-FHTET_current', 'title' : 'Current RSAC-FHAAST FDM', 'lid' : 'AM',  'visible' : 'false' }
-RSAC_CONFIG[FW2_CURRENT_DATE_STRINGS[1]] = { 'name': 'RSAC-FHTET_previous1', 'title' : 'Previous1 RSAC-FHAAST FDM', 'lid' : 'AN',  'visible' : 'false' }
-RSAC_CONFIG[FW2_CURRENT_DATE_STRINGS[2]] = { 'name': 'RSAC-FHTET_previous2', 'title' : 'Previous2 RSAC-FHAAST FDM', 'lid' : 'AP',  'visible' : 'false' }
+rsac_config = {}
+
+rsac_titles = [
+  { 'name': 'GTAC_current_{0}', 'lid': 'AM' },
+  { 'name': 'GTAC_previous1_{0}', 'lid': 'AN' },
+  { 'name': 'GTAC_previous2_{0}', 'lid': 'AP' }
+]
+
+for i in range(0, len(fw2_current_datestrings)):
+  ds = fw2_current_datestrings
+  if ds in rsac_current_datestrings:
+    rsac_config[ds] = { 'name': rsac_titles[i]['name'], 'title' : rsac_titles[i]['name'], 'lid' : rsac_titles[i]['lid'],  'visible' : 'false' }
+
 
 
 def renderGlamLayerBlocksFor(yr):
@@ -1405,26 +1433,11 @@ def renderWMSLayerBlock(lid, layer_name, layer_title, selected=False, lineBreak=
 
 
 def layerIsSelectedByDefault(source, product_type, date_string):
-  most_recent_date = FW2_CURRENT_DATE_STRINGS[0]
+  most_recent_date = fw2_current_datestrings[0]
   tests = [
     most_recent_date == date_string and product_type == 'X_LC_5YEAR' and source == 'ForWarn2'
   ]
   return len(filter(lambda t: t, tests)) > 0
-
-
-def makeXMLBlockForLayer(source, product_type, date_string, lineBreak=False):
-  pwd = os.path.join(FW2_DATA_DIR, source, product_type)
-  match = glob.glob(pwd +'/*'+date_string+'*')
-  if len(match):
-    lid = makeLID(source, product_type, date_string)
-    file = match[0]
-    layer_name = lid
-    layer_title = FW2_CURRENT_DATES_TITLES[date_string][source]
-    selected = layerIsSelectedByDefault(source, product_type, date_string)
-    block = renderWMSLayerBlock(lid, layer_name, layer_title, selected, lineBreak)
-    return block
-  else:
-    return ''
 
 
 def makeFW2ArchiveLayerListFor(product_type, year):
@@ -1475,8 +1488,8 @@ def makeFW2CurrentLegacyLayerListFor(product_type):
   date_ranges = map(getDateRangeFor, current_dates)
   blockList = ''
   pwd = os.path.join(FW2_DATA_DIR, FW2_LEGACY_SOURCE_DIR, product_type)
-  for i in range(0, len(FW2_CURRENT_DATE_STRINGS)):
-    d = FW2_CURRENT_DATE_STRINGS[i]
+  for i in range(0, len(fw2_current_datestrings)):
+    d = fw2_current_datestrings[i]
     match = glob.glob(pwd + '/*' + d + '*')
     if len(match):
       lid = makeLID(FW2_LEGACY_SOURCE_DIR, product_type, d, SOURCES, ALL_PRODUCT_TYPES)
@@ -1514,31 +1527,33 @@ def makeFW2CurrentLayerListFor(product_type, list_type):
   if list_type == "current_legacy":
     sources = [ FW2_LEGACY_SOURCE_DIR ]
   blockList = ''
-  for i in range(0, len(FW2_CURRENT_DATE_STRINGS)):
-    d = FW2_CURRENT_DATE_STRINGS[i]
+  for i in range(0, len(fw2_current_datestrings)):
+    d = fw2_current_datestrings[i]
+    appending_gtac = product_type == 'X_LC_3YEAR' and list_type == 'current_compare' and rsac_config.has_key(d)
     for i_source in range(0, len(sources)):
       source = sources[i_source]
       how_current_label = how_current[i] 
       lid = "{0}_{1}_{2}".format(SOURCES[source], ALL_PRODUCT_TYPES[product_type], how_current_label)
       if i_source == len(sources)-1 and list_type != 'current_legacy':
-        if product_type == 'X_LC_3YEAR' and list_type == 'current_compare':
+        # Don't add a linebreak if we're going to append a GTAC product to the list
+        if appending_gtac:
           blockList += makeXMLBlockForLayer(source, product_type, d, False, lid)
         else:
           blockList += makeXMLBlockForLayer(source, product_type, d, True, lid)
       else:
         blockList += makeXMLBlockForLayer(source, product_type, d, False, lid)
-    if product_type == 'X_LC_3YEAR' and list_type == 'current_compare':
+    if appending_gtac:
       blockList += wmsLayerTemplate.render({
-        'SELECTED'      : "",
-        'SERVER_URL'    : SERVER_URL,
-        'LAYER_LID'     : RSAC_CONFIG[d]['lid'],
-        'LAYER_NAME'    : RSAC_CONFIG[d]['name'],
-        'LEGEND'        : SERVER_URL+'/'+"cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png",
-        'LAYER_VISIBLE' : 'false',
-        'LAYER_TITLE'   : RSAC_CONFIG[d]['title'],
-        'MASK'   : '',
-        'BREAK'  : 'break="true"'
-      })
+          'SELECTED'      : "",
+          'SERVER_URL'    : SERVER_URL,
+          'LAYER_LID'     : rsac_config[d]['lid'],
+          'LAYER_NAME'    : rsac_config[d]['name'],
+          'LEGEND'        : SERVER_URL+'/'+"cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png",
+          'LAYER_VISIBLE' : 'false',
+          'LAYER_TITLE'   : rsac_config[d]['title'],
+          'MASK'   : '',
+          'BREAK'  : 'break="true"'
+        })
   return blockList
 
 
