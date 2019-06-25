@@ -2958,11 +2958,11 @@
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
-	 layers="fs-fuel-treatments-00-19" 
+	 layers="fs-fuel-treatments-00-20"
 	 styles="default" 
 	 identify="true" 
-	 name="2000-2019 Combined (FS)" 
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-fuel-treatments-00-19&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2000-2020 Combined (FS)" 
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-fuel-treatments-00-20&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer 
 	 lid="FTAAB"
 	 visible="false" 
@@ -3163,6 +3163,20 @@
 	 identify="true" 
 	 name="2019 (FS)" 
 	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
+		<wmsLayer 
+	 lid="FTAAV"
+	 visible="false" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
+	 srs="EPSG:3857" 
+	 layers="fs_treatment_2020" 
+	 styles="default" 
+	 identify="true" 
+	 name="2020 (FS)" 
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2020&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
+
+
 		</wmsSubgroup>
 	<wmsSubgroup label="USFS Logging Activity">
 			<wmsLayer 
@@ -3170,11 +3184,11 @@
 	 visible="false" 
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
 	 srs="EPSG:3857" 
-	 layers="fs-timber-harvests-00-18" 
+	 layers="fs-timber-harvests-00-20" 
 	 styles="default" 
 	 identify="true" 
-	 name="2000-2018 Combined (FS)" 
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-timber-harvests-00-18&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2000-2020 Combined (FS)" 
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-timber-harvests-00-20&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer 
 	 lid="FHAAB"
 	 visible="false" 
@@ -3355,6 +3369,40 @@
 	 identify="true" 
 	 name="2017 (FS)" 
 	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_harvests_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+		<wmsLayer 
+	 lid="FHAAT"
+	 visible="false" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
+	 srs="EPSG:3857" 
+	 layers="fs_harvests_2018" 
+	 styles="default" 
+	 identify="true" 
+	 name="2018 (FS)" 
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_harvests_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
+		<wmsLayer 
+	 lid="FHAAU"
+	 visible="false" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
+	 srs="EPSG:3857" 
+	 layers="fs_harvests_2019" 
+	 styles="default" 
+	 identify="true" 
+	 name="2019 (FS)" 
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_harvests_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
+		<wmsLayer 
+	 lid="FHAAV"
+	 visible="false" 
+	 url="%(SERVER_URL)s/treatments?TRANSPARENT=true" 
+	 srs="EPSG:3857" 
+	 layers="fs_harvests_2020" 
+	 styles="default" 
+	 identify="true" 
+	 name="2020 (FS)" 
+	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_harvests_2020&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
+
 		</wmsSubgroup>
 	<wmsSubgroup label="USDA Agriculture">
 			<wmsLayer 
@@ -3407,6 +3455,17 @@
 	 identify="true" 
 	 name="2017 Cropland Data Layer" 
 	 legend="%(SERVER_URL)s/cmapicons/CropLands.png"/>
+	  <wmsLayer 
+	 lid="PMCL2018"
+	 visible="false" 
+	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true" 
+	 srs="EPSG:3857" 
+	 layers="CropLands2018" 
+	 styles="default" 
+	 identify="true" 
+	 name="2018 Cropland Data Layer" 
+	 legend="%(SERVER_URL)s/cmapicons/CropLands.png"/>
+
 		</wmsSubgroup>
 		<wmsSubgroup label="Elevation Products">
 			<wmsLayer 

@@ -73,6 +73,240 @@ MAP
     END
 
     LAYER #
+        NAME ads_2018_poly
+        PROJECTION
+            "init=epsg:2163"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fhm_ads_2018_poly"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM        hazards
+        CLASS
+            NAME "FHM ADS 2018 POLY"
+            EXPRESSION ""
+        END
+        CLASS
+            NAME "Abiotic Damage"
+            EXPRESSION "Abiotic Damage"
+            STYLE
+                COLOR        115 115 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+        CLASS
+            NAME "Biotic Damage"
+            EXPRESSION "Biotic Damage"
+            STYLE
+                COLOR        68 79 137
+                OUTLINECOLOR 32 32 32
+            END
+        END
+        CLASS
+            NAME "Competition"
+            EXPRESSION "Competition"
+            STYLE
+                COLOR        250 252 164
+                OUTLINECOLOR 32 32 32
+            END
+        END
+        CLASS
+            NAME "Diseases and Pathogens"
+            EXPRESSION "Diseases and Pathogens"
+            STYLE
+                COLOR        255 211 127
+                OUTLINECOLOR 32 32 32
+            END
+        END
+        CLASS
+            NAME "Harvest"
+            EXPRESSION "Harvest"
+            STYLE
+                COLOR        56 168 0
+                OUTLINECOLOR 32 32 32
+            END
+        END
+        CLASS
+            NAME "Human Activities"
+            EXPRESSION "Human Activities"
+            STYLE
+                COLOR        115 0 76
+                OUTLINECOLOR 32 32 32
+            END
+        END
+        CLASS
+            NAME "Insects"
+            EXPRESSION "Insects"
+            STYLE
+                COLOR        223 115 255
+                OUTLINECOLOR 32 32 32
+            END
+        END
+        CLASS
+            NAME "Multi-Damage (Insect/Disease)"
+            EXPRESSION "Multi-Damage (Insect/Disease)"
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 223 115 255
+                SIZE 7
+                WIDTH 2
+                ANGLE -45
+            END # STYLE
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 223 115 255
+                SIZE 7
+                WIDTH 2
+                ANGLE 45
+            END # STYLE
+        END
+        CLASS
+            NAME "Other"
+            EXPRESSION "Other"
+            STYLE
+                COLOR        255 190 190
+                OUTLINECOLOR 32 32 32
+            END
+        END
+        CLASS
+            NAME "Unknown"
+            EXPRESSION "Unknown"
+            STYLE
+                COLOR        0 0 61
+                OUTLINECOLOR 32 32 32
+            END
+        END
+        METADATA
+            "wms_title"          "ads_2018_poly"
+            "wms_abstract"       "ads_2018_poly"
+            "gml_include_items"  "agnt_nm,hazards"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME ads_2018_pts
+        PROJECTION
+            "init=epsg:2163"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fhm_ads_2018_pts"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM        hazards
+        CLASS
+            NAME "FHM ADS 2018 POINTS"
+            EXPRESSION ""
+        END
+        CLASS
+            NAME "Abiotic Damage"
+            EXPRESSION "Abiotic Damage"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR        115 115 0
+            END
+        END
+        CLASS
+            NAME "Biotic Damage"
+            EXPRESSION "Biotic Damage"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR        68 79 137
+            END
+        END
+        CLASS
+            NAME "Competition"
+            EXPRESSION "Competition"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR        250 252 164
+            END
+        END
+        CLASS
+            NAME "Diseases and Pathogens"
+            EXPRESSION "Diseases and Pathogens"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR        255 211 127
+            END
+        END
+        CLASS
+            NAME "Harvest"
+            EXPRESSION "Harvest"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR        56 168 0
+            END
+        END
+        CLASS
+            NAME "Human Activities"
+            EXPRESSION "Human Activities"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR        115 0 76
+            END
+        END
+        CLASS
+            NAME "Insects"
+            EXPRESSION "Insects"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR        223 115 255
+            END
+        END
+        CLASS
+            NAME "Multi-Damage (Insect/Disease)"
+            EXPRESSION "Multi-Damage (Insect/Disease)"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 223 115 0
+            END # STYLE
+        END
+        CLASS
+            NAME "Other"
+            EXPRESSION "Other"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR        255 190 190
+            END
+        END
+        CLASS
+            NAME "Unknown"
+            EXPRESSION "Unknown"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR        0 0 61
+            END
+        END
+        METADATA
+            "wms_title"          "ads_2018_pts"
+            "wms_abstract"       "ads_2018_pts"
+            "gml_include_items"  "agnt_nm,hazards"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
         NAME ads_2017_pts
         PROJECTION
             "init=epsg:2163"
