@@ -197,7 +197,6 @@ MAP
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
         DATA             "geom from fhm_ads_2018_pts"
-        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POINT
         DUMP             TRUE
