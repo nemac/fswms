@@ -80,7 +80,7 @@ MAP
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
         DATA             "geom from fhm_ads_2018_poly"
-        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        #EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
         DUMP             TRUE
