@@ -74,6 +74,20 @@ ewsMask = [
     {'name' : 'MaskForWetland'}
     ]   
 
+
+
+mapfilesWritten = []
+
+    
+### initialize a dict to keep track of layer titles (keyed by layer name):
+###
+layerTitles = {}
+
+###
+### initialize tiflist: array of dict objects holding info about each layer in mapfile(s)
+###
+tiflist = []
+
 ###
 ### function definitions
 ###
@@ -163,6 +177,94 @@ class Template:
         f.close
     def render(self, dict):
         return self.contents % dict
+
+###
+### This function simply opens a file for writing, and appends the name of the file
+### to the mapfilesWritten array, which is used at the bottom of this script to
+### write the index.html file with the list of all the WMS addresses.
+###
+def openMapfileForWriting(filename):
+    mapfilesWritten.append(filename)
+    return open(filename, "w");
+
+
+#print "debug: at 9"
+
+###
+### add in the gtac fhtet files to be available in an archive format
+### these will go in ews.map also but will utilize a diff color map: gtac_fhtet_percent_change_cmap.cmap
+###
+gtac_list = []
+ARCHIVE_DIR = DATA_DIR + "/fsdata/gtac_fhtet/ews" #DATA_DIR is "/flood" currently
+for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".tif")], reverse=False):
+    try:
+        tif = re.sub('^' + ARCHIVE_DIR + '/', '', tif)
+        tif_fullpath = ARCHIVE_DIR + '/' + tif;
+        proj = getproj(tif_fullpath)
+        modDate = getModDate(tif_fullpath)
+        nameform = re.sub(r'^.*/', '', tif)
+        if ('3yr') in nameform or ('5yr') in nameform:
+            group = "GTAC-FHTET"
+            group_abstract = "Layers uploaded by GTAC-FHTET"
+            colormapline   = 'INCLUDE "gtac_fhtet_percent_change_cmap.cmap"'
+	    # GTAC is now called GTAC
+ 	    # We are gradually renaming relevant data, prioritizing user-facing content first
+            keyimage       = "cmapicons/GTAC-FHTET_CT_7-6-2011_clipped.png"
+            if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
+                layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
+            else:
+                layerName = group + "_" + re.sub(r'_.*$', '', nameform)
+            if '3yr' in nameform:
+                layerName = layerName + "_3yr"
+            else:
+                layerName = layerName + "_5yr"
+            layerTitle = tif
+
+            gtac_list.append({
+                             'PROJ'            : formatproj(proj,10),
+                             'NAME'            : layerName,
+                             'DATA'            : ARCHIVE_DIR + '/' + tif,
+                             'TITLE'           : layerTitle,
+                             'ABSTRACT'        : layerTitle,
+                             'COLORMAPLINE'    : colormapline,
+                             'KEYIMAGE'        : keyimage,
+                             'MASK'            : ''
+                             })
+
+            layerTitles[layerName] = layerTitle 
+    except:
+        print 'except occured'
+        continue
+
+
+def makeGtacArchiveMapfiles():
+    layerTemplate = Template('ews_gen.layer.tpl.map')
+    for tifdict in gtac_list:
+        layer_block  = layerTemplate.render(tifdict)
+        mapTemplate = Template("ews.map.tmpl")
+        SERVICE_NAME = "dyna_ews"
+        layerName =  tifdict['NAME']
+        f_new = openMapfileForWriting("dyna_maps/"+layerName+".map")
+        f_new.write( mapTemplate.render( {
+	    'DATA_DIR'                : DATA_DIR,
+	    'LAYERS'                  : layer_block,
+	    'WMS_SRS'                 : "EPSG:3857 EPSG:4326 EPSG:900913",
+	    'MAPFILE_PROJECTION'      : '"init=epsg:3857"',
+	    'SERVICE_NAME'            : SERVICE_NAME,
+	    'TEMP_FILE_PREFIX'        : "ms_%s" % (SERVICE_NAME),
+	    'MAPFILE'                 : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
+	    'OWS_TITLE'               : "NEMAC %s WMS" % (SERVICE_NAME),
+	    'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
+	    'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
+	    'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
+	    'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
+	    'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
+        } ) )
+
+    f_new.close()
+
+
+makeGtacArchiveMapfiles()
 
 #print "debug: at 5"
 
@@ -377,30 +479,6 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
             layers = layers + layerTemplate.render(tifdict)    
     return layers
 
-#print "debug: at 6"
-
-mapfilesWritten = []
-
-###
-### This function simply opens a file for writing, and appends the name of the file
-### to the mapfilesWritten array, which is used at the bottom of this script to
-### write the index.html file with the list of all the WMS addresses.
-###
-def openMapfileForWriting(filename):
-    mapfilesWritten.append(filename)
-    return open(filename, "w");
-    
-### Begining of run-time code -------************************************
-###
-### initialize a dict to keep track of layer titles (keyed by layer name):
-###
-layerTitles = {}
-
-###
-### initialize tiflist: array of dict objects holding info about each layer in mapfile(s)
-###
-tiflist = []
-
 #print "debug: at 7"
 
 ###
@@ -428,11 +506,11 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
         continue
 
     #print "debug: at 7.4"
-    if tif.startswith("rsac"):
-        group          = "RSAC-FHTET"
-        group_abstract = "Layers uploaded by RSAC-FHTET"
-        colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
-        colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
+    if tif.startswith("gtac"):
+        group          = "GTAC-FHTET"
+        group_abstract = "Layers uploaded by GTAC-FHTET"
+        colormapfile   = "gtac_fhtet_percent_change_cmap.cmap"
+        colormapcsv    = "gtac_fhtet_percent_change_cmap.csv"
         keyimage       = "getLegend(group)"
     else:
         group          = "EFETAC-NASA"
@@ -487,7 +565,7 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
     #print "debug: at 7.8"
     
     #Mask are only for tacs nasa products
-    if not tif.startswith("rsac"):
+    if not tif.startswith("gtac"):
         for mask in ewsMask:
             tiflist.append({ 'TIF'             : tif,
                              'PROJVALID'       : len(proj) > 0,
@@ -568,13 +646,12 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
         proj = getproj(tif_fullpath)
         modDate = getModDate(tif_fullpath)
         nameform = re.sub(r'^.*/', '', tif)
-        if tif.startswith("rsac"): #jdm: I don't think this if is needed Marked4Delete
-            group = "RSAC-FHTET"
-            group_abstract = "Layers uploaded by RSAC-FHTET"
-            colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
-            colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
+        if tif.startswith("gtac"): #jdm: I don't think this if is needed Marked4Delete
+            group = "GTAC-FHTET"
+            group_abstract = "Layers uploaded by GTAC-FHTET"
+            colormapfile   = "gtac_fhtet_percent_change_cmap.cmap"
+            colormapcsv    = "gtac_fhtet_percent_change_cmap.csv"
             keyimage       = "cmapicons/new-forwarn2-standard-legend-2.png"
-            print 'jdm: see this never prints'
         else:
             group = "EFETAC-NASA"
             group_abstract = "Layers uploaded by TACs-NASA"
@@ -624,57 +701,6 @@ for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".t
                              'MASK'            : 'MASK ' + mask['name']
                              })    
     except:
-        continue
-
-#print "debug: at 9"
-
-###
-### add in the rsac fhtet files to be available in an archive format
-### these will go in ews.map also but will utilize a diff color map: rsac_fhtet_percent_change_cmap.cmap
-###
-ARCHIVE_DIR = DATA_DIR + "/fsdata/rsac_fhtet/ews" #DATA_DIR is "/flood" currently
-for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".tif")], reverse=False):
-    try:
-        tif = re.sub('^' + ARCHIVE_DIR + '/', '', tif)
-        tif_fullpath = ARCHIVE_DIR + '/' + tif;
-        proj = getproj(tif_fullpath)
-        modDate = getModDate(tif_fullpath)
-        nameform = re.sub(r'^.*/', '', tif)
-        if ('3yr') in nameform or ('5yr') in nameform:
-            group = "RSAC-FHTET"
-            group_abstract = "Layers uploaded by RSAC-FHTET"
-            colormapfile   = "rsac_fhtet_percent_change_cmap.cmap"
-            colormapcsv    = "rsac_fhtet_percent_change_cmap.csv"
-            #keyimage       = "RSAC-FHTET_CT_7-6-2011_clipped.png"
-            keyimage       = "cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"
-            if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
-                layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
-            else:
-                layerName = group + "_" + re.sub(r'_.*$', '', nameform)
-            if '3yr' in nameform:
-                layerName = layerName + "3yr"
-            else:
-                layerName = layerName + "5yr"
-            layerTitle = tif
-            tiflist.append({ 'TIF'             : tif,
-                             'PROJVALID'       : len(proj) > 0,
-                             'PROJ'            : formatproj(proj,10),
-                             'WKT'             : getwkt(tif_fullpath),
-                             'NAME'            : layerName,
-                             'GROUP'           : group,
-                             'DATA'            : ARCHIVE_DIR + '/' + tif,
-                             'GROUP_ABSTRACT'  : group_abstract,
-                             'TITLE'           : layerTitle,
-                             'ABSTRACT'        : layerTitle,
-                             'COLORMAPFILE'    : colormapfile,
-                             'COLORMAPCSV'     : colormapcsv,
-                             'KEYIMAGE'        : keyimage,
-                             'MODDATE'         : modDate,
-                             'MASK'            : ''
-                             })
-            layerTitles[layerName] = layerTitle 
-    except:
-        print 'except occured'
         continue
 
 
@@ -1359,7 +1385,6 @@ f_out.write(interp("""</ul>\n"""))
 f_out.close()
 
 
-
 #### FORWARN II #####
 
 ALL_PRODUCT_TYPES = PRODUCT_TYPES.copy()
@@ -1594,4 +1619,3 @@ for s in LEGACY_SOURCES:
   for p in ALL_LEGACY_PRODUCT_TYPES:
     makeCurrentMapfilesFor(s, p, '.tif')
  
-

@@ -20,7 +20,7 @@
 		<image name="None"      label="None"     url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer" />
 	</images>
 	<legend type="Image" legendServerPath="http://ews.forestthreats.org/GIS/assets/Mashup_Legends/">
-		<legendGroup name="RSAC-FHTET 2010" />
+		<legendGroup name="GTAC-FHTET 2010" />
 	</legend>
 	<mapviews>
 		<view name="CONUS_Vegetation_Monitoring_Tools" label="N. American Vegetation Monitoring Tools" selected="true">
@@ -62,7 +62,7 @@
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Archived_FW2" />
 			<viewGroup name="Archived_TACS" />
-			<viewGroup name="Archived_RSAC" />
+			<viewGroup name="Archived_GTAC" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
@@ -139,7 +139,7 @@
 			<viewGroup name="US_FHM_ADS" />
 			<viewGroup name="MODIS_Change_Detection_Products" />
 			<viewGroup name="Archived_TACS" />
-			<viewGroup name="Archived_RSAC" />
+			<viewGroup name="Archived_GTAC" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
@@ -154,7 +154,7 @@
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Archived_TACS" />
 			<viewGroup name="Duration" />
-			<viewGroup name="Archived_RSAC" />
+			<viewGroup name="Archived_GTAC" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
@@ -373,7 +373,7 @@
 	 layers="modis-fire-current-year" 
 	 styles="default" 
 	 identify="true" 
-	 name="Hotspots – Year to date (RSAC)" 
+	 name="Hotspots – Year to date (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/cumulative-current-year.png"/>
 		</wmsSubgroup>	 
 		<wmsSubgroup label="Historical Large Fire Perimeters">
@@ -618,7 +618,7 @@
 	 layers="modis-fire-2001" 
 	 styles="default" 
 	 identify="true" 
-	 name="2001 (RSAC)" 
+	 name="2001 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2001.png"/>
 		<wmsLayer 
 	 lid="MFTWO"
@@ -628,7 +628,7 @@
 	 layers="modis-fire-2002" 
 	 styles="default" 
 	 identify="true" 
-	 name="2002 (RSAC)" 
+	 name="2002 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2002.png"/>
 		<wmsLayer 
 	 lid="MFTHREE"
@@ -638,7 +638,7 @@
 	 layers="modis-fire-2003" 
 	 styles="default" 
 	 identify="true" 
-	 name="2003 (RSAC)" 
+	 name="2003 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2003.png"/>
 		<wmsLayer 
 	 lid="MFFOUR"
@@ -648,7 +648,7 @@
 	 layers="modis-fire-2004" 
 	 styles="default" 
 	 identify="true" 
-	 name="2004 (RSAC)" 
+	 name="2004 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2004.png"/>
 		<wmsLayer 
 	 lid="MFFIVE"
@@ -658,7 +658,7 @@
 	 layers="modis-fire-2005" 
 	 styles="default" 
 	 identify="true" 
-	 name="2005 (RSAC)" 
+	 name="2005 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2005.png"/>
 		<wmsLayer 
 	 lid="MFSIX"
@@ -668,7 +668,7 @@
 	 layers="modis-fire-2006" 
 	 styles="default" 
 	 identify="true" 
-	 name="2006 (RSAC)" 
+	 name="2006 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2006.png"/>
 		<wmsLayer 
 	 lid="MFSEVEN"
@@ -678,7 +678,7 @@
 	 layers="modis-fire-2007" 
 	 styles="default" 
 	 identify="true" 
-	 name="2007 (RSAC)" 
+	 name="2007 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2007.png"/>
 		<wmsLayer 
 	 lid="MFEIGHT"
@@ -688,7 +688,7 @@
 	 layers="modis-fire-2008" 
 	 styles="default" 
 	 identify="true" 
-	 name="2008 (RSAC)" 
+	 name="2008 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2008.png"/>
 		<wmsLayer 
 	 lid="MFNINE"
@@ -698,7 +698,7 @@
 	 layers="modis-fire-2009" 
 	 styles="default" 
 	 identify="true" 
-	 name="2009 (RSAC)" 
+	 name="2009 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2009.png"/>
 		 <wmsLayer 
 	 lid="BRK"
@@ -708,7 +708,7 @@
 	 layers="modis-fire-2010" 
 	 styles="default" 
 	 identify="true" 
-	 name="2010 (RSAC)" 
+	 name="2010 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2010.png"/>
 		 <wmsLayer 
 	 lid="BRJ"
@@ -718,7 +718,7 @@
 	 layers="modis-fire-2011" 
 	 styles="default" 
 	 identify="true" 
-	 name="2011 (RSAC)" 
+	 name="2011 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2011.png"/>
 		<wmsLayer 
 	 lid="MODISFIREAAA"
@@ -728,7 +728,7 @@
 	 layers="modis-fire-2012" 
 	 styles="default" 
 	 identify="true" 
-	 name="2012 (RSAC)" 
+	 name="2012 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2012.png"/>
 		<wmsLayer 
 	 lid="MODISFIREAAB"
@@ -738,7 +738,7 @@
 	 layers="modis-fire-2013" 
 	 styles="default" 
 	 identify="true" 
-	 name="2013 (RSAC)" 
+	 name="2013 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2013.png"/>	
 			<wmsLayer 
 	 lid="MODISFIREAAC"
@@ -748,7 +748,7 @@
 	 layers="modis-fire-2014" 
 	 styles="default" 
 	 identify="true" 
-	 name="2014 (RSAC)" 
+	 name="2014 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2014.png"/>	
 			<wmsLayer 
 	 lid="MODISFIREAAD"
@@ -758,7 +758,7 @@
 	 layers="modis-fire-2015" 
 	 styles="default" 
 	 identify="true" 
-	 name="2015 (RSAC)" 
+	 name="2015 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2015.png"/>	 
 		<wmsLayer 
 	 lid="MODISFIREAAE"
@@ -768,7 +768,7 @@
 	 layers="modis-fire-2016" 
 	 styles="default" 
 	 identify="true" 
-	 name="2016 (RSAC)" 
+	 name="2016 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2016.png"/>	 
 		<wmsLayer 
 	 lid="MODISFIREAAF"
@@ -778,7 +778,7 @@
 	 layers="modis-fire-2017" 
 	 styles="default" 
 	 identify="true" 
-	 name="2017 (RSAC)" 
+	 name="2017 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2016.png"/>
 		<wmsLayer 
 	 lid="MODISFIREAAG"
@@ -788,7 +788,7 @@
 	 layers="modis-fire-2018" 
 	 styles="default" 
 	 identify="true" 
-	 name="2018 (RSAC)" 
+	 name="2018 (GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/modis-2016.png"/>	 
 
 	</wmsSubgroup>
@@ -1586,1071 +1586,14 @@
 		%(NRT_2006_MMAXYR_LAYERS)s
 		</wmsSubgroup>
 	</wmsGroup>
-	<wmsGroup gid="G09" name="Archived_RSAC" label="Archived RSAC-FHTET Change Maps">
-		<wmsSubgroup label="Archived Prior 3-Year Baseline">
-	<wmsLayer
-		lid="BJT"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201107113yr"
-		styles="default"
-		name="RSAC-FHTET_201107113yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJX"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201107193yr"
-		styles="default"
-		name="RSAC-FHTET_201107193yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKB"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201107273yr"
-		styles="default"
-		name="RSAC-FHTET_201107273yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKF"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201108043yr"
-		styles="default"
-		name="RSAC-FHTET_201108043yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKJ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201108123yr"
-		styles="default"
-		name="RSAC-FHTET_201108123yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKN"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201108203yr"
-		styles="default"
-		name="RSAC-FHTET_201108203yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKR"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201108283yr"
-		styles="default"
-		name="RSAC-FHTET_201108283yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKV"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201109053yr"
-		styles="default"
-		name="RSAC-FHTET_201109053yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKZ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201109133yr"
-		styles="default"
-		name="RSAC-FHTET_201109133yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLD"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201109213yr"
-		styles="default"
-		name="RSAC-FHTET_201109213yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLH"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201109293yr"
-		styles="default"
-		name="RSAC-FHTET_201109293yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLL"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201110073yr"
-		styles="default"
-		name="RSAC-FHTET_201110073yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLP"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201110153yr"
-		styles="default"
-		name="RSAC-FHTET_201110153yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLT"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201110233yr"
-		styles="default"
-		name="RSAC-FHTET_201110233yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLX"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201110313yr"
-		styles="default"
-		name="RSAC-FHTET_201110313yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BMB"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201111083yr"
-		styles="default"
-		name="RSAC-FHTET_201111083yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAA"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201203283yr"
-		styles="default"
-		name="RSAC-FHTET_201203283yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>	
-	<wmsLayer
-		lid="RSACAAB"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201204053yr"
-		styles="default"
-		name="RSAC-FHTET_201204053yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAC"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201204133yr"
-		styles="default"
-		name="RSAC-FHTET_201204133yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>	
-	<wmsLayer
-		lid="RSACAAD"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201204213yr"
-		styles="default"
-		name="RSAC-FHTET_201204313yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>	
-	<wmsLayer
-		lid="RSACAAE"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201204293yr"
-		styles="default"
-		name="RSAC-FHTET_201204293yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>	
-	<wmsLayer
-		lid="RSACAAF"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201205073yr"
-		styles="default"
-		name="RSAC-FHTET_201205073yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAG"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201205153yr"
-		styles="default"
-		name="RSAC-FHTET_201205153yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAH"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201205233yr"
-		styles="default"
-		name="RSAC-FHTET_201205233yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAI"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201205313yr"
-		styles="default"
-		name="RSAC-FHTET_201205313yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAJ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201206083yr"
-		styles="default"
-		name="RSAC-FHTET_201206083yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAK"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201206163yr"
-		styles="default"
-		name="RSAC-FHTET_201206163yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAL"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201206243yr"
-		styles="default"
-		name="RSAC-FHTET_201206243yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAM"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201207023yr"
-		styles="default"
-		name="RSAC-FHTET_201207023yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAN"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201207103yr"
-		styles="default"
-		name="RSAC-FHTET_201207103yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAO"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201207183yr"
-		styles="default"
-		name="RSAC-FHTET_201207183yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAP"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201207263yr"
-		styles="default"
-		name="RSAC-FHTET_201207263yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAQ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201208033yr"
-		styles="default"
-		name="RSAC-FHTET_201208033yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAR"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201208113yr"
-		styles="default"
-		name="RSAC-FHTET_201208113yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAS"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201208193yr"
-		styles="default"
-		name="RSAC-FHTET_201208193yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAT"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201208273yr"
-		styles="default"
-		name="RSAC-FHTET_201208273yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAU"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201209043yr"
-		styles="default"
-		name="RSAC-FHTET_201209043yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAV"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201209123yr"
-		styles="default"
-		name="RSAC-FHTET_201209123yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAW"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201209203yr"
-		styles="default"
-		name="RSAC-FHTET_201209203yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAX"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201209283yr"
-		styles="default"
-		name="RSAC-FHTET_201209283yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAY"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201210063yr"
-		styles="default"
-		name="RSAC-FHTET_201210063yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAAZ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201210143yr"
-		styles="default"
-		name="RSAC-FHTET_201210143yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABA"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201210223yr"
-		styles="default"
-		name="RSAC-FHTET_201210223yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABB"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201210303yr"
-		styles="default"
-		name="RSAC-FHTET_201210303yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABC"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201211073yr"
-		styles="default"
-		name="RSAC-FHTET_201211073r"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABD"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201211153yr"
-		styles="default"
-		name="RSAC-FHTET_201211153yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABE"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201211233yr"
-		styles="default"
-		name="RSAC-FHTET_201211233yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABF"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201303293yr"
-		styles="default"
-		name="RSAC-FHTET_201303293yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABG"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201304063yr"
-		styles="default"
-		name="RSAC-FHTET_201304063yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABH"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201304143yr"
-		styles="default"
-		name="RSAC-FHTET_201304143yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABI"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201304223yr"
-		styles="default"
-		name="RSAC-FHTET_201304223yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABJ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201304303yr"
-		styles="default"
-		name="RSAC-FHTET_201304303yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACAK"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201305083yr"
-		styles="default"
-		name="RSAC-FHTET_201305083yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABL"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201305163yr"
-		styles="default"
-		name="RSAC-FHTET_201305163yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABM"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201305243yr"
-		styles="default"
-		name="RSAC-FHTET_201305243yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABN"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201306013yr"
-		styles="default"
-		name="RSAC-FHTET_201306013yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABO"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201306093yr"
-		styles="default"
-		name="RSAC-FHTET_201306093yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABP"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201306173yr"
-		styles="default"
-		name="RSAC-FHTET_201306173yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABQ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_20130625yr"
-		styles="default"
-		name="RSAC-FHTET_201306253yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABR"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201307033yr"
-		styles="default"
-		name="RSAC-FHTET_201307033yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABS"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201307113yr"
-		styles="default"
-		name="RSAC-FHTET_201307113yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABT"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201307193yr"
-		styles="default"
-		name="RSAC-FHTET_201307193yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABU"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201307273yr"
-		styles="default"
-		name="RSAC-FHTET_201307273yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABV"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201308043yr"
-		styles="default"
-		name="RSAC-FHTET_201308043yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABW"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201308123yr"
-		styles="default"
-		name="RSAC-FHTET_201308123yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABX"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201308203yr"
-		styles="default"
-		name="RSAC-FHTET_201308203yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABY"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201308283yr"
-		styles="default"
-		name="RSAC-FHTET_201308283yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACABZ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201304223yr"
-		styles="default"
-		name="RSAC-FHTET_201304223yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACACA"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201309053yr"
-		styles="default"
-		name="RSAC-FHTET_201309053yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACACB"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201309133yr"
-		styles="default"
-		name="RSAC-FHTET_201309133yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACACC"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201309213yr"
-		styles="default"
-		name="RSAC-FHTET_201309213yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACACD"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201309293yr"
-		styles="default"
-		name="RSAC-FHTET_201309293yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACACE"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201310073yr"
-		styles="default"
-		name="RSAC-FHTET_201310073yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACACF"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201310153yr"
-		styles="default"
-		name="RSAC-FHTET_201310153yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACACG"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201310233yr"
-		styles="default"
-		name="RSAC-FHTET_201310233yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACACH"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201310313yr"
-		styles="default"
-		name="RSAC-FHTET_201310313yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACACI"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201311083yr"
-		styles="default"
-		name="RSAC-FHTET_201311083yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACACJ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201311163yr"
-		styles="default"
-		name="RSAC-FHTET_201311163yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="RSACACK"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201311243yr"
-		styles="default"
-		name="RSAC-FHTET_201311243yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>	
-		</wmsSubgroup>
-		<wmsSubgroup label="Archived Prior 5-Year Baseline">
-	<wmsLayer
-		lid="BJI"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201104145yr"
-		styles="default"
-		name="RSAC-FHTET_201104145yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJJ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201104225yr"
-		styles="default"
-		name="RSAC-FHTET_201104225yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJK"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201104145yr"
-		styles="default"
-		name="RSAC-FHTET_201104145yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJL"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201104225yr"
-		styles="default"
-		name="RSAC-FHTET_201104225yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJM"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201104305yr"
-		styles="default"
-		name="RSAC-FHTET_201104305yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJN"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201105085yr"
-		styles="default"
-		name="RSAC-FHTET_201105085yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJO"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201105165yr"
-		styles="default"
-		name="RSAC-FHTET_201105165yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJP"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201105245yr"
-		styles="default"
-		name="RSAC-FHTET_201105245yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJQ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201106015yr"
-		styles="default"
-		name="RSAC-FHTET_201106015yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJR"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201106095yr"
-		styles="default"
-		name="RSAC-FHTET_201106095yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJS"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201106175yr"
-		styles="default"
-		name="RSAC-FHTET_201106175yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJV"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201107115yr"
-		styles="default"
-		name="RSAC-FHTET_201107115yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BJZ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201107195yr"
-		styles="default"
-		name="RSAC-FHTET_201107195yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKD"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201107275yr"
-		styles="default"
-		name="RSAC-FHTET_201107275yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKH"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201108045yr"
-		styles="default"
-		name="RSAC-FHTET_201108045yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKL"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201108125yr"
-		styles="default"
-		name="RSAC-FHTET_201108125yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKP"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201108205yr"
-		styles="default"
-		name="RSAC-FHTET_201108205yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKT"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201108285yr"
-		styles="default"
-		name="RSAC-FHTET_201108285yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BKX"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201109055yr"
-		styles="default"
-		name="RSAC-FHTET_201109055yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLB"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201109135yr"
-		styles="default"
-		name="RSAC-FHTET_201109135yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLF"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201109215yr"
-		styles="default"
-		name="RSAC-FHTET_201109215yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLJ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201109295yr"
-		styles="default"
-		name="RSAC-FHTET_201109295yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLN"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201110075yr"
-		styles="default"
-		name="RSAC-FHTET_201110075yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLR"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201110155yr"
-		styles="default"
-		name="RSAC-FHTET_201110155yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLV"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201110235yr"
-		styles="default"
-		name="RSAC-FHTET_201110235yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BLZ"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201110315yr"
-		styles="default"
-		name="RSAC-FHTET_201110315yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-	<wmsLayer
-		lid="BMD"
-		visible="false"
-		url="%(SERVER_URL)s/ews?TRANSPARENT=true"
-		srs="EPSG:3857"
-		layers="RSAC-FHTET_201111085yr"
-		styles="default"
-		name="RSAC-FHTET_201111085yr"
-		identify="true"
-		legend="%(SERVER_URL)s/cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png"/>
-		</wmsSubgroup>
+	<wmsGroup gid="G09" name="Archived_GTAC" label="Archived GTAC-FHTET Change Maps">
+		<wmsSubgroup label="Archived Prior 3-Year Baseline"></wmsSubgroup>
+			%(GTAC_ARCHIVE_3YR)s
+		
+		<wmsSubgroup label="Archived Prior 5-Year Baseline"></wmsSubgroup>
+			%(GTAC_ARCHIVE_5YR)s
+		
+
 	</wmsGroup>
 	<wmsGroup gid="G10" name="Drought_Monitor" label="Drought Assessment Maps">
 
@@ -2668,9 +1611,7 @@
 		</wmsSubgroup>
 				%(DRT_LAYERS)s
 
-
 		%(NADM_DROUGHT_LAYERS)s
-
 
 	<wmsSubgroup label="CONUS VegDRI Veg. Moisture Status (USGS/NDMC; weekly eMODIS)">
 		<wmsLayer 
@@ -3674,7 +2615,7 @@
 	 layers="forest-type" 
 	 styles="default" 
 	 identify="true" 
-	 name="Forest Type (USFS FIA-RSAC)" 
+	 name="Forest Type (USFS FIA-GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/forestTypeLegend.png"/>
 			<wmsLayer 
 	 lid="AIP"
@@ -3684,7 +2625,7 @@
 	 layers="forest-group" 
 	 styles="default" 
 	 identify="true" 
-	 name="Major Forest Group (USFS FIA-RSAC)" 
+	 name="Major Forest Group (USFS FIA-GTAC)" 
 	 legend="%(SERVER_URL)s/cmapicons/ForestGrps.png"/>
 			<wmsLayer 
 	 lid="AIQ"
@@ -3694,8 +2635,8 @@
 	 layers="forest-biomass" 
 	 styles="default" 
 	 identify="true" 
-	 name="Forest Biomass (USFS FIA-RSAC)" 
-	 legend="%(SERVER_URL)s/cmapicons/FIA-RSAC_Forest_Biomass.png"/>
+	 name="Forest Biomass (USFS FIA-GTAC)" 
+	 legend="%(SERVER_URL)s/cmapicons/FIA-GTAC_Forest_Biomass.png"/>
 			<wmsLayer 
 	 lid="PMSC09"
 	 visible="false" 

@@ -49,6 +49,7 @@ class Template:
     def render(self, dict):
         return self.contents % dict
 
+
 wmsLayerTemplate = Template(string="""
         <wmsLayer
           %(SELECTED)s %(BREAK)s lid="%(LAYER_LID)s"
@@ -169,7 +170,6 @@ def getNADMLayers():
     #Loop through dates starting w/ startDate
     loopDate = datetime.datetime.strptime(startDate,'%Y%m');
     while (today > loopDate):
-        #print 'The loopDate is ' + loopDate.strftime('%y%m%d')
         drtList.append({
             'LID_SUFFIX'      : loopDate.strftime('%Y%m'),
             'YEAR_MONTH'      : loopDate.strftime('%Y%m'),
@@ -222,7 +222,6 @@ def getDRTLayers():
     #until within 8 days of current date
     loopDate = datetime.datetime.strptime(startDate,'%y%m%d');
     while (today > loopDate):
-       #print 'The loopDate is ' + loopDate.strftime('%y%m%d')
        lid = getLID("usdm"+loopDate.strftime('%y%m%d'), DRT_LIDFILE_PATH)
        drtURL = "http://ndmc-001.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/usdm/service/usdm_"+loopDate.strftime('%Y%m%d')+"_wms.map&amp;TRANSPARENT=true"
        drtList.append({ 'LAYER_LID'       : lid,
@@ -232,7 +231,6 @@ def getDRTLayers():
                         'DRT_URL'         : drtURL
        })
        loopDate = loopDate + datetime.timedelta(days=7)
-    #print 'Final loopDate was: ' + loopDate.strftime('%y%m%d')
     drtList.reverse() #reverse the list so that newest dates are on top always
 
     year = drtList[0]['LAYER_NAME'].lstrip('usdm')[0:4]
@@ -1042,31 +1040,31 @@ for subgroup in [
                 })
     tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
 
-rsacModisChangeDetectionProductLayers = ""
+gtacModisChangeDetectionProductLayers = ""
 
 subgroups = [    
     { 'label' : '   From Prior 3-Year Max',
       'layers' : [
-            { 'name' : 'RSAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },
-            { 'name' : 'RSAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] }
+            { 'name' : 'GTAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
+            { 'name' : 'GTAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },
+            { 'name' : 'GTAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] }
 ]
 for subgroup in subgroups:
-    rsacModisChangeDetectionProductLayers = ( rsacModisChangeDetectionProductLayers +
+    gtacModisChangeDetectionProductLayers = ( gtacModisChangeDetectionProductLayers +
         '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
     for layer in subgroup['layers']:
-        rsacModisChangeDetectionProductLayers = rsacModisChangeDetectionProductLayers + wmsLayerTemplate.render({
+        gtacModisChangeDetectionProductLayers = gtacModisChangeDetectionProductLayers + wmsLayerTemplate.render({
                 'SELECTED'      : "",
                 'SERVER_URL'    : SERVER_URL,
                 'LAYER_LID'     : layer['lid'],
                 'LAYER_NAME'    : layer['name'],
-                'LEGEND'        : SERVER_URL+'/'+"cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png",
+                'LEGEND'        : SERVER_URL+'/'+"cmapicons/GTAC-FHTET_CT_7-6-2011_clipped.png",
                 'LAYER_VISIBLE' : layer['visible'],
-                'LAYER_TITLE'   : layerTitles[layer['name']],
+                'LAYER_TITLE'   : layer['name'],
                 'MASK'   : '',
                 'BREAK'  : '',
                 })
-    rsacModisChangeDetectionProductLayers = rsacModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
+    gtacModisChangeDetectionProductLayers = gtacModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
 
 template = Template("ews_config.tpl.xml")
 
@@ -1322,22 +1320,22 @@ def makeFW2CurrentLayerTitles():
 
 
 
-def getCurrentRSACDates(path, ext='tif'):
+def getCurrentGTACDates(path, ext='tif'):
   all_files = os.listdir(path)
   files = filter(lambda s: s.endswith(ext), all_files)
 
 
-PATH_TO_RSAC_PRODUCTS = os.path.join(DATA_DIR, "fsdata/rsac_fhtet/ews")
+PATH_TO_GTAC_PRODUCTS = os.path.join(DATA_DIR, "fsdata/gtac_fhtet/ews")
 
-rsac_current_datestrings = getCurrentDates(PATH_TO_RSAC_PRODUCTS, '%Y%m%d')
+gtac_current_datestrings = getCurrentDates(PATH_TO_GTAC_PRODUCTS, '%Y%m%d')
 
 fw2_current_datestrings = getCurrentDates(A_PATH_TO_FW2_PRODUCTS, '%Y%m%d')
 
 FW2_CURRENT_DATES_TITLES = makeFW2CurrentLayerTitles()
 
-rsac_config = {}
+gtac_config = {}
 
-rsac_titles = [
+gtac_titles = [
   { 'name': 'GTAC_current_{0}', 'lid': 'AM' },
   { 'name': 'GTAC_previous1_{0}', 'lid': 'AN' },
   { 'name': 'GTAC_previous2_{0}', 'lid': 'AP' }
@@ -1345,8 +1343,8 @@ rsac_titles = [
 
 for i in range(0, len(fw2_current_datestrings)):
   ds = fw2_current_datestrings
-  if ds in rsac_current_datestrings:
-    rsac_config[ds] = { 'name': rsac_titles[i]['name'], 'title' : rsac_titles[i]['name'], 'lid' : rsac_titles[i]['lid'],  'visible' : 'false' }
+  if ds in gtac_current_datestrings:
+    gtac_config[ds] = { 'name': gtac_titles[i]['name'], 'title' : gtac_titles[i]['name'], 'lid' : gtac_titles[i]['lid'],  'visible' : 'false' }
 
 
 
@@ -1371,6 +1369,50 @@ def renderGlamLayerBlocksFor(yr):
       blocks += renderGLAMLayerBlock(sat_id, id_num, yr, url_part, jd)
     blocks += '</wmsSubgroup>'
   return blocks
+
+
+def getGtacYearsFor(product_type):
+   pwd = os.path.join(GTAC_ARCHIVE_DIR)
+   # Assume the year is the first 4 characters of the filename
+   years = sorted(list(set([ f[:4] for f in os.listdir(pwd) if product_type in f ])), reverse=True)
+   return years
+
+
+def makeGtacArchiveLayerListFor(product_type):
+  subgroups = ''
+  pwd = os.path.join(GTAC_ARCHIVE_DIR)
+  for year in getGtacYearsFor(product_type):
+    subgroup = '<wmsSubgroup collapsible="true" label="'+year+'">\n'
+    for tif in sorted([file for file in os.listdir(pwd) if file.endswith('tif') and file.startswith(year)], reverse=True):
+      try:
+        tif = re.sub('^' + pwd + '/', '', tif)
+        tif_fullpath = pwd + '/' + tif;
+        nameform = re.sub(r'^.*/', '', tif)
+        group = 'GTAC-FHTET'
+        lid = tif.rstrip('.tif')
+        layerName = '_'.join([group, re.sub(r'_.*$', '', nameform), product_type])
+        # YYYYMMDD
+        layerTitle = nameform[:8]
+        # Leave out "bd" layers
+        if layerTitle[-2:].rstrip()!="bd":
+          subgroup += wmsLayerTemplate.render({
+            'SELECTED'     : '',
+            'BREAK'        : '',
+            'LAYER_LID'    : lid,
+            'LAYER_VISIBLE': 'true',
+            'LAYER_NAME'   : layerName,
+            'LAYER_TITLE'  : layerTitle,
+            'SERVER_URL'   : SERVER_URL,
+            'LEGEND'       : SERVER_URL+"/cmapicons/GTAC-FHTET_CT_7-6-2011_clipped.png",
+            'MASK'         : ''
+          })
+      except Exception as e:
+        print "except occured making block for " + tif
+        print e
+        continue
+    subgroup += '\n</wmsSubgroup>'
+    subgroups += subgroup 
+  return subgroups
 
 
 def makeDateRangesForGLAMLayers(yr):
@@ -1529,7 +1571,7 @@ def makeFW2CurrentLayerListFor(product_type, list_type):
   blockList = ''
   for i in range(0, len(fw2_current_datestrings)):
     d = fw2_current_datestrings[i]
-    appending_gtac = product_type == 'X_LC_3YEAR' and list_type == 'current_compare' and rsac_config.has_key(d)
+    appending_gtac = product_type == 'X_LC_3YEAR' and list_type == 'current_compare' and gtac_config.has_key(d)
     for i_source in range(0, len(sources)):
       source = sources[i_source]
       how_current_label = how_current[i] 
@@ -1546,11 +1588,11 @@ def makeFW2CurrentLayerListFor(product_type, list_type):
       blockList += wmsLayerTemplate.render({
           'SELECTED'      : "",
           'SERVER_URL'    : SERVER_URL,
-          'LAYER_LID'     : rsac_config[d]['lid'],
-          'LAYER_NAME'    : rsac_config[d]['name'],
-          'LEGEND'        : SERVER_URL+'/'+"cmapicons/RSAC-FHTET_CT_7-6-2011_clipped.png",
+          'LAYER_LID'     : gtac_config[d]['lid'],
+          'LAYER_NAME'    : gtac_config[d]['name'],
+          'LEGEND'        : SERVER_URL+'/'+"cmapicons/GTAC-FHTET_CT_7-6-2011_clipped.png",
           'LAYER_VISIBLE' : 'false',
-          'LAYER_TITLE'   : rsac_config[d]['title'],
+          'LAYER_TITLE'   : gtac_config[d]['title'],
           'MASK'   : '',
           'BREAK'  : 'break="true"'
         })
@@ -1569,6 +1611,9 @@ def makeCurrentSentinelTwoDateRanges(prior_year=False):
   date_range = '{0}%2F{1}'.format(d2, d1)
   return date_range
 
+
+GTAC_ARCHIVE_3YR = makeGtacArchiveLayerListFor('3yr')
+GTAC_ARCHIVE_5YR = makeGtacArchiveLayerListFor('5yr')
 
 SENTINEL2_CURRENT_DATE_RANGE = makeCurrentSentinelTwoDateRanges()
 SENTINEL2_PRIOR_YEAR_DATE_RANGE = makeCurrentSentinelTwoDateRanges(True)
@@ -1700,7 +1745,7 @@ configXML = template.render( {
             'SERVER_URL'                            : SERVER_URL,
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
             'TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : tacsModisChangeDetectionProductLayers,
-            'RSAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : rsacModisChangeDetectionProductLayers,
+            'GTAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : gtacModisChangeDetectionProductLayers,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,
             'NRT_3YEAR_LAYERS'        : nrt3YrProductLayers,
@@ -1880,7 +1925,9 @@ configXML = template.render( {
             'FW2_ARCHIVE_2003__PCTPROGRESS' : FW2_ARCHIVE_2003__PCTPROGRESS,
             'NADM_DROUGHT_LAYERS' : NADM_DROUGHT_LAYERS,
             'SENTINEL2_CURRENT_DATE_RANGE' : SENTINEL2_CURRENT_DATE_RANGE,
-            'SENTINEL2_PRIOR_YEAR_DATE_RANGE' : SENTINEL2_PRIOR_YEAR_DATE_RANGE
+            'SENTINEL2_PRIOR_YEAR_DATE_RANGE' : SENTINEL2_PRIOR_YEAR_DATE_RANGE,
+            'GTAC_ARCHIVE_3YR' : GTAC_ARCHIVE_3YR,
+            'GTAC_ARCHIVE_5YR' : GTAC_ARCHIVE_5YR
           })
 
 minXML = parseString(configXML).toprettyxml('', '', 'UTF-8')
