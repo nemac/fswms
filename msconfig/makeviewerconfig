@@ -1392,7 +1392,7 @@ def makeGtacArchiveLayerListFor(product_type):
         lid = tif.rstrip('.tif')
         layerName = '_'.join([group, re.sub(r'_.*$', '', nameform), product_type])
         # YYYYMMDD
-        layerTitle = nameform[:8]
+        layerTitle = 'FDM GTAC-FHAAST ' + nameform[:8]
         # Leave out "bd" layers
         if layerTitle[-2:].rstrip()!="bd":
           subgroup += wmsLayerTemplate.render({

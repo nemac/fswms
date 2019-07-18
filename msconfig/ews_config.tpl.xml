@@ -1586,7 +1586,7 @@
 		%(NRT_2006_MMAXYR_LAYERS)s
 		</wmsSubgroup>
 	</wmsGroup>
-	<wmsGroup gid="G09" name="Archived_GTAC" label="Archived GTAC-FHTET Change Maps">
+	<wmsGroup gid="G09" name="Archived_GTAC" label="Archived FDM GTAC-FHAAST Change Maps">
 		<wmsSubgroup label="Archived Prior 3-Year Baseline"></wmsSubgroup>
 			%(GTAC_ARCHIVE_3YR)s
 		
