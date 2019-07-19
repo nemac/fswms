@@ -1342,11 +1342,9 @@ gtac_titles = [
 ]
 
 for i in range(0, len(fw2_current_datestrings)):
-  ds = fw2_current_datestrings
+  ds = fw2_current_datestrings[i]
   if ds in gtac_current_datestrings:
     gtac_config[ds] = { 'name': gtac_titles[i]['name'], 'title' : gtac_titles[i]['name'], 'lid' : gtac_titles[i]['lid'],  'visible' : 'false' }
-
-
 
 def renderGlamLayerBlocksFor(yr):
   sats = ['Aqua', 'Terra']
