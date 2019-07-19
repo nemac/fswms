@@ -1381,7 +1381,7 @@ def makeGtacArchiveLayerListFor(product_type):
   pwd = os.path.join(GTAC_ARCHIVE_DIR)
   for year in getGtacYearsFor(product_type):
     subgroup = '<wmsSubgroup collapsible="true" label="'+year+'">\n'
-    for tif in sorted([file for file in os.listdir(pwd) if file.endswith('tif') and file.startswith(year)], reverse=True):
+    for tif in sorted([file for file in os.listdir(pwd) if file.endswith('tif') and file.startswith(year) and 'bd' not in file and product_type in file], reverse=True):
       try:
         tif = re.sub('^' + pwd + '/', '', tif)
         tif_fullpath = pwd + '/' + tif;
