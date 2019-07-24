@@ -1336,15 +1336,16 @@ FW2_CURRENT_DATES_TITLES = makeFW2CurrentLayerTitles()
 gtac_config = {}
 
 gtac_titles = [
-  { 'name': 'GTAC_current_{0}', 'lid': 'AM' },
-  { 'name': 'GTAC_previous1_{0}', 'lid': 'AN' },
-  { 'name': 'GTAC_previous2_{0}', 'lid': 'AP' }
+  { 'name': 'GTAC-FHTET_current', 'title': 'Current %Departure GTAC', 'lid': 'AM' },
+  { 'name': 'GTAC-FHTET_previous1', 'title': 'Previous1 %Departure GTAC', 'lid': 'AN' },
+  { 'name': 'GTAC-FHTET_previous2', 'title': 'Previous2 %Departure GTAC',  'lid': 'AP' }
 ]
 
 for i in range(0, len(fw2_current_datestrings)):
   ds = fw2_current_datestrings[i]
   if ds in gtac_current_datestrings:
-    gtac_config[ds] = { 'name': gtac_titles[i]['name'], 'title' : gtac_titles[i]['name'], 'lid' : gtac_titles[i]['lid'],  'visible' : 'false' }
+    gtac_config[ds] = { 'name': gtac_titles[i]['name'], 'title' : gtac_titles[i]['title'], 'lid' : gtac_titles[i]['lid'],  'visible' : 'false' }
+
 
 def renderGlamLayerBlocksFor(yr):
   sats = ['Aqua', 'Terra']
