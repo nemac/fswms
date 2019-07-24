@@ -1336,9 +1336,9 @@ FW2_CURRENT_DATES_TITLES = makeFW2CurrentLayerTitles()
 gtac_config = {}
 
 gtac_titles = [
-  { 'name': 'GTAC-FHTET_current', 'title': 'Current %Departure GTAC', 'lid': 'AM' },
-  { 'name': 'GTAC-FHTET_previous1', 'title': 'Previous1 %Departure GTAC', 'lid': 'AN' },
-  { 'name': 'GTAC-FHTET_previous2', 'title': 'Previous2 %Departure GTAC',  'lid': 'AP' }
+  { 'name': 'GTAC-FHTET_current', 'title': 'Current %Departure GTAC-FHAAST', 'lid': 'AM' },
+  { 'name': 'GTAC-FHTET_previous1', 'title': 'Previous1 %Departure GTAC-FHAAST', 'lid': 'AN' },
+  { 'name': 'GTAC-FHTET_previous2', 'title': 'Previous2 %Departure GTAC-FHAAST',  'lid': 'AP' }
 ]
 
 for i in range(0, len(fw2_current_datestrings)):
