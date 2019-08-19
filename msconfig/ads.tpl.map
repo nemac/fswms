@@ -309,11 +309,11 @@ MAP
     LAYER #
         NAME ads_2017
         PROJECTION
-            "init=epsg:2163"
+            "init=epsg:4326"
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "geom from fhm_ads_2017"
+        DATA             "geom from fhm_ads_2017_4326"
         EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
         STATUS           OFF
         TYPE             POLYGON
