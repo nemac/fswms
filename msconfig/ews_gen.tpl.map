@@ -73,10 +73,18 @@ MAP
         STATUS OFF
     END
 
-    # set defaults for GetLegendGraphic requests 
     LEGEND
+      STATUS ON
       KEYSIZE 154 297
+      LABEL
+        COLOR 0 0 0
+        FONT "vera_serif"
+        TYPE truetype
+        SIZE 9
+        POSITION cl
+      END
     END
+
 
 %(LAYERS)s
 
