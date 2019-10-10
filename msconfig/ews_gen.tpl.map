@@ -75,7 +75,6 @@ MAP
 
     LEGEND
       STATUS ON
-      KEYSIZE 154 297
       LABEL
         COLOR 0 0 0
         FONT "vera_serif"
