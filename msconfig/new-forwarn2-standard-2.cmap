@@ -1,10 +1,4 @@
 CLASS
-  NAME "% NDVI"
-END
-CLASS
-  NAME "Change"
-END
-CLASS
   EXPRESSION "2"
   COLOR      50 0 0
 END
