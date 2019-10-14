@@ -9,6 +9,7 @@
         DATA     %(DATA)s
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
+	%(GROUPTEXT)s
         %(COLORMAPLINE)s
         METADATA
             "wms_title"             "%(TITLE)s"
@@ -21,7 +22,7 @@
             "wcs_formats"           "GEOTIFF"
             "wcs_nativeformat"      "8-bit GeoTIF"
             "gml_include_items"     "value_0"
-            "wms_layer_group"       "/"
+            #"wms_layer_group"       "/"
         END  # end METADATA
         %(MASK)s
     END # end LAYER

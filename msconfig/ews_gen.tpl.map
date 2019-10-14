@@ -104,6 +104,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
+	GROUP Masks
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/final2_ALLFOREST_mask_nalcms2010_hybrid2016nlcd_9class.img
         CLASS
             EXPRESSION ([pixel] > 0)
@@ -131,6 +132,7 @@ MAP
           "+units=m"
           "+no_defs"
         END
+	GROUP Masks
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -161,6 +163,7 @@ MAP
           "+units=m"
           "+no_defs"
         END
+	GROUP Masks
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -191,6 +194,7 @@ MAP
           "+units=m"
           "+no_defs"
         END
+	GROUP Masks
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -221,6 +225,7 @@ MAP
           "+units=m"
           "+no_defs"
         END
+	GROUP Masks
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -251,6 +256,7 @@ MAP
           "+units=m"
           "+no_defs"
         END
+	GROUP Masks
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -281,6 +287,7 @@ MAP
           "+units=m"
           "+no_defs"
         END
+	GROUP Masks
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -311,6 +318,7 @@ MAP
           "+units=m"
           "+no_defs"
         END
+	GROUP Masks
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -341,6 +349,7 @@ MAP
           "+units=m"
           "+no_defs"
         END
+	GROUP Masks
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
@@ -371,6 +380,7 @@ MAP
           "+units=m"
           "+no_defs"
         END
+	GROUP Masks
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
