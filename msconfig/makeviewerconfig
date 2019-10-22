@@ -1741,6 +1741,7 @@ f = open("../html/view/config/ews_config.xml", "w")
 fMin = open("../html/view/config/ews_config_min.xml", "w+")
 
 configXML = template.render( {
+            'MULTIGRAPH_SERVICE_URL'                : MULTIGRAPH_SERVICE_URL,
             'SERVER_URL'                            : SERVER_URL,
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
             'TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : tacsModisChangeDetectionProductLayers,
