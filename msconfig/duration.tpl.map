@@ -412,6 +412,33 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END  # end METADATA
     END # end LAYER
 
+	LAYER
+        NAME     durperiodsp_2019
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2019_0508_0617.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiodsp_2019"
+            "wms_abstract"          "durperiodsp_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
 
 
 	LAYER
@@ -769,6 +796,36 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END  # end METADATA
     END # end LAYER
 
+	LAYER
+        NAME     durperiodsp_2019MaskForForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        MASK MaskForForest
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2019_0508_0617.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiodsp_2019"
+            "wms_abstract"          "durperiodsp_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
 
 	LAYER
         NAME     durperiodsp_2006MaskForConiferForest
@@ -1124,6 +1181,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+
+	LAYER
+        NAME     durperiodsp_2019MaskForConiferForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForConiferForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2019_0508_0617.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiodsp_2019"
+            "wms_abstract"          "durperiodsp_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
 
 
 
@@ -1482,6 +1568,37 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
     END # end LAYER
 
 	LAYER
+        NAME     durperiodsp_2019MaskForDeciduousForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForDeciduousForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2019_0508_0617.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiodsp_2019"
+            "wms_abstract"          "durperiodsp_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+
+	LAYER
         NAME     durperiodsp_2006MaskForMixedForest
         PROJECTION
           "+proj=laea"
@@ -1835,6 +1952,36 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+
+
+	LAYER
+        NAME     durperiodsp_2019MaskForMixedForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForMixedForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2019_0508_0617.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiodsp_2019"
+            "wms_abstract"          "durperiodsp_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
 
 
 	LAYER
@@ -2194,6 +2341,34 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
 
 
 	LAYER
+        NAME     durperiodsp_2019MaskForWetland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		    MASK MaskForWetland
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2019_0508_0617.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiodsp_2019"
+            "wms_abstract"          "durperiodsp_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+	LAYER
         NAME     durperiodsp_2006MaskForUrban
         PROJECTION
           "+proj=laea"
@@ -2544,6 +2719,34 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         METADATA
             "wms_title"             "durperiodsp_2018"
             "wms_abstract"          "durperiodsp_2018"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+	LAYER
+        NAME     durperiodsp_2019MaskForUrban
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForUrban
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2019_0508_0617.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiodsp_2019"
+            "wms_abstract"          "durperiodsp_2019"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -2907,6 +3110,37 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
 
 
 	LAYER
+        NAME     durperiodsp_2019MaskForShrubland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForShrubland
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2019_0508_0617.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiodsp_2019"
+            "wms_abstract"          "durperiodsp_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+
+	LAYER
         NAME     durperiodsp_2006MaskForNonVegetated
         PROJECTION
           "+proj=laea"
@@ -3263,6 +3497,37 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
 
 
 	LAYER
+        NAME     durperiodsp_2019MaskForNonVegetated
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForNonVegetated
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2019_0508_0617.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiodsp_2019"
+            "wms_abstract"          "durperiodsp_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+
+	LAYER
         NAME     durperiodsp_2006MaskForGrass
         PROJECTION
           "+proj=laea"
@@ -3615,6 +3880,37 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+
+
+	LAYER
+        NAME     durperiodsp_2019MaskForGrass
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForGrass
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2019_0508_0617.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiodsp_2019"
+            "wms_abstract"          "durperiodsp_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
 
 
 	LAYER
@@ -3974,6 +4270,36 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
 
 
 	LAYER
+        NAME     durperiodsp_2019MaskForAgriculture
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForAgriculture
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2019_0508_0617.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiodsp_2019"
+            "wms_abstract"          "durperiodsp_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+	LAYER
         NAME     durcomb_2006
         PROJECTION
           "+proj=laea"
@@ -4314,6 +4640,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+
+	LAYER
+        NAME     durcomb_2019
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2019_0624_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_12period.cmap"
+        METADATA
+            "wms_title"             "durcomb_2019"
+            "wms_abstract"          "durcomb_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
 
 
 	LAYER
@@ -4658,6 +5013,36 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END  # end METADATA
     END # end LAYER
 
+	LAYER
+        NAME     durperiod2_2019
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2019_0812_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod2_2019"
+            "wms_abstract"          "durperiod2_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+
 
 	LAYER
         NAME     durperiod1_2006
@@ -5000,6 +5385,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+
+	LAYER
+        NAME     durperiod1_2019
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2019_0624_0804.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2019"
+            "wms_abstract"          "durperiod1_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
 
 
 	LAYER
@@ -5357,6 +5771,37 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
     END # end LAYER
 
 	LAYER
+        NAME     durcomb_2019MaskForForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2019_0624_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_12period.cmap"
+        METADATA
+            "wms_title"             "durcomb_2019"
+            "wms_abstract"          "durcomb_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+
+	LAYER
         NAME     durperiod2_2006MaskForForest
         PROJECTION
           "+proj=laea"
@@ -5712,6 +6157,37 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
     END # end LAYER
 
 	LAYER
+        NAME     durperiod2_2019MaskForForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2019_0812_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod2_2019"
+            "wms_abstract"          "durperiod2_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+
+	LAYER
         NAME     durperiod1_2006MaskForForest
         PROJECTION
           "+proj=laea"
@@ -6064,6 +6540,37 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+
+	LAYER
+        NAME     durperiod1_2019MaskForForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2019_0624_0804.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2019"
+            "wms_abstract"          "durperiod1_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
 
 	LAYER
         NAME     durcomb_2006MaskForConiferForest
@@ -6423,6 +6930,36 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
 
 
 	LAYER
+        NAME     durcomb_2019MaskForConiferForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForConiferForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2019_0624_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_12period.cmap"
+        METADATA
+            "wms_title"             "durcomb_2019"
+            "wms_abstract"          "durcomb_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+	LAYER
         NAME     durperiod2_2006MaskForConiferForest
         PROJECTION
           "+proj=laea"
@@ -6773,6 +7310,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         METADATA
             "wms_title"             "durperiod2_2018"
             "wms_abstract"          "durperiod2_2018"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+	LAYER
+        NAME     durperiod2_2019MaskForConiferForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForConiferForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2019_0812_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod2_2019"
+            "wms_abstract"          "durperiod2_2019"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -7135,6 +7701,36 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END  # end METADATA
     END # end LAYER
 
+	LAYER
+        NAME     durperiod1_2019MaskForConiferForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForConiferForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2019_0624_0804.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2019"
+            "wms_abstract"          "durperiod1_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
 
 	LAYER
         NAME     durcomb_2006MaskForDeciduousForest
@@ -7490,6 +8086,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+
+	LAYER
+        NAME     durcomb_2019MaskForDeciduousForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForDeciduousForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2019_0624_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_12period.cmap"
+        METADATA
+            "wms_title"             "durcomb_2019"
+            "wms_abstract"          "durcomb_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
 
 
 	LAYER
@@ -7848,6 +8473,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END  # end METADATA
     END # end LAYER
 
+	LAYER
+        NAME     durperiod2_2019MaskForDeciduousForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForDeciduousForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2019_0812_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod2_2019"
+            "wms_abstract"          "durperiod2_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
 
 	LAYER
         NAME     durperiod1_2006MaskForDeciduousForest
@@ -8203,6 +8857,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+
+	LAYER
+        NAME     durperiod1_2019MaskForDeciduousForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForDeciduousForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2019_0624_0804.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2019"
+            "wms_abstract"          "durperiod1_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
 
 
 
@@ -8560,6 +9243,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+
+	LAYER
+        NAME     durcomb_2019MaskForMixedForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForMixedForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2019_0624_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_12period.cmap"
+        METADATA
+            "wms_title"             "durcomb_2019"
+            "wms_abstract"          "durcomb_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
 
 
 	LAYER
@@ -8920,6 +9632,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
 
 
 	LAYER
+        NAME     durperiod2_2019MaskForMixedForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForMixedForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2019_0812_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod2_2019"
+            "wms_abstract"          "durperiod2_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+	LAYER
         NAME     durperiod1_2006MaskForMixedForest
         PROJECTION
           "+proj=laea"
@@ -9269,6 +10010,34 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         METADATA
             "wms_title"             "durperiod1_2018"
             "wms_abstract"          "durperiod1_2018"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+	LAYER
+        NAME     durperiod1_2019MaskForMixedForest
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForMixedForest
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2019_0624_0804.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2019"
+            "wms_abstract"          "durperiod1_2019"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -9633,6 +10402,36 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
 
 
 	LAYER
+        NAME     durcomb_2019MaskForWetland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForWetland
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2019_0624_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_12period.cmap"
+        METADATA
+            "wms_title"             "durcomb_2019"
+            "wms_abstract"          "durcomb_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+	LAYER
         NAME     durperiod2_2006MaskForWetland
         PROJECTION
           "+proj=laea"
@@ -9987,6 +10786,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END  # end METADATA
     END # end LAYER
 
+	LAYER
+        NAME     durperiod2_2019MaskForWetland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForWetland
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2019_0812_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod2_2019"
+            "wms_abstract"          "durperiod2_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
 
 
 	LAYER
@@ -10339,6 +11167,34 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         METADATA
             "wms_title"             "durperiod1_2018"
             "wms_abstract"          "durperiod1_2018"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+	LAYER
+        NAME     durperiod1_2019MaskForWetland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForWetland
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2019_0624_0804.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2019"
+            "wms_abstract"          "durperiod1_2019"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -10701,6 +11557,37 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
     END # end LAYER
 
 
+	LAYER
+        NAME     durcomb_2019MaskForUrban
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForUrban
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2019_0624_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_12period.cmap"
+        METADATA
+            "wms_title"             "durcomb_2019"
+            "wms_abstract"          "durcomb_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+
 
 	LAYER
         NAME     durperiod2_2006MaskForUrban
@@ -11053,6 +11940,34 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         METADATA
             "wms_title"             "durperiod2_2018"
             "wms_abstract"          "durperiod2_2018"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+	LAYER
+        NAME     durperiod2_2019MaskForUrban
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForUrban
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2019_0812_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod2_2019"
+            "wms_abstract"          "durperiod2_2019"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -11415,6 +12330,37 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
 
 
 	LAYER
+        NAME     durperiod1_2019MaskForUrban
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForUrban
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2019_0624_0804.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2019"
+            "wms_abstract"          "durperiod1_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+
+	LAYER
         NAME     durcomb_2006MaskForShrubland
         PROJECTION
           "+proj=laea"
@@ -11769,6 +12715,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
     END # end LAYER
 
 	LAYER
+        NAME     durcomb_2019MaskForShrubland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForShrubland
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2019_0624_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_12period.cmap"
+        METADATA
+            "wms_title"             "durcomb_2019"
+            "wms_abstract"          "durcomb_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+	LAYER
         NAME     durperiod2_2006MaskForShrubland
         PROJECTION
           "+proj=laea"
@@ -12119,6 +13094,34 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         METADATA
             "wms_title"             "durperiod2_2018"
             "wms_abstract"          "durperiod2_2018"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+	LAYER
+        NAME     durperiod2_2019MaskForShrubland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForShrubland
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2019_0812_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod2_2019"
+            "wms_abstract"          "durperiod2_2019"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -12479,6 +13482,36 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END  # end METADATA
     END # end LAYER
 
+	LAYER
+        NAME     durperiod1_2019MaskForShrubland
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForShrubland
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2019_0624_0804.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2019"
+            "wms_abstract"          "durperiod1_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
 
 	LAYER
         NAME     durcomb_2006MaskForNonVegetated
@@ -12834,6 +13867,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END  # end METADATA
     END # end LAYER
 
+	LAYER
+        NAME     durcomb_2019MaskForNonVegetated
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForNonVegetated
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2019_0624_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_12period.cmap"
+        METADATA
+            "wms_title"             "durcomb_2019"
+            "wms_abstract"          "durcomb_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
 
 	LAYER
         NAME     durperiod2_2006MaskForNonVegetated
@@ -13186,6 +14248,34 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         METADATA
             "wms_title"             "durperiod2_2018"
             "wms_abstract"          "durperiod2_2018"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+	LAYER
+        NAME     durperiod2_2019MaskForNonVegetated
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForNonVegetated
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2019_0812_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod2_2019"
+            "wms_abstract"          "durperiod2_2019"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -13548,6 +14638,35 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END  # end METADATA
     END # end LAYER
 
+	LAYER
+        NAME     durperiod1_2019MaskForNonVegetated
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForNonVegetated
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2019_0624_0804.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2019"
+            "wms_abstract"          "durperiod1_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
 
 
 	LAYER
@@ -13906,6 +15025,36 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
 
 
 	LAYER
+        NAME     durcomb_2019MaskForGrass
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForGrass
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2019_0624_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_12period.cmap"
+        METADATA
+            "wms_title"             "durcomb_2019"
+            "wms_abstract"          "durcomb_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+	LAYER
         NAME     durperiod2_2006MaskForGrass
         PROJECTION
           "+proj=laea"
@@ -14261,6 +15410,34 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
     END # end LAYER
 
 
+	LAYER
+        NAME     durperiod2_2019MaskForGrass
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForGrass
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2019_0812_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod2_2019"
+            "wms_abstract"          "durperiod2_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
 
 
 	LAYER
@@ -14615,6 +15792,34 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         METADATA
             "wms_title"             "durperiod1_2018"
             "wms_abstract"          "durperiod1_2018"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+	LAYER
+        NAME     durperiod1_2019MaskForGrass
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForGrass
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2019_0624_0804.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2019"
+            "wms_abstract"          "durperiod1_2019"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -14978,6 +16183,36 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
     END # end LAYER
 
 	LAYER
+        NAME     durcomb_2019MaskForAgriculture
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForAgriculture
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2019_0624_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_12period.cmap"
+        METADATA
+            "wms_title"             "durcomb_2019"
+            "wms_abstract"          "durcomb_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+
+	LAYER
         NAME     durperiod2_2006MaskForAgriculture
         PROJECTION
           "+proj=laea"
@@ -15327,6 +16562,34 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         METADATA
             "wms_title"             "durperiod2_2018"
             "wms_abstract"          "durperiod2_2018"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+	LAYER
+        NAME     durperiod2_2019MaskForAgriculture
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForAgriculture
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2019_0812_0921.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod2_2019"
+            "wms_abstract"          "durperiod2_2019"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -15688,6 +16951,37 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+
+
+	LAYER
+        NAME     durperiod1_2019MaskForAgriculture
+        PROJECTION
+          "+proj=laea"
+          "+lat_0=45"
+          "+lon_0=-100"
+          "+x_0=0"
+          "+y_0=0"
+          "+a=6370997"
+          "+b=6370997"
+          "+units=m"
+          "+no_defs"
+        END
+        TYPE     RASTER
+		MASK MaskForAgriculture
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2019_0624_0804.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        INCLUDE "duration_6period.cmap"
+        METADATA
+            "wms_title"             "durperiod1_2019"
+            "wms_abstract"          "durperiod1_2019"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
 
 	
     #jdm: The next layers are for support of masking

@@ -9755,6 +9755,21 @@
 
 				<wmsLayer
 					selected="false"
+					lid="DURCOMB2019"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durcomb_2019"
+					name="2019"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+
+
+				<wmsLayer
+					selected="false"
 					lid="DURCOMB2018"
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
@@ -9915,6 +9930,20 @@
 			mask="true"/>		  
 			</wmsSubgroup>
 	<wmsSubgroup label="Fixed 6-Period: May 8 – Jun 17">
+
+
+				<wmsLayer
+					selected="false"
+					lid="DURSP2019"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiodsp_2019"
+					name="2019"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
 
 
 				<wmsLayer
@@ -10082,6 +10111,21 @@
 
 				<wmsLayer
 					selected="false"
+					lid="DURP12019"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiod1_2019"
+					name="2019"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+
+
+				<wmsLayer
+					selected="false"
 					lid="DURP12018"
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
@@ -10243,6 +10287,21 @@
 			mask="true"/>		  
 			</wmsSubgroup>
 		<wmsSubgroup label="Fixed 6-Period: Aug 12 - Sep 21">
+
+
+			<wmsLayer
+					selected="false"
+					lid="DURP22019"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiod2_2019"
+					name="2019"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
 
 
 			<wmsLayer
