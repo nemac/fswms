@@ -9749,7 +9749,82 @@
 					legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=events-historical&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 			</wmsSubgroup>
 	</wmsGroup>  
-	<wmsGroup gid="G20" name="Duration" label="Duration Products (at -3%% departure)"> 
+	<wmsGroup gid="G20" name="Duration" label="Duration Products"> 
+
+    <wmsSubgroup label="-5%% Departure"></wmsSubgroup>
+		<wmsSubgroup label="Fixed 12-Period: Jun 24 – Sep 21">
+				<wmsLayer
+					selected="false"
+					lid="DURCOMB52019"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durcomb5_2019"
+					name="2019"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb5_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+    </wmsSubgroup>   
+
+	<wmsSubgroup label="Fixed 6-Period: May 8 – Jun 17">
+
+
+				<wmsLayer
+					selected="false"
+					lid="DURSP52019"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiodsp5_2019"
+					name="2019"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp5_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+    </wmsSubgroup>
+
+		<wmsSubgroup label="Fixed 6-Period: Jun 24 - Aug 4">
+
+				<wmsLayer
+					selected="false"
+					lid="DURP152019"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiod1_5_2019"
+					name="2019"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_5_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+    </wmsSubgroup>
+
+		<wmsSubgroup label="Fixed 6-Period: Aug 12 - Sep 21">
+
+
+			<wmsLayer
+					selected="false"
+					lid="DURP252019"
+					visible="false"
+					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="durperiod2_5_2019"
+					name="2019"
+					styles="default" 
+					identify="true"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_5_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+    </wmsSubgroup>
+
+
+
+
+    <wmsSubgroup label="-3%% Departure"></wmsSubgroup>
 		<wmsSubgroup label="Fixed 12-Period: Jun 24 – Sep 21">
 
 

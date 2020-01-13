@@ -1,0 +1,109 @@
+
+  CLASS
+    NAME "Duration"
+	  EXPRESSION ""
+  END
+#  CLASS
+#    NAME "0"
+#    EXPRESSION ([PIXEL] = 0)
+#    STYLE
+#      COLOR 240 240 240
+#    END
+#  END
+
+  CLASS
+    NAME "1"
+    EXPRESSION ([PIXEL] = 1)
+    STYLE
+      COLOR 240 240 240
+    END
+  END
+  
+  CLASS
+    NAME "2"
+    EXPRESSION ([PIXEL] = 2)
+    STYLE
+      COLOR 240 240 240
+    END
+  END
+  
+  CLASS
+    NAME "3"
+    EXPRESSION ([PIXEL] = 3)
+    STYLE
+      COLOR 0 197 255
+    END
+  END
+  
+  CLASS
+    NAME "4"
+    EXPRESSION ([PIXEL] = 4)
+    STYLE
+      COLOR 0 197 255
+    END
+  END
+  
+  CLASS
+    NAME "5"
+    EXPRESSION ([PIXEL] = 5)
+    STYLE
+      COLOR 255 255 115
+    END
+  END
+  
+  CLASS
+    NAME "6"
+    EXPRESSION ([PIXEL] = 6)
+    STYLE
+      COLOR 255 211 127
+    END
+  END
+  
+  CLASS
+    NAME "7"
+    EXPRESSION ([PIXEL] = 7)
+    STYLE
+      COLOR 230 152 0
+    END
+  END
+  
+  CLASS
+    NAME "8"
+    EXPRESSION ([PIXEL] = 8)
+    STYLE
+      COLOR 230 0 0
+    END
+  END
+  
+  CLASS
+    NAME "9"
+    EXPRESSION ([PIXEL] = 9)
+    STYLE
+      COLOR 230 0 0
+    END
+  END
+  
+  CLASS
+    NAME "10"
+    EXPRESSION ([PIXEL] = 10)
+    STYLE
+      COLOR 168 0 0
+    END
+  END
+  
+  CLASS
+   NAME "11"
+   EXPRESSION ([PIXEL] = 11)
+    STYLE
+      COLOR 168 0 0
+    END
+  END
+  
+  CLASS
+   NAME "12"
+   EXPRESSION ([PIXEL] = 12)
+    STYLE
+      COLOR 132 0 168
+    END
+  END
+  

@@ -1,0 +1,56 @@
+
+  CLASS
+    NAME "Duration (Fixed 6-Period)"
+    EXPRESSION ""
+    COLOR 255 255 255
+  END
+
+  CLASS
+    EXPRESSION ([PIXEL] = 0)
+    STYLE
+      COLOR 240 240 240
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 1)
+    STYLE
+      COLOR 190 232 255
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 2)
+    STYLE
+      COLOR 0 197 255
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 3)
+    STYLE
+      COLOR 255 255 115
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 4)
+    STYLE
+      COLOR 230 230 0
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 5)
+    STYLE
+      COLOR 255 170 0
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 6)
+    STYLE
+      COLOR 230 76 0
+    END
+  END
+  
