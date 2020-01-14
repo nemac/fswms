@@ -1270,6 +1270,15 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
+template = Template("duration.2006.tpl.map")
+f_new = openMapfileForWriting("duration.2006.map")
+f_new.write( template.render( {
+            'DATA_DIR'     : DATA_DIR,
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "duration")
+            } ) )
+f_new.close()
+
+
 ###
 ### Create the treatments.map file:
 ###

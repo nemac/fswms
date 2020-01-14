@@ -38,6 +38,7 @@ msconfig/rsac_fhtet_percent_change_cmap.cmap
 msconfig/dyna_maps/*.map
 msconfig/hotspot_update
 msconfig/duration.map
+msconfig/duration.2006.map
 msconfig/treatments.map
 msconfig/phenoregions.map
 msconfig/fire.map
