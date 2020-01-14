@@ -154,6 +154,7 @@
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Archived_TACS" />
 			<viewGroup name="Duration" />
+			<viewGroup name="Archived_FW2" />
 			<viewGroup name="Archived_GTAC" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />

@@ -59,13 +59,13 @@
     END
   END
   
-  CLASS
-    NAME "7"
-    EXPRESSION ([PIXEL] = 7)
-    STYLE
-      COLOR 230 152 0
-    END
-  END
+#  CLASS
+#    NAME "7"
+#    EXPRESSION ([PIXEL] = 7)
+#    STYLE
+#      COLOR 230 152 0
+#    END
+#  END
   
   CLASS
     NAME "8"
