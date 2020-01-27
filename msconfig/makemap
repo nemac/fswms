@@ -299,7 +299,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                 colormapline   = ''
             else:
                 colormapline   = 'INCLUDE "new-forwarn2-standard-2.cmap"'
-            group = groupName 
+            group = groupName
             if re.search(r'.img', nameform):
                 layerName = group + "_" + re.sub(r'_([^_]*_[^_]*)$', '', nameform)
             else:
@@ -453,7 +453,7 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
                              'ABSTRACT'        : layerTitle,
                              'COLORMAPLINE'    : colormapline,
                              'MASK'            : '',
-			     'GROUPTEXT'       : 'GROUP %s_layers' % layerTitle
+			     'GROUPTEXT'       : 'GROUP %s' % layerName
                              })                           
             layerTitles[layerName] = layerTitle
             #jdm 5/29: for layers groups that we want ewsMask on do so     
@@ -474,7 +474,7 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
- 				     'GROUPTEXT'       : 'GROUP %s_layers' % layerTitle
+ 				     'GROUPTEXT'       : 'GROUP %s' % 'FW_'+ layerName
                                      })                                                              
         except Exception as e:
             print e
