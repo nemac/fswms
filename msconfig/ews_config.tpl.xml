@@ -1305,9 +1305,6 @@
 	<wmsGroup gid="G08" name="Archived_TACS" label="Archived ForWarn Legacy Change Maps">
 		<wmsSubgroup label="Archived Prior Year Baseline">
 		</wmsSubgroup>
-	<wmsSubgroup label="2020" collapsible="true">
-		%(FW2_LEGACY_2020_PRIOR_YEAR)s
-		</wmsSubgroup>
 	<wmsSubgroup label="2019" collapsible="true">
 		%(FW2_LEGACY_2019_PRIOR_YEAR)s
 		</wmsSubgroup>
@@ -1352,9 +1349,6 @@
 		</wmsSubgroup>
 
 	<wmsSubgroup label="Archived All-Year Max Baseline">
-		</wmsSubgroup>
-	<wmsSubgroup label="2020" collapsible="true">
-		%(FW2_LEGACY_2020_ALLYEAR)s
 		</wmsSubgroup>
 	<wmsSubgroup label="2019" collapsible="true">
 		%(FW2_LEGACY_2019_ALLYEAR)s
@@ -1401,9 +1395,6 @@
 
 	<wmsSubgroup label="Archived Prior 3-Year Max Baseline">
 		</wmsSubgroup>
-	<wmsSubgroup label="2020" collapsible="true">
-		%(FW2_LEGACY_2020_3YEAR)s
-		</wmsSubgroup>
 	<wmsSubgroup label="2019" collapsible="true">
 		%(FW2_LEGACY_2019_3YEAR)s
 		</wmsSubgroup>
@@ -1448,9 +1439,6 @@
 		</wmsSubgroup>
 
 	<wmsSubgroup label="Archived Prior 5-Year Max Baseline">
-		</wmsSubgroup>
-	<wmsSubgroup label="2020" collapsible="true">
-		%(FW2_LEGACY_2020_5YEAR)s
 		</wmsSubgroup>
 	<wmsSubgroup label="2019" collapsible="true">
 		%(FW2_LEGACY_2019_5YEAR)s
@@ -1497,9 +1485,6 @@
 
 	<wmsSubgroup label="Archived Early Detect (Prior Year Baseline)">
 	</wmsSubgroup>
-	<wmsSubgroup label="2020" collapsible="true">
-		%(FW2_LEGACY_2020_ALC)s
-		</wmsSubgroup>	
 	<wmsSubgroup label="2019" collapsible="true">
 		%(FW2_LEGACY_2019_ALC)s
 		</wmsSubgroup>	
@@ -1545,9 +1530,6 @@
 
 	<wmsSubgroup label="Archived All-Year Phenotype Max Baseline">
 		</wmsSubgroup>
-	<wmsSubgroup label="2020" collapsible="true">
-		%(FW2_LEGACY_2020_MUC)s
-		</wmsSubgroup>
 	<wmsSubgroup label="2019" collapsible="true">
 		%(FW2_LEGACY_2019_MUC)s
 		</wmsSubgroup>
@@ -1583,9 +1565,6 @@
 	</wmsSubgroup>
 
 	<wmsSubgroup label="Archived All-Year Mean (of maxes) Baseline">
-		</wmsSubgroup>
-	<wmsSubgroup label="2020" collapsible="true">
-		%(FW2_LEGACY_2020_MMAX)s
 		</wmsSubgroup>
 	<wmsSubgroup label="2019" collapsible="true">
 		%(FW2_LEGACY_2019_MMAX)s
