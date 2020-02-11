@@ -322,7 +322,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                              'ABSTRACT'        : layerTitle,
                              'COLORMAPLINE'    : colormapline,
                              'MASK'            : '',
-			     'GROUPTEXT'       : 'GROUP %s_layers' % layerTitle
+			     'GROUPTEXT'       : 'GROUP FW_%s_layers' % layerTitle
                              })
             dynaList.append({ 'TIF'             : tif,
                              'PROJVALID'       : len(proj) > 0,
@@ -356,7 +356,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
-				     'GROUPTEXT'       : 'GROUP %s_layers' % layerTitle
+				     'GROUPTEXT'       : 'GROUP FW_%s_layers' % layerTitle
                                      })    
                     dynaList.append({ 'TIF'             : tif,
                                      'PROJVALID'       : len(proj) > 0,
@@ -369,7 +369,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
- 				     'GROUPTEXT'       : 'GROUP %s_layers' % layerTitle
+ 				     'GROUPTEXT'       : 'GROUP FW_%s_layers' % layerTitle
                                      })                                          
             #Perform layer-level creation of dynamic map files:
             layerTemplate = Template(layerTemplateName)
@@ -453,7 +453,7 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
                              'ABSTRACT'        : layerTitle,
                              'COLORMAPLINE'    : colormapline,
                              'MASK'            : '',
-			     'GROUPTEXT'       : 'GROUP %s' % layerName
+			     'GROUPTEXT'       : 'GROUP FW_%s' % layerName
                              })                           
             layerTitles[layerName] = layerTitle
             #jdm 5/29: for layers groups that we want ewsMask on do so     
@@ -474,7 +474,7 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
- 				     'GROUPTEXT'       : 'GROUP %s' % 'FW_'+ layerName
+ 				     'GROUPTEXT'       : 'GROUP FW_%s' % 'FW_'+ layerName
                                      })                                                              
         except Exception as e:
             print e
@@ -1440,7 +1440,7 @@ def getFW2Layers(dataDir, product_type, layerTemplateName, fileExt, wcs, maskBoo
                              'NAME'            : layerName,
                              'DATA'            : dataDir + '/' + tif,
                              'TITLE'           : layerName,
-			     'GROUPTEXT'       : 'GROUP %s_layers' % layerName,
+			     'GROUPTEXT'       : 'GROUP FW_%s_layers' % layerName,
                              'ABSTRACT'        : layerName,
                              'COLORMAPLINE'    : colormapline,
                              'MASK'            : '',
@@ -1457,7 +1457,7 @@ def getFW2Layers(dataDir, product_type, layerTemplateName, fileExt, wcs, maskBoo
                                      'NAME'            : layerName + mask['name'],
                                      'DATA'            : dataDir + '/' + tif,
                                      'TITLE'           : layerName + mask['name'],
-				     'GROUPTEXT'       : 'GROUP %s_layers' % layerName,
+				     'GROUPTEXT'       : 'GROUP FW_%s_layers' % layerName,
                                      'ABSTRACT'        : layerName + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
