@@ -1,0 +1,71 @@
+
+  CLASS
+    EXPRESSION ([PIXEL] = 1)
+    STYLE
+      COLOR 132 0 168
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 2)
+    STYLE
+      COLOR 76 0 115
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 3)
+    STYLE
+      COLOR 104 104 123
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 4)
+    STYLE
+      COLOR 115 0 0
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 5)
+    STYLE
+      COLOR 168 0 0
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 6)
+    STYLE
+      COLOR 230 0 0
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 7)
+    STYLE
+      COLOR 230 152 0
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 8)
+    STYLE
+      COLOR 255 211 127
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 9)
+    STYLE
+      COLOR 255 255 115
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([PIXEL] = 10)
+    STYLE
+      COLOR 240 240 240
+    END
+  END
+  
