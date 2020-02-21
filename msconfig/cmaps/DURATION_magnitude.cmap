@@ -1,5 +1,10 @@
 
   CLASS
+    NAME "Magnitude"
+    EXPRESSION ""
+  END
+
+  CLASS
     NAME "1"
     EXPRESSION ([PIXEL] = 1)
     STYLE
