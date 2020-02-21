@@ -17,7 +17,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2006_0508_0617.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiodsp_2006"
             "wms_abstract"          "durperiodsp_2006"
@@ -45,7 +45,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2006_0508_0617.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiodsp_2006"
             "wms_abstract"          "durperiodsp_2006"
@@ -73,7 +73,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2006_0508_0617.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiodsp_2006"
             "wms_abstract"          "durperiodsp_2006"
@@ -101,7 +101,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2006_0508_0617.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiodsp_2006"
             "wms_abstract"          "durperiodsp_2006"
@@ -129,7 +129,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2006_0508_0617.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiodsp_2006"
             "wms_abstract"          "durperiodsp_2006"
@@ -158,7 +158,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2006_0508_0617.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiodsp_2006"
             "wms_abstract"          "durperiodsp_2006"
@@ -186,7 +186,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2006_0508_0617.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiodsp_2006"
             "wms_abstract"          "durperiodsp_2006"
@@ -214,7 +214,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2006_0508_0617.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiodsp_2006"
             "wms_abstract"          "durperiodsp_2006"
@@ -242,7 +242,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2006_0508_0617.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiodsp_2006"
             "wms_abstract"          "durperiodsp_2006"
@@ -270,7 +270,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2006_0508_0617.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiodsp_2006"
             "wms_abstract"          "durperiodsp_2006"
@@ -299,7 +299,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0508_0617/dur31yr_2006_0508_0617.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiodsp_2006"
             "wms_abstract"          "durperiodsp_2006"
@@ -334,7 +334,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2006_0624_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_12period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durcomb_2006"
             "wms_abstract"          "durcomb_2006"
@@ -362,7 +362,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2006_0624_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_12period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durcomb_2006"
             "wms_abstract"          "durcomb_2006"
@@ -390,7 +390,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2006_0624_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_12period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durcomb_2006"
             "wms_abstract"          "durcomb_2006"
@@ -418,7 +418,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2006_0624_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_12period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durcomb_2006"
             "wms_abstract"          "durcomb_2006"
@@ -446,7 +446,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2006_0624_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_12period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durcomb_2006"
             "wms_abstract"          "durcomb_2006"
@@ -474,7 +474,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2006_0624_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_12period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durcomb_2006"
             "wms_abstract"          "durcomb_2006"
@@ -502,7 +502,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2006_0624_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_12period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durcomb_2006"
             "wms_abstract"          "durcomb_2006"
@@ -530,7 +530,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2006_0624_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_12period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durcomb_2006"
             "wms_abstract"          "durcomb_2006"
@@ -557,7 +557,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2006_0624_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_12period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durcomb_2006"
             "wms_abstract"          "durcomb_2006"
@@ -584,7 +584,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2006_0624_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_12period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durcomb_2006"
             "wms_abstract"          "durcomb_2006"
@@ -611,7 +611,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0921/dur31yr_2006_0624_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_12period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durcomb_2006"
             "wms_abstract"          "durcomb_2006"
@@ -653,7 +653,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2006_0624_0804.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod1_2006"
             "wms_abstract"          "durperiod1_2006"
@@ -681,7 +681,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2006_0624_0804.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod1_2006"
             "wms_abstract"          "durperiod1_2006"
@@ -709,7 +709,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2006_0624_0804.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod1_2006"
             "wms_abstract"          "durperiod1_2006"
@@ -736,7 +736,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2006_0624_0804.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod1_2006"
             "wms_abstract"          "durperiod1_2006"
@@ -764,7 +764,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2006_0624_0804.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod1_2006"
             "wms_abstract"          "durperiod1_2006"
@@ -792,7 +792,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2006_0624_0804.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod1_2006"
             "wms_abstract"          "durperiod1_2006"
@@ -819,7 +819,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2006_0624_0804.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod1_2006"
             "wms_abstract"          "durperiod1_2006"
@@ -846,7 +846,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2006_0624_0804.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod1_2006"
             "wms_abstract"          "durperiod1_2006"
@@ -873,7 +873,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2006_0624_0804.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod1_2006"
             "wms_abstract"          "durperiod1_2006"
@@ -900,7 +900,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2006_0624_0804.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod1_2006"
             "wms_abstract"          "durperiod1_2006"
@@ -927,7 +927,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0624_0804/dur31yr_2006_0624_0804.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod1_2006"
             "wms_abstract"          "durperiod1_2006"
@@ -976,7 +976,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2006_0812_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod2_2006"
             "wms_abstract"          "durperiod2_2006"
@@ -1004,7 +1004,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2006_0812_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod2_2006"
             "wms_abstract"          "durperiod2_2006"
@@ -1032,7 +1032,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2006_0812_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod2_2006"
             "wms_abstract"          "durperiod2_2006"
@@ -1060,7 +1060,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2006_0812_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod2_2006"
             "wms_abstract"          "durperiod2_2006"
@@ -1087,7 +1087,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2006_0812_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod2_2006"
             "wms_abstract"          "durperiod2_2006"
@@ -1114,7 +1114,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2006_0812_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod2_2006"
             "wms_abstract"          "durperiod2_2006"
@@ -1141,7 +1141,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2006_0812_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod2_2006"
             "wms_abstract"          "durperiod2_2006"
@@ -1168,7 +1168,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2006_0812_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod2_2006"
             "wms_abstract"          "durperiod2_2006"
@@ -1195,7 +1195,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2006_0812_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod2_2006"
             "wms_abstract"          "durperiod2_2006"
@@ -1222,7 +1222,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2006_0812_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod2_2006"
             "wms_abstract"          "durperiod2_2006"
@@ -1249,7 +1249,7 @@
         DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/duration/duration_3pct_1yr/dur31yr_0812_0921/dur31yr_2006_0812_0921.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
-        INCLUDE "duration_6period.cmap"
+        INCLUDE "cmaps/DURATION_v2_6and12period.cmap"
         METADATA
             "wms_title"             "durperiod2_2006"
             "wms_abstract"          "durperiod2_2006"
