@@ -273,7 +273,7 @@ makeGtacArchiveMapfiles()
 #At this point its a not completely generic because the color maps is 
 #specific to the tif files location
 #LAYERS1 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", True)
-def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
+def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool, colormapfile=None):
     #print 'data dir ' + dataDir
     #print 'template ' + layerTemplateName
     tifList  = []
@@ -287,7 +287,9 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
             nameform = re.sub(r'^.*/', '', tif)
             #print nameform
             #this conditional logic needs to be refactored out
-            if re.search(r'max|med', nameform) and wcs=="no":
+            if colormapfile:
+                colormapline = 'INCLUDE %s' % colormapfile
+            elif re.search(r'max|med', nameform) and wcs=="no":
                 colormapline   = 'INCLUDE "new-forwarn2-standard-2.cmap"'
             elif re.search(r'255c.img', nameform):
                 colormapline   = ''
@@ -311,6 +313,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                 else:
                     layerName = group + "_" + re.sub(r'_.*$', '', nameform)
             layerTitle = tif
+            groupText = 'GROUP FW_%s_layers' % layerTitle
             tifList.append({ 'TIF'             : tif,
                              'PROJVALID'       : len(proj) > 0,
                              'PROJ'            : formatproj(proj,10),
@@ -322,7 +325,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                              'ABSTRACT'        : layerTitle,
                              'COLORMAPLINE'    : colormapline,
                              'MASK'            : '',
-			     'GROUPTEXT'       : 'GROUP FW_%s_layers' % layerTitle
+			                       'GROUPTEXT'       : groupText
                              })
             dynaList.append({ 'TIF'             : tif,
                              'PROJVALID'       : len(proj) > 0,
@@ -335,7 +338,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                              'ABSTRACT'        : layerTitle,
                              'COLORMAPLINE'    : colormapline,
                              'MASK'            : '',
-			     'GROUPTEXT'       : ''
+			                       'GROUPTEXT'       : ''
                              })                             
             layerTitles[layerName] = layerTitle
             #jdm 5/29: for layers groups that we want ewsMask on do so     
@@ -356,7 +359,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
-				     'GROUPTEXT'       : 'GROUP FW_%s_layers' % layerTitle
+				                             'GROUPTEXT'       : groupText
                                      })    
                     dynaList.append({ 'TIF'             : tif,
                                      'PROJVALID'       : len(proj) > 0,
@@ -369,7 +372,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool):
                                      'ABSTRACT'        : layerTitle + mask['name'],
                                      'COLORMAPLINE'    : colormapline,
                                      'MASK'            : 'MASK ' + mask['name'],
- 				     'GROUPTEXT'       : 'GROUP FW_%s_layers' % layerTitle
+ 				                             'GROUPTEXT'       : groupText
                                      })                                          
             #Perform layer-level creation of dynamic map files:
             layerTemplate = Template(layerTemplateName)
@@ -423,7 +426,7 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
             elif re.search(r'255c.img', nameform):
                 colormapline   = ''
             elif re.search(r'u16b.img', nameform):
-                colormapline   = 'INCLUDE "truecolor16b.cmap"'  
+                colormapline   = 'INCLUDE "truecolor16b.cmap"' 
             #elif re.search(r'.img', fileExt):
                 #colormapline   = ''
             elif(wcs=="yes"):
@@ -1145,6 +1148,153 @@ LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.l
 #print "debug: at 23"
 
 
+# create layer definitions for duration products
+#def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool, colormapfile=None)
+
+
+def fileEndsWith(filename, fileExts):
+  for ext in fileExts:
+    if filename.endswith(ext):
+      return True
+  return False
+
+
+def getDurationLayers(dataDir, layerTemplateName, groupName, fileExts, maskBool, colormapfile=None, layerTitleSubFromTo=[], proj=''):
+    tifList  = []
+    for tif in sorted([filename for filename in os.listdir(dataDir) if fileEndsWith(filename, fileExts) ], reverse=False):
+        try:        
+            tif = re.sub('^' + dataDir + '/', '', tif)
+            tif_fullpath = dataDir + '/' + tif;
+	    # Try to get proj4 string from the file then fallback to proj parameter
+            proj = getproj(tif_fullpath) or proj
+            if colormapfile:
+                colormapline = 'INCLUDE "%s"' % colormapfile
+            else:
+                colormapline   = ''
+            layerTitle = tif
+            for ext in fileExts:
+              layerTitle = layerTitle.rstrip(ext)
+            layerName = layerTitle
+	    if len(layerTitleSubFromTo):
+	      subFrom = layerTitleSubFromTo[0]
+              subTo = layerTitleSubFromTo[1]
+              layerTitle = re.sub(subFrom, subTo, layerTitle)
+            groupText = 'GROUP "%s"' % groupName
+            tifList.append({ 
+                             'PROJVALID'       : len(proj) > 0,
+                             'PROJ'            : formatproj(proj,10),
+                             'WKT'             : getwkt(tif_fullpath),
+                             'NAME'            : layerName,
+                             'DATA'            : dataDir + '/' + tif,
+                             'TITLE'           : layerTitle,
+                             'ABSTRACT'        : layerTitle,
+                             'COLORMAPLINE'    : colormapline,
+                             'MASK'            : '',
+			                       'GROUPTEXT'       : groupText
+                             })
+            layerTitles[layerTitle] = layerTitle
+            if maskBool:
+                for mask in ewsMask:
+                    tifList.append({ 
+                                     'PROJVALID'       : len(proj) > 0,
+                                     'PROJ'            : formatproj(proj,10),
+                                     'WKT'             : getwkt(tif_fullpath),
+                                     'NAME'            : layerName + mask['name'],
+                                     'DATA'            : dataDir + '/' + tif,
+                                     'TITLE'           : layerTitle +'_' + mask['name'],
+                                     'ABSTRACT'        : layerTitle + '_' + mask['name'],
+                                     'COLORMAPLINE'    : colormapline,
+                                     'MASK'            : 'MASK ' + mask['name'],
+				                             'GROUPTEXT'       : groupText
+                                     })
+        except Exception as e:
+            print e
+            continue
+
+    layerTemplate = Template(layerTemplateName)
+    layers = ""
+    for tifdict in tifList:
+        if tifdict['PROJVALID']:
+            layers = layers + layerTemplate.render(tifdict)    
+    return layers
+
+
+DURATION_BASE_DIR = DATA_DIR + "/fsdata-internal/efetac_nasa/AncillaryData/duration"
+
+DURATION_MAG_0624_0921_LAYERS = getDurationLayers(
+  dataDir=DURATION_BASE_DIR + '/magnitude/mag_0624_0921',
+  layerTemplateName='ews_gen.layer.tpl.map',
+  groupName='Seasonal Summaries: Magnitude Jun24-Sept21',
+  fileExts=['.img', '.tif'],
+  maskBool=True,
+  colormapfile='cmaps/DURATION_magnitude.cmap',
+  layerTitleSubFromTo=['sumr(\d{4}).+$', '\g<1> Magnitude Jun24-Sept21'], # \g<1> refers to the first match group
+  proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
+) 
+ 
+DURATION_12PERIOD_0624_0921_LAYERS = getDurationLayers(
+  dataDir=DURATION_BASE_DIR + '/dur1yr_0624_0921',
+  layerTemplateName='ews_gen.layer.tpl.map',
+  groupName='Seasonal Summaries: Duration Fixed 12-Period Jun24-Sep21',
+  fileExts=['.img', '.tif'],
+  maskBool=True,
+  colormapfile='cmaps/DURATION_v2_6and12period.cmap',
+  layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 12-Period Jun24-Sep21'],
+  proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
+)
+
+DURATION_6PERIOD_0508_0617_LAYERS = getDurationLayers(
+  dataDir=DURATION_BASE_DIR + '/dur1yr_0508_0617',
+  layerTemplateName='ews_gen.layer.tpl.map',
+  groupName='Seasonal Summaries: Duration Fixed 6-Period May8-Jun17',
+  fileExts=['.img', '.tif'],
+  maskBool=True,
+  colormapfile='cmaps/DURATION_v2_6and12period.cmap',
+  layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 6-Period May8-Jun17'],
+  proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
+)
+
+DURATION_6PERIOD_0624_0804_LAYERS = getDurationLayers(
+  dataDir=DURATION_BASE_DIR + '/dur1yr_0624_0804',
+  layerTemplateName='ews_gen.layer.tpl.map',
+  groupName='Seasonal Summaries: Duration Fixed 6-Period Jun24-Aug04',
+  fileExts=['.img', '.tif'],
+  maskBool=True,
+  colormapfile='cmaps/DURATION_v2_6and12period.cmap',
+  layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 6-Period Jun24-Aug4'],
+  proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
+)
+
+DURATION_6PERIOD_0812_0921_LAYERS = getDurationLayers(
+  dataDir=DURATION_BASE_DIR + '/dur1yr_0812_0921',
+  layerTemplateName='ews_gen.layer.tpl.map',
+  groupName='Seasonal Summaries: Duration Fixed 6-Period Aug12-Sep21',
+  fileExts=['.img', '.tif'],
+  maskBool=True,
+  colormapfile='cmaps/DURATION_v2_6and12period.cmap',
+  layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 6-Period Aug12-Sep21'],
+  proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
+)
+
+DURATION_LAYERS = DURATION_MAG_0624_0921_LAYERS + \
+		  DURATION_12PERIOD_0624_0921_LAYERS + \
+		  DURATION_6PERIOD_0508_0617_LAYERS + \
+		  DURATION_6PERIOD_0624_0804_LAYERS + \
+		  DURATION_6PERIOD_0812_0921_LAYERS
+    
+
+###
+### Create the duration.map file:
+###
+template = Template("duration.tpl.map")
+f_new = openMapfileForWriting("duration.map")
+f_new.write( template.render( {
+	    'DURATION_LAYERS' : DURATION_LAYERS,
+            'DATA_DIR'        : DATA_DIR,
+            'SERVICE_URL'     : "%s/%s" % (SERVER_URL, "duration")
+            } ) )
+f_new.close()
+
 #print "debug: at 24"
 
 ###
@@ -1256,25 +1406,6 @@ f_new = openMapfileForWriting("aklayers.map")
 f_new.write( template.render( {
             'DATA_DIR'     : DATA_DIR,
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "aklayers")
-            } ) )
-f_new.close()
-
-###
-### Create the duration.map file:
-###
-template = Template("duration.tpl.map")
-f_new = openMapfileForWriting("duration.map")
-f_new.write( template.render( {
-            'DATA_DIR'     : DATA_DIR,
-            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "duration")
-            } ) )
-f_new.close()
-
-template = Template("duration.2006.tpl.map")
-f_new = openMapfileForWriting("duration.2006.map")
-f_new.write( template.render( {
-            'DATA_DIR'     : DATA_DIR,
-            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "duration")
             } ) )
 f_new.close()
 

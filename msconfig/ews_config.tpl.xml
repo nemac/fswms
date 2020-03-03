@@ -9783,11 +9783,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durmag_062019"
+					layers="sumr2019minus2018_absMedNDVIc"
 					name="2019"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durmag_062019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2019minus2018_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 				<wmsLayer
@@ -9796,11 +9796,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durmag_062018"
+					layers="sumr2018minus2017_absMedNDVIc"
 					name="2018"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durmag_062019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2018minus2017_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 				<wmsLayer
@@ -9809,11 +9809,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durmag_062017"
+					layers="sumr2017minus2016_absMedNDVIc"
 					name="2017"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durmag_062019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2017minus2016_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 		</wmsSubgroup>
@@ -9828,11 +9828,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb5_2019"
+					layers="dur51yr_2019_0624_0921"
 					name="2019"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb5_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2019_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -9842,11 +9842,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2018"
+					layers="dur31yr_2018_0624_0921"
 					name="2018"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2018_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -9856,11 +9856,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2017"
+					layers="dur31yr_2017_0624_0921"
 					name="2017"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2017_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -9870,11 +9870,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2016"
+					layers="dur31yr_2016_0624_0921"
 					name="2016"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2016_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 		<wmsLayer
 					selected="false"
@@ -9882,11 +9882,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2015"
+					layers="dur31yr_2015_0624_0921"
 					name="2015"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2015_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 		<wmsLayer
 					selected="false"
@@ -9894,11 +9894,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2014"
+					layers="dur31yr_2014_0624_0921"
 					name="2014"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2014_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -9906,11 +9906,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2013"
+					layers="dur31yr_2013_0624_0921"
 					name="2013"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2013_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -9918,11 +9918,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2012"
+					layers="dur31yr_2012_0624_0921"
 					name="2012"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2012_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -9930,11 +9930,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2011"
+					layers="dur31yr_2011_0624_0921"
 					name="2011"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2011_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -9942,11 +9942,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2010"
+					layers="dur31yr_2010_0624_0921"
 					name="2010"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2010_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -9954,11 +9954,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2009"
+					layers="dur31yr_2009_0624_0921"
 					name="2009"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2009_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -9966,11 +9966,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2008"
+					layers="dur31yr_2008_0624_0921"
 					name="2008"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2008_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -9978,11 +9978,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2007"
+					layers="dur31yr_2007_0624_0921"
 					name="2007"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2007_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -9990,11 +9990,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durcomb_2006"
+					layers="dur31yr_2006_0624_0921"
 					name="2006"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durcomb_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2006_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 			</wmsSubgroup>
 	<wmsSubgroup label="Fixed 6-Period: May 8 – Jun 17">
@@ -10006,11 +10006,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp5_2019"
+					layers="dur51yr_2019_0508_0617"
 					name="2019"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp5_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2019_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -10020,11 +10020,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2018"
+					layers="dur31yr_2018_0508_0617"
 					name="2018"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2018_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -10034,11 +10034,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2017"
+					layers="dur31yr_2017_0508_0617"
 					name="2017"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2017_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -10048,11 +10048,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2016"
+					layers="dur31yr_2016_0508_0617"
 					name="2016"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2016_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 		<wmsLayer
 					selected="false"
@@ -10060,11 +10060,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2015"
+					layers="dur31yr_2015_0508_0617"
 					name="2015"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2015_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 		<wmsLayer
 					selected="false"
@@ -10072,11 +10072,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2014"
+					layers="dur31yr_2014_0508_0617"
 					name="2014"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2014_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10084,11 +10084,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2013"
+					layers="dur31yr_2013_0508_0617"
 					name="2013"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2013_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10096,11 +10096,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2012"
+					layers="dur31yr_2012_0508_0617"
 					name="2012"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2012_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10108,11 +10108,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2011"
+					layers="dur31yr_2011_0508_0617"
 					name="2011"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2011_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10120,11 +10120,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2010"
+					layers="dur31yr_2010_0508_0617"
 					name="2010"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2010_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10132,11 +10132,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2009"
+					layers="dur31yr_2009_0508_0617"
 					name="2009"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2009_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10144,11 +10144,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2008"
+					layers="dur31yr_2008_0508_0617"
 					name="2008"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2008_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10156,11 +10156,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2007"
+					layers="dur31yr_2007_0508_0617"
 					name="2007"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2007_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10168,11 +10168,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiodsp_2006"
+					layers="dur31yr_2006_0508_0617"
 					name="2006"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiodsp_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2006_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 			</wmsSubgroup>
 		<wmsSubgroup label="Fixed 6-Period: Jun 24 - Aug 4">
@@ -10183,11 +10183,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_5_2019"
+					layers="dur51yr_2019_0624_0804"
 					name="2019"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_5_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2019_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -10197,11 +10197,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2018"
+					layers="dur31yr_2018_0624_0804"
 					name="2018"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2018_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -10212,11 +10212,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2017"
+					layers="dur31yr_2017_0624_0804"
 					name="2017"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2017_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -10226,11 +10226,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2016"
+					layers="dur31yr_2016_0624_0804"
 					name="2016"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2016_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 		<wmsLayer
 					selected="false"
@@ -10238,11 +10238,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2015"
+					layers="dur31yr_2015_0624_0804"
 					name="2015"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2015_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 		<wmsLayer
 					selected="false"
@@ -10250,11 +10250,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2014"
+					layers="dur31yr_2014_0624_0804"
 					name="2014"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2014_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10262,11 +10262,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2013"
+					layers="dur31yr_2013_0624_0804"
 					name="2013"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2013_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10274,11 +10274,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2012"
+					layers="dur31yr_2012_0624_0804"
 					name="2012"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2012_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10286,11 +10286,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2011"
+					layers="dur31yr_2011_0624_0804"
 					name="2011"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2011_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10298,11 +10298,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2010"
+					layers="dur31yr_2010_0624_0804"
 					name="2010"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2010_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10310,11 +10310,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2009"
+					layers="dur31yr_2009_0624_0804"
 					name="2009"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2009_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10322,11 +10322,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2008"
+					layers="dur31yr_2008_0624_0804"
 					name="2008"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2008_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10334,11 +10334,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2007"
+					layers="dur31yr_2007_0624_0804"
 					name="2007"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2007_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10346,11 +10346,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod1_2006"
+					layers="dur31yr_2006_0624_0804"
 					name="2006"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod1_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2006_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 			</wmsSubgroup>
 		<wmsSubgroup label="Fixed 6-Period: Aug 12 - Sep 21">
@@ -10362,11 +10362,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_5_2019"
+					layers="dur51yr_2019_0812_0921"
 					name="2019"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_5_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2019_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -10376,11 +10376,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2018"
+					layers="dur31yr_2018_0812_0921"
 					name="2018"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2018_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -10390,11 +10390,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2017"
+					layers="dur31yr_2017_0812_0921"
 					name="2017"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2017_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 
@@ -10404,11 +10404,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2016"
+					layers="dur31yr_2016_0812_0921"
 					name="2016"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2016&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2016_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 		<wmsLayer
 					selected="false"
@@ -10416,11 +10416,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2015"
+					layers="dur31yr_2015_0812_0921"
 					name="2015"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2015&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2015_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 		<wmsLayer
 					selected="false"
@@ -10428,11 +10428,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2014"
+					layers="dur31yr_2014_0812_0921"
 					name="2014"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2014&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2014_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10440,11 +10440,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2013"
+					layers="dur31yr_2013_0812_0921"
 					name="2013"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2013&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2013_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10452,11 +10452,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2012"
+					layers="dur31yr_2012_0812_0921"
 					name="2012"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2012&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2012_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10464,11 +10464,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2011"
+					layers="dur31yr_2011_0812_0921"
 					name="2011"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2011&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2011_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10476,11 +10476,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2010"
+					layers="dur31yr_2010_0812_0921"
 					name="2010"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2010&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2010_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10488,11 +10488,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2009"
+					layers="dur31yr_2009_0812_0921"
 					name="2009"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2009&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2009_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10500,11 +10500,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2008"
+					layers="dur31yr_2008_0812_0921"
 					name="2008"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2008&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2008_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10512,11 +10512,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2007"
+					layers="dur31yr_2007_0812_0921"
 					name="2007"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2007_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 				<wmsLayer
 					selected="false"
@@ -10524,11 +10524,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/duration?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="durperiod2_2006"
+					layers="dur31yr_2006_0812_0921"
 					name="2006"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=durperiod2_2006&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur31yr_2006_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 			</wmsSubgroup>
 	</wmsGroup>
