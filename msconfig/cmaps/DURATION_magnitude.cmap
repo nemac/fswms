@@ -52,6 +52,7 @@
     EXPRESSION ([PIXEL] > -6 AND [PIXEL] <= -5)
     STYLE
       COLOR 255 255 255
+      OPACITY 0
     END
   END
   
@@ -60,6 +61,7 @@
     EXPRESSION ([PIXEL] > -5 AND [PIXEL] <= -4)
     STYLE
       COLOR 255 255 255
+      OPACITY 0
     END
   END
   
@@ -68,6 +70,7 @@
     EXPRESSION ([PIXEL] > -4 AND [PIXEL] <= -3)
     STYLE
       COLOR 255 255 255
+      OPACITY 0
     END
   END
   
@@ -76,6 +79,7 @@
     EXPRESSION ([PIXEL] > -3 AND [PIXEL] <= -100)
     STYLE
       COLOR 255 255 255
+      OPACITY 0
     END
   END
   
