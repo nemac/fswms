@@ -759,7 +759,7 @@ MAP
     LAYER #
         NAME fs_treatment_2019
         PROJECTION
-            "init=epsg:2163"
+            "init=epsg:3857"
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
@@ -795,7 +795,7 @@ MAP
     LAYER #
         NAME fs_treatment_2020
         PROJECTION
-            "init=epsg:2163"
+            "init=epsg:3857"
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
@@ -823,11 +823,44 @@ MAP
         METADATA
             "wms_title"          "fs_treatment_2020"
             "wms_abstract"       "fs_treatment_2020"
-            "gml_include_items"  "activity,date_plann,date_compl,fs_unit_na,gis_acres,year"
+            "gml_include_items"  "activity,date_plann,date_compl,fs_unit_na,gis_acres,cyr_comp"
         END  # end METADATA
     END
 
-
+    LAYER #
+        NAME fs_treatment_2021
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_treatment_2021"
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+        #FILTER year=2013
+        CLASS
+            NAME "FS Fuel Treatments 2021"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_treatment_2021"
+            "wms_abstract"       "fs_treatment_2021"
+            "gml_include_items"  "activity,date_plann,date_compl,fs_unit_na,gis_acres,cyr_comp"
+        END  # end METADATA
+    END
 
 
 
@@ -1520,7 +1553,7 @@ MAP
         LAYER #
         NAME fs_harvests_2019
         PROJECTION
-            "init=epsg:2163"
+            "init=epsg:3857"
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
@@ -1549,14 +1582,14 @@ MAP
         METADATA
             "wms_title"          "fs_harvests_2019"
             "wms_abstract"       "fs_harvests_2019"
-            "gml_include_items"  "admin_fo_1,date_plann,date_compl,gis_acres,year_out,cyr_comp"
+            "gml_include_items"  "admin_fore,date_plann,date_compl,gis_acres,cyr_comp"
         END  # end METADATA
     END # end Layer
 
         LAYER #
         NAME fs_harvests_2020
         PROJECTION
-            "init=epsg:2163"
+            "init=epsg:3857"
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
@@ -1585,9 +1618,44 @@ MAP
         METADATA
             "wms_title"          "fs_harvests_2020"
             "wms_abstract"       "fs_harvests_2020"
-            "gml_include_items"  "admin_fo_1,date_plann,date_compl,gis_acres,year_out,cyr_comp"
+            "gml_include_items"  "admin_fore,date_plann,date_compl,gis_acres,cyr_comp"
         END  # end METADATA
     END # end Layer
 
+        LAYER #
+        NAME fs_harvests_2021
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from fs_harvests_2021"
+
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        #FILTERITEM year
+        #FILTER year=2013
+        CLASS
+            NAME "FS Timber Harvests 2021"
+            STYLE
+                COLOR        255 255 255
+                OUTLINECOLOR 32 32 32
+            END
+            STYLE
+                SYMBOL "hatchsymbol"
+                COLOR 128 64 64
+                SIZE 2
+                ANGLE 45
+            END # STYLE
+        END
+        METADATA
+            "wms_title"          "fs_harvests_2021"
+            "wms_abstract"       "fs_harvests_2021"
+            "gml_include_items"  "admin_fore,date_plann,date_compl,gis_acres,cyr_comp"
+        END  # end METADATA
+    END # end Layer
 
 END

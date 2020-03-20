@@ -127,7 +127,7 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     fs-fuel-treatments-00-20
+        NAME     fs-fuel-treatments-00-21
         PROJECTION
 			"proj=laea"
 			"lat_0=45"
@@ -142,12 +142,12 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fs_treatments/ras_FuelTreatments_mosaic_2000_2020_conus_laea.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fs_treatments/replacement_fs_fuel_treatments_combined_raster_20002021_ver030920.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
 		CLASS
-			NAME "FS Fuel Treatments 2000-2020"
+			NAME "FS Fuel Treatments 2000-2021"
             EXPRESSION ""
             COLOR 255 255 255
         END
@@ -255,16 +255,21 @@ MAP
             NAME "2020"
             EXPRESSION ([pixel] = 2020)
             COLOR 150 0 150
+        END
+        CLASS
+            NAME "2021"
+            EXPRESSION ([pixel] = 2021)
+            COLOR 240 94 35
         END     
 
         METADATA
-            "wms_title"             "fs-fuel-treatments-00-20"
-            "wms_abstract"          "fs-fuel-treatments-00-20"
+            "wms_title"             "fs-fuel-treatments-00-21"
+            "wms_abstract"          "fs-fuel-treatments-00-21"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
     LAYER
-        NAME     fs-timber-harvests-00-20
+        NAME     fs-timber-harvests-00-21
         PROJECTION
             "proj=laea"
             "lat_0=45"
@@ -279,12 +284,12 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/harvests/ras_TimberHarvests_combined_2000_2020_conus_laea.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/harvests/replacement_fs_timber_harvests_combined_raster_20002021_ver030920.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
         
         CLASS
-            NAME "FS Timber Harvests 2000-2020"
+            NAME "FS Timber Harvests 2000-2021"
             EXPRESSION ""
             COLOR 255 255 255
         END
@@ -393,11 +398,16 @@ MAP
             EXPRESSION ([pixel] = 2020)
             COLOR 14 200 15
         END
+        CLASS
+            NAME "2021"
+            EXPRESSION ([pixel] = 2021)
+            COLOR 136 3 252
+        END
 
 
         METADATA
-            "wms_title"             "fs-timber-harvests-00-20"
-            "wms_abstract"          "fs-timber-harvests-00-20"
+            "wms_title"             "fs-timber-harvests-00-21"
+            "wms_abstract"          "fs-timber-harvests-00-21"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
@@ -518,7 +528,7 @@ MAP
     END # end LAYER
 
 	LAYER
-        NAME     mtbs-raster-00-18
+        NAME     mtbs-raster-00-19
         PROJECTION
           "+proj=laea"
           "+lat_0=45"
@@ -533,12 +543,12 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/ras_fire_perimeters_conus_MTBS_2000_2016_GEOMAC_2017_2018_dd_v022719.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/replacement_wildfire_perimeters_combined_raster_2000_2019_laea_031720.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
 		CLASS
-			NAME "MTBS/GEOMAC 2000-2018"
+			NAME "MTBS/GEOMAC 2000-2019"
             EXPRESSION ""
             COLOR 255 255 255
         END
@@ -636,10 +646,15 @@ MAP
             NAME "2018"
             EXPRESSION ([pixel] = 2018)
             COLOR 128 255 128
-        END  
+        END
+        CLASS
+            NAME "2019"
+            EXPRESSION ([pixel] = 2019)
+            COLOR 240 94 35
+        END
         METADATA
-            "wms_title"             "mtbs-raster-00-17"
-            "wms_abstract"          "mtbs-raster-00-17"
+            "wms_title"             "mtbs-raster-00-19"
+            "wms_abstract"          "mtbs-raster-00-19"
             "gml_include_items"     "value_0"
 			#"gml_value_0_alias"     "Fire Year"
         END  # end METADATA
@@ -2000,6 +2015,34 @@ MAP
             "wms_title"             "CropLands2018"
             "wms_abstract"          "CropLands2018"   
             "gml_include_items"     "value_list"            
+        END  # end METADATA
+    END # end LAYER
+
+
+    LAYER
+        NAME CropLands2019
+        PROJECTION
+           "+proj=aea"
+           "+lat_1=29.5"
+           "+lat_2=45.5"
+           "+lat_0=23"
+           "+lon_0=-96"
+           "+x_0=0"
+           "+y_0=0"
+           "+datum=NAD83"
+           "+units=m"
+           "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/MODIS/Cropland/2019_231m_cdls.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        METADATA
+            "wms_title"             "CropLands2019"
+            "wms_abstract"          "CropLands2019"
+            "gml_include_items"     "value_list"
         END  # end METADATA
     END # end LAYER
 

@@ -73,6 +73,45 @@ MAP
     END
 
     LAYER #
+        NAME mtbs_2017
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_fireperims_mtbs_2017 USING UNIQUE gid"
+        #EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+	CLASS
+		MINSCALEDENOM 0
+		MAXSCALEDENOM 200000
+            STYLE
+                OUTLINECOLOR 90 0 0 
+				WIDTH 4
+            END
+        END
+		CLASS
+            NAME "MTBS Fire 2017"
+	    MINSCALEDENOM 200000
+            STYLE
+                OUTLINECOLOR 90 0 0 
+				WIDTH 2
+            END
+        END
+        METADATA
+            "wms_title"          "mtbs_2017"
+            "wms_abstract"       "mtbs_2017"
+            "gml_include_items"  "fire_name,fire_id,year,fire_type,acres"
+        END  # end METADATA
+    END # end Layer
+
+
+
+    LAYER #
         NAME mtbs_2016
         PROJECTION
             "init=epsg:4326"
@@ -912,6 +951,80 @@ MAP
     END # end Layer
 
     LAYER #
+        NAME nifc_2019
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_fireperims_nifc_2019 USING UNIQUE gid"
+        #EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+  CLASS
+    MINSCALEDENOM 0
+    MAXSCALEDENOM 200000
+            STYLE
+                OUTLINECOLOR 90 0 0
+        WIDTH 4
+            END
+        END
+    CLASS
+            NAME "NIFC Fire 2019"
+      MINSCALEDENOM 200000
+            STYLE
+                OUTLINECOLOR 90 0 0
+        WIDTH 2
+            END
+        END
+        METADATA
+            "wms_title"          "nifc_2019"
+            "wms_abstract"       "nifc_2019"
+            "gml_include_items"  "fire_name,fire_id,year,fire_type,acres"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
+        NAME wfdss_2018
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from conus_fireperims_wfdss_2018 USING UNIQUE gid"
+        #EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+  CLASS
+    MINSCALEDENOM 0
+    MAXSCALEDENOM 200000
+            STYLE
+                OUTLINECOLOR 90 0 0
+        WIDTH 4
+            END
+        END
+    CLASS
+            NAME "WFDSS Fire 2018"
+      MINSCALEDENOM 200000
+            STYLE
+                OUTLINECOLOR 90 0 0
+        WIDTH 2
+            END
+        END
+        METADATA
+            "wms_title"          "wfdss_2018"
+            "wms_abstract"       "wfdss_2018"
+            "gml_include_items"  "fire_name,fire_id,year,fire_type,acres"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
         NAME geomac_2018
         PROJECTION
             "init=epsg:4326"
@@ -1672,6 +1785,36 @@ MAP
         METADATA
             "wms_title"          "modis-fire-2018"
             "wms_abstract"       "modis-fire-2018"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
+        NAME modis-fire-2019
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from modis_fire_2019"
+        #EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2019"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2019"
+            "wms_abstract"       "modis-fire-2019"
             "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
