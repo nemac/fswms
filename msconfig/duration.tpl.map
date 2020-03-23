@@ -63,8 +63,8 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         FOOTER "./templates/query_footer.html"
         METADATA
             "ows_enable_request"     "*"
-            "wms_title"              "duration"
-            "wms_abstract"           "duration"
+            "wms_title"              "Seasonal Summaries"
+            "wms_abstract"           "Seasonal Summaries"
             "wms_onlineresource"     "%(SERVICE_URL)s"
             "wms_srs"                "EPSG:4326 EPSG:2163 EPSG:3857 EPSG:900913"
             "wcs_srs"                "EPSG:4326 EPSG:2163 EPSG:3857 EPSG:900913"
