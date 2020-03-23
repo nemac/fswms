@@ -1745,7 +1745,7 @@ def makeFW2MapfilesFor(source, p_type):
               'LAYERS'                  : layers,
               'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
               'WMS_SRS'                 : "EPSG:3857 EPSG:4326",
-              'MAPFILE_PROJECTION'      : '"init=epsg:3857"',
+              'MAPFILE_PROJECTION'      : '"init=epsg:4326"',
               'TEMP_FILE_PREFIX'        : "ms_%s" % (SERVICE_NAME),
               'OWS_TITLE'               : "NEMAC %s WMS" % (SERVICE_NAME),
               'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
