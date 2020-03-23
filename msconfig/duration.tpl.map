@@ -34,6 +34,15 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         EXTENSION "tif"
     END
 
+    # image format options
+    OUTPUTFORMAT
+     NAME png
+     DRIVER "GD/PNG"
+     MIMETYPE "image/png"
+     IMAGEMODE RGB
+     EXTENSION "png"
+    END
+
     # minx miny maxx maxy
     # sets:
     # /WMT_MS_Capabilities/Capability/Layer/LatLonBoundingBox(@minx @miny @maxx @maxx)
@@ -58,6 +67,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
             "wms_abstract"           "duration"
             "wms_onlineresource"     "%(SERVICE_URL)s"
             "wms_srs"                "EPSG:4326 EPSG:2163 EPSG:3857 EPSG:900913"
+            "wcs_srs"                "EPSG:4326 EPSG:2163 EPSG:3857 EPSG:900913"
         END
     END
 
@@ -67,8 +77,16 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
 
     # set defaults for GetLegendGraphic requests
     LEGEND
-      KEYSIZE 20 10
+      STATUS ON
+      LABEL
+        COLOR 0 0 0
+        FONT "vera_serif"
+        TYPE truetype
+        SIZE 9
+        POSITION cl
+      END
     END
+
 
     %(DURATION_LAYERS)s
 
@@ -88,6 +106,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
+        GROUP Masks
         DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_3foresttypes_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
@@ -118,6 +137,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
+        GROUP Masks
         DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_agriculture_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] = 1)
@@ -148,6 +168,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
+        GROUP Masks
         DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_evergreen_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
@@ -178,6 +199,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
+        GROUP Masks
         DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_deciduous_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
@@ -208,6 +230,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
+        GROUP Masks
         DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_grass_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
@@ -238,6 +261,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
+        GROUP Masks
         DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_mixedforest_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
@@ -268,6 +292,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
+        GROUP Masks
         DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_non_veg_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
@@ -298,6 +323,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
+        GROUP Masks
         DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_shrub_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
@@ -328,6 +354,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
+        GROUP Masks
         DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_urban_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
@@ -358,6 +385,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
+        GROUP Masks
         DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/nAM2010_wetland_conusHybrid.img
         CLASS
             EXPRESSION ([pixel] > 0)
