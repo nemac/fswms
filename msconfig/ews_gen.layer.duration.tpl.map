@@ -1,0 +1,27 @@
+    LAYER
+        NAME %(NAME)s
+        PROJECTION
+%(PROJ)s
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA)s
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+        %(COLORMAPLINE)s
+        METADATA
+            "wms_title"             "%(TITLE)s"
+	    "wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+            "wms_abstract"          "%(ABSTRACT)s"
+            "wcs_label"             "%(TITLE)s"
+            "wcs_rangeset_name"     "%(TITLE)s"
+            "wcs_rangeset_label"    "%(TITLE)s"
+            "wcs_bandcount"         "1"
+            "wcs_formats"           "GEOTIFF"
+            "wcs_nativeformat"      "8-bit GeoTIF"
+            "gml_include_items"     "value_0"
+            "wms_layer_group"       "%(WMS_LAYER_GROUP)s"
+        END  # end METADATA
+        %(MASK)s
+    END # end LAYER
