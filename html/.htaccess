@@ -111,6 +111,10 @@ Header set Access-Control-Allow-Origin "*"
     Allow from all
     SetHandler cgi-script
 </Files>
+<Files "magnitude">
+    Allow from all
+    SetHandler cgi-script
+</Files>
 <Files "phenoregions">
     Allow from all
     SetHandler cgi-script

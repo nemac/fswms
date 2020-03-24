@@ -1276,12 +1276,12 @@ DURATION_6PERIOD_0812_0921_LAYERS = getDurationLayers(
   proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
 )
 
-DURATION_LAYERS = DURATION_MAG_0624_0921_LAYERS + \
-		  DURATION_12PERIOD_0624_0921_LAYERS + \
+DURATION_LAYERS = DURATION_12PERIOD_0624_0921_LAYERS + \
 		  DURATION_6PERIOD_0508_0617_LAYERS + \
 		  DURATION_6PERIOD_0624_0804_LAYERS + \
 		  DURATION_6PERIOD_0812_0921_LAYERS
-    
+
+MAGNITUDE_LAYERS = DURATION_MAG_0624_0921_LAYERS
 
 ###
 ### Create the duration.map file:
@@ -1293,6 +1293,19 @@ f_new.write( template.render( {
             'DATA_DIR'        : DATA_DIR,
             'SERVICE_URL'     : "%s/%s" % (SERVER_URL, "duration")
             } ) )
+f_new.close()
+
+
+###
+### Create the duration.map file:
+###
+template = Template("magnitude.tpl.map")
+f_new = openMapfileForWriting("magnitude.map")
+f_new.write( template.render( {
+	    'DURATION_LAYERS' : MAGNITUDE_LAYERS,
+      'DATA_DIR'        : DATA_DIR,
+      'SERVICE_URL'     : "%s/%s" % (SERVER_URL, "magnitude")
+} ) )
 f_new.close()
 
 #print "debug: at 24"
