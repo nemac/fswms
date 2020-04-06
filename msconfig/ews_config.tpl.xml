@@ -32,6 +32,7 @@
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
 			<viewGroup name="Sentinel" />
+      <viewGroup name="Landsat8" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="ForWarn_Legacy_Products" label="ForWarn Legacy Products">
@@ -43,6 +44,7 @@
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
 			<viewGroup name="Sentinel" />
+		  <viewGroup name="Landsat8" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="ForWarn2_Compare" label="ForWarn II Comparisons">
@@ -53,6 +55,7 @@
 			<viewGroup name="ForWarn2_Compare_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="Sentinel" />
+			<viewGroup name="Landsat8" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="MODIS_Forest_Change_Products" label="Archived Near-Real-Time Change Maps (MODIS NDVI)">
@@ -67,6 +70,7 @@
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
 			<viewGroup name="Sentinel" />
+			<viewGroup name="Landsat8" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="MODIS_Phenology_Derived_Products" label="MODIS Phenology Derived Products">
@@ -2849,7 +2853,7 @@
 			<wmsLayer
 				 lid="SENTINEL2_FALSE_COLOR_CURRENT"
 				 visible="false"
-				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=40&amp;evalscript=cmV0dXJuIFtCMTEqMi41LEIwOCoyLjUsQjA0KjIuNV07&amp;evalsource=S2&amp;PREVIEW=2&amp;gain=4.0&amp;gamma=0.8&amp;ATMFILTER=ATMCORtime=%(SENTINEL2_CURRENT_DATE_RANGE)s"
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=40&amp;evalscript=cmV0dXJuIFtCMTEqMi41LEIwOCoyLjUsQjA0KjIuNV07&amp;evalsource=S2&amp;PREVIEW=2&amp;gain=4.0&amp;gamma=0.8&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_CURRENT_DATE_RANGE)s"
 				 srs="EPSG:3857"
 				 layers="2_FALSE_COLOR"
 				 identify="true"
@@ -2882,13 +2886,10 @@
 
 
 	</wmsGroup>
+
 	<wmsGroup gid="G14" name="MODISCloud" label="ForWarn II Cloud Assessment Maps">
 
-			%(GLAM_WMTS_2019_LAYERS)s
-
-			%(GLAM_WMTS_2018_LAYERS)s
-
-			%(GLAM_WMTS_2017_LAYERS)s
+			%(GLAM_WMTS_2020_LAYERS)s
 
 	</wmsGroup>
 	<wmsGroup gid="G15" name="EWS_Derived_Products" label="MODIS Phenology Derived Products" >
@@ -10591,6 +10592,68 @@
 			mask="true"/>
 			</wmsSubgroup>
 	</wmsGroup>
+  <wmsGroup gid="G21" name="Landsat8" label="Medium-Resolution Landsat 8 Imagery">
+    <wmsSubgroup label="Current">
+
+      				<wmsLayer
+					selected="false"
+					lid="L8_TRUE_CURRENT"
+					visible="false"
+					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.1.1&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;crs=EPSG%%3A3857&amp;iUNITS=m&amp;time=%(LANDSAT8_CURRENT_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=2&amp;pane=activeLayer&amp;maxcc=40&amp;evalscriptoverrides=Z2Fpbk92ZXJyaWRlPTEuNztnYW1tYU92ZXJyaWRlPTEuMzs%%3D"
+					srs="EPSG:3857"
+					layers="2_TRUE_COLOR_PANSHARPENED"
+					name="USGS Landsat 8 True Color Pan-Sharpened Current 24-day"
+					styles="default"
+					identify="false"
+					legend=""
+ 			    mask="false"/>
+
+      				<wmsLayer
+					selected="false"
+					lid="L8_FALSE_COLOR_CURRENT"
+					visible="false"
+					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.1.1&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;iUNITS=m&amp;time=%(LANDSAT8_CURRENT_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=2&amp;pane=activeLayer&amp;maxcc=30&amp;evalscriptoverrides=Z2Fpbk92ZXJyaWRlPTEuNztnYW1tYU92ZXJyaWRlPTEuMzs%%3D"
+					srs="EPSG:3857"
+					layers="3_FALSE_COLOR"
+					name="USGS Landsat 8 False Color Current 24-day"
+					styles="default"
+					identify="false"
+					legend=""
+	     	  mask="false"/>
+
+    </wmsSubgroup>
+
+    <wmsSubgroup label="Prior Year">
+
+      				<wmsLayer
+					selected="false"
+					lid="L8_TRUE_PRIOR_YEAR"
+					visible="false"
+					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.1.1&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;crs=EPSG%%3A3857&amp;iUNITS=m&amp;time=%(LANDSAT8_PRIOR_YEAR_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=2&amp;pane=activeLayer&amp;maxcc=40&amp;evalscriptoverrides=Z2Fpbk92ZXJyaWRlPTEuNztnYW1tYU92ZXJyaWRlPTEuMzs%%3D"
+					srs="EPSG:3857"
+					layers="2_TRUE_COLOR_PANSHARPENED"
+					name="USGS Landsat 8 True Color Pan-Sharpened Prior 24-day"
+					styles="default"
+					identify="false"
+					legend=""
+ 			    mask="false"/>
+
+      				<wmsLayer
+					selected="false"
+					lid="L8_FALSE_COLOR_PRIOR_YEAR"
+					visible="false"
+					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.1.1&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;iUNITS=m&amp;time=%(LANDSAT8_CURRENT_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=2&amp;pane=activeLayer&amp;maxcc=30&amp;evalscriptoverrides=Z2Fpbk92ZXJyaWRlPTEuNztnYW1tYU92ZXJyaWRlPTEuMzs%%3D"
+					srs="EPSG:3857"
+					layers="3_FALSE_COLOR"
+					name="USGS Landsat 8 False Color Prior 24-day"
+					styles="default"
+					identify="false"
+					legend=""
+ 			    mask="false"/>
+
+    </wmsSubgroup>
+
+  </wmsGroup>
 </wmsLayers>
 	<tools>
 		<tool name="Print" label="Print Map"

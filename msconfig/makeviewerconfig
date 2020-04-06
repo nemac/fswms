@@ -1231,11 +1231,11 @@ WMS_LAYER_TEMPLATE = Template(string="""
 />  
 """)
 
-WMTS_LAYER_TEMPLATE = Template(string="""
+GLAM_WMTS_LAYER_TEMPLATE = Template(string="""
   <wmtsLayer
     lid="GLAM_%(SATELLITE_ID)s_%(YEAR)s_%(JULIAN_DAY)s"
     visible="false"
-    url="https://glam1n1.gsfc.nasa.gov/wmt/MODIS/std/%(SATELLITE_URL_PART)s/%(YEAR)s/%(JULIAN_DAY)s/wmts"
+    url="https://glam1n1.gsfc.nasa.gov/wmt/MODIS/%(TYPE)s/%(SATELLITE_URL_PART)s/%(YEAR)s/%(JULIAN_DAY)s/wmts"
     srs="EPSG:3857"
     layers="0"
     identify="false"
@@ -1350,22 +1350,25 @@ for i in range(0, len(fw2_current_datestrings)):
 def renderGlamLayerBlocksFor(yr):
   sats = ['Aqua', 'Terra']
   blocks = '<wmsSubgroup label="'+yr+'">\n</wmsSubgroup>'
-  dates = makeDateRangesForGLAMLayers(yr)
+  dates = [ d for d in getCurrentDates(A_PATH_TO_FW2_PRODUCTS) ]
   for d in dates:
-    jd = d[0].strftime('%j')
-    # hackery to sync up date ranges with forwarn product date conventions
-    # make it a 16-day window for some reason
-    d1 = (d[0] - datetime.timedelta(days=8))
-    d2 = (d[1] - datetime.timedelta(days=1))
-    day_of_month1 = d1.strftime('%d').lstrip('0')
-    day_of_month2 = d2.strftime('%d').lstrip('0')
-    month_name1 = d1.strftime('%b').lstrip('0')
-    month_name2 = d2.strftime('%b').lstrip('0')
-    blocks += '<wmsSubgroup label="'+ month_name1 + day_of_month1 + '-' + month_name2 + day_of_month2 + '">\n'
+    # Subtract 8 days to get the start of the period. This value is passed to
+    # the gimms URL template so we get the correct year.
+    # "Current dates" are based on the END of the period
+    jd = (d - datetime.timedelta(days=7)).strftime('%j')
+    date_end = d
+    date_start = d - datetime.timedelta(days=23)
+    day_of_month_end = date_end.strftime('%d').lstrip('0')
+    day_of_month_start = date_start.strftime('%d').lstrip('0')
+    month_name_end = date_end.strftime('%b').lstrip('0')
+    month_name_start = date_start.strftime('%b').lstrip('0')
+    blocks += '<wmsSubgroup label="'+ month_name_start + day_of_month_start + '-' + month_name_end + day_of_month_end + '">\n'
+    # Use Near-realtime for the latest date
+    prod_type = 'nrt' if dates[0] == d else 'std'
     for sat_id in sats:
       url_part = GLAM_CONFIG[sat_id]
       id_num = '721' if sat_id == 'Aqua' else '621'
-      blocks += renderGLAMLayerBlock(sat_id, id_num, yr, url_part, jd)
+      blocks += renderGLAMLayerBlock(sat_id, id_num, yr, url_part, jd, prod_type)
     blocks += '</wmsSubgroup>'
   return blocks
 
@@ -1414,25 +1417,14 @@ def makeGtacArchiveLayerListFor(product_type):
   return subgroups
 
 
-def makeDateRangesForGLAMLayers(yr):
-  dates = makeDatesForYear(yr, '01-01', 46)
-  more_dates = []
-  today = datetime.datetime.today()
-  for d in dates:
-    md_format = d.strftime('%m-%d')
-    d_plus_8_days = d + datetime.timedelta(days=8)
-    if d_plus_8_days < today:
-      more_dates.append((d, d_plus_8_days))
-  return more_dates
-
-
-def renderGLAMLayerBlock(satellite_id, sat_id_num, yr, satellite_url_part, jd, template=WMTS_LAYER_TEMPLATE):
+def renderGLAMLayerBlock(satellite_id, sat_id_num, yr, satellite_url_part, jd, prod_type, template=GLAM_WMTS_LAYER_TEMPLATE):
   return template.render({
     'SATELLITE_ID' : satellite_id,
     'YEAR' : yr,
     'SATELLITE_URL_PART' : satellite_url_part,
     'JULIAN_DAY' : jd,
-    'SATELLITE_ID_NUM' : sat_id_num
+    'SATELLITE_ID_NUM' : sat_id_num,
+    'TYPE': prod_type
   })
 
 
@@ -1598,24 +1590,29 @@ def makeFW2CurrentLayerListFor(product_type, list_type):
   return blockList
 
 
-def makeCurrentSentinelTwoDateRanges(prior_year=False):
+def makeDateRangeQueryParam(param_template, prior_year=False, date_template='%Y-%m-%d'):
   d = getCurrentDates(A_PATH_TO_FW2_PRODUCTS)[0]
-  d1 = d - datetime.timedelta(days=8)
-  d2 = d1 - datetime.timedelta(days=24)
+  date_end = d
+  date_start = date_end - datetime.timedelta(days=23)
   if prior_year:
-    d1 = d1 - datetime.timedelta(days=365)
-    d2 = d2 - datetime.timedelta(days=365)
-  d1 = datetime.datetime.strftime(d1, '%Y-%m-%d')
-  d2 = datetime.datetime.strftime(d2, '%Y-%m-%d')
-  date_range = '{0}%2F{1}'.format(d2, d1)
+    date_end = date_end - datetime.timedelta(days=365)
+    date_start = date_start - datetime.timedelta(days=365)
+  date_end = datetime.datetime.strftime(date_end, date_template)
+  date_start = datetime.datetime.strftime(date_start, date_template)
+  date_range = param_template.format(date_start, date_end)
   return date_range
 
 
 GTAC_ARCHIVE_3YR = makeGtacArchiveLayerListFor('3yr')
 GTAC_ARCHIVE_5YR = makeGtacArchiveLayerListFor('5yr')
 
-SENTINEL2_CURRENT_DATE_RANGE = makeCurrentSentinelTwoDateRanges()
-SENTINEL2_PRIOR_YEAR_DATE_RANGE = makeCurrentSentinelTwoDateRanges(True)
+sentinel_date_range_template= '{0}%2F{1}'
+SENTINEL2_CURRENT_DATE_RANGE = makeDateRangeQueryParam(sentinel_date_range_template)
+SENTINEL2_PRIOR_YEAR_DATE_RANGE = makeDateRangeQueryParam(sentinel_date_range_template, prior_year=True)
+
+landsat8_date_range_template = '{}%%3A00%%3A00.000Z%%2F{}T23%%3A59%%3A59.999Z'
+LANDSAT8_CURRENT_DATE_RANGE = makeDateRangeQueryParam(landsat8_date_range_template)
+LANDSAT8_PRIOR_YEAR_DATE_RANGE = makeDateRangeQueryParam(landsat8_date_range_template, prior_year=True)
 
 FW2_LEGACY_2019_PRIOR_YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_1YEAR', '2019')
 FW2_LEGACY_2018_PRIOR_YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_1YEAR', '2018')
@@ -1653,9 +1650,6 @@ FW2_LEGACY_2017_MMAX = makeFW2LegacyArchiveLayerListFor('X_LC_MMAX_ALL_YR', '201
 FW2_LEGACY_2016_MMAX = makeFW2LegacyArchiveLayerListFor('X_LC_MMAX_ALL_YR', '2016')
 
 GLAM_WMTS_2020_LAYERS = renderGlamLayerBlocksFor('2020')
-GLAM_WMTS_2019_LAYERS = renderGlamLayerBlocksFor('2019')
-GLAM_WMTS_2018_LAYERS = renderGlamLayerBlocksFor('2018')
-GLAM_WMTS_2017_LAYERS = renderGlamLayerBlocksFor('2017')
 
 FW2_ARCHIVE_2020__PRIOR_YEAR = makeFW2ArchiveLayerListFor('X_LC_1YEAR', '2020')
 FW2_ARCHIVE_2019__PRIOR_YEAR = makeFW2ArchiveLayerListFor('X_LC_1YEAR', '2019')
@@ -1841,9 +1835,6 @@ configXML = template.render( {
             'NRT_2008_MMAXYR_LAYERS'       : nrt2008MMAXAllYr,
             'NRT_2007_MMAXYR_LAYERS'       : nrt2007MMAXAllYr,
             'NRT_2006_MMAXYR_LAYERS'       : nrt2006MMAXAllYr,
-            'GLAM_WMTS_2017_LAYERS' : GLAM_WMTS_2017_LAYERS,
-            'GLAM_WMTS_2018_LAYERS' : GLAM_WMTS_2018_LAYERS,
-            'GLAM_WMTS_2019_LAYERS' : GLAM_WMTS_2019_LAYERS,
             'GLAM_WMTS_2020_LAYERS' : GLAM_WMTS_2020_LAYERS,
             'DRT_LAYERS'      : drtLayers,
             'FW2_CURRENT_LAYERS__PRIOR_YEAR' : FW2_CURRENT_LAYERS__PRIOR_YEAR,
@@ -1942,6 +1933,8 @@ configXML = template.render( {
             'NADM_DROUGHT_LAYERS' : NADM_DROUGHT_LAYERS,
             'SENTINEL2_CURRENT_DATE_RANGE' : SENTINEL2_CURRENT_DATE_RANGE,
             'SENTINEL2_PRIOR_YEAR_DATE_RANGE' : SENTINEL2_PRIOR_YEAR_DATE_RANGE,
+            'LANDSAT8_CURRENT_DATE_RANGE': LANDSAT8_CURRENT_DATE_RANGE,
+            'LANDSAT8_PRIOR_YEAR_DATE_RANGE': LANDSAT8_PRIOR_YEAR_DATE_RANGE,
             'GTAC_ARCHIVE_3YR' : GTAC_ARCHIVE_3YR,
             'GTAC_ARCHIVE_5YR' : GTAC_ARCHIVE_5YR
           })
