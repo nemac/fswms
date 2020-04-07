@@ -1606,13 +1606,12 @@ def makeDateRangeQueryParam(param_template, prior_year=False, date_template='%Y-
 GTAC_ARCHIVE_3YR = makeGtacArchiveLayerListFor('3yr')
 GTAC_ARCHIVE_5YR = makeGtacArchiveLayerListFor('5yr')
 
-sentinel_date_range_template= '{0}%2F{1}'
-SENTINEL2_CURRENT_DATE_RANGE = makeDateRangeQueryParam(sentinel_date_range_template)
-SENTINEL2_PRIOR_YEAR_DATE_RANGE = makeDateRangeQueryParam(sentinel_date_range_template, prior_year=True)
+sentinel_landsat_date_range_template = '{0}/{1}'
+SENTINEL2_CURRENT_DATE_RANGE = makeDateRangeQueryParam(sentinel_landsat_date_range_template)
+SENTINEL2_PRIOR_YEAR_DATE_RANGE = makeDateRangeQueryParam(sentinel_landsat_date_range_template, prior_year=True)
 
-landsat8_date_range_template = '{}%%3A00%%3A00.000Z%%2F{}T23%%3A59%%3A59.999Z'
-LANDSAT8_CURRENT_DATE_RANGE = makeDateRangeQueryParam(landsat8_date_range_template)
-LANDSAT8_PRIOR_YEAR_DATE_RANGE = makeDateRangeQueryParam(landsat8_date_range_template, prior_year=True)
+LANDSAT8_CURRENT_DATE_RANGE = makeDateRangeQueryParam(sentinel_landsat_date_range_template)
+LANDSAT8_PRIOR_YEAR_DATE_RANGE = makeDateRangeQueryParam(sentinel_landsat_date_range_template, prior_year=True)
 
 FW2_LEGACY_2019_PRIOR_YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_1YEAR', '2019')
 FW2_LEGACY_2018_PRIOR_YEAR = makeFW2LegacyArchiveLayerListFor('X_LC_1YEAR', '2018')
