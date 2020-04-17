@@ -9847,7 +9847,7 @@
 					name="2019"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2019minus2018_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2019minus2018_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 				<wmsLayer
@@ -9860,7 +9860,7 @@
 					name="2018"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2018minus2017_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2018minus2017_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 				<wmsLayer
@@ -9873,7 +9873,7 @@
 					name="2017"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2017minus2016_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2017minus2016_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 		</wmsSubgroup>
