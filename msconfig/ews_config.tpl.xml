@@ -1838,6 +1838,16 @@
 	 identify="true"
 	 name="TRMM 3B43 V7 MONTHY Precip"
 	 legend="%(SERVER_URL)s/cmapicons/trmm-accum.png"/>
+<!--    <wmsLayer
+      lid="NOAATORNADOLINES"
+      layers="0"
+      srs="EPSG:3857"
+      identify="false"
+      name="NOAA Tornado Lines"
+      url="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?"
+      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
+    />
+-->
 		<wmsLayer
 	 lid="BDA"
 	 visible="false"
@@ -2856,7 +2866,7 @@
 			<wmsLayer
 				 lid="SENTINEL2_TRUE_COLOR_CURRENT"
 				 visible="false"
-				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;PREVIEW=2&amp;maxcc=50&amp;gain=2.0&amp;gamma=1.0&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_CURRENT_DATE_RANGE)s"
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;PREVIEW=0&amp;maxcc=50&amp;gain=2.0&amp;gamma=1.0&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_CURRENT_DATE_RANGE)s"
 				 srs="EPSG:3857"
 				 layers="1_TRUE_COLOR"
 				 identify="true"
@@ -2866,7 +2876,7 @@
 			<wmsLayer
 				 lid="SENTINEL2_FALSE_COLOR_CURRENT"
 				 visible="false"
-				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=40&amp;evalscript=cmV0dXJuIFtCMTEqMi41LEIwOCoyLjUsQjA0KjIuNV07&amp;evalsource=S2&amp;PREVIEW=2&amp;gain=4.0&amp;gamma=0.8&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_CURRENT_DATE_RANGE)s"
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=40&amp;evalscript=cmV0dXJuIFtCMTEqMi41LEIwOCoyLjUsQjA0KjIuNV07&amp;evalsource=S2&amp;PREVIEW=0&amp;gain=4.0&amp;gamma=0.8&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_CURRENT_DATE_RANGE)s"
 				 srs="EPSG:3857"
 				 layers="2_FALSE_COLOR"
 				 identify="true"
@@ -2878,7 +2888,7 @@
 			<wmsLayer
 				 lid="SENTINEL2_TRUE_COLOR_PRIOR_YEAR"
 				 visible="false"
-				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;PREVIEW=2&amp;maxcc=50&amp;gain=2.0&amp;gamma=1.0&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_PRIOR_YEAR_DATE_RANGE)s"
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;PREVIEW=0&amp;maxcc=50&amp;gain=2.0&amp;gamma=1.0&amp;ATMFILTER=ATMCOR&amp;time=%(SENTINEL2_PRIOR_YEAR_DATE_RANGE)s"
 				 srs="EPSG:3857"
 				 layers="1_TRUE_COLOR"
 				 identify="true"
@@ -2888,7 +2898,7 @@
 			<wmsLayer
 				 lid="SENTINEL2_FALSE_COLOR_PRIOR_YEAR"
 				 visible="false"
-				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=40&amp;evalscript=cmV0dXJuIFtCMTEqMi41LEIwOCoyLjUsQjA0KjIuNV07&amp;evalsource=S2&amp;PREVIEW=2&amp;gain=4.0&amp;gamma=0.8&amp;time=%(SENTINEL2_PRIOR_YEAR_DATE_RANGE)s"
+				 url="https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?service=WMS&amp;request=GetMap&amp;styles=&amp;format=image%%2Fpng&amp;transparent=false&amp;showlogo=false&amp;name=Sentinel-2%%20L1C&amp;pane=activeLayer&amp;maxcc=40&amp;evalscript=cmV0dXJuIFtCMTEqMi41LEIwOCoyLjUsQjA0KjIuNV07&amp;evalsource=S2&amp;PREVIEW=0&amp;gain=4.0&amp;gamma=0.8&amp;time=%(SENTINEL2_PRIOR_YEAR_DATE_RANGE)s"
 				 srs="EPSG:3857"
 				 layers="2_FALSE_COLOR"
 				 identify="true"
