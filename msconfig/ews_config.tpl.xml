@@ -1654,6 +1654,19 @@
 	</wmsGroup>
 	<wmsGroup gid="G10" name="Drought_Monitor" label="Drought Assessment Maps">
 
+		<wmsSubgroup label="Severe Fire Weather Potential (WFAS Fire Danger)">
+      <wmsLayer label="Fire Weather Potential"
+        lid="WFASPOTENTIAL"
+        visible="false"
+        url="https://www.wfas.net/cgi-bin/mapserv?map=/var/www/html/nfdr/mapfiles/wfas_wms_new.map&amp;TRANSPARENT=true"
+        srs="EPSG:3857"
+        layers="fbxday0"
+        identify="false"
+        name="Fire Weather Potential"
+        legend="https://www.wfas.net/cgi-bin/mapserv?map=/var/www/html/nfdr/mapfiles/wfas_wms_new.map&amp;FORMAT=image/png&amp;LAYER=fbxday0&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetLegendGraphic"
+      />
+    </wmsSubgroup>
+
 		<wmsSubgroup label="US Drought Monitor (NDMC)">
 				<wmsLayer
 					 lid="AHZ"
