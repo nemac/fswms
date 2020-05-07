@@ -10622,26 +10622,26 @@
 					selected="false"
 					lid="L8_TRUE_CURRENT"
 					visible="false"
-					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.3.0&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;crs=EPSG%%3A3857&amp;iUNITS=m&amp;time=%(LANDSAT8_CURRENT_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=2&amp;pane=activeLayer&amp;maxcc=40&amp;evalscriptoverrides=Z2Fpbk92ZXJyaWRlPTEuNztnYW1tYU92ZXJyaWRlPTEuMzs%%3D"
+					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.3.0&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;crs=EPSG%%3A3857&amp;iUNITS=m&amp;time=%(LANDSAT8_CURRENT_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=0&amp;pane=activeLayer&amp;maxcc=40&amp;evalscriptoverrides=Z2Fpbk92ZXJyaWRlPTEuNztnYW1tYU92ZXJyaWRlPTEuMzs%%3D"
 					srs="EPSG:3857"
 					layers="2_TRUE_COLOR_PANSHARPENED"
 					name="USGS Landsat 8 True Color Pan-Sharpened Current 24-day"
 					styles="default"
 					identify="false"
-					legend=""
+					legend="%(SERVER_URL)s/cmapicons/sentinellegend.png"
  			    mask="false"/>
 
       				<wmsLayer
 					selected="false"
 					lid="L8_FALSE_COLOR_CURRENT"
 					visible="false"
-					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.3.0&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;iUNITS=m&amp;time=%(LANDSAT8_CURRENT_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=2&amp;pane=activeLayer&amp;maxcc=30&amp;evalscriptoverrides=Z2Fpbk92ZXJyaWRlPTEuNztnYW1tYU92ZXJyaWRlPTEuMzs%%3D"
+					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.3.0&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;iUNITS=m&amp;time=%(LANDSAT8_CURRENT_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=0&amp;pane=activeLayer&amp;maxcc=40&amp;evalscriptoverrides="
 					srs="EPSG:3857"
 					layers="3_FALSE_COLOR"
 					name="USGS Landsat 8 False Color Current 24-day"
 					styles="default"
 					identify="false"
-					legend=""
+					legend="%(SERVER_URL)s/cmapicons/sentinellegend.png"
 	     	  mask="false"/>
 
     </wmsSubgroup>
@@ -10652,26 +10652,26 @@
 					selected="false"
 					lid="L8_TRUE_PRIOR_YEAR"
 					visible="false"
-					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.3.0&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;crs=EPSG%%3A3857&amp;iUNITS=m&amp;time=%(LANDSAT8_PRIOR_YEAR_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=2&amp;pane=activeLayer&amp;maxcc=40&amp;evalscriptoverrides=Z2Fpbk92ZXJyaWRlPTEuNztnYW1tYU92ZXJyaWRlPTEuMzs%%3D"
+					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.3.0&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;crs=EPSG%%3A3857&amp;iUNITS=m&amp;time=%(LANDSAT8_PRIOR_YEAR_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=0&amp;pane=activeLayer&amp;maxcc=40&amp;evalscriptoverrides=Z2Fpbk92ZXJyaWRlPTEuNztnYW1tYU92ZXJyaWRlPTEuMzs%%3D"
 					srs="EPSG:3857"
 					layers="2_TRUE_COLOR_PANSHARPENED"
 					name="USGS Landsat 8 True Color Pan-Sharpened Prior 24-day"
 					styles="default"
 					identify="false"
-					legend=""
+					legend="%(SERVER_URL)s/cmapicons/sentinellegend.png"
  			    mask="false"/>
 
       				<wmsLayer
 					selected="false"
 					lid="L8_FALSE_COLOR_PRIOR_YEAR"
 					visible="false"
-					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.3.0&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;iUNITS=m&amp;time=%(LANDSAT8_PRIOR_YEAR_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=2&amp;pane=activeLayer&amp;maxcc=30&amp;evalscriptoverrides=Z2Fpbk92ZXJyaWRlPTEuNztnYW1tYU92ZXJyaWRlPTEuMzs%%3D"
+					url="https://services-uswest2.sentinel-hub.com/ogc/wms/5a32b8f5-a7fd-4dfd-9b76-f9b1b9d650b2?version=1.3.0&amp;service=WMS&amp;request=GetMap&amp;format=image%%2Fpng&amp;iUNITS=m&amp;time=%(LANDSAT8_PRIOR_YEAR_DATE_RANGE)s&amp;showlogo=false&amp;transparent=false&amp;preview=0&amp;pane=activeLayer&amp;maxcc=40&amp;evalscriptoverrides="
 					srs="EPSG:3857"
 					layers="3_FALSE_COLOR"
 					name="USGS Landsat 8 False Color Prior 24-day"
 					styles="default"
 					identify="false"
-					legend=""
+					legend="%(SERVER_URL)s/cmapicons/sentinellegend.png"
  			    mask="false"/>
 
     </wmsSubgroup>
