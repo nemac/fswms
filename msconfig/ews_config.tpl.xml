@@ -10628,7 +10628,7 @@
 					name="USGS Landsat 8 True Color Pan-Sharpened Current 24-day"
 					styles="default"
 					identify="false"
-					legend="%(SERVER_URL)s/cmapicons/sentinellegend.png"
+					legend="%(SERVER_URL)s/cmapicons/landsat8legend.png"
  			    mask="false"/>
 
       				<wmsLayer
@@ -10641,7 +10641,7 @@
 					name="USGS Landsat 8 False Color Current 24-day"
 					styles="default"
 					identify="false"
-					legend="%(SERVER_URL)s/cmapicons/sentinellegend.png"
+					legend="%(SERVER_URL)s/cmapicons/landsat8legend.png"
 	     	  mask="false"/>
 
     </wmsSubgroup>
@@ -10658,7 +10658,7 @@
 					name="USGS Landsat 8 True Color Pan-Sharpened Prior 24-day"
 					styles="default"
 					identify="false"
-					legend="%(SERVER_URL)s/cmapicons/sentinellegend.png"
+					legend="%(SERVER_URL)s/cmapicons/landsat8legend.png"
  			    mask="false"/>
 
       				<wmsLayer
@@ -10671,7 +10671,7 @@
 					name="USGS Landsat 8 False Color Prior 24-day"
 					styles="default"
 					identify="false"
-					legend="%(SERVER_URL)s/cmapicons/sentinellegend.png"
+					legend="%(SERVER_URL)s/cmapicons/landsat8legend.png"
  			    mask="false"/>
 
     </wmsSubgroup>
