@@ -27,7 +27,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />a
+			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
