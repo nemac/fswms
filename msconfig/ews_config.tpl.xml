@@ -27,7 +27,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
+			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />a
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
@@ -1838,16 +1838,15 @@
 	 identify="true"
 	 name="TRMM 3B43 V7 MONTHY Precip"
 	 legend="%(SERVER_URL)s/cmapicons/trmm-accum.png"/>
-<!--    <wmsLayer
-      lid="NOAATORNADOLINES"
-      layers="0"
+	  <wmsLayer
+    	lid="NOAATORNADOTRACKS_YTD"
+      layers="tornado_tracks_ytd"
       srs="EPSG:3857"
       identify="false"
-      name="NOAA Tornado Lines"
-      url="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?"
-      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
-    />
--->
+      name="NOAA Tornado Tracks YTD"
+      url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
+		/>
 		<wmsLayer
 	 lid="BDA"
 	 visible="false"
@@ -1880,6 +1879,33 @@
 	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=windswaths&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		</wmsSubgroup>
 	<wmsSubgroup label="Precipitation Derivatives (NOAA NWS)">
+	<wmsLayer
+		lid="NOAATORNADOTRACKS_CURRENT"
+		layers="tornado_tracks_current"
+		srs="EPSG:3857"
+		identify="false"
+		name="NOAA Tornado Tracks Current"
+		url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
+	/>
+	<wmsLayer
+		lid="NOAATORNADOTRACKS_PREV1"
+		layers="tornado_tracks_previous1"
+		srs="EPSG:3857"
+		identify="false"
+		name="NOAA Tornado Tracks Previous 1"
+		url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
+	/>
+	<wmsLayer
+		lid="NOAATORNADOTRACKS_PREV2"
+		layers="tornado_tracks_previous2"
+		srs="EPSG:3857"
+		identify="false"
+		name="NOAA Tornado Tracks Previous 2"
+		url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
+	/>
 			<wmsLayer
 	 lid="VDAAO"
 	 visible="false"

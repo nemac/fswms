@@ -23,13 +23,27 @@ def getCurrentDates(pwd, date_format=None):
     return map(lambda d: datetime.datetime.strftime(d, date_format), current_dates)
   return current_dates
 
-def makeDateRangeQueryParam(path, param_template, prior_year=False, date_template='%Y-%m-%d'):
-  d = getCurrentDates(path)[0]
+''' 
+timeframe information for makeDateRangeQueryParam:
+0 = current 24 day period
+1 = previous 24 day period
+2 = previous previous 24 day period before 1
+'''
+def makeDateRangeQueryParam(path, param_template, prior_year=False, date_template='%Y-%m-%d', timeframe=0, yearToDate=False):
+  d = getCurrentDates(path)[timeframe]
   date_end = d
   date_start = date_end - datetime.timedelta(days=23)
   if prior_year:
     date_end = date_end - datetime.timedelta(days=365)
     date_start = date_start - datetime.timedelta(days=365)
+  if yearToDate:
+    current_date = datetime.datetime.now()
+    date_end = datetime.datetime(current_date.year, current_date.month, current_date.day)
+    date_start = datetime.datetime(current_date.year, 1, 1) # January 1 of current year
+  date_range = formatDateRange(date_start, date_end, param_template, date_template)
+  return date_range
+
+def formatDateRange(date_start, date_end, param_template, date_template='%Y-%m-%d'):
   date_end = datetime.datetime.strftime(date_end, date_template)
   date_start = datetime.datetime.strftime(date_start, date_template)
   date_range = param_template.format(date_start, date_end)
