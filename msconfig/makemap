@@ -22,6 +22,7 @@
 #print "debug: at 1"
 
 from osgeo import gdal, osr
+from utilityScript import makeDateRangeQueryParam # our own custom utility script
 import sys, os, subprocess, datetime, re, shutil, traceback, getopt;
 
 opts, args = getopt.getopt(sys.argv[1:],"al")
@@ -1403,11 +1404,23 @@ f_new.close()
 ###
 ### Create the wlayers.map file:
 ###
+noaa_damage_tracks_date_range_template = '{0}/{1}/PT5M'
+A_PATH_TO_FW2_PRODUCTS = os.path.join(FW2_DATA_DIR, FW2_SOURCES_AS_LIST[0], 'X_LC_1YEAR')
+yearToDate = makeDateRangeQueryParam(A_PATH_TO_FW2_PRODUCTS, noaa_damage_tracks_date_range_template, yearToDate=True)
+historicalToDate = makeDateRangeQueryParam(A_PATH_TO_FW2_PRODUCTS, noaa_damage_tracks_date_range_template, yearToDate=True, startYear=2010)
+currentPeriod = makeDateRangeQueryParam(A_PATH_TO_FW2_PRODUCTS, noaa_damage_tracks_date_range_template)
+previousOne = makeDateRangeQueryParam(A_PATH_TO_FW2_PRODUCTS, noaa_damage_tracks_date_range_template, timeframe=1)
+previousTwo = makeDateRangeQueryParam(A_PATH_TO_FW2_PRODUCTS, noaa_damage_tracks_date_range_template, timeframe=2)
 template = Template("wlayers.tpl.map")
 f_new = openMapfileForWriting("wlayers.map")
 f_new.write( template.render( {
-            'DATA_DIR'     : DATA_DIR,
-            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "wlayers")
+            'YEAR_TO_DATE'          : yearToDate,
+            'CURRENT_PERIOD'        : currentPeriod,
+            'HISTORICAL_TO_DATE'    : historicalToDate,
+            'PREVIOUS_ONE'          : previousOne,
+            'PREVIOUS_TWO'          : previousTwo,
+            'DATA_DIR'              : DATA_DIR,
+            'SERVICE_URL'           : "%s/%s" % (SERVER_URL, "wlayers")
             } ) )
 f_new.close()
 
