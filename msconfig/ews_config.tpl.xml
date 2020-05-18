@@ -1818,6 +1818,174 @@
 	</wmsGroup>
 	<wmsGroup gid="G11" name="US_Climate" label="Other Weather and Climate Maps" >
 		<wmsSubgroup label="Weather">
+      <wmsLayer
+        lid="NOAADAMAGELINES_YTD"
+        layers="damage_tracks_lines_ytd"
+        srs="EPSG:3857"
+        identify="true"
+        name="Tornadoes and Hail, This Year-to-Date (Lines)"
+        url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+        legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
+      />
+      <wmsLayer
+        lid="NOAADAMAGEPOINTS_YTD"
+        layers="damage_tracks_points_ytd"
+        srs="EPSG:3857"
+        identify="true"
+        name="Tornadoes and Hail, This Year-to-Date (Points)"
+        url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+        legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=2"
+      />
+      <wmsLayer
+        lid="NOAADAMAGEPOLY_YTD"
+        layers="damage_tracks_polygons_ytd"
+        srs="EPSG:3857"
+        identify="true"
+        name="Tornadoes and Hail, This Year-to-Date (Areas)"
+        url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+        break="true"
+        legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
+      />
+
+   <wmsLayer
+     lid="AIE"
+     visible="false"
+     url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+     srs="EPSG:3857"
+     layers="TRMM_3B43_V7"
+     styles="default"
+     identify="true"
+     name="TRMM 3B43 V7 MONTHY Precip"
+     legend="%(SERVER_URL)s/cmapicons/trmm-accum.png"/>
+ 	 <wmsLayer
+	 	lid="NOAADAMAGELINES_HISTORICAL"
+		url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+		srs="EPSG:3857"
+		layers="historical_damage_tracks_lines"
+		styles="default"
+		identify="true"
+		name="Historical Tornadoes and Hail, 2010-to-Date (Lines)"
+		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
+	 />
+	 <wmsLayer
+		lid="NOAADAMAGEPOINTS_HISTORICAL"
+		url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+		srs="EPSG:3857"
+		layers="historical_damage_tracks_points"
+		styles="default"
+		identify="true"
+		name="Historical Tornadoes and Hail, 2010-to-Date (Points)"
+		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=2"		
+	 />
+	 <wmsLayer
+		lid="NOAADAMAGEPOLY_HISTORICAL"
+		url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+		srs="EPSG:3857"
+		layers="historical_damage_tracks_polygons"
+		styles="default"
+		identify="true"
+		name=" Historical Tornadoes and Hail, 2010-to-Date (Areas)"
+		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
+	 />
+
+  </wmsSubgroup>
+
+
+  <wmsSubgroup label="Recent Severe Weather">
+    <wmsLayer
+      lid="NOAADAMAGELINES_CURRENT"
+      layers="damage_tracks_lines_current"
+      srs="EPSG:3857"
+      identify="true"
+      name="Current Tornadoes and Hail (Lines) (NWS) %(CURRENT_DATE_RANGE)s"
+      url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
+    />
+
+    <wmsLayer
+      lid="NOAADAMAGEPOINTS_CURRENT"
+      layers="damage_tracks_points_current"
+      srs="EPSG:3857"
+      identify="true"
+      name="Current Tornadoes and Hail (Points) (NWS) %(CURRENT_DATE_RANGE)s"
+      url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=2"
+    />
+
+    <wmsLayer
+      lid="NOAADAMAGEPOLY_CURRENT"
+      layers="damage_tracks_polygons_current"
+      srs="EPSG:3857"
+      identify="true"
+      name="Current Tornadoes and Hail (Areas) (NWS) %(CURRENT_DATE_RANGE)s"
+      url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+      break="true"
+      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
+    />
+
+
+
+    <wmsLayer
+      lid="NOAADAMAGELINES_PREV1"
+      layers="damage_tracks_lines_previous1"
+      srs="EPSG:3857"
+      identify="true"
+      name="Previous1 Tornadoes and Hail (Lines) (NWS) %(PREVIOUS1_DATE_RANGE)s"
+      url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
+    />
+    <wmsLayer
+      lid="NOAADAMAGEPOINTS_PREV1"
+      layers="damage_tracks_points_previous1"
+      srs="EPSG:3857"
+      identify="true"
+      name="Previous1 Tornadoes and Hail (Points) (NWS) %(PREVIOUS1_DATE_RANGE)s"
+      url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=2"
+    />
+    <wmsLayer
+      lid="NOAADAMAGEPOLY_PREV1"
+      layers="damage_tracks_polygons_previous1"
+      srs="EPSG:3857"
+      identify="true"
+      name="Previous1 Tornadoes and Hail (Areas) (NWS) %(PREVIOUS1_DATE_RANGE)s"
+      url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+      break="true"
+      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
+    />
+
+
+
+    <wmsLayer
+      lid="NOAADAMAGELINES_PREV2"
+      layers="damage_tracks_lines_previous2"
+      srs="EPSG:3857"
+      identify="true"
+      name="Previous2 Tornadoes and Hail (Lines) (NWS) %(PREVIOUS2_DATE_RANGE)s"
+      url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
+    />
+    <wmsLayer
+      lid="NOAADAMAGEPOINTS_PREV2"
+      layers="damage_tracks_points_previous2"
+      srs="EPSG:3857"
+      identify="true"
+      name="Previous2 Tornadoes and Hail (Points) (NWS) %(PREVIOUS2_DATE_RANGE)s"
+      url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=2"
+    />
+    <wmsLayer
+      lid="NOAADAMAGEPOLY_PREV2"
+      layers="damage_tracks_polygons_previous2"
+      srs="EPSG:3857"
+      identify="true"
+      name="Previous2 Tornadoes and Hail (Areas) (NWS) %(PREVIOUS2_DATE_RANGE)s"
+      url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
+      break="true"
+      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
+    />
+
+
 <!--      <wmsLayer
 	 lid="AID"
 	 visible="false"
@@ -1828,84 +1996,13 @@
 	 identify="true"
 	 name="TRMM 3B42 V6 10 DAY"
 	 legend="%(SERVER_URL)s/cmapicons/trmm-3B.png"/>
--->   <wmsLayer
-	 lid="AIE"
-	 visible="false"
-	 url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
-	 srs="EPSG:3857"
-	 layers="TRMM_3B43_V7"
-	 styles="default"
-	 identify="true"
-	 name="TRMM 3B43 V7 MONTHY Precip"
-	 legend="%(SERVER_URL)s/cmapicons/trmm-accum.png"/>
-	  <wmsLayer
-    	lid="NOAATORNADOTRACKS_YTD"
-      layers="tornado_tracks_ytd"
-      srs="EPSG:3857"
-      identify="false"
-      name="NOAA Tornado Tracks YTD"
-      url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
-      legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
-		/>
-		<wmsLayer
-	 lid="BDA"
-	 visible="false"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
-	 srs="EPSG:3857"
-	 layers="hailswaths"
-	 styles="default"
-	 identify="true"
-	 name="Hail Swaths 2010-2016 (NWS)"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=hailswaths&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-		<wmsLayer
-	 lid="BDB"
-	 visible="false"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
-	 srs="EPSG:3857"
-	 layers="tornado-tracks"
-	 styles="default"
-	 identify="true"
-	 name="Tornado Tracks 2010-2016 (NWS)"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=tornado-tracks&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-		<wmsLayer
-	 lid="BDD"
-	 visible="false"
-	 url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
-	 srs="EPSG:3857"
-	 layers="windswaths"
-	 styles="default"
-	 identify="true"
-	 name="Wind Swaths 2010-2016 (NWS)"
-	 legend="%(SERVER_URL)s/vlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=windswaths&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+-->
 		</wmsSubgroup>
 	<wmsSubgroup label="Precipitation Derivatives (NOAA NWS)">
-	<wmsLayer
-		lid="NOAATORNADOTRACKS_CURRENT"
-		layers="tornado_tracks_current"
-		srs="EPSG:3857"
-		identify="false"
-		name="NOAA Tornado Tracks Current"
-		url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
-		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
-	/>
-	<wmsLayer
-		lid="NOAATORNADOTRACKS_PREV1"
-		layers="tornado_tracks_previous1"
-		srs="EPSG:3857"
-		identify="false"
-		name="NOAA Tornado Tracks Previous 1"
-		url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
-		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
-	/>
-	<wmsLayer
-		lid="NOAATORNADOTRACKS_PREV2"
-		layers="tornado_tracks_previous2"
-		srs="EPSG:3857"
-		identify="false"
-		name="NOAA Tornado Tracks Previous 2"
-		url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
-		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
-	/>
+
+
+
+
 			<wmsLayer
 	 lid="VDAAO"
 	 visible="false"

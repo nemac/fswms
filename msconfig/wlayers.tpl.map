@@ -65,7 +65,7 @@ MAP
     END
   
   LAYER
-      NAME "tornado_tracks_ytd"
+      NAME "damage_tracks_polygons_ytd"
       TYPE RASTER
       STATUS ON
       CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
@@ -73,6 +73,94 @@ MAP
       PROJECTION
        "init=epsg:4326"
       END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
+      METADATA
+        "wms_srs"             "EPSG:4326"
+		    "wms_name"			      "0"
+        "wms_server_version"  "1.1.1"
+        "wms_time"            "%(YEAR_TO_DATE)s"
+        "wms_format"          "image/png"
+      END
+    END
+
+  LAYER
+      NAME "damage_tracks_polygons_current"
+      TYPE RASTER
+      STATUS ON
+      CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
+      METADATA
+        "wms_srs"             "EPSG:4326"
+		    "wms_name"			      "0"
+        "wms_server_version"  "1.1.1"
+        "wms_time"            "%(CURRENT_PERIOD)s"
+        "wms_format"          "image/png"
+      END
+    END
+
+  LAYER
+      NAME "damage_tracks_polygons_previous1"
+      TYPE RASTER
+      STATUS ON
+      CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
+      METADATA
+        "wms_srs"             "EPSG:4326"
+		    "wms_name"			      "0"
+        "wms_server_version"  "1.1.1"
+        "wms_time"            "%(PREVIOUS_ONE)s"
+        "wms_format"          "image/png"
+      END
+    END
+
+  LAYER
+      NAME "damage_tracks_polygons_previous2"
+      TYPE RASTER
+      STATUS ON
+      CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
+      METADATA
+        "wms_srs"             "EPSG:4326"
+		    "wms_name"			      "0"
+        "wms_server_version"  "1.1.1"
+        "wms_time"            "%(PREVIOUS_TWO)s"
+        "wms_format"          "image/png"
+      END
+    END
+
+
+  LAYER
+      NAME "damage_tracks_lines_ytd"
+      TYPE RASTER
+      STATUS ON
+      CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
       METADATA
         "wms_srs"             "EPSG:4326"
 		    "wms_name"			      "1"
@@ -83,7 +171,7 @@ MAP
     END
 
   LAYER
-      NAME "tornado_tracks_current"
+      NAME "damage_tracks_lines_current"
       TYPE RASTER
       STATUS ON
       CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
@@ -91,6 +179,9 @@ MAP
       PROJECTION
        "init=epsg:4326"
       END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
       METADATA
         "wms_srs"             "EPSG:4326"
 		    "wms_name"			      "1"
@@ -101,7 +192,7 @@ MAP
     END
 
   LAYER
-      NAME "tornado_tracks_previous1"
+      NAME "damage_tracks_lines_previous1"
       TYPE RASTER
       STATUS ON
       CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
@@ -109,6 +200,9 @@ MAP
       PROJECTION
        "init=epsg:4326"
       END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
       METADATA
         "wms_srs"             "EPSG:4326"
 		    "wms_name"			      "1"
@@ -119,7 +213,7 @@ MAP
     END
 
   LAYER
-      NAME "tornado_tracks_previous2"
+      NAME "damage_tracks_lines_previous2"
       TYPE RASTER
       STATUS ON
       CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
@@ -127,6 +221,9 @@ MAP
       PROJECTION
        "init=epsg:4326"
       END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
       METADATA
         "wms_srs"             "EPSG:4326"
 		    "wms_name"			      "1"
@@ -135,6 +232,161 @@ MAP
         "wms_format"          "image/png"
       END
     END
+
+
+
+
+
+
+
+  LAYER
+      NAME "damage_tracks_points_ytd"
+      TYPE RASTER
+      STATUS ON
+      CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
+      METADATA
+        "wms_srs"             "EPSG:4326"
+		    "wms_name"			      "2"
+        "wms_server_version"  "1.1.1"
+        "wms_time"            "%(YEAR_TO_DATE)s"
+        "wms_format"          "image/png"
+      END
+    END
+
+  LAYER
+      NAME "damage_tracks_points_current"
+      TYPE RASTER
+      STATUS ON
+      CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
+      METADATA
+        "wms_srs"             "EPSG:4326"
+		    "wms_name"			      "2"
+        "wms_server_version"  "1.1.1"
+        "wms_time"            "%(CURRENT_PERIOD)s"
+        "wms_format"          "image/png"
+      END
+    END
+
+  LAYER
+      NAME "damage_tracks_points_previous1"
+      TYPE RASTER
+      STATUS ON
+      CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
+      METADATA
+        "wms_srs"             "EPSG:4326"
+		    "wms_name"			      "2"
+        "wms_server_version"  "1.1.1"
+        "wms_time"            "%(PREVIOUS_ONE)s"
+        "wms_format"          "image/png"
+      END
+    END
+
+  LAYER
+      NAME "damage_tracks_points_previous2"
+      TYPE RASTER
+      STATUS ON
+      CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
+      METADATA
+        "wms_srs"             "EPSG:4326"
+		    "wms_name"			      "2"
+        "wms_server_version"  "1.1.1"
+        "wms_time"            "%(PREVIOUS_TWO)s"
+        "wms_format"          "image/png"
+      END
+    END
+
+  LAYER
+      NAME "historical_damage_tracks_polygons"
+      TYPE RASTER
+      STATUS ON
+      CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
+      METADATA
+        "wms_srs"             "EPSG:4326"
+		    "wms_name"			      "0"
+        "wms_server_version"  "1.1.1"
+        "wms_time"            "%(HISTORICAL_TO_DATE)s"
+        "wms_format"          "image/png"
+      END
+    END
+
+  LAYER
+      NAME "historical_damage_tracks_lines"
+      TYPE RASTER
+      STATUS ON
+      CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
+      METADATA
+        "wms_srs"             "EPSG:4326"
+		    "wms_name"			      "1"
+        "wms_server_version"  "1.1.1"
+        "wms_time"            "%(HISTORICAL_TO_DATE)s"
+        "wms_format"          "image/png"
+      END
+    END
+
+  LAYER
+      NAME "historical_damage_tracks_points"
+      TYPE RASTER
+      STATUS ON
+      CONNECTION "https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WmsServer?"
+      CONNECTIONTYPE WMS
+      PROJECTION
+       "init=epsg:4326"
+      END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
+      METADATA
+        "wms_srs"             "EPSG:4326"
+		    "wms_name"			      "2"
+        "wms_server_version"  "1.1.1"
+        "wms_time"            "%(HISTORICAL_TO_DATE)s"
+        "wms_format"          "image/png"
+      END
+    END
+
+
 	LAYER
       NAME "eMODIS-VegDRI1"
       TYPE RASTER
@@ -144,6 +396,9 @@ MAP
       PROJECTION
        "init=epsg:4326"
       END
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      FOOTER ./templates/query_footer.html
       METADATA
         "wms_srs"             "EPSG:4269"
 		"wms_name"			  "DROUGHT_VDRI_EMODIS_1"

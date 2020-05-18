@@ -1696,6 +1696,14 @@ FW2_CURRENT_LEGACY_LAYERS__MMAX = makeFW2CurrentLayerListFor('X_LC_MMAX_ALL_YR',
 
 NADM_DROUGHT_LAYERS = getNADMLayers()
 
+pwd = A_PATH_TO_FW2_PRODUCTS
+current_dates = getCurrentDates(pwd)
+date_ranges = map(getDateRangeFor, current_dates)
+
+CURRENT_DATE_RANGE = date_ranges[0]
+PREVIOUS1_DATE_RANGE = date_ranges[1]
+PREVIOUS2_DATE_RANGE = date_ranges[2]
+
 drtLayers = getDRTLayers()
 #End NRT 8 day & drought monitor automation-------------------------------------------------
 
@@ -1897,7 +1905,10 @@ configXML = template.render( {
             'LANDSAT8_CURRENT_DATE_RANGE': LANDSAT8_CURRENT_DATE_RANGE,
             'LANDSAT8_PRIOR_YEAR_DATE_RANGE': LANDSAT8_PRIOR_YEAR_DATE_RANGE,
             'GTAC_ARCHIVE_3YR' : GTAC_ARCHIVE_3YR,
-            'GTAC_ARCHIVE_5YR' : GTAC_ARCHIVE_5YR
+            'GTAC_ARCHIVE_5YR' : GTAC_ARCHIVE_5YR,
+            'CURRENT_DATE_RANGE' : CURRENT_DATE_RANGE,
+            'PREVIOUS1_DATE_RANGE' : PREVIOUS1_DATE_RANGE,
+            'PREVIOUS2_DATE_RANGE' : PREVIOUS2_DATE_RANGE
           })
 
 minXML = parseString(configXML).toprettyxml('', '', 'UTF-8')

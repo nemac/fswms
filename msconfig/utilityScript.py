@@ -28,8 +28,11 @@ timeframe information for makeDateRangeQueryParam:
 0 = current 24 day period
 1 = previous 24 day period
 2 = previous previous 24 day period before 1
+
+startYear paramater returns everthing from Jan 1st of selected year to present day.
+e.g. startYear=2015 returns 2015-01-01/2020-05-18 if executed on May 18th, 2020
 '''
-def makeDateRangeQueryParam(path, param_template, prior_year=False, date_template='%Y-%m-%d', timeframe=0, yearToDate=False):
+def makeDateRangeQueryParam(path, param_template, prior_year=False, date_template='%Y-%m-%d', timeframe=0, yearToDate=False, startYear=2020):
   d = getCurrentDates(path)[timeframe]
   date_end = d
   date_start = date_end - datetime.timedelta(days=23)
@@ -39,7 +42,7 @@ def makeDateRangeQueryParam(path, param_template, prior_year=False, date_templat
   if yearToDate:
     current_date = datetime.datetime.now()
     date_end = datetime.datetime(current_date.year, current_date.month, current_date.day)
-    date_start = datetime.datetime(current_date.year, 1, 1) # January 1 of current year
+    date_start = datetime.datetime(startYear, 1, 1) # January 1 of start year
   date_range = formatDateRange(date_start, date_end, param_template, date_template)
   return date_range
 
