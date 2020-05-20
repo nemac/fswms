@@ -1824,6 +1824,7 @@
         srs="EPSG:3857"
         identify="true"
         name="Tornadoes and Hail, This Year-to-Date (Lines)"
+				proxyServerType="ArcGIS"
         url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
         legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
       />
@@ -1833,6 +1834,7 @@
         srs="EPSG:3857"
         identify="true"
         name="Tornadoes and Hail, This Year-to-Date (Points)"
+				proxyServerType="ArcGIS"
         url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
         legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=2"
       />
@@ -1842,6 +1844,7 @@
         srs="EPSG:3857"
         identify="true"
         name="Tornadoes and Hail, This Year-to-Date (Areas)"
+				proxyServerType="ArcGIS"
         url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
         break="true"
         legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
@@ -1865,6 +1868,7 @@
 		styles="default"
 		identify="true"
 		name="Historical Tornadoes and Hail, 2010-to-Date (Lines)"
+		proxyServerType="ArcGIS"
 		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
 	 />
 	 <wmsLayer
@@ -1875,6 +1879,7 @@
 		styles="default"
 		identify="true"
 		name="Historical Tornadoes and Hail, 2010-to-Date (Points)"
+		proxyServerType="ArcGIS"
 		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=2"		
 	 />
 	 <wmsLayer
@@ -1885,6 +1890,7 @@
 		styles="default"
 		identify="true"
 		name=" Historical Tornadoes and Hail, 2010-to-Date (Areas)"
+		proxyServerType="ArcGIS"
 		legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
 	 />
 
@@ -1898,6 +1904,7 @@
       srs="EPSG:3857"
       identify="true"
       name="Current Tornadoes and Hail (Lines) (NWS) %(CURRENT_DATE_RANGE)s"
+			proxyServerType="ArcGIS"
       url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
       legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
     />
@@ -1908,6 +1915,7 @@
       srs="EPSG:3857"
       identify="true"
       name="Current Tornadoes and Hail (Points) (NWS) %(CURRENT_DATE_RANGE)s"
+			proxyServerType="ArcGIS"
       url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
       legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=2"
     />
@@ -1918,6 +1926,7 @@
       srs="EPSG:3857"
       identify="true"
       name="Current Tornadoes and Hail (Areas) (NWS) %(CURRENT_DATE_RANGE)s"
+			proxyServerType="ArcGIS"
       url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
       break="true"
       legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
@@ -1931,6 +1940,7 @@
       srs="EPSG:3857"
       identify="true"
       name="Previous1 Tornadoes and Hail (Lines) (NWS) %(PREVIOUS1_DATE_RANGE)s"
+			proxyServerType="ArcGIS"
       url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
       legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
     />
@@ -1940,6 +1950,7 @@
       srs="EPSG:3857"
       identify="true"
       name="Previous1 Tornadoes and Hail (Points) (NWS) %(PREVIOUS1_DATE_RANGE)s"
+			proxyServerType="ArcGIS"
       url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
       legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=2"
     />
@@ -1949,6 +1960,7 @@
       srs="EPSG:3857"
       identify="true"
       name="Previous1 Tornadoes and Hail (Areas) (NWS) %(PREVIOUS1_DATE_RANGE)s"
+			proxyServerType="ArcGIS"
       url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
       break="true"
       legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
@@ -1962,6 +1974,7 @@
       srs="EPSG:3857"
       identify="true"
       name="Previous2 Tornadoes and Hail (Lines) (NWS) %(PREVIOUS2_DATE_RANGE)s"
+			proxyServerType="ArcGIS"
       url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
       legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=1"
     />
@@ -1971,6 +1984,7 @@
       srs="EPSG:3857"
       identify="true"
       name="Previous2 Tornadoes and Hail (Points) (NWS) %(PREVIOUS2_DATE_RANGE)s"
+			proxyServerType="ArcGIS"
       url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
       legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=2"
     />
@@ -1980,6 +1994,7 @@
       srs="EPSG:3857"
       identify="true"
       name="Previous2 Tornadoes and Hail (Areas) (NWS) %(PREVIOUS2_DATE_RANGE)s"
+			proxyServerType="ArcGIS"
       url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
       break="true"
       legend="https://services.dat.noaa.gov/arcgis/services/nws_damageassessmenttoolkit/DamageViewer/MapServer/WMSServer?FORMAT=image/png&amp;REQUEST=GetLegendGraphic&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYER=0"
