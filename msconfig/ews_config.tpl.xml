@@ -10220,6 +10220,18 @@
 			</wmsSubgroup>
 	<wmsSubgroup label="Fixed 6-Period: May 8 – Jun 17">
 
+        <wmsLayer
+          selected="false"
+          lid="DURSP52020"
+          visible="false"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="dur51yr_2020_0508_0617"
+          name="2020"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2020_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
 
 				<wmsLayer
 					selected="false"
