@@ -1,5 +1,15 @@
 import datetime, os, re, time
 
+
+def getMonthAndDayDateRangeString(d):
+  d2 = d - datetime.timedelta(days=23)
+  d1_day = datetime.datetime.strftime(d, '%d').lstrip('0')
+  d2_day = datetime.datetime.strftime(d2, '%d').lstrip('0')
+  d1_f = datetime.datetime.strftime(d, '%b') + d1_day
+  d2_f = datetime.datetime.strftime(d2, '%b') + d2_day
+  return d2_f + '-' + d1_f
+
+
 def extractDateString(f):
   try:
     match = re.search(r"(\d{8})", f)
@@ -8,6 +18,7 @@ def extractDateString(f):
     return None
   except:
     return None
+
 
 def getCurrentDates(pwd, date_format=None):
   files = os.listdir(pwd)
@@ -22,6 +33,7 @@ def getCurrentDates(pwd, date_format=None):
   if (date_format):
     return map(lambda d: datetime.datetime.strftime(d, date_format), current_dates)
   return current_dates
+
 
 ''' 
 timeframe information for makeDateRangeQueryParam:

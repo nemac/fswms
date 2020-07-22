@@ -202,4 +202,14 @@ IMAGE "schraffur.png"
 TRANSPARENT 2
 END
 END
- 
+
+#17
+SYMBOL
+  NAME "W"
+  TYPE TRUETYPE
+  FONT "arial"
+  FILLED true 
+  CHARACTER "&#114;"
+  ANTIALIAS true
+END
+

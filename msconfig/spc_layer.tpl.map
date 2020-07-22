@@ -1,0 +1,32 @@
+	LAYER #
+        NAME %(LAYER_NAME)s
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA "geometry from (SELECT geometry, ogc_fid, description FROM %(DB_TABLE)s WHERE report_type = '%(REPORT_TYPE)s' AND date > %(START_DATESTRING_YYMMDD)s AND date < %(END_DATESTRING_YYMMDD)s) as subquery USING unique ogc_fid"
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "%(WMS_TITLE)s"
+            STYLE
+                SYMBOL '%(LEGEND_STYLE_SYMBOL)s'
+                SIZE %(LEGEND_STYLE_SIZE)s
+                COLOR %(LEGEND_STYLE_COLOR)s
+            END
+        END
+        METADATA
+            "wms_title"          "%(WMS_TITLE)s"
+            "wms_abstract"       "%(WMS_TITLE)s"
+            "gml_include_items"  "description"
+        END  # end METADATA
+    END # end Layer
+
+

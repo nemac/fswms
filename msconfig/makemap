@@ -22,7 +22,7 @@
 #print "debug: at 1"
 
 from osgeo import gdal, osr
-from utilityScript import makeDateRangeQueryParam # our own custom utility script
+from utilityScript import makeDateRangeQueryParam, getCurrentDates # our own custom utility script
 import sys, os, subprocess, datetime, re, shutil, traceback, getopt;
 
 opts, args = getopt.getopt(sys.argv[1:],"al")
@@ -1314,12 +1314,84 @@ f_new.close()
 ###
 ### Create the vlayers.map file:
 ###
+
+# Storm Prediction Center layers
+
+spc_report_type_colors = {
+  'hail': '235 61 52',
+  'wind': '52 94 235',
+  'tornado': '51 204 255'
+}
+
+def get_spc_layer_config(**kwargs):
+  return {
+    'DATA_DIR'     : DATA_DIR,
+    'POSTGIS_CONNECTION_STRING' : POSTGIS_CONNECTION_STRING,
+    'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "vlayers"),
+    'DB_TABLE' : kwargs.get('db_table', 'spc_reports'),
+    'LEGEND_STYLE_SYMBOL': kwargs.get('style_symbol', 'circle'),
+    'LEGEND_STYLE_SIZE': kwargs.get('style_size', '10'),
+    # No defaults
+    'LAYER_NAME' : kwargs['layer_name'],
+    'REPORT_TYPE' : kwargs['report_type'],
+    'START_DATESTRING_YYMMDD': kwargs['start_date'],
+    'END_DATESTRING_YYMMDD' : kwargs['end_date'],
+    'WMS_TITLE': kwargs['wms_title'],
+    'LEGEND_STYLE_COLOR': kwargs['style_color']
+  }
+
+A_PATH_TO_FW2_PRODUCTS = os.path.join(FW2_DATA_DIR, FW2_SOURCES_AS_LIST[0], 'X_LC_1YEAR')
+
+current_dates_yymmdd = list(getCurrentDates(A_PATH_TO_FW2_PRODUCTS))
+
+today = datetime.date.today()
+start_of_year = today.replace(today.year, 1, 1)
+
+spc_layer_date_ranges = {
+  'current': [
+    (current_dates_yymmdd[0] - datetime.timedelta(days=23)),
+    current_dates_yymmdd[0]
+   ],
+  'previous1': [
+    (current_dates_yymmdd[1] - datetime.timedelta(days=23)),
+    current_dates_yymmdd[1],
+   ],
+  'previous2': [
+    (current_dates_yymmdd[2] - datetime.timedelta(days=23)),
+    current_dates_yymmdd[2]
+   ],
+  'ytd': [
+    start_of_year,
+    today
+  ]
+}
+
+spc_layer_templates = []
+
+spc_template = Template("spc_layer.tpl.map")
+
+for report_type in spc_report_type_colors.keys():
+  for period_type in spc_layer_date_ranges.keys():
+    kwargs = {
+      'layer_name': 'spc_{}_{}'.format(report_type, period_type),
+      'report_type': report_type,
+      'start_date': spc_layer_date_ranges[period_type][0].strftime('%y%m%d'),
+      'end_date': spc_layer_date_ranges[period_type][1].strftime('%y%m%d'),
+      'wms_title': 'Storm Prediction Center {} reports ({})'.format(report_type, period_type),
+      'style_color': spc_report_type_colors[report_type]
+    }
+    config = get_spc_layer_config(**kwargs)
+    rendered = spc_template.render(config)
+    spc_layer_templates.append(rendered)
+
+
 template = Template("vlayers.tpl.map")
 f_new = openMapfileForWriting("vlayers.map")
 f_new.write( template.render( {
             'DATA_DIR'     : DATA_DIR,
             'POSTGIS_CONNECTION_STRING' : POSTGIS_CONNECTION_STRING,
-            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "vlayers")
+            'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "vlayers"),
+            'SPC_LAYERS' : '\n'.join(spc_layer_templates)
             } ) )
 f_new.close()
 

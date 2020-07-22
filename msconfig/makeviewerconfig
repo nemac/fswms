@@ -1,7 +1,7 @@
 #! /usr/bin/python
 
 import sys, re, os, glob, getopt, time
-from utilityScript import makeDateRangeQueryParam, getCurrentDates # our own custom utility script
+from utilityScript import getMonthAndDayDateRangeString, makeDateRangeQueryParam, getCurrentDates # our own custom utility script
 from xml.dom.minidom import parseString
 
 sys.path.append("../var")
@@ -1256,19 +1256,10 @@ ALL_PRODUCT_TYPES.update(LEGACY_PRODUCT_TYPES)
 # Path to a product dir to extract current dates
 A_PATH_TO_FW2_PRODUCTS = os.path.join(FW2_DATA_DIR, FW2_SOURCES_AS_LIST[0], 'X_LC_1YEAR')
 
-def getDateRangeFor(d):
-  d2 = d - datetime.timedelta(days=23)
-  d1_day = datetime.datetime.strftime(d, '%d').lstrip('0')
-  d2_day = datetime.datetime.strftime(d2, '%d').lstrip('0')
-  d1_f = datetime.datetime.strftime(d, '%b') + d1_day
-  d2_f = datetime.datetime.strftime(d2, '%b') + d2_day
-  return d2_f + '-' + d1_f
-
-
 def makeFW2CurrentLayerTitles():
   pwd = A_PATH_TO_FW2_PRODUCTS
   current_dates = getCurrentDates(pwd)
-  date_ranges = map(getDateRangeFor, current_dates)
+  date_ranges = map(getMonthAndDayDateRangeString, current_dates)
   date_strings = map(lambda d: datetime.datetime.strftime(d, '%Y%m%d'), current_dates)
   titles = [
     {
@@ -1494,7 +1485,7 @@ def makeFW2CurrentLegacyLayerListFor(product_type):
     'Previous2 %Departure {0}'
   ]
   current_dates = getCurrentDates(A_PATH_TO_FW2_PRODUCTS)
-  date_ranges = map(getDateRangeFor, current_dates)
+  date_ranges = map(getMonthAndDayDateRangeString, current_dates)
   blockList = ''
   pwd = os.path.join(FW2_DATA_DIR, FW2_LEGACY_SOURCE_DIR, product_type)
   for i in range(0, len(fw2_current_datestrings)):
@@ -1698,7 +1689,7 @@ NADM_DROUGHT_LAYERS = getNADMLayers()
 
 pwd = A_PATH_TO_FW2_PRODUCTS
 current_dates = getCurrentDates(pwd)
-date_ranges = map(getDateRangeFor, current_dates)
+date_ranges = map(getMonthAndDayDateRangeString, current_dates)
 
 CURRENT_DATE_RANGE = date_ranges[0]
 PREVIOUS1_DATE_RANGE = date_ranges[1]

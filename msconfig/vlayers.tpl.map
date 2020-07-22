@@ -71,6 +71,46 @@ MAP
     LEGEND
         KEYSIZE 30 20
     END
+
+  %(SPC_LAYERS)s
+
+	
+	LAYER #
+        NAME hailswaths
+        
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from hailswaths"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+
+        STATUS           OFF
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+            NAME "Hail Swaths"
+            STYLE
+                COLOR        0 100 0
+                OUTLINECOLOR 0 0 0 
+            END
+        END
+        METADATA
+            "wms_title"          "hailswaths"
+            "wms_abstract"       "hailswaths"
+            "gml_include_items"  "date,time,st,mag,inj,fat,loss,closs"
+        END  # end METADATA
+    END # end Layer
+	
+
+
+
+
     
     LAYER # 
         NAME pestprox
@@ -645,7 +685,7 @@ MAP
             "gml_include_items"  "level3,level3_nam"
         END  # end METADATA
     END # end Layer
-	
+
 	LAYER #
         NAME hailswaths
         
