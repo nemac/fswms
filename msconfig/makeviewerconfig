@@ -3,6 +3,7 @@
 import sys, re, os, glob, getopt, time
 from utilityScript import getMonthAndDayDateRangeString, makeDateRangeQueryParam, getCurrentDates # our own custom utility script
 from xml.dom.minidom import parseString
+from planet import api
 
 sys.path.append("../var")
 
@@ -1556,6 +1557,33 @@ def makeFW2CurrentLayerListFor(product_type, list_type):
         })
   return blockList
 
+'''CHANGE THIS DESCRIPTION This method uses the planet.com API to find all of the weekly USDA Normalized Analytic Mosaics
+    and puts them into a list for easy consumption in the ews config template'''
+def makePlanetDotComUSDANormalizedAnalyticWeeklyList():
+  os.environ['PL_API_KEY'] = PLANET_API_KEY 
+  client = api.ClientV1()
+  # Add variable for series ID
+  mosaic_series = client.get_mosaics_for_series('212368a1-6ac1-4840-9c5c-56a2836573a7') # USDA Normalized Analytic Series ID
+  mosaic_series = mosaic_series.get()
+  mosaics = mosaic_series['mosaics']
+  # Separate the mosaics into a dictionary of 'current' and 'previous' containing the name of the mosaic and ending date (e.g. 2020-08-24)
+  mosaic_dictionary = {}
+  mosaic_dictionary['current'] = {
+    'name': mosaics[-1]['name'].encode('ascii', 'ignore'), 
+    'date': mosaics[-1]['last_acquired'].split('T')[0].encode('ascii', 'ignore')
+  }
+  mosaic_dictionary['previous'] = {
+    'name': mosaics[-2]['name'].encode('ascii', 'ignore'), 
+    'date': mosaics[-2]['last_acquired'].split('T')[0].encode('ascii', 'ignore')
+  }
+  return mosaic_dictionary
+
+usda_normalized_analytic_weekly = makePlanetDotComUSDANormalizedAnalyticWeeklyList()
+USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST = usda_normalized_analytic_weekly['current']['name']
+USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST = usda_normalized_analytic_weekly['previous']['name']
+USDA_LATEST_END_DATE = usda_normalized_analytic_weekly['current']['date']
+USDA_SECOND_LATEST_END_DATE = usda_normalized_analytic_weekly['previous']['date']
+
 GTAC_ARCHIVE_3YR = makeGtacArchiveLayerListFor('3yr')
 GTAC_ARCHIVE_5YR = makeGtacArchiveLayerListFor('5yr')
 
@@ -1708,6 +1736,7 @@ configXML = template.render( {
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
             'TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : tacsModisChangeDetectionProductLayers,
             'GTAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : gtacModisChangeDetectionProductLayers,
+            'PLANET_API_KEY'          : PLANET_API_KEY,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,
             'NRT_3YEAR_LAYERS'        : nrt3YrProductLayers,
@@ -1899,7 +1928,11 @@ configXML = template.render( {
             'GTAC_ARCHIVE_5YR' : GTAC_ARCHIVE_5YR,
             'CURRENT_DATE_RANGE' : CURRENT_DATE_RANGE,
             'PREVIOUS1_DATE_RANGE' : PREVIOUS1_DATE_RANGE,
-            'PREVIOUS2_DATE_RANGE' : PREVIOUS2_DATE_RANGE
+            'PREVIOUS2_DATE_RANGE' : PREVIOUS2_DATE_RANGE,
+            'USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST' : USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST,
+            'USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST' : USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST,
+            'USDA_LATEST_END_DATE' : USDA_LATEST_END_DATE,
+            'USDA_SECOND_LATEST_END_DATE' : USDA_SECOND_LATEST_END_DATE
           })
 
 minXML = parseString(configXML).toprettyxml('', '', 'UTF-8')
