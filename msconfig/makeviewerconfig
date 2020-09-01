@@ -1557,13 +1557,14 @@ def makeFW2CurrentLayerListFor(product_type, list_type):
         })
   return blockList
 
-'''CHANGE THIS DESCRIPTION This method uses the planet.com API to find all of the weekly USDA Normalized Analytic Mosaics
-    and puts them into a list for easy consumption in the ews config template'''
+'''This method uses the planet.com API to find all of the weekly USDA Normalized Analytic Mosaics
+    and puts them into a dictionary for easy consumption in the ews config template'''
 def makePlanetDotComUSDANormalizedAnalyticWeeklyList():
   os.environ['PL_API_KEY'] = PLANET_API_KEY 
   client = api.ClientV1()
   # Add variable for series ID
-  mosaic_series = client.get_mosaics_for_series('212368a1-6ac1-4840-9c5c-56a2836573a7') # USDA Normalized Analytic Series ID
+  normalized_analytics_mosaics_series_id = '212368a1-6ac1-4840-9c5c-56a2836573a7'
+  mosaic_series = client.get_mosaics_for_series(normalized_analytics_mosaics_series_id) # USDA Normalized Analytic Series ID
   mosaic_series = mosaic_series.get()
   mosaics = mosaic_series['mosaics']
   # Separate the mosaics into a dictionary of 'current' and 'previous' containing the name of the mosaic and ending date (e.g. 2020-08-24)
