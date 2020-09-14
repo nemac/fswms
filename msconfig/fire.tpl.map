@@ -73,6 +73,34 @@ MAP
     END
 
     LAYER #
+        NAME nifc_active
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "wkb_geometry from nifc_active_fire_perims USING UNIQUE ogc_fid"
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+	      CLASS
+            NAME "Active Perimeters"
+            STYLE
+                OUTLINECOLOR 90 0 0 
+				        WIDTH 3
+            END
+        END
+        METADATA
+            "wms_title"          "nifc_test"
+            "wms_abstract"       "nifc_test"
+            "gml_include_items"  "ogc_fid,objectid,shape__area,shape__length,incidentname,featurecategory,mapmethod,comments,gisacres,deletethis,label,featureaccess,featurestatus,isvisible,createdate,datecurrent,polygondatetime,complexname,complexid,gacc,imtname,unitid,localincidentid,irwinid,geometryid,globalid,gdb_from_date,gdb_to_date,egp_oid,wkb_geometry"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
         NAME mtbs_2017
         PROJECTION
             "init=epsg:3857"

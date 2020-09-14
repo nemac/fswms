@@ -1385,6 +1385,7 @@ for report_type in spc_report_type_colors.keys():
     spc_layer_templates.append(rendered)
 
 
+
 template = Template("vlayers.tpl.map")
 f_new = openMapfileForWriting("vlayers.map")
 f_new.write( template.render( {
