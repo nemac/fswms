@@ -2,6 +2,7 @@
 
 import ogr
 import os
+import sys
 import os.path
 import shutil
 import datetime
@@ -92,9 +93,8 @@ def put_results_in_db():
     Place contents of intermediate SQLite db into efetac postgis database
     Remove -append if the table does not already exist
     '''
-    #c = '''source .env && ogr2ogr -append -skipfailures -f PostgreSQL -nln $TABLE PG:"dbname='$DB_NAME' host='localhost' port='$PG_PORT' user='$PG_USER' password='$PG_PASSWORD'" result.sqlite data'''
     c = './move_result'
-    proc = subprocess.Popen(c, stdout=subprocess.PIPE)
+    proc = subprocess.Popen(c, stdout=subprocess.PIPE, shell=True)
     output = proc.stdout.read()
     print(output)
 

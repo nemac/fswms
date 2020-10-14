@@ -1,3 +1,5 @@
 #!/bin/bash
 
-source .env && ogr2ogr -skipfailures -append -f PostgreSQL -nln $TABLE PG:"dbname='$DB_NAME' host='$HOST' port='$PG_PORT' user='$PG_USER' password='$PG_PASSWORD'" result.sqlite data
+source .env
+
+ogr2ogr -skipfailures -append -f PostgreSQL -nln spc_reports PG:"$POSTGIS_CONNECTION_STRING" result.sqlite data
