@@ -15,7 +15,8 @@
     NAME "1"
     EXPRESSION ([PIXEL] = 1)
     STYLE
-      COLOR 240 240 240
+      COLOR 255 255 255
+      OPACITY 0
     END
   END
   
@@ -23,7 +24,8 @@
     NAME "2"
     EXPRESSION ([PIXEL] = 2)
     STYLE
-      COLOR 240 240 240
+      COLOR 255 255 255
+      OPACITY 0
     END
   END
   

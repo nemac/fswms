@@ -10168,6 +10168,19 @@
 		<wmsSubgroup label="Fixed 12-Period: Jun 24 – Sep 21">
 
 
+        <wmsLayer
+          selected="false"
+          lid="DURCOMB52020"
+          visible="false"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="dur51yr_2020_0624_0921"
+          name="2020"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2020_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
+
 				<wmsLayer
 					selected="false"
 					lid="DURCOMB52019"
@@ -10725,6 +10738,20 @@
 			mask="true"/>
 			</wmsSubgroup>
 		<wmsSubgroup label="Fixed 6-Period: Aug 12 - Sep 21">
+
+
+      <wmsLayer
+          selected="false"
+          lid="DURP252020"
+          visible="false"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="dur51yr_2020_0812_0921"
+          name="2020"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2020_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
 
 
 			<wmsLayer
