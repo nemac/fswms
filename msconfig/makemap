@@ -1222,14 +1222,14 @@ def getDurationLayers(dataDir, layerTemplateName, groupName, fileExts, maskBool,
 
 DURATION_BASE_DIR = DATA_DIR + "/fsdata-internal/efetac_nasa/AncillaryData/duration"
 
-DURATION_MAG_0624_0921_LAYERS = getDurationLayers(
-  dataDir=DURATION_BASE_DIR + '/magnitude/mag_0624_0921',
+DURATION_MAG_0524_0914_LAYERS = getDurationLayers(
+  dataDir=DURATION_BASE_DIR + '/magnitude/mag_0524_0914',
   layerTemplateName='ews_gen.layer.duration.tpl.map',
-  groupName='Seasonal Summaries: Magnitude Jun24-Sept21',
+  groupName='Seasonal Summaries: Magnitude May24-Sept14',
   fileExts=['.img', '.tif'],
   maskBool=True,
   colormapfile='cmaps/DURATION_magnitude.cmap',
-  layerTitleSubFromTo=['sumr(\d{4}).+$', '\g<1> Magnitude Jun24-Sept21'], # \g<1> refers to the first match group
+  layerTitleSubFromTo=['sumr(\d{4}).+$', '\g<1> Magnitude May24-Sept14'], # \g<1> refers to the first match group
   proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
 ) 
  
@@ -1282,7 +1282,7 @@ DURATION_LAYERS = DURATION_12PERIOD_0624_0921_LAYERS + \
 		  DURATION_6PERIOD_0624_0804_LAYERS + \
 		  DURATION_6PERIOD_0812_0921_LAYERS
 
-MAGNITUDE_LAYERS = DURATION_MAG_0624_0921_LAYERS
+MAGNITUDE_LAYERS = DURATION_MAG_0524_0914_LAYERS
 
 ###
 ### Create the duration.map file:
