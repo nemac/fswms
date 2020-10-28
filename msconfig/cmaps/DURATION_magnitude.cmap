@@ -1,84 +1,62 @@
 
   CLASS
-    NAME "-98 - -25"
-    EXPRESSION ([PIXEL] >= -98 AND [PIXEL] <= -25)
+    NAME "Absolute Change in Summer NDVI"
+    EXPRESSION ""
+  END
+
+  CLASS
+    NAME "-1 to -0.25"
+    EXPRESSION ([PIXEL] = 1)
     STYLE
       COLOR 132 0 168
     END
   END
   
   CLASS
-    NAME "-24.9 - -10"
-    EXPRESSION ([PIXEL] > -25 AND [PIXEL] <= -10)
+    NAME "-0.24 to -0.1"
+    EXPRESSION ([PIXEL] = 2)
     STYLE
       COLOR 76 0 115
     END
   END
   
   CLASS
-    NAME "-9.9 - -9"
-    EXPRESSION ([PIXEL] > -10 AND [PIXEL] <= -9)
+    NAME "-0.9"
+    EXPRESSION ([PIXEL] = 3)
     STYLE
       COLOR 143 0 0
     END
   END
   
   CLASS
-    NAME "-8.9 - -8"
-    EXPRESSION ([PIXEL] > -9 AND [PIXEL] <= -8)
+    NAME "-0.8"
+    EXPRESSION ([PIXEL] = 4)
     STYLE
       COLOR 207 0 0
     END
   END
   
   CLASS
-    NAME "-7.9 - -7"
-    EXPRESSION ([PIXEL] > -8 AND [PIXEL] <= -7)
+    NAME "-0.7"
+    EXPRESSION ([PIXEL] = 5)
     STYLE
       COLOR 255 71 0
     END
   END
   
   CLASS
-    NAME "-6.9 - -6"
-    EXPRESSION ([PIXEL] > -7 AND [PIXEL] <= -6)
+    NAME "-0.6"
+    EXPRESSION ([PIXEL] = 6)
     STYLE
       COLOR 255 156 0
     END
   END
   
   CLASS
-    NAME "-5.9 - -5"
-    EXPRESSION ([PIXEL] > -6 AND [PIXEL] <= -5)
+    NAME "-0.5 to 1"
+    EXPRESSION ([PIXEL] >= 7 AND [PIXEL] <= 10)
     STYLE
-      COLOR 255 255 255
-      OPACITY 0
-    END
-  END
-  
-  CLASS
-    NAME "-4.9 - -4"
-    EXPRESSION ([PIXEL] > -5 AND [PIXEL] <= -4)
-    STYLE
-      COLOR 255 255 255
-      OPACITY 0
-    END
-  END
-  
-  CLASS
-    NAME "-3.9 - -3"
-    EXPRESSION ([PIXEL] > -4 AND [PIXEL] <= -3)
-    STYLE
-      COLOR 255 255 255
-      OPACITY 0
-    END
-  END
-  
-  CLASS
-    NAME "-2.9 - -100"
-    EXPRESSION ([PIXEL] > -3 AND [PIXEL] <= -100)
-    STYLE
-      COLOR 255 255 255
+      COLOR 240 240 240
       OPACITY 0
     END
   END

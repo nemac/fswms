@@ -10120,12 +10120,25 @@
 	</wmsGroup>
 	<wmsGroup gid="G20" name="Seasonal_Summaries" label="Seasonal Summaries">
 		<wmsSubgroup label="Prominent Forest Disturbances"></wmsSubgroup>
-		<wmsSubgroup label="Magnitude: Jun 24 – Sep 21">
+		<wmsSubgroup label="Magnitude: May 24 – Sep 14">
 
+
+        <wmsLayer
+          selected="false"
+          lid="DURMAG052020"
+          visible="false"
+          url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="sumr2020minus2019_absMedNDVIc"
+          name="2020"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2020minus2019_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
 
 				<wmsLayer
 					selected="false"
-					lid="DURMAG062019"
+					lid="DURMAG052019"
 					visible="false"
 					url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
 					srs="EPSG:3857"
@@ -10138,7 +10151,7 @@
 
 				<wmsLayer
 					selected="false"
-					lid="DURMAG062018"
+					lid="DURMAG052018"
 					visible="false"
 					url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
 					srs="EPSG:3857"
@@ -10151,7 +10164,7 @@
 
 				<wmsLayer
 					selected="false"
-					lid="DURMAG062017"
+					lid="DURMAG052017"
 					visible="false"
 					url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
 					srs="EPSG:3857"
