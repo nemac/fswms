@@ -622,7 +622,7 @@ MAP
       END
       METADATA
         "wms_srs"             "EPSG:4326"
-        "wms_name"            "qdriwaterwatchshapefile:water_watch_today"
+        "wms_name"            "quickdri_water_watch_today:water_watch_today"
         "wms_server_version"  "1.0.0"
         "wms_format"          "image/png"
       END
