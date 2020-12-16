@@ -1579,11 +1579,11 @@ def makePlanetDotComUSDANormalizedAnalyticWeeklyList():
   }
   return mosaic_dictionary
 
-usda_normalized_analytic_weekly = makePlanetDotComUSDANormalizedAnalyticWeeklyList()
-USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST = usda_normalized_analytic_weekly['current']['name']
-USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST = usda_normalized_analytic_weekly['previous']['name']
-USDA_LATEST_END_DATE = usda_normalized_analytic_weekly['current']['date']
-USDA_SECOND_LATEST_END_DATE = usda_normalized_analytic_weekly['previous']['date']
+#usda_normalized_analytic_weekly = makePlanetDotComUSDANormalizedAnalyticWeeklyList()
+#USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST = usda_normalized_analytic_weekly['current']['name']
+#USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST = usda_normalized_analytic_weekly['previous']['name']
+#USDA_LATEST_END_DATE = usda_normalized_analytic_weekly['current']['date']
+#USDA_SECOND_LATEST_END_DATE = usda_normalized_analytic_weekly['previous']['date']
 
 GTAC_ARCHIVE_3YR = makeGtacArchiveLayerListFor('3yr')
 GTAC_ARCHIVE_5YR = makeGtacArchiveLayerListFor('5yr')
@@ -1929,11 +1929,11 @@ configXML = template.render( {
             'GTAC_ARCHIVE_5YR' : GTAC_ARCHIVE_5YR,
             'CURRENT_DATE_RANGE' : CURRENT_DATE_RANGE,
             'PREVIOUS1_DATE_RANGE' : PREVIOUS1_DATE_RANGE,
-            'PREVIOUS2_DATE_RANGE' : PREVIOUS2_DATE_RANGE,
-            'USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST' : USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST,
-            'USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST' : USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST,
-            'USDA_LATEST_END_DATE' : USDA_LATEST_END_DATE,
-            'USDA_SECOND_LATEST_END_DATE' : USDA_SECOND_LATEST_END_DATE
+            'PREVIOUS2_DATE_RANGE' : PREVIOUS2_DATE_RANGE
+            #'USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST' : USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST,
+            #'USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST' : USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST,
+            #'USDA_LATEST_END_DATE' : USDA_LATEST_END_DATE,
+            #'USDA_SECOND_LATEST_END_DATE' : USDA_SECOND_LATEST_END_DATE
           })
 
 minXML = parseString(configXML).toprettyxml('', '', 'UTF-8')
