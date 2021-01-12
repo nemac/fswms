@@ -1148,6 +1148,9 @@
 	<wmsGroup gid="G07" name="Archived_FW2" label="Archived ForWarn II Change Maps">
 		<wmsSubgroup label="Archived Prior Year Baseline">
 		</wmsSubgroup>
+			<wmsSubgroup label="2021" collapsible="true">
+			%(FW2_ARCHIVE_2021__PRIOR_YEAR)s
+			</wmsSubgroup>
 			<wmsSubgroup label="2020" collapsible="true">
 			%(FW2_ARCHIVE_2020__PRIOR_YEAR)s
 			</wmsSubgroup>
@@ -1166,6 +1169,9 @@
 
 		<wmsSubgroup label="Archived Early Detect (Recent Priority From Prior Year)">
 		</wmsSubgroup>
+			<wmsSubgroup label="2021" collapsible="true">
+			%(FW2_ARCHIVE_2021__ALC)s
+			</wmsSubgroup>
 			<wmsSubgroup label="2020" collapsible="true">
 			%(FW2_ARCHIVE_2020__ALC)s
 			</wmsSubgroup>
@@ -1184,6 +1190,9 @@
 
 		<wmsSubgroup label="Archived Prior 3-Year Maximum">
 		</wmsSubgroup>
+			<wmsSubgroup label="2021" collapsible="true">
+			%(FW2_ARCHIVE_2021__3_YEAR)s
+			</wmsSubgroup>
 			<wmsSubgroup label="2020" collapsible="true">
 			%(FW2_ARCHIVE_2020__3_YEAR)s
 			</wmsSubgroup>
@@ -1203,6 +1212,9 @@
 
 		<wmsSubgroup label="Archived Prior 5-Year 90th Percentile">
 		</wmsSubgroup>
+			<wmsSubgroup label="2021" collapsible="true">
+			%(FW2_ARCHIVE_2021__5_YEAR)s
+			</wmsSubgroup>
 			<wmsSubgroup label="2020" collapsible="true">
 			%(FW2_ARCHIVE_2020__5_YEAR)s
 			</wmsSubgroup>
@@ -1222,6 +1234,9 @@
 
 		<wmsSubgroup label="Archived Prior 10-Year 90th Percentile">
 		</wmsSubgroup>
+			<wmsSubgroup label="2021" collapsible="true">
+			%(FW2_ARCHIVE_2021__10_YEAR)s
+			</wmsSubgroup>
 			<wmsSubgroup label="2020" collapsible="true">
 			%(FW2_ARCHIVE_2020__10_YEAR)s
 			</wmsSubgroup>
@@ -1235,6 +1250,9 @@
 
 		<wmsSubgroup label="Archived All-Prior-Year Median">
 		</wmsSubgroup>
+			<wmsSubgroup label="2021" collapsible="true">
+			%(FW2_ARCHIVE_2021__YEAR_MEDIAN)s
+			</wmsSubgroup>
 			<wmsSubgroup label="2020" collapsible="true">
 			%(FW2_ARCHIVE_2020__YEAR_MEDIAN)s
 			</wmsSubgroup>
@@ -1247,6 +1265,9 @@
 
 		<wmsSubgroup label="Seasonal Progression Departure">
 		</wmsSubgroup>
+			<wmsSubgroup label="2021" collapsible="true">
+			%(FW2_ARCHIVE_2021__PCTPROGRESS)s
+			</wmsSubgroup>
 			<wmsSubgroup label="2020" collapsible="true">
 			%(FW2_ARCHIVE_2020__PCTPROGRESS)s
 			</wmsSubgroup>
@@ -3174,8 +3195,7 @@
 	</wmsGroup>
 
 	<wmsGroup gid="G14" name="MODISCloud" label="ForWarn II Cloud Assessment Maps">
-
-			%(GLAM_WMTS_2020_LAYERS)s
+			%(GLAM_WMTS_2021_LAYERS)s
 
 	</wmsGroup>
 	<wmsGroup gid="G15" name="EWS_Derived_Products" label="MODIS Phenology Derived Products" >
