@@ -1323,7 +1323,9 @@ def renderGlamLayerBlocksFor(yr):
     # Subtract 8 days to get the start of the period. This value is passed to
     # the gimms URL template so we get the correct year.
     # "Current dates" are based on the END of the period
-    jd = (d - datetime.timedelta(days=7)).strftime('%j')
+    period_start = d - datetime.timedelta(days=7)
+    jd = period_start.strftime('%j')
+    url_year = period_start.strftime('%Y')
     date_end = d
     date_start = d - datetime.timedelta(days=23)
     day_of_month_end = date_end.strftime('%d').lstrip('0')
@@ -1336,7 +1338,7 @@ def renderGlamLayerBlocksFor(yr):
     for sat_id in sats:
       url_part = GLAM_CONFIG[sat_id]
       id_num = '721' if sat_id == 'Aqua' else '621'
-      blocks += renderGLAMLayerBlock(sat_id, id_num, yr, url_part, jd, prod_type)
+      blocks += renderGLAMLayerBlock(sat_id, id_num, url_year, url_part, jd, prod_type)
     blocks += '</wmsSubgroup>'
   return blocks
 
