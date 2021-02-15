@@ -801,6 +801,17 @@
    identify="true"
    name="2019 (GTAC)"
    legend="%(SERVER_URL)s/cmapicons/modis-2016.png"/>
+    <wmsLayer
+   lid="MODISFIRE2020"
+   visible="false"
+   url="%(SERVER_URL)s/fire?TRANSPARENT=true"
+   srs="EPSG:3857"
+   layers="modis-fire-2020"
+   styles="default"
+   identify="true"
+   name="2020 (GTAC)"
+   legend="%(SERVER_URL)s/cmapicons/modis-2016.png"/>
+
 
 	</wmsSubgroup>
 	</wmsGroup>
