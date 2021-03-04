@@ -2824,6 +2824,16 @@
    identify="true"
    name="2019 Cropland Data Layer"
    legend="%(SERVER_URL)s/cmapicons/CropLands.png"/>
+    <wmsLayer
+   lid="PMCL2020"
+   visible="false"
+   url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+   srs="EPSG:3857"
+   layers="CropLands2020"
+   styles="default"
+   identify="true"
+   name="2020 Cropland Data Layer"
+   legend="%(SERVER_URL)s/cmapicons/CropLands.png"/>
 
 		</wmsSubgroup>
 		<wmsSubgroup label="Elevation Products">
