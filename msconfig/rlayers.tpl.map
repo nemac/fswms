@@ -127,7 +127,7 @@ MAP
         END  # end METADATA
     END # end LAYER
 	LAYER
-        NAME     fs-fuel-treatments-00-21
+        NAME     fs-fuel-treatments-00-22
         PROJECTION
 			"proj=laea"
 			"lat_0=45"
@@ -142,12 +142,12 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fs_treatments/replacement_fs_fuel_treatments_combined_raster_20002021_ver030920.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/fs_treatments/ras_fueltreatments_v030121_2000_2022.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
 		CLASS
-			NAME "FS Fuel Treatments 2000-2021"
+			NAME "FS Fuel Treatments 2000-2022"
             EXPRESSION ""
             COLOR 255 255 255
         END
@@ -261,13 +261,20 @@ MAP
             EXPRESSION ([pixel] = 2021)
             COLOR 240 94 35
         END     
+        CLASS
+            NAME "2022"
+            EXPRESSION ([pixel] = 2022)
+            COLOR 100 100 100
+        END     
+
 
         METADATA
-            "wms_title"             "fs-fuel-treatments-00-21"
-            "wms_abstract"          "fs-fuel-treatments-00-21"
+            "wms_title"             "fs-fuel-treatments-00-22"
+            "wms_abstract"          "fs-fuel-treatments-00-22"
             "gml_include_items"     "value_0"
         END  # end METADATA
     END # end LAYER
+
     LAYER
         NAME     fs-timber-harvests-00-22
         PROJECTION

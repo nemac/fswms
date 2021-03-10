@@ -2288,11 +2288,11 @@
 	 visible="false"
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
 	 srs="EPSG:3857"
-	 layers="fs-fuel-treatments-00-21"
+	 layers="fs-fuel-treatments-00-22"
 	 styles="default"
 	 identify="true"
-	 name="2000-2021 Combined (FS)"
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-fuel-treatments-00-21&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2000-2022 Combined (FS)"
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-fuel-treatments-00-22&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer
 	 lid="FTAAB"
 	 visible="false"
@@ -2371,7 +2371,7 @@
 	 layers="fs_treatment_2007"
 	 styles="default"
 	 identify="true"
-	 name="2007(FS)"
+	 name="2007 (FS)"
 	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer
 	 lid="FTAAJ"
@@ -2515,6 +2515,18 @@
    identify="true"
    name="2021 (FS)"
    legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2021&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
+    <wmsLayer
+   lid="FTAAX"
+   visible="false"
+   url="%(SERVER_URL)s/treatments?TRANSPARENT=true"
+   srs="EPSG:3857"
+   layers="fs_treatment_2022"
+   styles="default"
+   identify="true"
+   name="2022 (FS)"
+   legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_treatment_2022&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
 
 		</wmsSubgroup>
 	<wmsSubgroup label="USFS Logging Activity">
