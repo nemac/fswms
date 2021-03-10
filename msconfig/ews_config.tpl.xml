@@ -2523,11 +2523,11 @@
 	 visible="false"
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
 	 srs="EPSG:3857"
-	 layers="fs-timber-harvests-00-21"
+	 layers="fs-timber-harvests-00-22"
 	 styles="default"
 	 identify="true"
-	 name="2000-2021 Combined (FS)"
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-timber-harvests-00-21&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2000-2022 Combined (FS)"
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs-timber-harvests-00-22&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer
 	 lid="FHAAB"
 	 visible="false"
@@ -2606,7 +2606,7 @@
 	 layers="fs_harvests_2007"
 	 styles="default"
 	 identify="true"
-	 name="2007(FS)"
+	 name="2007 (FS)"
 	 legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_harvests_2007&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer
 	 lid="FHAAJ"
@@ -2751,6 +2751,18 @@
    identify="true"
    name="2021 (FS)"
    legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_harvests_2021&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
+    <wmsLayer
+   lid="FHAAX"
+   visible="false"
+   url="%(SERVER_URL)s/treatments?TRANSPARENT=true"
+   srs="EPSG:3857"
+   layers="fs_harvests_2022"
+   styles="default"
+   identify="true"
+   name="2022 (FS)"
+   legend="%(SERVER_URL)s/treatments?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=fs_harvests_2022&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
 
 		</wmsSubgroup>
 	<wmsSubgroup label="USDA Agriculture">
