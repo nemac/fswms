@@ -1,4 +1,14 @@
-import datetime, os, re, time
+import datetime, os, re, time, sys
+
+
+sys.path.append("../var")
+try:
+    from Config import *
+except:
+    print "Cannot find local settings file 'Config.py'.  You need to create a Config.py file that contains"
+    print "settings appropriate for this copy of the FSWMS project.  You can use the file 'Config.tpl.py'"
+    print "as a starting point --- make a copy of that file called 'Config.py', and edit appropriately."
+    exit(-1)
 
 
 def getMonthAndDayDateRangeString(d):
@@ -44,7 +54,7 @@ timeframe information for makeDateRangeQueryParam:
 startYear paramater returns everthing from Jan 1st of selected year to present day.
 e.g. startYear=2015 returns 2015-01-01/2020-05-18 if executed on May 18th, 2020
 '''
-def makeDateRangeQueryParam(path, param_template, prior_year=False, date_template='%Y-%m-%d', timeframe=0, yearToDate=False, startYear=2020):
+def makeDateRangeQueryParam(path, param_template, prior_year=False, date_template='%Y-%m-%d', timeframe=0, yearToDate=False, startYear=CURRENT_YEAR):
   d = getCurrentDates(path)[timeframe]
   date_end = d
   date_start = date_end - datetime.timedelta(days=23)
