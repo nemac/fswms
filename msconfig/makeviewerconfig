@@ -1327,7 +1327,7 @@ def renderGlamLayerBlocksFor(yr):
     jd = period_start.strftime('%j')
     url_year = period_start.strftime('%Y')
     date_end = d
-    date_start = d - datetime.timedelta(days=23)
+    date_start = d - datetime.timedelta(days=7)
     day_of_month_end = date_end.strftime('%d').lstrip('0')
     day_of_month_start = date_start.strftime('%d').lstrip('0')
     month_name_end = date_end.strftime('%b').lstrip('0')
