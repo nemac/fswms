@@ -55,6 +55,7 @@ startYear paramater returns everthing from Jan 1st of selected year to present d
 e.g. startYear=2015 returns 2015-01-01/2020-05-18 if executed on May 18th, 2020
 '''
 def makeDateRangeQueryParam(path, param_template, prior_year=False, date_template='%Y-%m-%d', timeframe=0, yearToDate=False, startYear=CURRENT_YEAR):
+  startYear = int(startYear)
   d = getCurrentDates(path)[timeframe]
   date_end = d
   date_start = date_end - datetime.timedelta(days=23)
