@@ -378,16 +378,26 @@
 	 identify="true"
 	 name="Previous MODIS (GeoMAC)"
 	 legend="%(SERVER_URL)s/cmapicons/PerimetersInactive.jpg"/>     -->
+    <wmsLayer
+   lid="MTBSABC"
+   visible="false"
+   url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
+   srs="EPSG:3857"
+   layers="mtbs-nifc-raster-15-20"
+   styles="default"
+   identify="true"
+   name="2015-20 Combined (MTBS/NIFC)"
+   legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-nifc-raster-15-20&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer
 	 lid="MTBSABB"
 	 visible="false"
 	 url="%(SERVER_URL)s/rlayers?TRANSPARENT=true"
 	 srs="EPSG:3857"
-	 layers="mtbs-raster-00-19"
+	 layers="mtbs-raster-00-14"
 	 styles="default"
 	 identify="true"
-	 name="2000-19 Combined (MTBS/GEOMAC)"
-	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-00-19&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2000-14 Combined (MTBS)"
+	 legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs-raster-00-14&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer
 	 lid="MTBSABA"
 	 visible="false"
@@ -589,25 +599,37 @@
 	 name="2017 (MTBS)"
 	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2017&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 		<wmsLayer
-	 lid="WFDSS2018"
+	 lid="MTBS2018"
 	 visible="false"
 	 url="%(SERVER_URL)s/fire?TRANSPARENT=true"
 	 srs="EPSG:3857"
-	 layers="wfdss_2018"
+	 layers="mtbs_2018"
 	 styles="default"
 	 identify="true"
-	 name="2018 (WFDSS)"
-	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=wfdss_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+	 name="2018 (MTBS)"
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=mtbs_2018&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+		<wmsLayer
+	 lid="NIFC2019"
+	 visible="false"
+	 url="%(SERVER_URL)s/fire?TRANSPARENT=true"
+	 srs="EPSG:3857"
+	 layers="nifc_2019"
+	 styles="default"
+	 identify="true"
+	 name="2019 (NIFC)"
+	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=nifc_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
+
     <wmsLayer
-   lid="NIFC2019"
+   lid="NIFC2020"
    visible="false"
    url="%(SERVER_URL)s/fire?TRANSPARENT=true"
    srs="EPSG:3857"
-   layers="nifc_2019"
+   layers="nifc_2020"
    styles="default"
    identify="true"
-   name="2019 (NIFC)"
-   legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=nifc_2019&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+   name="2020 (NIFC)"
+   legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=nifc_2020&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 
 		</wmsSubgroup>
 	<wmsSubgroup label="Historical MODIS Hotspots">

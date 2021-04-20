@@ -539,27 +539,21 @@ MAP
     END # end LAYER
 
 	LAYER
-        NAME     mtbs-raster-00-19
+        NAME     mtbs-raster-00-14
         PROJECTION
-          "+proj=laea"
-          "+lat_0=45"
-          "+lon_0=-100"
-          "+x_0=0"
-          "+y_0=0"
-          "+a=6370997"
-          "+b=6370997"
-          "+units=m"
+          "+proj=longlat" 
+          "+datum=WGS84" 
           "+no_defs"
         END
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/replacement_wildfire_perimeters_combined_raster_2000_2019_laea_031720.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/ras_wildfire_combined_2000_2014_mtbs.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		
 		CLASS
-			NAME "MTBS/GEOMAC 2000-2019"
+			NAME "MTBS 2000-2014"
             EXPRESSION ""
             COLOR 255 255 255
         END
@@ -638,16 +632,43 @@ MAP
             EXPRESSION ([pixel] = 2014)
             COLOR 192 64 64
         END  
-		CLASS
-			NAME "2015"
+        METADATA
+            "wms_title"             "mtbs-raster-00-14"
+            "wms_abstract"          "mtbs-raster-00-14"
+            "gml_include_items"     "value_0"
+			#"gml_value_0_alias"     "Fire Year"
+        END  # end METADATA
+    END # end LAYER
+
+    LAYER
+        NAME     mtbs-nifc-raster-15-20
+        PROJECTION
+          "+proj=longlat"
+          "+datum=WGS84"
+          "+no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/ras_wildfire_combined_2015_2018_mtbs_2019_2020_nifc.img
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+    CLASS
+      NAME "MTBS/NIFC 2015-2020"
+            EXPRESSION ""
+            COLOR 255 255 255
+        END
+    CLASS
+      NAME "2015"
             EXPRESSION ([pixel] = 2015)
             COLOR 0 115 76
-        END 
+        END
         CLASS
-			NAME "2016"
+      NAME "2016"
             EXPRESSION ([pixel] = 2016)
             COLOR 0 115 150
-        END 		
+        END
         CLASS
             NAME "2017"
             EXPRESSION ([pixel] = 2017)
@@ -663,11 +684,16 @@ MAP
             EXPRESSION ([pixel] = 2019)
             COLOR 240 94 35
         END
+        CLASS
+            NAME "2020"
+            EXPRESSION ([pixel] = 2020)
+            COLOR 180 110 100
+        END
         METADATA
-            "wms_title"             "mtbs-raster-00-19"
-            "wms_abstract"          "mtbs-raster-00-19"
+            "wms_title"             "mtbs-nifc-raster-15-20"
+            "wms_abstract"          "mtbs-nifc-raster-15-20"
             "gml_include_items"     "value_0"
-			#"gml_value_0_alias"     "Fire Year"
+      #"gml_value_0_alias"     "Fire Year"
         END  # end METADATA
     END # end LAYER
 
