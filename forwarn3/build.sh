@@ -13,6 +13,8 @@ apt-get install -y \
   gdal-bin=2.4.2+dfsg-1~bionic0 \
   mapserver-bin=7.4.1-1~bionic0
 
+pip3 install mapscript
+
 # Set up the Nginx Mapserver configuration.
 cd /tmp/build 
 cp ./mapserver.conf /etc/nginx/sites-available/mapserver.conf

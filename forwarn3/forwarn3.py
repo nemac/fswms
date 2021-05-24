@@ -8,6 +8,7 @@ from base import ForWarnBase
 DEFAULT_PRODUCTS_DIR = '/fsdata3/forwarn3_products'
 DEFAULT_PRODUCT_EXT = 'img'
 DEFAULT_TEMPLATES_DIR = './templates'
+DEFAULT_MAPFILE = './fw3.map'
 DEFAULT_COLOR_MAP= 'fw3_colors.include.map'
 DEFAULT_MASK_TPL = 'fw3_mask.include.map.tpl'
 DEFAULT_MASK_COLOR_MAP = 'fw3_mask_colors.include.map'
@@ -15,18 +16,25 @@ DEFAULT_LAYER_TPL = 'fw3_layer.include.map.tpl'
 DEFAULT_MASK_DIR = '/mnt/efs/forwarn/masks'
 
 
-class ForWarn3(ForWarnBase):
+class ForWarn3Map(ForWarnBase):
 
   def __init__(self):
     self.masks = ForWarnMasks()
     self.root = DEFAULT_PRODUCTS_DIR
     self._init_layers()
+    self.mapfile = mappyfile.open(DEFAULT_MAPFILE)
+    self.mapfile['layers'] = '\n'.join([ layer.render_tpl() for layer in self.layers ])
+
+  def _init_mapfile(self):
+    return mappyfile.open(DEFAULT_MAPFILE) 
 
   def _init_layers(self):
     self.layers = []
     for p in [ os.path.join(self.root, filename) for filename in os.listdir(self.root) if filename.endswith(DEFAULT_PRODUCT_EXT) ]:
       layer = ForWarn3Layer(p)
       self.layers.append(layer)
+
+
 
 
 class ForWarnMasks(ForWarnBase):
