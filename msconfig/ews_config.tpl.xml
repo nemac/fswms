@@ -27,6 +27,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
+      <viewGroup name="FW3_TEST" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -1069,6 +1070,18 @@
 		</wmsSubgroup>
 	</wmsGroup>
 
+
+  <wmsGroup gid="GFW3TEST" name="FW3_TEST" label="ForWarn III Near-Real-Time Change Maps">
+    
+    <wmsSubgroup label = "From Prior Year">
+      %(FW3_LAYERS__1YR)s
+    </wmsSubgroup>
+
+    <wmsSubgroup label = "Early Detect (Recent Priority From Prior Year)">
+      %(FW3_LAYERS__ED)s
+    </wmsSubgroup>
+
+  </wmsGroup>
 
 	<wmsGroup gid="G04" name="MODIS_Change_Detection_Products" label="ForWarn II Near-Real-Time Change Maps">
 

@@ -1724,6 +1724,10 @@ FW2_CURRENT_LEGACY_LAYERS__ALLYEAR = makeFW2CurrentLayerListFor('X_LC_ALLYEAR', 
 FW2_CURRENT_LEGACY_LAYERS__MUC = makeFW2CurrentLayerListFor('X_LC_MUC_ALL_YR', 'current_legacy')
 FW2_CURRENT_LEGACY_LAYERS__MMAX = makeFW2CurrentLayerListFor('X_LC_MMAX_ALL_YR', 'current_legacy')
 
+from fw3 import make_fw3_layer_list
+FW3_LAYERS__1YR = make_fw3_layer_list('1yr')
+FW3_LAYERS__ED  = make_fw3_layer_list('ED')
+
 NADM_DROUGHT_LAYERS = getNADMLayers()
 
 pwd = A_PATH_TO_FW2_PRODUCTS
@@ -1748,6 +1752,8 @@ configXML = template.render( {
             'TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : tacsModisChangeDetectionProductLayers,
             'GTAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : gtacModisChangeDetectionProductLayers,
             'PLANET_API_KEY'          : PLANET_API_KEY,
+            'FW3_LAYERS__1YR'         : FW3_LAYERS__1YR,
+            'FW3_LAYERS__ED'          : FW3_LAYERS__ED,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,
             'NRT_3YEAR_LAYERS'        : nrt3YrProductLayers,

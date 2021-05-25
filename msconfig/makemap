@@ -1868,4 +1868,9 @@ for s in FW2_SOURCES:
 for s in LEGACY_SOURCES:
   for p in ALL_LEGACY_PRODUCT_TYPES:
     makeCurrentMapfilesFor(s, p, '.tif')
- 
+
+
+# ForWarn 3
+from fw3 import make_all
+make_all() 
+

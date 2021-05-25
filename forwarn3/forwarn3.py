@@ -93,6 +93,7 @@ class ForWarnMasks(ForWarnBase):
     d['wcs_formats'] = d.get('wcs_formats') or 'GEOTIFF'
     d['wcs_nativeformat'] = d.get('wcs_nativeformat') or '8-bit GeoTIF'
     d['gml_include_items'] = d.get('gml_include_items') or 'value_0'
+    #"wms_onlineresource"     "https://fswms-dev.nemac.org/forwarn_compare?MAPFILE=FW_20170217_1YR_FW2"
     return d
 
  

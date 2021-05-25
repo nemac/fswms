@@ -11,6 +11,8 @@ MAP
      "init=epsg:4326"
     END
 
+    EXTENT -124.7625 24.5210 -66.9326 49.3845 # USA
+
     OUTPUTFORMAT
      NAME png
      DRIVER "GD/PNG"
@@ -19,7 +21,23 @@ MAP
      EXTENSION "png"
     END
 
-    EXTENT -124.7625 24.5210 -66.9326 49.3845 # USA
+    QUERYMAP
+        STATUS OFF
+    END
+
+    LEGEND
+      STATUS OFF
+      LABEL
+        COLOR 0 0 0
+        FONT "vera_serif"
+        TYPE truetype
+        SIZE 9
+        POSITION cl
+      END
+    END
+
+    SYMBOLSET "./symbols/symbols35.sym"
+    FONTSET   "./fonts/fonts.list"
 
     WEB
 
@@ -30,26 +48,12 @@ MAP
 
         METADATA
             "ows_enable_request"     "*"
-            #"wms_onlineresource"     "https://fswms-dev.nemac.org/forwarn_compare?MAPFILE=FW_20170217_1YR_FW2"
             "wms_srs"                "EPSG:3857 EPSG:4326 EPSG:900913 EPSG:2163"
             "wcs_srs"                "EPSG:3857 EPSG:4326 EPSG:900913 EPSG:2163"
+      	    "wcs_label"               "UNCA's NEMAC"
+            "ows_contactorganization" "UNCA's NEMAC"
             "ows_contactorganization" "UNCA's NEMAC"
         END
-    END
-
-    QUERYMAP
-        STATUS OFF
-    END
-
-    LEGEND
-      STATUS ON
-      LABEL
-        COLOR 0 0 0
-        FONT "vera_serif"
-        TYPE truetype
-        SIZE 9
-        POSITION cl
-      END
     END
 
 END
