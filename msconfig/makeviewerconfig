@@ -1564,11 +1564,10 @@ def makeFW2CurrentLayerListFor(product_type, list_type):
 def makePlanetDotComUSDANormalizedAnalyticWeeklyList():
   os.environ['PL_API_KEY'] = PLANET_API_KEY 
   client = api.ClientV1()
-  # Add variable for series ID
-  normalized_analytics_mosaics_series_id = '212368a1-6ac1-4840-9c5c-56a2836573a7'
-  mosaic_series = client.get_mosaics_for_series(normalized_analytics_mosaics_series_id) # USDA Normalized Analytic Series ID
-  mosaic_series = mosaic_series.get()
-  mosaics = mosaic_series['mosaics']
+  # grab all mosaics - this is a bit presumptious bit it may be okay if we only ever get what we expect
+  # if this ever breaks in the future this is probably why
+  allMosaics = client.get_mosaics().get()
+  mosaics = allMosaics['mosaics']
   # Separate the mosaics into a dictionary of 'current' and 'previous' containing the name of the mosaic and ending date (e.g. 2020-08-24)
   mosaic_dictionary = {}
   mosaic_dictionary['current'] = {
@@ -1581,11 +1580,11 @@ def makePlanetDotComUSDANormalizedAnalyticWeeklyList():
   }
   return mosaic_dictionary
 
-#usda_normalized_analytic_weekly = makePlanetDotComUSDANormalizedAnalyticWeeklyList()
-#USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST = usda_normalized_analytic_weekly['current']['name']
-#USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST = usda_normalized_analytic_weekly['previous']['name']
-#USDA_LATEST_END_DATE = usda_normalized_analytic_weekly['current']['date']
-#USDA_SECOND_LATEST_END_DATE = usda_normalized_analytic_weekly['previous']['date']
+usda_normalized_analytic_weekly = makePlanetDotComUSDANormalizedAnalyticWeeklyList()
+USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST = usda_normalized_analytic_weekly['current']['name']
+USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST = usda_normalized_analytic_weekly['previous']['name']
+USDA_LATEST_END_DATE = usda_normalized_analytic_weekly['current']['date']
+USDA_SECOND_LATEST_END_DATE = usda_normalized_analytic_weekly['previous']['date']
 
 GTAC_ARCHIVE_3YR = makeGtacArchiveLayerListFor('3yr')
 GTAC_ARCHIVE_5YR = makeGtacArchiveLayerListFor('5yr')
@@ -1953,11 +1952,11 @@ configXML = template.render( {
             'GTAC_ARCHIVE_5YR' : GTAC_ARCHIVE_5YR,
             'CURRENT_DATE_RANGE' : CURRENT_DATE_RANGE,
             'PREVIOUS1_DATE_RANGE' : PREVIOUS1_DATE_RANGE,
-            'PREVIOUS2_DATE_RANGE' : PREVIOUS2_DATE_RANGE
-            #'USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST' : USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST,
-            #'USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST' : USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST,
-            #'USDA_LATEST_END_DATE' : USDA_LATEST_END_DATE,
-            #'USDA_SECOND_LATEST_END_DATE' : USDA_SECOND_LATEST_END_DATE
+            'PREVIOUS2_DATE_RANGE' : PREVIOUS2_DATE_RANGE,
+            'USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST' : USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST,
+            'USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST' : USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST,
+            'USDA_LATEST_END_DATE' : USDA_LATEST_END_DATE,
+            'USDA_SECOND_LATEST_END_DATE' : USDA_SECOND_LATEST_END_DATE
           })
 
 minXML = parseString(configXML).toprettyxml('', '', 'UTF-8')
