@@ -33,7 +33,7 @@
 			<viewGroup name="US_Physiographic" />
 			<viewGroup name="Sentinel" />
       <viewGroup name="Landsat8" />
-      <!--<viewGroup name="Planet.com Imagery" />-->
+      <viewGroup name="Planet.com Imagery" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="ForWarn_Legacy_Products" label="ForWarn Legacy Products">
@@ -46,7 +46,7 @@
 			<viewGroup name="US_Physiographic" />
 			<viewGroup name="Sentinel" />
 		  <viewGroup name="Landsat8" />
-      <!--<viewGroup name="Planet.com Imagery" />-->
+      <viewGroup name="Planet.com Imagery" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="ForWarn2_Compare" label="ForWarn II Comparisons">
@@ -58,7 +58,7 @@
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="Sentinel" />
 			<viewGroup name="Landsat8" />
-      <!--<viewGroup name="Planet.com Imagery" />-->
+      <viewGroup name="Planet.com Imagery" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="MODIS_Forest_Change_Products" label="Archived Near-Real-Time Change Maps (MODIS NDVI)">
@@ -74,7 +74,7 @@
 			<viewGroup name="US_Physiographic" />
 			<viewGroup name="Sentinel" />
 			<viewGroup name="Landsat8" />
-      <!--<viewGroup name="Planet.com Imagery" />-->
+      <viewGroup name="Planet.com Imagery" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="MODIS_Phenology_Derived_Products" label="MODIS Phenology Derived Products">
@@ -11092,31 +11092,32 @@
     </wmsSubgroup>
   </wmsGroup>
 
-<!--
+
   <wmsGroup gid="G22" name="Planet.com Imagery" label="Planet.com Imagery">
-    <wmsSubgroup label="USDA Normalized 7-day for IL, IA, IN, KS, NE, OH, WI, ND, and SD">
+    <wmsSubgroup label="USDA Normalized 14-day for AR, CA, CO, FL, GA, IA, ID, IL, IN, KS, MN,
+MO, MS, MT, ND, NE, OH, SD, TX, WA, WI">
       <xyzLayer
-        lid="USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST"
+        lid="USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST"
         visible="false"
-        url="https://tiles.planet.com/basemaps/v1/planet-tiles/ USDA_NORMALIZED_ANALYTIC_WEEKLY_LATEST /gmap/${z}/${x}/${y}.png?api_key=%(PLANET_API_KEY)s&amp;proc=rgb"
+        url="https://tiles.planet.com/basemaps/v1/planet-tiles/%(USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST)s/gmap/${z}/${x}/${y}.png?api_key=%(PLANET_API_KEY)s&amp;proc=rgb"
         identify="false"
-        name="Current ending USDA_LATEST_END_DATE"
-        legend="%(SERVER_URL)s/cmapicons/planet_com_usda_normalized_7day_legend.png"
+        name="Current ending %(USDA_LATEST_END_DATE)s"
+        legend="%(SERVER_URL)s/cmapicons/planet_com_usda_normalized_14day_legend.png"
         mask="false"
       />
 
       <xyzLayer
-        lid="USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST"
+        lid="USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST"
         visible="false"
-        url="https://tiles.planet.com/basemaps/v1/planet-tiles/ USDA_NORMALIZED_ANALYTIC_WEEKLY_SECOND_LATEST  /gmap/${z}/${x}/${y}.png?api_key=%(PLANET_API_KEY)s&amp;proc=rgb"
+        url="https://tiles.planet.com/basemaps/v1/planet-tiles/%(USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST)s/gmap/${z}/${x}/${y}.png?api_key=%(PLANET_API_KEY)s&amp;proc=rgb"
         identify="false"
-        name="Previous ending USDA_SECOND_LATEST_END_DATE"
-        legend="%(SERVER_URL)s/cmapicons/planet_com_usda_normalized_7day_legend.png"
+        name="Previous ending %(USDA_SECOND_LATEST_END_DATE)s"
+        legend="%(SERVER_URL)s/cmapicons/planet_com_usda_normalized_14day_legend.png"
         mask="false"
       />
     </wmsSubgroup>
   </wmsGroup>
--->
+
 </wmsLayers>
 	<tools>
 		<tool name="Print" label="Print Map"
