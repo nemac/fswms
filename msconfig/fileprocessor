@@ -235,8 +235,8 @@ linkgroups = [
 
     {
         # /flood/fsdata/efetac_nasa/AllYear/20110601_24_2003_max.tfw
-        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_ALLYEAR", "AllYear")),
-        'regex'              : r'/'+choose("X_LC_ALLYEAR", "AllYear")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_ALLYEAR", "extra/AllYear")),
+        'regex'              : r'/'+choose("X_LC_ALLYEAR", "extra/AllYear")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -247,8 +247,8 @@ linkgroups = [
     },
     {
         # /flood/fsdata/efetac_nasa/1Year/20110601_24_2010_max.tfw
-        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_1YEAR", "1Year")),
-        'regex'              : r'/'+choose("X_LC_1YEAR", "1Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_1YEAR", "extra/1Year")),
+        'regex'              : r'/'+choose("X_LC_1YEAR", "extra/1Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -259,8 +259,8 @@ linkgroups = [
     },
     {
         # /flood/fsdata/efetac_nasa/3Year/20110601_24_2010_max.tfw
-        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_3YEAR", "3Year")),
-        'regex'              : r'/'+choose("X_LC_3YEAR", "3Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_3YEAR", "extra/3Year")),
+        'regex'              : r'/'+choose("X_LC_3YEAR", "extra/3Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -272,8 +272,8 @@ linkgroups = [
 	## MWH: 5/28/2015 new NRT 5 year product for EFETAC NASA
 	{
         # /flood/fsdata/efetac_nasa/3Year/20110601_24_2010_max.tfw
-        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_5YEAR", "5Year")),
-        'regex'              : r'/'+choose("X_LC_5YEAR", "5Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
+        'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_5YEAR", "extra/5Year")),
+        'regex'              : r'/'+choose("X_LC_5YEAR", "extra/5Year")+'/(\d{8})_(\d{2})_\d{4}'+choose("_max_lc", "_max")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
             lambda list : list[-3:][::-1]
@@ -285,7 +285,7 @@ linkgroups = [
 	##	JDM: 4/24/13 new NRT products for EFETAC NASA	
     {
         # /flood/fsdata/efetac_nasa/X_ALC_1YR/20130414_24_alc_1yr.tif
-		'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_ALC_1YR", "X_ALC_1YR")), 
+		'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_ALC_1YR", "extra/X_ALC_1YR")), 
         'regex'              : r'/'+choose("X_LC_ALC_1YR", "X_ALC_1YR")+'/(\d{8})_(\d{2})'+choose("_alc_land_1yr", "_alc_1yr")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -297,7 +297,7 @@ linkgroups = [
     },	
     {
         # /flood/fsdata/efetac_nasa/X_MUC_ALL_YR/20130422_24_muc_ayr.tif
-		'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR")), 
+		'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_MUC_ALL_YR", "extra/X_MUC_ALL_YR")), 
         'regex'              : r'/'+choose("X_LC_MUC_ALL_YR", "X_MUC_ALL_YR")+'/(\d{8})_(\d{2})'+choose("_muc_ayr_lc", "_muc_ayr")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
@@ -309,7 +309,7 @@ linkgroups = [
     },
     {
         # /flood/fsdata/efetac_nasa/X_MMAX_ALL_YR/20130414_24_mmax_ayr.tif
-		'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR")), 
+		'srcdir'             : os.path.join(FW2_DATA_DIR, "Leidos/"+choose("X_LC_MMAX_ALL_YR", "extra/X_MMAX_ALL_YR")), 
         'regex'              : r'/'+choose("X_LC_MMAX_ALL_YR", "X_MMAX_ALL_YR")+'/(\d{8})_(\d{2})'+choose("_mmax_ayr_lc", "_mmax_ayr")+'\.tif$',
         'filter_functions'   : [
             lambda list : sorted(list),
