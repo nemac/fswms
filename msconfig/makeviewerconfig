@@ -987,6 +987,7 @@ except:
     print "Can't read file layerTitles.txt; you must run 'makemap' before running this script!"
     sys.exit(-1)
 
+'''
 tacsModisChangeDetectionProductLayers = ""
 for subgroup in [
     { 'label' : '   From Prior Year',
@@ -1041,6 +1042,9 @@ for subgroup in [
                 'BREAK'         : ''
                 })
     tacsModisChangeDetectionProductLayers = tacsModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
+'''
+
+
 
 gtacModisChangeDetectionProductLayers = ""
 
@@ -1744,7 +1748,7 @@ configXML = template.render( {
             'MULTIGRAPH_SERVICE_URL'                : MULTIGRAPH_SERVICE_URL,
             'SERVER_URL'                            : SERVER_URL,
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
-            'TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : tacsModisChangeDetectionProductLayers,
+            #'TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : tacsModisChangeDetectionProductLayers,
             'GTAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : gtacModisChangeDetectionProductLayers,
             'PLANET_API_KEY'          : PLANET_API_KEY,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
