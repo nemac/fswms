@@ -496,6 +496,7 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
 ### create a tiflist entry for each .tif file in LAYER_DATA_DIR:
 ### these are symlinks of the most recent 3 
 ###
+'''
 retroPattern = r'-retro/(.+)/'
 #print "debug: LAYER_DATA_DIR=%s" % LAYER_DATA_DIR
 for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
@@ -644,7 +645,9 @@ for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
             #print THIS_DATA
             f_new.write( THIS_DATA )
             f_new.close() 
-                             
+'''
+
+                           
 ###
 ### create a tiflist entry for each .tif file in DATA_DIR+"/fsdata/efetac_nasa/ews:
 ### these are the actual data files as they are dropped off via ftp

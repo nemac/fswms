@@ -33,8 +33,8 @@
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
 			<viewGroup name="Sentinel" />
-		  <viewGroup name="Landsat8" />
-		  <viewGroup name="Planet.com Imagery" />
+      <viewGroup name="Landsat8" />
+      <viewGroup name="Planet.com Imagery" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="ForWarn_Legacy_Products" label="ForWarn Legacy Products">
@@ -46,8 +46,8 @@
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
 			<viewGroup name="Sentinel" />
-      <viewGroup name="Landsat8" />
-    	<viewGroup name="Planet.com Imagery" />
+		  <viewGroup name="Landsat8" />
+      <viewGroup name="Planet.com Imagery" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="ForWarn2_Compare" label="ForWarn II Comparisons">
@@ -60,7 +60,7 @@
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="Sentinel" />
 			<viewGroup name="Landsat8" />
-		  <viewGroup name="Planet.com Imagery" />
+      <viewGroup name="Planet.com Imagery" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="MODIS_Forest_Change_Products" label="Archived Near-Real-Time Change Maps (MODIS NDVI)">
