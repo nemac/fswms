@@ -166,7 +166,7 @@ def make_mapfile(path):
     f_new = open(mapfile_path, "w")
     f_new.write(template.render( {
         'DATA_DIR'              : DATA_DIR,
-        'SERVICE_URL'           : "%s/%s?MAPFILE=%s" % (SERVER_URL, 'fw3_test', layer_id),
+        'SERVICE_URL'           : "%s/%s?MAPFILE=%s" % (SERVER_URL, 'forwarn3', layer_id),
         'LAYERS'                : layer_string,
         'WMS_SRS'               : "EPSG:4326 EPSG:2163 EPSG:3857 EPSG:900913",
         'MAPFILE_PROJECTION'    : '"init=epsg:3857"',
@@ -203,7 +203,7 @@ WMS_LAYER_TEMPLATE = FrontendTemplate(string="""
     %(SELECTED)s %(BREAK)s
     lid="%(LAYER_LID)s"
     visible="false"
-    url="%(SERVER_URL)s/fw3_test?TRANSPARENT=true"
+    url="%(SERVER_URL)s/forwarn3?TRANSPARENT=true"
     srs="EPSG:3857"
     layers="%(LAYER_NAME)s"
     name="%(LAYER_TITLE)s"

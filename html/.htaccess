@@ -1,5 +1,5 @@
 Header set Access-Control-Allow-Origin "*"
-<Files "fw3_test">
+<Files "forwarn3">
     Allow from all
     SetHandler cgi-script
 </Files>

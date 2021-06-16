@@ -9,6 +9,7 @@ html/cmapicons
 html/efetac_nasa_percent_change_cmap.csv
 html/rsac_fhtet_percent_change_cmap.csv
 html/view/config
+msconfig/forwarn3_maps/*\.map
 msconfig/forwarn2_maps/*\.map
 msconfig/Config.py
 msconfig/derivatives.map
