@@ -27,7 +27,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		        <viewGroup name="FW3_TEST" />
+		  <viewGroup name="ForWarn3" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -55,7 +55,7 @@
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
 			<viewGroup name="GLAM_WMTS" />
-		        <viewGroup name="FW3_TEST" />
+		  <viewGroup name="ForWarn3" />
 			<viewGroup name="ForWarn2_Compare_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="Sentinel" />
@@ -67,7 +67,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		        <viewGroup name="FW3_TEST" />
+		  <viewGroup name="ForWarn3" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Archived_FW2" />
 			<viewGroup name="Archived_TACS" />
@@ -1073,7 +1073,7 @@
 	</wmsGroup>
 
 
-  <wmsGroup gid="GFW3TEST" name="FW3_TEST" label="ForWarn III Near-Real-Time Change Maps">
+  <wmsGroup gid="GForWarn3" name="ForWarn3" label="ForWarn III Near-Real-Time Change Maps">
     
     <wmsSubgroup label = "From Prior Year">
       %(FW3_LAYERS__1YR)s
