@@ -1,0 +1,59 @@
+MAP
+    #CONFIG "MS_ERRORFILE" "./log"
+    #DEBUG 5
+
+    NAME fw3_ms
+    MAXSIZE 4000      
+    IMAGECOLOR 255 255 255
+    SIZE 600 400
+    STATUS OFF
+    PROJECTION
+     "init=epsg:4326"
+    END
+
+    EXTENT -124.7625 24.5210 -66.9326 49.3845 # USA
+
+    OUTPUTFORMAT
+     NAME png
+     DRIVER "GD/PNG"
+     MIMETYPE "image/png"
+     IMAGEMODE RGB
+     EXTENSION "png"
+    END
+
+    QUERYMAP
+        STATUS OFF
+    END
+
+    LEGEND
+      STATUS OFF
+      LABEL
+        COLOR 0 0 0
+        FONT "vera_serif"
+        TYPE truetype
+        SIZE 9
+        POSITION cl
+      END
+    END
+
+    SYMBOLSET "./symbols/symbols35.sym"
+    FONTSET   "./fonts/fonts.list"
+
+    WEB
+
+        IMAGEPATH "./tmp"
+        IMAGEURL "/tmp/"
+        HEADER "./templates/query_header.html"
+        FOOTER "./templates/query_footer.html"
+
+        METADATA
+            "ows_enable_request"     "*"
+            "wms_srs"                "EPSG:3857 EPSG:4326 EPSG:900913 EPSG:2163"
+            "wcs_srs"                "EPSG:3857 EPSG:4326 EPSG:900913 EPSG:2163"
+      	    "wcs_label"               "UNCA's NEMAC"
+            "ows_contactorganization" "UNCA's NEMAC"
+            "ows_contactorganization" "UNCA's NEMAC"
+        END
+    END
+
+END

@@ -1,0 +1,5 @@
+        CLASS
+            EXPRESSION ([pixel] > 0)
+            COLOR 0 0 0
+        END
+
