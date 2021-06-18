@@ -71,8 +71,20 @@ MAP
     LEGEND
         KEYSIZE 20 10
     END
-
-	LAYER
+    LAYER
+      NAME "smap_9k_anomaly_weekly_top"
+      TYPE RASTER
+      STATUS OFF
+      CONNECTION "https://cloud.csiss.gmu.edu/smap_server/cgi-bin/mapserv?MAP=/WMS/SMAP-9KM-ANOMALY-WEEKLY-TOP_2021.map"
+      CONNECTIONTYPE WMS
+      METADATA
+          "wms_srs"             "EPSG:4326"
+          "wms_name"            "SMAP-9KM-ANOMALY-WEEKLY-TOP_2021_01_2021.01.04_2021.01.10"
+          "wms_server_version"  "1.1.1"
+          "wms_format"          "image/png"
+      END
+    END
+    LAYER
         NAME     landcover-2005-NALCMS
         PROJECTION
           "+proj=laea"
