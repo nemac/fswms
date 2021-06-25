@@ -1722,20 +1722,7 @@
       />
     </wmsSubgroup>
 
-    <wmsSubgroup label="SMAP 9K Anomaly Data">
-      <wmsLayer label="SMAP 9k Top Anomaly (Weekly)"
-        lid="SMAP9KTOPWEEKLY"
-        visible="false"
-        url="%(SERVER_URL)s/rlayers"
-        srs="EPSG:3857"
-        layers="smap_9k_anomaly_weekly_top"
-        name="SMAP 9k Top Anomaly (Weekly)"
-        identify="false"
-        legend="%(SERVER_URL)s/rlayers?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=smap_9k_anomaly_weekly_top&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
-"
-      />
-    </wmsSubgroup>
-
+    %(SMAP_9K_ANOMALY_TOP_WEEKLY)s
 
 		<wmsSubgroup label="US Drought Monitor (NDMC)">
 				<wmsLayer
