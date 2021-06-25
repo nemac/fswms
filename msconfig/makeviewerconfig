@@ -1741,6 +1741,10 @@ CURRENT_DATE_RANGE = date_ranges[0]
 PREVIOUS1_DATE_RANGE = date_ranges[1]
 PREVIOUS2_DATE_RANGE = date_ranges[2]
 
+from smap import SMAP9kAnomalyTopWeekly as smap_weekly
+smap_layer = smap_weekly()
+SMAP_9K_ANOMALY_TOP_WEEKLY = smap_layer.render_view_tpl()
+
 drtLayers = getDRTLayers()
 #End NRT 8 day & drought monitor automation-------------------------------------------------
 
@@ -1757,6 +1761,7 @@ configXML = template.render( {
             'PLANET_API_KEY'          : PLANET_API_KEY,
             'FW3_LAYERS__1YR'         : FW3_LAYERS__1YR,
             'FW3_LAYERS__ED'          : FW3_LAYERS__ED,
+            'SMAP_9K_ANOMALY_TOP_WEEKLY' : SMAP_9K_ANOMALY_TOP_WEEKLY,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,
             'NRT_3YEAR_LAYERS'        : nrt3YrProductLayers,
