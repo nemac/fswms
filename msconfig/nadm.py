@@ -112,7 +112,7 @@ class NADM():
     layer_name = config['title']
     datestring = config['datestring']
     test_url = 'https://gis.ncdc.noaa.gov/arcgis/rest/services/nadm/NADM/MapServer/5/query?f=json&where=(YEAR_MONTH%20%3D%20%27{datestring}%27)%20AND%20(1%3D1)&returnGeometry=false&returnCountOnly=true&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=OBJECTID%20ASC&outSR=102100&resultOffset=0&resultRecordCount=50'.format(datestring=datestring)
-    print 'Testing USDM layer: {layer_name}'.format(layer_name=layer_name)
+    print 'Testing NADM layer: {layer_name}'.format(layer_name=layer_name)
     r = requests.get(test_url, verify=False)
     if not r.ok or r.json()['count'] == 0:
       raise ValueError('Layer is broken or not ready yet: {layer_name}'.format(layer_name=layer_name))
