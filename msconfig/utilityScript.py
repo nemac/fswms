@@ -11,6 +11,48 @@ except:
     exit(-1)
 
 
+def getProcessedLids(csvName):
+  processed_lids = dict()
+  if csvName in processed_lids:
+    return processed_lids[csvName]
+  lids_list = []
+  lyrs_dict = dict()
+  f = open(csvName, "r");
+  for line in f:
+    sp = line.split(',')
+    lid = sp[1].upper().rstrip()
+    lyrs_dict[sp[0]] = lid
+    lids_list.append(lid)
+  f.close();
+  file_lids = {
+    'lyrs_dict': lyrs_dict,
+    'lids_list': lids_list
+  }
+  processed_lids[csvName] = file_lids
+  return file_lids
+
+
+def getLID(layerName, csvName):
+  file_lids = getProcessedLids(csvName)
+  lids_list = file_lids['lids_list']
+  lyrs_dict = file_lids['lyrs_dict']
+
+  layerName = layerName.rstrip()
+  if layerName in lyrs_dict:
+    nlid = lyrs_dict[layerName]
+  else: #this is new one, iterate and add to file
+    highest_lid = max(lids_list)
+    nlid = next_alpha(highest_lid)
+
+    lyrs_dict[layerName] = nlid
+    lids_list.append(nlid)
+    
+    f = open(csvName, "a");
+    f.write(layerName+ "," + nlid + "\n")
+    f.close()
+  return nlid
+
+
 def getMonthAndDayDateRangeString(d):
   d2 = d - datetime.timedelta(days=23)
   d1_day = datetime.datetime.strftime(d, '%d').lstrip('0')

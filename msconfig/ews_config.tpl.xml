@@ -1724,21 +1724,13 @@
 
     %(SMAP_9K_ANOMALY_TOP_WEEKLY)s
 
-		<wmsSubgroup label="US Drought Monitor (NDMC)">
-				<wmsLayer
-					 lid="AHZ"
-					 visible="false"
-					 url="http://ndmc-001.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/usdm/service/usdm_current_wms.map&amp;TRANSPARENT=true"
-					 srs="EPSG:3857"
-					 layers="usdm_current"
-					 styles="default"
-					 identify="false"
-					 name="Current Drought Monitor"
-					 legend="%(SERVER_URL)s/cmapicons/drought-monitor.png" />
-		</wmsSubgroup>
-				%(DRT_LAYERS)s
+		<wmsSubgroup label="US Drought Monitor (NDMC)" break="true"></wmsSubgroup>
 
-		%(NADM_DROUGHT_LAYERS)s
+  	%(USDM_LAYERS)s
+
+    <wmsSubgroup label="North American Drought Monitor (NADM)" break="true"></wmsSubgroup>
+
+		%(NADM_LAYERS)s
 
 	<wmsSubgroup label="CONUS VegDRI Veg. Moisture Status (USGS/NDMC; weekly eMODIS)">
 		<wmsLayer

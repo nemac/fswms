@@ -1,9 +1,12 @@
 #! /usr/bin/python
 
 import sys, re, os, glob, getopt, time
-from utilityScript import getMonthAndDayDateRangeString, makeDateRangeQueryParam, getCurrentDates # our own custom utility script
+from utilityScript import getLID, getMonthAndDayDateRangeString, makeDateRangeQueryParam, getCurrentDates # our own custom utility script
 from xml.dom.minidom import parseString
 from planet import api
+from usdm import USDM
+from nadm import NADM
+from smap import SMAP9kAnomalyTopWeekly as smap_weekly
 
 sys.path.append("../var")
 
@@ -22,7 +25,6 @@ opts, args = getopt.getopt(sys.argv[1:],"al")
 
 use_all_lands = False
 
-processed_lids = dict()
 
 for opt, arg in opts:
 	if opt in ("-al"):
@@ -79,19 +81,7 @@ nrtWMSLayerTemplate = Template(string="""
           legend="%(LEGEND)s"
           mask="%(MASK)s"/>	
 """)
-#drought monitor template    
-drtWMSLayerTemplate = Template(string="""
-        <wmsLayer
-          lid="%(LAYER_LID)s"
-          visible="false"
-          url="%(DRT_URL)s" 
-          srs="EPSG:900913"
-          layers="%(LAYER_NAME)s"
-          name="%(LAYER_TITLE)s"
-          styles="default" 
-          identify="false"
-          legend="%(SERVER_URL)s/cmapicons/drought-monitor.png"/>""")    
-          
+         
 
 def next_alpha(s):
     s = s.lower();
@@ -108,144 +98,6 @@ def next_alpha(s):
     else:
         return ('a' * (len(s) + 1)).upper()
 
-def getLID(layerName, csvName):
-    file_lids = getProcessedLids(csvName)
-    lids_list = file_lids['lids_list']
-    lyrs_dict = file_lids['lyrs_dict']
-
-    layerName = layerName.rstrip()
-    if layerName in lyrs_dict:
-        nlid = lyrs_dict[layerName]
-    else: #this is new one, iterate and add to file
-        highest_lid = max(lids_list)
-        nlid = next_alpha(highest_lid)
-
-        lyrs_dict[layerName] = nlid
-        lids_list.append(nlid)
-        
-        f = open(csvName, "a");
-        f.write(layerName+ "," + nlid + "\n")
-        f.close()
-    return nlid
-
-def getProcessedLids(csvName):
-    if csvName in processed_lids:
-        return processed_lids[csvName]
-
-    lids_list = []
-    lyrs_dict = dict()
-
-    f = open(csvName, "r");
-    for line in f:
-        sp = line.split(',')
-        lid = sp[1].upper().rstrip()
-        lyrs_dict[sp[0]] = lid
-        lids_list.append(lid)
-    f.close();
-
-    file_lids = {
-        'lyrs_dict': lyrs_dict,
-        'lids_list': lids_list
-    }
-
-    processed_lids[csvName] = file_lids
-    return file_lids
-
-NADM_LAYER_TEMPLATE = Template(string="""
-    <restLayer
-      lid="NADM_%(LID_SUFFIX)s"
-      name="%(LAYER_TITLE)s"
-      visible="false"
-      url="https://gis.ncdc.noaa.gov/arcgis/rest/services/nadm/NADM/MapServer/export?TRANSPARENT=true&amp;layers=show%%3A5&amp;LAYERDEFS={%%225%%22%%3A%%22YEAR_MONTH%%3D%%27%(YEAR_MONTH)s%%27%%22}"
-      format="png">
-        <param name="IMAGESR" value="3857"></param>
-        <param name="BBOXSR" value="3857"></param>
-    </restLayer>
-""")
-
-
-def getNADMLayers():
-    #automating the (NADM) drought monitor layers
-    drtList  = []
-    startDate = "200211" #year-month
-    today = datetime.datetime.today();
-    #Loop through dates starting w/ startDate
-    loopDate = datetime.datetime.strptime(startDate,'%Y%m');
-    while (today > loopDate):
-        drtList.append({
-            'LID_SUFFIX'      : loopDate.strftime('%Y%m'),
-            'YEAR_MONTH'      : loopDate.strftime('%Y%m'),
-            'LAYER_TITLE'     : loopDate.strftime('%b %Y')
-        })
-        year = loopDate.strftime('%Y')
-        month = loopDate.strftime('%m')
-        if month == '12':
-            year = str(int(year) + 1)
-            month = '01'
-        else:
-            month = str(int(month) + 1)
-        loopDate = datetime.datetime.strptime('{0}{1}'.format(year, month), '%Y%m')
-
-    # Reverse the list so that newest dates are on top always
-    drtList.reverse()
-
-    # Remove the entry for the month of today()
-    drtList = drtList[1:]
-
-    # Add the latest NADM as a separate "Current" layer
-    layers = '<wmsSubgroup label="North American Drought Monitor (NADM)">'
-    layers += NADM_LAYER_TEMPLATE.render({
-      'LID_SUFFIX' : 'CURRENT',
-      'YEAR_MONTH' : drtList[0]['YEAR_MONTH'],
-      'LAYER_TITLE' : 'Current Drought Monitor (NADM)'
-    })
-    layers += '\n' + '</wmsSubgroup>\n'
-
-    year = drtList[0]['YEAR_MONTH'][:4]
-    layers += '<wmsSubgroup label="{0}" collapsible="true">\n'.format(year)
-    for drtDict in drtList:
-        layerYear = drtDict['YEAR_MONTH'][:4]
-        if layerYear < year:
-          year = layerYear
-          layers += '</wmsSubgroup>\n'
-          layers += '<wmsSubgroup label="{0}" collapsible="true">\n'.format(year)
-        layers = layers + NADM_LAYER_TEMPLATE.render(drtDict)
-    layers += "</wmsSubgroup>\n"
-    return layers
-
-
-def getDRTLayers():
-    #automating the drought monitor layers
-    #note: leave a blank space at the botton of the csv to start
-    drtList  = []
-    startDate = "000104" #year-month-day
-    today = datetime.datetime.today();
-    #Loop through dates starting w/ startDate
-    #until within 8 days of current date
-    loopDate = datetime.datetime.strptime(startDate,'%y%m%d');
-    while (today > loopDate):
-       lid = getLID("usdm"+loopDate.strftime('%y%m%d'), DRT_LIDFILE_PATH)
-       drtURL = "http://ndmc-001.unl.edu:8080/cgi-bin/mapserv.exe?map=/ms4w/apps/usdm/service/usdm_"+loopDate.strftime('%Y%m%d')+"_wms.map&amp;TRANSPARENT=true"
-       drtList.append({ 'LAYER_LID'       : lid,
-                        'LAYER_NAME'      : "usdm"+loopDate.strftime('%Y%m%d'),
-                        'LAYER_TITLE'     : loopDate.strftime('%m/%d/%Y'),
-                        'SERVER_URL'      : SERVER_URL,
-                        'DRT_URL'         : drtURL
-       })
-       loopDate = loopDate + datetime.timedelta(days=7)
-    drtList.reverse() #reverse the list so that newest dates are on top always
-
-    year = drtList[0]['LAYER_NAME'].lstrip('usdm')[0:4]
-    layers = '<wmsSubgroup label="{0}" collapsible="true">\n'.format(year)
-    for drtDict in drtList:
-        layerYear = drtDict['LAYER_NAME'].lstrip('usdm')[0:4]
-        if layerYear < year:
-          year = layerYear
-          layers += '</wmsSubgroup>\n'
-          layers += '<wmsSubgroup label="{0}" collapsible="true">\n'.format(year)
-        layers = layers + drtWMSLayerTemplate.render(drtDict)
-    layers += "</wmsSubgroup>\n"
-    return layers                 
 
 
 def getNRTLayers(dataDir, groupName, wrapName, legendBool, fileExt, maskBool):
@@ -1731,8 +1583,6 @@ from fw3 import make_fw3_layer_list
 FW3_LAYERS__1YR = make_fw3_layer_list('1yr')
 FW3_LAYERS__ED  = make_fw3_layer_list('ED')
 
-NADM_DROUGHT_LAYERS = getNADMLayers()
-
 pwd = A_PATH_TO_FW2_PRODUCTS
 current_dates = getCurrentDates(pwd)
 date_ranges = map(getMonthAndDayDateRangeString, current_dates)
@@ -1741,11 +1591,15 @@ CURRENT_DATE_RANGE = date_ranges[0]
 PREVIOUS1_DATE_RANGE = date_ranges[1]
 PREVIOUS2_DATE_RANGE = date_ranges[2]
 
-from smap import SMAP9kAnomalyTopWeekly as smap_weekly
 smap_layer = smap_weekly()
 SMAP_9K_ANOMALY_TOP_WEEKLY = smap_layer.render_view_tpl()
 
-drtLayers = getDRTLayers()
+usdm_manager = USDM()
+usdm_layers = usdm_manager.render()
+
+nadm_manager = NADM()
+nadm_layers = nadm_manager.render()
+
 #End NRT 8 day & drought monitor automation-------------------------------------------------
 
 
@@ -1851,7 +1705,8 @@ configXML = template.render( {
             'NRT_2006_MMAXYR_LAYERS'       : nrt2006MMAXAllYr,
             'GLAM_WMTS_2021_LAYERS' : GLAM_WMTS_2021_LAYERS,
             'GLAM_WMTS_2020_LAYERS' : GLAM_WMTS_2020_LAYERS,
-            'DRT_LAYERS'      : drtLayers,
+            'USDM_LAYERS'      : usdm_layers,
+            'NADM_LAYERS' : nadm_layers,
             'FW2_CURRENT_LAYERS__PRIOR_YEAR' : FW2_CURRENT_LAYERS__PRIOR_YEAR,
             'FW2_CURRENT_LAYERS__ALC' : FW2_CURRENT_LAYERS__ALC,
             'FW2_CURRENT_LAYERS__3_YEAR' : FW2_CURRENT_LAYERS__3_YEAR,
@@ -1952,7 +1807,6 @@ configXML = template.render( {
             'FW2_ARCHIVE_2005__PCTPROGRESS' : FW2_ARCHIVE_2005__PCTPROGRESS,
             'FW2_ARCHIVE_2004__PCTPROGRESS' : FW2_ARCHIVE_2004__PCTPROGRESS,
             'FW2_ARCHIVE_2003__PCTPROGRESS' : FW2_ARCHIVE_2003__PCTPROGRESS,
-            'NADM_DROUGHT_LAYERS' : NADM_DROUGHT_LAYERS,
             'SENTINEL2_CURRENT_DATE_RANGE' : SENTINEL2_CURRENT_DATE_RANGE,
             'SENTINEL2_PRIOR_YEAR_DATE_RANGE' : SENTINEL2_PRIOR_YEAR_DATE_RANGE,
             'LANDSAT8_CURRENT_DATE_RANGE': LANDSAT8_CURRENT_DATE_RANGE,
