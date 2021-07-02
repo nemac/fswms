@@ -1,5 +1,7 @@
 import datetime, os, re, time, sys, math, requests
 
+sys.path.append("../var")
+
 try:
     from Config import *
     import datetime
