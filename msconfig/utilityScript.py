@@ -32,6 +32,22 @@ def getProcessedLids(csvName):
   return file_lids
 
 
+def next_alpha(s):
+    s = s.lower();
+    strip_zs = s.rstrip('z')
+    if strip_zs:
+        leading_chrs = strip_zs[:-1]
+        last_chr = strip_zs[-1]
+        new_chr = chr((ord(last_chr) + 1))
+        # if the last characters are 'z's then you need to append that many 'a's to the string                        
+        trailing_a_chrs = 'a' * (len(s) - len(strip_zs))
+
+        new_string = leading_chrs + new_chr + trailing_a_chrs
+        return new_string.upper()
+    else:
+        return ('a' * (len(s) + 1)).upper()
+
+
 def getLID(layerName, csvName):
   file_lids = getProcessedLids(csvName)
   lids_list = file_lids['lids_list']
