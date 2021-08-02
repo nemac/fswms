@@ -1033,16 +1033,6 @@
 			 name="2018 surveys"
 			 legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2018_poly&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 
-      <wmsLayer
-       lid="ADS2019PTS"
-       visible="false"
-       url="%(SERVER_URL)s/ads?TRANSPARENT=true"
-       srs="EPSG:3857"
-       layers="ads_2019_pts"
-       styles="default"
-       identify="true"
-       name="2019 surveys (point)"
-       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2019_pts&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
      <wmsLayer
        lid="ADS2019POLY"
        visible="false"
@@ -1051,9 +1041,30 @@
        layers="ads_2019_poly"
        styles="default"
        identify="true"
-       name="2019 surveys (polygon)"
+       name="2019 surveys"
        legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2019_poly&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 
+      <wmsLayer
+       lid="ADS2020PTS"
+       visible="false"
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true"
+       srs="EPSG:3857"
+       layers="ads_2020_pts"
+       styles="default"
+       identify="true"
+       name="2020 surveys (points)"
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2020_pts&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
+      <wmsLayer
+       lid="ADS2020POLY"
+       visible="false"
+       url="%(SERVER_URL)s/ads?TRANSPARENT=true"
+       srs="EPSG:3857"
+       layers="ads_2020_poly"
+       styles="default"
+       identify="true"
+       name="2020 surveys (polygon)"
+       legend="%(SERVER_URL)s/ads?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=ads_2020_poly&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 
 		<wmsLayer
 			 lid="BNE"
