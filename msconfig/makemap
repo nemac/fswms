@@ -4,8 +4,7 @@
 ###    {ews.map,ewswgs84.map,ewswcs.map etc...}
 ### from the template files
 ###    ews.map.tmpl   - template for whole mapfile
-###    ews.layer.tmpl - template for each layer section
-### by looping over all tif files found in
+###    ews.layer.tmpl - template for each layer section ### by looping over all tif files found in
 ###    * LAYER_DATA_DIR
 ###    * DATA_DIR/fsdata/efetac_nasa/ews
 ### 
@@ -22,7 +21,7 @@
 #print "debug: at 1"
 
 from osgeo import gdal, osr
-from utilityScript import makeDateRangeQueryParam, getCurrentDates # our own custom utility script
+from util import *
 import sys, os, subprocess, datetime, re, shutil, traceback, getopt;
 
 opts, args = getopt.getopt(sys.argv[1:],"al")
@@ -56,25 +55,21 @@ except:
     print "as a starting point --- make a copy of that file called 'Config.py', and edit appropriately."
     exit(-1)
 
-from LegendConfig import *
+class Template:
+    def __init__(self, file):
+        f = open(file, "r")
+        self.contents = ""
+        for line in f:
+            self.contents = self.contents + line
+        f.close
+    def render(self, dict):
+        return self.contents % dict
+
 
 #print "debug: at 3"
 
 # jdm 5/9/13: for each of these go through the ewsMask and create a relavent entry
 # these should be read out of an external config file but I have hardcoded for now
-ewsMask = [
-    {'name' : 'MaskForForest'},
-    {'name' : 'MaskForAgriculture'},
-    {'name' : 'MaskForConiferForest'},
-    {'name' : 'MaskForDeciduousForest'},
-    {'name' : 'MaskForGrass'},
-    {'name' : 'MaskForMixedForest'},
-    {'name' : 'MaskForNonVegetated'},
-    {'name' : 'MaskForShrubland'},
-    {'name' : 'MaskForUrban'},
-    {'name' : 'MaskForWetland'}
-    ]   
-
 
 
 mapfilesWritten = []
@@ -95,99 +90,6 @@ tiflist = []
 
 #print "debug: at 4"
 
-def rfind(dir, pattern):
-    """Recursive find: returns a list of all files located in a directory or any of its descendent directories,
-    and whose names match a regular expression pattern."""
-    files = []
-    for file in os.listdir(dir):
-        if os.path.isdir(os.path.join(dir, file)):
-            files = files + rfind(os.path.join(dir,file), pattern)
-        if re.match(pattern, file):
-            files.append(os.path.join(dir,file))
-    return files
-
-def getproj(tif):
-    projectionWkt = getwkt(tif)
-    spatialReferenceObj = osr.SpatialReference(projectionWkt)
-    projectionProj4 = spatialReferenceObj.ExportToProj4()
-    return projectionProj4
-
-def interp(string):
-  locals  = sys._getframe(1).f_locals
-  globals = sys._getframe(1).f_globals
-  for item in re.findall(r'#\{([^{]*)\}', string):
-    string = string.replace('#{%s}' % item,
-                            str(eval(item, globals, locals)))
-  return string
-
-def getwkt(tif):
-
-    #function to get the well known text version of the
-    #  spatail reference (proejction) of the image (tif)
-    wktFile = tif + '.wkt'
-    wktData = ''
-
-    #check if a wkt tile exists
-    wktFileExists = os.path.exists(wktFile)
-
-    if wktFileExists:
-        #if the wkt file exists read the file
-        #  trying to avoid doing gdal.open its resource expensive
-        #  doing a normal file read of the of MUCH smaller text file seems to speed things up
-        with open(wktFile, 'r') as myfile:
-            wktData = myfile.read()
-
-    else:
-        #if the wkt file does not exist thane use gdal to write it.
-        dataSet = gdal.Open( tif, gdal.GA_ReadOnly )
-        wktData = dataSet.GetProjection()
-        f = open( wktFile, 'w' )
-        f.write( wktData )
-        f.close()
-
-    return wktData
-
-#mark out for testing new function above
-#def getwkt(tif):
-#    dataSet = gdal.Open( tif, gdal.GA_ReadOnly )
-#    return dataSet.GetProjection()
-
-# formatproj reformats a "proj4" projection string into the form required by a Mapserver mapfile.
-# Specifically, it splits it into one expression per line, delimited by double quotes.  It takes
-# an optional indentation level, and indents the returned string by that number of spaces.
-def formatproj(projstring, indentlevel=0):
-    answer = ""
-    indentation = " "*indentlevel
-    lines = []
-    for line in re.split(r'\s+', projstring):
-        if line != "":
-            lines.append("%s%s\"%s\"" % (answer, indentation, line))
-    return "\n".join(lines)
-
-# getModDate gets the date when a file was last edited and formats that timestamp in a readable form
-def getModDate(filename):
-    t = os.stat(filename).st_mtime
-    return datetime.datetime.fromtimestamp(t)
-
-class Template:
-    def __init__(self, file):
-        f = open(file, "r")
-        self.contents = ""
-        for line in f:
-            self.contents = self.contents + line
-        f.close
-    def render(self, dict):
-        return self.contents % dict
-
-###
-### This function simply opens a file for writing, and appends the name of the file
-### to the mapfilesWritten array, which is used at the bottom of this script to
-### write the index.html file with the list of all the WMS addresses.
-###
-def openMapfileForWriting(filename):
-    mapfilesWritten.append(filename)
-    return open(filename, "w");
-
 
 #print "debug: at 9"
 
@@ -195,78 +97,6 @@ def openMapfileForWriting(filename):
 ### add in the gtac fhtet files to be available in an archive format
 ### these will go in ews.map also but will utilize a diff color map: gtac_fhtet_percent_change_cmap.cmap
 ###
-gtac_list = []
-ARCHIVE_DIR = DATA_DIR + "/fsdata/gtac_fhtet/ews" #DATA_DIR is "/flood" currently
-for tif in sorted([file for file in os.listdir(ARCHIVE_DIR) if file.endswith(".tif")], reverse=False):
-    try:
-        tif = re.sub('^' + ARCHIVE_DIR + '/', '', tif)
-        tif_fullpath = ARCHIVE_DIR + '/' + tif;
-        proj = getproj(tif_fullpath)
-        modDate = getModDate(tif_fullpath)
-        nameform = re.sub(r'^.*/', '', tif)
-        if ('3yr') in nameform or ('5yr') in nameform:
-            group = "GTAC-FHTET"
-            group_abstract = "Layers uploaded by GTAC-FHTET"
-            colormapline   = 'INCLUDE "gtac_fhtet_percent_change_cmap.cmap"'
-	    # GTAC is now called GTAC
- 	    # We are gradually renaming relevant data, prioritizing user-facing content first
-            keyimage       = "cmapicons/GTAC-FHTET_CT_7-6-2011_clipped.png"
-            if re.sub(r'/.*\/|.*_|\.tif$', '', nameform) == "bd":
-                layerName = group + "_" + re.sub(r'_.*$', '', nameform) + "bd"
-            else:
-                layerName = group + "_" + re.sub(r'_.*$', '', nameform)
-            if '3yr' in nameform:
-                layerName = layerName + "_3yr"
-            else:
-                layerName = layerName + "_5yr"
-            layerTitle = tif
-
-            gtac_list.append({
-                             'PROJ'            : formatproj(proj,10),
-                             'NAME'            : layerName,
-                             'DATA'            : ARCHIVE_DIR + '/' + tif,
-                             'TITLE'           : layerTitle,
-                             'ABSTRACT'        : layerTitle,
-                             'COLORMAPLINE'    : colormapline,
-                             'KEYIMAGE'        : keyimage,
-                             'MASK'            : '',
-			     'GROUPTEXT'       : ''
-                             })
-
-            layerTitles[layerName] = layerTitle 
-    except:
-        print 'except occured'
-        continue
-
-
-def makeGtacArchiveMapfiles():
-    layerTemplate = Template('ews_gen.layer.tpl.map')
-    for tifdict in gtac_list:
-        layer_block  = layerTemplate.render(tifdict)
-        mapTemplate = Template("ews.map.tmpl")
-        SERVICE_NAME = "dyna_ews"
-        layerName =  tifdict['NAME']
-        f_new = openMapfileForWriting("dyna_maps/"+layerName+".map")
-        f_new.write( mapTemplate.render( {
-	    'DATA_DIR'                : DATA_DIR,
-	    'LAYERS'                  : layer_block,
-	    'WMS_SRS'                 : "EPSG:3857 EPSG:4326 EPSG:900913",
-	    'MAPFILE_PROJECTION'      : '"init=epsg:3857"',
-	    'SERVICE_NAME'            : SERVICE_NAME,
-	    'TEMP_FILE_PREFIX'        : "ms_%s" % (SERVICE_NAME),
-	    'MAPFILE'                 : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
-	    'OWS_TITLE'               : "NEMAC %s WMS" % (SERVICE_NAME),
-	    'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
-	    'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
-	    'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-	    'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
-	    'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
-        } ) )
-
-    f_new.close()
-
-
-makeGtacArchiveMapfiles()
 
 #print "debug: at 5"
 
@@ -383,7 +213,9 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool, col
                     layers = layers + layerTemplate.render(tifdict)    
                     mapTemplate = Template("ews.map.tmpl")
                     SERVICE_NAME = "dyna_ews"
-                    f_new = openMapfileForWriting("dyna_maps/"+layerName+".map")
+                    f_new_filename = "dyna_maps/"+layerName+".map"
+                    f_new = openMapfileForWriting(f_new_filename)
+                    mapfilesWritten.append(f_new_filename)
                     f_new.write( mapTemplate.render( {
                                 'DATA_DIR'                : DATA_DIR,
                                 'LAYERS'                  : layers,
@@ -489,164 +321,6 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
         if tifdict['PROJVALID']:
             layers = layers + layerTemplate.render(tifdict)    
     return layers
-
-#print "debug: at 7"
-
-###
-### create a tiflist entry for each .tif file in LAYER_DATA_DIR:
-### these are symlinks of the most recent 3 
-###
-'''
-retroPattern = r'-retro/(.+)/'
-#print "debug: LAYER_DATA_DIR=%s" % LAYER_DATA_DIR
-for tif in rfind(LAYER_DATA_DIR, r'^.*\.tif$'):
-    #print "debug: at 7.1"
-    dynaList  = []
-    tif = re.sub('^' + LAYER_DATA_DIR + '/', '', tif)
-    m = re.search(retroPattern, tif)
-    #print "debug: at 7.2"
-    if m != None:
-        baseLineFolder = m.group(1) + "_"
-    else:
-        baseLineFolder = ""
-    tif_fullpath = LAYER_DATA_DIR + '/' + tif;
-
-    #print "debug: at 7.3"
-    try:
-        proj = getproj(tif_fullpath)
-    except:
-        continue
-
-    #print "debug: at 7.4"
-    if tif.startswith("gtac"):
-        group          = "GTAC-FHTET"
-        group_abstract = "Layers uploaded by GTAC-FHTET"
-        colormapfile   = "gtac_fhtet_percent_change_cmap.cmap"
-        colormapcsv    = "gtac_fhtet_percent_change_cmap.csv"
-        keyimage       = "getLegend(group)"
-    else:
-        group          = "EFETAC-NASA"
-        group_abstract = "Layers uploaded by TACs-NASA"
-        colormapfile   = "new-forwarn2-standard-2.cmap"
-        colormapcsv    = "efetac_nasa_percent_change_cmap.csv"
-        keyimage       = "cmapicons/new-forwarn2-standard-legend-2.png"
-
-    #print "debug: at 7.5"
-    modDate = getModDate(tif_fullpath)
-    nameform = re.sub(r'^.*/', '', tif)
-    nameformStart = re.sub(r'_.*$', '', nameform)
-    layerNameForm = nameformStart
-
-    #print "debug: at 7.6"
-    layerName  = group + "_" + baseLineFolder + layerNameForm    # change this to be like "EFETAC-NASA_3yr-baseline_current"
-    layerTitle = tif
-    tiflist.append({ 'TIF'             : tif,
-                     'PROJVALID'       : len(proj) > 0,
-                     'PROJ'            : formatproj(proj,10),
-                     'WKT'             : getwkt(tif_fullpath),
-                     'NAME'            : layerName,
-                     'GROUP'           : group,
-                     'DATA'            : LAYER_DATA_DIR + '/' + tif,
-                     'GROUP_ABSTRACT'  : group_abstract,
-                     'TITLE'           : layerTitle, # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
-                     'ABSTRACT'        : layerTitle, # change this to match title 
-                     'COLORMAPFILE'    : colormapfile,
-                     'COLORMAPCSV'     : colormapcsv,
-                     'KEYIMAGE'        : keyimage,
-                     'MODDATE'         : modDate,
-                     'MASK'            : ''
-                    })
-    #print "debug: at 7.7"
-    dynaList.append({ 'TIF'             : tif,
-                     'PROJVALID'       : len(proj) > 0,
-                     'PROJ'            : formatproj(proj,10),
-                     'WKT'             : getwkt(tif_fullpath),
-                     'NAME'            : layerName,
-                     'GROUP'           : group,
-                     'DATA'            : LAYER_DATA_DIR + '/' + tif,
-                     'GROUP_ABSTRACT'  : group_abstract,
-                     'TITLE'           : layerTitle, # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
-                     'ABSTRACT'        : layerTitle, # change this to match title 
-                     'COLORMAPFILE'    : colormapfile,
-                     'COLORMAPCSV'     : colormapcsv,
-                     'KEYIMAGE'        : keyimage,
-                     'MODDATE'         : modDate,
-                     'MASK'            : ''
-                    })                    
-    layerTitles[layerName] = layerTitle
-    #print "debug: at 7.8"
-    
-    #Mask are only for tacs nasa products
-    if not tif.startswith("gtac"):
-        for mask in ewsMask:
-            tiflist.append({ 'TIF'             : tif,
-                             'PROJVALID'       : len(proj) > 0,
-                             'PROJ'            : formatproj(proj,10),
-                             'WKT'             : getwkt(tif_fullpath),
-                             'NAME'            : layerName + mask['name'],
-                             'GROUP'           : group,
-                             'DATA'            : LAYER_DATA_DIR + '/' + tif,
-                             'GROUP_ABSTRACT'  : group_abstract,
-                             'TITLE'           : layerTitle + mask['name'], # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
-                             'ABSTRACT'        : layerTitle + mask['name'], # change this to match title 
-                             'COLORMAPFILE'    : colormapfile,
-                             'COLORMAPCSV'     : colormapcsv,
-                             'KEYIMAGE'        : keyimage,
-                             'MODDATE'         : modDate,
-                             'MASK'            : 'MASK ' + mask['name']
-                             })
-            dynaList.append({ 'TIF'             : tif,
-                             'PROJVALID'       : len(proj) > 0,
-                             'PROJ'            : formatproj(proj,10),
-                             'WKT'             : getwkt(tif_fullpath),
-                             'NAME'            : layerName + mask['name'],
-                             'GROUP'           : group,
-                             'DATA'            : LAYER_DATA_DIR + '/' + tif,
-                             'GROUP_ABSTRACT'  : group_abstract,
-                             'TITLE'           : layerTitle + mask['name'], # change to be desired layer title in the viewer, e.g. efetac_nasa-retro/3YrBaseline/current_december3_december26.tif
-                             'ABSTRACT'        : layerTitle + mask['name'], # change this to match title 
-                             'COLORMAPFILE'    : colormapfile,
-                             'COLORMAPCSV'     : colormapcsv,
-                             'KEYIMAGE'        : keyimage,
-                             'MODDATE'         : modDate,
-                             'MASK'            : 'MASK ' + mask['name']
-                             })  
-    #print "debug: at 7.9"
-    #Perform layer-level creation of dynamic map files:
-    layerTemplate = Template("ews.layer.tmpl")
-    layers = ""
-    for tifdict in dynaList:
-        #if layerName != "EFETAC-NASA_1YrBaseline_previous1":
-        #    continue
-        if tifdict['PROJVALID']:
-            #print "1: yaya layerName = %s" % layerName
-            #print tifdict
-            layers = layers + layerTemplate.render(tifdict)    
-            mapTemplate = Template("ews.map.tmpl")
-            SERVICE_NAME = "dyna_ews"
-            THIS_MAPFILE="dyna_maps/"+layerName+".map"
-            #print "writing mapfile: %s" % THIS_MAPFILE
-            f_new = openMapfileForWriting(THIS_MAPFILE)
-            THIS_DATA = mapTemplate.render( {
-                        'DATA_DIR'                : DATA_DIR,
-                        'LAYERS'                  : layers,
-                        'WMS_SRS'                 : "EPSG:3857 EPSG:4326 EPSG:900913",
-                        'MAPFILE_PROJECTION'      : '"init=epsg:3857"',
-                        'SERVICE_NAME'            : SERVICE_NAME,
-                        'TEMP_FILE_PREFIX'        : "ms_%s" % (SERVICE_NAME),
-                        'MAPFILE'                 : "%s/msconfig/%s.map" % (BASE_DIR, SERVICE_NAME),
-                        'OWS_TITLE'               : "NEMAC %s WMS" % (SERVICE_NAME),
-                        'OWS_ABSTRACT'            : "NEMAC %s WMS" % (SERVICE_NAME),
-                        'OWS_KEYWORDLIST'         : "mapserver,ogc,%s" % (SERVICE_NAME),
-                        'SERVICE_URL'             : "%s/%s" % (SERVER_URL, SERVICE_NAME),
-                        'MS_ERRORFILE'            : "../var/log/%s.log" % (SERVICE_NAME),
-                        'WFS_NAMESPACE_PREFIX'    : SERVICE_NAME
-                        } )
-            #print THIS_DATA
-            f_new.write( THIS_DATA )
-            f_new.close() 
-'''
-
                            
 ###
 ### create a tiflist entry for each .tif file in DATA_DIR+"/fsdata/efetac_nasa/ews:
