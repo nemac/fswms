@@ -1,6 +1,6 @@
 import datetime, os, re, time, sys
 
-import osr
+import osr, gdal
 
 sys.path.append("../var")
 try:
