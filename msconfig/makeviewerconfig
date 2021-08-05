@@ -1,7 +1,7 @@
 #! /usr/bin/python
 
 import sys, re, os, glob, getopt, time
-from utilityScript import getLID, getMonthAndDayDateRangeString, makeDateRangeQueryParam, getCurrentDates # our own custom utility script
+from util import *
 from xml.dom.minidom import parseString
 from planet import api
 from usdm import USDM
@@ -881,33 +881,6 @@ for subgroup in [
 '''
 
 
-
-gtacModisChangeDetectionProductLayers = ""
-
-subgroups = [    
-    { 'label' : '   From Prior 3-Year Max',
-      'layers' : [
-            { 'name' : 'GTAC-FHTET_current',                    'lid' : 'AM',  'visible' : 'false' },
-            { 'name' : 'GTAC-FHTET_previous1',                  'lid' : 'AN',  'visible' : 'false' },
-            { 'name' : 'GTAC-FHTET_previous2',                  'lid' : 'AP',  'visible' : 'false' } ] }
-]
-for subgroup in subgroups:
-    gtacModisChangeDetectionProductLayers = ( gtacModisChangeDetectionProductLayers +
-        '      <wmsSubgroup label="' + subgroup['label'] + '">\n' )
-    for layer in subgroup['layers']:
-        gtacModisChangeDetectionProductLayers = gtacModisChangeDetectionProductLayers + wmsLayerTemplate.render({
-                'SELECTED'      : "",
-                'SERVER_URL'    : SERVER_URL,
-                'LAYER_LID'     : layer['lid'],
-                'LAYER_NAME'    : layer['name'],
-                'LEGEND'        : SERVER_URL+'/'+"cmapicons/GTAC-FHTET_CT_7-6-2011_clipped.png",
-                'LAYER_VISIBLE' : layer['visible'],
-                'LAYER_TITLE'   : layer['name'],
-                'MASK'   : '',
-                'BREAK'  : '',
-                })
-    gtacModisChangeDetectionProductLayers = gtacModisChangeDetectionProductLayers + "      </wmsSubgroup>\n"
-
 template = Template("ews_config.tpl.xml")
 
 if not os.path.exists("../html/view/config"):
@@ -1127,33 +1100,9 @@ def makeFW2CurrentLayerTitles():
   return dates_dict
 
 
-
-def getCurrentGTACDates(path, ext='tif'):
-  all_files = os.listdir(path)
-  files = filter(lambda s: s.endswith(ext), all_files)
-
-
-PATH_TO_GTAC_PRODUCTS = os.path.join(DATA_DIR, "fsdata/gtac_fhtet/ews")
-
-gtac_current_datestrings = getCurrentDates(PATH_TO_GTAC_PRODUCTS, '%Y%m%d')
-
 fw2_current_datestrings = getCurrentDates(A_PATH_TO_FW2_PRODUCTS, '%Y%m%d')
 
 FW2_CURRENT_DATES_TITLES = makeFW2CurrentLayerTitles()
-
-gtac_config = {}
-
-gtac_titles = [
-  { 'name': 'GTAC-FHTET_current', 'title': 'Current %Departure GTAC-FHAAST', 'lid': 'AM' },
-  { 'name': 'GTAC-FHTET_previous1', 'title': 'Previous1 %Departure GTAC-FHAAST', 'lid': 'AN' },
-  { 'name': 'GTAC-FHTET_previous2', 'title': 'Previous2 %Departure GTAC-FHAAST',  'lid': 'AP' }
-]
-
-for i in range(0, len(fw2_current_datestrings)):
-  ds = fw2_current_datestrings[i]
-  if ds in gtac_current_datestrings:
-    gtac_config[ds] = { 'name': gtac_titles[i]['name'], 'title' : gtac_titles[i]['title'], 'lid' : gtac_titles[i]['lid'],  'visible' : 'false' }
-
 
 def renderGlamLayerBlocksFor(yr):
   sats = ['Aqua', 'Terra']
@@ -1181,50 +1130,6 @@ def renderGlamLayerBlocksFor(yr):
       blocks += renderGLAMLayerBlock(sat_id, id_num, url_year, url_part, jd, prod_type)
     blocks += '</wmsSubgroup>'
   return blocks
-
-
-def getGtacYearsFor(product_type):
-   pwd = os.path.join(GTAC_ARCHIVE_DIR)
-   # Assume the year is the first 4 characters of the filename
-   years = sorted(list(set([ f[:4] for f in os.listdir(pwd) if product_type in f ])), reverse=True)
-   return years
-
-
-def makeGtacArchiveLayerListFor(product_type):
-  subgroups = ''
-  pwd = os.path.join(GTAC_ARCHIVE_DIR)
-  for year in getGtacYearsFor(product_type):
-    subgroup = '<wmsSubgroup collapsible="true" label="'+year+'">\n'
-    for tif in sorted([file for file in os.listdir(pwd) if file.endswith('tif') and file.startswith(year) and 'bd' not in file and product_type in file], reverse=True):
-      try:
-        tif = re.sub('^' + pwd + '/', '', tif)
-        tif_fullpath = pwd + '/' + tif;
-        nameform = re.sub(r'^.*/', '', tif)
-        group = 'GTAC-FHTET'
-        lid = tif.rstrip('.tif')
-        layerName = '_'.join([group, re.sub(r'_.*$', '', nameform), product_type])
-        # YYYYMMDD
-        layerTitle = 'FDM GTAC-FHAAST ' + nameform[:8]
-        # Leave out "bd" layers
-        if layerTitle[-2:].rstrip()!="bd":
-          subgroup += wmsLayerTemplate.render({
-            'SELECTED'     : '',
-            'BREAK'        : '',
-            'LAYER_LID'    : lid,
-            'LAYER_VISIBLE': 'true',
-            'LAYER_NAME'   : layerName,
-            'LAYER_TITLE'  : layerTitle,
-            'SERVER_URL'   : SERVER_URL,
-            'LEGEND'       : SERVER_URL+"/cmapicons/GTAC-FHTET_CT_7-6-2011_clipped.png",
-            'MASK'         : ''
-          })
-      except Exception as e:
-        print "except occured making block for " + tif
-        print e
-        continue
-    subgroup += '\n</wmsSubgroup>'
-    subgroups += subgroup 
-  return subgroups
 
 
 def renderGLAMLayerBlock(satellite_id, sat_id_num, yr, satellite_url_part, jd, prod_type, template=GLAM_WMTS_LAYER_TEMPLATE):
@@ -1365,38 +1270,19 @@ def makeFW2CurrentLayerListFor(product_type, list_type):
   how_current = [ "current", "previous1", "previous2" ]
   if list_type == "current":
     sources = FW2_SOURCES_AS_LIST
-  if list_type == "current_compare":
-    sources = SOURCES_AS_LIST
   if list_type == "current_legacy":
     sources = [ FW2_LEGACY_SOURCE_DIR ]
   blockList = ''
   for i in range(0, len(fw2_current_datestrings)):
     d = fw2_current_datestrings[i]
-    appending_gtac = product_type == 'X_LC_3YEAR' and list_type == 'current_compare' and gtac_config.has_key(d)
     for i_source in range(0, len(sources)):
       source = sources[i_source]
       how_current_label = how_current[i] 
       lid = "{0}_{1}_{2}".format(SOURCES[source], ALL_PRODUCT_TYPES[product_type], how_current_label)
       if i_source == len(sources)-1 and list_type != 'current_legacy':
-        # Don't add a linebreak if we're going to append a GTAC product to the list
-        if appending_gtac:
-          blockList += makeXMLBlockForLayer(source, product_type, d, False, lid)
-        else:
-          blockList += makeXMLBlockForLayer(source, product_type, d, True, lid)
+        blockList += makeXMLBlockForLayer(source, product_type, d, True, lid)
       else:
         blockList += makeXMLBlockForLayer(source, product_type, d, False, lid)
-    if appending_gtac:
-      blockList += wmsLayerTemplate.render({
-          'SELECTED'      : "",
-          'SERVER_URL'    : SERVER_URL,
-          'LAYER_LID'     : gtac_config[d]['lid'],
-          'LAYER_NAME'    : gtac_config[d]['name'],
-          'LEGEND'        : SERVER_URL+'/'+"cmapicons/GTAC-FHTET_CT_7-6-2011_clipped.png",
-          'LAYER_VISIBLE' : 'false',
-          'LAYER_TITLE'   : gtac_config[d]['title'],
-          'MASK'   : '',
-          'BREAK'  : 'break="true"'
-        })
   return blockList
 
 '''This method uses the planet.com API to find all of the fourteen day USDA Normalized Analytic Mosaics
@@ -1425,9 +1311,6 @@ USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST = usda_normalized_analytic_fourteend
 USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST = usda_normalized_analytic_fourteenday['previous']['name']
 USDA_LATEST_END_DATE = usda_normalized_analytic_fourteenday['current']['date']
 USDA_SECOND_LATEST_END_DATE = usda_normalized_analytic_fourteenday['previous']['date']
-
-GTAC_ARCHIVE_3YR = makeGtacArchiveLayerListFor('3yr')
-GTAC_ARCHIVE_5YR = makeGtacArchiveLayerListFor('5yr')
 
 sentinel_landsat_date_range_template = '{0}/{1}'
 SENTINEL2_CURRENT_DATE_RANGE = makeDateRangeQueryParam(A_PATH_TO_FW2_PRODUCTS, sentinel_landsat_date_range_template)
@@ -1545,16 +1428,6 @@ FW2_CURRENT_LAYERS__10_YEAR = makeFW2CurrentLayerListFor('X_LC_90_10_YR', 'curre
 FW2_CURRENT_LAYERS__YEAR_MEDIAN = makeFW2CurrentLayerListFor('X_LC_MEDIAN_ALL_YR', 'current')
 FW2_CURRENT_LAYERS__PCTPROGRESS = makeFW2CurrentLayerListFor('X_LC_PCTPROGRESS', 'current')
 
-
-FW2_COMPARE_LAYERS__PRIOR_YEAR = makeFW2CurrentLayerListFor('X_LC_1YEAR', 'current_compare')
-FW2_COMPARE_LAYERS__ALC = makeFW2CurrentLayerListFor('X_LC_ALC_1YR', 'current_compare')
-FW2_COMPARE_LAYERS__3_YEAR = makeFW2CurrentLayerListFor('X_LC_3YEAR', 'current_compare')
-FW2_COMPARE_LAYERS__5_YEAR = makeFW2CurrentLayerListFor('X_LC_5YEAR', 'current_compare')
-FW2_COMPARE_LAYERS__10_YEAR = makeFW2CurrentLayerListFor('X_LC_90_10_YR', 'current_compare')
-FW2_COMPARE_LAYERS__YEAR_MEDIAN = makeFW2CurrentLayerListFor('X_LC_MEDIAN_ALL_YR', 'current_compare')
-FW2_COMPARE_LAYERS__PCTPROGRESS = makeFW2CurrentLayerListFor('X_LC_PCTPROGRESS', 'current_compare')
-
-
 FW2_CURRENT_LEGACY_LAYERS__PRIOR_YEAR = makeFW2CurrentLayerListFor('X_LC_1YEAR', 'current_legacy')
 FW2_CURRENT_LEGACY_LAYERS__ALC = makeFW2CurrentLayerListFor('X_LC_ALC_1YR', 'current_legacy')
 FW2_CURRENT_LEGACY_LAYERS__3_YEAR = makeFW2CurrentLayerListFor('X_LC_3YEAR', 'current_legacy')
@@ -1594,8 +1467,6 @@ configXML = template.render( {
             'MULTIGRAPH_SERVICE_URL'                : MULTIGRAPH_SERVICE_URL,
             'SERVER_URL'                            : SERVER_URL,
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
-            #'TACS_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : tacsModisChangeDetectionProductLayers,
-            'GTAC_MODIS_CHANGE_DETECTION_PRODUCT_LAYERS' : gtacModisChangeDetectionProductLayers,
             'PLANET_API_KEY'          : PLANET_API_KEY,
             'FW3_LAYERS__1YR'         : FW3_LAYERS__1YR,
             'FW3_LAYERS__ED'          : FW3_LAYERS__ED,
@@ -1698,13 +1569,6 @@ configXML = template.render( {
             'FW2_CURRENT_LAYERS__10_YEAR' : FW2_CURRENT_LAYERS__10_YEAR,
             'FW2_CURRENT_LAYERS__YEAR_MEDIAN' : FW2_CURRENT_LAYERS__YEAR_MEDIAN,
             'FW2_CURRENT_LAYERS__PCTPROGRESS' : FW2_CURRENT_LAYERS__PCTPROGRESS,
-            'FW2_COMPARE_LAYERS__PRIOR_YEAR' : FW2_COMPARE_LAYERS__PRIOR_YEAR,
-            'FW2_COMPARE_LAYERS__ALC' : FW2_COMPARE_LAYERS__ALC,
-            'FW2_COMPARE_LAYERS__3_YEAR' : FW2_COMPARE_LAYERS__3_YEAR,
-            'FW2_COMPARE_LAYERS__5_YEAR' : FW2_COMPARE_LAYERS__5_YEAR,
-            'FW2_COMPARE_LAYERS__10_YEAR' : FW2_COMPARE_LAYERS__10_YEAR,
-            'FW2_COMPARE_LAYERS__YEAR_MEDIAN' : FW2_COMPARE_LAYERS__YEAR_MEDIAN,
-            'FW2_COMPARE_LAYERS__PCTPROGRESS' : FW2_COMPARE_LAYERS__PCTPROGRESS,
             'FW2_LEGACY_2019_PRIOR_YEAR' : FW2_LEGACY_2019_PRIOR_YEAR,
             'FW2_LEGACY_2018_PRIOR_YEAR' : FW2_LEGACY_2018_PRIOR_YEAR,
             'FW2_LEGACY_2017_PRIOR_YEAR' : FW2_LEGACY_2017_PRIOR_YEAR,
@@ -1795,8 +1659,6 @@ configXML = template.render( {
             'SENTINEL2_PRIOR_YEAR_DATE_RANGE' : SENTINEL2_PRIOR_YEAR_DATE_RANGE,
             'LANDSAT8_CURRENT_DATE_RANGE': LANDSAT8_CURRENT_DATE_RANGE,
             'LANDSAT8_PRIOR_YEAR_DATE_RANGE': LANDSAT8_PRIOR_YEAR_DATE_RANGE,
-            'GTAC_ARCHIVE_3YR' : GTAC_ARCHIVE_3YR,
-            'GTAC_ARCHIVE_5YR' : GTAC_ARCHIVE_5YR,
             'CURRENT_DATE_RANGE' : CURRENT_DATE_RANGE,
             'PREVIOUS1_DATE_RANGE' : PREVIOUS1_DATE_RANGE,
             'PREVIOUS2_DATE_RANGE' : PREVIOUS2_DATE_RANGE,
