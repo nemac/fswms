@@ -7,9 +7,9 @@ from planet import api
 from usdm import USDM
 from nadm import NADM
 from smap import SMAP9kAnomalyTopWeekly as smap_weekly
+from fw3 import make_fw3_viewer_xml
 
 sys.path.append("../var")
-
 try:
     from Config import *
     import datetime
@@ -1436,9 +1436,7 @@ FW2_CURRENT_LEGACY_LAYERS__ALLYEAR = makeFW2CurrentLayerListFor('X_LC_ALLYEAR', 
 FW2_CURRENT_LEGACY_LAYERS__MUC = makeFW2CurrentLayerListFor('X_LC_MUC_ALL_YR', 'current_legacy')
 FW2_CURRENT_LEGACY_LAYERS__MMAX = makeFW2CurrentLayerListFor('X_LC_MMAX_ALL_YR', 'current_legacy')
 
-from fw3 import make_fw3_layer_list
-FW3_LAYERS__1YR = make_fw3_layer_list('1yr')
-FW3_LAYERS__ED  = make_fw3_layer_list('ED')
+FW3_LAYERS = make_fw3_viewer_xml()
 
 pwd = A_PATH_TO_FW2_PRODUCTS
 current_dates = getCurrentDates(pwd)
@@ -1468,8 +1466,7 @@ configXML = template.render( {
             'SERVER_URL'                            : SERVER_URL,
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
             'PLANET_API_KEY'          : PLANET_API_KEY,
-            'FW3_LAYERS__1YR'         : FW3_LAYERS__1YR,
-            'FW3_LAYERS__ED'          : FW3_LAYERS__ED,
+            'FW3_LAYERS'              : FW3_LAYERS,
             'SMAP_9K_ANOMALY_TOP_WEEKLY' : SMAP_9K_ANOMALY_TOP_WEEKLY,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,

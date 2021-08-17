@@ -1055,14 +1055,8 @@
 
 
   <wmsGroup gid="GForWarn3" name="ForWarn3" label="ForWarn III Near-Real-Time Change Maps">
-    
-    <wmsSubgroup label = "From Prior Year">
-      %(FW3_LAYERS__1YR)s
-    </wmsSubgroup>
 
-    <wmsSubgroup label = "Early Detect (Recent Priority From Prior Year)">
-      %(FW3_LAYERS__ED)s
-    </wmsSubgroup>
+    %(FW3_LAYERS)s
 
   </wmsGroup>
 
