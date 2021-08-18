@@ -200,7 +200,8 @@ def make_fw3_viewer_xml():
     for meta_type in [ 'normal', 'muted' ]:
         muted = meta_type == 'muted'
         config = FW3_PRODUCT_TYPES[meta_type]
-        for key in sorted(config.keys(), key=lambda x: config[x]['order']):
+        sorted_keys = sorted(config.keys(), key=lambda x: config[x]['order'])
+        for key in sorted_keys:
             full += make_fw3_layer_list(key, muted)
     return full
 
