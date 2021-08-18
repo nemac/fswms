@@ -99,7 +99,10 @@ def formatproj(projstring, indentlevel=0):
 def get_fw3_layer_string(path, ptype, muted):
     f = os.path.basename(path)
     proj = getproj(path)
-    colormapline = 'INCLUDE "../new-forwarn2-standard-2.cmap"'
+    if ptype != 'adaptivebaseline_daysdiff':
+        colormapline = 'INCLUDE "../new-forwarn2-standard-2.cmap"'
+    else:
+        colormapline = 'INCLUDE "../cmaps/adaptive_baseline_daysdiff.cmap"'
     start = _get_date_from_file(f)
     end = _get_date_from_file(f, is_end=True)
     title = _get_title(start, end)
