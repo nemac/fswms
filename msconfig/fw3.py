@@ -164,7 +164,7 @@ WMS_LAYER_TEMPLATE = FrontendTemplate(string="""
     name="%(LAYER_TITLE)s"
     styles="default" 
     identify="true"
-    legend="%(SERVER_URL)s/%(LEGEND)s"
+    legend="%(LEGEND)s"
     mask="true"
     %(SELECTED)s %(BREAK)s 
   />  
@@ -175,6 +175,9 @@ def get_fw3_subgroup_title(ptype, muted):
     meta_type = 'muted' if muted else 'normal'
     return FW3_PRODUCT_TYPES[meta_type][ptype]['title']
 
+def get_fw3_subgroup_info(ptype, muted):
+    meta_type = 'muted' if muted else 'normal'
+    return FW3_PRODUCT_TYPES[meta_type][ptype]['info']
 
 def filter_path_list(paths, muted=False, ext='.img'):
     if muted:
@@ -182,10 +185,10 @@ def filter_path_list(paths, muted=False, ext='.img'):
     else:
         return [ p for p in paths if 'muted' not in p and p.endswith(ext) ]
 
-
 def make_fw3_layer_list(ptype, muted):
     subgroup_title = get_fw3_subgroup_title(ptype, muted)
-    string = '<wmsSubgroup label="' + subgroup_title + '">\n'
+    subgroup_info = get_fw3_subgroup_info(ptype, muted)
+    string = '<wmsSubgroup label="' + subgroup_title + '" info="' + subgroup_info + '">\n'
     folder = os.path.join(FW3_DATA_DIR, ptype)
     files = os.listdir(folder)
     files = filter_path_list(files, muted)
@@ -196,7 +199,6 @@ def make_fw3_layer_list(ptype, muted):
         string += layer_xml
     string += '\n</wmsSubgroup>\n\n'
     return string
-
 
 def make_fw3_viewer_xml():
     full = ''
@@ -211,7 +213,11 @@ def make_fw3_viewer_xml():
 
 def make_layer_xml(path, ptype, muted):
     template = WMS_LAYER_TEMPLATE
-    legend = 'cmapicons/new-forwarn2-standard-legend-2.png'
+    if ptype != 'adaptivebaseline_daysdiff':
+        legend_file = 'new-forwarn2-standard-legend-2.png'
+    else:
+        legend_file = 'daysdifflegend.png'
+    legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
     filename = os.path.basename(path)
     start = _get_date_from_file(filename)
     end = _get_date_from_file(filename, is_end=True)
