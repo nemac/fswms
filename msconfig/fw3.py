@@ -80,10 +80,10 @@ def _get_title(start, end):
   title = start + ' - ' + end
   return title
 
-def _get_id(start, end, ptype):
+def _get_id(start, end, ptype, muted):
   start = start.strftime('%Y%m%d')
   end = end.strftime('%Y%m%d')
-  layer_id = 'FW3_' + ptype + '_' + end
+  layer_id = 'FW3_' + ptype + '_' + end + ('_muted' if muted else '')
   return layer_id
 
 def formatproj(projstring, indentlevel=0):
@@ -96,14 +96,17 @@ def formatproj(projstring, indentlevel=0):
     return "\n".join(lines)
 
 
-def get_fw3_layer_string(path, ptype):
+def get_fw3_layer_string(path, ptype, muted):
     f = os.path.basename(path)
     proj = getproj(path)
-    colormapline = 'INCLUDE "../new-forwarn2-standard-2.cmap"'
+    if ptype != 'adaptivebaseline_daysdiff':
+        colormapline = 'INCLUDE "../new-forwarn2-standard-2.cmap"'
+    else:
+        colormapline = 'INCLUDE "../cmaps/adaptive_baseline_daysdiff.cmap"'
     start = _get_date_from_file(f)
     end = _get_date_from_file(f, is_end=True)
     title = _get_title(start, end)
-    layer_id = _get_id(start, end, ptype)
+    layer_id = _get_id(start, end, ptype, muted)
     layers = []
     layers.append({
        'TIF'             : f,
@@ -137,32 +140,114 @@ def get_fw3_layer_string(path, ptype):
     return layer_string
 
 
-def _get_ptype_from_path(path):
-  filename = os.path.basename(path)
-  if '1yr' in filename:
-    return '1yr'
-  if 'ED' in filename:
-    return 'ED'
-  return None
+class FrontendTemplate:
+    def __init__(self, file=None, **args):
+        if file is None and 'string' in args:
+            self.contents = args['string']
+        else:
+            f = open(file, "r")
+            self.contents = ""
+            for line in f:
+                self.contents = self.contents + line
+            f.close
+    def render(self, dict):
+        return self.contents % dict
 
 
+WMS_LAYER_TEMPLATE = FrontendTemplate(string="""
+  <wmsLayer
+    lid="%(LAYER_LID)s"
+    visible="false"
+    url="%(SERVER_URL)s/forwarn3?TRANSPARENT=true"
+    srs="EPSG:3857"
+    layers="%(LAYER_NAME)s"
+    name="%(LAYER_TITLE)s"
+    styles="default" 
+    identify="true"
+    legend="%(LEGEND)s"
+    mask="true"
+    %(SELECTED)s %(BREAK)s 
+  />  
+""")
 
 
-def make_mapfile(path):
-    ptype = _get_ptype_from_path(path)
-    assert ptype is not None
-    layer_string = get_fw3_layer_string(path, ptype)
+def get_fw3_subgroup_title(ptype, muted):
+    meta_type = 'muted' if muted else 'normal'
+    return FW3_PRODUCT_TYPES[meta_type][ptype]['title']
+
+def get_fw3_subgroup_info(ptype, muted):
+    meta_type = 'muted' if muted else 'normal'
+    return FW3_PRODUCT_TYPES[meta_type][ptype]['info']
+
+def filter_path_list(paths, muted=False, ext='.img'):
+    if muted:
+        return [ p for p in paths if 'muted' in p and p.endswith(ext) ]
+    else:
+        return [ p for p in paths if 'muted' not in p and p.endswith(ext) ]
+
+def make_fw3_layer_list(ptype, muted):
+    subgroup_title = get_fw3_subgroup_title(ptype, muted)
+    subgroup_info = get_fw3_subgroup_info(ptype, muted)
+    string = '<wmsSubgroup label="' + subgroup_title + '" info="' + subgroup_info + '">\n'
+    folder = os.path.join(FW3_DATA_DIR, ptype)
+    files = os.listdir(folder)
+    files = filter_path_list(files, muted)
+    files = sorted(files, reverse=True)
+    paths = [ os.path.join(folder, f) for f in files ]
+    for path in paths:
+        layer_xml = make_layer_xml(path, ptype, muted)
+        string += layer_xml
+    string += '\n</wmsSubgroup>\n\n'
+    return string
+
+def make_fw3_viewer_xml():
+    full = ''
+    for meta_type in [ 'normal', 'muted' ]:
+        muted = meta_type == 'muted'
+        config = FW3_PRODUCT_TYPES[meta_type]
+        sorted_keys = sorted(config.keys(), key=lambda x: config[x]['order'])
+        for key in sorted_keys:
+            full += make_fw3_layer_list(key, muted)
+    return full
+
+
+def make_layer_xml(path, ptype, muted):
+    template = WMS_LAYER_TEMPLATE
+    if ptype != 'adaptivebaseline_daysdiff':
+        legend_file = 'new-forwarn2-standard-legend-2.png'
+    else:
+        legend_file = 'daysdifflegend.png'
+    legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
+    filename = os.path.basename(path)
+    start = _get_date_from_file(filename)
+    end = _get_date_from_file(filename, is_end=True)
+    layer_id = _get_id(start, end, ptype, muted)
+    title = _get_title(start, end)
+    return template.render({
+      'BREAK'       : '',
+      'SELECTED'    : '',
+      'LAYER_LID'   : layer_id,
+      'LAYER_NAME'  : layer_id,
+      'LAYER_TITLE' : title,
+      'SERVER_URL'  : SERVER_URL,
+      'LEGEND'      : legend
+    })
+
+
+def make_mapfile(ptype, path, muted):
+    layer_string = get_fw3_layer_string(path, ptype, muted)
     template = Template("ews_gen.tpl.map")
     f = os.path.basename(path)
     start, end = _get_date_from_file(f), _get_date_from_file(f, is_end=True)
-    layer_id = _get_id(start, end, ptype)
+    layer_id = _get_id(start, end, ptype, muted)
     start = _get_date_from_file(f)
     end = _get_date_from_file(f, is_end=True)
     mapfile_path = "forwarn3_maps/"+layer_id+".map"
-    try:
-        os.remove(mapfile_path)
-    except:
-        pass
+    if os.path.exists(mapfile_path):
+        try:
+            os.remove(mapfile_path)
+        except:
+            print 'Unable to remove existing mapfile: ' + mapfile_path
     f_new = open(mapfile_path, "w")
     f_new.write(template.render( {
         'DATA_DIR'              : DATA_DIR,
@@ -183,71 +268,26 @@ def make_mapfile(path):
     f_new.close()
 
 
-
-class FrontendTemplate:
-    def __init__(self, file=None, **args):
-        if file is None and 'string' in args:
-            self.contents = args['string']
-        else:
-            f = open(file, "r")
-            self.contents = ""
-            for line in f:
-                self.contents = self.contents + line
-            f.close
-    def render(self, dict):
-        return self.contents % dict
-
-
-WMS_LAYER_TEMPLATE = FrontendTemplate(string="""
-  <wmsLayer
-    %(SELECTED)s %(BREAK)s
-    lid="%(LAYER_LID)s"
-    visible="false"
-    url="%(SERVER_URL)s/forwarn3?TRANSPARENT=true"
-    srs="EPSG:3857"
-    layers="%(LAYER_NAME)s"
-    name="%(LAYER_TITLE)s"
-    styles="default" 
-    identify="true"
-    legend="%(SERVER_URL)s/%(LEGEND)s"
-    mask="true"
-/>  
-""")
-
-def make_fw3_layer_list(ptype):
-  string = ''
-  for f in [ f for f in sorted(os.listdir(FW3_DATA_DIR), reverse=True) if ptype in f and f.endswith('img') ]:
-    path = os.path.join(FW3_DATA_DIR, f)
-    layer_xml = make_layer_xml(path)
-    string += layer_xml
-  return string
-
-def make_layer_xml(path):
-    template = WMS_LAYER_TEMPLATE
-    legend = 'cmapicons/new-forwarn2-standard-legend-2.png'
-    filename = os.path.basename(path)
-    ptype = _get_ptype_from_path(path)
-    assert ptype is not None
-    start = _get_date_from_file(filename)
-    end = _get_date_from_file(filename, is_end=True)
-    layer_id = _get_id(start, end, ptype)
-    title = _get_title(start, end)
-    return template.render({
-      'SELECTED'    : '',
-      'LAYER_LID'   : layer_id,
-      'LAYER_NAME'  : layer_id,
-      'LAYER_TITLE' : title,
-      'SERVER_URL'  : SERVER_URL,
-      'BREAK'       : '',
-      'LEGEND'      : legend
-    })
+def make_mapfile_batch(ptype, folder, muted):
+    files = [ f for f in os.listdir(folder) if f.endswith('.img') ]
+    if muted:
+        files = [ f for f in files if 'muted' in f ]
+    else:
+        files = [ f for f in files if 'muted' not in f ]
+    for f in files:
+        path = os.path.join(folder, f)
+        make_mapfile(ptype, path, muted)
 
  
 def make_all(): 
-    fw3_paths = [
-      os.path.join(FW3_DATA_DIR, f) for f in os.listdir(FW3_DATA_DIR)
-      if f.endswith('img') and ('1yr' in f or 'ED' in f)
-    ]
-    for path in fw3_paths:
-        make_mapfile(path)
+    meta_types = [ 'normal', 'muted' ]
+    for meta_type in meta_types:
+        config = FW3_PRODUCT_TYPES[meta_type]
+        for key in config.keys():
+            fdr = os.path.join(FW3_DATA_DIR, key)
+            title = config[key]['title']
+            info = config[key]['info']
+            muted = meta_type == 'muted'
+            make_mapfile_batch(ptype=key, folder=fdr, muted=muted)
+
 

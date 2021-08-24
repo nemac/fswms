@@ -1055,14 +1055,8 @@
 
 
   <wmsGroup gid="GForWarn3" name="ForWarn3" label="ForWarn III Near-Real-Time Change Maps">
-    
-    <wmsSubgroup label = "From Prior Year">
-      %(FW3_LAYERS__1YR)s
-    </wmsSubgroup>
 
-    <wmsSubgroup label = "Early Detect (Recent Priority From Prior Year)">
-      %(FW3_LAYERS__ED)s
-    </wmsSubgroup>
+    %(FW3_LAYERS)s
 
   </wmsGroup>
 
@@ -1660,6 +1654,19 @@
 	</wmsGroup>
 	<wmsGroup gid="G10" name="Drought_Monitor" label="Drought Assessment Maps">
 
+	<wmsSubgroup label="Precipitation">
+	      <xyzLayer
+		lid="7DAYPRECIPTOTAL"
+		visible="false"
+		url="https://storage.googleapis.com/noaa-nidis-drought-gov-data/current-conditions/tile/v1/precip-total-7d/${z}/${x}/${y}.png"
+		identify="false"
+		name="7-Day Precipitation (Total Inches)"
+		legend=""
+		mask="false"
+	      />
+
+	</wmsSubgroup>
+
 		<wmsSubgroup label="Severe Fire Weather Potential (WFAS Fire Danger)">
       <wmsLayer label="Fire Weather Potential"
         lid="WFASPOTENTIAL"
@@ -1682,6 +1689,7 @@
     <wmsSubgroup label="North American Drought Monitor (NADM)" break="true"></wmsSubgroup>
 
 		%(NADM_LAYERS)s
+
 
 	<wmsSubgroup label="CONUS VegDRI Veg. Moisture Status (USGS/NDMC; weekly eMODIS)">
 		<wmsLayer

@@ -18,8 +18,6 @@
 ### imports
 ###
 
-#print "debug: at 1"
-
 from osgeo import gdal, osr
 from util import *
 import sys, os, subprocess, datetime, re, shutil, traceback, getopt;
@@ -39,8 +37,6 @@ def choose(al,fo):
     else:
         print "Using Forest-Only"
         return fo
-
-#print "debug: at 2"
 
 ###
 ### config
@@ -66,8 +62,6 @@ class Template:
         return self.contents % dict
 
 
-#print "debug: at 3"
-
 # jdm 5/9/13: for each of these go through the ewsMask and create a relavent entry
 # these should be read out of an external config file but I have hardcoded for now
 
@@ -88,25 +82,17 @@ tiflist = []
 ### function definitions
 ###
 
-#print "debug: at 4"
-
-
-#print "debug: at 9"
 
 ###
 ### add in the gtac fhtet files to be available in an archive format
 ### these will go in ews.map also but will utilize a diff color map: gtac_fhtet_percent_change_cmap.cmap
 ###
 
-#print "debug: at 5"
-
 #Start of attempt to create a generic function to get layers
 #At this point its a not completely generic because the color maps is 
 #specific to the tif files location
 #LAYERS1 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_LC_1YEAR", "1Year"), "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", True)
 def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool, colormapfile=None):
-    #print 'data dir ' + dataDir
-    #print 'template ' + layerTemplateName
     tifList  = []
     for tif in sorted([file for file in os.listdir(dataDir) if file.endswith(fileExt)], reverse=False):
         dynaList  = []
@@ -116,7 +102,6 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool, col
             proj = getproj(tif_fullpath)
             modDate = getModDate(tif_fullpath)
             nameform = re.sub(r'^.*/', '', tif)
-            #print nameform
             #this conditional logic needs to be refactored out
             if colormapfile:
                 colormapline = 'INCLUDE %s' % colormapfile
@@ -174,11 +159,7 @@ def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool, col
             layerTitles[layerName] = layerTitle
             #jdm 5/29: for layers groups that we want ewsMask on do so     
             if maskBool:
-                #print "got here"
                 for mask in ewsMask:
-                    #print "test mask: " + layerName + mask['name']
-                    #print proj
-                    #print len(proj) > 0
                     tifList.append({ 'TIF'             : tif,
                                      'PROJVALID'       : len(proj) > 0,
                                      'PROJ'            : formatproj(proj,10),
@@ -252,7 +233,6 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
             proj = getproj(tif_fullpath)
             modDate = getModDate(tif_fullpath)
             nameform = re.sub(r'^.*/', '', tif)
-            #print nameform
             #this conditional logic needs to be refactored out
             if re.search(r'max|med', nameform) and wcs=="no":
                 colormapline   = 'INCLUDE "new-forwarn2-standard-2.cmap"'
@@ -294,11 +274,7 @@ def getLayersNoMask(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBoo
             layerTitles[layerName] = layerTitle
             #jdm 5/29: for layers groups that we want ewsMask on do so     
             if maskBool:
-                #print "got here"
                 for mask in ewsMask:
-                    #print "test mask: " + layerName + mask['name']
-                    #print proj
-                    #print len(proj) > 0
                     tifList.append({ 'TIF'             : tif,
                                      'PROJVALID'       : len(proj) > 0,
                                      'PROJ'            : formatproj(proj,10),
@@ -402,7 +378,6 @@ layerTemplate = Template("ews.layer.tmpl")
 LAYERS = ""
 for tifdict in tiflist:
     if tifdict['PROJVALID']:
-        print tifdict['NAME']
         LAYERS = LAYERS + layerTemplate.render( tifdict )
 
 LAYERS1 = LAYERS
@@ -422,7 +397,6 @@ LAYERS3 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MMAX_ALL_YR", "ews_
 LAYERS3_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_MMAX_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", False)
 LAYERS3_NOMASK_FW2_LEIDOS = getLayersNoMask(FW2_DATA_DIR + "/Leidos/" + "X_LC_MMAX_ALL_YR", "ews_gen.layer.tpl.map", "EFETAC-NASA_MoMAllYear", ".tif", "no", False)
 LAYERS3_NOMASK = LAYERS3_NOMASK + LAYERS3_NOMASK_FW2_LEIDOS
-#print "debug: at 13"
 
 LAYERS4 = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_AllYear", ".tif", "no", True)
 LAYERS4_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_AllYear", ".tif", "no", False)
@@ -541,7 +515,6 @@ f_new.close()
             # } ) )
 # f_new.close()
 
-#print "debug: at 15"
 
 #This service is no longer being written due to getting pegged
 # f_new = openMapfileForWriting("ewswgs84.map")
@@ -563,7 +536,6 @@ f_new.close()
             # } ) )
 # f_new.close()
 
-#print "debug: at 16"
 
 wcslayerTemplate = Template("ewswcs.layer.tmpl")
 LAYERS = ""
@@ -571,8 +543,6 @@ for tifdict in tiflist:
     if tifdict['PROJVALID']:
         LAYERS = LAYERS + wcslayerTemplate.render( tifdict )
         
-#print "debug: at 17"
-
 f_new = openMapfileForWriting("ewswcs.map")
 SERVICE_NAME = "ewswcs"
 f_new.write( mapTemplate.render( {
@@ -593,8 +563,6 @@ f_new.write( mapTemplate.render( {
             } ) )
 f_new.close()
 
-
-#print "debug: at 18"
 
 ###-------DONE WITH curr, prev1 and prev2 SECTION except that All Year is done above------------------
 ###-------Now on with the 1, 3 and All year parts-----------------------------------------------------
@@ -698,7 +666,6 @@ LAYERS1_NOMASK = getLayersNoMask(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_1YEAR"
 LAYERS1_FW2_LEIDOS_NOMASK = getLayersNoMask(FW2_DATA_DIR + "/Leidos/" + "X_LC_1YEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA_1Year", ".tif", "no", False)
 LAYERS1_NOMASK = LAYERS1_NOMASK + LAYERS1_FW2_LEIDOS_NOMASK
 # template = Template("ews_gen.tpl.map")
-# #print LAYERS
 # f_new = openMapfileForWriting("ews1year.map")
 # SERVICE_NAME = "ews1year"
 # WCS_LABEL = "EWS 1Year"
@@ -721,7 +688,6 @@ LAYERS1_NOMASK = LAYERS1_NOMASK + LAYERS1_FW2_LEIDOS_NOMASK
             # } ) )
 # f_new.close()
 
-#print "debug: at 19"
 
 ###
 ### Append to ews1year.map FILE Early Detect (ALC) Change from previous year:
@@ -754,10 +720,6 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
-#print "debug: at 20"
-
-#print "debug: at 21"
-
 ###
 ### Create the ews3year.map file:
 ###
@@ -788,7 +750,6 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
-#print "debug: at 22"
 
 ###
 ### Create the ews5year.map file:
@@ -820,10 +781,8 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
-#print "debug: at 22"
 #create the all year dyna_ews map files
 LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.layer.tpl.map", "EFETAC-NASA", ".tif", "no", True)
-#print "debug: at 23"
 
 
 # create layer definitions for duration products
@@ -986,7 +945,6 @@ f_new.write( template.render( {
 } ) )
 f_new.close()
 
-#print "debug: at 24"
 
 ###
 ### Create the vlayers.map file:
@@ -1073,7 +1031,6 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
-#print "debug: at 25"
 
 ###
 ### Create the derivatives.map file:
@@ -1086,8 +1043,6 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
-#print "debug: at 26"
-
 ###
 ### Create the modisndvi.map file:
 ###
@@ -1098,8 +1053,6 @@ f_new.write( template.render( {
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "modisndvi")
             } ) )
 f_new.close()
-
-#print "debug: at 27"
 
 ###
 ### Create the parameters.map file:
@@ -1112,8 +1065,6 @@ f_new.write( template.render( {
             } ) )
 f_new.close()
 
-#print "debug: at 28"
-
 ###
 ### Create the integrals.map file:
 ###
@@ -1124,8 +1075,6 @@ f_new.write( template.render( {
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "integrals")
             } ) )
 f_new.close()
-
-#print "debug: at 29"
 
 ###
 ### Create the rlayers.map file:
@@ -1151,8 +1100,6 @@ f_new.write( template.render( {
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "landcover-mask")
             } ) )
 f_new.close()
-
-#print "debug: at 30"
 
 ###
 ### Create the wlayers.map file:
@@ -1262,8 +1209,6 @@ f_new.close()
 
 #################################################################################################
 
-#print "debug: at 31"
-
 ###
 ### Create symlinks for the map files, and change a few permission settings
 ###
@@ -1272,8 +1217,6 @@ os.system("chmod a+w ../var/log");
 os.system("chmod a+w ../var/log/*.log > /dev/null 2>&1");
 os.system("chmod g-w ../html/*");
 
-#print "debug: at 32"
-
 ###
 ### write out the layer titles file:
 ###
@@ -1281,8 +1224,6 @@ f_out = open("layerTitles.txt", "w");
 for layerName in layerTitles:
     f_out.write("%s:%s\n" % (layerName, layerTitles[layerName]))
 f_out.close()
-
-#print "debug: at 33"
 
 ###
 ### write out the html/index.html file:
@@ -1298,8 +1239,6 @@ f_out.write(interp("""
 ForWarn WMS addresses are:
 <ul>
 """))
-
-#print "debug: at 34"
 
 for mapfile in mapfilesWritten:
     service = re.sub(r'\.map$', '', mapfile)
@@ -1469,8 +1408,6 @@ def makeFW2MapfilesFor(source, p_type):
 
     if not f.endswith(('tif', 'img')):
         continue
-
-    print f
 
     f_path = os.path.join(pwd, f)
     
