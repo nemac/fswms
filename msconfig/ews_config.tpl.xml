@@ -1654,19 +1654,6 @@
 	</wmsGroup>
 	<wmsGroup gid="G10" name="Drought_Monitor" label="Drought Assessment Maps">
 
-	<wmsSubgroup label="Precipitation">
-	      <xyzLayer
-		lid="7DAYPRECIPTOTAL"
-		visible="false"
-		url="https://storage.googleapis.com/noaa-nidis-drought-gov-data/current-conditions/tile/v1/precip-total-7d/${z}/${x}/${y}.png"
-		identify="false"
-		name="7-Day Precipitation (Total Inches)"
-		legend=""
-		mask="false"
-	      />
-
-	</wmsSubgroup>
-
 		<wmsSubgroup label="Severe Fire Weather Potential (WFAS Fire Danger)">
       <wmsLayer label="Fire Weather Potential"
         lid="WFASPOTENTIAL"
@@ -2036,79 +2023,76 @@
 
 	<wmsSubgroup label="NOAA NWS Precipitation Derivatives">
 
-
-
-
 			<wmsLayer
 	 lid="VDAAO"
 	 visible="false"
-	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_preciptp7_raster"
+	 url="https://dmsdata.cr.usgs.gov/geoserver/quickdri_preciptp7_conus_1_day_data/preciptp7_conus_1_day_data/wms"
 	 srs="EPSG:3857"
-	 layers="PRECIP_TP7"
+	 layers="preciptp7_conus_1_day_data"
 	 styles="default"
 	 identify="true"
 	 name="7 Day Total Precipitation"
-	 legend="%(SERVER_URL)s/cmapicons/7_day_totprecip.png"/>
+	 legend="https://dmsdata.cr.usgs.gov/geoserver/quickdri_preciptp7_conus_1_day_data/preciptp7_conus_1_day_data/wms?SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetLegendGraphic&amp;LAYER=preciptp7_conus_1_day_data&amp;FORMAT=image/png" />
 		<wmsLayer
 	 lid="VDAAP"
 	 visible="false"
-	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_preciptp30_raster"
+	 url="https://dmsdata.cr.usgs.gov/geoserver/quickdri_preciptp30_conus_1_day_data/preciptp30_conus_1_day_data/wms"
 	 srs="EPSG:3857"
-	 layers="PRECIP_TP30"
+	 layers="preciptp30_conus_1_day_data"
 	 styles="default"
 	 identify="true"
 	 name="30 Day Total Precipitation"
-	 legend="%(SERVER_URL)s/cmapicons/30_day_totprecip.png"/>
+	 legend="https://dmsdata.cr.usgs.gov/geoserver/quickdri_preciptp30_conus_1_day_data/preciptp30_conus_1_day_data/wms?SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetLegendGraphic&amp;LAYER=preciptp30_conus_1_day_data&amp;FORMAT=image/png" />
 		<wmsLayer
 	 lid="VDAAQ"
 	 visible="false"
-	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_preciptp7_raster"
+	 url="https://dmsdata.cr.usgs.gov/geoserver/quickdri_preciprd7_conus_1_day_data/preciprd7_conus_1_day_data/wms"
 	 srs="EPSG:3857"
-	 layers="PRECIP_RD7"
+	 layers="preciprd7_conus_1_day_data"
 	 styles="default"
 	 identify="true"
 	 name="No. Days with Precipitation (past 7 Days)"
-	 legend="%(SERVER_URL)s/cmapicons/Days_with_precip_7.png"/>
+	 legend="https://dmsdata.cr.usgs.gov/geoserver/quickdri_preciprd7_conus_1_day_data/preciprd7_conus_1_day_data/wms?SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetLegendGraphic&amp;LAYER=preciprd7_conus_1_day_data&amp;FORMAT=image/png" />
 		<wmsLayer
 	 lid="VDAAR"
 	 visible="false"
-	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_preciptp30_raster"
+	 url="https://dmsdata.cr.usgs.gov/geoserver/quickdri_preciprd30_conus_1_day_data/preciprd30_conus_1_day_data/wms?"
 	 srs="EPSG:3857"
-	 layers="PRECIP_RD30"
+	 layers="preciprd30_conus_1_day_data"
 	 styles="default"
 	 identify="true"
 	 name="No. Days with Precipitation (past 30 Days)"
-	 legend="%(SERVER_URL)s/cmapicons/Days_with_precip_30.png"/>
+	 legend="https://dmsdata.cr.usgs.gov/geoserver/quickdri_preciprd30_conus_1_day_data/preciprd30_conus_1_day_data/wms?SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetLegendGraphic&amp;LAYER=preciprd30_conus_1_day_data&amp;FORMAT=image/png"/>
 		<wmsLayer
 	 lid="VDAAS"
 	 visible="false"
-	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_precipdsr_raster"
+	 url="https://dmsdata.cr.usgs.gov/geoserver/quickdri_precipdsr_conus_1_day_data/precipdsr_conus_1_day_data/wms"
 	 srs="EPSG:3857"
-	 layers="PRECIP_DSR"
+	 layers="precipdsr_conus_1_day_data"
 	 styles="default"
 	 identify="true"
-	 name="No. Days since Precipitation (past 30 Days)"
-	 legend="%(SERVER_URL)s/cmapicons/Days_since_precip.png"/>
+	 name="No. Days since Precipitation"
+	 legend="https://dmsdata.cr.usgs.gov/geoserver/quickdri_precipdsr_conus_1_day_data/precipdsr_conus_1_day_data/wms?SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetLegendGraphic&amp;LAYER=precipdsr_conus_1_day_data&amp;FORMAT=image/png" />
 		<wmsLayer
 	 lid="VDAAT"
 	 visible="false"
-	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_precipcdd7_raster"
+	 url="https://dmsdata.cr.usgs.gov/geoserver/quickdri_precipcdd7_conus_1_day_data/precipcdd7_conus_1_day_data/wms"
 	 srs="EPSG:3857"
-	 layers="PRECIP_CDD7"
+	 layers="precipcdd7_conus_1_day_data"
 	 styles="default"
 	 identify="true"
 	 name="Max. Consecutive Dry Days (past 7 Days)"
-	 legend="%(SERVER_URL)s/cmapicons/MaxConDryDays_7.png"/>
+	 legend="https://dmsdata.cr.usgs.gov/geoserver/quickdri_precipcdd7_conus_1_day_data/precipcdd7_conus_1_day_data/wms?SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetLegendGraphic&amp;LAYER=precipcdd7_conus_1_day_data&amp;FORMAT=image/png"/>
 		<wmsLayer
 	 lid="VDAAU"
 	 visible="false"
-	 url="https://vegdri.cr.usgs.gov/wms.php?TRANSPARENT=true&amp;STYLES=qdri_precipcdd30_raster"
+	 url="https://dmsdata.cr.usgs.gov/geoserver/quickdri_precipcdd30_conus_1_day_data/precipcdd30_conus_1_day_data/wms"
 	 srs="EPSG:3857"
-	 layers="PRECIP_CDD30"
+	 layers="precipcdd30_conus_1_day_data"
 	 styles="default"
 	 identify="true"
 	 name="Max. Consecutive Dry Days (past 30 Days)"
-	 legend="%(SERVER_URL)s/cmapicons/MaxConDryDays_30.png"/>
+	 legend="https://dmsdata.cr.usgs.gov/geoserver/quickdri_precipcdd30_conus_1_day_data/precipcdd30_conus_1_day_data/wms?SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetLegendGraphic&amp;LAYER=precipcdd30_conus_1_day_data&amp;FORMAT=image/png"/>
 		</wmsSubgroup>
 
 		<wmsSubgroup label="Climate">
