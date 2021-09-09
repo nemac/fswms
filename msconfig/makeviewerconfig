@@ -6,6 +6,7 @@ from xml.dom.minidom import parseString
 from planet import api
 from usdm import USDM
 from nadm import NADM
+from vegdri import VegDRI
 from smap import SMAP9kAnomalyTopWeekly as smap_weekly
 from fw3 import make_fw3_viewer_xml
 
@@ -1455,6 +1456,9 @@ usdm_layers = usdm_manager.render()
 nadm_manager = NADM()
 nadm_layers = nadm_manager.render()
 
+vegdri = VegDRI()
+vegdri_layers = vegdri.render()
+
 #End NRT 8 day & drought monitor automation-------------------------------------------------
 
 
@@ -1467,6 +1471,7 @@ configXML = template.render( {
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
             'PLANET_API_KEY'          : PLANET_API_KEY,
             'FW3_LAYERS'              : FW3_LAYERS,
+            'VEGDRI_LAYERS'           : vegdri_layers,
             'SMAP_9K_ANOMALY_TOP_WEEKLY' : SMAP_9K_ANOMALY_TOP_WEEKLY,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,
