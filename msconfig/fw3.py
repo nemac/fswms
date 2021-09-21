@@ -17,7 +17,7 @@ ewsMask = [
     {'name' : 'MaskForShrubland'},
     {'name' : 'MaskForUrban'},
     {'name' : 'MaskForWetland'}
-    ]   
+    ]
 
 class Template:
     def __init__(self, file):
@@ -99,10 +99,14 @@ def formatproj(projstring, indentlevel=0):
 def get_fw3_layer_string(path, ptype, muted):
     f = os.path.basename(path)
     proj = getproj(path)
-    if ptype != 'adaptivebaseline_daysdiff':
-        colormapline = 'INCLUDE "../new-forwarn2-standard-2.cmap"'
-    else:
+    if ptype == 'adaptivebaseline_daysdiff':
         colormapline = 'INCLUDE "../cmaps/adaptive_baseline_daysdiff.cmap"'
+    elif ptype == 'ED' or ptype == '2yrED' or ptype == 'EED' or ptype == '2yrEED':
+        colormapline = 'INCLUDE "../cmaps/fw3_ED.cmap"'
+    elif ptype == 'phenoregions_seasonalprogress':
+        colormapline = 'INCLUDE "../cmaps/fw3_phenoregions_seasonalprogress.cmap"'
+    else:
+        colormapline = 'INCLUDE "../new-forwarn2-standard-2.cmap"'
     start = _get_date_from_file(f)
     end = _get_date_from_file(f, is_end=True)
     title = _get_title(start, end)
@@ -212,17 +216,18 @@ def make_fw3_viewer_xml():
 
 
 def make_layer_xml(path, ptype, muted):
-    template = WMS_LAYER_TEMPLATE
-    if ptype != 'adaptivebaseline_daysdiff':
-        legend_file = 'new-forwarn2-standard-legend-2.png'
-    else:
-        legend_file = 'daysdifflegend.png'
-    legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
     filename = os.path.basename(path)
     start = _get_date_from_file(filename)
     end = _get_date_from_file(filename, is_end=True)
     layer_id = _get_id(start, end, ptype, muted)
     title = _get_title(start, end)
+    template = WMS_LAYER_TEMPLATE
+    if ptype == 'adaptivebaseline_daysdiff':
+        legend_file = 'daysdifflegend.png'
+      	legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
+    else:
+        legend_file = 'new-forwarn2-standard-legend-2.png'
+        legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
     return template.render({
       'BREAK'       : '',
       'SELECTED'    : '',
