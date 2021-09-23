@@ -189,10 +189,21 @@ def filter_path_list(paths, muted=False, ext='.img'):
     else:
         return [ p for p in paths if 'muted' not in p and p.endswith(ext) ]
 
+def to_add_sublist_spacing(ptype, muted, default=True):
+    meta_type = 'muted' if muted else 'normal'
+    add_break = default
+    try:
+        add_break = FW3_PRODUCT_TYPES[meta_type][ptype]['break']
+    except:
+        pass 
+    return add_break
+
 def make_fw3_layer_list(ptype, muted):
     subgroup_title = get_fw3_subgroup_title(ptype, muted)
     subgroup_info = get_fw3_subgroup_info(ptype, muted)
-    string = '<wmsSubgroup label="' + subgroup_title + '" info="' + subgroup_info + '">\n'
+    to_break = to_add_sublist_spacing(ptype, muted)
+    break_text = 'break="true"' if to_break else 'break="false"'
+    string = '<wmsSubgroup label="' + subgroup_title + '" info="' + subgroup_info + '" ' + break_text + '>\n'
     folder = os.path.join(FW3_DATA_DIR, ptype)
     files = os.listdir(folder)
     files = filter_path_list(files, muted)
@@ -284,7 +295,7 @@ def make_mapfile_batch(ptype, folder, muted):
         make_mapfile(ptype, path, muted)
 
  
-def make_all(): 
+def make_mapfiles(): 
     meta_types = [ 'normal', 'muted' ]
     for meta_type in meta_types:
         config = FW3_PRODUCT_TYPES[meta_type]
@@ -296,3 +307,5 @@ def make_all():
             make_mapfile_batch(ptype=key, folder=fdr, muted=muted)
 
 
+if __name__ == '__main__':
+    make_mapfiles()
