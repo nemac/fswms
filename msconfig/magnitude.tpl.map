@@ -87,8 +87,8 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
       END
     END
 
-
-    %(DURATION_LAYERS)s
+%(MAGNITUDE_0524_0914_LAYERS)s
+%(MAGNITUDE_0624_0921_LAYERS)s
 
     LAYER
         NAME MaskForForest

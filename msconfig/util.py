@@ -12,22 +12,42 @@ except:
     exit(-1)
 
 ewsMask = [
-    {'name' : 'MaskForForest'},
-    {'name' : 'MaskForAgriculture'},
-    {'name' : 'MaskForConiferForest'},
-    {'name' : 'MaskForDeciduousForest'},
-    {'name' : 'MaskForGrass'},
-    {'name' : 'MaskForMixedForest'},
-    {'name' : 'MaskForNonVegetated'},
-    {'name' : 'MaskForShrubland'},
-    {'name' : 'MaskForUrban'},
-    {'name' : 'MaskForWetland'}
-    ]   
+  {'name' : 'MaskForForest'},
+  {'name' : 'MaskForAgriculture'},
+  {'name' : 'MaskForConiferForest'},
+  {'name' : 'MaskForDeciduousForest'},
+  {'name' : 'MaskForGrass'},
+  {'name' : 'MaskForMixedForest'},
+  {'name' : 'MaskForNonVegetated'},
+  {'name' : 'MaskForShrubland'},
+  {'name' : 'MaskForUrban'},
+  {'name' : 'MaskForWetland'}
+]
 
 Legends = {
   'rsac' : "RSAC-FHTET_CT_7-6-2011_clipped.png",
   'tacs' : "TACs_NASA_CT_7-6-2011_clipped.png"
 }
+
+def fileEndsWith(filename, fileExts):
+  for ext in fileExts:
+    if filename.endswith(ext):
+      return True
+  return False
+
+class Template:
+  def __init__(self, file=None, **args):
+    if file is None and 'string' in args:
+      self.contents = args['string']
+    else:
+      f = open(file, "r")
+      self.contents = ""
+      for line in f:
+        self.contents = self.contents + line
+      f.close
+  def render(self, dict):
+    return self.contents % dict
+
 
 def getLegend(layerName):
     if re.search(r'EFETAC', layerName, re.IGNORECASE):

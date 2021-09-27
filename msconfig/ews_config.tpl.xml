@@ -10033,20 +10033,76 @@
 	</wmsGroup>
 	<wmsGroup gid="G20" name="Seasonal_Summaries" label="Seasonal Summaries">
 		<wmsSubgroup label="Prominent Forest Disturbances"></wmsSubgroup>
+
+		<wmsSubgroup label="Magnitude: Jun 24 – Sep 21">
+
+        <wmsLayer
+          selected="false"
+          lid="DURMAG062021"
+          visible="false"
+          url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="sumr2021minus2020_absMedNDVIc_0624_0921"
+          name="2021"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2021minus2020_absMedNDVIc_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
+
+				<wmsLayer
+					selected="false"
+					lid="DURMAG062019"
+					visible="false"
+					url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="sumr2019minus2018_absMedNDVIc_0624_0921"
+					name="2019"
+					styles="default"
+					identify="true"
+					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2019minus2018_absMedNDVIc_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+				<wmsLayer
+					selected="false"
+					lid="DURMAG062018"
+					visible="false"
+					url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="sumr2018minus2017_absMedNDVIc_0624_0921"
+					name="2018"
+					styles="default"
+					identify="true"
+					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2018minus2017_absMedNDVIc_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+				<wmsLayer
+					selected="false"
+					lid="DURMAG062017"
+					visible="false"
+					url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
+					srs="EPSG:3857"
+					layers="sumr2017minus2016_absMedNDVIc_0624_0921"
+					name="2017"
+					styles="default"
+					identify="true"
+					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2017minus2016_absMedNDVIc_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+			mask="true"/>
+
+		</wmsSubgroup>
+
+
 		<wmsSubgroup label="Magnitude: May 24 – Sep 14">
-
-
         <wmsLayer
           selected="false"
           lid="DURMAG052020"
           visible="false"
           url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
           srs="EPSG:3857"
-          layers="sumr2020minus2019_absMedNDVIc"
+          layers="sumr2020minus2019_absMedNDVIc_0524_0914"
           name="2020"
           styles="default"
           identify="true"
-          legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2020minus2019_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+          legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2020minus2019_absMedNDVIc_0524_0914&amp;VERSION=1.1.1&amp;FORMAT=image/png"
       mask="true"/>
 
 				<wmsLayer
@@ -10055,11 +10111,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="sumr2019minus2018_absMedNDVIc"
+					layers="sumr2019minus2018_absMedNDVIc_0524_0914"
 					name="2019"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2019minus2018_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2019minus2018_absMedNDVIc_0524_0914&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 				<wmsLayer
@@ -10068,11 +10124,11 @@
 					visible="false"
 					url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="sumr2018minus2017_absMedNDVIc"
+					layers="sumr2018minus2017_absMedNDVIc_0524_0914"
 					name="2018"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2018minus2017_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2018minus2017_absMedNDVIc_0524_0914&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 				<wmsLayer
@@ -10081,18 +10137,31 @@
 					visible="false"
 					url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
 					srs="EPSG:3857"
-					layers="sumr2017minus2016_absMedNDVIc"
+					layers="sumr2017minus2016_absMedNDVIc_0524_0914"
 					name="2017"
 					styles="default"
 					identify="true"
-					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2017minus2016_absMedNDVIc&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+					legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=sumr2017minus2016_absMedNDVIc_0524_0914&amp;VERSION=1.1.1&amp;FORMAT=image/png"
 			mask="true"/>
 
 		</wmsSubgroup>
 
+
 		<wmsSubgroup label="Duration"></wmsSubgroup>
 		<wmsSubgroup label="Fixed 12-Period: Jun 24 – Sep 21">
 
+       <wmsLayer
+          selected="false"
+          lid="DURCOMB52021"
+          visible="false"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="dur51yr_2021_0624_0921"
+          name="2021"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2021_0624_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
 
         <wmsLayer
           selected="false"
@@ -10283,6 +10352,20 @@
 			mask="true"/>
 			</wmsSubgroup>
 	<wmsSubgroup label="Fixed 6-Period: May 8 – Jun 17">
+
+       <wmsLayer
+          selected="false"
+          lid="DURSP52021"
+          visible="false"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="dur51yr_2021_0508_0617"
+          name="2021"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2021_0508_0617&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
+
 
         <wmsLayer
           selected="false"
@@ -10476,6 +10559,20 @@
 
         <wmsLayer
           selected="false"
+          lid="DURP152021"
+          visible="false"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="dur51yr_2021_0624_0804"
+          name="2021"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2021_0624_0804&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
+
+
+        <wmsLayer
+          selected="false"
           lid="DURP152020"
           visible="false"
           url="%(SERVER_URL)s/duration?TRANSPARENT=true"
@@ -10665,6 +10762,18 @@
 			</wmsSubgroup>
 		<wmsSubgroup label="Fixed 6-Period: Aug 12 - Sep 21">
 
+     <wmsLayer
+          selected="false"
+          lid="DURP252021"
+          visible="false"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="dur51yr_2021_0812_0921"
+          name="2021"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2021_0812_0921&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
 
       <wmsLayer
           selected="false"
