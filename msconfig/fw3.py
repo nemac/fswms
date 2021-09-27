@@ -296,6 +296,7 @@ def make_mapfile_batch(ptype, folder, muted):
 
  
 def make_mapfiles(): 
+    print "Building ForWarn 3 mapfiles..."
     meta_types = [ 'normal', 'muted' ]
     for meta_type in meta_types:
         config = FW3_PRODUCT_TYPES[meta_type]
@@ -305,6 +306,8 @@ def make_mapfiles():
             info = config[key]['info']
             muted = meta_type == 'muted'
             make_mapfile_batch(ptype=key, folder=fdr, muted=muted)
+
+    print "Done building ForWarn 3 mapfiles..."
 
 
 if __name__ == '__main__':

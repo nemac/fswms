@@ -29,6 +29,12 @@ Legends = {
   'tacs' : "TACs_NASA_CT_7-6-2011_clipped.png"
 }
 
+def fileEndsWith(filename, fileExts):
+  for ext in fileExts:
+    if filename.endswith(ext):
+      return True
+  return False
+
 class Template:
   def __init__(self, file=None, **args):
     if file is None and 'string' in args:

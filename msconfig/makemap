@@ -20,7 +20,13 @@
 
 from osgeo import gdal, osr
 from util import *
-import sys, os, subprocess, datetime, re, shutil, traceback, getopt;
+import sys, os, subprocess, datetime, re, shutil, traceback, getopt
+
+import fw2
+import fw3
+import duration
+import magnitude
+
 
 opts, args = getopt.getopt(sys.argv[1:],"al")
 
@@ -78,15 +84,19 @@ layerTitles = {}
 ###
 tiflist = []
 
-print "Building ForWarn 2 mapfiles..."
-import fw2
-fw2.make_mapfiles()
-print "Done."
 
-print "Building ForWarn 3 mapfiles..."
-import fw3
+## Seasonal Summaries (Duration)
+duration.make_map()
+
+## Seasonal Summaries (Magnitude)
+magnitude.make_map()
+
+## ForWarn 2
+fw2.make_mapfiles()
+
+## ForWarn 3
 fw3.make_mapfiles() 
-print "Done."
+
 
 ###
 ### add in the gtac fhtet files to be available in an archive format
@@ -793,162 +803,6 @@ LAYERS = getLayers(DATA_DIR + "/fsdata/efetac_nasa/"+ "X_LC_ALLYEAR", "ews_gen.l
 # create layer definitions for duration products
 #def getLayers(dataDir, layerTemplateName, groupName, fileExt, wcs, maskBool, colormapfile=None)
 
-
-def fileEndsWith(filename, fileExts):
-  for ext in fileExts:
-    if filename.endswith(ext):
-      return True
-  return False
-
-
-def getDurationLayers(dataDir, layerTemplateName, groupName, fileExts, maskBool, colormapfile=None, layerTitleSubFromTo=[], proj=''):
-    tifList  = []
-    for tif in sorted([filename for filename in os.listdir(dataDir) if fileEndsWith(filename, fileExts) ], reverse=False):
-        try:        
-            tif = re.sub('^' + dataDir + '/', '', tif)
-            tif_fullpath = dataDir + '/' + tif;
-	    # Try to get proj4 string from the file then fallback to proj parameter
-            proj = getproj(tif_fullpath) or proj
-            if colormapfile:
-                colormapline = 'INCLUDE "%s"' % colormapfile
-            else:
-                colormapline   = ''
-            layerTitle = tif
-            for ext in fileExts:
-              layerTitle = layerTitle.rstrip(ext)
-            layerName = layerTitle
-	    if len(layerTitleSubFromTo):
-	      subFrom = layerTitleSubFromTo[0]
-              subTo = layerTitleSubFromTo[1]
-              layerTitle = re.sub(subFrom, subTo, layerTitle)
-            wmsLayerGroup = '/{}/{}'.format(groupName, layerTitle)
-            tifList.append({ 
-                             'PROJVALID'       : len(proj) > 0,
-                             'PROJ'            : formatproj(proj,10),
-                             'WKT'             : getwkt(tif_fullpath),
-                             'NAME'            : layerName,
-                             'DATA'            : dataDir + '/' + tif,
-                             'TITLE'           : layerTitle,
-                             'ABSTRACT'        : layerTitle,
-                             'COLORMAPLINE'    : colormapline,
-                             'MASK'            : '',
-                             'WMS_LAYER_GROUP' : wmsLayerGroup
-                             })
-            layerTitles[layerTitle] = layerTitle
-            if maskBool:
-                for mask in ewsMask:
-                    tifList.append({ 
-                                     'PROJVALID'       : len(proj) > 0,
-                                     'PROJ'            : formatproj(proj,10),
-                                     'WKT'             : getwkt(tif_fullpath),
-                                     'NAME'            : layerName + mask['name'],
-                                     'DATA'            : dataDir + '/' + tif,
-                                     'TITLE'           : layerTitle +'_' + mask['name'],
-                                     'ABSTRACT'        : layerTitle + '_' + mask['name'],
-                                     'COLORMAPLINE'    : colormapline,
-                                     'MASK'            : 'MASK ' + mask['name'],
-                                     'WMS_LAYER_GROUP' : wmsLayerGroup
-                                     })
-        except Exception as e:
-            print e
-            continue
-
-    layerTemplate = Template(layerTemplateName)
-    layers = ""
-    for tifdict in tifList:
-        if tifdict['PROJVALID']:
-            layers = layers + layerTemplate.render(tifdict)    
-    return layers
-
-
-DURATION_BASE_DIR = DATA_DIR + "/fsdata-internal/efetac_nasa/AncillaryData/duration"
-
-DURATION_MAG_0524_0914_LAYERS = getDurationLayers(
-  dataDir=DURATION_BASE_DIR + '/magnitude/mag_0524_0914',
-  layerTemplateName='ews_gen.layer.duration.tpl.map',
-  groupName='Seasonal Summaries: Magnitude May24-Sept14',
-  fileExts=['.img', '.tif'],
-  maskBool=True,
-  colormapfile='cmaps/DURATION_magnitude.cmap',
-  layerTitleSubFromTo=['sumr(\d{4}).+$', '\g<1> Magnitude May24-Sept14'], # \g<1> refers to the first match group
-  proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
-) 
- 
-DURATION_12PERIOD_0624_0921_LAYERS = getDurationLayers(
-  dataDir=DURATION_BASE_DIR + '/dur1yr_0624_0921',
-  layerTemplateName='ews_gen.layer.duration.tpl.map',
-  groupName='Seasonal Summaries: Duration Fixed 12-Period Jun24-Sep21',
-  fileExts=['.img', '.tif'],
-  maskBool=True,
-  colormapfile='cmaps/DURATION_v2_6and12period.cmap',
-  layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 12-Period Jun24-Sep21'],
-  proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
-)
-
-DURATION_6PERIOD_0508_0617_LAYERS = getDurationLayers(
-  dataDir=DURATION_BASE_DIR + '/dur1yr_0508_0617',
-  layerTemplateName='ews_gen.layer.duration.tpl.map',
-  groupName='Seasonal Summaries: Duration Fixed 6-Period May8-Jun17',
-  fileExts=['.img', '.tif'],
-  maskBool=True,
-  colormapfile='cmaps/DURATION_v2_6and12period.cmap',
-  layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 6-Period May8-Jun17'],
-  proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
-)
-
-DURATION_6PERIOD_0624_0804_LAYERS = getDurationLayers(
-  dataDir=DURATION_BASE_DIR + '/dur1yr_0624_0804',
-  layerTemplateName='ews_gen.layer.duration.tpl.map',
-  groupName='Seasonal Summaries: Duration Fixed 6-Period Jun24-Aug04',
-  fileExts=['.img', '.tif'],
-  maskBool=True,
-  colormapfile='cmaps/DURATION_v2_6and12period.cmap',
-  layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 6-Period Jun24-Aug4'],
-  proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
-)
-
-DURATION_6PERIOD_0812_0921_LAYERS = getDurationLayers(
-  dataDir=DURATION_BASE_DIR + '/dur1yr_0812_0921',
-  layerTemplateName='ews_gen.layer.duration.tpl.map',
-  groupName='Seasonal Summaries: Duration Fixed 6-Period Aug12-Sep21',
-  fileExts=['.img', '.tif'],
-  maskBool=True,
-  colormapfile='cmaps/DURATION_v2_6and12period.cmap',
-  layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 6-Period Aug12-Sep21'],
-  proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
-)
-
-DURATION_LAYERS = DURATION_12PERIOD_0624_0921_LAYERS + \
-		  DURATION_6PERIOD_0508_0617_LAYERS + \
-		  DURATION_6PERIOD_0624_0804_LAYERS + \
-		  DURATION_6PERIOD_0812_0921_LAYERS
-
-MAGNITUDE_LAYERS = DURATION_MAG_0524_0914_LAYERS
-
-###
-### Create the duration.map file:
-###
-template = Template("duration.tpl.map")
-f_new = openMapfileForWriting("duration.map")
-f_new.write( template.render( {
-	    'DURATION_LAYERS' : DURATION_LAYERS,
-            'DATA_DIR'        : DATA_DIR,
-            'SERVICE_URL'     : "%s/%s" % (SERVER_URL, "duration")
-            } ) )
-f_new.close()
-
-
-###
-### Create the duration.map file:
-###
-template = Template("magnitude.tpl.map")
-f_new = openMapfileForWriting("magnitude.map")
-f_new.write( template.render( {
-	    'DURATION_LAYERS' : MAGNITUDE_LAYERS,
-      'DATA_DIR'        : DATA_DIR,
-      'SERVICE_URL'     : "%s/%s" % (SERVER_URL, "magnitude")
-} ) )
-f_new.close()
 
 
 ###

@@ -432,6 +432,7 @@ def makeFW2MapfilesFor(source, p_type):
 
 
 def make_mapfiles():
+  print "Building ForWarn 2 mapfiles..."
   for s in SOURCES:
     for p in ALL_PRODUCT_TYPES:
       makeFW2MapfilesFor(s, p)
@@ -448,3 +449,4 @@ def make_mapfiles():
     for p in ALL_LEGACY_PRODUCT_TYPES:
       makeCurrentMapfilesFor(s, p, '.tif')
 
+  print "Done building ForWarn 2 mapfiles..."
