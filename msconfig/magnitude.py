@@ -2,7 +2,8 @@
 
 import sys
 
-from duration import getDurationLayers, openMapfileForWriting, fileEndsWith, Template, getwkt, ewsMask
+from util import ewsMask, openMapfileForWriting, fileEndsWith, Template, getwkt
+from duration import getDurationLayers
 
 sys.path.append("../var")
 try:
@@ -16,26 +17,14 @@ except:
 
 def make_map():
 
-  MAGNITUDE_0524_0914_LAYERS = getDurationLayers(
-    dataDir=DURATION_BASE_DIR + '/magnitude/mag_0524_0914',
+  MAGNITUDE_LAYERS = getDurationLayers(
+    dataDir=DURATION_BASE_DIR + '/magnitude',
     layerTemplateName='ews_gen.layer.duration.tpl.map',
-    groupName='Seasonal Summaries: Magnitude May24-Sept14',
+    groupName='ForWarn Seasonal Summaries: Magnitude',
     fileExts=['.img', '.tif'],
     maskBool=True,
     colormapfile='cmaps/DURATION_magnitude.cmap',
-    layerTitleSubFromTo=['sumr(\d{4}).+$', '\g<1> Magnitude May24-Sept14'], # \g<1> refers to the first match group
-    proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
-  )
-
-  MAGNITUDE_0624_0921_LAYERS = getDurationLayers(
-    dataDir=DURATION_BASE_DIR + '/magnitude/mag_0624_0921',
-    layerTemplateName='ews_gen.layer.duration.tpl.map',
-    groupName='Seasonal Summaries: Magnitude Jun24-Sept21',
-    fileExts=['.img', '.tif'],
-    maskBool=True,
-    colormapfile='cmaps/DURATION_magnitude.cmap',
-    layerTitleSubFromTo=['sumr(\d{4}).+$', '\g<1> Magnitude Jun24-Sept21'], # \g<1> refers to the first match group
-    proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
+    layerTitleSubFromTo=['magnitude(\d{4}).+$', '\g<1> Magnitude'], # \g<1> refers to the first match group
   )
    
   ###
@@ -44,8 +33,7 @@ def make_map():
   template = Template("magnitude.tpl.map")
   f_new = openMapfileForWriting("magnitude.map")
   f_new.write( template.render( {
-        'MAGNITUDE_0524_0914_LAYERS' : MAGNITUDE_0524_0914_LAYERS,
-        'MAGNITUDE_0624_0921_LAYERS' : MAGNITUDE_0624_0921_LAYERS,
+        'MAGNITUDE_LAYERS' : MAGNITUDE_LAYERS,
         'DATA_DIR'        : DATA_DIR,
         'SERVICE_URL'     : "%s/%s" % (SERVER_URL, "magnitude")
   } ) )
