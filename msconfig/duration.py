@@ -14,21 +14,21 @@ except:
     exit(-1)
 
 
-def getDurationLayers(dataDir, layerTemplateName, groupName, fileExts, maskBool, colormapfile=None, layerTitleSubFromTo=[], proj=''):
+def getDurationLayers(dataDir, layerTemplateName, groupName, fileExts, maskBool, colormapfile=None, layerTitleSubFromTo=[]):
     tifList  = []
     for tif in sorted([filename for filename in os.listdir(dataDir) if fileEndsWith(filename, fileExts) ], reverse=False):
         try:        
             tif = re.sub('^' + dataDir + '/', '', tif)
             tif_fullpath = dataDir + '/' + tif;
-	    # Try to get proj4 string from the file then fallback to proj parameter
-            proj = getproj(tif_fullpath) or proj
+            proj = getproj(tif_fullpath)
             if colormapfile:
                 colormapline = 'INCLUDE "%s"' % colormapfile
             else:
                 colormapline   = ''
             layerTitle = tif
             for ext in fileExts:
-              layerTitle = layerTitle.rstrip(ext)
+                if layerTitle.endswith(ext):
+                    layerTitle = layerTitle.rstrip(ext)
             layerName = layerTitle
             if len(layerTitleSubFromTo):
                 subFrom = layerTitleSubFromTo[0]
