@@ -54,6 +54,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
+		  <viewGroup name="ForWarn3" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -66,6 +67,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
+		  <viewGroup name="ForWarn3" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -78,6 +80,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
+		  <viewGroup name="ForWarn3" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -90,6 +93,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
+		  <viewGroup name="ForWarn3" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -102,6 +106,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
+		  <viewGroup name="ForWarn3" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -118,6 +123,7 @@
 			<viewGroup name="MODIS_Disturbance_Events" selected="true" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
+		  <viewGroup name="ForWarn3" />
 			<viewGroup name="MODIS_Change_Detection_Products" />
 			<viewGroup name="Archived_TACS" />
 			<viewGroup name="Archived_GTAC" />
@@ -132,6 +138,7 @@
 			<viewGroup name="MODIS_Disturbance_Events" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
+		  <viewGroup name="ForWarn3" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Archived_TACS" />
 			<viewGroup name="Seasonal_Summaries" />
@@ -1673,11 +1680,6 @@
 
   	%(USDM_LAYERS)s
 
-    <wmsSubgroup label="North American Drought Monitor (NADM)" break="true"></wmsSubgroup>
-
-		%(NADM_LAYERS)s
-
-
 	<wmsSubgroup label="CONUS VegDRI Veg. Moisture Status (USGS/NDMC; weekly eMODIS)">
 
     %(VEGDRI_LAYERS)s
@@ -1686,28 +1688,11 @@
 
 	</wmsGroup>
 	<wmsGroup gid="G11" name="US_Climate" label="Other Weather and Climate Maps" >
-		<wmsSubgroup label="Weather">
-   <wmsLayer
-     lid="AIE"
-     visible="false"
-     url="%(SERVER_URL)s/wlayers?TRANSPARENT=true"
-     srs="EPSG:3857"
-     layers="TRMM_3B43_V7"
-     styles="default"
-     identify="true"
-     name="TRMM 3B43 V7 MONTHY Precip"
-     legend="%(SERVER_URL)s/cmapicons/trmm-accum.png"/>
-
-  </wmsSubgroup>
-
 
   <wmsSubgroup label="Recent Severe Weather">
   </wmsSubgroup>
 
   <wmsSubgroup label="NOAA Storm Prediction Center (SPC) Reports">
-
-
-
 
     <wmsLayer
       lid="spc_hail_current"
