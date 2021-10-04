@@ -9,7 +9,7 @@ from smap import SMAP9kAnomalyTopWeekly as smap_weekly
 from planet_config import makePlanetDotComUSDANormalizedAnalyticFourteenDayList
 from glam import renderGlamLayerBlocksFor
 from fw2 import makeFW2ArchiveLayerListFor, makeFW2LegacyArchiveLayerListFor, makeFW2CurrentLegacyLayerListFor, makeFW2CurrentLayerListFor
-from fw3 import make_fw3_viewer_xml
+from fw3 import make_fw3_current_xml, make_fw3_archive_xml
 
 from LegendConfig import *
 
@@ -1050,7 +1050,8 @@ FW2_CURRENT_LEGACY_LAYERS__ALLYEAR = makeFW2CurrentLayerListFor('X_LC_ALLYEAR', 
 FW2_CURRENT_LEGACY_LAYERS__MUC = makeFW2CurrentLayerListFor('X_LC_MUC_ALL_YR', 'current_legacy')
 FW2_CURRENT_LEGACY_LAYERS__MMAX = makeFW2CurrentLayerListFor('X_LC_MMAX_ALL_YR', 'current_legacy')
 
-FW3_LAYERS = make_fw3_viewer_xml()
+FW3_CURRENT = make_fw3_current_xml()
+FW3_ARCHIVE = make_fw3_archive_xml()
 
 pwd = A_PATH_TO_FW2_PRODUCTS
 current_dates = getCurrentDates(pwd)
@@ -1067,10 +1068,7 @@ usdm_manager = USDM()
 usdm_layers = usdm_manager.render()
 
 vegdri = VegDRI()
-vegdri_layers = vegdri.render()
-
-#End NRT 8 day & drought monitor automation-------------------------------------------------
-
+vegdri_layers = ''
 
 f = open("../html/view/config/ews_config.xml", "w")
 fMin = open("../html/view/config/ews_config_min.xml", "w+")
@@ -1080,7 +1078,8 @@ configXML = template.render( {
             'SERVER_URL'                            : SERVER_URL,
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
             'PLANET_API_KEY'          : PLANET_API_KEY,
-            'FW3_LAYERS'              : FW3_LAYERS,
+            'FW3_ARCHIVE'              : FW3_ARCHIVE,
+            'FW3_CURRENT'             : FW3_CURRENT,
             'VEGDRI_LAYERS'           : vegdri_layers,
             'SMAP_9K_ANOMALY_TOP_WEEKLY' : SMAP_9K_ANOMALY_TOP_WEEKLY,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
