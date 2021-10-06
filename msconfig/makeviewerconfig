@@ -1067,7 +1067,8 @@ usdm_manager = USDM()
 usdm_layers = usdm_manager.render()
 
 vegdri = VegDRI()
-vegdri_layers = vegdri.render()
+#vegdri_layers = vegdri.render()
+vegdri_layers = ''
 
 #End NRT 8 day & drought monitor automation-------------------------------------------------
 
@@ -1081,7 +1082,6 @@ configXML = template.render( {
             'VIEWER_DEPLOY_DIR_URL'                 : VIEWER_DEPLOY_DIR_URL,
             'PLANET_API_KEY'          : PLANET_API_KEY,
             'FW3_LAYERS'              : FW3_LAYERS,
-            'VEGDRI_LAYERS'           : vegdri_layers,
             'SMAP_9K_ANOMALY_TOP_WEEKLY' : SMAP_9K_ANOMALY_TOP_WEEKLY,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,
