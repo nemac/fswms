@@ -19,7 +19,7 @@ except:
 class VegDRI():
 
   def __init__(self):
-    self.url = 'https://dmsdata.cr.usgs.gov/geoserver/quickdri_vegdri_conus_1_week_data/vegdri_conus_1_week_data/wms'
+    self.url = 'https://dmsdata.cr.usgs.gov/geoserver/wms'
     self.date_format = '%m-%d-%Y'
     self.lids = [ "VDAAM", "VDAAL", "VDAAK", "VDAAJ", "VDAAI", "VDAAH", "VDAAG", "VDAAF", "VDAAE", "VDAAD", "VDAAC", "VDAAB", "VDAAA" ]
 
@@ -32,16 +32,18 @@ class VegDRI():
     return full
 
   def get_capabilities(self):
-    r = requests.get(self.url, params={ 'SERVICE': 'WMS', 'REQUEST': 'GetCapabilities' })
+    r = requests.get(self.url, params={ 'SERVICE': 'WMS', 'REQUEST': 'GetCapabilities', 'VERSION': '1.3.0' })
     if not r.ok:
-      raise Exception('GetCapabilities request for VegDRI data failed with status code ' + r.status_code)
+      raise Exception('GetCapabilities request for VegDRI data failed with status code ' + str(r.status_code))
     xml = ET.fromstring(r.text)
     return xml
 
   def get_recent_times(self):
     xml = self.get_capabilities()
+    print xml
     schema_str = '{http://www.opengis.net/wms}'
-    xpath_search = './{schema}Capability/{schema}Layer/{schema}Layer/{schema}Dimension[@name="time"]'.format(schema=schema_str)
+    xpath_search = '{schema}WMS_Capabilities'.format(schema=schema_str)
+    #@Capability/Layer/Layer[@name="quickdri_vegdri_conus_week_data:vegdri_conus_week_data"]/Extent[@name="time"]'
     dim_el = xml.find(xpath_search)
     if dim_el is None:
       raise Exception('Failed to correctly parse GetCapabilities response for VegDRI data!')
@@ -67,7 +69,7 @@ class VegDRI():
             visible="false"
             url="{url}"
             srs="EPSG:3857"
-            layers="vegdri_conus_1_week_data"
+            layers="quickdri_vegdri_conus_week_data%3Avegdri_conus_week_data"
             name="{title}"
             styles="default" 
             identify="false"

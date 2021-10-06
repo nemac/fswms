@@ -3,6 +3,8 @@
 	<application title="U.S. Forest Change Assessment Viewer" >
 	</application>
 	<extent xmin="-15000000" ymax="7000000" ymin="2000000" xmax="-6000000"></extent>
+	<initialExtent xmin="-15000000" ymax="7000000" ymin="2000000" xmax="-6000000"></initialExtent>
+	<maxResolution value="9783.939619140625"></maxResolution>
 	<server map_path="http://arcgisserver7.nemac.org/ArcGIS/" >
 	</server>
 	<services>

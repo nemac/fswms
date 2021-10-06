@@ -157,16 +157,15 @@ def make_fw3_layer_list(ptype, muted):
     return string
 
 def current_title_maker(filename, title_prefix, muted):
+    start = _get_date_from_file(filename)
+    end = _get_date_from_file(filename, is_end=True)
+    title = '{prefix} %Departure {start}-{end}'.format(
+        prefix=title_prefix,
+        start=start.strftime('%b%d'),
+        end=end.strftime('%b%d')
+    )
     if muted:
-        title = '{prefix} Muted Grass/Shrub'.format(prefix=title_prefix)
-    else:
-        start = _get_date_from_file(filename)
-        end = _get_date_from_file(filename, is_end=True)
-        title = '{prefix} %Departure {start}-{end}'.format(
-            prefix=title_prefix,
-            start=start.strftime('%b%d'),
-            end=end.strftime('%b%d')
-        )
+        title += ' (Muted Grass/Shrub)'
     return title
 
 def current_id_maker(index, ptype, muted):
@@ -188,39 +187,37 @@ def make_current_mapfiles(ptype, muted):
         layer_id = current_id_maker(i, ptype, muted=muted)
         make_mapfile(ptype, path, muted=muted, layer_id=layer_id)
 
-def make_current_layer_list(ptype):
+def make_current_layer_list(ptype, muted):
     # NOTE: this function has the side effect of creating symlinks to mapfiles
-    subgroup_title = get_fw3_subgroup_title(ptype, muted=False)
-    subgroup_info = get_fw3_subgroup_info(ptype, muted=False)
-    subgroup_title = subgroup_title.rstrip('&quot;Normal&quot;')
-    to_break = to_add_sublist_spacing(ptype, muted=False)
+    subgroup_title = get_fw3_subgroup_title(ptype, muted=muted)
+    subgroup_info = get_fw3_subgroup_info(ptype, muted=muted)
+    subgroup_title = subgroup_title
+    to_break = to_add_sublist_spacing(ptype, muted=muted)
     break_text = 'break="true"' if to_break else 'break="false"'
     string = '<wmsSubgroup label="' + subgroup_title + '" info="' + subgroup_info + '" ' + break_text + '>\n'
     folder = os.path.join(FW3_DATA_DIR, ptype)
     files = os.listdir(folder)
-    files = filter_path_list(files, muted=False)
+    files = filter_path_list(files, muted=muted)
     files = sorted(files, reverse=True)[:3]
     paths = [ os.path.join(folder, f) for f in files ]
     prefixes = [ 'Current', 'Previous1', 'Previous2' ]
     for i, path in enumerate(paths):
         filename = os.path.basename(path)
-        normal_title = current_title_maker(filename, prefixes[i], muted=False)
-        normal_layer_id = current_id_maker(i, ptype, muted=False)
-        normal_layer_xml = make_layer_xml(path, ptype, title=normal_title, layer_id=normal_layer_id, muted=False)
-        if ptype in FW3_PRODUCT_TYPES['muted'].keys():
-            muted_title = current_title_maker(filename, prefixes[i], muted=True)
-            muted_layer_id = current_id_maker(i, ptype, muted=True)
-            muted_layer_xml = make_layer_xml(path, ptype, title=muted_title, layer_id=muted_layer_id, muted=True, to_break=True)
-            string += normal_layer_xml + muted_layer_xml
+        title = current_title_maker(filename, prefixes[i], muted=muted)
+        layer_id = current_id_maker(i, ptype, muted=muted)
+        layer_xml = make_layer_xml(path, ptype, title=title, layer_id=layer_id, muted=muted)
+        string += layer_xml
     string += '\n</wmsSubgroup>\n\n'
     return string
 
 def make_fw3_current_xml():
     full = ''
-    config = FW3_PRODUCT_TYPES['normal']
-    sorted_keys = sorted(config.keys(), key=lambda x: config[x]['order'])
-    for key in sorted_keys:
-        full += make_current_layer_list(key)
+    for meta_type in [ 'normal', 'muted' ]:
+        muted = meta_type == 'muted'
+        config = FW3_PRODUCT_TYPES[meta_type]
+        sorted_keys = sorted(config.keys(), key=lambda x: config[x]['order'])
+        for key in sorted_keys:
+            full += make_current_layer_list(key, muted)
     return full
 
 def make_fw3_archive_xml():
