@@ -83,7 +83,6 @@ def make_map():
     maskBool=True,
     colormapfile='cmaps/DURATION_v2_6and12period.cmap',
     layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 12-Period Jun24-Sep21'],
-    proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
   )
 
   DURATION_6PERIOD_0508_0617_LAYERS = getDurationLayers(
@@ -94,7 +93,6 @@ def make_map():
     maskBool=True,
     colormapfile='cmaps/DURATION_v2_6and12period.cmap',
     layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 6-Period May8-Jun17'],
-    proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
   )
 
   DURATION_6PERIOD_0624_0804_LAYERS = getDurationLayers(
@@ -105,7 +103,6 @@ def make_map():
     maskBool=True,
     colormapfile='cmaps/DURATION_v2_6and12period.cmap',
     layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 6-Period Jun24-Aug4'],
-    proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
   )
 
   DURATION_6PERIOD_0812_0921_LAYERS = getDurationLayers(
@@ -116,7 +113,6 @@ def make_map():
     maskBool=True,
     colormapfile='cmaps/DURATION_v2_6and12period.cmap',
     layerTitleSubFromTo=['dur\d1yr_(\d{4}).+$', '\g<1> 6-Period Aug12-Sep21'],
-    proj='+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs '
   )
 
   DURATION_LAYERS = DURATION_12PERIOD_0624_0921_LAYERS + \
