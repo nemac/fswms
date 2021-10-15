@@ -1067,8 +1067,8 @@ SMAP_9K_ANOMALY_TOP_WEEKLY = smap_layer.render_view_tpl()
 usdm_manager = USDM()
 usdm_layers = usdm_manager.render()
 
+# Removing this for now
 #vegdri = VegDRI()
-vegdri_layers = ''
 
 f = open("../html/view/config/ews_config.xml", "w")
 fMin = open("../html/view/config/ews_config_min.xml", "w+")
@@ -1080,7 +1080,6 @@ configXML = template.render( {
             'PLANET_API_KEY'          : PLANET_API_KEY,
             'FW3_ARCHIVE'              : FW3_ARCHIVE,
             'FW3_CURRENT'             : FW3_CURRENT,
-            'VEGDRI_LAYERS'           : vegdri_layers,
             'SMAP_9K_ANOMALY_TOP_WEEKLY' : SMAP_9K_ANOMALY_TOP_WEEKLY,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,
