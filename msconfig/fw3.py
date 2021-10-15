@@ -42,7 +42,7 @@ def get_fw3_layer_string(path, ptype, muted, title=None, layer_id=None):
     proj = getproj(path)
     if ptype == 'adaptivebaseline_daysdiff':
         colormapline = 'INCLUDE "../cmaps/adaptive_baseline_daysdiff.cmap"'
-    elif ptype == 'ED' or ptype == '2yrED' or ptype == 'EED' or ptype == '2yrEED':
+    elif ptype == 'ED' or ptype == '2yrED' or ptype == 'EED' or ptype == '2yrEED' or ptype == 'phenoregionEED' or ptype == 'phenoregionED':
         colormapline = 'INCLUDE "../cmaps/fw3_ED.cmap"'
     elif ptype == 'phenoregions_seasonalprogress':
         colormapline = 'INCLUDE "../cmaps/fw3_phenoregions_seasonalprogress.cmap"'
@@ -316,7 +316,7 @@ def make_mapfiles():
             make_mapfile_batch(ptype=key, folder=fdr, muted=muted)
             make_current_mapfiles(ptype=key, muted=muted)
 
-    print "Done building ForWarn 3 mapfiles..."
+    print "Done!"
 
 
 if __name__ == '__main__':
