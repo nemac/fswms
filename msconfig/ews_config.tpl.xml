@@ -3,6 +3,8 @@
 	<application title="U.S. Forest Change Assessment Viewer" >
 	</application>
 	<extent xmin="-15000000" ymax="7000000" ymin="2000000" xmax="-6000000"></extent>
+	<initialExtent xmin="-15000000" ymax="7000000" ymin="2000000" xmax="-6000000"></initialExtent>
+	<maxResolution value="9783.939619140625"></maxResolution>
 	<server map_path="http://arcgisserver7.nemac.org/ArcGIS/" >
 	</server>
 	<services>
@@ -23,7 +25,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3" />
+		  <viewGroup name="ForWarn3_Current" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -33,12 +35,13 @@
       <viewGroup name="Planet.com Imagery" />
 			<viewGroup name="MODISCloud" />
 		</view>
-		<view name="MODIS_Forest_Change_Products" label="Archived Near-Real-Time Change Maps (MODIS NDVI)">
+		<view name="MODIS_Forest_Change_Products" label="Archived Near-Real-Time Change Maps">
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3" />
+		  <viewGroup name="ForWarn3_Current" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
+      <viewGroup name="ForWarn3_Archive" />
 			<viewGroup name="Archived_FW2" />
 			<viewGroup name="Archived_TACS" />
 			<viewGroup name="Archived_GTAC" />
@@ -54,7 +57,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3" />
+		  <viewGroup name="ForWarn3_Current" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -67,7 +70,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3" />
+		  <viewGroup name="ForWarn3_Current" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -80,7 +83,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3" />
+		  <viewGroup name="ForWarn3_Current" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -93,7 +96,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3" />
+		  <viewGroup name="ForWarn3_Current" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -106,7 +109,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3" />
+		  <viewGroup name="ForWarn3_Current" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -123,7 +126,7 @@
 			<viewGroup name="MODIS_Disturbance_Events" selected="true" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3" />
+		  <viewGroup name="ForWarn3_Current" />
 			<viewGroup name="MODIS_Change_Detection_Products" />
 			<viewGroup name="Archived_TACS" />
 			<viewGroup name="Archived_GTAC" />
@@ -138,7 +141,7 @@
 			<viewGroup name="MODIS_Disturbance_Events" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3" />
+		  <viewGroup name="ForWarn3_Current" />
 			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
 			<viewGroup name="Archived_TACS" />
 			<viewGroup name="Seasonal_Summaries" />
@@ -1060,11 +1063,12 @@
 		</wmsSubgroup>
 	</wmsGroup>
 
+  <wmsGroup gid="GForWarn3_Current" name="ForWarn3_Current" label="ForWarn III Near-Real-Time Change Maps">
+    %(FW3_CURRENT)s
+  </wmsGroup>
 
-  <wmsGroup gid="GForWarn3" name="ForWarn3" label="ForWarn III Near-Real-Time Change Maps">
-
-    %(FW3_LAYERS)s
-
+  <wmsGroup gid="GForWarn3_Archive" name="ForWarn3_Archive" label="Archived ForWarn III Change Maps">
+    %(FW3_ARCHIVE)s
   </wmsGroup>
 
 	<wmsGroup gid="G04" name="MODIS_Change_Detection_Products" label="ForWarn II Near-Real-Time Change Maps">

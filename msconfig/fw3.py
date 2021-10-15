@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 import sys, os, datetime, re
 from osgeo import gdal, osr
@@ -5,73 +6,14 @@ from osgeo import gdal, osr
 sys.path.append('../var')
 from Config import *
 
-
-ewsMask = [
-    {'name' : 'MaskForForest'},
-    {'name' : 'MaskForAgriculture'},
-    {'name' : 'MaskForConiferForest'},
-    {'name' : 'MaskForDeciduousForest'},
-    {'name' : 'MaskForGrass'},
-    {'name' : 'MaskForMixedForest'},
-    {'name' : 'MaskForNonVegetated'},
-    {'name' : 'MaskForShrubland'},
-    {'name' : 'MaskForUrban'},
-    {'name' : 'MaskForWetland'}
-    ]
-
-class Template:
-    def __init__(self, file):
-        f = open(file, "r")
-        self.contents = ""
-        for line in f:
-            self.contents = self.contents + line
-        f.close
-    def render(self, dict):
-        return self.contents % dict
-
-def getproj(tif):
-    projectionWkt = getwkt(tif)
-    spatialReferenceObj = osr.SpatialReference(projectionWkt)
-    projectionProj4 = spatialReferenceObj.ExportToProj4()
-    return projectionProj4
-
-def getwkt(tif):
-
-    #function to get the well known text version of the
-    #  spatail reference (proejction) of the image (tif)
-    wktFile = tif + '.wkt'
-    wktData = ''
-
-    #check if a wkt tile exists
-    wktFileExists = os.path.exists(wktFile)
-
-    if wktFileExists:
-        #if the wkt file exists read the file
-        #  trying to avoid doing gdal.open its resource expensive
-        #  doing a normal file read of the of MUCH smaller text file seems to speed things up
-        with open(wktFile, 'r') as myfile:
-            wktData = myfile.read()
-
-    else:
-        #if the wkt file does not exist thane use gdal to write it.
-        dataSet = gdal.Open( tif, gdal.GA_ReadOnly )
-        wktData = dataSet.GetProjection()
-        f = open( wktFile, 'w' )
-        f.write( wktData )
-        f.close()
-
-    return wktData
+from util import ewsMask, Template, getproj, getwkt
 
 
-
-
-# everything below is not in makemap already
-
-def _get_date_from_file(filename, is_end=False):
+def _get_date_from_file(filename, is_end=False, d_format='%Y-%m-%d'):
   index_buffer = 11 if is_end else 0
   length_of_date_str = 10
   ds = filename[index_buffer:index_buffer+length_of_date_str]
-  date = datetime.datetime.strptime(ds, '%Y-%m-%d')
+  date = datetime.datetime.strptime(ds, d_format)
   return date
 
 def _get_title(start, end):
@@ -95,13 +37,12 @@ def formatproj(projstring, indentlevel=0):
             lines.append("%s%s\"%s\"" % (answer, indentation, line))
     return "\n".join(lines)
 
-
-def get_fw3_layer_string(path, ptype, muted):
+def get_fw3_layer_string(path, ptype, muted, title=None, layer_id=None):
     f = os.path.basename(path)
     proj = getproj(path)
     if ptype == 'adaptivebaseline_daysdiff':
         colormapline = 'INCLUDE "../cmaps/adaptive_baseline_daysdiff.cmap"'
-    elif ptype == 'ED' or ptype == '2yrED' or ptype == 'EED' or ptype == '2yrEED':
+    elif ptype == 'ED' or ptype == '2yrED' or ptype == 'EED' or ptype == '2yrEED' or ptype == 'phenoregionEED' or ptype == 'phenoregionED':
         colormapline = 'INCLUDE "../cmaps/fw3_ED.cmap"'
     elif ptype == 'phenoregions_seasonalprogress':
         colormapline = 'INCLUDE "../cmaps/fw3_phenoregions_seasonalprogress.cmap"'
@@ -109,8 +50,8 @@ def get_fw3_layer_string(path, ptype, muted):
         colormapline = 'INCLUDE "../new-forwarn2-standard-2.cmap"'
     start = _get_date_from_file(f)
     end = _get_date_from_file(f, is_end=True)
-    title = _get_title(start, end)
-    layer_id = _get_id(start, end, ptype, muted)
+    title = title or _get_title(start, end)
+    layer_id = layer_id or _get_id(start, end, ptype, muted)
     layers = []
     layers.append({
        'TIF'             : f,
@@ -215,7 +156,71 @@ def make_fw3_layer_list(ptype, muted):
     string += '\n</wmsSubgroup>\n\n'
     return string
 
-def make_fw3_viewer_xml():
+def current_title_maker(filename, title_prefix, muted):
+    start = _get_date_from_file(filename)
+    end = _get_date_from_file(filename, is_end=True)
+    title = '{prefix} %Departure {start}-{end}'.format(
+        prefix=title_prefix,
+        start=start.strftime('%b%d'),
+        end=end.strftime('%b%d')
+    )
+    if muted:
+        title += ' (Muted Grass/Shrub)'
+    return title
+
+def current_id_maker(index, ptype, muted):
+    how_current = [ 'current', 'previous1', 'previous2' ]    
+    _id = 'FW3_{ptype}_{how_current}'.format(ptype=ptype, how_current=how_current[index])
+    if muted:
+        _id += '_muted'
+    return _id
+
+def make_current_mapfiles(ptype, muted):
+    folder = os.path.join(FW3_DATA_DIR, ptype)
+    files = os.listdir(folder)
+    files = filter_path_list(files, muted=False)
+    files = sorted(files, reverse=True)[:3]
+    paths = [ os.path.join(folder, f) for f in files ]
+    prefixes = [ 'Current', 'Previous1', 'Previous2' ]
+    for i, path in enumerate(paths):
+        filename = os.path.basename(path)
+        layer_id = current_id_maker(i, ptype, muted=muted)
+        make_mapfile(ptype, path, muted=muted, layer_id=layer_id)
+
+def make_current_layer_list(ptype, muted):
+    # NOTE: this function has the side effect of creating symlinks to mapfiles
+    subgroup_title = get_fw3_subgroup_title(ptype, muted=muted)
+    subgroup_info = get_fw3_subgroup_info(ptype, muted=muted)
+    subgroup_title = subgroup_title
+    to_break = to_add_sublist_spacing(ptype, muted=muted)
+    break_text = 'break="true"' if to_break else 'break="false"'
+    string = '<wmsSubgroup label="' + subgroup_title + '" info="' + subgroup_info + '" ' + break_text + '>\n'
+    folder = os.path.join(FW3_DATA_DIR, ptype)
+    files = os.listdir(folder)
+    files = filter_path_list(files, muted=muted)
+    files = sorted(files, reverse=True)[:3]
+    paths = [ os.path.join(folder, f) for f in files ]
+    prefixes = [ 'Current', 'Previous1', 'Previous2' ]
+    for i, path in enumerate(paths):
+        filename = os.path.basename(path)
+        title = current_title_maker(filename, prefixes[i], muted=muted)
+        layer_id = current_id_maker(i, ptype, muted=muted)
+        layer_xml = make_layer_xml(path, ptype, title=title, layer_id=layer_id, muted=muted)
+        string += layer_xml
+    string += '\n</wmsSubgroup>\n\n'
+    return string
+
+def make_fw3_current_xml():
+    full = ''
+    for meta_type in [ 'normal', 'muted' ]:
+        muted = meta_type == 'muted'
+        config = FW3_PRODUCT_TYPES[meta_type]
+        sorted_keys = sorted(config.keys(), key=lambda x: config[x]['order'])
+        for key in sorted_keys:
+            full += make_current_layer_list(key, muted)
+    return full
+
+def make_fw3_archive_xml():
     full = ''
     for meta_type in [ 'normal', 'muted' ]:
         muted = meta_type == 'muted'
@@ -225,13 +230,12 @@ def make_fw3_viewer_xml():
             full += make_fw3_layer_list(key, muted)
     return full
 
-
-def make_layer_xml(path, ptype, muted):
+def make_layer_xml(path, ptype, muted, title=None, layer_id=None, to_break=False):
     filename = os.path.basename(path)
     start = _get_date_from_file(filename)
     end = _get_date_from_file(filename, is_end=True)
-    layer_id = _get_id(start, end, ptype, muted)
-    title = _get_title(start, end)
+    layer_id = layer_id or _get_id(start, end, ptype, muted)
+    title = title or _get_title(start, end)
     template = WMS_LAYER_TEMPLATE
     if ptype == 'adaptivebaseline_daysdiff':
         legend_file = 'daysdifflegend.png'
@@ -240,7 +244,7 @@ def make_layer_xml(path, ptype, muted):
         legend_file = 'new-forwarn2-standard-legend-2.png'
         legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
     return template.render({
-      'BREAK'       : '',
+      'BREAK'       : '' if not to_break else 'break="true"',
       'SELECTED'    : '',
       'LAYER_LID'   : layer_id,
       'LAYER_NAME'  : layer_id,
@@ -249,16 +253,20 @@ def make_layer_xml(path, ptype, muted):
       'LEGEND'      : legend
     })
 
-
-def make_mapfile(ptype, path, muted):
-    layer_string = get_fw3_layer_string(path, ptype, muted)
-    template = Template("ews_gen.tpl.map")
+def get_mapfile_path(ptype, path, muted):
     f = os.path.basename(path)
     start, end = _get_date_from_file(f), _get_date_from_file(f, is_end=True)
     layer_id = _get_id(start, end, ptype, muted)
-    start = _get_date_from_file(f)
-    end = _get_date_from_file(f, is_end=True)
-    mapfile_path = "forwarn3_maps/"+layer_id+".map"
+    mapfile_path = os.path.join(BASE_DIR, 'msconfig', 'forwarn3_maps', layer_id+'.map')
+    return mapfile_path
+
+def make_mapfile(ptype, path, muted, layer_id=None):
+    layer_string = get_fw3_layer_string(path, ptype, muted, layer_id=layer_id)
+    template = Template("ews_gen.tpl.map")
+    f = os.path.basename(path)
+    start, end = _get_date_from_file(f), _get_date_from_file(f, is_end=True)
+    layer_id = layer_id or _get_id(start, end, ptype, muted)
+    mapfile_path = 'forwarn3_maps/'+layer_id+'.map'
     if os.path.exists(mapfile_path):
         try:
             os.remove(mapfile_path)
@@ -306,8 +314,9 @@ def make_mapfiles():
             info = config[key]['info']
             muted = meta_type == 'muted'
             make_mapfile_batch(ptype=key, folder=fdr, muted=muted)
+            make_current_mapfiles(ptype=key, muted=muted)
 
-    print "Done building ForWarn 3 mapfiles..."
+    print "Done!"
 
 
 if __name__ == '__main__':
