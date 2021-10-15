@@ -1684,12 +1684,6 @@
 
   	%(USDM_LAYERS)s
 
-	<wmsSubgroup label="CONUS VegDRI Veg. Moisture Status (USGS/NDMC; weekly eMODIS)">
-
-    %(VEGDRI_LAYERS)s
-
-  </wmsSubgroup>
-
 	</wmsGroup>
 	<wmsGroup gid="G11" name="US_Climate" label="Other Weather and Climate Maps" >
 
