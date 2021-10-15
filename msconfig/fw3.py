@@ -3,10 +3,12 @@
 import sys, os, datetime, re
 from osgeo import gdal, osr
 
-sys.path.append('../var')
-from Config import *
+from fw3_config import FW3_PRODUCT_TYPES 
 
 from util import ewsMask, Template, getproj, getwkt
+
+sys.path.append('../var')
+from Config import FW3_DATA_DIR, DATA_DIR, SERVER_URL, BASE_DIR
 
 
 def _get_date_from_file(filename, is_end=False, d_format='%Y-%m-%d'):
