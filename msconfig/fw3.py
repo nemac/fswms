@@ -180,7 +180,7 @@ def current_id_maker(index, ptype, muted):
 def make_current_mapfiles(ptype, muted):
     folder = os.path.join(FW3_DATA_DIR, ptype)
     files = os.listdir(folder)
-    files = filter_path_list(files, muted=False)
+    files = filter_path_list(files, muted=muted)
     files = sorted(files, reverse=True)[:3]
     paths = [ os.path.join(folder, f) for f in files ]
     prefixes = [ 'Current', 'Previous1', 'Previous2' ]
