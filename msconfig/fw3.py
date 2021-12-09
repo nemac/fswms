@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys, os, datetime, re
 from osgeo import gdal, osr
@@ -241,7 +241,7 @@ def make_layer_xml(path, ptype, muted, title=None, layer_id=None, to_break=False
     template = WMS_LAYER_TEMPLATE
     if ptype == 'adaptivebaseline_daysdiff':
         legend_file = 'daysdifflegend.png'
-      	legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
+        legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
     else:
         legend_file = 'new-forwarn2-standard-legend-2.png'
         legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
@@ -273,14 +273,17 @@ def make_mapfile(ptype, path, muted, layer_id=None):
         try:
             os.remove(mapfile_path)
         except:
-            print 'Unable to remove existing mapfile: ' + mapfile_path
+            print('Unable to remove existing mapfile: ' + mapfile_path)
     f_new = open(mapfile_path, "w")
     f_new.write(template.render( {
         'DATA_DIR'              : DATA_DIR,
-        'SERVICE_URL'           : "%s/%s?MAPFILE=%s" % (SERVER_URL, 'forwarn3', layer_id),
+        'SERVICE_URL'           : "%s/%s/%s" % (SERVER_URL, 'forwarn3', layer_id),
         'LAYERS'                : layer_string,
-        'WMS_SRS'               : "EPSG:4326 EPSG:2163 EPSG:3857 EPSG:900913",
-        'MAPFILE_PROJECTION'    : '"init=epsg:3857"',
+        'WMS_SRS'               : "EPSG:2163 EPSG:4326 EPSG:3857",
+        'WCS_SRS'               : "EPSG:2163",
+        'MAPFILE_PROJECTION'    : '"init=epsg:4326"',
+        'MAPFILE_EXTENT'        : "-178 -20 -20 90",
+        'WMS_EXTENT'            : "-5210187, -4089876, 5280094, 3314475",
         'SERVICE_NAME'          : 'forwarn3',
         'TEMP_FILE_PREFIX'      : "ms_%s" % (layer_id),
         'MAPFILE'               : "%s/msconfig/forwarn3_maps/%s.map" % (BASE_DIR, layer_id),
@@ -306,7 +309,7 @@ def make_mapfile_batch(ptype, folder, muted):
 
  
 def make_mapfiles(): 
-    print "Building ForWarn 3 mapfiles..."
+    print("Building ForWarn 3 mapfiles...")
     meta_types = [ 'normal', 'muted' ]
     for meta_type in meta_types:
         config = FW3_PRODUCT_TYPES[meta_type]
@@ -318,7 +321,7 @@ def make_mapfiles():
             make_mapfile_batch(ptype=key, folder=fdr, muted=muted)
             make_current_mapfiles(ptype=key, muted=muted)
 
-    print "Done!"
+    print("Done!")
 
 
 if __name__ == '__main__':

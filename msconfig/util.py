@@ -6,9 +6,9 @@ sys.path.append("../var")
 try:
     from Config import *
 except:
-    print "Cannot find local settings file 'Config.py'.  You need to create a Config.py file that contains"
-    print "settings appropriate for this copy of the FSWMS project.  You can use the file 'Config.tpl.py'"
-    print "as a starting point --- make a copy of that file called 'Config.py', and edit appropriately."
+    print("Cannot find local settings file 'Config.py'.  You need to create a Config.py file that contains")
+    print("settings appropriate for this copy of the FSWMS project.  You can use the file 'Config.tpl.py'")
+    print("as a starting point --- make a copy of that file called 'Config.py', and edit appropriately.")
     exit(-1)
 
 ewsMask = [
