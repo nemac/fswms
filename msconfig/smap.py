@@ -24,8 +24,8 @@ class SMAP9kAnomalyTopWeekly():
       url = 'https://cloud.csiss.gmu.edu/smap_server/cgi-bin/mapserv?MAP=/WMS/SMAP-9KM-ANOMALY-WEEKLY-TOP_{year}.map&SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1'.format(year=year)
       r = requests.get(url, verify=False)
       if not r.ok or r.headers['Content-Type'] != 'application/vnd.ogc.wms_xml; charset=UTF-8':
-        print 'SMAP mapfile for {year} is unavailable. Trying {str(int(year)-1)}'.format(year=year)
         year = str(int(year)-1)
+        print 'SMAP mapfile not available. Trying {year} instead...'.format(year=year)
       else:
         break
     xml = ET.fromstring(r.text)
