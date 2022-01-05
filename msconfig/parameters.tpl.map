@@ -8145,7 +8145,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/MODIS/CONUS_Medians/med20L0013_2.img
+        DATA     %(DATA_DIR)s/MODIS/CONUS_Medians/med20L0013_2.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		INCLUDE "cmaps/greenstartup.cmap"
@@ -8197,7 +8197,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     /var/vsites/fswms.nemac.org/data/MODIS/CONUS_Medians/browndown.img
+        DATA     /var/vsites/fswms.nemac.org/data/MODIS/CONUS_Medians/browndown.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 		INCLUDE "cmaps/browndown.cmap"
