@@ -1161,6 +1161,9 @@
 	<wmsGroup gid="G07" name="Archived_FW2" label="Archived ForWarn II Change Maps">
 		<wmsSubgroup label="Archived Prior Year Baseline">
 		</wmsSubgroup>
+      <wmsSubgroup label="2022" collapsible="true">
+      %(FW2_ARCHIVE_2022__PRIOR_YEAR)s
+      </wmsSubgroup>
 			<wmsSubgroup label="2021" collapsible="true">
 			%(FW2_ARCHIVE_2021__PRIOR_YEAR)s
 			</wmsSubgroup>
@@ -1182,6 +1185,9 @@
 
 		<wmsSubgroup label="Archived Early Detect (Recent Priority From Prior Year)">
 		</wmsSubgroup>
+      <wmsSubgroup label="2022" collapsible="true">
+      %(FW2_ARCHIVE_2022__ALC)s
+      </wmsSubgroup>
 			<wmsSubgroup label="2021" collapsible="true">
 			%(FW2_ARCHIVE_2021__ALC)s
 			</wmsSubgroup>
@@ -1203,6 +1209,9 @@
 
 		<wmsSubgroup label="Archived Prior 3-Year Maximum">
 		</wmsSubgroup>
+      <wmsSubgroup label="2022" collapsible="true">
+      %(FW2_ARCHIVE_2022__3_YEAR)s
+      </wmsSubgroup>
 			<wmsSubgroup label="2021" collapsible="true">
 			%(FW2_ARCHIVE_2021__3_YEAR)s
 			</wmsSubgroup>
@@ -1225,6 +1234,9 @@
 
 		<wmsSubgroup label="Archived Prior 5-Year 90th Percentile">
 		</wmsSubgroup>
+      <wmsSubgroup label="2022" collapsible="true">
+      %(FW2_ARCHIVE_2022__5_YEAR)s
+      </wmsSubgroup>
 			<wmsSubgroup label="2021" collapsible="true">
 			%(FW2_ARCHIVE_2021__5_YEAR)s
 			</wmsSubgroup>
@@ -1247,6 +1259,9 @@
 
 		<wmsSubgroup label="Archived Prior 10-Year 90th Percentile">
 		</wmsSubgroup>
+      <wmsSubgroup label="2022" collapsible="true">
+      %(FW2_ARCHIVE_2022__10_YEAR)s
+      </wmsSubgroup>
 			<wmsSubgroup label="2021" collapsible="true">
 			%(FW2_ARCHIVE_2021__10_YEAR)s
 			</wmsSubgroup>
@@ -1263,6 +1278,9 @@
 
 		<wmsSubgroup label="Archived All-Prior-Year Median">
 		</wmsSubgroup>
+      <wmsSubgroup label="2022" collapsible="true">
+      %(FW2_ARCHIVE_2022__YEAR_MEDIAN)s
+      </wmsSubgroup>
 			<wmsSubgroup label="2021" collapsible="true">
 			%(FW2_ARCHIVE_2021__YEAR_MEDIAN)s
 			</wmsSubgroup>
@@ -1278,6 +1296,9 @@
 
 		<wmsSubgroup label="Seasonal Progression Departure">
 		</wmsSubgroup>
+      <wmsSubgroup label="2022" collapsible="true">
+      %(FW2_ARCHIVE_2022__PCTPROGRESS)s
+      </wmsSubgroup>
 			<wmsSubgroup label="2021" collapsible="true">
 			%(FW2_ARCHIVE_2021__PCTPROGRESS)s
 			</wmsSubgroup>
