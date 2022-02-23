@@ -12,7 +12,7 @@
         %(COLORMAPLINE)s
         METADATA
             "wms_title"             "%(TITLE)s"
-	    "wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+	    #"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "%(ABSTRACT)s"
             "wcs_label"             "%(TITLE)s"
             "wcs_rangeset_name"     "%(TITLE)s"
