@@ -114,7 +114,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END
 		METADATA
             "wms_title"             "MaskForForest"
-			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+			#"wms_extent"           "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "MaskForForest"
             "wcs_label"             "MaskForForest"
             "wcs_rangeset_name"     "MaskForForest"
@@ -145,7 +145,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END
 		METADATA
             "wms_title"             "MaskForAgriculture"
-			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+			#"wms_extent"           "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "MaskForAgriculture"
             "wcs_label"             "MaskForAgriculture"
             "wcs_rangeset_name"     "MaskForAgriculture"
@@ -176,7 +176,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END
 		METADATA
             "wms_title"             "MaskForConiferForest"
-			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+			#"wms_extent"           "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "MaskForConiferForest"
             "wcs_label"             "MaskForConiferForest"
             "wcs_rangeset_name"     "MaskForConiferForest"
@@ -207,7 +207,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END
 		METADATA
             "wms_title"             "MaskForDeciduousForest"
-			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+			#"wms_extent"           "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "MaskForDeciduousForest"
             "wcs_label"             "MaskForDeciduousForest"
             "wcs_rangeset_name"     "MaskForDeciduousForest"
@@ -238,7 +238,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END
 		METADATA
             "wms_title"             "MaskForGrass"
-			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+			#"wms_extent"           "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "MaskForGrass"
             "wcs_label"             "MaskForGrass"
             "wcs_rangeset_name"     "MaskForGrass"
@@ -269,7 +269,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END
 		METADATA
             "wms_title"             "MaskForMixedForest"
-			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+			#"wms_extent"           "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "MaskForMixedForest"
             "wcs_label"             "MaskForMixedForest"
             "wcs_rangeset_name"     "MaskForMixedForest"
@@ -300,7 +300,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END
 		METADATA
             "wms_title"             "MaskForNonVegetated"
-			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+			#"wms_extent"           "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "MaskForNonVegetated"
             "wcs_label"             "MaskForNonVegetated"
             "wcs_rangeset_name"     "MaskForNonVegetated"
@@ -331,7 +331,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END
 		METADATA
             "wms_title"             "MaskForShrubland"
-			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+			#"wms_extent"           "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "MaskForShrubland"
             "wcs_label"             "MaskForShrubland"
             "wcs_rangeset_name"     "MaskForShrubland"
@@ -362,7 +362,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END
 		METADATA
             "wms_title"             "MaskForUrban"
-			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+			#"wms_extent"           "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "MaskForUrban"
             "wcs_label"             "MaskForUrban"
             "wcs_rangeset_name"     "MaskForUrban"
@@ -393,7 +393,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         END
 		METADATA
             "wms_title"             "MaskForWetland"
-			"wms_extent"            "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
+			#"wms_extent"           "-2401951.937575, -2238222.70389, 2345858.525679, 967021.455769"
             "wms_abstract"          "MaskForWetland"
             "wcs_label"             "MaskForWetland"
             "wcs_rangeset_name"     "MaskForWetland"
