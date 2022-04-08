@@ -25,8 +25,8 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3_Current" />
-			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
+		  <viewGroup name="ForWarn3_Current" selected="true"/>
+			<viewGroup name="MODIS_Change_Detection_Products" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
@@ -39,8 +39,8 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3_Current" />
-			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
+		  <viewGroup name="ForWarn3_Current" selected="true" />
+			<viewGroup name="MODIS_Change_Detection_Products" />
       <viewGroup name="ForWarn3_Archive" />
 			<viewGroup name="Archived_FW2" />
 			<viewGroup name="Archived_TACS" />
@@ -57,8 +57,8 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3_Current" />
-			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
+		  <viewGroup name="ForWarn3_Current" selected="true" />
+			<viewGroup name="MODIS_Change_Detection_Products" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
@@ -70,8 +70,8 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3_Current" />
-			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
+		  <viewGroup name="ForWarn3_Current" selected="true" />
+			<viewGroup name="MODIS_Change_Detection_Products" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
@@ -83,8 +83,8 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3_Current" />
-			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
+		  <viewGroup name="ForWarn3_Current" selected="true" />
+			<viewGroup name="MODIS_Change_Detection_Products" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
@@ -96,8 +96,8 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3_Current" />
-			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
+		  <viewGroup name="ForWarn3_Current" selected="true" />
+			<viewGroup name="MODIS_Change_Detection_Products" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
@@ -109,8 +109,8 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3_Current" />
-			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
+		  <viewGroup name="ForWarn3_Current" selected="true" />
+			<viewGroup name="MODIS_Change_Detection_Products" />
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
@@ -119,7 +119,7 @@
 			<viewGroup name="EWS_Parameters" />
 			<viewGroup name="EWS_Integrals" />
 			<viewGroup name="Sentinel" />
-			<viewGroup name="EWS_MODISNDVI" selected="true" />
+			<viewGroup name="EWS_MODISNDVI" />
 		</view>
 		<view name="MODIS_Disturbance_Events" label="Disturbances Assessed">
 			<viewGroup name="US_Jurisdictions" />
@@ -141,8 +141,8 @@
 			<viewGroup name="MODIS_Disturbance_Events" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3_Current" />
-			<viewGroup name="MODIS_Change_Detection_Products" selected="true" />
+		  <viewGroup name="ForWarn3_Current" selected="true" />
+			<viewGroup name="MODIS_Change_Detection_Products" />
 			<viewGroup name="Archived_TACS" />
 			<viewGroup name="Seasonal_Summaries" />
 			<viewGroup name="Archived_FW2" />

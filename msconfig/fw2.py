@@ -89,7 +89,9 @@ def renderWMSLayerBlock(lid, layer_name, layer_title, selected=False, lineBreak=
   else:
     legend = 'cmapicons/new-forwarn2-standard-legend-2.png'
   return template.render({
-    'SELECTED'  : 'selected="true"' if selected is True else '',
+    # This is a temporary fix for now until aqua comes back online
+    #'SELECTED'  : 'selected="true"' if selected is True else '',
+    'SELECTED'  : '',
     'LAYER_LID'   : lid,
     'LAYER_NAME'  : layer_name,
     'LAYER_TITLE' : layer_title,
