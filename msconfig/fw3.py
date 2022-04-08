@@ -245,9 +245,15 @@ def make_layer_xml(path, ptype, muted, title=None, layer_id=None, to_break=False
     else:
         legend_file = 'new-forwarn2-standard-legend-2.png'
         legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
+    # Temporary fix while aqua is down
+    selected = ''
+    if layer_id == 'FW3_adaptivebaseline_allyr_current':
+      selected = "selected=\"true\""
+    # End of temporary fix
     return template.render({
       'BREAK'       : '' if not to_break else 'break="true"',
-      'SELECTED'    : '',
+      #'SELECTED'    : '',
+      'SELECTED'    : selected,
       'LAYER_LID'   : layer_id,
       'LAYER_NAME'  : layer_id,
       'LAYER_TITLE' : title,
