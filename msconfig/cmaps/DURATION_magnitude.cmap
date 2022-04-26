@@ -1,6 +1,11 @@
 
   CLASS
-    NAME "Absolute Change in Summer NDVI (dNDVI x 100)"
+    NAME "Absolute Change in Summer NDVI"
+    EXPRESSION ""
+  END
+
+  CLASS
+    NAME "             (dNDVI x 100)"
     EXPRESSION ""
   END
 
