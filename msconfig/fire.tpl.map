@@ -100,6 +100,36 @@ MAP
     END # end Layer
 
 
+# 4/22 CHANGES
+    LAYER #
+        NAME nifc_2021
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from nifc_2021 USING UNIQUE gid"
+        STATUS           ON
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+          NAME "NIFC Fire 2021"
+          STYLE
+            COLOR        255 255 255
+            OUTLINECOLOR 90 0 0
+            WIDTH 2
+          END
+        END
+        METADATA
+            "wms_title"          "nifc_2021"
+            "wms_abstract"       "nifc_2021"
+            "gml_include_items"  "incidentna, gisacres"
+        END  # end METADATA
+    END # end Layer
+
 # START 4/2021 CHANGES
 
     LAYER #
@@ -127,7 +157,7 @@ MAP
         METADATA
             "wms_title"          "nifc_2020"
             "wms_abstract"       "nifc_2020"
-            "gml_include_items"  "name,type,id,year,acres"
+            "gml_include_items"  "poly_incid,poly_gisac"
         END  # end METADATA
     END # end Layer
 
@@ -158,7 +188,7 @@ MAP
         METADATA
             "wms_title"          "nifc_2019"
             "wms_abstract"       "nifc_2019"
-            "gml_include_items"  "name,type,id,year,acres"
+            "gml_include_items"  "incidentna,gisacres"
         END  # end METADATA
     END # end Layer
 
@@ -1747,6 +1777,34 @@ MAP
         END  # end METADATA
     END # end Layer
 
+    LAYER #
+        NAME modis-fire-2021
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from modis_fire_2021"
+        #EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2021"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2021"
+            "wms_abstract"       "modis-fire-2021"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
 
     	LAYER #
         NAME modis-fire-current-year

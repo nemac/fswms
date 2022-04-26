@@ -5,15 +5,20 @@
   END
 
   CLASS
-    NAME "-1 to -0.25"
-    EXPRESSION ([PIXEL] = 1)
+    NAME "             (dNDVI x 100)"
+    EXPRESSION ""
+  END
+
+  CLASS
+    NAME "<-25"
+    EXPRESSION ([PIXEL] <= 1)
     STYLE
       COLOR 132 0 168
     END
   END
   
   CLASS
-    NAME "-0.24 to -0.1"
+    NAME "-10"
     EXPRESSION ([PIXEL] = 2)
     STYLE
       COLOR 76 0 115
@@ -21,7 +26,7 @@
   END
   
   CLASS
-    NAME "-0.9"
+    NAME "-9"
     EXPRESSION ([PIXEL] = 3)
     STYLE
       COLOR 143 0 0
@@ -29,7 +34,7 @@
   END
   
   CLASS
-    NAME "-0.8"
+    NAME "-8"
     EXPRESSION ([PIXEL] = 4)
     STYLE
       COLOR 207 0 0
@@ -37,7 +42,7 @@
   END
   
   CLASS
-    NAME "-0.7"
+    NAME "-7"
     EXPRESSION ([PIXEL] = 5)
     STYLE
       COLOR 255 71 0
@@ -45,7 +50,7 @@
   END
   
   CLASS
-    NAME "-0.6"
+    NAME "-6"
     EXPRESSION ([PIXEL] = 6)
     STYLE
       COLOR 255 156 0
@@ -53,8 +58,8 @@
   END
   
   CLASS
-    NAME "-0.5 to 1"
-    EXPRESSION ([PIXEL] >= 7 AND [PIXEL] <= 10)
+    NAME ">-5"
+    EXPRESSION ([PIXEL] >= 7)
     STYLE
       COLOR 240 240 240
       OPACITY 0
