@@ -32,7 +32,6 @@
 			<viewGroup name="US_Physiographic" />
 			<viewGroup name="Sentinel" />
       <viewGroup name="Landsat8" />
-      <viewGroup name="Planet.com Imagery" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="MODIS_Forest_Change_Products" label="Archived Near-Real-Time Change Maps">
@@ -50,7 +49,6 @@
 			<viewGroup name="US_Physiographic" />
 			<viewGroup name="Sentinel" />
 			<viewGroup name="Landsat8" />
-      <viewGroup name="Planet.com Imagery" />
 			<viewGroup name="MODISCloud" />
 		</view>
 		<view name="MODIS_Phenology_Derived_Products" label="MODIS Phenology Derived Products">
@@ -11038,32 +11036,6 @@
 					legend="%(SERVER_URL)s/cmapicons/landsat8legend.png"
  			    mask="false"/>
 
-    </wmsSubgroup>
-  </wmsGroup>
-
-
-  <wmsGroup gid="G22" name="Planet.com Imagery" label="Planet.com Imagery">
-    <wmsSubgroup label="USDA Normalized 14-day for AR, CA, CO, FL, GA, IA, ID, IL, IN, KS, MN,
-MO, MS, MT, ND, NE, OH, SD, TX, WA, WI">
-      <xyzLayer
-        lid="USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST"
-        visible="false"
-        url="https://planet.nemac.org/planet/basemaps/v1/planet-tiles/%(USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST)s/gmap/${z}/${x}/${y}.png"
-        identify="false"
-        name="Current ending %(USDA_LATEST_END_DATE)s"
-        legend="%(SERVER_URL)s/cmapicons/planet_com_usda_normalized_14day_legend.png"
-        mask="false"
-      />
-
-      <xyzLayer
-        lid="USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST"
-        visible="false"
-        url="https://planet.nemac.org/planet/basemaps/v1/planet-tiles/%(USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST)s/gmap/${z}/${x}/${y}.png"
-        identify="false"
-        name="Previous ending %(USDA_SECOND_LATEST_END_DATE)s"
-        legend="%(SERVER_URL)s/cmapicons/planet_com_usda_normalized_14day_legend.png"
-        mask="false"
-      />
     </wmsSubgroup>
   </wmsGroup>
 

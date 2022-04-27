@@ -652,7 +652,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/ras_wildfire_combined_2015_2018_mtbs_2019_2020_2021_nifc.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/ras_wildfire_combined_2015_2018_mtbs_2019_2020_2021ver2b2_nifc.img
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 

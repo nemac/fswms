@@ -919,11 +919,11 @@ nrt2006MMAXAllYr = get2006NRTLayers(DATA_DIR + "/fsdata/efetac_nasa/"+choose("X_
 
 
 
-usda_normalized_analytic_fourteenday = makePlanetDotComUSDANormalizedAnalyticFourteenDayList()
-USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST = usda_normalized_analytic_fourteenday['current']['name']
-USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST = usda_normalized_analytic_fourteenday['previous']['name']
-USDA_LATEST_END_DATE = usda_normalized_analytic_fourteenday['current']['date']
-USDA_SECOND_LATEST_END_DATE = usda_normalized_analytic_fourteenday['previous']['date']
+#usda_normalized_analytic_fourteenday = makePlanetDotComUSDANormalizedAnalyticFourteenDayList()
+#USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST = usda_normalized_analytic_fourteenday['current']['name']
+#USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST = usda_normalized_analytic_fourteenday['previous']['name']
+#USDA_LATEST_END_DATE = usda_normalized_analytic_fourteenday['current']['date']
+#USDA_SECOND_LATEST_END_DATE = usda_normalized_analytic_fourteenday['previous']['date']
 
 A_PATH_TO_FW2_PRODUCTS = os.path.join(FW2_DATA_DIR, FW2_SOURCES_AS_LIST[0], 'X_LC_1YEAR')
 sentinel_landsat_date_range_template = '{0}/{1}'
@@ -1286,11 +1286,11 @@ configXML = template.render( {
             'LANDSAT8_PRIOR_YEAR_DATE_RANGE': LANDSAT8_PRIOR_YEAR_DATE_RANGE,
             'CURRENT_DATE_RANGE' : CURRENT_DATE_RANGE,
             'PREVIOUS1_DATE_RANGE' : PREVIOUS1_DATE_RANGE,
-            'PREVIOUS2_DATE_RANGE' : PREVIOUS2_DATE_RANGE,
-            'USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST' : USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST,
-            'USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST' : USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST,
-            'USDA_LATEST_END_DATE' : USDA_LATEST_END_DATE,
-            'USDA_SECOND_LATEST_END_DATE' : USDA_SECOND_LATEST_END_DATE
+            'PREVIOUS2_DATE_RANGE' : PREVIOUS2_DATE_RANGE#,
+            #'USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST' : USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST,
+            #'USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST' : USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST,
+            #'USDA_LATEST_END_DATE' : USDA_LATEST_END_DATE,
+            #'USDA_SECOND_LATEST_END_DATE' : USDA_SECOND_LATEST_END_DATE
           })
 
 minXML = parseString(configXML).toprettyxml('', '', 'UTF-8')
