@@ -27,10 +27,16 @@ def makePlanetDotComUSDANormalizedAnalyticFourteenDayList():
     'name': mosaics[-1]['name'].encode('ascii', 'ignore'), 
     'date': mosaics[-1]['last_acquired'].split('T')[0].encode('ascii', 'ignore')
   }
-  mosaic_dictionary['previous'] = {
-    'name': mosaics[-2]['name'].encode('ascii', 'ignore'), 
-    'date': mosaics[-2]['last_acquired'].split('T')[0].encode('ascii', 'ignore')
-  }
+  if len(mosaics) > 1:
+    mosaic_dictionary['previous'] = {
+      'name': mosaics[-2]['name'].encode('ascii', 'ignore'), 
+      'date': mosaics[-2]['last_acquired'].split('T')[0].encode('ascii', 'ignore')
+    }
+  else: # set previous to current until there is more than one entry 
+    mosaic_dictionary['previous'] = {
+      'name': mosaics[-1]['name'].encode('ascii', 'ignore'),
+      'date': mosaics[-1]['last_acquired'].split('T')[0].encode('ascii', 'ignore')
+    }
   return mosaic_dictionary
 
 
