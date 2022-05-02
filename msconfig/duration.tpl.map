@@ -107,7 +107,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         DUMP     TRUE
         STATUS   OFF
         GROUP Masks
-        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/final2_ALLFOREST_mask_nalcms2010_hybrid2016nlcd_9class.img
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/fw3_all_forests_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -138,7 +138,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         DUMP     TRUE
         STATUS   OFF
         GROUP Masks
-        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/final2_AGRICULTURE_mask_nalcms2010_hybrid2016nlcd_9class.img
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/fw3_crops_mask.img
         CLASS
             EXPRESSION ([pixel] = 1)
             COLOR 0 0 0
@@ -169,7 +169,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         DUMP     TRUE
         STATUS   OFF
         GROUP Masks
-        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/final2_EVERGREEN_mask_nalcms2010_hybrid2016nlcd_9class.img
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/fw3_evergreen_forest_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -200,7 +200,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         DUMP     TRUE
         STATUS   OFF
         GROUP Masks
-        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/final2_DECIDUOUS_mask_nalcms2010_hybrid2016nlcd_9class.img
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/fw3_deciduous_forest_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -231,7 +231,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         DUMP     TRUE
         STATUS   OFF
         GROUP Masks
-        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/final2_GRASS_mask_nalcms2010_hybrid2016nlcd_9class.img
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/fw3_grass_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -262,7 +262,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         DUMP     TRUE
         STATUS   OFF
         GROUP Masks
-        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/final2_MIXED_FOREST_mask_nalcms2010_hybrid2016nlcd_9class.img
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/fw3_mixed_forest_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -293,7 +293,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         DUMP     TRUE
         STATUS   OFF
         GROUP Masks
-        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/final2_NON_VEGETATED_mask_nalcms2010_hybrid2016nlcd_9class.img
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/fw3_non_vegetated_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -324,7 +324,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         DUMP     TRUE
         STATUS   OFF
         GROUP Masks
-        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/final2_SHRUB_mask_nalcms2010_hybrid2016nlcd_9class.img
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/fw3_shrubland_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -355,7 +355,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         DUMP     TRUE
         STATUS   OFF
         GROUP Masks
-        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/final2_URBAN_mask_nalcms2010_hybrid2016nlcd_9class.img
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/fw3_urban_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -386,7 +386,7 @@ MAP # the following two lines tell MapServer to write debugging output to a log 
         DUMP     TRUE
         STATUS   OFF
         GROUP Masks
-        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/final2_WETLAND_mask_nalcms2010_hybrid2016nlcd_9class.img
+        DATA     /var/vsites/fswms.nemac.org/data/fsdata-internal/efetac_nasa/Mask/fw3_non_woody_wetland_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
