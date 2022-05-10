@@ -95,7 +95,7 @@ MAP
         METADATA
             "wms_title"          "nifc_test"
             "wms_abstract"       "nifc_test"
-            "gml_include_items"  "ogc_fid,objectid,shape__area,shape__length,incidentname,featurecategory,mapmethod,comments,gisacres,deletethis,label,featureaccess,featurestatus,isvisible,createdate,datecurrent,polygondatetime,complexname,complexid,gacc,imtname,unitid,localincidentid,irwinid,geometryid,globalid,gdb_from_date,gdb_to_date,egp_oid,wkb_geometry"
+            "gml_include_items"  "poly_incidentname,poly_gisacres,,poly_createdate,poly_datecurrent,poly_polygondatetime"
         END  # end METADATA
     END # end Layer
 
