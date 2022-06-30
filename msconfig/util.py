@@ -215,20 +215,53 @@ def extractDateString(f):
   except:
     return None
 
-
+### New getCurrentDates. Does nothing with pwd and uses hardcoded file to determine current dates
 def getCurrentDates(pwd, date_format=None):
-  files = os.listdir(pwd)
-  dateStrings = map(lambda f: extractDateString(f), files)
-  # remove duplicates from wkt files
-  dateStrings = list(set(dateStrings))
-  dateStrings = list(filter(lambda s: s is not None, dateStrings))
-  dates = map(lambda ds: datetime.datetime.strptime(ds, "%Y%m%d"), dateStrings)
-  sorted_timestamps = list(reversed(sorted(map(lambda d: time.mktime(d.timetuple()), dates))))
-  current_timestamps = sorted_timestamps[:3]
-  current_dates = map(lambda t: datetime.datetime.fromtimestamp(t), current_timestamps)
+  datesFromFile = [] # array to bring in all dates from fw_dates.txt
+  dateTimeArray = [] # array converting all these to datetime
+  currentAndPreviousTwo = [] # Current date plus previous two in datetime format
+
+  with open('fw_dates.txt') as data:
+    substrings = data.read().split('\n')
+    datesFromFile = substrings
+
+  datesFromFile.pop(-1) # remove empty element from last
+
+  for item in datesFromFile:
+    date_object = datetime.datetime.strptime(item, "%B %d %Y")
+    dateTimeArray.append(date_object)
+
+  currentDateTime = datetime.datetime.combine(datetime.date.today(), datetime.datetime.min.time())
+
+  for index, item in enumerate(dateTimeArray):
+    # Current Date is greater than item in dateTimeArray
+    if(currentDateTime > item):
+      continue
+    # Found your cut off and use previous 3 indices to grab the last 3 valid dates
+    else:
+      currentAndPreviousTwo.append(dateTimeArray[index-1]) # Current
+      currentAndPreviousTwo.append(dateTimeArray[index-2]) # Previous 1
+      currentAndPreviousTwo.append(dateTimeArray[index-3]) # Previous 2
+      break
   if (date_format):
-    return map(lambda d: datetime.datetime.strftime(d, date_format), current_dates)
-  return current_dates
+    return map(lambda d: datetime.datetime.strftime(d, date_format), currentAndPreviousTwo)
+  return currentAndPreviousTwo
+  
+### Old getCurrentDates is effectively broken since FW2 Products are no longer being produced
+### This function would use the FW2 Products on the filesystem to determine current date
+#def getCurrentDates(pwd, date_format=None):
+#  files = os.listdir(pwd)
+#  dateStrings = map(lambda f: extractDateString(f), files)
+#  # remove duplicates from wkt files
+#  dateStrings = list(set(dateStrings))
+#  dateStrings = list(filter(lambda s: s is not None, dateStrings))
+#  dates = map(lambda ds: datetime.datetime.strptime(ds, "%Y%m%d"), dateStrings)
+#  sorted_timestamps = list(reversed(sorted(map(lambda d: time.mktime(d.timetuple()), dates))))
+#  current_timestamps = sorted_timestamps[:3]
+#  current_dates = map(lambda t: datetime.datetime.fromtimestamp(t), current_timestamps)
+#  if (date_format):
+#    return map(lambda d: datetime.datetime.strftime(d, date_format), current_dates)
+#  return current_dates
 
 
 ''' 
