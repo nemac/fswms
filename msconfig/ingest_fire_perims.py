@@ -23,7 +23,7 @@ except:
 
 
 def query_builder(): #(start_date, end_date):
-  url = "https://services3.arcgis.com/T4QMspbfLg3qTGWY/arcgis/rest/services/CY_WildlandFire_Perimeters_ToDate/FeatureServer/0/query?outFields=*&outSR=4326&f=pgeojson&where=1%3D1"
+  url = "https://services3.arcgis.com/T4QMspbfLg3qTGWY/arcgis/rest/services/CY_WildlandFire_Perimeters_ToDate/FeatureServer/0/query?outFields=*&outSR=4326&f=pgeojson&orderByFields=poly_GISACRES+desc&where=1%3D1"
   print(url)
   return url
 
