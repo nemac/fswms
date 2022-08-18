@@ -11047,7 +11047,7 @@ MO, MS, MT, ND, NE, OH, SD, TX, WA, WI">
       <xyzLayer
         lid="USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST"
         visible="false"
-        url="https://planet.nemac.org/planet/basemaps/v1/planet-tiles/%(USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST)s/gmap/${z}/${x}/${y}.png"
+        url="https://planet.nemac.org/planet/basemaps/v1/planet-tiles/%(USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST)s/gmap/${z}/${x}/${y}.png?proc=rgb"
         identify="false"
         name="Current ending %(USDA_LATEST_END_DATE)s"
         legend="%(SERVER_URL)s/cmapicons/planet_com_usda_normalized_14day_legend.png"
@@ -11057,7 +11057,7 @@ MO, MS, MT, ND, NE, OH, SD, TX, WA, WI">
       <xyzLayer
         lid="USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST"
         visible="false"
-        url="https://planet.nemac.org/planet/basemaps/v1/planet-tiles/%(USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST)s/gmap/${z}/${x}/${y}.png"
+        url="https://planet.nemac.org/planet/basemaps/v1/planet-tiles/%(USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST)s/gmap/${z}/${x}/${y}.png?proc=rgb"
         identify="false"
         name="Previous ending %(USDA_SECOND_LATEST_END_DATE)s"
         legend="%(SERVER_URL)s/cmapicons/planet_com_usda_normalized_14day_legend.png"
