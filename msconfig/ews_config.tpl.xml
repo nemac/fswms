@@ -10157,6 +10157,19 @@
 
        <wmsLayer
           selected="false"
+          lid="DURCOMB52022"
+          visible="false"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="dur51yr_2022_0624_0921.EPSG3857"
+          name="2022"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2022_0624_0921.EPSG3857&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
+
+       <wmsLayer
+          selected="false"
           lid="DURCOMB52021"
           visible="false"
           url="%(SERVER_URL)s/duration?TRANSPARENT=true"
@@ -10792,6 +10805,19 @@
 			mask="true"/>
 			</wmsSubgroup>
 		<wmsSubgroup label="Fixed 6-Period: Aug 12 - Sep 21">
+
+     <wmsLayer
+          selected="false"
+          lid="DURP252022"
+          visible="false"
+          url="%(SERVER_URL)s/duration?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="dur51yr_2022_0812_0921.EPSG3857"
+          name="2022"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/duration?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=dur51yr_2022_0812_0921.EPSG3857&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
 
      <wmsLayer
           selected="false"
