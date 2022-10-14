@@ -10086,6 +10086,19 @@
 
         <wmsLayer
           selected="false"
+          lid="DURMAG052022"
+          visible="false"
+          url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
+          srs="EPSG:3857"
+          layers="magnitude2022_median_maxMODISmax.2022minus2021.169to257.std.4bit.EPSG3857"
+          name="2022"
+          styles="default"
+          identify="true"
+          legend="%(SERVER_URL)s/magnitude?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=magnitude2022_median_maxMODISmax.2022minus2021.169to257.std.4bit.EPSG3857&amp;VERSION=1.1.1&amp;FORMAT=image/png"
+      mask="true"/>
+  
+        <wmsLayer
+          selected="false"
           lid="DURMAG052021"
           visible="false"
           url="%(SERVER_URL)s/magnitude?TRANSPARENT=true"
