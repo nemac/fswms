@@ -1737,7 +1737,9 @@
 
 		<wmsSubgroup label="US Drought Monitor (NDMC)" break="true"></wmsSubgroup>
 
-  	%(USDM_LAYERS)s
+  	%(USDM_LAYERS_CURRENT)s
+  	
+    %(USDM_LAYERS)s
 
 	</wmsGroup>
 	<wmsGroup gid="G11" name="US_Climate" label="Other Weather and Climate Maps" >

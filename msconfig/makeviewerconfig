@@ -4,6 +4,7 @@ import sys, re, os, glob, getopt, time
 from util import *
 from xml.dom.minidom import parseString
 from usdm import USDM
+from usdm_current import USDM_Current
 from vegdri import VegDRI
 from smap import SMAP9kAnomalyTopWeekly as smap_weekly
 from planet_config import makePlanetDotComUSDANormalizedAnalyticFourteenDayList
@@ -1073,7 +1074,9 @@ smap_layer = smap_weekly()
 SMAP_9K_ANOMALY_TOP_WEEKLY = smap_layer.render_view_tpl()
 
 usdm_manager = USDM()
+usdm_current_manager = USDM_Current()
 usdm_layers = usdm_manager.render()
+usdm_layers_current = usdm_current_manager.render()
 
 # Removing this for now
 #vegdri = VegDRI()
@@ -1180,6 +1183,7 @@ configXML = template.render( {
             'GLAM_WMTS_2021_LAYERS' : GLAM_WMTS_2021_LAYERS,
             'GLAM_WMTS_2020_LAYERS' : GLAM_WMTS_2020_LAYERS,
             'USDM_LAYERS'      : usdm_layers,
+            'USDM_LAYERS_CURRENT'      : usdm_layers_current,
             'FW2_CURRENT_LAYERS__PRIOR_YEAR' : FW2_CURRENT_LAYERS__PRIOR_YEAR,
             'FW2_CURRENT_LAYERS__ALC' : FW2_CURRENT_LAYERS__ALC,
             'FW2_CURRENT_LAYERS__3_YEAR' : FW2_CURRENT_LAYERS__3_YEAR,
