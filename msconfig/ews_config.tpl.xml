@@ -1737,8 +1737,6 @@
 
 		<wmsSubgroup label="US Drought Monitor (NDMC)" break="true"></wmsSubgroup>
 
-  	%(USDM_LAYERS_CURRENT)s
-  	
     %(USDM_LAYERS)s
 
 	</wmsGroup>
