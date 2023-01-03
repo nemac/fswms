@@ -308,7 +308,12 @@ def make_mapfile_batch(ptype, folder, muted):
         files = [ f for f in files if 'muted' not in f ]
     for f in files:
         path = os.path.join(folder, f)
-        make_mapfile(ptype, path, muted)
+        # very crude try/except to try to suss out bad files
+        try:
+            make_mapfile(ptype, path, muted)
+        except:
+            print(path)
+
 
  
 def make_mapfiles(): 
