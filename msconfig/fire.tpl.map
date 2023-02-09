@@ -99,6 +99,36 @@ MAP
         END  # end METADATA
     END # end Layer
 
+# 02/2023 CHANGES
+
+    LAYER #
+        NAME nifc_2022
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from nifc_2022 USING UNIQUE gid"
+        STATUS           ON
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+
+        CLASS
+          NAME "NIFC Fire 2022"
+          STYLE
+            COLOR        255 255 255
+            OUTLINECOLOR 90 0 0
+            WIDTH 2
+          END
+        END
+        METADATA
+            "wms_title"          "nifc_2022"
+            "wms_abstract"       "nifc_2022"
+            "gml_include_items"  "incidentna, gisacres"
+        END  # end METADATA
+    END # end Layer
 
 # 4/22 CHANGES
     LAYER #
@@ -1806,6 +1836,35 @@ MAP
         END  # end METADATA
     END # end Layer
 
+    LAYER #
+        NAME modis-fire-2022
+        PROJECTION
+            "init=epsg:3857"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from modis_fire_2022"
+        #EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire 2022"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-2022"
+            "wms_abstract"       "modis-fire-2022"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+
     	LAYER #
         NAME modis-fire-current-year
         PROJECTION
@@ -1829,6 +1888,33 @@ MAP
         METADATA
             "wms_title"          "modis-fire-current-year"
             "wms_abstract"       "modis-fire-current-year"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
+        NAME modis-fire-previous-year
+        PROJECTION
+            "init=epsg:4326"
+        END
+        DATA             "%(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/active_fire/hotspots/last_year/modis_fire_2022_365_conus_4326.shp"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "MODIS Fire Previous Year"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0
+            END
+        END
+        METADATA
+            "wms_title"          "modis-fire-previous-year"
+            "wms_abstract"       "modis-fire-previous-year"
             "gml_include_items"  "all"
         END  # end METADATA
     END # end Layer
