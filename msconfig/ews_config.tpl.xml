@@ -616,6 +616,17 @@
    name="2021 (NIFC)"
    legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=nifc_2021&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 
+    <wmsLayer
+   lid="NIFC2022"
+   visible="false"
+   url="%(SERVER_URL)s/fire?TRANSPARENT=true"
+   srs="EPSG:3857"
+   layers="nifc_2022"
+   styles="default"
+   identify="true"
+   name="2022 (NIFC)"
+   legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=nifc_2022&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
 		</wmsSubgroup>
 	<wmsSubgroup label="Historical Hotspots">
 		<wmsLayer
@@ -827,6 +838,16 @@
    styles="default"
    identify="true"
    name="2021 (VIIRS)"
+   legend="%(SERVER_URL)s/cmapicons/modis-2016.png"/>
+    <wmsLayer
+   lid="MODISFIRE2022"
+   visible="false"
+   url="%(SERVER_URL)s/fire?TRANSPARENT=true"
+   srs="EPSG:3857"
+   layers="modis-fire-2022"
+   styles="default"
+   identify="true"
+   name="2022 (VIIRS)"
    legend="%(SERVER_URL)s/cmapicons/modis-2016.png"/>
 
 
