@@ -340,6 +340,7 @@
 	 identify="true"
 	 name="Hotspots – Year to date (GTAC)"
 	 legend="%(SERVER_URL)s/cmapicons/cumulative-current-year.png"/>
+
 		</wmsSubgroup>
 		<wmsSubgroup label="Historical Large Fire Perimeters">
 <!--       <wmsLayer
@@ -11119,28 +11120,6 @@
   </wmsGroup>
 
   <wmsGroup gid="G22" name="Planet.com Imagery" label="Planet.com Imagery">
-    <wmsSubgroup label="USDA Normalized 14-day for AR, CA, CO, FL, GA, IA, ID, IL, IN, KS, MN,
-MO, MS, MT, ND, NE, OH, SD, TX, WA, WI">
-      <xyzLayer
-        lid="USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST"
-        visible="false"
-        url="https://planet.nemac.org/planet/basemaps/v1/planet-tiles/%(USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_LATEST)s/gmap/${z}/${x}/${y}.png?proc=rgb"
-        identify="false"
-        name="Current ending %(USDA_LATEST_END_DATE)s"
-        legend="%(SERVER_URL)s/cmapicons/planet_com_usda_normalized_14day_legend.png"
-        mask="false"
-      />
-
-      <xyzLayer
-        lid="USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST"
-        visible="false"
-        url="https://planet.nemac.org/planet/basemaps/v1/planet-tiles/%(USDA_NORMALIZED_ANALYTIC_FOURTEENDAY_SECOND_LATEST)s/gmap/${z}/${x}/${y}.png?proc=rgb"
-        identify="false"
-        name="Previous ending %(USDA_SECOND_LATEST_END_DATE)s"
-        legend="%(SERVER_URL)s/cmapicons/planet_com_usda_normalized_14day_legend.png"
-        mask="false"
-      />
-    </wmsSubgroup>
   </wmsGroup>
 
 </wmsLayers>
