@@ -968,6 +968,7 @@ FW2_LEGACY_2018_MMAX = makeFW2LegacyArchiveLayerListFor('X_LC_MMAX_ALL_YR', '201
 FW2_LEGACY_2017_MMAX = makeFW2LegacyArchiveLayerListFor('X_LC_MMAX_ALL_YR', '2017')
 FW2_LEGACY_2016_MMAX = makeFW2LegacyArchiveLayerListFor('X_LC_MMAX_ALL_YR', '2016')
 
+GLAM_WMTS_2023_LAYERS = renderGlamLayerBlocksFor('2023')
 GLAM_WMTS_2022_LAYERS = renderGlamLayerBlocksFor('2022')
 GLAM_WMTS_2021_LAYERS = renderGlamLayerBlocksFor('2021')
 GLAM_WMTS_2020_LAYERS = renderGlamLayerBlocksFor('2020')
@@ -1176,6 +1177,7 @@ configXML = template.render( {
             'NRT_2008_MMAXYR_LAYERS'       : nrt2008MMAXAllYr,
             'NRT_2007_MMAXYR_LAYERS'       : nrt2007MMAXAllYr,
             'NRT_2006_MMAXYR_LAYERS'       : nrt2006MMAXAllYr,
+            'GLAM_WMTS_2023_LAYERS' : GLAM_WMTS_2023_LAYERS,
             'GLAM_WMTS_2022_LAYERS' : GLAM_WMTS_2022_LAYERS,
             'GLAM_WMTS_2021_LAYERS' : GLAM_WMTS_2021_LAYERS,
             'GLAM_WMTS_2020_LAYERS' : GLAM_WMTS_2020_LAYERS,
