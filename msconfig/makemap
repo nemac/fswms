@@ -22,8 +22,7 @@ from osgeo import gdal, osr
 from util import *
 import sys, os, subprocess, datetime, re, shutil, traceback, getopt
 
-import fw2
-import fw3
+import fw3, fw3_dev
 import duration
 import magnitude
 
@@ -91,12 +90,9 @@ duration.make_map()
 ## Seasonal Summaries (Magnitude)
 magnitude.make_map()
 
-## ForWarn 2
-fw2.make_mapfiles()
-
 ## ForWarn 3
-fw3.make_mapfiles() 
-
+fw3.make_mapfiles()
+fw3_dev.make_mapfiles()
 
 ###
 ### add in the gtac fhtet files to be available in an archive format

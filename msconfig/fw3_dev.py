@@ -1,15 +1,19 @@
 #!/usr/bin/env python
 
+## REMINDER TO YOU FUTURE JEFF. YOU ARE JUST COPYING THE CURRENT FW3 BUILD PROCESS
+## OUT OF CONVENIENCE AND JUST USING THIS TEMPORARILY TO DO THE DEV PRODUCTS BH
+## REQUESTED. HOPEFULLY IT JUST WORKS IF YOU PUT NEW PRODUCTS IN THERE LATER
+
 import sys, os, datetime, re
 from osgeo import gdal, osr
 
-from fw3_config import FW3_PRODUCT_TYPES 
+from fw3_config_dev import FW3_PRODUCT_TYPES 
 
 from util import ewsMask, Template, getproj, getwkt
 
 sys.path.append('../var')
-from Config import FW3_DATA_DIR, DATA_DIR, SERVER_URL, BASE_DIR
-
+from Config import DATA_DIR, SERVER_URL, BASE_DIR
+FW3_DATA_DIR = "/mnt/efs/forwarn/net_ecological_impact_dev_products" # NEW
 
 def _get_date_from_file(filename, is_end=False, d_format='%Y-%m-%d'):
   index_buffer = 11 if is_end else 0
@@ -161,7 +165,7 @@ def make_fw3_layer_list(ptype, muted):
 def current_title_maker(filename, title_prefix, muted):
     start = _get_date_from_file(filename)
     end = _get_date_from_file(filename, is_end=True)
-    title = '{prefix} %Departure {start}-{end}'.format(
+    title = '%Departure {start}-{end}'.format(
         prefix=title_prefix,
         start=start.strftime('%b%d'),
         end=end.strftime('%b%d')
@@ -212,7 +216,7 @@ def make_current_layer_list(ptype, muted):
     string += '\n</wmsSubgroup>\n\n'
     return string
 
-def make_fw3_current_xml():
+def make_fw3_dev_xml():
     full = ''
     for meta_type in [ 'normal', 'muted' ]:
         muted = meta_type == 'muted'
@@ -222,7 +226,7 @@ def make_fw3_current_xml():
             full += make_current_layer_list(key, muted)
     return full
 
-def make_fw3_archive_xml():
+def make_fw3_dev_archive_xml():
     full = ''
     for meta_type in [ 'normal', 'muted' ]:
         muted = meta_type == 'muted'
@@ -247,8 +251,8 @@ def make_layer_xml(path, ptype, muted, title=None, layer_id=None, to_break=False
         legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
     # Temporary fix while aqua is down
     selected = ''
-    if layer_id == 'FW3_adaptivebaseline_allyr_current':
-      selected = "selected=\"false\""
+    if layer_id == 'FW3_1yr_dev_current':
+      selected = "selected=\"true\""
     # End of temporary fix
     return template.render({
       'BREAK'       : '' if not to_break else 'break="true"',

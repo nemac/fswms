@@ -10,6 +10,7 @@ from smap import SMAP9kAnomalyTopWeekly as smap_weekly
 from glam import renderGlamLayerBlocksFor
 from fw2 import makeFW2ArchiveLayerListFor, makeFW2LegacyArchiveLayerListFor, makeFW2CurrentLegacyLayerListFor, makeFW2CurrentLayerListFor
 from fw3 import make_fw3_current_xml, make_fw3_archive_xml
+from fw3_dev import make_fw3_dev_xml, make_fw3_dev_archive_xml
 
 from LegendConfig import *
 
@@ -1061,6 +1062,8 @@ FW2_CURRENT_LEGACY_LAYERS__MMAX = makeFW2CurrentLayerListFor('X_LC_MMAX_ALL_YR',
 
 FW3_CURRENT = make_fw3_current_xml()
 FW3_ARCHIVE = make_fw3_archive_xml()
+FW3_DEV = make_fw3_dev_xml()
+FW3_DEV_ARCHIVE = make_fw3_dev_archive_xml()
 
 pwd = A_PATH_TO_FW2_PRODUCTS
 current_dates = getCurrentDates(pwd)
@@ -1089,6 +1092,8 @@ configXML = template.render( {
             'PLANET_API_KEY'          : PLANET_API_KEY,
             'FW3_ARCHIVE'              : FW3_ARCHIVE,
             'FW3_CURRENT'             : FW3_CURRENT,
+            'FW3_DEV'                 : FW3_DEV,
+            'FW3_DEV_ARCHIVE'                 : FW3_DEV_ARCHIVE,
             'SMAP_9K_ANOMALY_TOP_WEEKLY' : SMAP_9K_ANOMALY_TOP_WEEKLY,
             'NRT_MODISCloud__LAYERS'  : nrtTCProductLayers,
             'NRT_1YEAR_LAYERS'        : nrt1YrProductLayers,

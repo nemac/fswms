@@ -25,7 +25,8 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-		  <viewGroup name="ForWarn3_Current" selected="true"/>
+      <viewGroup name="ForWarn3_Dev" selected="true"/>
+		  <viewGroup name="ForWarn3_Current"/>
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
@@ -38,6 +39,7 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
+      <viewGroup name="ForWarn3_Dev_Archive"/>
 		  <viewGroup name="ForWarn3_Current" selected="true" />
       <viewGroup name="ForWarn3_Archive" />
 			<viewGroup name="Archived_FW2" />
@@ -1118,6 +1120,14 @@
 			 legend="%(SERVER_URL)s/cmapicons/custom-pestproximity.png"/>
 		</wmsSubgroup>
 	</wmsGroup>
+
+  <wmsGroup gid="GForWarn3_Dev" name="ForWarn3_Dev_Archive" label="ForWarn III Archived Dev Products">
+    %(FW3_DEV_ARCHIVE)s
+  </wmsGroup>
+
+  <wmsGroup gid="GForWarn3_Dev" name="ForWarn3_Dev" label="ForWarn III Dev Products">
+    %(FW3_DEV_ARCHIVE)s
+  </wmsGroup>
 
   <wmsGroup gid="GForWarn3_Current" name="ForWarn3_Current" label="ForWarn III Near-Real-Time Change Maps">
     %(FW3_CURRENT)s
