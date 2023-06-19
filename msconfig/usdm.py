@@ -23,7 +23,7 @@ class USDM():
 
   def render_url(self, date):
     datestring = date.strftime('%Y%m%d')
-    url = "{url}/cgi-bin/mapserv.exe?map=/ms4w/apps/usdm/service/usdm_{datestring}_wms.map&amp;TRANSPARENT=true".format(datestring=datestring, url=USDM_PROXY_API)
+    url = "{url}/cgi-bin/mapserv.exe?map=/ms4w/apps/usdm/map/usdm_{datestring}_wms.map&amp;TRANSPARENT=true".format(datestring=datestring, url=USDM_PROXY_API)
     return url
 
   def render_layer(self, lid, drt_url, name, title):
