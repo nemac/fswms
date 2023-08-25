@@ -3206,7 +3206,7 @@
 	</wmsGroup>
 
 	<wmsGroup gid="G14" name="MODISCloud" label="ForWarn II Cloud Assessment Maps">
-			%(GLAM_WMTS_2022_LAYERS)s
+			%(GLAM_WMTS_2023_LAYERS)s
 
 	</wmsGroup>
 	<wmsGroup gid="G15" name="EWS_Derived_Products" label="MODIS Phenology Derived Products" >
