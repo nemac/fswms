@@ -20,15 +20,25 @@ FW3_PRODUCT_TYPES = {
       'info': 'One Year Net Ecological Impact',
       'order': 1
     },
+    '2yr_dev': {
+      'title': 'Two Year',
+      'info': 'Two Year Net Ecological Impact',
+      'order': 2
+    },
     '3yr_dev': {
       'title': 'Three Year',
       'info': 'Three Year Net Ecological Impact',
-      'order': 2
+      'order': 3
+    },
+    '4yr_dev': {
+      'title': 'Four Year',
+      'info': 'Four Year Net Ecological Impact',
+      'order': 4
     },
     '5yr_dev': {
       'title': 'Five Year',
       'info': 'Five Year Net Ecological Impact',
-      'order': 3
+      'order': 5
     },
   },
   'muted': {

@@ -26,6 +26,7 @@
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
       <viewGroup name="ForWarn3_Dev" selected="true"/>
+      <viewGroup name="ForWarn3_Dev_New_Test" />
 		  <viewGroup name="ForWarn3_Current"/>
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
@@ -1123,6 +1124,10 @@
 
   <wmsGroup gid="GForWarn3_Dev" name="ForWarn3_Dev_Archive" label="ForWarn III Archived Dev Products">
     %(FW3_DEV_ARCHIVE)s
+  </wmsGroup>
+
+  <wmsGroup gid="GForWarn3_Dev_New_Test" name="ForWarn3_Dev_New_Test" label="ForWarn III New Test">
+    %(FW3_DEV_NEW_TEST)s
   </wmsGroup>
 
   <wmsGroup gid="GForWarn3_Dev" name="ForWarn3_Dev" label="ForWarn III Dev Products">
