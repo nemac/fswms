@@ -1893,6 +1893,114 @@ MAP
     END # end Layer
 
     LAYER #
+        NAME viirs-noaa20-7d-conus-fire
+        PROJECTION
+            "init=epsg:4326"
+        END
+        DATA             "%(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/active_fire/hotspots/J1_VIIRS_C2_USA_contiguous_and_Hawaii_7d_4326.shp"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "VIIRS NOAA-20 7d CONUS Fire"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0
+            END
+        END
+        METADATA
+            "wms_title"          "viirs-noaa20-7d-conus-fire"
+            "wms_abstract"       "viirs-noaa20-7d-conus-fire"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+
+     LAYER #
+        NAME viirs-noaa20-7d-canada-fire
+        PROJECTION
+            "init=epsg:4326"
+        END
+        DATA             "%(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/active_fire/hotspots/J1_VIIRS_C2_Canada_7d_4326.shp"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "VIIRS NOAA-20 7d CANADA Fire"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0
+            END
+        END
+        METADATA
+            "wms_title"          "viirs-noaa20-7d-canada-fire"
+            "wms_abstract"       "viirs-noaa20-7d-canada-fire"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
+        NAME viirs-snpp-7d-conus-fire
+        PROJECTION
+            "init=epsg:4326"
+        END
+        DATA             "%(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/active_fire/hotspots/SUOMI_VIIRS_C2_USA_contiguous_and_Hawaii_7d_4326.shp"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "VIIRS S-NPP 7d CONUS Fire"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0
+            END
+        END
+        METADATA
+            "wms_title"          "viirs-snpp-7d-conus-fire"
+            "wms_abstract"       "viirs-snpp-7d-conus-fire"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
+        NAME viirs-snpp-7d-canada-fire
+        PROJECTION
+            "init=epsg:4326"
+        END
+        DATA             "%(DATA_DIR)s/fsdata-internal/efetac_nasa/AncillaryData/active_fire/hotspots/SUOMI_VIIRS_C2_Canada_7d_4326.shp"
+        EXTENT           -124.733174 24.543940 -66.950005 49.384359 # US
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "VIIRS S-NPP 7d CANADA Fire"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0
+            END
+        END
+        METADATA
+            "wms_title"          "viirs-snpp-7d-canada-fire"
+            "wms_abstract"       "viirs-snpp-7d-canada-fire"
+            "gml_include_items"  "all"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
         NAME modis-fire-previous-year
         PROJECTION
             "init=epsg:4326"

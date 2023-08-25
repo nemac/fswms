@@ -330,7 +330,7 @@
 	 name="Active Perimeters (NIFC)"
 	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=nifc_active&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
 
-    <wmsLayer
+<!--    <wmsLayer
    lid="AAH"
    visible="false"
    url="%(SERVER_URL)s/fire?TRANSPARENT=true"
@@ -339,7 +339,55 @@
 	 styles="default"
 	 identify="true"
 	 name="Hotspots – Year to date (GTAC)"
-	 legend="%(SERVER_URL)s/cmapicons/cumulative-current-year.png"/>
+	 legend="%(SERVER_URL)s/cmapicons/cumulative-current-year.png"/> -->
+
+  <wmsLayer
+    lid="viirs-noaa20-7d-conus-fire"
+    visible="false"
+    url="%(SERVER_URL)s/fire?TRANSPARENT=true"
+    srs="EPSG:3857"
+    layers="viirs-noaa20-7d-conus-fire"
+    styles="default"
+    identify="true"
+    name="VIIRS NOAA-20 7d CONUS/HAWAII"
+    legend="%(SERVER_URL)s/cmapicons/cumulative-current-year.png"
+  />
+
+  <wmsLayer
+    lid="viirs-noaa20-7d-canada-fire"
+    visible="false"
+    url="%(SERVER_URL)s/fire?TRANSPARENT=true"
+    srs="EPSG:3857"
+    layers="viirs-noaa20-7d-canada-fire"
+    styles="default"
+    identify="true"
+    name="VIIRS NOAA-20 7d CANADA"
+    legend="%(SERVER_URL)s/cmapicons/cumulative-current-year.png"
+  />
+
+  <wmsLayer
+    lid="viirs-snpp-7d-conus-fire"
+    visible="false"
+    url="%(SERVER_URL)s/fire?TRANSPARENT=true"
+    srs="EPSG:3857"
+    layers="viirs-snpp-7d-conus-fire"
+    styles="default"
+    identify="true"
+    name="VIIRS SNPP 7d CONUS/HAWAII"
+    legend="%(SERVER_URL)s/cmapicons/cumulative-current-year.png"
+  />
+
+  <wmsLayer
+    lid="viirs-snpp-7d-canada-fire"
+    visible="false"
+    url="%(SERVER_URL)s/fire?TRANSPARENT=true"
+    srs="EPSG:3857"
+    layers="viirs-snpp-7d-canada-fire"
+    styles="default"
+    identify="true"
+    name="VIIRS SNPP 7d CANADA"
+    legend="%(SERVER_URL)s/cmapicons/cumulative-current-year.png"
+  />
 
 		</wmsSubgroup>
 		<wmsSubgroup label="Historical Large Fire Perimeters">
@@ -3158,7 +3206,7 @@
 	</wmsGroup>
 
 	<wmsGroup gid="G14" name="MODISCloud" label="ForWarn II Cloud Assessment Maps">
-			%(GLAM_WMTS_2023_LAYERS)s
+			%(GLAM_WMTS_2022_LAYERS)s
 
 	</wmsGroup>
 	<wmsGroup gid="G15" name="EWS_Derived_Products" label="MODIS Phenology Derived Products" >
