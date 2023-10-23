@@ -88,7 +88,7 @@ MAP
 	      CLASS
             NAME "Active Perimeters"
             STYLE
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				        WIDTH 3
             END
         END
@@ -119,7 +119,7 @@ MAP
           NAME "NIFC Fire 2022"
           STYLE
            # COLOR        255 255 255
-            OUTLINECOLOR 90 0 0
+            OUTLINECOLOR 255 96 255
             WIDTH 2
           END
         END
@@ -149,7 +149,7 @@ MAP
           NAME "NIFC Fire 2021"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0
+            OUTLINECOLOR 255 96 255
             WIDTH 2
           END
         END
@@ -180,7 +180,7 @@ MAP
           NAME "NIFC Fire 2020"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -211,7 +211,7 @@ MAP
           NAME "NIFC Fire 2019"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -245,7 +245,7 @@ MAP
           NAME "MTBS Fire 2018"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -279,7 +279,7 @@ MAP
           NAME "MTBS Fire 2017"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -313,7 +313,7 @@ MAP
           NAME "MTBS Fire 2016"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -347,7 +347,7 @@ MAP
           NAME "MTBS Fire 2015"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -380,7 +380,7 @@ MAP
           NAME "MTBS Fire 2014"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -413,7 +413,7 @@ MAP
           NAME "MTBS Fire 2013"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -447,7 +447,7 @@ MAP
           NAME "MTBS Fire 2012"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -480,7 +480,7 @@ MAP
           NAME "MTBS Fire 2011"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -513,7 +513,7 @@ MAP
           NAME "MTBS Fire 2010"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -548,7 +548,7 @@ MAP
           NAME "MTBS Fire 2009"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -582,7 +582,7 @@ MAP
           NAME "MTBS Fire 2008"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -617,7 +617,7 @@ MAP
           NAME "MTBS Fire 2007"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -651,7 +651,7 @@ MAP
           NAME "MTBS Fire 2006"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -684,7 +684,7 @@ MAP
           NAME "MTBS Fire 2005"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -716,7 +716,7 @@ MAP
           NAME "MTBS Fire 2004"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -749,7 +749,7 @@ MAP
           NAME "MTBS Fire 2003"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -783,7 +783,7 @@ MAP
           NAME "MTBS Fire 2002"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -817,7 +817,7 @@ MAP
           NAME "MTBS Fire 2001"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -850,7 +850,7 @@ MAP
           NAME "MTBS Fire 2000"
           STYLE
             #COLOR        255 255 255
-            OUTLINECOLOR 90 0 0 
+            OUTLINECOLOR 255 96 255 
 				    WIDTH 2
           END
         END
@@ -885,7 +885,7 @@ MAP
 			MAXSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 4
             END
         END
@@ -894,7 +894,7 @@ MAP
 			MINSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 2
             END
         END
@@ -926,7 +926,7 @@ MAP
 			MAXSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 4
             END
         END
@@ -935,7 +935,7 @@ MAP
 			MINSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 2
             END
         END
@@ -964,7 +964,7 @@ MAP
     MINSCALEDENOM 0
     MAXSCALEDENOM 200000
             STYLE
-                OUTLINECOLOR 90 0 0
+                OUTLINECOLOR 255 96 255
         WIDTH 4
             END
         END
@@ -972,7 +972,7 @@ MAP
             NAME "WFDSS Fire 2018"
       MINSCALEDENOM 200000
             STYLE
-                OUTLINECOLOR 90 0 0
+                OUTLINECOLOR 255 96 255
         WIDTH 2
             END
         END
@@ -1002,7 +1002,7 @@ MAP
             MAXSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
                 WIDTH 4
             END
         END
@@ -1011,7 +1011,7 @@ MAP
             MINSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
                 WIDTH 2
             END
         END
@@ -1043,7 +1043,7 @@ MAP
             MAXSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
                 WIDTH 4
             END
         END
@@ -1052,7 +1052,7 @@ MAP
             MINSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
                 WIDTH 2
             END
         END
@@ -1083,7 +1083,7 @@ MAP
 			MAXSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 4
             END
         END
@@ -1092,7 +1092,7 @@ MAP
 			MINSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 2
             END
         END
@@ -1122,7 +1122,7 @@ MAP
 			MAXSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 4
             END
         END
@@ -1131,7 +1131,7 @@ MAP
 			MINSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 2
             END
         END
@@ -1162,7 +1162,7 @@ MAP
 			MAXSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 4
             END
         END
@@ -1171,7 +1171,7 @@ MAP
 			MINSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 2
             END
         END
@@ -1202,7 +1202,7 @@ MAP
 			MAXSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 4
             END
         END
@@ -1211,7 +1211,7 @@ MAP
 			MINSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 2
             END
         END
@@ -2045,7 +2045,7 @@ MAP
 			MAXSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 4
             END
         END
@@ -2054,7 +2054,7 @@ MAP
 			MINSCALEDENOM 200000
             STYLE
                 #COLOR        255 255 255
-                OUTLINECOLOR 90 0 0 
+                OUTLINECOLOR 255 96 255 
 				WIDTH 2
             END
         END
