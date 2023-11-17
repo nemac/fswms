@@ -72,30 +72,112 @@ MAP
         KEYSIZE 30 20
     END
 
+    #LAYER #
+    #    NAME nifc_active
+    #    PROJECTION
+    #        "init=epsg:4326"
+    #    END
+    #    CONNECTIONTYPE   postgis
+    #    CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+    #    DATA             "wkb_geometry from nifc_active_fire_perims USING UNIQUE ogc_fid"
+    #    STATUS           OFF
+    #    TYPE             POLYGON
+    #    DUMP             TRUE
+    #    HEADER           ./templates/layer_query_header.html
+    #    TEMPLATE         ./templates/layer_query_body.html
+	  #    CLASS
+    #        NAME "Active Perimeters"
+    #        STYLE
+    #            OUTLINECOLOR 255 96 255 
+		#		        WIDTH 3
+    #        END
+    #    END
+    #    METADATA
+    #        "wms_title"          "nifc_test"
+    #        "wms_abstract"       "nifc_test"
+    #        "gml_include_items"  "poly_incidentname,poly_gisacres,poly_createdate,poly_datecurrent,poly_polygondatetime"
+    #    END  # end METADATA
+    #END # end Layer
+
     LAYER #
-        NAME nifc_active
+        NAME wildland_fire_incident
         PROJECTION
             "init=epsg:4326"
         END
         CONNECTIONTYPE   postgis
         CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
-        DATA             "wkb_geometry from nifc_active_fire_perims USING UNIQUE ogc_fid"
+        DATA             "wkb_geometry from wildland_fire_incident USING UNIQUE ogc_fid"
+        STATUS           OFF
+        TYPE             POINT
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "Wildland Fire Incident Points"
+            STYLE
+                SYMBOL 'circle'
+                SIZE 5
+                COLOR 255 255 0
+            END
+        END
+        METADATA
+            "wms_title"          "wildland_fire_incident_points"
+            "wms_abstract"       "wildland_fire_incident_points"
+            "gml_include_items"  "incidentname,discoveryacres,finalacres,initialresponseacres,firediscoverydt_s"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
+        NAME wfigs_interagency_fire_perims
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "wkb_geometry from wfigs_interagency_fire_perims USING UNIQUE ogc_fid"
         STATUS           OFF
         TYPE             POLYGON
         DUMP             TRUE
         HEADER           ./templates/layer_query_header.html
         TEMPLATE         ./templates/layer_query_body.html
-	      CLASS
+        CLASS
             NAME "Active Perimeters"
             STYLE
-                OUTLINECOLOR 255 96 255 
-				        WIDTH 3
+                OUTLINECOLOR 255 96 255
+                WIDTH 3
             END
         END
         METADATA
-            "wms_title"          "nifc_test"
-            "wms_abstract"       "nifc_test"
-            "gml_include_items"  "poly_incidentname,poly_gisacres,,poly_createdate,poly_datecurrent,poly_polygondatetime"
+            "wms_title"          "wfigs_interagency_fire_perims"
+            "wms_abstract"       "wfigs_interagency_fire_perims"
+            "gml_include_items"  "poly_incidentname,poly_gisacres,createdate_s,datecurrent_s,polygondatetime_s"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
+        NAME wfigs_interagency_fire_perims_to_date
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "wkb_geometry from wfigs_interagency_fire_perims_to_date USING UNIQUE ogc_fid"
+        STATUS           OFF
+        TYPE             POLYGON
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASS
+            NAME "Active Perimeters"
+            STYLE
+                OUTLINECOLOR 255 96 255
+                WIDTH 3
+            END
+        END
+        METADATA
+            "wms_title"          "wfigs_interagency_fire_perims_to_date"
+            "wms_abstract"       "wfigs_interagency_fire_perims_to_date"
+            "gml_include_items"  "poly_incidentname,poly_gisacres,createdate_s,datecurrent_s,polygondatetime_s"
         END  # end METADATA
     END # end Layer
 
