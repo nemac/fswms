@@ -319,16 +319,39 @@
 	<wmsGroup gid="G02" name="US_Fire" label="Wildland Fire">
 		<wmsSubgroup label="Current Year Fires">
 
-			<wmsLayer
-	 lid="FIREAAA"
-	 visible="false"
-	 url="%(SERVER_URL)s/fire?TRANSPARENT=true"
-	 srs="EPSG:3857"
-	 layers="nifc_active"
-	 styles="default"
-	 identify="true"
-	 name="Active Perimeters (NIFC)"
-	 legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=nifc_active&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+      <wmsLayer
+   lid="WILDLANDFIREINCIDENT"
+   visible="false"
+   url="%(SERVER_URL)s/fire?TRANSPARENT=true"
+   srs="EPSG:3857"
+   layers="wildland_fire_incident"
+   styles="default"
+   identify="true"
+   name="Wildland Fire Incident (Points)"
+   legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=nifc_active&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
+      <wmsLayer
+   lid="WFIGS_INTERAGENCY_PERIMS"
+   visible="false"
+   url="%(SERVER_URL)s/fire?TRANSPARENT=true"
+   srs="EPSG:3857"
+   layers="wfigs_interagency_fire_perims"
+   styles="default"
+   identify="true"
+   name="WFIGS Interagency Fire Perimeters"
+   legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=nifc_active&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
+      <wmsLayer
+   lid="WFIGS_INTERAGENCY_PERIMS_TD"
+   visible="false"
+   url="%(SERVER_URL)s/fire?TRANSPARENT=true"
+   srs="EPSG:3857"
+   layers="wfigs_interagency_fire_perims_to_date"
+   styles="default"
+   identify="true"
+   name="WFIGS Interagency Fire Perimeters To Date"
+   legend="%(SERVER_URL)s/fire?SERVICE=WMS&amp;REQUEST=GetLegendGraphic&amp;layer=nifc_active&amp;VERSION=1.1.1&amp;FORMAT=image/png"/>
+
 
 <!--    <wmsLayer
    lid="AAH"
