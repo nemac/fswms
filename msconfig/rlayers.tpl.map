@@ -72,7 +72,6 @@ MAP
         KEYSIZE 20 10
     END
 
-    %(SMAP_9K_ANOMALY_TOP_WEEKLY)s
 
     LAYER
         NAME     landcover-2005-NALCMS
