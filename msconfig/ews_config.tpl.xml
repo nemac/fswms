@@ -1826,6 +1826,7 @@
       />
     </wmsSubgroup>
 
+    %(SMAP_9K_ANOMALY_TOP_WEEKLY)s
 
 		<wmsSubgroup label="US Drought Monitor (NDMC)" break="true"></wmsSubgroup>
 
