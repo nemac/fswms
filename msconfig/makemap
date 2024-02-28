@@ -934,11 +934,12 @@ f_new.close()
 ###
 ### Create the rlayers.map file:
 ###
-#from smap import SMAP9kAnomalyTopWeekly as smap_weekly
-#smap_layer = smap_weekly()
+from smap import SMAP9kAnomalyTopWeekly as smap_weekly
+smap_layer = smap_weekly()
 template = Template("rlayers.tpl.map")
 f_new = openMapfileForWriting("rlayers.map")
 f_new.write( template.render( {
+            'SMAP_9K_ANOMALY_TOP_WEEKLY' : smap_layer.render_map_tpl(),
             'DATA_DIR'     : DATA_DIR,
             'SERVICE_URL'  : "%s/%s" % (SERVER_URL, "rlayers")
             } ) )
