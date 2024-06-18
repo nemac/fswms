@@ -1103,4 +1103,3787 @@ MAP
             "gml_include_items"  "description"
         END  # end METADATA
     END #
+
+    LAYER #
+        NAME tropical_cyclone_lines_1980
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1980"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1980"
+            "wms_abstract"       "tropical_cyclone_lines_1980"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
+        NAME tropical_cyclone_lines_1981
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1981"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1981"
+            "wms_abstract"       "tropical_cyclone_lines_1981"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+    LAYER #
+        NAME tropical_cyclone_lines_1982
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1982"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1982"
+            "wms_abstract"       "tropical_cyclone_lines_1982"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1983
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1983"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1983"
+            "wms_abstract"       "tropical_cyclone_lines_1983"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1984
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1984"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1984"
+            "wms_abstract"       "tropical_cyclone_lines_1984"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1985
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1985"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1985"
+            "wms_abstract"       "tropical_cyclone_lines_1985"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1986
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1986"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1986"
+            "wms_abstract"       "tropical_cyclone_lines_1986"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1987
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1987"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1987"
+            "wms_abstract"       "tropical_cyclone_lines_1987"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1988
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1988"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1988"
+            "wms_abstract"       "tropical_cyclone_lines_1988"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1989
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1989"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1989"
+            "wms_abstract"       "tropical_cyclone_lines_1989"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1990
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1990"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1990"
+            "wms_abstract"       "tropical_cyclone_lines_1990"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1991
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1991"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1991"
+            "wms_abstract"       "tropical_cyclone_lines_1991"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1992
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1992"
+        CLASSITEM        "usa_wind"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1992"
+            "wms_abstract"       "tropical_cyclone_lines_1992"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1993
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1993"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1993"
+            "wms_abstract"       "tropical_cyclone_lines_1993"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1994
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1994"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1994"
+            "wms_abstract"       "tropical_cyclone_lines_1994"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1995
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1995"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1995"
+            "wms_abstract"       "tropical_cyclone_lines_1995"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1996
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1996"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1996"
+            "wms_abstract"       "tropical_cyclone_lines_1996"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1997
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1997"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1997"
+            "wms_abstract"       "tropical_cyclone_lines_1997"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1998
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1998"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1998"
+            "wms_abstract"       "tropical_cyclone_lines_1998"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_1999
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_1999"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_1999"
+            "wms_abstract"       "tropical_cyclone_lines_1999"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2000
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2000"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2000"
+            "wms_abstract"       "tropical_cyclone_lines_2000"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2001
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2001"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2001"
+            "wms_abstract"       "tropical_cyclone_lines_2001"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2002
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2002"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2002"
+            "wms_abstract"       "tropical_cyclone_lines_2002"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2003
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2003"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2003"
+            "wms_abstract"       "tropical_cyclone_lines_2003"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2004
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2004"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2004"
+            "wms_abstract"       "tropical_cyclone_lines_2004"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2005
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2005"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2005"
+            "wms_abstract"       "tropical_cyclone_lines_2005"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2006
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2006"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2006"
+            "wms_abstract"       "tropical_cyclone_lines_2006"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2007
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2007"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2007"
+            "wms_abstract"       "tropical_cyclone_lines_2007"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2008
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2008"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2008"
+            "wms_abstract"       "tropical_cyclone_lines_2008"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2009
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2009"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2009"
+            "wms_abstract"       "tropical_cyclone_lines_2009"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2010
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2010"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2010"
+            "wms_abstract"       "tropical_cyclone_lines_2010"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2011
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2011"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2011"
+            "wms_abstract"       "tropical_cyclone_lines_2011"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2012
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2012"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2012"
+            "wms_abstract"       "tropical_cyclone_lines_2012"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2013
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2013"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2013"
+            "wms_abstract"       "tropical_cyclone_lines_2013"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2014
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2014"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2014"
+            "wms_abstract"       "tropical_cyclone_lines_2014"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2015
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2015"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2015"
+            "wms_abstract"       "tropical_cyclone_lines_2015"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2016
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2016"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2016"
+            "wms_abstract"       "tropical_cyclone_lines_2016"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2017
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2017"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2017"
+            "wms_abstract"       "tropical_cyclone_lines_2017"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2018
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2018"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2018"
+            "wms_abstract"       "tropical_cyclone_lines_2018"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2019
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2019"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2019"
+            "wms_abstract"       "tropical_cyclone_lines_2019"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2020
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2020"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2020"
+            "wms_abstract"       "tropical_cyclone_lines_2020"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2021
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2021"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2021"
+            "wms_abstract"       "tropical_cyclone_lines_2021"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2022
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2022"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2022"
+            "wms_abstract"       "tropical_cyclone_lines_2022"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
+
+    LAYER #
+        NAME tropical_cyclone_lines_2023
+
+        PROJECTION
+            "init=epsg:4326"
+        END
+
+        CONNECTIONTYPE   postgis
+        CONNECTION       "%(POSTGIS_CONNECTION_STRING)s"
+        DATA             "geom from tropical_cyclone_lines_2023"
+        STATUS           ON
+        TYPE             LINE
+        DUMP             TRUE
+        HEADER           ./templates/layer_query_header.html
+        TEMPLATE         ./templates/layer_query_body.html
+        CLASSITEM "usa_wind"
+        CLASSITEM "wmo_wind"
+
+        CLASS
+            NAME "Tropical Storm"
+            EXPRESSION ((([usa_wind] >= 39 AND [usa_wind] <= 73) OR ([wmo_wind] >= 39 AND [wmo_wind] <= 73)) AND ([usa_wind] < 74 AND [wmo_wind] < 74))
+            STYLE
+            COLOR 77 255 255
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 1"
+            EXPRESSION ((([usa_wind] >= 74 AND [usa_wind] <= 95) OR ([wmo_wind] >= 74 AND [wmo_wind] <= 95)) AND ([usa_wind] < 96 AND [wmo_wind] < 96))
+            STYLE
+            COLOR 255 255 217
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 2"
+            EXPRESSION ((([usa_wind] >= 96 AND [usa_wind] <= 110) OR ([wmo_wind] >= 96 AND [wmo_wind] <= 110)) AND ([usa_wind] < 111 AND [wmo_wind] < 111))
+            STYLE
+            COLOR 255 217 140
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 3"
+            EXPRESSION ((([usa_wind] >= 111 AND [usa_wind] <= 129) OR ([wmo_wind] >= 111 AND [wmo_wind] <= 129)) AND ([usa_wind] < 130 AND [wmo_wind] < 130))
+            STYLE
+            COLOR 255 158 89
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 4"
+            EXPRESSION ((([usa_wind] >= 130 AND [usa_wind] <= 156) OR ([wmo_wind] >= 130 AND [wmo_wind] <= 156)) AND ([usa_wind] < 157 AND [wmo_wind] < 157))
+            STYLE
+            COLOR 255 115 138
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        CLASS
+            NAME "Category 5"
+            EXPRESSION (([usa_wind] >= 157) OR ([wmo_wind] >= 157))
+            STYLE
+            COLOR 161 136 252
+            OUTLINECOLOR 0 0 0
+            WIDTH 3
+            END
+        END
+
+        METADATA
+            "wms_title"          "tropical_cyclone_lines_2023"
+            "wms_abstract"       "tropical_cyclone_lines_2023"
+            "gml_include_items"  "name,iso_time,wmo_wind,wmo_pres,usa_wind,usa_pres"
+        END  # end METADATA
+    END # end Layer
+
 END

@@ -1983,6 +1983,7 @@
 
 
 
+
   </wmsSubgroup>
 
   <wmsSubgroup label="NOAA National Weather Service (NWS) Reports">
@@ -2273,6 +2274,451 @@
 	 name="Avg Min Temperature (PRISM)"
 	 legend="%(SERVER_URL)s/cmapicons/TMIN.png"/>
 		</wmsSubgroup>
+
+  <wmsSubgroup label="Tropical Weather">
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2023"
+      layers="tropical_cyclone_lines_2023"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2023"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2022"
+      layers="tropical_cyclone_lines_2022"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2022"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2021"
+      layers="tropical_cyclone_lines_2021"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2021"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2020"
+      layers="tropical_cyclone_lines_2020"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2020"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2019"
+      layers="tropical_cyclone_lines_2019"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2019"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2018"
+      layers="tropical_cyclone_lines_2018"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2018"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2017"
+      layers="tropical_cyclone_lines_2017"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2017"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2016"
+      layers="tropical_cyclone_lines_2016"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2016"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2015"
+      layers="tropical_cyclone_lines_2015"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2015"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2014"
+      layers="tropical_cyclone_lines_2014"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2014"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2013"
+      layers="tropical_cyclone_lines_2013"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2013"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2012"
+      layers="tropical_cyclone_lines_2012"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2012"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2011"
+      layers="tropical_cyclone_lines_2011"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2011"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2010"
+      layers="tropical_cyclone_lines_2010"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2010"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2009"
+      layers="tropical_cyclone_lines_2009"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2009"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2008"
+      layers="tropical_cyclone_lines_2008"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2008"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2007"
+      layers="tropical_cyclone_lines_2007"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2007"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2006"
+      layers="tropical_cyclone_lines_2006"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2006"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2005"
+      layers="tropical_cyclone_lines_2005"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2005"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2004"
+      layers="tropical_cyclone_lines_2004"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2004"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2003"
+      layers="tropical_cyclone_lines_2003"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2003"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2002"
+      layers="tropical_cyclone_lines_2002"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2002"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2001"
+      layers="tropical_cyclone_lines_2001"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2001"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_2000"
+      layers="tropical_cyclone_lines_2000"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 2000"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1999"
+      layers="tropical_cyclone_lines_1999"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1999"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1998"
+      layers="tropical_cyclone_lines_1998"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1998"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1997"
+      layers="tropical_cyclone_lines_1997"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1997"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1996"
+      layers="tropical_cyclone_lines_1996"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1996"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1995"
+      layers="tropical_cyclone_lines_1995"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1995"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1994"
+      layers="tropical_cyclone_lines_1994"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1994"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1993"
+      layers="tropical_cyclone_lines_1993"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1993"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1992"
+      layers="tropical_cyclone_lines_1992"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1992"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1991"
+      layers="tropical_cyclone_lines_1991"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1991"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1990"
+      layers="tropical_cyclone_lines_1990"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1990"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1989"
+      layers="tropical_cyclone_lines_1989"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1989"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1988"
+      layers="tropical_cyclone_lines_1988"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1988"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1987"
+      layers="tropical_cyclone_lines_1987"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1987"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1986"
+      layers="tropical_cyclone_lines_1986"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1986"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1985"
+      layers="tropical_cyclone_lines_1985"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1985"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1984"
+      layers="tropical_cyclone_lines_1984"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1984"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1983"
+      layers="tropical_cyclone_lines_1983"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1983"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1982"
+      layers="tropical_cyclone_lines_1982"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1982"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1981"
+      layers="tropical_cyclone_lines_1981"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1981"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+    <wmsLayer
+      lid="tropical_cyclone_lines_1980"
+      layers="tropical_cyclone_lines_1980"
+      srs="EPSG:3857"
+      identify="true"
+      name="Tropical Cyclone Lines 1980"
+      url="%(SERVER_URL)s/vlayers?TRANSPARENT=true"
+      legend=""
+    />
+
+  </wmsSubgroup>
+
 	</wmsGroup>
 
 	<wmsGroup gid="G12" name="US_Physiographic" label="Additional Assessment Maps" >
