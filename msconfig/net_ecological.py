@@ -8,33 +8,38 @@ from util import ewsMask, Template, getproj, getwkt
 sys.path.append('../var')
 from Config import DATA_DIR, SERVER_URL, BASE_DIR
 FW3_DATA_DIR = "/mnt/efs/forwarn/net_ecological_impact_dev_products" # NEW
-SUB_DIRS = ['1yr_dev', '2yr_dev', '3yr_dev', '4yr_dev', '5yr_dev']
+SUB_DIRS = ['0yr_dev', '1yr_dev', '2yr_dev', '3yr_dev', '4yr_dev', '5yr_dev']
 
 FW3_PRODUCT_TYPES = {
+  '0yr_dev': {
+    'title': 'Zero Year',
+    'info': 'Zero Year Net Ecological Impact',
+    'order': 1
+  },
   '1yr_dev': {
     'title': 'One Year',
     'info': 'One Year Net Ecological Impact',
-    'order': 1
+    'order': 2
   },
   '2yr_dev': {
     'title': 'Two Year',
     'info': 'Two Year Net Ecological Impact',
-    'order': 2
+    'order': 3
   },
   '3yr_dev': {
     'title': 'Three Year',
     'info': 'Three Year Net Ecological Impact',
-    'order': 3
+    'order': 4
   },
   '4yr_dev': {
     'title': 'Four Year',
     'info': 'Four Year Net Ecological Impact',
-    'order': 4
+    'order': 5
   },
   '5yr_dev': {
     'title': 'Five Year',
     'info': 'Five Year Net Ecological Impact',
-    'order': 5
+    'order': 6
   },
 }
 
@@ -49,6 +54,14 @@ def _get_title(start, end):
   start = start.strftime('%m/%d/%Y')
   end = end.strftime('%m/%d/%Y')
   title = start + ' - ' + end
+  return title
+
+def _get_title_sym(start, end, symStart, symEnd):
+  start = start.strftime('%m/%d/%Y')
+  end = end.strftime('%m/%d/%Y')
+  symStart = symStart.strftime('%m/%d/%Y')
+  symEnd = symEnd.strftime('%m/%d/%Y')
+  title = start + ' - ' + end + ' -> ' + symStart + ' - ' + symEnd
   return title
 
 def _get_id(start, end, ptype):
@@ -91,8 +104,20 @@ WMS_LAYER_TEMPLATE = FrontendTemplate(string="""
 def filter_path_list(paths, ext='.img'):
     return [ p for p in paths if 'muted' not in p and p.endswith(ext) ]
 
-def make_layer_xml(path, layer_id, insertBreak="false", title=None):
+def make_layer_xml(path, layer_id, ptype, insertBreak="false", title=None):
     filename = os.path.basename(path)
+    start = _get_date_from_file(filename)
+    end = _get_date_from_file(filename, is_end=True)
+    layer_id = layer_id or _get_id(start, end, ptype, muted)
+    # Different title for symlinked files
+    title = title or _get_title(start, end)
+    title = title + ' ' +  str(ptype) 
+    if os.path.islink(path):
+      symFile = os.readlink(path)
+      symStart = _get_date_from_file(symFile)
+      symEnd = _get_date_from_file(symFile, is_end=True)
+      title = _get_title_sym(start, end, symStart, symEnd)
+      title = title + ' ' +  str(ptype)
     template = WMS_LAYER_TEMPLATE
     legend_file = 'new-forwarn2-standard-legend-2.png'
     legend = os.path.join(SERVER_URL, 'cmapicons', legend_file)
@@ -124,10 +149,10 @@ def make_current_layer_list(year_dict, start_dates, end_dates):
             if key == '5yr_dev':
                 insertBreak = "true"
             try:
-                title = subgroup_title + ' ' +  str(key)
+                #title = subgroup_title + ' ' +  str(key)
                 ptype = key
                 layer_id = _get_id(start, end, ptype)
-                layer_xml = make_layer_xml(year_dict[key][idx], layer_id, insertBreak, title)
+                layer_xml = make_layer_xml(year_dict[key][idx], layer_id, ptype, insertBreak, title=None)
                 string += layer_xml
             except:
                 continue
@@ -145,14 +170,13 @@ def make_fw3_dev_xml_new_test():
         files = os.listdir(folder)
         files = filter_path_list(files)
         files = sorted(files, reverse=True)
-        if (key == '1yr_dev'):
+        if (key == '0yr_dev'):
             for f in files:
                 start_date_list.append(_get_date_from_file(f))
                 end_date_list.append(_get_date_from_file(f, is_end=True))
         paths = [ os.path.join(folder, f) for f in files ]
         year_dict[key] = paths
     full += make_current_layer_list(year_dict, start_date_list, end_date_list)
-    print(full)
     return full
 
 if __name__ == '__main__':

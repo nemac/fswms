@@ -28,6 +28,14 @@ def _get_title(start, end):
   title = start + ' - ' + end
   return title
 
+def _get_title_sym(start, end, symStart, symEnd):
+  start = start.strftime('%m/%d/%Y')
+  end = end.strftime('%m/%d/%Y')
+  symStart = symStart.strftime('%m/%d/%Y')
+  symEnd = symEnd.strftime('%m/%d/%Y')
+  title = start + ' - ' + end + ' -> ' + symStart + ' - ' + symEnd
+  return title
+
 def _get_id(start, end, ptype, muted):
   start = start.strftime('%Y%m%d')
   end = end.strftime('%Y%m%d')
@@ -150,7 +158,7 @@ def make_fw3_layer_list(ptype, muted):
     subgroup_info = get_fw3_subgroup_info(ptype, muted)
     to_break = to_add_sublist_spacing(ptype, muted)
     break_text = 'break="true"' if to_break else 'break="false"'
-    string = '<wmsSubgroup label="' + subgroup_title + '" info="' + subgroup_info + '" ' + break_text + '>\n'
+    string = '<wmsSubgroup label="' + subgroup_title + '" info="' + subgroup_info + '" collapsible="true" ' + break_text + '>\n'
     folder = os.path.join(FW3_DATA_DIR, ptype)
     files = os.listdir(folder)
     files = filter_path_list(files, muted)
@@ -200,7 +208,7 @@ def make_current_layer_list(ptype, muted):
     subgroup_title = subgroup_title
     to_break = to_add_sublist_spacing(ptype, muted=muted)
     break_text = 'break="true"' if to_break else 'break="false"'
-    string = '<wmsSubgroup label="' + subgroup_title + '" info="' + subgroup_info + '" ' + break_text + '>\n'
+    string = '<wmsSubgroup label="' + subgroup_title + '" info="' + subgroup_info + '" collapsible="true" ' + break_text + '>\n'
     folder = os.path.join(FW3_DATA_DIR, ptype)
     files = os.listdir(folder)
     files = filter_path_list(files, muted=muted)
@@ -241,7 +249,13 @@ def make_layer_xml(path, ptype, muted, title=None, layer_id=None, to_break=False
     start = _get_date_from_file(filename)
     end = _get_date_from_file(filename, is_end=True)
     layer_id = layer_id or _get_id(start, end, ptype, muted)
+    # Different title for symlinked files
     title = title or _get_title(start, end)
+    if os.path.islink(path):
+      symFile = os.readlink(path)
+      symStart = _get_date_from_file(symFile)
+      symEnd = _get_date_from_file(symFile, is_end=True)
+      title = _get_title_sym(start, end, symStart, symEnd)  
     template = WMS_LAYER_TEMPLATE
     if ptype == 'adaptivebaseline_daysdiff':
         legend_file = 'daysdifflegend.png'

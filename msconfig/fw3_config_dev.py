@@ -15,6 +15,11 @@ Main config for describing FW3 layer lists in FCAV
 
 FW3_PRODUCT_TYPES = {
   'normal': {
+    '0yr_dev': {
+      'title': 'Zero Year',
+      'info': 'Zero Year Net Ecological Impact',
+      'order': 1
+    },
     '1yr_dev': {
       'title': 'One Year',
       'info': 'One Year Net Ecological Impact',
