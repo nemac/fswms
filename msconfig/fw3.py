@@ -248,7 +248,7 @@ def make_layer_xml(path, ptype, muted, title=None, layer_id=None, to_break=False
     # Temporary fix while aqua is down
     selected = ''
     if layer_id == 'FW3_adaptivebaseline_allyr_current':
-      selected = "selected=\"false\""
+      selected = "selected=\"true\""
     # End of temporary fix
     return template.render({
       'BREAK'       : '' if not to_break else 'break="true"',
