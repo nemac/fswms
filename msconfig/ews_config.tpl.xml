@@ -25,9 +25,9 @@
 			<viewGroup name="US_Jurisdictions" />
 			<viewGroup name="US_Fire" />
 			<viewGroup name="US_FHM_ADS" />
-      <viewGroup name="ForWarn3_Dev" selected="true"/>
+      <viewGroup name="ForWarn3_Dev"/>
       <viewGroup name="ForWarn3_Dev_New_Test" />
-		  <viewGroup name="ForWarn3_Current"/>
+		  <viewGroup name="ForWarn3_Current" selected="true"/>
 			<viewGroup name="Drought_Monitor" />
 			<viewGroup name="US_Climate" />
 			<viewGroup name="US_Physiographic" />
