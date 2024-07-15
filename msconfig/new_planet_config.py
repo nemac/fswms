@@ -12,7 +12,7 @@ from requests import Session
 
 # OR
 # If API key **not** stored as an environment variable
-PL_API_KEY = "6d9691f7bfd144ff81e1389b98bb6b04"
+PL_API_KEY = "INSERT_KEY_HERE"
 client = api.ClientV1(api_key=PL_API_KEY)
 
 ## Look up available basemap series
