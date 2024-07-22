@@ -105,7 +105,7 @@ MAP
         DUMP     TRUE
         STATUS   OFF
 	GROUP Masks
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/fw3_all_forests_mask.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/updated_masks_2020_2021/fw3_all_forests_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -136,7 +136,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/fw3_crops_mask.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/updated_masks_2020_2021/fw3_crops_mask.img
         CLASS
             EXPRESSION ([pixel] = 1)
             COLOR 0 0 0
@@ -167,7 +167,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/fw3_evergreen_forest_mask.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/updated_masks_2020_2021/fw3_evergreen_forest_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -198,7 +198,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/fw3_deciduous_forest_mask.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/updated_masks_2020_2021/fw3_deciduous_forest_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -229,7 +229,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/fw3_grass_mask.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/updated_masks_2020_2021/fw3_grass_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -260,7 +260,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/fw3_mixed_forest_mask.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/updated_masks_2020_2021/fw3_mixed_forest_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -291,7 +291,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/fw3_non_vegetated_mask.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/updated_masks_2020_2021/fw3_non_vegetated_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -322,7 +322,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/fw3_shrubland_mask.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/updated_masks_2020_2021/fw3_shrubland_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -353,7 +353,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/fw3_urban_mask.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/updated_masks_2020_2021/fw3_urban_mask.img
         CLASS
             EXPRESSION ([pixel] > 0)
             COLOR 0 0 0
@@ -384,7 +384,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/fw3_non_woody_wetland_mask.img
+        DATA     %(DATA_DIR)s/fsdata-internal/efetac_nasa/Mask/updated_masks_2020_2021/fw3_non_woody_wetland_mask.img
         CLASS
             EXPRESSION ([pixel] = 1)
             COLOR 0 0 0
