@@ -12,11 +12,11 @@ RUN apt-get update && apt-get install -y \
       python3 \
       python3-pip
 
-RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+RUN add-apt-repository ppa:ubuntugis/ppa
 
 RUN apt-get install -y \
-      libgdal-dev=3.0.4+dfsg-1~bionic0 \
-      gdal-bin=3.0.4+dfsg-1~bionic0
+      libgdal-dev=3.0.4* \
+      gdal-bin=3.0.4*
 
 ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
 
